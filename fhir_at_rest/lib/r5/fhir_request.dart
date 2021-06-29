@@ -215,7 +215,6 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirOperationRequest;
 
   ///  READ-BUNDLE-PAGE constructor
-  @Assert('age >= 0')
   factory FhirRequest.readBundlePage({
     required Bundle bundle,
     required BundlePage page,
@@ -545,7 +544,7 @@ class FhirRequest with _$FhirRequest {
       // READ-BUNDLE-PAGE
       readBundlePage: (f) {
         final Uri? _uri = f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null).url?.value;
-        return '${_uri?.host}/${_uri?.path}';
+        return '${_uri?.host}${_uri?.path}';
       });
 
   Future<Resource?> _makeRequest({
