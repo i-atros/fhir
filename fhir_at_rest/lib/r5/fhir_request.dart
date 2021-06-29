@@ -214,6 +214,19 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirOperationRequest;
 
+  ///  READ-BUNDLE-PAGE constructor
+  @Assert('age >= 0')
+  factory FhirRequest.readBundlePage({
+    required Bundle bundle,
+    required BundlePage page,
+    @Default(false) bool pretty,
+    @Default(Summary.none) Summary summary,
+    @Default('json') String format,
+    @Default(<String>[]) List<String> elements,
+    @Default(<String>[]) List<String> parameters,
+    Client? client,
+  }) = _FhirReadBundlePageRequest;
+
   Future<Resource?> request({
     required Map<String, String> headers,
   }) async {
@@ -278,18 +291,15 @@ class FhirRequest with _$FhirRequest {
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
-          return _operationOutcome(
-              'A Transaction request was made, but no Bundle was included.');
+          return _operationOutcome('A Transaction request was made, but no Bundle was included.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
             if (entry.request == null) {
-              return _operationOutcome(
-                  'Each bundle entry requires a request, but at least one of '
+              return _operationOutcome('Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
             } else if (entry.request?.method == null) {
-              return _operationOutcome(
-                  'Each bundle entry request needs a method type specified, but'
+              return _operationOutcome('Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
             }
           }
@@ -304,19 +314,16 @@ class FhirRequest with _$FhirRequest {
       },
       batch: (m) async {
         if (m.bundle.type != BundleType.batch) {
-          return _operationOutcome(
-              'A Batch request was made, but the included Bundle is not a'
+          return _operationOutcome('A Batch request was made, but the included Bundle is not a'
               ' batch type.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
             if (entry.request == null) {
-              return _operationOutcome(
-                  'Each bundle entry requires a request, but at least one of '
+              return _operationOutcome('Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
             } else if (entry.request?.method == null) {
-              return _operationOutcome(
-                  'Each bundle entry request needs a method type specified, but'
+              return _operationOutcome('Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
             }
           }
@@ -388,12 +395,23 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         headers,
         'Operation',
-        resource: m.usePost && m.useFormData
-            ? null
-            : Resource.fromJson(m.fhirParameter),
-        formData: m.usePost && m.useFormData
-            ? m.formData(parameters: parameters)
-            : null,
+        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+      ),
+      readBundlePage: (m) async => await _request(
+        RestfulRequest.get_,
+        uri(
+            parameters: m.bundle?.link
+                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    ?.url
+                    ?.value
+                    ?.queryParameters
+                    .entries
+                    .map<String>((e) => '${e.key}=${e.value}')
+                    ?.toList() ??
+                []),
+        headers,
+        'ReadBundlePage',
       ),
     );
   }
@@ -430,15 +448,10 @@ class FhirRequest with _$FhirRequest {
   }) async {
     try {
       final result = await _makeRequest(
-          type: type,
-          thisRequest: uri,
-          client: client,
-          headers: headers,
-          resource: resource == null ? null : resource.toJson());
+          type: type, thisRequest: uri, client: client, headers: headers, resource: resource == null ? null : resource.toJson());
       return result;
     } catch (e) {
-      return _operationOutcome('Failed to complete a $requestType request, ',
-          diagnostics: 'Exception: $e');
+      return _operationOutcome('Failed to complete a $requestType request, ', diagnostics: 'Exception: $e');
     }
   }
 
@@ -469,28 +482,19 @@ class FhirRequest with _$FhirRequest {
     return _parameters(parameters, join: false);
   }
 
-  String _encodeParam(String value, {bool join = true}) =>
-      '${join ? '&' : ''}$value';
+  String _encodeParam(String value, {bool join = true}) => '${join ? '&' : ''}$value';
 
-  String _mode({bool join = false}) => maybeMap(
-      capabilities: (f) =>
-          _encodeParam('mode=${enumToString(f.mode)}', join: join),
-      orElse: () => '');
+  String _mode({bool join = false}) =>
+      maybeMap(capabilities: (f) => _encodeParam('mode=${enumToString(f.mode)}', join: join), orElse: () => '');
 
   String _format({bool join = false}) => maybeMap(
-      capabilities: (f) => _encodeParam('_format=${f.format}', join: true),
-      orElse: () => _encodeParam('_format=$format', join: join));
+      capabilities: (f) => _encodeParam('_format=${f.format}', join: true), orElse: () => _encodeParam('_format=$format', join: join));
 
-  String _pretty({bool join = true}) =>
-      _encodeParam('_pretty=${pretty.toString()}', join: join);
+  String _pretty({bool join = true}) => _encodeParam('_pretty=${pretty.toString()}', join: join);
 
-  String _summary({bool join = true}) => summary != Summary.none
-      ? _encodeParam('_summary=${enumToString(summary)}', join: join)
-      : '';
+  String _summary({bool join = true}) => summary != Summary.none ? _encodeParam('_summary=${enumToString(summary)}', join: join) : '';
 
-  String _elements({bool join = true}) => elements.isNotEmpty
-      ? _encodeParam('_elements=${elements.join(",")}', join: join)
-      : '';
+  String _elements({bool join = true}) => elements.isNotEmpty ? _encodeParam('_elements=${elements.join(",")}', join: join) : '';
 
   String _parameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
@@ -508,19 +512,15 @@ class FhirRequest with _$FhirRequest {
         // READ
         read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
         // VREAD
-        vRead: (f) =>
-            '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
+        vRead: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
         // UPDATE
-        update: (f) =>
-            '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+        update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
         // PATCH
-        patch: (f) =>
-            '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+        patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
         // DELETE
         delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
         // CREATE
-        create: (f) =>
-            '${f.base}/${enumToString(f.resource.resourceTypeString())}',
+        create: (f) => '${f.base}/${enumToString(f.resource.resourceTypeString())}',
         // SEARCH
         search: (f) => '${f.base}/${enumToString(f.type)}'
             '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
@@ -532,8 +532,7 @@ class FhirRequest with _$FhirRequest {
         transaction: (f) => '${f.base}',
         batch: (f) => '${f.base}',
         // HISTORY
-        history: (f) =>
-            '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
+        history: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
         // HISTORY-TYPE
         historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
         // HISTORY-ALL
@@ -543,6 +542,9 @@ class FhirRequest with _$FhirRequest {
             '${f.type != null ? "${enumToString(f.type)}/" : ''}'
             '${f.type != null && f.id != null ? "${enumToString(f.id)}/" : ''}'
             '\$${f.operation}',
+        // READ-BUNDLE-PAGE
+        readBundlePage: (f) =>
+            '${f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null)?.url?.value?.host}',
       );
 
   Future<Resource?> _makeRequest({
@@ -603,9 +605,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.post_:
           {
-            headers['Content-Type'] = formData != null
-                ? 'application/x-www-form-urlencoded'
-                : 'application/fhir+json';
+            headers['Content-Type'] = formData != null ? 'application/x-www-form-urlencoded' : 'application/fhir+json';
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,
@@ -616,8 +616,7 @@ class FhirRequest with _$FhirRequest {
           }
       }
     } catch (e) {
-      return _operationOutcome('Failed to complete a restful request, ',
-          diagnostics: 'Exception: $e');
+      return _operationOutcome('Failed to complete a restful request, ', diagnostics: 'Exception: $e');
     }
 
     if (_errorCodes.containsKey(result.statusCode)) {
@@ -636,8 +635,7 @@ class FhirRequest with _$FhirRequest {
     return Resource.fromJson(json.decode(result.body));
   }
 
-  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
-      OperationOutcome(issue: [
+  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) => OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
           code: OperationOutcomeIssueCode.value,
