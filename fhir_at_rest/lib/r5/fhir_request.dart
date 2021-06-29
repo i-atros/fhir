@@ -401,14 +401,14 @@ class FhirRequest with _$FhirRequest {
       readBundlePage: (m) async => await _request(
         RestfulRequest.get_,
         uri(
-            parameters: m.bundle?.link
+            parameters: m.bundle.link
                     ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
-                    ?.url
+                    .url
                     ?.value
                     ?.queryParameters
                     .entries
                     .map<String>((e) => '${e.key}=${e.value}')
-                    ?.toList() ??
+                    .toList() ??
                 []),
         headers,
         'ReadBundlePage',
