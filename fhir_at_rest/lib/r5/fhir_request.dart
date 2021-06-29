@@ -509,43 +509,44 @@ class FhirRequest with _$FhirRequest {
   }
 
   String _url() => map(
-        // READ
-        read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
-        // VREAD
-        vRead: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
-        // UPDATE
-        update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
-        // PATCH
-        patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
-        // DELETE
-        delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
-        // CREATE
-        create: (f) => '${f.base}/${enumToString(f.resource.resourceTypeString())}',
-        // SEARCH
-        search: (f) => '${f.base}/${enumToString(f.type)}'
-            '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
-        // SEARCH-ALL
-        searchAll: (f) => '${f.base}',
-        // CAPABILITIES
-        capabilities: (f) => '${f.base}/metadata',
-        // BATCH / TRANSACTION
-        transaction: (f) => '${f.base}',
-        batch: (f) => '${f.base}',
-        // HISTORY
-        history: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
-        // HISTORY-TYPE
-        historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
-        // HISTORY-ALL
-        historyAll: (f) => '${f.base}/_history',
-        // OPERATION
-        operation: (f) => '${f.base}/'
-            '${f.type != null ? "${enumToString(f.type)}/" : ''}'
-            '${f.type != null && f.id != null ? "${enumToString(f.id)}/" : ''}'
-            '\$${f.operation}',
-        // READ-BUNDLE-PAGE
-        readBundlePage: (f) =>
-            '${f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null)?.url?.value?.host}',
-      );
+      // READ
+      read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
+      // VREAD
+      vRead: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
+      // UPDATE
+      update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      // PATCH
+      patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      // DELETE
+      delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
+      // CREATE
+      create: (f) => '${f.base}/${enumToString(f.resource.resourceTypeString())}',
+      // SEARCH
+      search: (f) => '${f.base}/${enumToString(f.type)}'
+          '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
+      // SEARCH-ALL
+      searchAll: (f) => '${f.base}',
+      // CAPABILITIES
+      capabilities: (f) => '${f.base}/metadata',
+      // BATCH / TRANSACTION
+      transaction: (f) => '${f.base}',
+      batch: (f) => '${f.base}',
+      // HISTORY
+      history: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
+      // HISTORY-TYPE
+      historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
+      // HISTORY-ALL
+      historyAll: (f) => '${f.base}/_history',
+      // OPERATION
+      operation: (f) => '${f.base}/'
+          '${f.type != null ? "${enumToString(f.type)}/" : ''}'
+          '${f.type != null && f.id != null ? "${enumToString(f.id)}/" : ''}'
+          '\$${f.operation}',
+      // READ-BUNDLE-PAGE
+      readBundlePage: (f) {
+        final Uri? _uri = f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null).url?.value;
+        return '${_uri?.host}/${_uri?.path}';
+      });
 
   Future<Resource?> _makeRequest({
     required RestfulRequest type,
