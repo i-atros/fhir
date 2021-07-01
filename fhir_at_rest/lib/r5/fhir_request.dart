@@ -544,7 +544,7 @@ class FhirRequest with _$FhirRequest {
       // READ-BUNDLE-PAGE
       readBundlePage: (f) {
         final Uri? _uri = f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null).url?.value;
-        return '${_uri?.host}${_uri?.path}';
+        return '${_uri?.scheme}://${_uri?.host}${_uri?.path}';
       });
 
   Future<Resource?> _makeRequest({
