@@ -130,12 +130,11 @@ class ResourceDao {
 
   static callbackFunction(List<Object?> arguments) async {
     final sendPort = arguments[0] as SendPort?;
-    final password = arguments[1] as String?;
+    final db = arguments[1] as Database?;
     final type = arguments[2] as String?;
     final store = stringMapStoreFactory.store(type);
     final resources = arguments[3] as List<Resource?>;
-    final db = await FhirDb.instance.database(password);
-    db.transaction((
+    db!.transaction((
       transaction,
     ) async {
       await Future.forEach(
@@ -155,10 +154,11 @@ class ResourceDao {
   Future<List<Resource>> _insertMultipleFast(String? password, List<Resource?> resources, String? resourceType) async {
     final _newResources = resources.where((e) => e != null).map<Resource>((e) => e!.newVersion()).toList();
     final receivePort = ReceivePort();
+    final db = await FhirDb.instance.database(password);
 
     final isolate = await Isolate.spawn(
       callbackFunction,
-      [receivePort.sendPort, password, resourceType, _newResources],
+      [receivePort.sendPort, db, resourceType, _newResources],
     );
 
     await receivePort.first;
