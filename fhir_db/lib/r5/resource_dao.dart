@@ -126,9 +126,9 @@ class ResourceDao {
       await Future.forEach(
         _newResources,
         (Resource element) async => element.id != null
-            ? await _resourceStore.record(element!.id.toString()).put(
+            ? await _resourceStore.record(element.id.toString()).put(
                   await _db(password),
-                  element!.toJson(),
+                  element.toJson(),
                 )
             : null,
       );
