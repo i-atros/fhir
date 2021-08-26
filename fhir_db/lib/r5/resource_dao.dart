@@ -129,13 +129,15 @@ class ResourceDao {
   }
 
   static callbackFunction(List<Object?> arguments) async {
-    final sendPort = arguments[0] as SendPort;
+    final sendPort = arguments[0] as SendPort?;
     final password = arguments[1] as String?;
     final type = arguments[2] as String?;
     final store = stringMapStoreFactory.store(type);
     final resources = arguments[3] as List<Resource?>;
-
-    (await FhirDb.instance.database(password)).transaction((transaction) async {
+    final db = await FhirDb.instance.database(password);
+    db.transaction((
+      transaction,
+    ) async {
       await Future.forEach(
         resources,
         (Resource? element) async => element?.id != null
@@ -146,7 +148,7 @@ class ResourceDao {
             : null,
       );
     });
-    sendPort.send(true);
+    sendPort?.send(true);
   }
 
   /// function used to save multiple new resources in the db
