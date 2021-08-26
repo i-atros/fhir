@@ -130,8 +130,8 @@ class ResourceDao {
 
   static callbackFunction(List<Object?> arguments) async {
     final sendPort = arguments[0] as SendPort;
-    final password = arguments[1] as String;
-    final type = arguments[2] as String;
+    final password = arguments[1] as String?;
+    final type = arguments[2] as String?;
     final store = stringMapStoreFactory.store(type);
     final resources = arguments[3] as List<Resource>;
 
