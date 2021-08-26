@@ -102,7 +102,7 @@ class ResourceDao {
 
         if (overrideValues) {
           if (fast) {
-            return _insertMultipleFast(password, resources);
+            return _insertMultipleFast(password, resources, ResourceUtils.resourceTypeToStringMap[resourceType]);
           }
           return _insertMultiple(password, resources);
         } else {
@@ -128,13 +128,14 @@ class ResourceDao {
     }
   }
 
-  static callbackFunction(List<Object> arguments) async {
+  static callbackFunction(List<Object?> arguments) async {
     final sendPort = arguments[0] as SendPort;
-    final database = arguments[1] as Database;
-    final store = arguments[2] as StoreRef<String, Map<String, dynamic>>;
+    final password = arguments[1] as String;
+    final type = arguments[2] as String;
+    final store = stringMapStoreFactory.store(type);
     final resources = arguments[3] as List<Resource>;
 
-    database.transaction((transaction) async {
+    (await FhirDb.instance.database(password)).transaction((transaction) async {
       await Future.forEach(
         resources,
         (Resource element) async => element.id != null
@@ -149,14 +150,13 @@ class ResourceDao {
   }
 
   /// function used to save multiple new resources in the db
-  Future<List<Resource>> _insertMultipleFast(String? password, List<Resource?> resources) async {
-    final database = await _db(password);
+  Future<List<Resource>> _insertMultipleFast(String? password, List<Resource?> resources, String? resourceType) async {
     final _newResources = resources.where((e) => e != null).map<Resource>((e) => e!.newVersion()).toList();
     final receivePort = ReceivePort();
 
     final isolate = await Isolate.spawn(
       callbackFunction,
-      [receivePort.sendPort, database, _resourceStore, _newResources],
+      [receivePort.sendPort, password, resourceType, _newResources],
     );
 
     await receivePort.first;
