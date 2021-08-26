@@ -127,7 +127,7 @@ class ResourceDao {
         _newResources,
         (Resource element) async => element.id != null
             ? await _resourceStore.record(element.id.toString()).put(
-                  await _db(password),
+                  transaction,
                   element.toJson(),
                 )
             : null,
@@ -195,7 +195,7 @@ class ResourceDao {
         resources,
         (Resource element) async => element.id != null
             ? dbResources.add(await _resourceStore.record(element.id.toString()).get(
-                  await _db(password),
+                  transaction,
                 ))
             : dbResources.add(null),
       );
@@ -218,7 +218,11 @@ class ResourceDao {
       await Future.forEach(
         _toUpdate,
         (Resource element) async => element.id != null
-            ? await _resourceStore.record(element.id!.value!).put(await _db(password), element.toJson(), merge: true)
+            ? await _resourceStore.record(element.id!.value!).put(
+                  transaction,
+                  element.toJson(),
+                  merge: true,
+                )
             : null,
       );
     });
