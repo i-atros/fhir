@@ -128,7 +128,7 @@ class ResourceDao {
     }
   }
 
-  static void callbackFunction(List<Object> arguments) async {
+  static callbackFunction(List<Object> arguments) async {
     final sendPort = arguments[0] as SendPort;
     final database = arguments[1] as Database;
     final store = arguments[2] as StoreRef<String, Map<String, dynamic>>;
