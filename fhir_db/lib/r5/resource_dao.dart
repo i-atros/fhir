@@ -145,7 +145,7 @@ class ResourceDao {
             : null,
       );
     });
-    sendPort.send(resources);
+    sendPort.send(true);
   }
 
   /// function used to save multiple new resources in the db
@@ -159,11 +159,11 @@ class ResourceDao {
       [receivePort.sendPort, database, _resourceStore, _newResources],
     );
 
-    final message = receivePort.first as List<Resource>;
+    await receivePort.first;
     receivePort.close();
     isolate.kill();
 
-    return message;
+    return _newResources;
   }
 
   /// function used to save multiple new resources in the db
