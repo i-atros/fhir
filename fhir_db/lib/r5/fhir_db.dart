@@ -7,6 +7,7 @@ import 'package:sembast/sembast.dart';
 import 'package:sembast/utils/sembast_import_export.dart';
 import 'package:sembast_sqflite/sembast_sqflite.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
+import 'package:sqflite_common_ffi/sqflite_ffi.dart' as sqflite_common_ffi;
 
 import '../encrypt/aes.dart';
 
@@ -17,6 +18,11 @@ class FhirDb {
   /// Singleton Instance
   static final FhirDb _db = FhirDb._();
 
+  static void prepareForTesting() {
+    sqflite_common_ffi.sqfliteFfiInit();
+    _db._dbFactory = getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
+  }
+
   /// Singleton Accessor
   static FhirDb get instance => _db;
 
@@ -24,11 +30,10 @@ class FhirDb {
   Completer<Database>? _dbOpenCompleter;
 
   /// Database Factory
-  final _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
+  DatabaseFactory _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
 
   /// Update old password to new
-  Future updatePassword(String? oldPw, String? newPw) async =>
-      await _updatePw(oldPw, newPw);
+  Future updatePassword(String? oldPw, String? newPw) async => await _updatePw(oldPw, newPw);
 
   /// Database object accessor
   Future<Database> database(String? pw) async {
@@ -76,14 +81,11 @@ class FhirDb {
     final codec = pw == null ? null : _codec(pw);
 
     /// if there is, use it to open the Db
-    return codec == null
-        ? await _dbFactory.openDatabase(dbPath)
-        : await _dbFactory.openDatabase(dbPath, codec: codec);
+    return codec == null ? await _dbFactory.openDatabase(dbPath) : await _dbFactory.openDatabase(dbPath, codec: codec);
   }
 
   /// This is just for getting the codec
-  SembastCodec? _codec(String? pw) =>
-      pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
+  SembastCodec? _codec(String? pw) => pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
 
   Future _updatePw(String? oldPw, String? newPw) async {
     /// Platform-specific directory
@@ -100,8 +102,7 @@ class FhirDb {
 
     /// Create a copy of the old db - in case something messes up while we're
     /// changing to the new password
-    File(join(_appDocDir.path, 'fhir.db'))
-        .copy(join(_appDocDir.path, 'old_fhir.db'));
+    File(join(_appDocDir.path, 'fhir.db')).copy(join(_appDocDir.path, 'old_fhir.db'));
 
     /// Get the path to the original Db
     final dbPath = join(_appDocDir.path, 'fhir.db');
