@@ -133,13 +133,13 @@ class ResourceDao {
     final password = arguments[1] as String?;
     final type = arguments[2] as String?;
     final store = stringMapStoreFactory.store(type);
-    final resources = arguments[3] as List<Resource>;
+    final resources = arguments[3] as List<Resource?>;
 
     (await FhirDb.instance.database(password)).transaction((transaction) async {
       await Future.forEach(
         resources,
-        (Resource element) async => element.id != null
-            ? await store.record(element.id.toString()).put(
+        (Resource? element) async => element?.id != null
+            ? await store.record(element!.id.toString()).put(
                   transaction,
                   element.toJson(),
                 )
