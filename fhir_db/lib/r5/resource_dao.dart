@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:isolate';
 
 import 'package:fhir/r5.dart';
@@ -10,21 +11,24 @@ class ResourceDao {
   ResourceDao({
     this.databaseMode = mode.DatabaseMode.PERSISTENCE_DB,
     bool isForTesting = false,
+    this.directory,
   }) {
     if (isForTesting) FhirDb.prepareForTesting();
   }
 
   mode.DatabaseMode databaseMode;
 
+  Directory? directory;
+
   late StoreRef<String, Map<String, dynamic>> _resourceStore;
   final _typesStore = StoreRef<String, List>.main();
   final _history = StoreRef<String, Map<String, dynamic>>.main();
 
   /// update database password
-  Future updatePw(String? oldPw, String? newPw) async => await FhirDb.instance.updatePassword(oldPw, newPw);
+  Future updatePw(String? oldPw, String? newPw) async => await FhirDb.instance.updatePassword(oldPw, newPw, directory: directory);
 
   /// accessing the actual database instance
-  Future<Database> _db(String? password) async => await FhirDb.instance.database(password);
+  Future<Database> _db(String? password) async => await FhirDb.instance.database(password, directory: directory);
 
   /// allows one store per resourceType (Patient, Observation, etc.)
   void _setStoreType(String resourceType) => _resourceStore = stringMapStoreFactory.store(resourceType);
@@ -93,6 +97,7 @@ class ResourceDao {
     List<Resource>? resources, {
     bool overrideValues = false,
     bool fast = false,
+    Directory? directory,
   }) async {
     if (resources != null) {
       if (resourceType != null) {
@@ -154,7 +159,7 @@ class ResourceDao {
   Future<List<Resource>> _insertMultipleFast(String? password, List<Resource?> resources, String? resourceType) async {
     final _newResources = resources.where((e) => e != null).map<Resource>((e) => e!.newVersion()).toList();
     final receivePort = ReceivePort();
-    final db = await FhirDb.instance.database(password);
+    final db = await FhirDb.instance.database(password, directory: directory);
 
     final isolate = await Isolate.spawn(
       callbackFunction,

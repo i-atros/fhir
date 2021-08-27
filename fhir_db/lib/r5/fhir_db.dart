@@ -33,16 +33,16 @@ class FhirDb {
   DatabaseFactory _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
 
   /// Update old password to new
-  Future updatePassword(String? oldPw, String? newPw) async => await _updatePw(oldPw, newPw);
+  Future updatePassword(String? oldPw, String? newPw, {Directory? directory}) async => await _updatePw(oldPw, newPw, directory);
 
   /// Database object accessor
-  Future<Database> database(String? pw) async {
+  Future<Database> database(String? pw, {Directory? directory}) async {
     /// If completer is null, database isn't opened, just instantiated
     if (_dbOpenCompleter == null) {
       _dbOpenCompleter = Completer();
 
       /// This will also complete the db instance
-      _openDatabase(pw);
+      await _openDatabase(pw, directory);
     }
 
     /// If db is open, the future happens instantly, otherwise, it will wait
@@ -50,11 +50,16 @@ class FhirDb {
     return _dbOpenCompleter!.future;
   }
 
-  Future<void> deleteDatabase(String password) async {
-    var db = await _getDb('fhir.db', password);
+  Future<void> deleteDatabase(String password, {Directory? directory}) async {
+    var db = await _getDb('fhir.db', password, directory);
     await db.close();
 
-    final _appDocDir = await getApplicationDocumentsDirectory();
+    Directory _appDocDir;
+    if (directory == null) {
+      _appDocDir = await getApplicationDocumentsDirectory();
+    } else {
+      _appDocDir = directory;
+    }
     await File(join(_appDocDir.path, 'fhir.db')).delete();
 
     // Setting the completer to null will lead to
@@ -62,17 +67,21 @@ class FhirDb {
     _dbOpenCompleter = null;
   }
 
-  Future _openDatabase(String? pw) async {
+  Future _openDatabase(String? pw, Directory? directory) async {
     /// Get the actual db
-    final database = await _getDb('fhir.db', pw);
+    final database = await _getDb('fhir.db', pw, directory);
 
     /// Complete!
     _dbOpenCompleter!.complete(database);
   }
 
-  Future<Database> _getDb(String path, String? pw) async {
-    /// Platform-specific directory
-    final _appDocDir = await getApplicationDocumentsDirectory();
+  Future<Database> _getDb(String path, String? pw, Directory? directory) async {
+    Directory _appDocDir;
+    if (directory == null) {
+      _appDocDir = await getApplicationDocumentsDirectory();
+    } else {
+      _appDocDir = directory;
+    }
 
     /// Db path
     final dbPath = join(_appDocDir.path, path);
@@ -87,12 +96,17 @@ class FhirDb {
   /// This is just for getting the codec
   SembastCodec? _codec(String? pw) => pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
 
-  Future _updatePw(String? oldPw, String? newPw) async {
-    /// Platform-specific directory
-    final _appDocDir = await getApplicationDocumentsDirectory();
+  Future _updatePw(String? oldPw, String? newPw, Directory? directory) async {
+    Directory _appDocDir;
+
+    if (directory == null) {
+      _appDocDir = await getApplicationDocumentsDirectory();
+    } else {
+      _appDocDir = directory;
+    }
 
     /// Get the old Db
-    var db = await _getDb('fhir.db', oldPw);
+    var db = await _getDb('fhir.db', oldPw, directory);
 
     /// Create the map of the old Db
     final exportMap = await exportDatabase(db);
