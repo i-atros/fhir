@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:isolate';
 
 import 'package:fhir/r5.dart';
 import 'package:fhir_db/r5/database_mode.dart' as mode;
@@ -96,7 +95,6 @@ class ResourceDao {
     R5ResourceType? resourceType,
     List<Resource>? resources, {
     bool overrideValues = false,
-    bool fast = false,
     Directory? directory,
   }) async {
     if (resources != null) {
@@ -106,9 +104,6 @@ class ResourceDao {
         _setStoreType(ResourceUtils.resourceTypeToStringMap[resourceType]!);
 
         if (overrideValues) {
-          if (fast) {
-            return _insertMultipleFast(password, resources, ResourceUtils.resourceTypeToStringMap[resourceType]);
-          }
           return _insertMultiple(password, resources);
         } else {
           final _resourcesPresent = (await find(
@@ -131,46 +126,6 @@ class ResourceDao {
     } else {
       throw const FormatException('Resources cannot be null');
     }
-  }
-
-  static callbackFunction(List<Object?> arguments) async {
-    final sendPort = arguments[0] as SendPort?;
-    final db = arguments[1] as Database?;
-    final type = arguments[2] as String?;
-    final store = stringMapStoreFactory.store(type);
-    final resources = arguments[3] as List<Resource?>;
-    db!.transaction((
-      transaction,
-    ) async {
-      await Future.forEach(
-        resources,
-        (Resource? element) async => element?.id != null
-            ? await store.record(element!.id.toString()).put(
-                  transaction,
-                  element.toJson(),
-                )
-            : null,
-      );
-    });
-    sendPort?.send(true);
-  }
-
-  /// function used to save multiple new resources in the db
-  Future<List<Resource>> _insertMultipleFast(String? password, List<Resource?> resources, String? resourceType) async {
-    final _newResources = resources.where((e) => e != null).map<Resource>((e) => e!.newVersion()).toList();
-    final receivePort = ReceivePort();
-    final db = await FhirDb.instance.database(password, directory: directory);
-
-    final isolate = await Isolate.spawn(
-      callbackFunction,
-      [receivePort.sendPort, db, resourceType, _newResources],
-    );
-
-    await receivePort.first;
-    receivePort.close();
-    isolate.kill();
-
-    return _newResources;
   }
 
   /// function used to save multiple new resources in the db
