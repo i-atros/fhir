@@ -2,9 +2,12 @@ import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
 
-class PositiveInt {
+import 'fhir_number.dart';
+
+class PositiveInt extends FhirNumber {
   const PositiveInt._(
-      this._valueString, this._valuePositiveInt, this._isValid, this._isString);
+      String valueString, int? valueNumber, bool isValid, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
 
   factory PositiveInt(dynamic inValue) {
     if (inValue is int) {
@@ -12,7 +15,7 @@ class PositiveInt {
           ? PositiveInt._(inValue.toString(), inValue, true, false)
           : PositiveInt._(inValue.toString(), null, false, false);
     } else if (inValue is String) {
-      final tempPositiveInt = int.tryParse(inValue);
+      final int? tempPositiveInt = int.tryParse(inValue);
       return tempPositiveInt == null
           ? PositiveInt._(inValue, null, false, true)
           : tempPositiveInt > 0
@@ -31,24 +34,5 @@ class PositiveInt {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final int? _valuePositiveInt;
-  final bool _isValid;
-  final bool _isString;
-
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  int? get value => _valuePositiveInt;
-
-  String toString() => _valueString;
-  dynamic toJson() => _isValid && !_isString ? _valuePositiveInt : _valueString;
-  dynamic toYaml() => _isValid && !_isString ? _valuePositiveInt : _valueString;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is PositiveInt
-          ? o.value == _valuePositiveInt
-          : o is String
-              ? o == _valueString
-              : false;
+  int? get value => valueNumber as int?;
 }

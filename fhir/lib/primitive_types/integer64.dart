@@ -3,9 +3,12 @@ import 'dart:math';
 
 import 'package:yaml/yaml.dart';
 
-class Integer64 {
+import 'fhir_number.dart';
+
+class Integer64 extends FhirNumber {
   const Integer64._(
-      this._valueString, this._valueInteger64, this._isValid, this._isString);
+      String valueString, int? valueNumber, bool isValid, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
 
   factory Integer64(dynamic inValue) {
     if (inValue is int) {
@@ -13,7 +16,7 @@ class Integer64 {
           ? Integer64._(inValue.toString(), inValue, true, false)
           : Integer64._(inValue.toString(), null, false, false);
     } else if (inValue is String) {
-      final tempInteger64 = int.tryParse(inValue);
+      final int? tempInteger64 = int.tryParse(inValue);
       return tempInteger64 == null
           ? Integer64._(inValue, null, false, true)
           : tempInteger64 <= pow(2, 63) && tempInteger64 >= pow(2, 63)
@@ -32,24 +35,5 @@ class Integer64 {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final int? _valueInteger64;
-  final bool _isValid;
-  final bool _isString;
-
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  int? get value => _valueInteger64;
-
-  String toString() => _valueString;
-  dynamic toJson() => _isValid && !_isString ? _valueInteger64 : _valueString;
-  dynamic toYaml() => _isValid && !_isString ? _valueInteger64 : _valueString;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Integer64
-          ? o.value == _valueInteger64
-          : o is String
-              ? o == _valueString
-              : false;
+  int? get value => valueNumber as int?;
 }

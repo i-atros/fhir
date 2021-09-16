@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'management.dart';
 
@@ -907,7 +907,7 @@ class _$_Encounter extends _Encounter {
       : super._();
 
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterFromJson(json);
+      _$$_EncounterFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
@@ -1122,7 +1122,7 @@ class _$_Encounter extends _Encounter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterToJson(this);
+    return _$$_EncounterToJson(this);
   }
 }
 
@@ -1494,7 +1494,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
       : super._();
 
   factory _$_EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterStatusHistoryFromJson(json);
+      _$$_EncounterStatusHistoryFromJson(json);
 
   @override
   final String? id;
@@ -1556,7 +1556,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterStatusHistoryToJson(this);
+    return _$$_EncounterStatusHistoryToJson(this);
   }
 }
 
@@ -1796,7 +1796,7 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
       : super._();
 
   factory _$_EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterClassHistoryFromJson(json);
+      _$$_EncounterClassHistoryFromJson(json);
 
   @override
   final String? id;
@@ -1851,7 +1851,7 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterClassHistoryToJson(this);
+    return _$$_EncounterClassHistoryToJson(this);
   }
 }
 
@@ -2105,7 +2105,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
       : super._();
 
   factory _$_EncounterParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterParticipantFromJson(json);
+      _$$_EncounterParticipantFromJson(json);
 
   @override
   final String? id;
@@ -2165,7 +2165,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterParticipantToJson(this);
+    return _$$_EncounterParticipantToJson(this);
   }
 }
 
@@ -2448,7 +2448,7 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
       : super._();
 
   factory _$_EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterDiagnosisFromJson(json);
+      _$$_EncounterDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -2514,7 +2514,7 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterDiagnosisToJson(this);
+    return _$$_EncounterDiagnosisToJson(this);
   }
 }
 
@@ -2933,7 +2933,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
       : super._();
 
   factory _$_EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterHospitalizationFromJson(json);
+      _$$_EncounterHospitalizationFromJson(json);
 
   @override
   final String? id;
@@ -3030,7 +3030,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterHospitalizationToJson(this);
+    return _$$_EncounterHospitalizationToJson(this);
   }
 }
 
@@ -3375,7 +3375,7 @@ class _$_EncounterLocation extends _EncounterLocation {
       : super._();
 
   factory _$_EncounterLocation.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterLocationFromJson(json);
+      _$$_EncounterLocationFromJson(json);
 
   @override
   final String? id;
@@ -3448,7 +3448,7 @@ class _$_EncounterLocation extends _EncounterLocation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterLocationToJson(this);
+    return _$$_EncounterLocationToJson(this);
   }
 }
 
@@ -4128,7 +4128,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
       : super._();
 
   factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
-      _$_$_EpisodeOfCareFromJson(json);
+      _$$_EpisodeOfCareFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
@@ -4295,7 +4295,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EpisodeOfCareToJson(this);
+    return _$$_EpisodeOfCareToJson(this);
   }
 }
 
@@ -4632,7 +4632,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
       : super._();
 
   factory _$_EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EpisodeOfCareStatusHistoryFromJson(json);
+      _$$_EpisodeOfCareStatusHistoryFromJson(json);
 
   @override
   final String? id;
@@ -4694,7 +4694,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EpisodeOfCareStatusHistoryToJson(this);
+    return _$$_EpisodeOfCareStatusHistoryToJson(this);
   }
 }
 
@@ -4984,7 +4984,7 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
       : super._();
 
   factory _$_EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
-      _$_$_EpisodeOfCareDiagnosisFromJson(json);
+      _$$_EpisodeOfCareDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -5051,7 +5051,7 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EpisodeOfCareDiagnosisToJson(this);
+    return _$$_EpisodeOfCareDiagnosisToJson(this);
   }
 }
 
@@ -5661,8 +5661,7 @@ class _$_Flag extends _Flag {
       this.author})
       : super._();
 
-  factory _$_Flag.fromJson(Map<String, dynamic> json) =>
-      _$_$_FlagFromJson(json);
+  factory _$_Flag.fromJson(Map<String, dynamic> json) => _$$_FlagFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Flag)
@@ -5806,7 +5805,7 @@ class _$_Flag extends _Flag {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FlagToJson(this);
+    return _$$_FlagToJson(this);
   }
 }
 
@@ -5963,6 +5962,12 @@ class _$LibraryTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
@@ -5972,12 +5977,6 @@ class _$LibraryTearOff {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
       List<ParameterDefinition>? parameter,
       List<DataRequirement>? dataRequirement,
       List<Attachment>? content}) {
@@ -6024,6 +6023,12 @@ class _$LibraryTearOff {
       lastReviewDate: lastReviewDate,
       lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
+      topic: topic,
+      author: author,
+      editor: editor,
+      reviewer: reviewer,
+      endorser: endorser,
+      relatedArtifact: relatedArtifact,
       subtitle: subtitle,
       subtitleElement: subtitleElement,
       type: type,
@@ -6031,12 +6036,6 @@ class _$LibraryTearOff {
       subjectReference: subjectReference,
       usage: usage,
       usageElement: usageElement,
-      topic: topic,
-      author: author,
-      editor: editor,
-      reviewer: reviewer,
-      endorser: endorser,
-      relatedArtifact: relatedArtifact,
       parameter: parameter,
       dataRequirement: dataRequirement,
       content: content,
@@ -6114,6 +6113,13 @@ mixin _$Library {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
   String? get subtitle => throw _privateConstructorUsedError;
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
@@ -6124,13 +6130,6 @@ mixin _$Library {
   String? get usage => throw _privateConstructorUsedError;
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
-  List<ContactDetail>? get author => throw _privateConstructorUsedError;
-  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
-  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
   List<ParameterDefinition>? get parameter =>
       throw _privateConstructorUsedError;
   List<DataRequirement>? get dataRequirement =>
@@ -6207,6 +6206,12 @@ abstract class $LibraryCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
@@ -6216,12 +6221,6 @@ abstract class $LibraryCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
       List<ParameterDefinition>? parameter,
       List<DataRequirement>? dataRequirement,
       List<Attachment>? content});
@@ -6303,6 +6302,12 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
     Object? subtitle = freezed,
     Object? subtitleElement = freezed,
     Object? type = freezed,
@@ -6310,12 +6315,6 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
     Object? subjectReference = freezed,
     Object? usage = freezed,
     Object? usageElement = freezed,
-    Object? topic = freezed,
-    Object? author = freezed,
-    Object? editor = freezed,
-    Object? reviewer = freezed,
-    Object? endorser = freezed,
-    Object? relatedArtifact = freezed,
     Object? parameter = freezed,
     Object? dataRequirement = freezed,
     Object? content = freezed,
@@ -6489,6 +6488,30 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
       subtitle: subtitle == freezed
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
@@ -6517,30 +6540,6 @@ class _$LibraryCopyWithImpl<$Res> implements $LibraryCopyWith<$Res> {
           ? _value.usageElement
           : usageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      topic: topic == freezed
-          ? _value.topic
-          : topic // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      author: author == freezed
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      editor: editor == freezed
-          ? _value.editor
-          : editor // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      reviewer: reviewer == freezed
-          ? _value.reviewer
-          : reviewer // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      endorser: endorser == freezed
-          ? _value.endorser
-          : endorser // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value.relatedArtifact
-          : relatedArtifact // ignore: cast_nullable_to_non_nullable
-              as List<RelatedArtifact>?,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter // ignore: cast_nullable_to_non_nullable
@@ -6873,6 +6872,12 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
@@ -6882,12 +6887,6 @@ abstract class _$LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
       List<ParameterDefinition>? parameter,
       List<DataRequirement>? dataRequirement,
       List<Attachment>? content});
@@ -6993,6 +6992,12 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
     Object? subtitle = freezed,
     Object? subtitleElement = freezed,
     Object? type = freezed,
@@ -7000,12 +7005,6 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
     Object? subjectReference = freezed,
     Object? usage = freezed,
     Object? usageElement = freezed,
-    Object? topic = freezed,
-    Object? author = freezed,
-    Object? editor = freezed,
-    Object? reviewer = freezed,
-    Object? endorser = freezed,
-    Object? relatedArtifact = freezed,
     Object? parameter = freezed,
     Object? dataRequirement = freezed,
     Object? content = freezed,
@@ -7179,6 +7178,30 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
       subtitle: subtitle == freezed
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
@@ -7207,30 +7230,6 @@ class __$LibraryCopyWithImpl<$Res> extends _$LibraryCopyWithImpl<$Res>
           ? _value.usageElement
           : usageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      topic: topic == freezed
-          ? _value.topic
-          : topic // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>?,
-      author: author == freezed
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      editor: editor == freezed
-          ? _value.editor
-          : editor // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      reviewer: reviewer == freezed
-          ? _value.reviewer
-          : reviewer // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      endorser: endorser == freezed
-          ? _value.endorser
-          : endorser // ignore: cast_nullable_to_non_nullable
-              as List<ContactDetail>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value.relatedArtifact
-          : relatedArtifact // ignore: cast_nullable_to_non_nullable
-              as List<RelatedArtifact>?,
       parameter: parameter == freezed
           ? _value.parameter
           : parameter // ignore: cast_nullable_to_non_nullable
@@ -7311,6 +7310,12 @@ class _$_Library extends _Library {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       this.subtitle,
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
@@ -7320,19 +7325,13 @@ class _$_Library extends _Library {
       this.usage,
       @JsonKey(name: '_usage')
           this.usageElement,
-      this.topic,
-      this.author,
-      this.editor,
-      this.reviewer,
-      this.endorser,
-      this.relatedArtifact,
       this.parameter,
       this.dataRequirement,
       this.content})
       : super._();
 
   factory _$_Library.fromJson(Map<String, dynamic> json) =>
-      _$_$_LibraryFromJson(json);
+      _$$_LibraryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Library)
@@ -7437,6 +7436,18 @@ class _$_Library extends _Library {
   @override
   final Period? effectivePeriod;
   @override
+  final List<CodeableConcept>? topic;
+  @override
+  final List<ContactDetail>? author;
+  @override
+  final List<ContactDetail>? editor;
+  @override
+  final List<ContactDetail>? reviewer;
+  @override
+  final List<ContactDetail>? endorser;
+  @override
+  final List<RelatedArtifact>? relatedArtifact;
+  @override
   final String? subtitle;
   @override
   @JsonKey(name: '_subtitle')
@@ -7453,18 +7464,6 @@ class _$_Library extends _Library {
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
-  final List<CodeableConcept>? topic;
-  @override
-  final List<ContactDetail>? author;
-  @override
-  final List<ContactDetail>? editor;
-  @override
-  final List<ContactDetail>? reviewer;
-  @override
-  final List<ContactDetail>? endorser;
-  @override
-  final List<RelatedArtifact>? relatedArtifact;
-  @override
   final List<ParameterDefinition>? parameter;
   @override
   final List<DataRequirement>? dataRequirement;
@@ -7473,7 +7472,7 @@ class _$_Library extends _Library {
 
   @override
   String toString() {
-    return 'Library(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, subtitle: $subtitle, subtitleElement: $subtitleElement, type: $type, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, usage: $usage, usageElement: $usageElement, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, parameter: $parameter, dataRequirement: $dataRequirement, content: $content)';
+    return 'Library(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, subtitle: $subtitle, subtitleElement: $subtitleElement, type: $type, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, usage: $usage, usageElement: $usageElement, parameter: $parameter, dataRequirement: $dataRequirement, content: $content)';
   }
 
   @override
@@ -7565,6 +7564,12 @@ class _$_Library extends _Library {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
+            (identical(other.author, author) || const DeepCollectionEquality().equals(other.author, author)) &&
+            (identical(other.editor, editor) || const DeepCollectionEquality().equals(other.editor, editor)) &&
+            (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
+            (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
+            (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
             (identical(other.subtitle, subtitle) || const DeepCollectionEquality().equals(other.subtitle, subtitle)) &&
             (identical(other.subtitleElement, subtitleElement) || const DeepCollectionEquality().equals(other.subtitleElement, subtitleElement)) &&
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
@@ -7572,12 +7577,6 @@ class _$_Library extends _Library {
             (identical(other.subjectReference, subjectReference) || const DeepCollectionEquality().equals(other.subjectReference, subjectReference)) &&
             (identical(other.usage, usage) || const DeepCollectionEquality().equals(other.usage, usage)) &&
             (identical(other.usageElement, usageElement) || const DeepCollectionEquality().equals(other.usageElement, usageElement)) &&
-            (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
-            (identical(other.author, author) || const DeepCollectionEquality().equals(other.author, author)) &&
-            (identical(other.editor, editor) || const DeepCollectionEquality().equals(other.editor, editor)) &&
-            (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
-            (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
-            (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
             (identical(other.parameter, parameter) || const DeepCollectionEquality().equals(other.parameter, parameter)) &&
             (identical(other.dataRequirement, dataRequirement) || const DeepCollectionEquality().equals(other.dataRequirement, dataRequirement)) &&
             (identical(other.content, content) || const DeepCollectionEquality().equals(other.content, content)));
@@ -7628,6 +7627,12 @@ class _$_Library extends _Library {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
+      const DeepCollectionEquality().hash(topic) ^
+      const DeepCollectionEquality().hash(author) ^
+      const DeepCollectionEquality().hash(editor) ^
+      const DeepCollectionEquality().hash(reviewer) ^
+      const DeepCollectionEquality().hash(endorser) ^
+      const DeepCollectionEquality().hash(relatedArtifact) ^
       const DeepCollectionEquality().hash(subtitle) ^
       const DeepCollectionEquality().hash(subtitleElement) ^
       const DeepCollectionEquality().hash(type) ^
@@ -7635,12 +7640,6 @@ class _$_Library extends _Library {
       const DeepCollectionEquality().hash(subjectReference) ^
       const DeepCollectionEquality().hash(usage) ^
       const DeepCollectionEquality().hash(usageElement) ^
-      const DeepCollectionEquality().hash(topic) ^
-      const DeepCollectionEquality().hash(author) ^
-      const DeepCollectionEquality().hash(editor) ^
-      const DeepCollectionEquality().hash(reviewer) ^
-      const DeepCollectionEquality().hash(endorser) ^
-      const DeepCollectionEquality().hash(relatedArtifact) ^
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(dataRequirement) ^
       const DeepCollectionEquality().hash(content);
@@ -7652,7 +7651,7 @@ class _$_Library extends _Library {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LibraryToJson(this);
+    return _$$_LibraryToJson(this);
   }
 }
 
@@ -7718,6 +7717,12 @@ abstract class _Library extends Library {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       String? subtitle,
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
@@ -7727,12 +7732,6 @@ abstract class _Library extends Library {
       String? usage,
       @JsonKey(name: '_usage')
           Element? usageElement,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
       List<ParameterDefinition>? parameter,
       List<DataRequirement>? dataRequirement,
       List<Attachment>? content}) = _$_Library;
@@ -7844,6 +7843,19 @@ abstract class _Library extends Library {
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @override
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
   String? get subtitle => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subtitle')
@@ -7860,19 +7872,6 @@ abstract class _Library extends Library {
   @override
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
-  @override
-  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get author => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  @override
-  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
-  @override
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
   @override
   List<ParameterDefinition>? get parameter =>
       throw _privateConstructorUsedError;
@@ -7912,12 +7911,10 @@ class _$List_TearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: List_Status.unknown)
-          List_Status? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: List_Mode.unknown)
-          List_Mode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       String? title,
@@ -7993,12 +7990,10 @@ mixin _$List_ {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: List_Status.unknown)
-  List_Status? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: List_Mode.unknown)
-  List_Mode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
@@ -8042,12 +8037,10 @@ abstract class $List_CopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: List_Status.unknown)
-          List_Status? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: List_Mode.unknown)
-          List_Mode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       String? title,
@@ -8172,7 +8165,7 @@ class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as List_Status?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8180,7 +8173,7 @@ class _$List_CopyWithImpl<$Res> implements $List_CopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as List_Mode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8413,12 +8406,10 @@ abstract class _$List_CopyWith<$Res> implements $List_CopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: List_Status.unknown)
-          List_Status? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: List_Mode.unknown)
-          List_Mode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       String? title,
@@ -8558,7 +8549,7 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as List_Status?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8566,7 +8557,7 @@ class __$List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as List_Mode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8643,12 +8634,10 @@ class _$_List_ extends _List_ {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: List_Status.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      @JsonKey(unknownEnumValue: List_Mode.unknown)
-          this.mode,
+      this.mode,
       @JsonKey(name: '_mode')
           this.modeElement,
       this.title,
@@ -8668,7 +8657,7 @@ class _$_List_ extends _List_ {
       : super._();
 
   factory _$_List_.fromJson(Map<String, dynamic> json) =>
-      _$_$_List_FromJson(json);
+      _$$_List_FromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.List_)
@@ -8699,14 +8688,12 @@ class _$_List_ extends _List_ {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: List_Status.unknown)
-  final List_Status? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  @JsonKey(unknownEnumValue: List_Mode.unknown)
-  final List_Mode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -8858,7 +8845,7 @@ class _$_List_ extends _List_ {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_List_ToJson(this);
+    return _$$_List_ToJson(this);
   }
 }
 
@@ -8880,12 +8867,10 @@ abstract class _List_ extends List_ {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: List_Status.unknown)
-          List_Status? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      @JsonKey(unknownEnumValue: List_Mode.unknown)
-          List_Mode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       String? title,
@@ -8936,14 +8921,12 @@ abstract class _List_ extends List_ {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: List_Status.unknown)
-  List_Status? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: List_Mode.unknown)
-  List_Mode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -9266,7 +9249,7 @@ class _$_ListEntry extends _ListEntry {
       : super._();
 
   factory _$_ListEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_ListEntryFromJson(json);
+      _$$_ListEntryFromJson(json);
 
   @override
   final String? id;
@@ -9344,7 +9327,7 @@ class _$_ListEntry extends _ListEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ListEntryToJson(this);
+    return _$$_ListEntryToJson(this);
   }
 }
 

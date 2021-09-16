@@ -1,3 +1,14 @@
+## [0.5.0-2]
+* Updating some documentation
+
+## [0.5.0-1]
+* Mostly just updating to the new FHIR dependency
+
+## [0.4.5]
+* Updated dart version
+* Added anlyzer to dev_dependencies
+* Not sure why pub.dev can't run dartanalyzer
+
 ## [0.4.4]
 * Removed build.yaml
 

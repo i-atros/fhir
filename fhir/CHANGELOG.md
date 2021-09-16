@@ -1,9 +1,17 @@
 # fhir
 
+## [0.5.0-1]
+* Created a FhirNumber class
+* Created FhirDateTimeBase class
+* Created extra operators for Dates, DateTimes, Times, Decimal, Integers
+* These operators follow general rules on comparisons, but some may be specific to FHIRPath. If these cause issues for anyone, please let me know.
+* Updated R5
+
 ## [0.4.7]
+* Updated dependencies
+* reran code genderation
 * Added a workaround for stack overflow on release builds
 * Added a way to create a FhirDateTime from a Date
-* Updated dependencies, reran code genderation
 
 ## [0.4.6]
 * [Tiloc](https://github.com/tiloc) cleaned up DateTime

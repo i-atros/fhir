@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'support.dart';
 
@@ -899,7 +899,7 @@ class _$_Coverage extends _Coverage {
       : super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageFromJson(json);
+      _$$_CoverageFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
@@ -1109,7 +1109,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageToJson(this);
+    return _$$_CoverageToJson(this);
   }
 }
 
@@ -1509,7 +1509,7 @@ class _$_CoverageClass extends _CoverageClass {
       : super._();
 
   factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageClassFromJson(json);
+      _$$_CoverageClassFromJson(json);
 
   @override
   final String? id;
@@ -1581,7 +1581,7 @@ class _$_CoverageClass extends _CoverageClass {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageClassToJson(this);
+    return _$$_CoverageClassToJson(this);
   }
 }
 
@@ -1877,7 +1877,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
       : super._();
 
   factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageCostToBeneficiaryFromJson(json);
+      _$$_CoverageCostToBeneficiaryFromJson(json);
 
   @override
   final String? id;
@@ -1945,7 +1945,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageCostToBeneficiaryToJson(this);
+    return _$$_CoverageCostToBeneficiaryToJson(this);
   }
 }
 
@@ -2184,7 +2184,7 @@ class _$_CoverageException extends _CoverageException {
       : super._();
 
   factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageExceptionFromJson(json);
+      _$$_CoverageExceptionFromJson(json);
 
   @override
   final String? id;
@@ -2237,7 +2237,7 @@ class _$_CoverageException extends _CoverageException {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageExceptionToJson(this);
+    return _$$_CoverageExceptionToJson(this);
   }
 }
 
@@ -2302,9 +2302,9 @@ class _$CoverageEligibilityRequestTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<CoverageEligibilityRequestPurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       required Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2385,10 +2385,9 @@ mixin _$CoverageEligibilityRequest {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get priority => throw _privateConstructorUsedError;
-  List<CoverageEligibilityRequestPurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
+  List<Element>? get purposeElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   Date? get servicedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
@@ -2440,9 +2439,9 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<CoverageEligibilityRequestPurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2581,11 +2580,11 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityRequestPurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       patient: patient == freezed
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -2817,9 +2816,9 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? priority,
-      List<CoverageEligibilityRequestPurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2975,11 +2974,11 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityRequestPurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       patient: patient == freezed
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -3081,7 +3080,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       : super._();
 
   factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestFromJson(json);
+      _$$_CoverageEligibilityRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
@@ -3119,10 +3118,10 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   @override
   final CodeableConcept? priority;
   @override
-  final List<CoverageEligibilityRequestPurpose>? purpose;
+  final List<Code>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  final List<Element?>? purposeElement;
+  final List<Element>? purposeElement;
   @override
   final Reference patient;
   @override
@@ -3278,7 +3277,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestToJson(this);
+    return _$$_CoverageEligibilityRequestToJson(this);
   }
 }
 
@@ -3304,9 +3303,9 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           @JsonKey(name: '_status')
               Element? statusElement,
           CodeableConcept? priority,
-          List<CoverageEligibilityRequestPurpose>? purpose,
+          List<Code>? purpose,
           @JsonKey(name: '_purpose')
-              List<Element?>? purposeElement,
+              List<Element>? purposeElement,
           required Reference patient,
           Date? servicedDate,
           @JsonKey(name: '_servicedDate')
@@ -3365,11 +3364,10 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   @override
   CodeableConcept? get priority => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestPurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
+  List<Element>? get purposeElement => throw _privateConstructorUsedError;
   @override
   Reference get patient => throw _privateConstructorUsedError;
   @override
@@ -3682,7 +3680,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   factory _$_CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestSupportingInfoFromJson(json);
+      _$$_CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   @override
   final String? id;
@@ -3759,7 +3757,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestSupportingInfoToJson(this);
+    return _$$_CoverageEligibilityRequestSupportingInfoToJson(this);
   }
 }
 
@@ -4089,7 +4087,7 @@ class _$_CoverageEligibilityRequestInsurance
 
   factory _$_CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestInsuranceFromJson(json);
+      _$$_CoverageEligibilityRequestInsuranceFromJson(json);
 
   @override
   final String? id;
@@ -4167,7 +4165,7 @@ class _$_CoverageEligibilityRequestInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestInsuranceToJson(this);
+    return _$$_CoverageEligibilityRequestInsuranceToJson(this);
   }
 }
 
@@ -4642,7 +4640,7 @@ class _$_CoverageEligibilityRequestItem
 
   factory _$_CoverageEligibilityRequestItem.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestItemFromJson(json);
+      _$$_CoverageEligibilityRequestItemFromJson(json);
 
   @override
   final String? id;
@@ -4754,7 +4752,7 @@ class _$_CoverageEligibilityRequestItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestItemToJson(this);
+    return _$$_CoverageEligibilityRequestItemToJson(this);
   }
 }
 
@@ -5036,7 +5034,7 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   factory _$_CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestDiagnosisFromJson(json);
+      _$$_CoverageEligibilityRequestDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -5095,7 +5093,7 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestDiagnosisToJson(this);
+    return _$$_CoverageEligibilityRequestDiagnosisToJson(this);
   }
 }
 
@@ -5163,9 +5161,9 @@ class _$CoverageEligibilityResponseTearOff {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CoverageEligibilityResponsePurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       required Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -5258,10 +5256,9 @@ mixin _$CoverageEligibilityResponse {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  List<CoverageEligibilityResponsePurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
+  List<Element>? get purposeElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
   Date? get servicedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
@@ -5322,9 +5319,9 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CoverageEligibilityResponsePurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -5474,11 +5471,11 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityResponsePurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       patient: patient == freezed
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -5747,9 +5744,9 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CoverageEligibilityResponsePurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -5919,11 +5916,11 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
       purpose: purpose == freezed
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
-              as List<CoverageEligibilityResponsePurpose>?,
+              as List<Code>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       patient: patient == freezed
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
@@ -6053,7 +6050,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       : super._();
 
   factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseFromJson(json);
+      _$$_CoverageEligibilityResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
@@ -6089,10 +6086,10 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final List<CoverageEligibilityResponsePurpose>? purpose;
+  final List<Code>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  final List<Element?>? purposeElement;
+  final List<Element>? purposeElement;
   @override
   final Reference patient;
   @override
@@ -6270,7 +6267,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseToJson(this);
+    return _$$_CoverageEligibilityResponseToJson(this);
   }
 }
 
@@ -6296,9 +6293,9 @@ abstract class _CoverageEligibilityResponse
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      List<CoverageEligibilityResponsePurpose>? purpose,
+      List<Code>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element?>? purposeElement,
+          List<Element>? purposeElement,
       required Reference patient,
       Date? servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -6364,11 +6361,10 @@ abstract class _CoverageEligibilityResponse
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponsePurpose>? get purpose =>
-      throw _privateConstructorUsedError;
+  List<Code>? get purpose => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
+  List<Element>? get purposeElement => throw _privateConstructorUsedError;
   @override
   Reference get patient => throw _privateConstructorUsedError;
   @override
@@ -6692,7 +6688,7 @@ class _$_CoverageEligibilityResponseInsurance
 
   factory _$_CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseInsuranceFromJson(json);
+      _$$_CoverageEligibilityResponseInsuranceFromJson(json);
 
   @override
   final String? id;
@@ -6767,7 +6763,7 @@ class _$_CoverageEligibilityResponseInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseInsuranceToJson(this);
+    return _$$_CoverageEligibilityResponseInsuranceToJson(this);
   }
 }
 
@@ -7458,7 +7454,7 @@ class _$_CoverageEligibilityResponseItem
 
   factory _$_CoverageEligibilityResponseItem.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseItemFromJson(json);
+      _$$_CoverageEligibilityResponseItemFromJson(json);
 
   @override
   final String? id;
@@ -7619,7 +7615,7 @@ class _$_CoverageEligibilityResponseItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseItemToJson(this);
+    return _$$_CoverageEligibilityResponseItemToJson(this);
   }
 }
 
@@ -8146,7 +8142,7 @@ class _$_CoverageEligibilityResponseBenefit
 
   factory _$_CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseBenefitFromJson(json);
+      _$$_CoverageEligibilityResponseBenefitFromJson(json);
 
   @override
   final String? id;
@@ -8262,7 +8258,7 @@ class _$_CoverageEligibilityResponseBenefit
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseBenefitToJson(this);
+    return _$$_CoverageEligibilityResponseBenefitToJson(this);
   }
 }
 
@@ -8507,7 +8503,7 @@ class _$_CoverageEligibilityResponseError
 
   factory _$_CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseErrorFromJson(json);
+      _$$_CoverageEligibilityResponseErrorFromJson(json);
 
   @override
   final String? id;
@@ -8556,7 +8552,7 @@ class _$_CoverageEligibilityResponseError
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseErrorToJson(this);
+    return _$$_CoverageEligibilityResponseErrorToJson(this);
   }
 }
 
@@ -9172,7 +9168,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       : super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentRequestFromJson(json);
+      _$$_EnrollmentRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
@@ -9319,7 +9315,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(this);
   }
 }
 
@@ -10070,7 +10066,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       : super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentResponseFromJson(json);
+      _$$_EnrollmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
@@ -10238,7 +10234,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(this);
   }
 }
 
