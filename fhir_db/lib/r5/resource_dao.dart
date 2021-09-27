@@ -100,25 +100,12 @@ class ResourceDao {
     if (resources != null) {
       if (resourceType != null) {
         await _addResourceType(password, resourceType);
-
         _setStoreType(ResourceUtils.resourceTypeToStringMap[resourceType]!);
-
         if (overrideValues) {
           return _insertMultiple(password, resources);
         } else {
-          final _resourcesPresent = (await find(
-            null,
-            resourceType: resourceType,
-            ids: resources.map<Id?>((e) => e.id).toList(),
-          ))
-              .map<String?>((e) => e.id?.value)
-              .toList();
-          final _toInsert = resources.where((e) => !_resourcesPresent.contains(e.id?.value)).toList();
-          final _toUpdate = resources.where((e) => _resourcesPresent.contains(e.id?.value)).toList();
-          final _inserted = await _insertMultiple(password, _toInsert);
-          final _updated = await _updateMultiple(password, _toUpdate);
-
-          return [..._inserted, ..._updated];
+          final _updated = await _updateMultiple(password, resources, resourceType);
+          return _updated;
         }
       } else {
         throw const FormatException('ResourceType cannot be null');
@@ -197,44 +184,35 @@ class ResourceDao {
   /// db. If the mode is [PERSISTENCE_DB], it increases the version number
   /// and it saves the old resource. If the mode is [CACHE_DB] just adds the
   /// resource to the local database.
-  Future<List<Resource>> _updateMultiple(String? password, List<Resource> resources) async {
-    final dbResources = <Map<String, dynamic>?>[];
+  Future<List<Resource>> _updateMultiple(String? password, List<Resource> resources, resourceType) async {
+    final _resourcesPresent = (await find(
+      null,
+      resourceType: resourceType,
+      ids: resources.map<Id?>((e) => e.id).toList(),
+    ))
+        .toList();
 
-    (await _db(password)).transaction((transaction) async {
-      await Future.forEach(
-        resources,
-        (Resource element) async => element.id != null
-            ? dbResources.add(await _resourceStore.record(element.id.toString()).get(
-                  transaction,
-                ))
-            : dbResources.add(null),
-      );
+    final _toInsert = resources.where((e) => !_resourcesPresent.contains(e.id?.value)).toList();
+    final _toUpdate = resources.toSet().difference(_toInsert.toSet()).toList();
+
+    final _toUpdateGeneratedFutures = _toUpdate.map((e) {
+      return _generateUpdatedResource(_resourcesPresent.firstWhere((r) => r.id!.value == e.id!.value).toJson(), e, password);
     });
-
-    final _toInsert = <Resource>[];
-    final _toUpdate = <Resource>[];
-
-    for (int i = 0; i < dbResources.length; i++) {
-      if (dbResources[i] == null) {
-        _toInsert.add(resources[i]);
-      } else {
-        _toUpdate.add(await _generateUpdatedResource(dbResources[i]!, resources[i], password));
-      }
-    }
 
     final _inserted = await _insertMultiple(password, _toInsert);
 
     (await _db(password)).transaction((transaction) async {
-      await Future.forEach(
-        _toUpdate,
-        (Resource element) async => element.id != null
-            ? await _resourceStore.record(element.id!.value!).put(
-                  transaction,
-                  element.toJson(),
-                  merge: true,
-                )
-            : null,
-      );
+      await Future.forEach(_toUpdateGeneratedFutures, (Future<Resource> e) async {
+        final element = await e;
+        if (element.id == null) {
+          return null;
+        }
+        return await _resourceStore.record(element.id!.value!).put(
+              transaction,
+              element.toJson(),
+              merge: true,
+            );
+      });
     });
 
     return [..._inserted, ..._toUpdate];
