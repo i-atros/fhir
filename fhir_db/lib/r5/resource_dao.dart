@@ -339,8 +339,8 @@ class ResourceDao {
         filters.add(customFilter);
       }
 
-      if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound!.toUtc().toString()));
-      if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound!.toUtc().toString()));
+      if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound.toString()));
+      if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime",filter.upperBound.toString()));
 
       final combinedFilter = Filter.and(filters);
       finder = Finder(filter: combinedFilter);
