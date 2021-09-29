@@ -268,6 +268,7 @@ class ResourceDao {
     String? field,
     String? value,
     List<Id?>? ids,
+    bool ourCustomFilter = false,
   }) async {
     if (id != null && ids != null) {
       throw const FormatException('You can\'t use both id and ids parameter');
@@ -277,7 +278,14 @@ class ResourceDao {
         (resourceType != null && ids != null) ||
         (resourceType != null && field != null && value != null)) {
       Finder finder;
-      if (resource != null) {
+
+      if (ourCustomFilter) {
+        var customFilter = Filter.custom((record) {
+          final leaveIds = (record['coding'] as List).map((tag) => (tag as Map)['code'] as String);
+          return leaveIds.contains('29463-7');
+        });
+        finder = Finder(filter: customFilter);
+      } else if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
         finder = Finder(filter: Filter.equals('id', '$id'));
@@ -286,6 +294,8 @@ class ResourceDao {
       } else {
         finder = Finder(filter: Filter.equals(field!, value));
       }
+
+      // Custom filter matching any leave with a id 2
 
       _setStoreType(ResourceUtils.resourceTypeToStringMap[resource?.resourceType ?? resourceType]!);
       return await _search(password, finder);
