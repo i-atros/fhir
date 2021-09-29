@@ -281,7 +281,9 @@ class ResourceDao {
 
       if (ourCustomFilter) {
         var customFilter = Filter.custom((record) {
-          final leaveIds = (record['coding'] as List).map((tag) => (tag as Map)['code'] as String);
+          final leaveIds = [];
+          Map? code = record['code'] as Map;
+          leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
           return leaveIds.contains('29463-7');
         });
         finder = Finder(filter: customFilter);
