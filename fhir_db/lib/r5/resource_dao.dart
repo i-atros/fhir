@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:fhir/r5.dart';
+import 'package:fhir_db/r5/custom_filter.dart';
 import 'package:fhir_db/r5/database_mode.dart' as mode;
 import 'package:sembast/sembast.dart';
 
@@ -268,7 +269,9 @@ class ResourceDao {
     String? field,
     String? value,
     List<Id?>? ids,
-    bool ourCustomFilter = false,
+    String? code,
+    DateTime? lowerBound,
+    DateTime? upperBound,
   }) async {
     if (id != null && ids != null) {
       throw const FormatException('You can\'t use both id and ids parameter');
@@ -279,14 +282,20 @@ class ResourceDao {
         (resourceType != null && field != null && value != null)) {
       Finder finder;
 
-      if (ourCustomFilter) {
+      if (code != null) {
         var customFilter = Filter.custom((record) {
           final leaveIds = [];
           Map? code = record['code'] as Map;
           leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
-          return leaveIds.contains('29463-7');
+          return leaveIds.contains(code);
         });
-        finder = Finder(filter: customFilter);
+
+        final filter = Filter.and([
+          customFilter,
+          Filter.greaterThanOrEquals("effectiveDateTime", lowerBound),
+          Filter.lessThanOrEquals("effectiveDateTime", upperBound)
+        ]);
+        finder = Finder(filter: filter);
       } else if (resource != null) {
         finder = Finder(filter: Filter.equals('id', '${resource.id}'));
       } else if (resourceType != null && id != null) {
@@ -308,6 +317,38 @@ class ResourceDao {
           '\n3) a resourceType and a list of Ids'
           '\n4) a resourceType, a specific field, and the value of interest');
     }
+  }
+
+  Future<List<Resource>> findWithFilter(
+    String? password, {
+    required FHIRFilter filter,
+  }) async {
+    Finder finder;
+
+    if (filter is CustomFilter) {
+      List<Filter> filters = [];
+
+      if (filter.code != null) {
+        var customFilter = Filter.custom((record) {
+          final leaveIds = [];
+          Map? code = record['code'] as Map;
+          leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
+          return leaveIds.contains(filter.code);
+        });
+
+        filters.add(customFilter);
+      }
+
+      if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound));
+      if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound));
+
+      final combinedFilter = Filter.and(filters);
+      finder = Finder(filter: combinedFilter);
+
+      return await _search(password, finder);
+    }
+
+    return await getResourceType(password, resourceTypes: [filter.resourceType]);
   }
 
   /// returns all resources of a specific type
