@@ -328,12 +328,12 @@ class ResourceDao {
     if (filter is CustomFilter) {
       List<Filter> filters = [];
 
-      if (filter.code != null) {
+      if (filter.codes != null) {
         var customFilter = Filter.custom((record) {
           final leaveIds = [];
           Map? code = record['code'] as Map;
           leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
-          return leaveIds.contains(filter.code);
+          return leaveIds.any((item) => filter.codes!.contains(item)); //leaveIds.contains(filter.code);
         });
 
         filters.add(customFilter);

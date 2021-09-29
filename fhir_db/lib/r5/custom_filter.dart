@@ -10,9 +10,9 @@ class FHIRFilter {
 }
 
 class CustomFilter extends FHIRFilter {
-  final String? code;
+  final List<String>? codes;
   final FhirDateTime? lowerBound;
   final FhirDateTime? upperBound;
 
-  CustomFilter(R5ResourceType resourceType, {this.code, this.lowerBound, this.upperBound}) : super(resourceType);
+  CustomFilter(R5ResourceType resourceType, {this.codes, this.lowerBound, this.upperBound}) : super(resourceType);
 }
