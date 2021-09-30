@@ -1,5 +1,3 @@
-
-
 import 'package:fhir/primitive_types/fhir_date_time.dart';
 import 'package:fhir/r5/resource/resource.dart';
 
@@ -9,10 +7,14 @@ class FHIRFilter {
   FHIRFilter(this.resourceType);
 }
 
-class CustomFilter extends FHIRFilter {
+class ObservationFilter extends FHIRFilter {
   final List<String>? codes;
   final FhirDateTime? lowerBound;
   final FhirDateTime? upperBound;
 
-  CustomFilter(R5ResourceType resourceType, {this.codes, this.lowerBound, this.upperBound}) : super(resourceType);
+  ObservationFilter({
+    this.codes,
+    this.lowerBound,
+    this.upperBound,
+  }) : super(R5ResourceType.Observation);
 }

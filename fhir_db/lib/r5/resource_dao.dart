@@ -325,7 +325,7 @@ class ResourceDao {
   }) async {
     Finder finder;
 
-    if (filter is CustomFilter) {
+    if (filter is ObservationFilter) {
       List<Filter> filters = [];
 
       if (filter.codes != null) {
@@ -340,7 +340,7 @@ class ResourceDao {
       }
 
       if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound.toString()));
-      if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime",filter.upperBound.toString()));
+      if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound.toString()));
 
       final combinedFilter = Filter.and(filters);
       finder = Finder(filter: combinedFilter);
