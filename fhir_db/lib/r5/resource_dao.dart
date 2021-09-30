@@ -144,44 +144,41 @@ class ResourceDao {
     _setStoreType(ResourceUtils.resourceTypeToStringMap[observationFilter.resourceType]!);
     await (await _db(password)).transaction(
       (transaction) async {
+        await Future.forEach(
+          observationFilter.codes!,
+          (String loinc) async {
+            var finder;
+            List<Filter> filters = [];
+            var customFilter = Filter.custom(
+              (record) {
+                final leaveIds = [];
+                Map? code = record['code'] as Map;
+                leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
+                return leaveIds.contains(loinc);
+              },
+            );
 
-          await Future.forEach(
-            observationFilter.codes!,
-            (String loinc) async {
-              var finder;
-              List<Filter> filters = [];
-              var customFilter = Filter.custom(
-                (record) {
-                  final leaveIds = [];
-                  Map? code = record['code'] as Map;
-                  leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
-                  return leaveIds.contains(loinc);
-                },
-              );
+            filters.add(customFilter);
 
-              filters.add(customFilter);
+            final combinedFilter = Filter.and(filters);
+            finder = Finder(
+              filter: combinedFilter,
+              // sortOrders: [
+              //   SortOrder('effectiveDateTime'),
+              // ],
+              offset: 0,
+              limit: 1,
+            );
 
-              final combinedFilter = Filter.and(filters);
-              finder = Finder(
-                filter: combinedFilter,
-                // sortOrders: [
-                //   SortOrder('effectiveDateTime'),
-                // ],
-                offset: 0,
-                limit: 1,
-              );
+            final recordSnapshot = (await _resourceStore.find(transaction, finder: finder));
 
-              final recordSnapshot = (await _resourceStore.find(transaction, finder: finder));
+            if (recordSnapshot.isNotEmpty) {
+              final resource = Resource.fromJson(recordSnapshot.first.value);
+              _newResources.add(resource as Observation);
+            }
 
-              if (recordSnapshot.isNotEmpty) {
-                final resource = Resource.fromJson(recordSnapshot.first.value);
-                _newResources.add( resource as Observation );
-              }
-
-              return recordSnapshot;
-
-            },
-
+            return recordSnapshot;
+          },
         );
       },
     );
@@ -323,9 +320,8 @@ class ResourceDao {
     String? field,
     String? value,
     List<Id?>? ids,
-    String? code,
-    DateTime? lowerBound,
-    DateTime? upperBound,
+    int? limit,
+    int offset = 0,
   }) async {
     if (id != null && ids != null) {
       throw const FormatException('You can\'t use both id and ids parameter');
@@ -336,28 +332,30 @@ class ResourceDao {
         (resourceType != null && field != null && value != null)) {
       Finder finder;
 
-      if (code != null) {
-        var customFilter = Filter.custom((record) {
-          final leaveIds = [];
-          Map? code = record['code'] as Map;
-          leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
-          return leaveIds.contains(code);
-        });
-
-        final filter = Filter.and([
-          customFilter,
-          Filter.greaterThanOrEquals("effectiveDateTime", lowerBound),
-          Filter.lessThanOrEquals("effectiveDateTime", upperBound)
-        ]);
-        finder = Finder(filter: filter);
-      } else if (resource != null) {
-        finder = Finder(filter: Filter.equals('id', '${resource.id}'));
+      if (resource != null) {
+        finder = Finder(
+          filter: Filter.equals('id', '${resource.id}'),
+          limit: limit,
+          offset: offset,
+        );
       } else if (resourceType != null && id != null) {
-        finder = Finder(filter: Filter.equals('id', '$id'));
+        finder = Finder(
+          filter: Filter.equals('id', '$id'),
+          limit: limit,
+          offset: offset,
+        );
       } else if (resourceType != null && ids != null) {
-        finder = Finder(filter: Filter.inList('id', ids.map((e) => e?.value).toList()));
+        finder = Finder(
+          filter: Filter.inList('id', ids.map((e) => e?.value).toList()),
+          limit: limit,
+          offset: offset,
+        );
       } else {
-        finder = Finder(filter: Filter.equals(field!, value));
+        finder = Finder(
+          filter: Filter.equals(field!, value),
+          limit: limit,
+          offset: offset,
+        );
       }
 
       // Custom filter matching any leave with a id 2
