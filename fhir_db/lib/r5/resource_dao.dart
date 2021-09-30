@@ -141,6 +141,7 @@ class ResourceDao {
 
     List<Observation> _newResources = <Observation>[];
 
+    _setStoreType(ResourceUtils.resourceTypeToStringMap[observationFilter.resourceType]!);
     await (await _db(password)).transaction(
       (transaction) async {
 
@@ -176,6 +177,9 @@ class ResourceDao {
                 final resource = Resource.fromJson(recordSnapshot.first.value);
                 _newResources.add( resource as Observation );
               }
+
+              return recordSnapshot;
+
             },
 
         );
@@ -395,6 +399,7 @@ class ResourceDao {
       final combinedFilter = Filter.and(filters);
       finder = Finder(filter: combinedFilter);
 
+      _setStoreType(ResourceUtils.resourceTypeToStringMap[filter.resourceType]!);
       return await _search(password, finder);
     }
 
