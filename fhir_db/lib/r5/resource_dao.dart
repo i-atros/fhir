@@ -136,14 +136,16 @@ class ResourceDao {
   }
 
   /// function used to save multiple new resources in the db
-  Future<List<Observation>> searchLatestObservation(String? password, List<String> codes) async {
-    final _newResources = <Observation>[];
+  Future<List<Observation>> searchLatestObservation(String? password, ObservationFilter observationFilter) async {
+    assert(observationFilter.codes != null);
 
-    (await _db(password)).transaction(
+    List<Observation> _newResources = <Observation>[];
+
+    await (await _db(password)).transaction(
       (transaction) async {
-        _newResources.addAll(
+
           await Future.forEach(
-            codes,
+            observationFilter.codes!,
             (String loinc) async {
               var finder;
               List<Filter> filters = [];
@@ -161,16 +163,21 @@ class ResourceDao {
               final combinedFilter = Filter.and(filters);
               finder = Finder(
                 filter: combinedFilter,
-                sortOrders: [
-                  SortOrder('effectiveDateTime'),
-                ],
+                // sortOrders: [
+                //   SortOrder('effectiveDateTime'),
+                // ],
                 offset: 0,
                 limit: 1,
               );
 
-              await _resourceStore.find(await _db(password), finder: finder);
+              final recordSnapshot = (await _resourceStore.find(transaction, finder: finder));
+
+              if (recordSnapshot.isNotEmpty) {
+                final resource = Resource.fromJson(recordSnapshot.first.value);
+                _newResources.add( resource as Observation );
+              }
             },
-          ),
+
         );
       },
     );
