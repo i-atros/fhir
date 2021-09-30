@@ -135,6 +135,49 @@ class ResourceDao {
     return _newResources;
   }
 
+  /// function used to save multiple new resources in the db
+  Future<List<Observation>> searchLatestObservation(String? password, List<String> codes) async {
+    final _newResources = <Observation>[];
+
+    (await _db(password)).transaction(
+      (transaction) async {
+        _newResources.addAll(
+          await Future.forEach(
+            codes,
+            (String loinc) async {
+              var finder;
+              List<Filter> filters = [];
+              var customFilter = Filter.custom(
+                (record) {
+                  final leaveIds = [];
+                  Map? code = record['code'] as Map;
+                  leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
+                  return leaveIds.contains(loinc);
+                },
+              );
+
+              filters.add(customFilter);
+
+              final combinedFilter = Filter.and(filters);
+              finder = Finder(
+                filter: combinedFilter,
+                sortOrders: [
+                  SortOrder('effectiveDateTime'),
+                ],
+                offset: 0,
+                limit: 1,
+              );
+
+              await _resourceStore.find(await _db(password), finder: finder);
+            },
+          ),
+        );
+      },
+    );
+
+    return _newResources;
+  }
+
   /// function used to save a new resource in the db
   Future<Resource> _insert(String? password, Resource resource) async {
     final _newResource = resource.newVersion();
