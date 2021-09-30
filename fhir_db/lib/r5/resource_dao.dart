@@ -163,9 +163,9 @@ class ResourceDao {
             final combinedFilter = Filter.and(filters);
             finder = Finder(
               filter: combinedFilter,
-              // sortOrders: [
-              //   SortOrder('effectiveDateTime'),
-              // ],
+              sortOrders: [
+                SortOrder('effectiveDateTime'),
+              ],
               offset: 0,
               limit: 1,
             );
