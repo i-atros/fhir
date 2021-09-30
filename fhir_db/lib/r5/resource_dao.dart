@@ -164,7 +164,7 @@ class ResourceDao {
             finder = Finder(
               filter: combinedFilter,
               sortOrders: [
-                SortOrder('effectiveDateTime'),
+                SortOrder('effectiveDateTime', false),
               ],
               offset: 0,
               limit: 1,
