@@ -103,7 +103,7 @@ class ResourceDao {
         await _addResourceType(password, resourceType);
         _setStoreType(ResourceUtils.resourceTypeToStringMap[resourceType]!);
         if (overrideValues) {
-          return _insertMultiple(password, resources);
+          return await _insertMultiple(password, resources);
         } else {
           final _updated = await _updateMultiple(password, resources, resourceType);
           return _updated;
@@ -120,7 +120,7 @@ class ResourceDao {
   Future<List<Resource>> _insertMultiple(String? password, List<Resource?> resources) async {
     final _newResources = resources.where((e) => e != null).map<Resource>((e) => e!.newVersion()).toList();
 
-    (await _db(password)).transaction((transaction) async {
+    await (await _db(password)).transaction((transaction) async {
       await Future.forEach(
         _newResources,
         (Resource element) async => element.id != null
