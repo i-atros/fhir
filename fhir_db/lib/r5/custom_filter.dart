@@ -21,5 +21,9 @@ class ObservationFilter extends FHIRFilter {
     this.codes,
     this.lowerBound,
     this.upperBound,
-  }) : super(R5ResourceType.Observation);
+    List<Id?>? ids,
+  }) : super(
+          R5ResourceType.Observation,
+          ids: ids,
+        );
 }
