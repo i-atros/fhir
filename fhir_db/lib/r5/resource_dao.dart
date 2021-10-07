@@ -377,7 +377,7 @@ class ResourceDao {
   }) async {
     Finder finder;
 
-    if (filter is ObservationFilter) {
+    if (filter is ObservationFilter && filter.ids == null) {
       List<Filter> filters = [];
 
       if (filter.codes != null) {
@@ -395,13 +395,26 @@ class ResourceDao {
       if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound.toString()));
 
       final combinedFilter = Filter.and(filters);
-      finder = Finder(filter: combinedFilter);
+      finder = Finder(
+        filter: combinedFilter,
+      );
 
       _setStoreType(ResourceUtils.resourceTypeToStringMap[filter.resourceType]!);
       return await _search(password, finder);
+    } else if (filter.ids != null) {
+      return await find(
+        password,
+        resourceType: filter.resourceType,
+        ids: filter.ids,
+      );
     }
 
-    return await getResourceType(password, resourceTypes: [filter.resourceType]);
+    return await getResourceType(
+      password,
+      resourceTypes: [
+        filter.resourceType,
+      ],
+    );
   }
 
   /// returns all resources of a specific type
