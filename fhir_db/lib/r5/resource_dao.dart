@@ -391,6 +391,16 @@ class ResourceDao {
         filters.add(customFilter);
       }
 
+      if (filter.identifierValues != null) {
+        var customFilter = Filter.custom((record) {
+          final leaveIds = [];
+          List? identifiers = record['identifier'] as List;
+          leaveIds.addAll(identifiers.map((identifier) => (identifier as Map)['value'] as String));
+          return leaveIds.any((item) => filter.identifierValues!.contains(item));
+        });
+        filters.add(customFilter);
+      }
+
       if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound.toString()));
       if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound.toString()));
 
