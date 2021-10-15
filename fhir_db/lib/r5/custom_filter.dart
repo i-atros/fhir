@@ -14,11 +14,13 @@ class FHIRFilter {
 
 class ObservationFilter extends FHIRFilter {
   final List<String>? codes;
+  final List<String>? identifierValues;
   final FhirDateTime? lowerBound;
   final FhirDateTime? upperBound;
 
   ObservationFilter({
     this.codes,
+    this.identifierValues,
     this.lowerBound,
     this.upperBound,
     List<Id?>? ids,
