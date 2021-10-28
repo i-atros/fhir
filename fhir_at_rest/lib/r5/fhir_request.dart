@@ -827,14 +827,13 @@ class FhirRequest with _$FhirRequest {
       return _operationOutcome('Failed to complete a restful request, ', diagnostics: 'Exception: $e');
     }
 
-    if (_errorCodes.containsKey(result.statusCode)) {
+    if (result.statusCode >= 300) {
       return OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
           code: OperationOutcomeIssueCode.unknown,
           details: CodeableConcept(text: 'Failed to make restful request'),
-          diagnostics: '\nStatus Code: ${result.statusCode} -'
-              ' ${_errorCodes[result.statusCode]}'
+          diagnostics: '\nStatus Code: ${result.statusCode}'
               '\nResult headers: ${result.headers}'
               '\nResult body: ${result.body}',
         )
