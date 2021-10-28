@@ -853,15 +853,5 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
 
-  /// List of the most common types of error codes that will be returned
-  /// from the server
-  static const _errorCodes = {
-    400: 'Bad Request',
-    401: 'Not Authorized',
-    404: 'Not Found',
-    405: 'Method Not Allowed',
-    409: 'Version Conflict',
-    412: 'Version Conflict',
-    422: 'Unprocessable Entity',
-  };
+
 }
