@@ -828,12 +828,14 @@ class FhirRequest with _$FhirRequest {
     }
 
     if (result.statusCode >= 300) {
+      final code = _getIssueCodeByStatusCode(result.statusCode);
       return OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
-          code: OperationOutcomeIssueCode.unknown,
-          details: CodeableConcept(text: 'Failed to make restful request'),
+          code: code,
+          details: CodeableConcept(text: 'Failed to perform request'),
           diagnostics: '\nStatus Code: ${result.statusCode}'
+              '\n ${_getFeedbackByCode(result.statusCode)}'
               '\nResult headers: ${result.headers}'
               '\nResult body: ${result.body}',
         )
@@ -841,6 +843,47 @@ class FhirRequest with _$FhirRequest {
     }
     return Resource.fromJson(json.decode(result.body));
   }
+
+  OperationOutcomeIssueCode _getIssueCodeByStatusCode(int statusCode) {
+    switch (statusCode) {
+      case 400:
+        return OperationOutcomeIssueCode.invalid;
+      case 401:
+        return OperationOutcomeIssueCode.forbidden;
+      case 404:
+        return OperationOutcomeIssueCode.not_found;
+      case 405:
+        return OperationOutcomeIssueCode.not_supported;
+      case 409:
+        return OperationOutcomeIssueCode.conflict;
+      case 412:
+        return OperationOutcomeIssueCode.business_rule;
+      case 422:
+        return OperationOutcomeIssueCode.value;
+      default:
+        return OperationOutcomeIssueCode.unknown;
+    }
+  }
+
+  String _getFeedbackByCode(int code) {
+    if (_errorCodes.keys.contains(code)) {
+      return _errorCodes[code]!;
+    } else {
+      return 'Unkown error';
+    }
+  }
+
+  /// List of the most common types of error codes that will be returned
+  /// from the server
+  static const _errorCodes = {
+    400: 'Bad Request',
+    401: 'Not Authorized',
+    404: 'Not Found',
+    405: 'Method Not Allowed',
+    409: 'Version Conflict',
+    412: 'Precondition Failed',
+    422: 'Unprocessable Entity',
+  };
 
   /// Allows us to return an error as a FHIR resource, whether the problem
   /// is locally or on the server side
@@ -852,6 +895,4 @@ class FhirRequest with _$FhirRequest {
           diagnostics: diagnostics,
         )
       ]);
-
-
 }
