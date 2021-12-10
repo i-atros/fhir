@@ -13,6 +13,185 @@ part 'fhir_request.freezed.dart';
 class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
+  /// This method returns a map with usefull data about the request
+  Map<String, dynamic> _toJson(
+    RestfulRequest type,
+    String uri,
+    String requestType, {
+    Map<String, String>? headers,
+    Resource? resource,
+    String? formData,
+  }) =>
+      {
+        'uri': uri.toString(),
+        'fhirRequestType': requestType,
+        'restfulRequestType': type,
+        if (headers != null) 'headers': headers,
+        if (resource != null) 'resource': resource.toJson(),
+        if (formData != null) 'formData': formData,
+      };
+
+  /// TO JSON
+  /// after creating a request with the above constructors, they can be called
+  /// to get a map with useful data about the request
+  Map<String, dynamic> toJson(Map<String, String> headers) {
+    return map(
+      read: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Read',
+        headers: headers,
+      ),
+      vRead: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Vread',
+        headers: headers,
+      ),
+      update: (m) => _toJson(
+        RestfulRequest.put_,
+        uri(parameters: m.parameters),
+        'Update',
+        headers: headers,
+        resource: m.resource,
+      ),
+      patch: (m) => _toJson(
+        RestfulRequest.patch_,
+        uri(parameters: m.parameters),
+        'Patch',
+        headers: headers,
+        resource: m.resource,
+      ),
+      delete: (m) => _toJson(
+        RestfulRequest.delete_,
+        uri(parameters: m.parameters),
+        'Delete',
+        headers: headers,
+      ),
+      create: (m) => _toJson(
+        RestfulRequest.post_,
+        uri(parameters: m.parameters),
+        'Create',
+        headers: headers,
+        resource: m.resource,
+      ),
+      search: (m) => _toJson(
+        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        m.usePost ? url : uri(parameters: m.parameters),
+        'Search',
+        headers: headers,
+        formData: m.usePost ? m.formData(parameters: m.parameters) : null,
+      ),
+      searchAll: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Search All',
+        headers: headers,
+      ),
+      capabilities: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Capabilities',
+        headers: headers,
+      ),
+      transaction: (m) {
+        return _toJson(
+          RestfulRequest.post_,
+          uri(),
+          'Transaction',
+          headers: headers,
+          resource: m.bundle,
+        );
+      },
+      batch: (m) {
+        return _toJson(
+          RestfulRequest.post_,
+          uri(),
+          'Batch',
+          headers: headers,
+          resource: m.bundle,
+        );
+      },
+      history: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History',
+          headers: headers,
+        );
+      },
+      historyType: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History Type',
+          headers: headers,
+        );
+      },
+      historyAll: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History all',
+          headers: headers,
+        );
+      },
+      operation: (m) => _toJson(
+        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        m.usePost ? url : uri(parameters: parameters),
+        'Operation',
+        headers: headers,
+        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+      ),
+      readBundlePage: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(
+            parameters: m.bundle.link
+                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    .url
+                    ?.value
+                    ?.queryParameters
+                    .entries
+                    .map<String>((e) => '${e.key}=${e.value}')
+                    .toList() ??
+                []),
+        'ReadBundlePage',
+        headers: headers,
+      ),
+    );
+  }
+
   /// READ constructor
   /// [base] - the base URI for the FHIR server
   /// [type] - the type of resource you're looking for
