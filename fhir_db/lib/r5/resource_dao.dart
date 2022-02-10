@@ -322,6 +322,7 @@ class ResourceDao {
     List<Id?>? ids,
     int? limit,
     int offset = 0,
+    bool equals = true,
   }) async {
     if (id != null && ids != null) {
       throw const FormatException('You can\'t use both id and ids parameter');
@@ -334,25 +335,27 @@ class ResourceDao {
 
       if (resource != null) {
         finder = Finder(
-          filter: Filter.equals('id', '${resource.id}'),
+          filter: equals ? Filter.equals('id', '${resource.id}') : Filter.notEquals('id', '${resource.id}'),
           limit: limit,
           offset: offset,
         );
       } else if (resourceType != null && id != null) {
         finder = Finder(
-          filter: Filter.equals('id', '$id'),
+          filter: equals ? Filter.equals('id', '$id') : Filter.notEquals('id', '$id'),
           limit: limit,
           offset: offset,
         );
       } else if (resourceType != null && ids != null) {
         finder = Finder(
-          filter: Filter.inList('id', ids.map((e) => e?.value).toList()),
+          filter: equals
+              ? Filter.inList('id', ids.map((e) => e?.value).toList())
+              : Filter.not(Filter.inList('id', ids.map((e) => e?.value).toList())),
           limit: limit,
           offset: offset,
         );
       } else {
         finder = Finder(
-          filter: Filter.equals(field!, value),
+          filter: equals ? Filter.equals(field!, value) : Filter.notEquals(field!, value),
           limit: limit,
           offset: offset,
         );
