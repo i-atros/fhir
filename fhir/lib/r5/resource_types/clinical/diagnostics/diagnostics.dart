@@ -855,7 +855,7 @@ abstract class QuestionnaireResponse
     List<Resource> contained,
     @JsonKey(name: 'extension') List<FhirExtension> extension_,
     List<FhirExtension> modifierExtension,
-    Identifier identifier,
+    List<Identifier> identifier,
     List<Reference> basedOn,
     List<Reference> partOf,
     Canonical questionnaire,

@@ -13531,7 +13531,7 @@ class _$QuestionnaireResponseTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
@@ -13602,7 +13602,7 @@ mixin _$QuestionnaireResponse {
   @JsonKey(name: 'extension')
   List<FhirExtension> get extension_;
   List<FhirExtension> get modifierExtension;
-  Identifier get identifier;
+  List<Identifier> get identifier;
   List<Reference> get basedOn;
   List<Reference> get partOf;
   Canonical get questionnaire;
@@ -13645,7 +13645,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
@@ -13666,7 +13666,6 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $ElementCopyWith<$Res> get implicitRulesElement;
   $ElementCopyWith<$Res> get languageElement;
   $NarrativeCopyWith<$Res> get text;
-  $IdentifierCopyWith<$Res> get identifier;
   $ElementCopyWith<$Res> get statusElement;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res> get encounter;
@@ -13736,8 +13735,9 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       questionnaire: questionnaire == freezed
@@ -13802,16 +13802,6 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
     }
     return $NarrativeCopyWith<$Res>(_value.text, (value) {
       return _then(_value.copyWith(text: value));
-    });
-  }
-
-  @override
-  $IdentifierCopyWith<$Res> get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
     });
   }
 
@@ -13899,7 +13889,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
@@ -13924,8 +13914,6 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
   $ElementCopyWith<$Res> get languageElement;
   @override
   $NarrativeCopyWith<$Res> get text;
-  @override
-  $IdentifierCopyWith<$Res> get identifier;
   @override
   $ElementCopyWith<$Res> get statusElement;
   @override
@@ -14003,8 +13991,9 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
           : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier as List<Identifier>,
       basedOn: basedOn == freezed ? _value.basedOn : basedOn as List<Reference>,
       partOf: partOf == freezed ? _value.partOf : partOf as List<Reference>,
       questionnaire: questionnaire == freezed
@@ -14102,7 +14091,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   final List<FhirExtension> modifierExtension;
   @override
-  final Identifier identifier;
+  final List<Identifier> identifier;
   @override
   final List<Reference> basedOn;
   @override
@@ -14264,7 +14253,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       @JsonKey(name: 'extension')
           List<FhirExtension> extension_,
       List<FhirExtension> modifierExtension,
-      Identifier identifier,
+      List<Identifier> identifier,
       List<Reference> basedOn,
       List<Reference> partOf,
       Canonical questionnaire,
@@ -14311,7 +14300,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @override
   List<FhirExtension> get modifierExtension;
   @override
-  Identifier get identifier;
+  List<Identifier> get identifier;
   @override
   List<Reference> get basedOn;
   @override
