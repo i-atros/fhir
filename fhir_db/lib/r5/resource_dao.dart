@@ -503,6 +503,43 @@ class ResourceDao {
     }
   }
 
+  /// Delete with a specific filter
+  Future<int> deleteObservationByDateFrame(
+    String? password,
+    ObservationFilter filter,
+  ) async {
+    if (filter != null && (filter.lowerBound != null || filter.upperBound != null || filter.codes != null)) {
+      Finder finder;
+
+      List<Filter> filters = [];
+
+      if (filter.codes != null) {
+        var customFilter = Filter.custom((record) {
+          final leaveIds = [];
+          Map? code = record['code'] as Map;
+          leaveIds.addAll((code['coding'] as List).map((tag) => (tag as Map)['code'] as String));
+          return leaveIds.any((item) => filter.codes!.contains(item)); //leaveIds.contains(filter.code);
+        });
+
+        filters.add(customFilter);
+      }
+
+      if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound!.toString()));
+      if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound!.toString()));
+      if (filter.ignoreStatus != null) filters.add(Filter.notEquals('status', filter.ignoreStatus!.name));
+
+      final combinedFilter = Filter.and(filters);
+      finder = Finder(
+        filter: combinedFilter,
+      );
+
+      _setStoreType(ResourceUtils.resourceTypeToStringMap[filter.resourceType]!);
+      return await _resourceStore.delete(await _db(password), finder: finder);
+    } else {
+      throw const FormatException('Must have an observation filter, lower/upper bound or codes must be different than null');
+    }
+  }
+
   /// pass in a resourceType or a resource, and db will delete all resources of
   /// that type - Note: will NOT delete any _historical stores (must pass in
   /// _history as the type for this to happen)
