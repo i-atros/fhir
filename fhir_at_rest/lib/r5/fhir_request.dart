@@ -20,26 +20,37 @@ class FhirRequest with _$FhirRequest {
     String requestType, {
     Map<String, String>? headers,
     Resource? resource,
+    bool newSchema = true,
     String? formData,
-  }) =>
-      {
-        'uri': uri.toString(),
-        'fhirRequestType': requestType,
-        'restfulRequestType': type,
-        if (headers != null) 'headers': headers,
-        if (resource != null) 'resource': resource.toJson(),
-        if (formData != null) 'formData': formData,
-      };
+  }) {
+    final json = resource?.toJson();
+    if (json != null &&
+        !newSchema &&
+        resource!.resourceType == R5ResourceType.QuestionnaireResponse) {
+      json['identifier'] =
+          (resource as QuestionnaireResponse).identifier?.first;
+    }
+
+    return {
+      'uri': uri.toString(),
+      'fhirRequestType': requestType,
+      'restfulRequestType': type,
+      if (headers != null) 'headers': headers,
+      if (resource != null) 'resource': json,
+      if (formData != null) 'formData': formData,
+    };
+  }
 
   /// TO JSON
   /// after creating a request with the above constructors, they can be called
   /// to get a map with useful data about the request
-  Map<String, dynamic> toJson(Map<String, String> headers) {
+  Map<String, dynamic> toJson(Map<String, String> headers, bool newSchema) {
     return map(
       read: (m) => _toJson(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         'Read',
+        newSchema: newSchema,
         headers: headers,
       ),
       vRead: (m) => _toJson(
@@ -47,6 +58,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Vread',
         headers: headers,
+        newSchema: newSchema,
       ),
       update: (m) => _toJson(
         RestfulRequest.put_,
@@ -60,6 +72,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Patch',
         headers: headers,
+        newSchema: newSchema,
         resource: m.resource,
       ),
       delete: (m) => _toJson(
@@ -67,12 +80,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Delete',
         headers: headers,
+        newSchema: newSchema,
       ),
       create: (m) => _toJson(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
         'Create',
         headers: headers,
+        newSchema: newSchema,
         resource: m.resource,
       ),
       search: (m) => _toJson(
@@ -80,6 +95,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: m.parameters),
         'Search',
         headers: headers,
+        newSchema: newSchema,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
       ),
       searchAll: (m) => _toJson(
@@ -87,12 +103,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Search All',
         headers: headers,
+        newSchema: newSchema,
       ),
       capabilities: (m) => _toJson(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         'Capabilities',
         headers: headers,
+        newSchema: newSchema,
       ),
       transaction: (m) {
         return _toJson(
@@ -101,6 +119,7 @@ class FhirRequest with _$FhirRequest {
           'Transaction',
           headers: headers,
           resource: m.bundle,
+          newSchema: newSchema,
         );
       },
       batch: (m) {
@@ -110,6 +129,7 @@ class FhirRequest with _$FhirRequest {
           'Batch',
           headers: headers,
           resource: m.bundle,
+          newSchema: newSchema,
         );
       },
       history: (m) {
@@ -128,6 +148,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           'History',
           headers: headers,
+          newSchema: newSchema,
         );
       },
       historyType: (m) {
@@ -146,6 +167,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           'History Type',
           headers: headers,
+          newSchema: newSchema,
         );
       },
       historyAll: (m) {
@@ -164,6 +186,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           'History all',
           headers: headers,
+          newSchema: newSchema,
         );
       },
       operation: (m) => _toJson(
@@ -171,14 +194,22 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         'Operation',
         headers: headers,
-        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
-        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+        newSchema: newSchema,
+        resource: m.usePost && m.useFormData
+            ? null
+            : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData
+            ? m.formData(parameters: parameters)
+            : null,
       ),
       readBundlePage: (m) => _toJson(
         RestfulRequest.get_,
         uri(
             parameters: m.bundle.link
-                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    ?.firstWhere(
+                        (element) =>
+                            element.relation == BundlePageEnumMap[m.page],
+                        orElse: null)
                     .url
                     ?.value
                     ?.queryParameters
@@ -188,6 +219,7 @@ class FhirRequest with _$FhirRequest {
                 []),
         'ReadBundlePage',
         headers: headers,
+        newSchema: newSchema,
       ),
     );
   }
@@ -595,25 +627,21 @@ class FhirRequest with _$FhirRequest {
   /// authorization or other headers can be passed in as well
   Future<Resource?> request({
     required Map<String, String> headers,
+    R5Version r5Version = R5Version.v4_6_0,
   }) async {
+    final newSchema = r5Version == R5Version.v5_0_0;
+
     return await map(
-      read: (m) async => await _request(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        headers,
-        'Read',
-      ),
-      vRead: (m) async => await _request(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        headers,
-        'Vread',
-      ),
+      read: (m) async => await _request(RestfulRequest.get_,
+          uri(parameters: m.parameters), headers, 'Read', newSchema),
+      vRead: (m) async => await _request(RestfulRequest.get_,
+          uri(parameters: m.parameters), headers, 'Vread', newSchema),
       update: (m) async => await _request(
         RestfulRequest.put_,
         uri(parameters: m.parameters),
         headers,
         'Update',
+        newSchema,
         resource: m.resource,
       ),
       patch: (m) async => await _request(
@@ -621,6 +649,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Patch',
+        newSchema,
         resource: m.resource,
       ),
       delete: (m) async => await _request(
@@ -628,12 +657,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Delete',
+        newSchema,
       ),
       create: (m) async => await _request(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
         headers,
         'Create',
+        newSchema,
         resource: m.resource,
       ),
       search: (m) async => await _request(
@@ -641,6 +672,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: m.parameters),
         headers,
         'Search',
+        newSchema,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
       ),
       searchAll: (m) async => await _request(
@@ -648,24 +680,29 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Search All',
+        newSchema,
       ),
       capabilities: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         headers,
         'Capabilities',
+        newSchema,
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
-          return _operationOutcome('A Transaction request was made, but no Bundle was included.');
+          return _operationOutcome(
+              'A Transaction request was made, but no Bundle was included.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
             if (entry.request == null) {
-              return _operationOutcome('Each bundle entry requires a request, but at least one of '
+              return _operationOutcome(
+                  'Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
             } else if (entry.request?.method == null) {
-              return _operationOutcome('Each bundle entry request needs a method type specified, but'
+              return _operationOutcome(
+                  'Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
             }
           }
@@ -675,21 +712,25 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Transaction',
+          newSchema,
           resource: m.bundle,
         );
       },
       batch: (m) async {
         if (m.bundle.type != BundleType.batch) {
-          return _operationOutcome('A Batch request was made, but the included Bundle is not a'
+          return _operationOutcome(
+              'A Batch request was made, but the included Bundle is not a'
               ' batch type.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
             if (entry.request == null) {
-              return _operationOutcome('Each bundle entry requires a request, but at least one of '
+              return _operationOutcome(
+                  'Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
             } else if (entry.request?.method == null) {
-              return _operationOutcome('Each bundle entry request needs a method type specified, but'
+              return _operationOutcome(
+                  'Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
             }
           }
@@ -699,6 +740,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Batch',
+          newSchema,
           resource: m.bundle,
         );
       },
@@ -718,6 +760,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History',
+          newSchema,
         );
       },
       historyType: (m) async {
@@ -736,6 +779,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History Type',
+          newSchema,
         );
       },
       historyAll: (m) async {
@@ -754,6 +798,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History all',
+          newSchema,
         );
       },
       operation: (m) async => await _request(
@@ -761,14 +806,22 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         headers,
         'Operation',
-        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
-        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+        newSchema,
+        resource: m.usePost && m.useFormData
+            ? null
+            : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData
+            ? m.formData(parameters: parameters)
+            : null,
       ),
       readBundlePage: (m) async => await _request(
         RestfulRequest.get_,
         uri(
             parameters: m.bundle.link
-                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    ?.firstWhere(
+                        (element) =>
+                            element.relation == BundlePageEnumMap[m.page],
+                        orElse: null)
                     .url
                     ?.value
                     ?.queryParameters
@@ -778,8 +831,31 @@ class FhirRequest with _$FhirRequest {
                 []),
         headers,
         'ReadBundlePage',
+        newSchema,
       ),
     );
+  }
+
+  static Future<R5Version?> checkVersion({
+    required Uri base,
+    Client? client,
+  }) async {
+    Response result;
+    client ??= Client();
+
+    if (globals.kTestMode) {
+      return null;
+    }
+
+    try {
+      result = await client.get(base);
+    } catch (e) {
+      return null;
+    }
+
+    final poweredBy = result.headers['x-powered-by'] ?? '';
+
+    return poweredBy.contains('4.6.0/R5') ? R5Version.v4_6_0 : R5Version.v5_0_0;
   }
 
   /// _hxParameters
@@ -815,16 +891,31 @@ class FhirRequest with _$FhirRequest {
     RestfulRequest type,
     String uri,
     Map<String, String> headers,
-    String requestType, {
+    String requestType,
+    bool newSchema, {
     Resource? resource,
     String? formData,
   }) async {
     try {
+      final json = resource?.toJson();
+
+      if (json != null &&
+          !newSchema &&
+          resource!.resourceType == R5ResourceType.QuestionnaireResponse) {
+        json['identifier'] =
+            (resource as QuestionnaireResponse).identifier?.first;
+      }
+
       final result = await _makeRequest(
-          type: type, thisRequest: uri, client: client, headers: headers, resource: resource == null ? null : resource.toJson());
+          type: type,
+          thisRequest: uri,
+          client: client,
+          headers: headers,
+          resource: json);
       return result;
     } catch (e) {
-      return _operationOutcome('Failed to complete a $requestType request, ', diagnostics: 'Exception: $e');
+      return _operationOutcome('Failed to complete a $requestType request, ',
+          diagnostics: 'Exception: $e');
     }
   }
 
@@ -859,24 +950,33 @@ class FhirRequest with _$FhirRequest {
   }
 
   /// encodeParameters
-  String _encodeParam(String value, {bool join = true}) => '${join ? '&' : ''}$value';
+  String _encodeParam(String value, {bool join = true}) =>
+      '${join ? '&' : ''}$value';
 
   /// specifies the mode
-  String _mode({bool join = false}) =>
-      maybeMap(capabilities: (f) => _encodeParam('mode=${enumToString(f.mode)}', join: join), orElse: () => '');
+  String _mode({bool join = false}) => maybeMap(
+      capabilities: (f) =>
+          _encodeParam('mode=${enumToString(f.mode)}', join: join),
+      orElse: () => '');
 
   /// specifies the format
   String _format({bool join = false}) => maybeMap(
-      capabilities: (f) => _encodeParam('_format=${f.format}', join: true), orElse: () => _encodeParam('_format=$format', join: join));
+      capabilities: (f) => _encodeParam('_format=${f.format}', join: true),
+      orElse: () => _encodeParam('_format=$format', join: join));
 
   /// assigns if you want it pretty
-  String _pretty({bool join = true}) => _encodeParam('_pretty=${pretty.toString()}', join: join);
+  String _pretty({bool join = true}) =>
+      _encodeParam('_pretty=${pretty.toString()}', join: join);
 
   /// assigns if you want the summary
-  String _summary({bool join = true}) => summary != Summary.none ? _encodeParam('_summary=${enumToString(summary)}', join: join) : '';
+  String _summary({bool join = true}) => summary != Summary.none
+      ? _encodeParam('_summary=${enumToString(summary)}', join: join)
+      : '';
 
   /// places any elements
-  String _elements({bool join = true}) => elements.isNotEmpty ? _encodeParam('_elements=${elements.join(",")}', join: join) : '';
+  String _elements({bool join = true}) => elements.isNotEmpty
+      ? _encodeParam('_elements=${elements.join(",")}', join: join)
+      : '';
 
   /// places any parameters
   String _parameters(List<String> parameters, {bool join = true}) {
@@ -896,15 +996,19 @@ class FhirRequest with _$FhirRequest {
       // READ
       read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
       // VREAD
-      vRead: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
+      vRead: (f) =>
+          '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
       // UPDATE
-      update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      update: (f) =>
+          '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
       // PATCH
-      patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      patch: (f) =>
+          '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
       // DELETE
       delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
       // CREATE
-      create: (f) => '${f.base}/${enumToString(f.resource.resourceTypeString())}',
+      create: (f) =>
+          '${f.base}/${enumToString(f.resource.resourceTypeString())}',
       // SEARCH
       search: (f) => '${f.base}/${enumToString(f.type)}'
           '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
@@ -916,7 +1020,8 @@ class FhirRequest with _$FhirRequest {
       transaction: (f) => '${f.base}',
       batch: (f) => '${f.base}',
       // HISTORY
-      history: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
+      history: (f) =>
+          '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
       // HISTORY-TYPE
       historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
       // HISTORY-ALL
@@ -928,7 +1033,12 @@ class FhirRequest with _$FhirRequest {
           '\$${f.operation}',
       // READ-BUNDLE-PAGE
       readBundlePage: (f) {
-        final Uri? _uri = f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null).url?.value;
+        final Uri? _uri = f.bundle.link
+            ?.firstWhere(
+                (element) => element.relation == BundlePageEnumMap[f.page],
+                orElse: null)
+            .url
+            ?.value;
         return '${_uri?.scheme}://${_uri?.host}${_uri?.path}';
       });
 
@@ -992,7 +1102,9 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.post_:
           {
-            headers['Content-Type'] = formData != null ? 'application/x-www-form-urlencoded' : 'application/fhir+json';
+            headers['Content-Type'] = formData != null
+                ? 'application/x-www-form-urlencoded'
+                : 'application/fhir+json';
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,
@@ -1003,7 +1115,8 @@ class FhirRequest with _$FhirRequest {
           }
       }
     } catch (e) {
-      return _operationOutcome('Failed to complete a restful request, ', diagnostics: 'Exception: $e');
+      return _operationOutcome('Failed to complete a restful request, ',
+          diagnostics: 'Exception: $e');
     }
 
     if (result.statusCode >= 300) {
@@ -1066,7 +1179,8 @@ class FhirRequest with _$FhirRequest {
 
   /// Allows us to return an error as a FHIR resource, whether the problem
   /// is locally or on the server side
-  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) => OperationOutcome(issue: [
+  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
+      OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
           code: OperationOutcomeIssueCode.value,
@@ -1074,4 +1188,9 @@ class FhirRequest with _$FhirRequest {
           diagnostics: diagnostics,
         )
       ]);
+}
+
+enum R5Version {
+  v4_6_0,
+  v5_0_0,
 }

@@ -273,9 +273,10 @@ class Consent with Resource, _$Consent {
     Reference? subject,
     FhirDateTime? dateTime,
     @JsonKey(name: '_dateTime') Element? dateTimeElement,
-    List<Reference>? performer,
     List<Reference>? manager,
     List<Reference>? controller,
+    List<Reference>? grantee,
+    List<Reference>? grantor,
     List<Attachment>? sourceAttachment,
     List<Reference>? sourceReference,
     List<ConsentPolicy>? policy,
@@ -390,6 +391,7 @@ class ConsentProvision with _$ConsentProvision {
     List<CodeableConcept>? code,
     Period? dataPeriod,
     List<ConsentData>? data,
+    Expression? expression,
     List<ConsentProvision>? provision,
   }) = _ConsentProvision;
 
@@ -419,8 +421,8 @@ class ConsentActor with _$ConsentActor {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    required CodeableConcept role,
-    required Reference reference,
+    CodeableConcept? role,
+    Reference? reference,
   }) = _ConsentActor;
 
   /// Produces a Yaml formatted String version of the object

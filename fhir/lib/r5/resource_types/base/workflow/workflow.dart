@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -21,6 +22,7 @@ class Appointment with Resource, _$Appointment {
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
+    List<Reference>? account,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -38,6 +40,7 @@ class Appointment with Resource, _$Appointment {
     List<CodeableConcept>? specialty,
     CodeableConcept? appointmentType,
     List<CodeableReference>? reason,
+    List<Reference>? replaces,
     CodeableConcept? priority,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -51,13 +54,15 @@ class Appointment with Resource, _$Appointment {
     List<Reference>? slot,
     FhirDateTime? created,
     @JsonKey(name: '_created') Element? createdElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
+    List<Annotation>? note,
+    @JsonKey(name: '_note') Element? noteElement,
     String? patientInstruction,
     @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
     List<Reference>? basedOn,
     required List<AppointmentParticipant> participant,
     List<Period>? requestedPeriod,
+    Period? period,
+    Reference? subject,
   }) = _Appointment;
 
   /// Produces a Yaml formatted String version of the object

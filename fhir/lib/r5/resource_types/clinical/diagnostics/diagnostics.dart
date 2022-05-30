@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r5.dart';
@@ -764,6 +765,8 @@ class Observation with Resource, _$Observation {
     @JsonKey(name: '_instantiatesCanonical')
         Element? instantiatesCanonicalElement,
     Reference? instantiatesReference,
+    @JsonKey(name: '_instantiatesReference')
+    Element? instantiatesReferenceElement,
     List<Reference>? basedOn,
     List<Reference>? partOf,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -798,8 +801,9 @@ class Observation with Resource, _$Observation {
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
     FhirDateTime? valueDateTime,
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Period? valuePeriod,
     Attachment? valueAttachment,
+    @JsonKey(name: '_valueAttachment') Element? valueAttachmentElement,
+    Period? valuePeriod,
     CodeableConcept? dataAbsentReason,
     List<CodeableConcept>? interpretation,
     List<Annotation>? note,
@@ -966,8 +970,16 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireResponseFromJson(json);
+  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) {
+    if (json != null &&
+        json['identifier'] != null &&
+        json['identifier'] is Map) {
+      json['identifier'] = <Map<String, dynamic>>[
+        json['identifier'] as Map<String, dynamic>
+      ];
+    }
+    return _$QuestionnaireResponseFromJson(json);
+  }
 }
 
 @freezed

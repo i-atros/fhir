@@ -1,3 +1,4 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
@@ -15148,7 +15149,7 @@ class _$QuestionnaireResponseTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
@@ -15218,7 +15219,7 @@ mixin _$QuestionnaireResponse {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   Canonical? get questionnaire => throw _privateConstructorUsedError;
@@ -15263,7 +15264,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
@@ -15284,7 +15285,6 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $IdentifierCopyWith<$Res>? get identifier;
   $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res>? get subject;
   $ReferenceCopyWith<$Res>? get encounter;
@@ -15377,7 +15377,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
+              as List<Identifier>?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -15474,17 +15474,6 @@ class _$QuestionnaireResponseCopyWithImpl<$Res>
   }
 
   @override
-  $IdentifierCopyWith<$Res>? get identifier {
-    if (_value.identifier == null) {
-      return null;
-    }
-
-    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
@@ -15574,7 +15563,7 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
@@ -15599,8 +15588,6 @@ abstract class _$QuestionnaireResponseCopyWith<$Res>
   $ElementCopyWith<$Res>? get languageElement;
   @override
   $NarrativeCopyWith<$Res>? get text;
-  @override
-  $IdentifierCopyWith<$Res>? get identifier;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
@@ -15701,7 +15688,7 @@ class __$QuestionnaireResponseCopyWithImpl<$Res>
       identifier: identifier == freezed
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
-              as Identifier?,
+              as List<Identifier>?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -15821,7 +15808,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Identifier? identifier;
+  final List<Identifier>? identifier;
   @override
   final List<Reference>? basedOn;
   @override
@@ -15982,7 +15969,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
+      List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       Canonical? questionnaire,
@@ -16031,7 +16018,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override

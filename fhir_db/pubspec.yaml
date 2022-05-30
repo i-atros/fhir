@@ -10,7 +10,8 @@ environment:
 dependencies:
   crypto: ^3.0.1
   encrypt: ^5.0.0
-  fhir: ^0.4.7
+  fhir:
+    path: ../fhir/
   flutter:
     sdk: flutter
   path: ^1.8.0
