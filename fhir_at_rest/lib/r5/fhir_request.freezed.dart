@@ -374,6 +374,27 @@ class _$FhirRequestTearOff {
       client: client,
     );
   }
+
+  _FhirReadBundlePageRequest readBundlePage(
+      {required Bundle bundle,
+      required BundlePage page,
+      bool pretty = false,
+      Summary summary = Summary.none,
+      String format = 'json',
+      List<String> elements = const <String>[],
+      List<String> parameters = const <String>[],
+      Client? client}) {
+    return _FhirReadBundlePageRequest(
+      bundle: bundle,
+      page: page,
+      pretty: pretty,
+      summary: summary,
+      format: format,
+      elements: elements,
+      parameters: parameters,
+      client: client,
+    );
+  }
 }
 
 /// @nodoc
@@ -381,7 +402,6 @@ const $FhirRequest = _$FhirRequestTearOff();
 
 /// @nodoc
 mixin _$FhirRequest {
-  Uri get base => throw _privateConstructorUsedError;
   bool get pretty => throw _privateConstructorUsedError;
   Summary get summary => throw _privateConstructorUsedError;
   String get format => throw _privateConstructorUsedError;
@@ -563,6 +583,16 @@ mixin _$FhirRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -733,6 +763,16 @@ mixin _$FhirRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -753,6 +793,7 @@ mixin _$FhirRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -772,6 +813,7 @@ mixin _$FhirRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -787,8 +829,7 @@ abstract class $FhirRequestCopyWith<$Res> {
           FhirRequest value, $Res Function(FhirRequest) then) =
       _$FhirRequestCopyWithImpl<$Res>;
   $Res call(
-      {Uri base,
-      bool pretty,
+      {bool pretty,
       Summary summary,
       String format,
       List<String> elements,
@@ -806,7 +847,6 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? base = freezed,
     Object? pretty = freezed,
     Object? summary = freezed,
     Object? format = freezed,
@@ -815,10 +855,6 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed
-          ? _value.base
-          : base // ignore: cast_nullable_to_non_nullable
-              as Uri,
       pretty: pretty == freezed
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
@@ -1194,6 +1230,16 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return read(
         base, type, id, pretty, summary, format, elements, parameters, client);
@@ -1368,6 +1414,16 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (read != null) {
@@ -1395,6 +1451,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return read(this);
   }
@@ -1417,6 +1474,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (read != null) {
@@ -1439,7 +1497,6 @@ abstract class _FhirReadRequest extends FhirRequest {
       Client? client}) = _$_FhirReadRequest;
   _FhirReadRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType get type => throw _privateConstructorUsedError;
   Id get id => throw _privateConstructorUsedError;
@@ -1820,6 +1877,16 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return vRead(base, type, id, vid, pretty, summary, format, elements,
         parameters, client);
@@ -1994,6 +2061,16 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (vRead != null) {
@@ -2021,6 +2098,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return vRead(this);
   }
@@ -2043,6 +2121,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (vRead != null) {
@@ -2066,7 +2145,6 @@ abstract class _FhirVReadRequest extends FhirRequest {
       Client? client}) = _$_FhirVReadRequest;
   _FhirVReadRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType get type => throw _privateConstructorUsedError;
   Id get id => throw _privateConstructorUsedError;
@@ -2425,6 +2503,16 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return update(
         base, resource, pretty, summary, format, elements, parameters, client);
@@ -2599,6 +2687,16 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (update != null) {
@@ -2626,6 +2724,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return update(this);
   }
@@ -2648,6 +2747,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (update != null) {
@@ -2669,7 +2769,6 @@ abstract class _FhirUpdateRequest extends FhirRequest {
       Client? client}) = _$_FhirUpdateRequest;
   _FhirUpdateRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   Resource get resource => throw _privateConstructorUsedError;
   @override
@@ -3026,6 +3125,16 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return patch(
         base, resource, pretty, summary, format, elements, parameters, client);
@@ -3200,6 +3309,16 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (patch != null) {
@@ -3227,6 +3346,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return patch(this);
   }
@@ -3249,6 +3369,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (patch != null) {
@@ -3270,7 +3391,6 @@ abstract class _FhirPatchRequest extends FhirRequest {
       Client? client}) = _$_FhirPatchRequest;
   _FhirPatchRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   Resource get resource => throw _privateConstructorUsedError;
   @override
@@ -3638,6 +3758,16 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return delete(
         base, type, id, pretty, summary, format, elements, parameters, client);
@@ -3812,6 +3942,16 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -3839,6 +3979,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return delete(this);
   }
@@ -3861,6 +4002,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -3883,7 +4025,6 @@ abstract class _FhirDeleteRequest extends FhirRequest {
       Client? client}) = _$_FhirDeleteRequest;
   _FhirDeleteRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType get type => throw _privateConstructorUsedError;
   Id get id => throw _privateConstructorUsedError;
@@ -4241,6 +4382,16 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return create(
         base, resource, pretty, summary, format, elements, parameters, client);
@@ -4415,6 +4566,16 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (create != null) {
@@ -4442,6 +4603,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return create(this);
   }
@@ -4464,6 +4626,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (create != null) {
@@ -4485,7 +4648,6 @@ abstract class _FhirCreateRequest extends FhirRequest {
       Client? client}) = _$_FhirCreateRequest;
   _FhirCreateRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   Resource get resource => throw _privateConstructorUsedError;
   @override
@@ -4869,6 +5031,16 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return search(base, type, pretty, summary, format, elements, parameters,
         usePost, restfulRequest, client);
@@ -5043,6 +5215,16 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -5070,6 +5252,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return search(this);
   }
@@ -5092,6 +5275,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (search != null) {
@@ -5115,7 +5299,6 @@ abstract class _FhirSearchRequest extends FhirRequest {
       Client? client}) = _$_FhirSearchRequest;
   _FhirSearchRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType get type => throw _privateConstructorUsedError;
   @override
@@ -5462,6 +5645,16 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return searchAll(
         base, pretty, summary, format, elements, parameters, client);
@@ -5636,6 +5829,16 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (searchAll != null) {
@@ -5663,6 +5866,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return searchAll(this);
   }
@@ -5685,6 +5889,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (searchAll != null) {
@@ -5705,7 +5910,6 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
       Client? client}) = _$_FhirSearchAllRequest;
   _FhirSearchAllRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   @override
   bool get pretty => throw _privateConstructorUsedError;
@@ -6063,6 +6267,16 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return capabilities(
         base, pretty, summary, format, elements, parameters, mode, client);
@@ -6237,6 +6451,16 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (capabilities != null) {
@@ -6264,6 +6488,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return capabilities(this);
   }
@@ -6286,6 +6511,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (capabilities != null) {
@@ -6307,7 +6533,6 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
       Client? client}) = _$_FhirCapabilitiesRequest;
   _FhirCapabilitiesRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   @override
   bool get pretty => throw _privateConstructorUsedError;
@@ -6673,6 +6898,16 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return transaction(
         base, pretty, summary, format, elements, parameters, bundle, client);
@@ -6847,6 +7082,16 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (transaction != null) {
@@ -6874,6 +7119,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return transaction(this);
   }
@@ -6896,6 +7142,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (transaction != null) {
@@ -6917,7 +7164,6 @@ abstract class _FhirTransactionRequest extends FhirRequest {
       Client? client}) = _$_FhirTransactionRequest;
   _FhirTransactionRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   @override
   bool get pretty => throw _privateConstructorUsedError;
@@ -7282,6 +7528,16 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return batch(
         base, pretty, summary, format, elements, parameters, bundle, client);
@@ -7456,6 +7712,16 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (batch != null) {
@@ -7483,6 +7749,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return batch(this);
   }
@@ -7505,6 +7772,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (batch != null) {
@@ -7526,7 +7794,6 @@ abstract class _FhirBatchRequest extends FhirRequest {
       Client? client}) = _$_FhirBatchRequest;
   _FhirBatchRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   @override
   bool get pretty => throw _privateConstructorUsedError;
@@ -7943,6 +8210,16 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return history(base, type, id, pretty, summary, format, elements,
         parameters, count, since, at, reference, client);
@@ -8117,6 +8394,16 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (history != null) {
@@ -8144,6 +8431,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return history(this);
   }
@@ -8166,6 +8454,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (history != null) {
@@ -8192,7 +8481,6 @@ abstract class _FhirHistoryRequest extends FhirRequest {
       Client? client}) = _$_FhirHistoryRequest;
   _FhirHistoryRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType get type => throw _privateConstructorUsedError;
   Id get id => throw _privateConstructorUsedError;
@@ -8603,6 +8891,16 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return historyType(base, type, pretty, summary, format, elements,
         parameters, count, since, at, reference, client);
@@ -8777,6 +9075,16 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (historyType != null) {
@@ -8804,6 +9112,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return historyType(this);
   }
@@ -8826,6 +9135,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (historyType != null) {
@@ -8851,7 +9161,6 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
       Client? client}) = _$_FhirHistoryTypeRequest;
   _FhirHistoryTypeRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType get type => throw _privateConstructorUsedError;
   @override
@@ -9249,6 +9558,16 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return historyAll(base, pretty, summary, format, elements, parameters,
         count, since, at, reference, client);
@@ -9423,6 +9742,16 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (historyAll != null) {
@@ -9450,6 +9779,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return historyAll(this);
   }
@@ -9472,6 +9802,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (historyAll != null) {
@@ -9496,7 +9827,6 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
       Client? client}) = _$_FhirHistoryAllRequest;
   _FhirHistoryAllRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   @override
   bool get pretty => throw _privateConstructorUsedError;
@@ -9923,6 +10253,16 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             bool useFormData,
             Client? client)
         operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
   }) {
     return operation(
         base,
@@ -10109,6 +10449,16 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             bool useFormData,
             Client? client)?
         operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
     required TResult orElse(),
   }) {
     if (operation != null) {
@@ -10148,6 +10498,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
     required TResult Function(_FhirHistoryTypeRequest value) historyType,
     required TResult Function(_FhirHistoryAllRequest value) historyAll,
     required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
   }) {
     return operation(this);
   }
@@ -10170,6 +10521,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
     TResult Function(_FhirHistoryTypeRequest value)? historyType,
     TResult Function(_FhirHistoryAllRequest value)? historyAll,
     TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
     required TResult orElse(),
   }) {
     if (operation != null) {
@@ -10196,7 +10548,6 @@ abstract class _FhirOperationRequest extends FhirRequest {
       Client? client}) = _$_FhirOperationRequest;
   _FhirOperationRequest._() : super._();
 
-  @override
   Uri get base => throw _privateConstructorUsedError;
   R5ResourceType? get type => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
@@ -10220,4 +10571,637 @@ abstract class _FhirOperationRequest extends FhirRequest {
   @JsonKey(ignore: true)
   _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$FhirReadBundlePageRequestCopyWith<$Res>
+    implements $FhirRequestCopyWith<$Res> {
+  factory _$FhirReadBundlePageRequestCopyWith(_FhirReadBundlePageRequest value,
+          $Res Function(_FhirReadBundlePageRequest) then) =
+      __$FhirReadBundlePageRequestCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {Bundle bundle,
+      BundlePage page,
+      bool pretty,
+      Summary summary,
+      String format,
+      List<String> elements,
+      List<String> parameters,
+      Client? client});
+
+  $BundleCopyWith<$Res> get bundle;
+}
+
+/// @nodoc
+class __$FhirReadBundlePageRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res>
+    implements _$FhirReadBundlePageRequestCopyWith<$Res> {
+  __$FhirReadBundlePageRequestCopyWithImpl(_FhirReadBundlePageRequest _value,
+      $Res Function(_FhirReadBundlePageRequest) _then)
+      : super(_value, (v) => _then(v as _FhirReadBundlePageRequest));
+
+  @override
+  _FhirReadBundlePageRequest get _value =>
+      super._value as _FhirReadBundlePageRequest;
+
+  @override
+  $Res call({
+    Object? bundle = freezed,
+    Object? page = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
+  }) {
+    return _then(_FhirReadBundlePageRequest(
+      bundle: bundle == freezed
+          ? _value.bundle
+          : bundle // ignore: cast_nullable_to_non_nullable
+              as Bundle,
+      page: page == freezed
+          ? _value.page
+          : page // ignore: cast_nullable_to_non_nullable
+              as BundlePage,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      parameters: parameters == freezed
+          ? _value.parameters
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
+    ));
+  }
+
+  @override
+  $BundleCopyWith<$Res> get bundle {
+    return $BundleCopyWith<$Res>(_value.bundle, (value) {
+      return _then(_value.copyWith(bundle: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
+  _$_FhirReadBundlePageRequest(
+      {required this.bundle,
+      required this.page,
+      this.pretty = false,
+      this.summary = Summary.none,
+      this.format = 'json',
+      this.elements = const <String>[],
+      this.parameters = const <String>[],
+      this.client})
+      : super._();
+
+  @override
+  final Bundle bundle;
+  @override
+  final BundlePage page;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool pretty;
+  @JsonKey(defaultValue: Summary.none)
+  @override
+  final Summary summary;
+  @JsonKey(defaultValue: 'json')
+  @override
+  final String format;
+  @JsonKey(defaultValue: const <String>[])
+  @override
+  final List<String> elements;
+  @JsonKey(defaultValue: const <String>[])
+  @override
+  final List<String> parameters;
+  @override
+  final Client? client;
+
+  @override
+  String toString() {
+    return 'FhirRequest.readBundlePage(bundle: $bundle, page: $page, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _FhirReadBundlePageRequest &&
+            (identical(other.bundle, bundle) ||
+                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
+            (identical(other.page, page) ||
+                const DeepCollectionEquality().equals(other.page, page)) &&
+            (identical(other.pretty, pretty) ||
+                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
+            (identical(other.summary, summary) ||
+                const DeepCollectionEquality()
+                    .equals(other.summary, summary)) &&
+            (identical(other.format, format) ||
+                const DeepCollectionEquality().equals(other.format, format)) &&
+            (identical(other.elements, elements) ||
+                const DeepCollectionEquality()
+                    .equals(other.elements, elements)) &&
+            (identical(other.parameters, parameters) ||
+                const DeepCollectionEquality()
+                    .equals(other.parameters, parameters)) &&
+            (identical(other.client, client) ||
+                const DeepCollectionEquality().equals(other.client, client)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(bundle) ^
+      const DeepCollectionEquality().hash(page) ^
+      const DeepCollectionEquality().hash(pretty) ^
+      const DeepCollectionEquality().hash(summary) ^
+      const DeepCollectionEquality().hash(format) ^
+      const DeepCollectionEquality().hash(elements) ^
+      const DeepCollectionEquality().hash(parameters) ^
+      const DeepCollectionEquality().hash(client);
+
+  @JsonKey(ignore: true)
+  @override
+  _$FhirReadBundlePageRequestCopyWith<_FhirReadBundlePageRequest>
+      get copyWith =>
+          __$FhirReadBundlePageRequestCopyWithImpl<_FhirReadBundlePageRequest>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        read,
+    required TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        vRead,
+    required TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        update,
+    required TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        patch,
+    required TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        delete,
+    required TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        create,
+    required TResult Function(
+            Uri base,
+            R5ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)
+        capabilities,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)
+        transaction,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)
+        batch,
+    required TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
+            Uri base,
+            R5ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
+            Uri base,
+            R5ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)
+        operation,
+    required TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        readBundlePage,
+  }) {
+    return readBundlePage(
+        bundle, page, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R5ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R5ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R5ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R5ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    TResult Function(
+            Bundle bundle,
+            BundlePage page,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        readBundlePage,
+    required TResult orElse(),
+  }) {
+    if (readBundlePage != null) {
+      return readBundlePage(
+          bundle, page, pretty, summary, format, elements, parameters, client);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
+    required TResult Function(_FhirReadBundlePageRequest value) readBundlePage,
+  }) {
+    return readBundlePage(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    TResult Function(_FhirReadBundlePageRequest value)? readBundlePage,
+    required TResult orElse(),
+  }) {
+    if (readBundlePage != null) {
+      return readBundlePage(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FhirReadBundlePageRequest extends FhirRequest {
+  factory _FhirReadBundlePageRequest(
+      {required Bundle bundle,
+      required BundlePage page,
+      bool pretty,
+      Summary summary,
+      String format,
+      List<String> elements,
+      List<String> parameters,
+      Client? client}) = _$_FhirReadBundlePageRequest;
+  _FhirReadBundlePageRequest._() : super._();
+
+  Bundle get bundle => throw _privateConstructorUsedError;
+  BundlePage get page => throw _privateConstructorUsedError;
+  @override
+  bool get pretty => throw _privateConstructorUsedError;
+  @override
+  Summary get summary => throw _privateConstructorUsedError;
+  @override
+  String get format => throw _privateConstructorUsedError;
+  @override
+  List<String> get elements => throw _privateConstructorUsedError;
+  @override
+  List<String> get parameters => throw _privateConstructorUsedError;
+  @override
+  Client? get client => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$FhirReadBundlePageRequestCopyWith<_FhirReadBundlePageRequest>
+      get copyWith => throw _privateConstructorUsedError;
 }

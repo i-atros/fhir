@@ -187,3 +187,4 @@ enum SubscriptionTopicStatus {
   @JsonValue('unknown')
   unknown,
 }
+

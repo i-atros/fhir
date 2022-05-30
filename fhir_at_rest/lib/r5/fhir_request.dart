@@ -13,7 +13,197 @@ part 'fhir_request.freezed.dart';
 class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
-  ///  READ constructor
+  /// This method returns a map with usefull data about the request
+  Map<String, dynamic> _toJson(
+    RestfulRequest type,
+    String uri,
+    String requestType, {
+    Map<String, String>? headers,
+    Resource? resource,
+    String? formData,
+  }) =>
+      {
+        'uri': uri.toString(),
+        'fhirRequestType': requestType,
+        'restfulRequestType': type,
+        if (headers != null) 'headers': headers,
+        if (resource != null) 'resource': resource.toJson(),
+        if (formData != null) 'formData': formData,
+      };
+
+  /// TO JSON
+  /// after creating a request with the above constructors, they can be called
+  /// to get a map with useful data about the request
+  Map<String, dynamic> toJson(Map<String, String> headers) {
+    return map(
+      read: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Read',
+        headers: headers,
+      ),
+      vRead: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Vread',
+        headers: headers,
+      ),
+      update: (m) => _toJson(
+        RestfulRequest.put_,
+        uri(parameters: m.parameters),
+        'Update',
+        headers: headers,
+        resource: m.resource,
+      ),
+      patch: (m) => _toJson(
+        RestfulRequest.patch_,
+        uri(parameters: m.parameters),
+        'Patch',
+        headers: headers,
+        resource: m.resource,
+      ),
+      delete: (m) => _toJson(
+        RestfulRequest.delete_,
+        uri(parameters: m.parameters),
+        'Delete',
+        headers: headers,
+      ),
+      create: (m) => _toJson(
+        RestfulRequest.post_,
+        uri(parameters: m.parameters),
+        'Create',
+        headers: headers,
+        resource: m.resource,
+      ),
+      search: (m) => _toJson(
+        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        m.usePost ? url : uri(parameters: m.parameters),
+        'Search',
+        headers: headers,
+        formData: m.usePost ? m.formData(parameters: m.parameters) : null,
+      ),
+      searchAll: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Search All',
+        headers: headers,
+      ),
+      capabilities: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Capabilities',
+        headers: headers,
+      ),
+      transaction: (m) {
+        return _toJson(
+          RestfulRequest.post_,
+          uri(),
+          'Transaction',
+          headers: headers,
+          resource: m.bundle,
+        );
+      },
+      batch: (m) {
+        return _toJson(
+          RestfulRequest.post_,
+          uri(),
+          'Batch',
+          headers: headers,
+          resource: m.bundle,
+        );
+      },
+      history: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History',
+          headers: headers,
+        );
+      },
+      historyType: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History Type',
+          headers: headers,
+        );
+      },
+      historyAll: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History all',
+          headers: headers,
+        );
+      },
+      operation: (m) => _toJson(
+        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        m.usePost ? url : uri(parameters: parameters),
+        'Operation',
+        headers: headers,
+        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+      ),
+      readBundlePage: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(
+            parameters: m.bundle.link
+                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    .url
+                    ?.value
+                    ?.queryParameters
+                    .entries
+                    .map<String>((e) => '${e.key}=${e.value}')
+                    .toList() ??
+                []),
+        'ReadBundlePage',
+        headers: headers,
+      ),
+    );
+  }
+
+  /// READ constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.read({
     required Uri base,
     required R5ResourceType type,
@@ -27,6 +217,18 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirReadRequest;
 
   ///  VREAD constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [vid] - the version id of the rsource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.vRead({
     required Uri base,
     required R5ResourceType type,
@@ -41,6 +243,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirVReadRequest;
 
   ///  UPDATE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.update({
     required Uri base,
     required Resource resource,
@@ -53,6 +264,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirUpdateRequest;
 
   ///  PATCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
     required Uri base,
     required Resource resource,
@@ -65,6 +285,17 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirPatchRequest;
 
   ///  DELETE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.delete({
     required Uri base,
     required R5ResourceType type,
@@ -78,6 +309,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirDeleteRequest;
 
   ///  CREATE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.create({
     required Uri base,
     required Resource resource,
@@ -90,6 +330,18 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirCreateRequest;
 
   ///  SEARCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.search({
     required Uri base,
     required R5ResourceType type,
@@ -104,6 +356,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirSearchRequest;
 
   ///  SEARCH-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.searchAll({
     required Uri base,
     @Default(false) bool pretty,
@@ -115,6 +376,16 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirSearchAllRequest;
 
   ///  SEARCH-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.capabilities({
     required Uri base,
     @Default(false) bool pretty,
@@ -126,7 +397,17 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirCapabilitiesRequest;
 
-  ///  BATCH/TRANSACTION constructor
+  ///  TRANSACTION constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [bundle] - the bundle to be uploaded
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.transaction({
     required Uri base,
     @Default(false) bool pretty,
@@ -138,6 +419,17 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirTransactionRequest;
 
+  ///  BATCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [bundle] - the bundle to be uploaded
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.batch({
     required Uri base,
     @Default(false) bool pretty,
@@ -150,6 +442,26 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirBatchRequest;
 
   ///  HISTORY constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.history({
     required Uri base,
     required R5ResourceType type,
@@ -167,6 +479,25 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirHistoryRequest;
 
   ///  HISTORY-TYPE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyType({
     required Uri base,
     required R5ResourceType type,
@@ -183,6 +514,24 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirHistoryTypeRequest;
 
   ///  HISTORY-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyAll({
     required Uri base,
     @Default(false) bool pretty,
@@ -198,6 +547,20 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirHistoryAllRequest;
 
   ///  OPERATION constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [fhirParameters] - any extra fhirParameters
+  ///   ToDo: why did I include this?
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.operation({
     required Uri base,
     R5ResourceType? type,
@@ -214,6 +577,22 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirOperationRequest;
 
+  ///  READ-BUNDLE-PAGE constructor
+  factory FhirRequest.readBundlePage({
+    required Bundle bundle,
+    required BundlePage page,
+    @Default(false) bool pretty,
+    @Default(Summary.none) Summary summary,
+    @Default('json') String format,
+    @Default(<String>[]) List<String> elements,
+    @Default(<String>[]) List<String> parameters,
+    Client? client,
+  }) = _FhirReadBundlePageRequest;
+
+  /// REQUEST
+  /// after creating a request with the above constructors, they can be called
+  /// to interact with the server by using this method. If necessary,
+  /// authorization or other headers can be passed in as well
   Future<Resource?> request({
     required Map<String, String> headers,
   }) async {
@@ -278,18 +657,15 @@ class FhirRequest with _$FhirRequest {
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
-          return _operationOutcome(
-              'A Transaction request was made, but no Bundle was included.');
+          return _operationOutcome('A Transaction request was made, but no Bundle was included.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
             if (entry.request == null) {
-              return _operationOutcome(
-                  'Each bundle entry requires a request, but at least one of '
+              return _operationOutcome('Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
             } else if (entry.request?.method == null) {
-              return _operationOutcome(
-                  'Each bundle entry request needs a method type specified, but'
+              return _operationOutcome('Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
             }
           }
@@ -304,19 +680,16 @@ class FhirRequest with _$FhirRequest {
       },
       batch: (m) async {
         if (m.bundle.type != BundleType.batch) {
-          return _operationOutcome(
-              'A Batch request was made, but the included Bundle is not a'
+          return _operationOutcome('A Batch request was made, but the included Bundle is not a'
               ' batch type.');
         }
         if (m.bundle.entry != null) {
           for (var entry in m.bundle.entry!) {
             if (entry.request == null) {
-              return _operationOutcome(
-                  'Each bundle entry requires a request, but at least one of '
+              return _operationOutcome('Each bundle entry requires a request, but at least one of '
                   'the entries in this bundle is missing a request.');
             } else if (entry.request?.method == null) {
-              return _operationOutcome(
-                  'Each bundle entry request needs a method type specified, but'
+              return _operationOutcome('Each bundle entry request needs a method type specified, but'
                   ' at least one entry in this bundle is missing a method');
             }
           }
@@ -388,16 +761,30 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         headers,
         'Operation',
-        resource: m.usePost && m.useFormData
-            ? null
-            : Resource.fromJson(m.fhirParameter),
-        formData: m.usePost && m.useFormData
-            ? m.formData(parameters: parameters)
-            : null,
+        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+      ),
+      readBundlePage: (m) async => await _request(
+        RestfulRequest.get_,
+        uri(
+            parameters: m.bundle.link
+                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    .url
+                    ?.value
+                    ?.queryParameters
+                    .entries
+                    .map<String>((e) => '${e.key}=${e.value}')
+                    .toList() ??
+                []),
+        headers,
+        'ReadBundlePage',
       ),
     );
   }
 
+  /// _hxParameters
+  /// private method for return a list of the history parameters for history
+  /// requests
   List<String> _hxParameters(
     int? count,
     Instant? since,
@@ -420,6 +807,10 @@ class FhirRequest with _$FhirRequest {
     return parameters;
   }
 
+  /// REQUEST
+  /// Private request method where we try to actually make the request, it's
+  /// mostly to make it easier to catch any errors and still return them as
+  /// a FHIR resource
   Future<Resource?> _request(
     RestfulRequest type,
     String uri,
@@ -430,18 +821,14 @@ class FhirRequest with _$FhirRequest {
   }) async {
     try {
       final result = await _makeRequest(
-          type: type,
-          thisRequest: uri,
-          client: client,
-          headers: headers,
-          resource: resource == null ? null : resource.toJson());
+          type: type, thisRequest: uri, client: client, headers: headers, resource: resource == null ? null : resource.toJson());
       return result;
     } catch (e) {
-      return _operationOutcome('Failed to complete a $requestType request, ',
-          diagnostics: 'Exception: $e');
+      return _operationOutcome('Failed to complete a $requestType request, ', diagnostics: 'Exception: $e');
     }
   }
 
+  /// Constructs the uri
   String uri({List<String> parameters = const <String>[]}) {
     String uri = _url();
     uri += '?';
@@ -454,6 +841,7 @@ class FhirRequest with _$FhirRequest {
     return uri;
   }
 
+  /// Getter for the uri
   String get url {
     String uri = _url();
     uri += '?';
@@ -465,33 +853,32 @@ class FhirRequest with _$FhirRequest {
     return uri;
   }
 
+  /// Return a string from the formData
   String formData({List<String> parameters = const <String>[]}) {
     return _parameters(parameters, join: false);
   }
 
-  String _encodeParam(String value, {bool join = true}) =>
-      '${join ? '&' : ''}$value';
+  /// encodeParameters
+  String _encodeParam(String value, {bool join = true}) => '${join ? '&' : ''}$value';
 
-  String _mode({bool join = false}) => maybeMap(
-      capabilities: (f) =>
-          _encodeParam('mode=${enumToString(f.mode)}', join: join),
-      orElse: () => '');
+  /// specifies the mode
+  String _mode({bool join = false}) =>
+      maybeMap(capabilities: (f) => _encodeParam('mode=${enumToString(f.mode)}', join: join), orElse: () => '');
 
+  /// specifies the format
   String _format({bool join = false}) => maybeMap(
-      capabilities: (f) => _encodeParam('_format=${f.format}', join: true),
-      orElse: () => _encodeParam('_format=$format', join: join));
+      capabilities: (f) => _encodeParam('_format=${f.format}', join: true), orElse: () => _encodeParam('_format=$format', join: join));
 
-  String _pretty({bool join = true}) =>
-      _encodeParam('_pretty=${pretty.toString()}', join: join);
+  /// assigns if you want it pretty
+  String _pretty({bool join = true}) => _encodeParam('_pretty=${pretty.toString()}', join: join);
 
-  String _summary({bool join = true}) => summary != Summary.none
-      ? _encodeParam('_summary=${enumToString(summary)}', join: join)
-      : '';
+  /// assigns if you want the summary
+  String _summary({bool join = true}) => summary != Summary.none ? _encodeParam('_summary=${enumToString(summary)}', join: join) : '';
 
-  String _elements({bool join = true}) => elements.isNotEmpty
-      ? _encodeParam('_elements=${elements.join(",")}', join: join)
-      : '';
+  /// places any elements
+  String _elements({bool join = true}) => elements.isNotEmpty ? _encodeParam('_elements=${elements.join(",")}', join: join) : '';
 
+  /// places any parameters
   String _parameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
       return '';
@@ -504,47 +891,49 @@ class FhirRequest with _$FhirRequest {
     }
   }
 
+  /// unioon method to get the url
   String _url() => map(
-        // READ
-        read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
-        // VREAD
-        vRead: (f) =>
-            '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
-        // UPDATE
-        update: (f) =>
-            '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
-        // PATCH
-        patch: (f) =>
-            '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
-        // DELETE
-        delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
-        // CREATE
-        create: (f) =>
-            '${f.base}/${enumToString(f.resource.resourceTypeString())}',
-        // SEARCH
-        search: (f) => '${f.base}/${enumToString(f.type)}'
-            '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
-        // SEARCH-ALL
-        searchAll: (f) => '${f.base}',
-        // CAPABILITIES
-        capabilities: (f) => '${f.base}/metadata',
-        // BATCH / TRANSACTION
-        transaction: (f) => '${f.base}',
-        batch: (f) => '${f.base}',
-        // HISTORY
-        history: (f) =>
-            '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
-        // HISTORY-TYPE
-        historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
-        // HISTORY-ALL
-        historyAll: (f) => '${f.base}/_history',
-        // OPERATION
-        operation: (f) => '${f.base}/'
-            '${f.type != null ? "${enumToString(f.type)}/" : ''}'
-            '${f.type != null && f.id != null ? "${enumToString(f.id)}/" : ''}'
-            '\$${f.operation}',
-      );
+      // READ
+      read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
+      // VREAD
+      vRead: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
+      // UPDATE
+      update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      // PATCH
+      patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      // DELETE
+      delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
+      // CREATE
+      create: (f) => '${f.base}/${enumToString(f.resource.resourceTypeString())}',
+      // SEARCH
+      search: (f) => '${f.base}/${enumToString(f.type)}'
+          '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
+      // SEARCH-ALL
+      searchAll: (f) => '${f.base}',
+      // CAPABILITIES
+      capabilities: (f) => '${f.base}/metadata',
+      // BATCH / TRANSACTION
+      transaction: (f) => '${f.base}',
+      batch: (f) => '${f.base}',
+      // HISTORY
+      history: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history',
+      // HISTORY-TYPE
+      historyType: (f) => '${f.base}/${enumToString(f.type)}/_history',
+      // HISTORY-ALL
+      historyAll: (f) => '${f.base}/_history',
+      // OPERATION
+      operation: (f) => '${f.base}/'
+          '${f.type != null ? "${enumToString(f.type)}/" : ''}'
+          '${f.type != null && f.id != null ? "${enumToString(f.id)}/" : ''}'
+          '\$${f.operation}',
+      // READ-BUNDLE-PAGE
+      readBundlePage: (f) {
+        final Uri? _uri = f.bundle.link?.firstWhere((element) => element.relation == BundlePageEnumMap[f.page], orElse: null).url?.value;
+        return '${_uri?.scheme}://${_uri?.host}${_uri?.path}';
+      });
 
+  /// MAKE REQUEST
+  /// where we finally and actually make the request to the outside server
   Future<Resource?> _makeRequest({
     required RestfulRequest type,
     required String thisRequest,
@@ -603,9 +992,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.post_:
           {
-            headers['Content-Type'] = formData != null
-                ? 'application/x-www-form-urlencoded'
-                : 'application/fhir+json';
+            headers['Content-Type'] = formData != null ? 'application/x-www-form-urlencoded' : 'application/fhir+json';
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,
@@ -616,18 +1003,18 @@ class FhirRequest with _$FhirRequest {
           }
       }
     } catch (e) {
-      return _operationOutcome('Failed to complete a restful request, ',
-          diagnostics: 'Exception: $e');
+      return _operationOutcome('Failed to complete a restful request, ', diagnostics: 'Exception: $e');
     }
 
-    if (_errorCodes.containsKey(result.statusCode)) {
+    if (result.statusCode >= 300) {
+      final code = _getIssueCodeByStatusCode(result.statusCode);
       return OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
-          code: OperationOutcomeIssueCode.unknown,
-          details: CodeableConcept(text: 'Failed to make restful request'),
-          diagnostics: '\nStatus Code: ${result.statusCode} -'
-              ' ${_errorCodes[result.statusCode]}'
+          code: code,
+          details: CodeableConcept(text: 'Failed to perform request'),
+          diagnostics: '\nStatus Code: ${result.statusCode}'
+              '\n ${_getFeedbackByCode(result.statusCode)}'
               '\nResult headers: ${result.headers}'
               '\nResult body: ${result.body}',
         )
@@ -636,8 +1023,50 @@ class FhirRequest with _$FhirRequest {
     return Resource.fromJson(json.decode(result.body));
   }
 
-  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
-      OperationOutcome(issue: [
+  OperationOutcomeIssueCode _getIssueCodeByStatusCode(int statusCode) {
+    switch (statusCode) {
+      case 400:
+        return OperationOutcomeIssueCode.invalid;
+      case 401:
+        return OperationOutcomeIssueCode.forbidden;
+      case 404:
+        return OperationOutcomeIssueCode.not_found;
+      case 405:
+        return OperationOutcomeIssueCode.not_supported;
+      case 409:
+        return OperationOutcomeIssueCode.conflict;
+      case 412:
+        return OperationOutcomeIssueCode.business_rule;
+      case 422:
+        return OperationOutcomeIssueCode.value;
+      default:
+        return OperationOutcomeIssueCode.unknown;
+    }
+  }
+
+  String _getFeedbackByCode(int code) {
+    if (_errorCodes.keys.contains(code)) {
+      return _errorCodes[code]!;
+    } else {
+      return 'Unkown error';
+    }
+  }
+
+  /// List of the most common types of error codes that will be returned
+  /// from the server
+  static const _errorCodes = {
+    400: 'Bad Request',
+    401: 'Not Authorized',
+    404: 'Not Found',
+    405: 'Method Not Allowed',
+    409: 'Version Conflict',
+    412: 'Precondition Failed',
+    422: 'Unprocessable Entity',
+  };
+
+  /// Allows us to return an error as a FHIR resource, whether the problem
+  /// is locally or on the server side
+  OperationOutcome _operationOutcome(String issue, {String? diagnostics}) => OperationOutcome(issue: [
         OperationOutcomeIssue(
           severity: OperationOutcomeIssueSeverity.error,
           code: OperationOutcomeIssueCode.value,
@@ -645,14 +1074,4 @@ class FhirRequest with _$FhirRequest {
           diagnostics: diagnostics,
         )
       ]);
-
-  static const _errorCodes = {
-    400: 'Bad Request',
-    401: 'Not Authorized',
-    404: 'Not Found',
-    405: 'Method Not Allowed',
-    409: 'Version Conflict',
-    412: 'Version Conflict',
-    422: 'Unprocessable Entity',
-  };
 }

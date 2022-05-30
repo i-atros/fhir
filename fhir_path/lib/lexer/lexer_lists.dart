@@ -35,7 +35,7 @@ final symbolOperationLexer = notEquivalentLexer |
     greaterLexer |
     unionOperatorLexer |
     andSignLexer |
-    // minusLexer |
+    minusLexer |
     plusLexer |
     divSignLexer |
     starLexer |
@@ -69,7 +69,8 @@ final functionLexer = unionFunctionLexer |
     intersectLexer |
     excludeLexer |
     traceLexer |
-    aggregateLexer;
+    aggregateLexer |
+    iifLexer;
 
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;
 

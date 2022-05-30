@@ -4,9 +4,9 @@ class StarParser extends OperatorParser {
   StarParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore = before.execute(results, passed, where: where);
-    final executedAfter = after.execute(results, passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -32,9 +32,9 @@ class DivSignParser extends OperatorParser {
   DivSignParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore = before.execute(results, passed, where: where);
-    final executedAfter = after.execute(results, passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -63,9 +63,9 @@ class DivStringParser extends OperatorParser {
   DivStringParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore = before.execute(results, passed, where: where);
-    final executedAfter = after.execute(results, passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -94,9 +94,9 @@ class DivModParser extends OperatorParser {
   DivModParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore = before.execute(results, passed, where: where);
-    final executedAfter = after.execute(results, passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -125,10 +125,15 @@ class PlusParser extends OperatorParser {
   PlusParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore =
-        before.execute(results.toList(), passed, where: where);
-    final executedAfter = after.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
+    if (before.isEmpty &&
+        executedAfter.isNotEmpty &&
+        executedAfter.length == 1 &&
+        executedAfter.first is num) {
+      return [(executedAfter.first as num)];
+    }
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -184,9 +189,15 @@ class MinusParser extends OperatorParser {
   MinusParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore = before.execute(results, passed, where: where);
-    final executedAfter = after.execute(results, passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
+    if (before.isEmpty &&
+        executedAfter.isNotEmpty &&
+        executedAfter.length == 1 &&
+        executedAfter.first is num) {
+      return [(executedAfter.first as num) * -1];
+    }
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -215,9 +226,9 @@ class AndSignParser extends OperatorParser {
   AndSignParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore = before.execute(results, passed, where: where);
-    final executedAfter = after.execute(results, passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {

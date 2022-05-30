@@ -23,15 +23,236 @@ void testQuestionnaire() {
               "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
               "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"),
           [false]);
+      expect(
+          walkFhirPath(
+              response.toJson(),
+              "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value"),
+          [13]);
+      expect(
+          walkFhirPath(
+              response.toJson(),
+              "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value) < 12"),
+          [false]);
     });
     test('Total Score Aggregate', () {
       expect(
           walkFhirPath(response.toJson(),
               r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
           [13]);
+      expect(
+          walkFhirPath(response.toJson(),
+              r"QuestionnaireResponse.item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
+          [13]);
+    });
+  });
+  group('Faiadashu', () {
+    test('EnableWhen with specific polymorphic items', () {
+      expect(
+          walkFhirPath(
+              faiadashuResponse.toJson(),
+              "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
+              "="
+              "'female' "
+              "and"
+              " today().toString().substring(0, 4).toInteger() "
+              "-"
+              " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
+              ">="
+              " 40"),
+          [false]);
+    });
+    test('EnableWhen using generic value polymorphic type', () {
+      expect(
+          walkFhirPath(
+              faiadashuResponse.toJson(),
+              "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
+              "="
+              "'female' "
+              "and"
+              " today().toString().substring(0, 4).toInteger() "
+              "-"
+              " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
+              ">="
+              " 40"),
+          [false]);
+    });
+    test('EnableWhen using a defined polymorphic type', () {
+      expect(
+          walkFhirPath(
+            faiadashuResponse.toJson(),
+            "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
+            "="
+            "'female' "
+            "and"
+            " today().toString().substring(0, 4).toInteger() "
+            "-"
+            " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
+            ">="
+            " 40",
+          ),
+          [false]);
+    });
+  });
+  group('More Complicated Responses', () {
+    test('Contains on more than one item', () {
+      expect(
+          walkFhirPath(newResponse.toJson(),
+              "item.where(linkId.contains('/psc/preschool/routines/inflexibility'))"),
+          [
+            {'linkId': '/psc/preschool/routines/inflexibility/fidgety'},
+            {'linkId': '/psc/preschool/routines/inflexibility/angry'}
+          ]);
+    });
+    test('Fuckin a sums scores', () {
+      expect(
+          walkFhirPath(newResponse.toJson(),
+              r"item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
+          [2]);
+      expect(
+          walkFhirPath(newResponse.toJson(),
+              r"item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
+          [2]);
     });
   });
 }
+
+final newResponse = QuestionnaireResponse.fromJson({
+  "resourceType": "QuestionnaireResponse",
+  "item": [
+    {"linkId": "/psc/preschool"},
+    {
+      "linkId": "/psc/preschool/irritability/nervous",
+      "answer": [
+        {
+          "valueCoding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 1
+              }
+            ],
+            "code": "Somewhat",
+            "display": "Somewhat"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "/psc/preschool/irritability/sad",
+      "answer": [
+        {
+          "valueCoding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 1
+              }
+            ],
+            "code": "Somewhat",
+            "display": "Somewhat"
+          }
+        }
+      ]
+    },
+    {"linkId": "/psc/preschool/irritability/upset"},
+    {"linkId": "/psc/preschool/irritability/change"},
+    {"linkId": "/psc/preschool/irritability/trouble_playing"},
+    {"linkId": "/psc/preschool/irritability/break_things"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/fights"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/attention"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/calming_down"},
+    {"linkId": "/psc/preschool/irritability/one_activity"},
+    {"linkId": "/psc/preschool/subscore_irritability"},
+    {"linkId": "/psc/preschool/inflexibility/aggressive"},
+    {"linkId": "/psc/preschool/routines/inflexibility/fidgety"},
+    {"linkId": "/psc/preschool/routines/inflexibility/angry"}
+  ]
+});
+
+final faiadashuResponse = QuestionnaireResponse.fromJson({
+  "resourceType": "QuestionnaireResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/QuestionnaireResponse",
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
+      "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaireresponse"
+    ]
+  },
+  "language": "en",
+  "text": {
+    "status": "generated",
+    "div":
+        "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\"><h3>Enter your birthdate (MM/DD/YYYY)</h3><p>8/22/2013</p><h3>Have you had mammogram before?(enableWhenExpression = only when gender is female and age > 40)</h3><p>- Don’t know</p><p>&nbsp;</p></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "14603",
+      "name": [
+        {
+          "family": "Lee",
+          "given": ["Emma"]
+        }
+      ],
+      "gender": "female",
+    }
+  ],
+  "questionnaire": "http://build.fhir.org/ig/HL7/sdc/examples.html",
+  "_questionnaire": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/display",
+        "valueString": "SDC Demo Survey"
+      }
+    ]
+  },
+  "status": "in-progress",
+  "subject": {"reference": "#14603", "type": "Patient"},
+  "authored": "2021-08-28T23:57:20.643979+02:00",
+  "item": [
+    {
+      "linkId": "4.2.b",
+      "item": [
+        {
+          "linkId": "4.2.b.1",
+          "text": "What gender are you?",
+          "answer": [
+            {
+              "valueCoding": {"code": "female", "display": "Female"}
+            }
+          ]
+        },
+        {
+          "linkId": "4.2.b.5",
+          "text": "Enter your birthdate (MM/DD/YYYY)",
+          "answer": [
+            {"valueDate": "2013-08-22"}
+          ]
+        },
+        {
+          "linkId": "4.2.b.6",
+          "text":
+              "Have you had mammogram before?(enableWhenExpression = only when gender is female and age > 40)",
+          "answer": [
+            {
+              "valueCoding": {
+                "system":
+                    "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                "code": "asked-unknown",
+                "display": "Don’t know",
+                "userSelected": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+});
 
 final questionnaireResponse = {
   "resourceType": "QuestionnaireResponse",

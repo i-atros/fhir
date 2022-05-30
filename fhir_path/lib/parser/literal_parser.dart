@@ -1,7 +1,7 @@
+import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
-import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/stu3.dart' as stu3;
 
 import '../fhir_path.dart';
@@ -11,14 +11,14 @@ import '../fhir_path.dart';
 class WhiteSpaceParser extends ValueParser<String> {
   WhiteSpaceParser(this.value);
   String value;
-  List execute(List results, Map passed, {bool where = false}) => results;
+  List execute(List results, Map passed) => results;
 }
 
 /// Boolean Parser, it returns a FHIR Boolean value
 class BooleanParser extends ValueParser<bool> {
   BooleanParser(String newValue) : value = newValue == 'true';
   bool value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 /// This allows the passing of a variable from the environment into the
@@ -26,12 +26,11 @@ class BooleanParser extends ValueParser<bool> {
 class EnvVariableParser extends ValueParser<String> {
   EnvVariableParser(this.value);
   String value;
-  List execute(List results, Map passed, {bool where = false}) =>
-      passed[value] == null
-          ? []
-          : passed[value] is List
-              ? passed[value]
-              : [passed[value]];
+  List execute(List results, Map passed) => passed[value] == null
+      ? []
+      : passed[value] is List
+          ? passed[value]
+          : [passed[value]];
 }
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
@@ -40,25 +39,25 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
     value = FhirPathQuantity(num.parse(stringList.first), stringList.last);
   }
   late FhirPathQuantity value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class IntegerParser extends ValueParser<int> {
   IntegerParser(String newValue) : value = int.parse(newValue);
   int value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class DecimalParser extends ValueParser<double> {
   DecimalParser(String newValue) : value = double.parse(newValue);
   double value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class IdentifierParser extends ValueParser<String> {
   IdentifierParser(this.value);
   String value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final finalResults = [];
     if (passed['version'] == FhirVersion.r4
         ? r4.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
@@ -76,10 +75,24 @@ class IdentifierParser extends ValueParser<String> {
     } else {
       results.forEach((r) {
         if (r is Map) {
-          if (r[value] is List) {
-            finalResults.addAll(r[value]);
-          } else if (r[value] != null) {
-            finalResults.add(r[value]);
+          dynamic rValue = r[value];
+          if (rValue == null) {
+            // Support for polymorphism:
+            // If the key cannot be found in the r-map, then find
+            // a key that starts with the same word, e.g. 'value' identifier will
+            // match 'valueDateTime' key.
+            r.forEach((k, v) {
+              if (polymorphicPrefixes.contains(value) &&
+                  startsWithAPolymorphicPrefix(k.toString())) {
+                rValue = v;
+              }
+            });
+          }
+
+          if (rValue is List) {
+            finalResults.addAll(rValue);
+          } else if (rValue != null) {
+            finalResults.add(rValue);
           } else if (r['resourceType'] == value) {
             finalResults.add(r);
           }
@@ -94,7 +107,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   DelimitedIdentifierParser(String newValue)
       : value = newValue.substring(1, newValue.length - 1);
   String value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class StringParser extends ValueParser<String> {
@@ -103,7 +116,7 @@ class StringParser extends ValueParser<String> {
             ? ''
             : newValue.substring(1, newValue.length - 1);
   String value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class DateTimeParser extends BaseDateTimeParser<List> {
@@ -142,7 +155,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     }
   }
   late List value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (value.length == 0) {
       return [];
     } else if (value.length == 1) {
@@ -168,9 +181,7 @@ class DateParser extends BaseDateTimeParser<Date> {
     value = Date(valueString.replaceFirst('@', ''));
   }
   late Date value;
-  List execute(List results, Map passed, {bool where = false}) {
-    return [value];
-  }
+  List execute(List results, Map passed) => [value];
 
   String toString() => value.toString();
 }
@@ -179,38 +190,9 @@ class TimeParser extends BaseDateTimeParser<Time> {
   TimeParser(String stringValue) {
     final removeAt = stringValue.replaceFirst('@', '');
     value = Time(removeAt.replaceFirst('T', ''));
-    // print(removeT);
-    // final valueList = removeT.split(':');
-    // value = valueList.length == 1
-    //     ? [
-    //         IntegerParser(valueList[0]),
-    //       ]
-    //     : valueList.length == 2
-    //         ? [
-    //             IntegerParser(valueList[0]),
-    //             IntegerParser(valueList[1]),
-    //           ]
-    //         : [
-    //             IntegerParser(valueList[0]),
-    //             IntegerParser(valueList[1]),
-    //             DecimalParser(valueList[2]),
-    //           ];
   }
   late Time value;
-  List execute(List results, Map passed, {bool where = false}) {
-    return [value];
-    // var timeString = '';
+  List execute(List results, Map passed) => [value];
 
-    // value.forEach((e) => timeString +=
-    //     '${e.value}'.length == 1 ? '0${e.value}:' : '${e.value}:');
-    // timeString = timeString.substring(0, timeString.length - 1);
-    // return [Time(timeString)];
-  }
-
-  String toString() {
-    return value.toString();
-    // var timeString = '';
-    // value.forEach((e) => timeString += '${e.value}:');
-    // return timeString.substring(0, timeString.length - 1);
-  }
+  String toString() => value.toString();
 }
