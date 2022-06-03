@@ -19,6 +19,9 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
+      account: (json['account'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       implicitRulesElement: json['_implicitRules'] == null
           ? null
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
@@ -67,6 +70,9 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       reason: (json['reason'] as List<dynamic>?)
           ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
           .toList(),
+      replaces: (json['replaces'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       priority: json['priority'] == null
           ? null
           : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
@@ -100,10 +106,12 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
-      comment: json['comment'] as String?,
-      commentElement: json['_comment'] == null
+      note: (json['note'] as List<dynamic>?)
+          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      noteElement: json['_note'] == null
           ? null
-          : Element.fromJson(json['_comment'] as Map<String, dynamic>),
+          : Element.fromJson(json['_note'] as Map<String, dynamic>),
       patientInstruction: json['patientInstruction'] as String?,
       patientInstructionElement: json['_patientInstruction'] == null
           ? null
@@ -119,6 +127,12 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       requestedPeriod: (json['requestedPeriod'] as List<dynamic>?)
           ?.map((e) => Period.fromJson(e as Map<String, dynamic>))
           .toList(),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      subject: json['subject'] == null
+          ? null
+          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
@@ -135,6 +149,7 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('account', instance.account?.map((e) => e.toJson()).toList());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
@@ -158,6 +173,7 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
       'specialty', instance.specialty?.map((e) => e.toJson()).toList());
   writeNotNull('appointmentType', instance.appointmentType?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
+  writeNotNull('replaces', instance.replaces?.map((e) => e.toJson()).toList());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
@@ -172,8 +188,8 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('slot', instance.slot?.map((e) => e.toJson()).toList());
   writeNotNull('created', instance.created?.toJson());
   writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
+  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
+  writeNotNull('_note', instance.noteElement?.toJson());
   writeNotNull('patientInstruction', instance.patientInstruction);
   writeNotNull(
       '_patientInstruction', instance.patientInstructionElement?.toJson());
@@ -181,6 +197,8 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   val['participant'] = instance.participant.map((e) => e.toJson()).toList();
   writeNotNull('requestedPeriod',
       instance.requestedPeriod?.map((e) => e.toJson()).toList());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
   return val;
 }
 

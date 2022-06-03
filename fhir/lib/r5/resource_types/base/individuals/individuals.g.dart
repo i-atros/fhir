@@ -939,6 +939,18 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
           json['language'] == null ? null : Code.fromJson(json['language']),
+      deceasedBoolean: json['deceasedBoolean'] == null
+          ? null
+          : Boolean.fromJson(json['deceasedBoolean']),
+      deceasedBooleanElement: json['_deceasedBoolean'] == null
+          ? null
+          : Element.fromJson(json['_deceasedBoolean'] as Map<String, dynamic>),
+      deceasedDateTime: json['deceasedDateTime'] == null
+          ? null
+          : FhirDateTime.fromJson(json['deceasedDateTime']),
+      deceasedDateTimeElement: json['_deceasedDateTime'] == null
+          ? null
+          : Element.fromJson(json['_deceasedDateTime'] as Map<String, dynamic>),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -1008,6 +1020,10 @@ Map<String, dynamic> _$$_PractitionerToJson(_$_Practitioner instance) {
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('deceasedBoolean', instance.deceasedBoolean?.toJson());
+  writeNotNull('_deceasedBoolean', instance.deceasedBooleanElement?.toJson());
+  writeNotNull('deceasedDateTime', instance.deceasedDateTime?.toJson());
+  writeNotNull('_deceasedDateTime', instance.deceasedDateTimeElement?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(

@@ -1703,6 +1703,10 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(
               json['instantiatesReference'] as Map<String, dynamic>),
+      instantiatesReferenceElement: json['_instantiatesReference'] == null
+          ? null
+          : Element.fromJson(
+              json['_instantiatesReference'] as Map<String, dynamic>),
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1797,13 +1801,16 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-      valuePeriod: json['valuePeriod'] == null
-          ? null
-          : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
       valueAttachment: json['valueAttachment'] == null
           ? null
           : Attachment.fromJson(
               json['valueAttachment'] as Map<String, dynamic>),
+      valueAttachmentElement: json['_valueAttachment'] == null
+          ? null
+          : Element.fromJson(json['_valueAttachment'] as Map<String, dynamic>),
+      valuePeriod: json['valuePeriod'] == null
+          ? null
+          : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
       dataAbsentReason: json['dataAbsentReason'] == null
           ? null
           : CodeableConcept.fromJson(
@@ -1873,6 +1880,8 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
       instance.instantiatesCanonicalElement?.toJson());
   writeNotNull(
       'instantiatesReference', instance.instantiatesReference?.toJson());
+  writeNotNull('_instantiatesReference',
+      instance.instantiatesReferenceElement?.toJson());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$ObservationStatusEnumMap[instance.status]);
@@ -1908,8 +1917,9 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
   writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
   writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
-  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('_valueAttachment', instance.valueAttachmentElement?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
   writeNotNull('interpretation',
       instance.interpretation?.map((e) => e.toJson()).toList());

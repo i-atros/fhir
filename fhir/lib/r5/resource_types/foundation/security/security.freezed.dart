@@ -3458,9 +3458,10 @@ class _$ConsentTearOff {
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
           Element? dateTimeElement,
-      List<Reference>? performer,
       List<Reference>? manager,
       List<Reference>? controller,
+      List<Reference>? grantee,
+      List<Reference>? grantor,
       List<Attachment>? sourceAttachment,
       List<Reference>? sourceReference,
       List<ConsentPolicy>? policy,
@@ -3487,9 +3488,10 @@ class _$ConsentTearOff {
       subject: subject,
       dateTime: dateTime,
       dateTimeElement: dateTimeElement,
-      performer: performer,
       manager: manager,
       controller: controller,
+      grantee: grantee,
+      grantor: grantor,
       sourceAttachment: sourceAttachment,
       sourceReference: sourceReference,
       policy: policy,
@@ -3536,9 +3538,10 @@ mixin _$Consent {
   FhirDateTime? get dateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_dateTime')
   Element? get dateTimeElement => throw _privateConstructorUsedError;
-  List<Reference>? get performer => throw _privateConstructorUsedError;
   List<Reference>? get manager => throw _privateConstructorUsedError;
   List<Reference>? get controller => throw _privateConstructorUsedError;
+  List<Reference>? get grantee => throw _privateConstructorUsedError;
+  List<Reference>? get grantor => throw _privateConstructorUsedError;
   List<Attachment>? get sourceAttachment => throw _privateConstructorUsedError;
   List<Reference>? get sourceReference => throw _privateConstructorUsedError;
   List<ConsentPolicy>? get policy => throw _privateConstructorUsedError;
@@ -3583,9 +3586,10 @@ abstract class $ConsentCopyWith<$Res> {
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
           Element? dateTimeElement,
-      List<Reference>? performer,
       List<Reference>? manager,
       List<Reference>? controller,
+      List<Reference>? grantee,
+      List<Reference>? grantor,
       List<Attachment>? sourceAttachment,
       List<Reference>? sourceReference,
       List<ConsentPolicy>? policy,
@@ -3634,9 +3638,10 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
     Object? subject = freezed,
     Object? dateTime = freezed,
     Object? dateTimeElement = freezed,
-    Object? performer = freezed,
     Object? manager = freezed,
     Object? controller = freezed,
+    Object? grantee = freezed,
+    Object? grantor = freezed,
     Object? sourceAttachment = freezed,
     Object? sourceReference = freezed,
     Object? policy = freezed,
@@ -3721,10 +3726,6 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
           ? _value.dateTimeElement
           : dateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      performer: performer == freezed
-          ? _value.performer
-          : performer // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       manager: manager == freezed
           ? _value.manager
           : manager // ignore: cast_nullable_to_non_nullable
@@ -3732,6 +3733,14 @@ class _$ConsentCopyWithImpl<$Res> implements $ConsentCopyWith<$Res> {
       controller: controller == freezed
           ? _value.controller
           : controller // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      grantee: grantee == freezed
+          ? _value.grantee
+          : grantee // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      grantor: grantor == freezed
+          ? _value.grantor
+          : grantor // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       sourceAttachment: sourceAttachment == freezed
           ? _value.sourceAttachment
@@ -3899,9 +3908,10 @@ abstract class _$ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
           Element? dateTimeElement,
-      List<Reference>? performer,
       List<Reference>? manager,
       List<Reference>? controller,
+      List<Reference>? grantee,
+      List<Reference>? grantor,
       List<Attachment>? sourceAttachment,
       List<Reference>? sourceReference,
       List<ConsentPolicy>? policy,
@@ -3961,9 +3971,10 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
     Object? subject = freezed,
     Object? dateTime = freezed,
     Object? dateTimeElement = freezed,
-    Object? performer = freezed,
     Object? manager = freezed,
     Object? controller = freezed,
+    Object? grantee = freezed,
+    Object? grantor = freezed,
     Object? sourceAttachment = freezed,
     Object? sourceReference = freezed,
     Object? policy = freezed,
@@ -4048,10 +4059,6 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
           ? _value.dateTimeElement
           : dateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      performer: performer == freezed
-          ? _value.performer
-          : performer // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
       manager: manager == freezed
           ? _value.manager
           : manager // ignore: cast_nullable_to_non_nullable
@@ -4059,6 +4066,14 @@ class __$ConsentCopyWithImpl<$Res> extends _$ConsentCopyWithImpl<$Res>
       controller: controller == freezed
           ? _value.controller
           : controller // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      grantee: grantee == freezed
+          ? _value.grantee
+          : grantee // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      grantor: grantor == freezed
+          ? _value.grantor
+          : grantor // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       sourceAttachment: sourceAttachment == freezed
           ? _value.sourceAttachment
@@ -4118,9 +4133,10 @@ class _$_Consent extends _Consent {
       this.dateTime,
       @JsonKey(name: '_dateTime')
           this.dateTimeElement,
-      this.performer,
       this.manager,
       this.controller,
+      this.grantee,
+      this.grantor,
       this.sourceAttachment,
       this.sourceReference,
       this.policy,
@@ -4178,11 +4194,13 @@ class _$_Consent extends _Consent {
   @JsonKey(name: '_dateTime')
   final Element? dateTimeElement;
   @override
-  final List<Reference>? performer;
-  @override
   final List<Reference>? manager;
   @override
   final List<Reference>? controller;
+  @override
+  final List<Reference>? grantee;
+  @override
+  final List<Reference>? grantor;
   @override
   final List<Attachment>? sourceAttachment;
   @override
@@ -4198,7 +4216,7 @@ class _$_Consent extends _Consent {
 
   @override
   String toString() {
-    return 'Consent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, scope: $scope, category: $category, subject: $subject, dateTime: $dateTime, dateTimeElement: $dateTimeElement, performer: $performer, manager: $manager, controller: $controller, sourceAttachment: $sourceAttachment, sourceReference: $sourceReference, policy: $policy, policyRule: $policyRule, verification: $verification, provision: $provision)';
+    return 'Consent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, scope: $scope, category: $category, subject: $subject, dateTime: $dateTime, dateTimeElement: $dateTimeElement, manager: $manager, controller: $controller, grantee: $grantee, grantor: $grantor, sourceAttachment: $sourceAttachment, sourceReference: $sourceReference, policy: $policy, policyRule: $policyRule, verification: $verification, provision: $provision)';
   }
 
   @override
@@ -4257,21 +4275,22 @@ class _$_Consent extends _Consent {
             (identical(other.dateTimeElement, dateTimeElement) ||
                 const DeepCollectionEquality()
                     .equals(other.dateTimeElement, dateTimeElement)) &&
-            (identical(other.performer, performer) ||
-                const DeepCollectionEquality()
-                    .equals(other.performer, performer)) &&
             (identical(other.manager, manager) ||
                 const DeepCollectionEquality()
                     .equals(other.manager, manager)) &&
             (identical(other.controller, controller) ||
                 const DeepCollectionEquality()
                     .equals(other.controller, controller)) &&
+            (identical(other.grantee, grantee) ||
+                const DeepCollectionEquality()
+                    .equals(other.grantee, grantee)) &&
+            (identical(other.grantor, grantor) ||
+                const DeepCollectionEquality()
+                    .equals(other.grantor, grantor)) &&
             (identical(other.sourceAttachment, sourceAttachment) ||
                 const DeepCollectionEquality()
                     .equals(other.sourceAttachment, sourceAttachment)) &&
-            (identical(other.sourceReference, sourceReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.sourceReference, sourceReference)) &&
+            (identical(other.sourceReference, sourceReference) || const DeepCollectionEquality().equals(other.sourceReference, sourceReference)) &&
             (identical(other.policy, policy) || const DeepCollectionEquality().equals(other.policy, policy)) &&
             (identical(other.policyRule, policyRule) || const DeepCollectionEquality().equals(other.policyRule, policyRule)) &&
             (identical(other.verification, verification) || const DeepCollectionEquality().equals(other.verification, verification)) &&
@@ -4300,9 +4319,10 @@ class _$_Consent extends _Consent {
       const DeepCollectionEquality().hash(subject) ^
       const DeepCollectionEquality().hash(dateTime) ^
       const DeepCollectionEquality().hash(dateTimeElement) ^
-      const DeepCollectionEquality().hash(performer) ^
       const DeepCollectionEquality().hash(manager) ^
       const DeepCollectionEquality().hash(controller) ^
+      const DeepCollectionEquality().hash(grantee) ^
+      const DeepCollectionEquality().hash(grantor) ^
       const DeepCollectionEquality().hash(sourceAttachment) ^
       const DeepCollectionEquality().hash(sourceReference) ^
       const DeepCollectionEquality().hash(policy) ^
@@ -4349,9 +4369,10 @@ abstract class _Consent extends Consent {
       FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
           Element? dateTimeElement,
-      List<Reference>? performer,
       List<Reference>? manager,
       List<Reference>? controller,
+      List<Reference>? grantee,
+      List<Reference>? grantor,
       List<Attachment>? sourceAttachment,
       List<Reference>? sourceReference,
       List<ConsentPolicy>? policy,
@@ -4409,11 +4430,13 @@ abstract class _Consent extends Consent {
   @JsonKey(name: '_dateTime')
   Element? get dateTimeElement => throw _privateConstructorUsedError;
   @override
-  List<Reference>? get performer => throw _privateConstructorUsedError;
-  @override
   List<Reference>? get manager => throw _privateConstructorUsedError;
   @override
   List<Reference>? get controller => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get grantee => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get grantor => throw _privateConstructorUsedError;
   @override
   List<Attachment>? get sourceAttachment => throw _privateConstructorUsedError;
   @override
@@ -5276,6 +5299,7 @@ class _$ConsentProvisionTearOff {
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
+      Expression? expression,
       List<ConsentProvision>? provision}) {
     return _ConsentProvision(
       id: id,
@@ -5292,6 +5316,7 @@ class _$ConsentProvisionTearOff {
       code: code,
       dataPeriod: dataPeriod,
       data: data,
+      expression: expression,
       provision: provision,
     );
   }
@@ -5325,6 +5350,7 @@ mixin _$ConsentProvision {
   List<CodeableConcept>? get code => throw _privateConstructorUsedError;
   Period? get dataPeriod => throw _privateConstructorUsedError;
   List<ConsentData>? get data => throw _privateConstructorUsedError;
+  Expression? get expression => throw _privateConstructorUsedError;
   List<ConsentProvision>? get provision => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5357,11 +5383,13 @@ abstract class $ConsentProvisionCopyWith<$Res> {
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
+      Expression? expression,
       List<ConsentProvision>? provision});
 
   $ElementCopyWith<$Res>? get typeElement;
   $PeriodCopyWith<$Res>? get period;
   $PeriodCopyWith<$Res>? get dataPeriod;
+  $ExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -5389,6 +5417,7 @@ class _$ConsentProvisionCopyWithImpl<$Res>
     Object? code = freezed,
     Object? dataPeriod = freezed,
     Object? data = freezed,
+    Object? expression = freezed,
     Object? provision = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5448,6 +5477,10 @@ class _$ConsentProvisionCopyWithImpl<$Res>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ConsentData>?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
       provision: provision == freezed
           ? _value.provision
           : provision // ignore: cast_nullable_to_non_nullable
@@ -5487,6 +5520,17 @@ class _$ConsentProvisionCopyWithImpl<$Res>
       return _then(_value.copyWith(dataPeriod: value));
     });
   }
+
+  @override
+  $ExpressionCopyWith<$Res>? get expression {
+    if (_value.expression == null) {
+      return null;
+    }
+
+    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+      return _then(_value.copyWith(expression: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -5515,6 +5559,7 @@ abstract class _$ConsentProvisionCopyWith<$Res>
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
+      Expression? expression,
       List<ConsentProvision>? provision});
 
   @override
@@ -5523,6 +5568,8 @@ abstract class _$ConsentProvisionCopyWith<$Res>
   $PeriodCopyWith<$Res>? get period;
   @override
   $PeriodCopyWith<$Res>? get dataPeriod;
+  @override
+  $ExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -5552,6 +5599,7 @@ class __$ConsentProvisionCopyWithImpl<$Res>
     Object? code = freezed,
     Object? dataPeriod = freezed,
     Object? data = freezed,
+    Object? expression = freezed,
     Object? provision = freezed,
   }) {
     return _then(_ConsentProvision(
@@ -5611,6 +5659,10 @@ class __$ConsentProvisionCopyWithImpl<$Res>
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ConsentData>?,
+      expression: expression == freezed
+          ? _value.expression
+          : expression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
       provision: provision == freezed
           ? _value.provision
           : provision // ignore: cast_nullable_to_non_nullable
@@ -5637,6 +5689,7 @@ class _$_ConsentProvision extends _ConsentProvision {
       this.code,
       this.dataPeriod,
       this.data,
+      this.expression,
       this.provision})
       : super._();
 
@@ -5676,11 +5729,13 @@ class _$_ConsentProvision extends _ConsentProvision {
   @override
   final List<ConsentData>? data;
   @override
+  final Expression? expression;
+  @override
   final List<ConsentProvision>? provision;
 
   @override
   String toString() {
-    return 'ConsentProvision(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, period: $period, actor: $actor, action: $action, securityLabel: $securityLabel, purpose: $purpose, class_: $class_, code: $code, dataPeriod: $dataPeriod, data: $data, provision: $provision)';
+    return 'ConsentProvision(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, period: $period, actor: $actor, action: $action, securityLabel: $securityLabel, purpose: $purpose, class_: $class_, code: $code, dataPeriod: $dataPeriod, data: $data, expression: $expression, provision: $provision)';
   }
 
   @override
@@ -5721,6 +5776,9 @@ class _$_ConsentProvision extends _ConsentProvision {
                     .equals(other.dataPeriod, dataPeriod)) &&
             (identical(other.data, data) ||
                 const DeepCollectionEquality().equals(other.data, data)) &&
+            (identical(other.expression, expression) ||
+                const DeepCollectionEquality()
+                    .equals(other.expression, expression)) &&
             (identical(other.provision, provision) ||
                 const DeepCollectionEquality()
                     .equals(other.provision, provision)));
@@ -5743,6 +5801,7 @@ class _$_ConsentProvision extends _ConsentProvision {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(dataPeriod) ^
       const DeepCollectionEquality().hash(data) ^
+      const DeepCollectionEquality().hash(expression) ^
       const DeepCollectionEquality().hash(provision);
 
   @JsonKey(ignore: true)
@@ -5776,6 +5835,7 @@ abstract class _ConsentProvision extends ConsentProvision {
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
+      Expression? expression,
       List<ConsentProvision>? provision}) = _$_ConsentProvision;
   _ConsentProvision._() : super._();
 
@@ -5816,6 +5876,8 @@ abstract class _ConsentProvision extends ConsentProvision {
   @override
   List<ConsentData>? get data => throw _privateConstructorUsedError;
   @override
+  Expression? get expression => throw _privateConstructorUsedError;
+  @override
   List<ConsentProvision>? get provision => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
@@ -5835,8 +5897,8 @@ class _$ConsentActorTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      required CodeableConcept role,
-      required Reference reference}) {
+      CodeableConcept? role,
+      Reference? reference}) {
     return _ConsentActor(
       id: id,
       extension_: extension_,
@@ -5861,8 +5923,8 @@ mixin _$ConsentActor {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept get role => throw _privateConstructorUsedError;
-  Reference get reference => throw _privateConstructorUsedError;
+  CodeableConcept? get role => throw _privateConstructorUsedError;
+  Reference? get reference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5879,11 +5941,11 @@ abstract class $ConsentActorCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept role,
-      Reference reference});
+      CodeableConcept? role,
+      Reference? reference});
 
-  $CodeableConceptCopyWith<$Res> get role;
-  $ReferenceCopyWith<$Res> get reference;
+  $CodeableConceptCopyWith<$Res>? get role;
+  $ReferenceCopyWith<$Res>? get reference;
 }
 
 /// @nodoc
@@ -5918,24 +5980,32 @@ class _$ConsentActorCopyWithImpl<$Res> implements $ConsentActorCopyWith<$Res> {
       role: role == freezed
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as CodeableConcept?,
       reference: reference == freezed
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
-              as Reference,
+              as Reference?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get role {
-    return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
+  $CodeableConceptCopyWith<$Res>? get role {
+    if (_value.role == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.role!, (value) {
       return _then(_value.copyWith(role: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get reference {
-    return $ReferenceCopyWith<$Res>(_value.reference, (value) {
+  $ReferenceCopyWith<$Res>? get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
       return _then(_value.copyWith(reference: value));
     });
   }
@@ -5952,13 +6022,13 @@ abstract class _$ConsentActorCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept role,
-      Reference reference});
+      CodeableConcept? role,
+      Reference? reference});
 
   @override
-  $CodeableConceptCopyWith<$Res> get role;
+  $CodeableConceptCopyWith<$Res>? get role;
   @override
-  $ReferenceCopyWith<$Res> get reference;
+  $ReferenceCopyWith<$Res>? get reference;
 }
 
 /// @nodoc
@@ -5995,11 +6065,11 @@ class __$ConsentActorCopyWithImpl<$Res> extends _$ConsentActorCopyWithImpl<$Res>
       role: role == freezed
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as CodeableConcept?,
       reference: reference == freezed
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
-              as Reference,
+              as Reference?,
     ));
   }
 }
@@ -6011,8 +6081,8 @@ class _$_ConsentActor extends _ConsentActor {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      required this.role,
-      required this.reference})
+      this.role,
+      this.reference})
       : super._();
 
   factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
@@ -6026,9 +6096,9 @@ class _$_ConsentActor extends _ConsentActor {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept role;
+  final CodeableConcept? role;
   @override
-  final Reference reference;
+  final Reference? reference;
 
   @override
   String toString() {
@@ -6079,8 +6149,8 @@ abstract class _ConsentActor extends ConsentActor {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      required CodeableConcept role,
-      required Reference reference}) = _$_ConsentActor;
+      CodeableConcept? role,
+      Reference? reference}) = _$_ConsentActor;
   _ConsentActor._() : super._();
 
   factory _ConsentActor.fromJson(Map<String, dynamic> json) =
@@ -6095,9 +6165,9 @@ abstract class _ConsentActor extends ConsentActor {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  CodeableConcept get role => throw _privateConstructorUsedError;
+  CodeableConcept? get role => throw _privateConstructorUsedError;
   @override
-  Reference get reference => throw _privateConstructorUsedError;
+  Reference? get reference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ConsentActorCopyWith<_ConsentActor> get copyWith =>

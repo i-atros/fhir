@@ -1676,6 +1676,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 @freezed
 class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
+
   factory Questionnaire({
     @Default(R5ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
@@ -1686,7 +1687,7 @@ class Questionnaire with Resource, _$Questionnaire {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
-    Markdown? text,
+    Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1718,6 +1719,7 @@ class Questionnaire with Resource, _$Questionnaire {
     Markdown? copyright,
     @JsonKey(name: '_copyright') Element? copyrightElement,
     Date? approvalDate,
+
     @JsonKey(name: '_approvalDate') Element? approvalDateElement,
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,

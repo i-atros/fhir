@@ -683,13 +683,16 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       dateTimeElement: json['_dateTime'] == null
           ? null
           : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
-      performer: (json['performer'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
       manager: (json['manager'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       controller: (json['controller'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      grantee: (json['grantee'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      grantor: (json['grantor'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       sourceAttachment: (json['sourceAttachment'] as List<dynamic>?)
@@ -747,11 +750,11 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('dateTime', instance.dateTime?.toJson());
   writeNotNull('_dateTime', instance.dateTimeElement?.toJson());
-  writeNotNull(
-      'performer', instance.performer?.map((e) => e.toJson()).toList());
   writeNotNull('manager', instance.manager?.map((e) => e.toJson()).toList());
   writeNotNull(
       'controller', instance.controller?.map((e) => e.toJson()).toList());
+  writeNotNull('grantee', instance.grantee?.map((e) => e.toJson()).toList());
+  writeNotNull('grantor', instance.grantor?.map((e) => e.toJson()).toList());
   writeNotNull('sourceAttachment',
       instance.sourceAttachment?.map((e) => e.toJson()).toList());
   writeNotNull('sourceReference',
@@ -915,6 +918,9 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       data: (json['data'] as List<dynamic>?)
           ?.map((e) => ConsentData.fromJson(e as Map<String, dynamic>))
           .toList(),
+      expression: json['expression'] == null
+          ? null
+          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
       provision: (json['provision'] as List<dynamic>?)
           ?.map((e) => ConsentProvision.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -946,6 +952,7 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
   writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
   writeNotNull('dataPeriod', instance.dataPeriod?.toJson());
   writeNotNull('data', instance.data?.map((e) => e.toJson()).toList());
+  writeNotNull('expression', instance.expression?.toJson());
   writeNotNull(
       'provision', instance.provision?.map((e) => e.toJson()).toList());
   return val;
@@ -966,8 +973,12 @@ _$_ConsentActor _$$_ConsentActorFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      role: CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
-      reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
+      role: json['role'] == null
+          ? null
+          : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+      reference: json['reference'] == null
+          ? null
+          : Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ConsentActorToJson(_$_ConsentActor instance) {
@@ -984,8 +995,8 @@ Map<String, dynamic> _$$_ConsentActorToJson(_$_ConsentActor instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['role'] = instance.role.toJson();
-  val['reference'] = instance.reference.toJson();
+  writeNotNull('role', instance.role?.toJson());
+  writeNotNull('reference', instance.reference?.toJson());
   return val;
 }
 

@@ -11587,6 +11587,8 @@ class _$ObservationTearOff {
       @JsonKey(name: '_instantiatesCanonical')
           Element? instantiatesCanonicalElement,
       Reference? instantiatesReference,
+      @JsonKey(name: '_instantiatesReference')
+          Element? instantiatesReferenceElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -11630,8 +11632,10 @@ class _$ObservationTearOff {
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element? valueDateTimeElement,
-      Period? valuePeriod,
       Attachment? valueAttachment,
+      @JsonKey(name: '_valueAttachment')
+          Element? valueAttachmentElement,
+      Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
       List<CodeableConcept>? interpretation,
       List<Annotation>? note,
@@ -11659,6 +11663,7 @@ class _$ObservationTearOff {
       instantiatesCanonical: instantiatesCanonical,
       instantiatesCanonicalElement: instantiatesCanonicalElement,
       instantiatesReference: instantiatesReference,
+      instantiatesReferenceElement: instantiatesReferenceElement,
       basedOn: basedOn,
       partOf: partOf,
       status: status,
@@ -11692,8 +11697,9 @@ class _$ObservationTearOff {
       valueTimeElement: valueTimeElement,
       valueDateTime: valueDateTime,
       valueDateTimeElement: valueDateTimeElement,
-      valuePeriod: valuePeriod,
       valueAttachment: valueAttachment,
+      valueAttachmentElement: valueAttachmentElement,
+      valuePeriod: valuePeriod,
       dataAbsentReason: dataAbsentReason,
       interpretation: interpretation,
       note: note,
@@ -11740,6 +11746,9 @@ mixin _$Observation {
   Element? get instantiatesCanonicalElement =>
       throw _privateConstructorUsedError;
   Reference? get instantiatesReference => throw _privateConstructorUsedError;
+  @JsonKey(name: '_instantiatesReference')
+  Element? get instantiatesReferenceElement =>
+      throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -11784,8 +11793,10 @@ mixin _$Observation {
   FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
-  Period? get valuePeriod => throw _privateConstructorUsedError;
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueAttachment')
+  Element? get valueAttachmentElement => throw _privateConstructorUsedError;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
   List<CodeableConcept>? get interpretation =>
       throw _privateConstructorUsedError;
@@ -11833,6 +11844,8 @@ abstract class $ObservationCopyWith<$Res> {
       @JsonKey(name: '_instantiatesCanonical')
           Element? instantiatesCanonicalElement,
       Reference? instantiatesReference,
+      @JsonKey(name: '_instantiatesReference')
+          Element? instantiatesReferenceElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -11876,8 +11889,10 @@ abstract class $ObservationCopyWith<$Res> {
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element? valueDateTimeElement,
-      Period? valuePeriod,
       Attachment? valueAttachment,
+      @JsonKey(name: '_valueAttachment')
+          Element? valueAttachmentElement,
+      Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
       List<CodeableConcept>? interpretation,
       List<Annotation>? note,
@@ -11896,6 +11911,7 @@ abstract class $ObservationCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get instantiatesCanonicalElement;
   $ReferenceCopyWith<$Res>? get instantiatesReference;
+  $ElementCopyWith<$Res>? get instantiatesReferenceElement;
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res> get code;
   $ReferenceCopyWith<$Res>? get subject;
@@ -11915,8 +11931,9 @@ abstract class $ObservationCopyWith<$Res> {
   $SampledDataCopyWith<$Res>? get valueSampledData;
   $ElementCopyWith<$Res>? get valueTimeElement;
   $ElementCopyWith<$Res>? get valueDateTimeElement;
-  $PeriodCopyWith<$Res>? get valuePeriod;
   $AttachmentCopyWith<$Res>? get valueAttachment;
+  $ElementCopyWith<$Res>? get valueAttachmentElement;
+  $PeriodCopyWith<$Res>? get valuePeriod;
   $CodeableConceptCopyWith<$Res>? get dataAbsentReason;
   $CodeableConceptCopyWith<$Res>? get bodySite;
   $CodeableConceptCopyWith<$Res>? get method;
@@ -11949,6 +11966,7 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object? instantiatesCanonical = freezed,
     Object? instantiatesCanonicalElement = freezed,
     Object? instantiatesReference = freezed,
+    Object? instantiatesReferenceElement = freezed,
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? status = freezed,
@@ -11982,8 +12000,9 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
     Object? valueTimeElement = freezed,
     Object? valueDateTime = freezed,
     Object? valueDateTimeElement = freezed,
-    Object? valuePeriod = freezed,
     Object? valueAttachment = freezed,
+    Object? valueAttachmentElement = freezed,
+    Object? valuePeriod = freezed,
     Object? dataAbsentReason = freezed,
     Object? interpretation = freezed,
     Object? note = freezed,
@@ -12057,6 +12076,10 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
           ? _value.instantiatesReference
           : instantiatesReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      instantiatesReferenceElement: instantiatesReferenceElement == freezed
+          ? _value.instantiatesReferenceElement
+          : instantiatesReferenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -12189,14 +12212,18 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valuePeriod: valuePeriod == freezed
-          ? _value.valuePeriod
-          : valuePeriod // ignore: cast_nullable_to_non_nullable
-              as Period?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
           : valueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
+      valueAttachmentElement: valueAttachmentElement == freezed
+          ? _value.valueAttachmentElement
+          : valueAttachmentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
           : dataAbsentReason // ignore: cast_nullable_to_non_nullable
@@ -12308,6 +12335,18 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
 
     return $ReferenceCopyWith<$Res>(_value.instantiatesReference!, (value) {
       return _then(_value.copyWith(instantiatesReference: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get instantiatesReferenceElement {
+    if (_value.instantiatesReferenceElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.instantiatesReferenceElement!,
+        (value) {
+      return _then(_value.copyWith(instantiatesReferenceElement: value));
     });
   }
 
@@ -12518,17 +12557,6 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
   }
 
   @override
-  $PeriodCopyWith<$Res>? get valuePeriod {
-    if (_value.valuePeriod == null) {
-      return null;
-    }
-
-    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
-      return _then(_value.copyWith(valuePeriod: value));
-    });
-  }
-
-  @override
   $AttachmentCopyWith<$Res>? get valueAttachment {
     if (_value.valueAttachment == null) {
       return null;
@@ -12536,6 +12564,28 @@ class _$ObservationCopyWithImpl<$Res> implements $ObservationCopyWith<$Res> {
 
     return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
       return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueAttachmentElement {
+    if (_value.valueAttachmentElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueAttachmentElement!, (value) {
+      return _then(_value.copyWith(valueAttachmentElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
     });
   }
 
@@ -12623,6 +12673,8 @@ abstract class _$ObservationCopyWith<$Res>
       @JsonKey(name: '_instantiatesCanonical')
           Element? instantiatesCanonicalElement,
       Reference? instantiatesReference,
+      @JsonKey(name: '_instantiatesReference')
+          Element? instantiatesReferenceElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -12666,8 +12718,10 @@ abstract class _$ObservationCopyWith<$Res>
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element? valueDateTimeElement,
-      Period? valuePeriod,
       Attachment? valueAttachment,
+      @JsonKey(name: '_valueAttachment')
+          Element? valueAttachmentElement,
+      Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
       List<CodeableConcept>? interpretation,
       List<Annotation>? note,
@@ -12692,6 +12746,8 @@ abstract class _$ObservationCopyWith<$Res>
   $ElementCopyWith<$Res>? get instantiatesCanonicalElement;
   @override
   $ReferenceCopyWith<$Res>? get instantiatesReference;
+  @override
+  $ElementCopyWith<$Res>? get instantiatesReferenceElement;
   @override
   $ElementCopyWith<$Res>? get statusElement;
   @override
@@ -12731,9 +12787,11 @@ abstract class _$ObservationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get valueDateTimeElement;
   @override
-  $PeriodCopyWith<$Res>? get valuePeriod;
-  @override
   $AttachmentCopyWith<$Res>? get valueAttachment;
+  @override
+  $ElementCopyWith<$Res>? get valueAttachmentElement;
+  @override
+  $PeriodCopyWith<$Res>? get valuePeriod;
   @override
   $CodeableConceptCopyWith<$Res>? get dataAbsentReason;
   @override
@@ -12773,6 +12831,7 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object? instantiatesCanonical = freezed,
     Object? instantiatesCanonicalElement = freezed,
     Object? instantiatesReference = freezed,
+    Object? instantiatesReferenceElement = freezed,
     Object? basedOn = freezed,
     Object? partOf = freezed,
     Object? status = freezed,
@@ -12806,8 +12865,9 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
     Object? valueTimeElement = freezed,
     Object? valueDateTime = freezed,
     Object? valueDateTimeElement = freezed,
-    Object? valuePeriod = freezed,
     Object? valueAttachment = freezed,
+    Object? valueAttachmentElement = freezed,
+    Object? valuePeriod = freezed,
     Object? dataAbsentReason = freezed,
     Object? interpretation = freezed,
     Object? note = freezed,
@@ -12881,6 +12941,10 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           ? _value.instantiatesReference
           : instantiatesReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      instantiatesReferenceElement: instantiatesReferenceElement == freezed
+          ? _value.instantiatesReferenceElement
+          : instantiatesReferenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       basedOn: basedOn == freezed
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
@@ -13013,14 +13077,18 @@ class __$ObservationCopyWithImpl<$Res> extends _$ObservationCopyWithImpl<$Res>
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valuePeriod: valuePeriod == freezed
-          ? _value.valuePeriod
-          : valuePeriod // ignore: cast_nullable_to_non_nullable
-              as Period?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
           : valueAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
+      valueAttachmentElement: valueAttachmentElement == freezed
+          ? _value.valueAttachmentElement
+          : valueAttachmentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       dataAbsentReason: dataAbsentReason == freezed
           ? _value.dataAbsentReason
           : dataAbsentReason // ignore: cast_nullable_to_non_nullable
@@ -13093,6 +13161,8 @@ class _$_Observation extends _Observation {
       @JsonKey(name: '_instantiatesCanonical')
           this.instantiatesCanonicalElement,
       this.instantiatesReference,
+      @JsonKey(name: '_instantiatesReference')
+          this.instantiatesReferenceElement,
       this.basedOn,
       this.partOf,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -13136,8 +13206,10 @@ class _$_Observation extends _Observation {
       this.valueDateTime,
       @JsonKey(name: '_valueDateTime')
           this.valueDateTimeElement,
-      this.valuePeriod,
       this.valueAttachment,
+      @JsonKey(name: '_valueAttachment')
+          this.valueAttachmentElement,
+      this.valuePeriod,
       this.dataAbsentReason,
       this.interpretation,
       this.note,
@@ -13189,6 +13261,9 @@ class _$_Observation extends _Observation {
   final Element? instantiatesCanonicalElement;
   @override
   final Reference? instantiatesReference;
+  @override
+  @JsonKey(name: '_instantiatesReference')
+  final Element? instantiatesReferenceElement;
   @override
   final List<Reference>? basedOn;
   @override
@@ -13266,9 +13341,12 @@ class _$_Observation extends _Observation {
   @JsonKey(name: '_valueDateTime')
   final Element? valueDateTimeElement;
   @override
-  final Period? valuePeriod;
-  @override
   final Attachment? valueAttachment;
+  @override
+  @JsonKey(name: '_valueAttachment')
+  final Element? valueAttachmentElement;
+  @override
+  final Period? valuePeriod;
   @override
   final CodeableConcept? dataAbsentReason;
   @override
@@ -13294,7 +13372,7 @@ class _$_Observation extends _Observation {
 
   @override
   String toString() {
-    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesCanonicalElement: $instantiatesCanonicalElement, instantiatesReference: $instantiatesReference, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, focus: $focus, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, effectiveTiming: $effectiveTiming, effectiveInstant: $effectiveInstant, effectiveInstantElement: $effectiveInstantElement, issued: $issued, issuedElement: $issuedElement, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valuePeriod: $valuePeriod, valueAttachment: $valueAttachment, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, note: $note, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, hasMember: $hasMember, derivedFrom: $derivedFrom, component: $component)';
+    return 'Observation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesCanonicalElement: $instantiatesCanonicalElement, instantiatesReference: $instantiatesReference, instantiatesReferenceElement: $instantiatesReferenceElement, basedOn: $basedOn, partOf: $partOf, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, focus: $focus, encounter: $encounter, effectiveDateTime: $effectiveDateTime, effectiveDateTimeElement: $effectiveDateTimeElement, effectivePeriod: $effectivePeriod, effectiveTiming: $effectiveTiming, effectiveInstant: $effectiveInstant, effectiveInstantElement: $effectiveInstantElement, issued: $issued, issuedElement: $issuedElement, performer: $performer, valueQuantity: $valueQuantity, valueCodeableConcept: $valueCodeableConcept, valueString: $valueString, valueStringElement: $valueStringElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueRange: $valueRange, valueRatio: $valueRatio, valueSampledData: $valueSampledData, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueAttachment: $valueAttachment, valueAttachmentElement: $valueAttachmentElement, valuePeriod: $valuePeriod, dataAbsentReason: $dataAbsentReason, interpretation: $interpretation, note: $note, bodySite: $bodySite, method: $method, specimen: $specimen, device: $device, referenceRange: $referenceRange, hasMember: $hasMember, derivedFrom: $derivedFrom, component: $component)';
   }
 
   @override
@@ -13344,6 +13422,10 @@ class _$_Observation extends _Observation {
             (identical(other.instantiatesReference, instantiatesReference) ||
                 const DeepCollectionEquality().equals(
                     other.instantiatesReference, instantiatesReference)) &&
+            (identical(other.instantiatesReferenceElement, instantiatesReferenceElement) ||
+                const DeepCollectionEquality().equals(
+                    other.instantiatesReferenceElement,
+                    instantiatesReferenceElement)) &&
             (identical(other.basedOn, basedOn) ||
                 const DeepCollectionEquality()
                     .equals(other.basedOn, basedOn)) &&
@@ -13357,13 +13439,9 @@ class _$_Observation extends _Observation {
             (identical(other.category, category) ||
                 const DeepCollectionEquality()
                     .equals(other.category, category)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.subject, subject) ||
-                const DeepCollectionEquality()
-                    .equals(other.subject, subject)) &&
-            (identical(other.focus, focus) ||
-                const DeepCollectionEquality().equals(other.focus, focus)) &&
+            (identical(other.code, code) || const DeepCollectionEquality().equals(other.code, code)) &&
+            (identical(other.subject, subject) || const DeepCollectionEquality().equals(other.subject, subject)) &&
+            (identical(other.focus, focus) || const DeepCollectionEquality().equals(other.focus, focus)) &&
             (identical(other.encounter, encounter) || const DeepCollectionEquality().equals(other.encounter, encounter)) &&
             (identical(other.effectiveDateTime, effectiveDateTime) || const DeepCollectionEquality().equals(other.effectiveDateTime, effectiveDateTime)) &&
             (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) || const DeepCollectionEquality().equals(other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
@@ -13389,8 +13467,9 @@ class _$_Observation extends _Observation {
             (identical(other.valueTimeElement, valueTimeElement) || const DeepCollectionEquality().equals(other.valueTimeElement, valueTimeElement)) &&
             (identical(other.valueDateTime, valueDateTime) || const DeepCollectionEquality().equals(other.valueDateTime, valueDateTime)) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) || const DeepCollectionEquality().equals(other.valueDateTimeElement, valueDateTimeElement)) &&
-            (identical(other.valuePeriod, valuePeriod) || const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod)) &&
             (identical(other.valueAttachment, valueAttachment) || const DeepCollectionEquality().equals(other.valueAttachment, valueAttachment)) &&
+            (identical(other.valueAttachmentElement, valueAttachmentElement) || const DeepCollectionEquality().equals(other.valueAttachmentElement, valueAttachmentElement)) &&
+            (identical(other.valuePeriod, valuePeriod) || const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod)) &&
             (identical(other.dataAbsentReason, dataAbsentReason) || const DeepCollectionEquality().equals(other.dataAbsentReason, dataAbsentReason)) &&
             (identical(other.interpretation, interpretation) || const DeepCollectionEquality().equals(other.interpretation, interpretation)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
@@ -13422,6 +13501,7 @@ class _$_Observation extends _Observation {
       const DeepCollectionEquality().hash(instantiatesCanonical) ^
       const DeepCollectionEquality().hash(instantiatesCanonicalElement) ^
       const DeepCollectionEquality().hash(instantiatesReference) ^
+      const DeepCollectionEquality().hash(instantiatesReferenceElement) ^
       const DeepCollectionEquality().hash(basedOn) ^
       const DeepCollectionEquality().hash(partOf) ^
       const DeepCollectionEquality().hash(status) ^
@@ -13455,8 +13535,9 @@ class _$_Observation extends _Observation {
       const DeepCollectionEquality().hash(valueTimeElement) ^
       const DeepCollectionEquality().hash(valueDateTime) ^
       const DeepCollectionEquality().hash(valueDateTimeElement) ^
-      const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(valueAttachment) ^
+      const DeepCollectionEquality().hash(valueAttachmentElement) ^
+      const DeepCollectionEquality().hash(valuePeriod) ^
       const DeepCollectionEquality().hash(dataAbsentReason) ^
       const DeepCollectionEquality().hash(interpretation) ^
       const DeepCollectionEquality().hash(note) ^
@@ -13502,6 +13583,8 @@ abstract class _Observation extends Observation {
       @JsonKey(name: '_instantiatesCanonical')
           Element? instantiatesCanonicalElement,
       Reference? instantiatesReference,
+      @JsonKey(name: '_instantiatesReference')
+          Element? instantiatesReferenceElement,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       @JsonKey(unknownEnumValue: ObservationStatus.unknown)
@@ -13545,8 +13628,10 @@ abstract class _Observation extends Observation {
       FhirDateTime? valueDateTime,
       @JsonKey(name: '_valueDateTime')
           Element? valueDateTimeElement,
-      Period? valuePeriod,
       Attachment? valueAttachment,
+      @JsonKey(name: '_valueAttachment')
+          Element? valueAttachmentElement,
+      Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
       List<CodeableConcept>? interpretation,
       List<Annotation>? note,
@@ -13600,6 +13685,10 @@ abstract class _Observation extends Observation {
       throw _privateConstructorUsedError;
   @override
   Reference? get instantiatesReference => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_instantiatesReference')
+  Element? get instantiatesReferenceElement =>
+      throw _privateConstructorUsedError;
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
@@ -13678,9 +13767,12 @@ abstract class _Observation extends Observation {
   @JsonKey(name: '_valueDateTime')
   Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Period? get valuePeriod => throw _privateConstructorUsedError;
-  @override
   Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueAttachment')
+  Element? get valueAttachmentElement => throw _privateConstructorUsedError;
+  @override
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
   @override

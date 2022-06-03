@@ -5621,6 +5621,12 @@ class _$PractitionerTearOff {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
+      Boolean? deceasedBoolean,
+      @JsonKey(name: '_deceasedBoolean')
+          Element? deceasedBooleanElement,
+      FhirDateTime? deceasedDateTime,
+      @JsonKey(name: '_deceasedDateTime')
+          Element? deceasedDateTimeElement,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5652,6 +5658,10 @@ class _$PractitionerTearOff {
       implicitRules: implicitRules,
       implicitRulesElement: implicitRulesElement,
       language: language,
+      deceasedBoolean: deceasedBoolean,
+      deceasedBooleanElement: deceasedBooleanElement,
+      deceasedDateTime: deceasedDateTime,
+      deceasedDateTimeElement: deceasedDateTimeElement,
       languageElement: languageElement,
       text: text,
       contained: contained,
@@ -5691,6 +5701,12 @@ mixin _$Practitioner {
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
+  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_deceasedBoolean')
+  Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_deceasedDateTime')
+  Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
@@ -5739,6 +5755,12 @@ abstract class $PractitionerCopyWith<$Res> {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
+      Boolean? deceasedBoolean,
+      @JsonKey(name: '_deceasedBoolean')
+          Element? deceasedBooleanElement,
+      FhirDateTime? deceasedDateTime,
+      @JsonKey(name: '_deceasedDateTime')
+          Element? deceasedDateTimeElement,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -5766,6 +5788,8 @@ abstract class $PractitionerCopyWith<$Res> {
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get deceasedBooleanElement;
+  $ElementCopyWith<$Res>? get deceasedDateTimeElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get activeElement;
@@ -5789,6 +5813,10 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? deceasedBoolean = freezed,
+    Object? deceasedBooleanElement = freezed,
+    Object? deceasedDateTime = freezed,
+    Object? deceasedDateTimeElement = freezed,
     Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
@@ -5833,6 +5861,22 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      deceasedBooleanElement: deceasedBooleanElement == freezed
+          ? _value.deceasedBooleanElement
+          : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      deceasedDateTime: deceasedDateTime == freezed
+          ? _value.deceasedDateTime
+          : deceasedDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      deceasedDateTimeElement: deceasedDateTimeElement == freezed
+          ? _value.deceasedDateTimeElement
+          : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -5931,6 +5975,28 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res>? get deceasedBooleanElement {
+    if (_value.deceasedBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.deceasedBooleanElement!, (value) {
+      return _then(_value.copyWith(deceasedBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get deceasedDateTimeElement {
+    if (_value.deceasedDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.deceasedDateTimeElement!, (value) {
+      return _then(_value.copyWith(deceasedDateTimeElement: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
@@ -6002,6 +6068,12 @@ abstract class _$PractitionerCopyWith<$Res>
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
+      Boolean? deceasedBoolean,
+      @JsonKey(name: '_deceasedBoolean')
+          Element? deceasedBooleanElement,
+      FhirDateTime? deceasedDateTime,
+      @JsonKey(name: '_deceasedDateTime')
+          Element? deceasedDateTimeElement,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6032,6 +6104,10 @@ abstract class _$PractitionerCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
+  $ElementCopyWith<$Res>? get deceasedBooleanElement;
+  @override
+  $ElementCopyWith<$Res>? get deceasedDateTimeElement;
+  @override
   $ElementCopyWith<$Res>? get languageElement;
   @override
   $NarrativeCopyWith<$Res>? get text;
@@ -6061,6 +6137,10 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? deceasedBoolean = freezed,
+    Object? deceasedBooleanElement = freezed,
+    Object? deceasedDateTime = freezed,
+    Object? deceasedDateTimeElement = freezed,
     Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
@@ -6105,6 +6185,22 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
+      deceasedBoolean: deceasedBoolean == freezed
+          ? _value.deceasedBoolean
+          : deceasedBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      deceasedBooleanElement: deceasedBooleanElement == freezed
+          ? _value.deceasedBooleanElement
+          : deceasedBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      deceasedDateTime: deceasedDateTime == freezed
+          ? _value.deceasedDateTime
+          : deceasedDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      deceasedDateTimeElement: deceasedDateTimeElement == freezed
+          ? _value.deceasedDateTimeElement
+          : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       languageElement: languageElement == freezed
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
@@ -6193,6 +6289,12 @@ class _$_Practitioner extends _Practitioner {
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       this.language,
+      this.deceasedBoolean,
+      @JsonKey(name: '_deceasedBoolean')
+          this.deceasedBooleanElement,
+      this.deceasedDateTime,
+      @JsonKey(name: '_deceasedDateTime')
+          this.deceasedDateTimeElement,
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
@@ -6236,6 +6338,16 @@ class _$_Practitioner extends _Practitioner {
   final Element? implicitRulesElement;
   @override
   final Code? language;
+  @override
+  final Boolean? deceasedBoolean;
+  @override
+  @JsonKey(name: '_deceasedBoolean')
+  final Element? deceasedBooleanElement;
+  @override
+  final FhirDateTime? deceasedDateTime;
+  @override
+  @JsonKey(name: '_deceasedDateTime')
+  final Element? deceasedDateTimeElement;
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
@@ -6281,7 +6393,7 @@ class _$_Practitioner extends _Practitioner {
 
   @override
   String toString() {
-    return 'Practitioner(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, name: $name, telecom: $telecom, address: $address, gender: $gender, genderElement: $genderElement, birthDate: $birthDate, birthDateElement: $birthDateElement, photo: $photo, qualification: $qualification, communication: $communication)';
+    return 'Practitioner(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, deceasedBoolean: $deceasedBoolean, deceasedBooleanElement: $deceasedBooleanElement, deceasedDateTime: $deceasedDateTime, deceasedDateTimeElement: $deceasedDateTimeElement, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, name: $name, telecom: $telecom, address: $address, gender: $gender, genderElement: $genderElement, birthDate: $birthDate, birthDateElement: $birthDateElement, photo: $photo, qualification: $qualification, communication: $communication)';
   }
 
   @override
@@ -6304,6 +6416,18 @@ class _$_Practitioner extends _Practitioner {
             (identical(other.language, language) ||
                 const DeepCollectionEquality()
                     .equals(other.language, language)) &&
+            (identical(other.deceasedBoolean, deceasedBoolean) ||
+                const DeepCollectionEquality()
+                    .equals(other.deceasedBoolean, deceasedBoolean)) &&
+            (identical(other.deceasedBooleanElement, deceasedBooleanElement) ||
+                const DeepCollectionEquality().equals(
+                    other.deceasedBooleanElement, deceasedBooleanElement)) &&
+            (identical(other.deceasedDateTime, deceasedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.deceasedDateTime, deceasedDateTime)) &&
+            (identical(other.deceasedDateTimeElement, deceasedDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.deceasedDateTimeElement, deceasedDateTimeElement)) &&
             (identical(other.languageElement, languageElement) ||
                 const DeepCollectionEquality()
                     .equals(other.languageElement, languageElement)) &&
@@ -6332,27 +6456,14 @@ class _$_Practitioner extends _Practitioner {
                 const DeepCollectionEquality()
                     .equals(other.telecom, telecom)) &&
             (identical(other.address, address) ||
-                const DeepCollectionEquality()
-                    .equals(other.address, address)) &&
-            (identical(other.gender, gender) ||
-                const DeepCollectionEquality().equals(other.gender, gender)) &&
-            (identical(other.genderElement, genderElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.genderElement, genderElement)) &&
-            (identical(other.birthDate, birthDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.birthDate, birthDate)) &&
-            (identical(other.birthDateElement, birthDateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.birthDateElement, birthDateElement)) &&
-            (identical(other.photo, photo) ||
-                const DeepCollectionEquality().equals(other.photo, photo)) &&
-            (identical(other.qualification, qualification) ||
-                const DeepCollectionEquality()
-                    .equals(other.qualification, qualification)) &&
-            (identical(other.communication, communication) ||
-                const DeepCollectionEquality()
-                    .equals(other.communication, communication)));
+                const DeepCollectionEquality().equals(other.address, address)) &&
+            (identical(other.gender, gender) || const DeepCollectionEquality().equals(other.gender, gender)) &&
+            (identical(other.genderElement, genderElement) || const DeepCollectionEquality().equals(other.genderElement, genderElement)) &&
+            (identical(other.birthDate, birthDate) || const DeepCollectionEquality().equals(other.birthDate, birthDate)) &&
+            (identical(other.birthDateElement, birthDateElement) || const DeepCollectionEquality().equals(other.birthDateElement, birthDateElement)) &&
+            (identical(other.photo, photo) || const DeepCollectionEquality().equals(other.photo, photo)) &&
+            (identical(other.qualification, qualification) || const DeepCollectionEquality().equals(other.qualification, qualification)) &&
+            (identical(other.communication, communication) || const DeepCollectionEquality().equals(other.communication, communication)));
   }
 
   @override
@@ -6364,6 +6475,10 @@ class _$_Practitioner extends _Practitioner {
       const DeepCollectionEquality().hash(implicitRules) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(deceasedBoolean) ^
+      const DeepCollectionEquality().hash(deceasedBooleanElement) ^
+      const DeepCollectionEquality().hash(deceasedDateTime) ^
+      const DeepCollectionEquality().hash(deceasedDateTimeElement) ^
       const DeepCollectionEquality().hash(languageElement) ^
       const DeepCollectionEquality().hash(text) ^
       const DeepCollectionEquality().hash(contained) ^
@@ -6404,6 +6519,12 @@ abstract class _Practitioner extends Practitioner {
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
+      Boolean? deceasedBoolean,
+      @JsonKey(name: '_deceasedBoolean')
+          Element? deceasedBooleanElement,
+      FhirDateTime? deceasedDateTime,
+      @JsonKey(name: '_deceasedDateTime')
+          Element? deceasedDateTimeElement,
       @JsonKey(name: '_language')
           Element? languageElement,
       Narrative? text,
@@ -6447,6 +6568,16 @@ abstract class _Practitioner extends Practitioner {
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
   Code? get language => throw _privateConstructorUsedError;
+  @override
+  Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_deceasedBoolean')
+  Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get deceasedDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_deceasedDateTime')
+  Element? get deceasedDateTimeElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;

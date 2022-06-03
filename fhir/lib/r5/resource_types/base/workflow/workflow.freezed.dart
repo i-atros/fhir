@@ -27,6 +27,7 @@ class _$AppointmentTearOff {
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
+      List<Reference>? account,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -48,6 +49,7 @@ class _$AppointmentTearOff {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
+      List<Reference>? replaces,
       CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
@@ -66,20 +68,23 @@ class _$AppointmentTearOff {
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      List<Annotation>? note,
+      @JsonKey(name: '_note')
+          Element? noteElement,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
           Element? patientInstructionElement,
       List<Reference>? basedOn,
       required List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod}) {
+      List<Period>? requestedPeriod,
+      Period? period,
+      Reference? subject}) {
     return _Appointment(
       resourceType: resourceType,
       id: id,
       meta: meta,
       implicitRules: implicitRules,
+      account: account,
       implicitRulesElement: implicitRulesElement,
       language: language,
       languageElement: languageElement,
@@ -96,6 +101,7 @@ class _$AppointmentTearOff {
       specialty: specialty,
       appointmentType: appointmentType,
       reason: reason,
+      replaces: replaces,
       priority: priority,
       description: description,
       descriptionElement: descriptionElement,
@@ -109,13 +115,15 @@ class _$AppointmentTearOff {
       slot: slot,
       created: created,
       createdElement: createdElement,
-      comment: comment,
-      commentElement: commentElement,
+      note: note,
+      noteElement: noteElement,
       patientInstruction: patientInstruction,
       patientInstructionElement: patientInstructionElement,
       basedOn: basedOn,
       participant: participant,
       requestedPeriod: requestedPeriod,
+      period: period,
+      subject: subject,
     );
   }
 
@@ -134,6 +142,7 @@ mixin _$Appointment {
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  List<Reference>? get account => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
   Code? get language => throw _privateConstructorUsedError;
@@ -157,6 +166,7 @@ mixin _$Appointment {
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
+  List<Reference>? get replaces => throw _privateConstructorUsedError;
   CodeableConcept? get priority => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
@@ -176,9 +186,9 @@ mixin _$Appointment {
   FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
-  String? get comment => throw _privateConstructorUsedError;
-  @JsonKey(name: '_comment')
-  Element? get commentElement => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @JsonKey(name: '_note')
+  Element? get noteElement => throw _privateConstructorUsedError;
   String? get patientInstruction => throw _privateConstructorUsedError;
   @JsonKey(name: '_patientInstruction')
   Element? get patientInstructionElement => throw _privateConstructorUsedError;
@@ -186,6 +196,8 @@ mixin _$Appointment {
   List<AppointmentParticipant> get participant =>
       throw _privateConstructorUsedError;
   List<Period>? get requestedPeriod => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  Reference? get subject => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -204,6 +216,7 @@ abstract class $AppointmentCopyWith<$Res> {
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
+      List<Reference>? account,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -225,6 +238,7 @@ abstract class $AppointmentCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
+      List<Reference>? replaces,
       CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
@@ -243,15 +257,17 @@ abstract class $AppointmentCopyWith<$Res> {
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      List<Annotation>? note,
+      @JsonKey(name: '_note')
+          Element? noteElement,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
           Element? patientInstructionElement,
       List<Reference>? basedOn,
       List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod});
+      List<Period>? requestedPeriod,
+      Period? period,
+      Reference? subject});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -266,8 +282,10 @@ abstract class $AppointmentCopyWith<$Res> {
   $ElementCopyWith<$Res>? get endElement;
   $ElementCopyWith<$Res>? get minutesDurationElement;
   $ElementCopyWith<$Res>? get createdElement;
-  $ElementCopyWith<$Res>? get commentElement;
+  $ElementCopyWith<$Res>? get noteElement;
   $ElementCopyWith<$Res>? get patientInstructionElement;
+  $PeriodCopyWith<$Res>? get period;
+  $ReferenceCopyWith<$Res>? get subject;
 }
 
 /// @nodoc
@@ -284,6 +302,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? account = freezed,
     Object? implicitRulesElement = freezed,
     Object? language = freezed,
     Object? languageElement = freezed,
@@ -300,6 +319,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
     Object? specialty = freezed,
     Object? appointmentType = freezed,
     Object? reason = freezed,
+    Object? replaces = freezed,
     Object? priority = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
@@ -313,13 +333,15 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
     Object? slot = freezed,
     Object? created = freezed,
     Object? createdElement = freezed,
-    Object? comment = freezed,
-    Object? commentElement = freezed,
+    Object? note = freezed,
+    Object? noteElement = freezed,
     Object? patientInstruction = freezed,
     Object? patientInstructionElement = freezed,
     Object? basedOn = freezed,
     Object? participant = freezed,
     Object? requestedPeriod = freezed,
+    Object? period = freezed,
+    Object? subject = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
@@ -338,6 +360,10 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      account: account == freezed
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -402,6 +428,10 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
+      replaces: replaces == freezed
+          ? _value.replaces
+          : replaces // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       priority: priority == freezed
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
@@ -454,13 +484,13 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      comment: comment == freezed
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as String?,
-      commentElement: commentElement == freezed
-          ? _value.commentElement
-          : commentElement // ignore: cast_nullable_to_non_nullable
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      noteElement: noteElement == freezed
+          ? _value.noteElement
+          : noteElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
@@ -482,6 +512,14 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
           ? _value.requestedPeriod
           : requestedPeriod // ignore: cast_nullable_to_non_nullable
               as List<Period>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
@@ -629,13 +667,13 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get commentElement {
-    if (_value.commentElement == null) {
+  $ElementCopyWith<$Res>? get noteElement {
+    if (_value.noteElement == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.commentElement!, (value) {
-      return _then(_value.copyWith(commentElement: value));
+    return $ElementCopyWith<$Res>(_value.noteElement!, (value) {
+      return _then(_value.copyWith(noteElement: value));
     });
   }
 
@@ -647,6 +685,28 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
 
     return $ElementCopyWith<$Res>(_value.patientInstructionElement!, (value) {
       return _then(_value.copyWith(patientInstructionElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get subject {
+    if (_value.subject == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
+      return _then(_value.copyWith(subject: value));
     });
   }
 }
@@ -664,6 +724,7 @@ abstract class _$AppointmentCopyWith<$Res>
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
+      List<Reference>? account,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -685,6 +746,7 @@ abstract class _$AppointmentCopyWith<$Res>
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
+      List<Reference>? replaces,
       CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
@@ -703,15 +765,17 @@ abstract class _$AppointmentCopyWith<$Res>
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      List<Annotation>? note,
+      @JsonKey(name: '_note')
+          Element? noteElement,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
           Element? patientInstructionElement,
       List<Reference>? basedOn,
       List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod});
+      List<Period>? requestedPeriod,
+      Period? period,
+      Reference? subject});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -740,9 +804,13 @@ abstract class _$AppointmentCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ElementCopyWith<$Res>? get commentElement;
+  $ElementCopyWith<$Res>? get noteElement;
   @override
   $ElementCopyWith<$Res>? get patientInstructionElement;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+  @override
+  $ReferenceCopyWith<$Res>? get subject;
 }
 
 /// @nodoc
@@ -761,6 +829,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? account = freezed,
     Object? implicitRulesElement = freezed,
     Object? language = freezed,
     Object? languageElement = freezed,
@@ -777,6 +846,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     Object? specialty = freezed,
     Object? appointmentType = freezed,
     Object? reason = freezed,
+    Object? replaces = freezed,
     Object? priority = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
@@ -790,13 +860,15 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     Object? slot = freezed,
     Object? created = freezed,
     Object? createdElement = freezed,
-    Object? comment = freezed,
-    Object? commentElement = freezed,
+    Object? note = freezed,
+    Object? noteElement = freezed,
     Object? patientInstruction = freezed,
     Object? patientInstructionElement = freezed,
     Object? basedOn = freezed,
     Object? participant = freezed,
     Object? requestedPeriod = freezed,
+    Object? period = freezed,
+    Object? subject = freezed,
   }) {
     return _then(_Appointment(
       resourceType: resourceType == freezed
@@ -815,6 +887,10 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      account: account == freezed
+          ? _value.account
+          : account // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
@@ -879,6 +955,10 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
+      replaces: replaces == freezed
+          ? _value.replaces
+          : replaces // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       priority: priority == freezed
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
@@ -931,13 +1011,13 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           ? _value.createdElement
           : createdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      comment: comment == freezed
-          ? _value.comment
-          : comment // ignore: cast_nullable_to_non_nullable
-              as String?,
-      commentElement: commentElement == freezed
-          ? _value.commentElement
-          : commentElement // ignore: cast_nullable_to_non_nullable
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      noteElement: noteElement == freezed
+          ? _value.noteElement
+          : noteElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       patientInstruction: patientInstruction == freezed
           ? _value.patientInstruction
@@ -959,6 +1039,14 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
           ? _value.requestedPeriod
           : requestedPeriod // ignore: cast_nullable_to_non_nullable
               as List<Period>?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      subject: subject == freezed
+          ? _value.subject
+          : subject // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
@@ -972,6 +1060,7 @@ class _$_Appointment extends _Appointment {
       this.id,
       this.meta,
       this.implicitRules,
+      this.account,
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
       this.language,
@@ -993,6 +1082,7 @@ class _$_Appointment extends _Appointment {
       this.specialty,
       this.appointmentType,
       this.reason,
+      this.replaces,
       this.priority,
       this.description,
       @JsonKey(name: '_description')
@@ -1011,15 +1101,17 @@ class _$_Appointment extends _Appointment {
       this.created,
       @JsonKey(name: '_created')
           this.createdElement,
-      this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      this.note,
+      @JsonKey(name: '_note')
+          this.noteElement,
       this.patientInstruction,
       @JsonKey(name: '_patientInstruction')
           this.patientInstructionElement,
       this.basedOn,
       required this.participant,
-      this.requestedPeriod})
+      this.requestedPeriod,
+      this.period,
+      this.subject})
       : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
@@ -1034,6 +1126,8 @@ class _$_Appointment extends _Appointment {
   final Meta? meta;
   @override
   final FhirUri? implicitRules;
+  @override
+  final List<Reference>? account;
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
@@ -1072,6 +1166,8 @@ class _$_Appointment extends _Appointment {
   @override
   final List<CodeableReference>? reason;
   @override
+  final List<Reference>? replaces;
+  @override
   final CodeableConcept? priority;
   @override
   final String? description;
@@ -1103,10 +1199,10 @@ class _$_Appointment extends _Appointment {
   @JsonKey(name: '_created')
   final Element? createdElement;
   @override
-  final String? comment;
+  final List<Annotation>? note;
   @override
-  @JsonKey(name: '_comment')
-  final Element? commentElement;
+  @JsonKey(name: '_note')
+  final Element? noteElement;
   @override
   final String? patientInstruction;
   @override
@@ -1118,10 +1214,14 @@ class _$_Appointment extends _Appointment {
   final List<AppointmentParticipant> participant;
   @override
   final List<Period>? requestedPeriod;
+  @override
+  final Period? period;
+  @override
+  final Reference? subject;
 
   @override
   String toString() {
-    return 'Appointment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, cancelationReason: $cancelationReason, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reason: $reason, priority: $priority, description: $description, descriptionElement: $descriptionElement, supportingInformation: $supportingInformation, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, created: $created, createdElement: $createdElement, comment: $comment, commentElement: $commentElement, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, basedOn: $basedOn, participant: $participant, requestedPeriod: $requestedPeriod)';
+    return 'Appointment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, account: $account, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, cancelationReason: $cancelationReason, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reason: $reason, replaces: $replaces, priority: $priority, description: $description, descriptionElement: $descriptionElement, supportingInformation: $supportingInformation, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, created: $created, createdElement: $createdElement, note: $note, noteElement: $noteElement, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, basedOn: $basedOn, participant: $participant, requestedPeriod: $requestedPeriod, period: $period, subject: $subject)';
   }
 
   @override
@@ -1138,6 +1238,9 @@ class _$_Appointment extends _Appointment {
             (identical(other.implicitRules, implicitRules) ||
                 const DeepCollectionEquality()
                     .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.account, account) ||
+                const DeepCollectionEquality()
+                    .equals(other.account, account)) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
                 const DeepCollectionEquality().equals(
                     other.implicitRulesElement, implicitRulesElement)) &&
@@ -1183,18 +1286,17 @@ class _$_Appointment extends _Appointment {
                     .equals(other.appointmentType, appointmentType)) &&
             (identical(other.reason, reason) ||
                 const DeepCollectionEquality().equals(other.reason, reason)) &&
+            (identical(other.replaces, replaces) ||
+                const DeepCollectionEquality()
+                    .equals(other.replaces, replaces)) &&
             (identical(other.priority, priority) ||
                 const DeepCollectionEquality()
                     .equals(other.priority, priority)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.supportingInformation, supportingInformation) ||
-                const DeepCollectionEquality()
-                    .equals(other.supportingInformation, supportingInformation)) &&
+            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
+            (identical(other.supportingInformation, supportingInformation) || const DeepCollectionEquality().equals(other.supportingInformation, supportingInformation)) &&
             (identical(other.start, start) || const DeepCollectionEquality().equals(other.start, start)) &&
             (identical(other.startElement, startElement) || const DeepCollectionEquality().equals(other.startElement, startElement)) &&
             (identical(other.end, end) || const DeepCollectionEquality().equals(other.end, end)) &&
@@ -1204,13 +1306,15 @@ class _$_Appointment extends _Appointment {
             (identical(other.slot, slot) || const DeepCollectionEquality().equals(other.slot, slot)) &&
             (identical(other.created, created) || const DeepCollectionEquality().equals(other.created, created)) &&
             (identical(other.createdElement, createdElement) || const DeepCollectionEquality().equals(other.createdElement, createdElement)) &&
-            (identical(other.comment, comment) || const DeepCollectionEquality().equals(other.comment, comment)) &&
-            (identical(other.commentElement, commentElement) || const DeepCollectionEquality().equals(other.commentElement, commentElement)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
+            (identical(other.noteElement, noteElement) || const DeepCollectionEquality().equals(other.noteElement, noteElement)) &&
             (identical(other.patientInstruction, patientInstruction) || const DeepCollectionEquality().equals(other.patientInstruction, patientInstruction)) &&
             (identical(other.patientInstructionElement, patientInstructionElement) || const DeepCollectionEquality().equals(other.patientInstructionElement, patientInstructionElement)) &&
             (identical(other.basedOn, basedOn) || const DeepCollectionEquality().equals(other.basedOn, basedOn)) &&
             (identical(other.participant, participant) || const DeepCollectionEquality().equals(other.participant, participant)) &&
-            (identical(other.requestedPeriod, requestedPeriod) || const DeepCollectionEquality().equals(other.requestedPeriod, requestedPeriod)));
+            (identical(other.requestedPeriod, requestedPeriod) || const DeepCollectionEquality().equals(other.requestedPeriod, requestedPeriod)) &&
+            (identical(other.period, period) || const DeepCollectionEquality().equals(other.period, period)) &&
+            (identical(other.subject, subject) || const DeepCollectionEquality().equals(other.subject, subject)));
   }
 
   @override
@@ -1220,6 +1324,7 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(meta) ^
       const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(account) ^
       const DeepCollectionEquality().hash(implicitRulesElement) ^
       const DeepCollectionEquality().hash(language) ^
       const DeepCollectionEquality().hash(languageElement) ^
@@ -1236,6 +1341,7 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(specialty) ^
       const DeepCollectionEquality().hash(appointmentType) ^
       const DeepCollectionEquality().hash(reason) ^
+      const DeepCollectionEquality().hash(replaces) ^
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
@@ -1249,13 +1355,15 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(slot) ^
       const DeepCollectionEquality().hash(created) ^
       const DeepCollectionEquality().hash(createdElement) ^
-      const DeepCollectionEquality().hash(comment) ^
-      const DeepCollectionEquality().hash(commentElement) ^
+      const DeepCollectionEquality().hash(note) ^
+      const DeepCollectionEquality().hash(noteElement) ^
       const DeepCollectionEquality().hash(patientInstruction) ^
       const DeepCollectionEquality().hash(patientInstructionElement) ^
       const DeepCollectionEquality().hash(basedOn) ^
       const DeepCollectionEquality().hash(participant) ^
-      const DeepCollectionEquality().hash(requestedPeriod);
+      const DeepCollectionEquality().hash(requestedPeriod) ^
+      const DeepCollectionEquality().hash(period) ^
+      const DeepCollectionEquality().hash(subject);
 
   @JsonKey(ignore: true)
   @override
@@ -1275,6 +1383,7 @@ abstract class _Appointment extends Appointment {
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
+      List<Reference>? account,
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
       Code? language,
@@ -1296,6 +1405,7 @@ abstract class _Appointment extends Appointment {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
+      List<Reference>? replaces,
       CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
@@ -1314,15 +1424,17 @@ abstract class _Appointment extends Appointment {
       FhirDateTime? created,
       @JsonKey(name: '_created')
           Element? createdElement,
-      String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      List<Annotation>? note,
+      @JsonKey(name: '_note')
+          Element? noteElement,
       String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
           Element? patientInstructionElement,
       List<Reference>? basedOn,
       required List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod}) = _$_Appointment;
+      List<Period>? requestedPeriod,
+      Period? period,
+      Reference? subject}) = _$_Appointment;
   _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
@@ -1337,6 +1449,8 @@ abstract class _Appointment extends Appointment {
   Meta? get meta => throw _privateConstructorUsedError;
   @override
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get account => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
@@ -1377,6 +1491,8 @@ abstract class _Appointment extends Appointment {
   @override
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   @override
+  List<Reference>? get replaces => throw _privateConstructorUsedError;
+  @override
   CodeableConcept? get priority => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
@@ -1409,10 +1525,10 @@ abstract class _Appointment extends Appointment {
   @JsonKey(name: '_created')
   Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  String? get comment => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: '_comment')
-  Element? get commentElement => throw _privateConstructorUsedError;
+  @JsonKey(name: '_note')
+  Element? get noteElement => throw _privateConstructorUsedError;
   @override
   String? get patientInstruction => throw _privateConstructorUsedError;
   @override
@@ -1425,6 +1541,10 @@ abstract class _Appointment extends Appointment {
       throw _privateConstructorUsedError;
   @override
   List<Period>? get requestedPeriod => throw _privateConstructorUsedError;
+  @override
+  Period? get period => throw _privateConstructorUsedError;
+  @override
+  Reference? get subject => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$AppointmentCopyWith<_Appointment> get copyWith =>
