@@ -12,7 +12,8 @@ dependencies:
   encrypt: ^5.0.0
   fhir:
     git:
-      url: https://github.com/i-atros/fhir/fhir.git
+      url: https://github.com/i-atros/fhir.git
+      path: fhir
       ref: updating-to-r5.0.0
   flutter:
     sdk: flutter
