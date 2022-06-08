@@ -13,7 +13,7 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: updating-to-r5.0.0
+      ref: updating-to-r5-5.0.0
   freezed_annotation: ^0.14.3
   http: ^0.13.3
 

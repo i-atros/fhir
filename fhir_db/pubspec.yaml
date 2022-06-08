@@ -14,7 +14,7 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: updating-to-r5.0.0
+      ref: updating-to-r5-5.0.0
   flutter:
     sdk: flutter
   path: ^1.8.0
