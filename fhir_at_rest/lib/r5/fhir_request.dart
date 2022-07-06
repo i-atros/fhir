@@ -879,13 +879,12 @@ class FhirRequest with _$FhirRequest {
         json = removeMeta(_json);
       }
 
-      final k = jsonEncode(json);
       if (json != null && !newSchema && resource!.resourceType == R5ResourceType.QuestionnaireResponse) {
-        json['identifier'] = (resource as QuestionnaireResponse).identifier?.first;
-      }
+        final identifiers = (resource as QuestionnaireResponse).identifier;
 
-      if (requestType.toLowerCase() != 'search') {
-        print(k);
+        if(identifiers != null && identifiers.isNotEmpty){
+          json['identifier'] = identifiers.first.toJson();
+        }
       }
 
       final result = await _makeRequest(type: type, thisRequest: uri, client: client, headers: headers, resource: json);
