@@ -868,7 +868,10 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   // /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) {
     if (json != null && json['identifier'] != null && json['identifier'] is Map) {
-      json['identifier'] = <Map<String, dynamic>>[json['identifier'] as Map<String, dynamic>];
+      var newMap = Map<String, dynamic>.from(json);
+      newMap['identifier'] = <Map<String, dynamic>>[newMap['identifier'] as Map<String, dynamic>];
+      return _$QuestionnaireResponseFromJson(newMap);
+
     }
     return _$QuestionnaireResponseFromJson(json);
   }
