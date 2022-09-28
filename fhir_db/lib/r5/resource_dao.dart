@@ -348,8 +348,8 @@ class ResourceDao {
       } else if (resourceType != null && ids != null) {
         finder = Finder(
           filter: equals
-              ? Filter.inList('id', ids.map((e) => e?.value).toList())
-              : Filter.not(Filter.inList('id', ids.map((e) => e?.value).toList())),
+              ? Filter.inList('id', List<Id>.from(ids.where((e) => e != null && e.value != null)).map<String>((e) => e.value!).toList())
+              : Filter.not(Filter.inList('id', List<Id>.from(ids.where((e) => e != null && e.value != null)).map<String>((e) => e.value!).toList())),
           limit: limit,
           offset: offset,
         );
