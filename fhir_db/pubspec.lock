@@ -21,7 +21,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   charcode:
     dependency: transitive
     description:
@@ -74,17 +74,19 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.7"
+      path: fhir
+      ref: "updating-to-r5-5.0.0"
+      resolved-ref: "848b2ffd67de311b331b77b64175ee7909a2ce31"
+      url: "https://github.com/i-atros/fhir.git"
+    source: git
+    version: "0.0.0"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2"
+    version: "0.5.2"
   file:
     dependency: transitive
     description:
@@ -118,13 +120,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.3"
   meta:
     dependency: transitive
     description:
       name: meta
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.3.0"
+    version: "1.7.0"
   path:
     dependency: "direct main"
     description:
@@ -167,13 +176,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.3"
-  pedantic:
-    dependency: transitive
-    description:
-      name: pedantic
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.11.1"
   platform:
     dependency: transitive
     description:
@@ -205,17 +207,21 @@ packages:
   sembast:
     dependency: "direct main"
     description:
-      name: sembast
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.1.0+2"
+      path: sembast
+      ref: temporary_iatros
+      resolved-ref: "2a779631f7c01c06125d835c190b5dbe5d623710"
+      url: "https://github.com/i-atros/sembast.dart.git"
+    source: git
+    version: "3.3.0"
   sembast_sqflite:
     dependency: "direct main"
     description:
-      name: sembast_sqflite
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0+1"
+      path: sembast_sqflite
+      ref: temporary_iatros
+      resolved-ref: dddc04dfcfa036b08515176fd13b633241016c12
+      url: "https://github.com/i-atros/sembast_sqflite.git"
+    source: git
+    version: "2.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -290,7 +296,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   win32:
     dependency: transitive
     description:
@@ -313,5 +319,5 @@ packages:
     source: hosted
     version: "3.1.0"
 sdks:
-  dart: ">=2.13.0 <3.0.0"
+  dart: ">=2.16.0 <3.0.0"
   flutter: ">=2.0.0"

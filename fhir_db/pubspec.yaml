@@ -19,7 +19,16 @@ dependencies:
     sdk: flutter
   path: ^1.8.0
   path_provider: ^2.0.2
-  sembast: 3.1.1+1
-  sembast_sqflite: ^2.0.0+1
+  sembast:
+    git:
+      url: https://github.com/i-atros/sembast.dart.git
+      path: sembast
+      ref: temporary_iatros
+
+  sembast_sqflite:
+    git:
+      url: https://github.com/i-atros/sembast_sqflite.git
+      path: sembast_sqflite
+      ref: temporary_iatros
   sqflite: ^2.0.0+3
   sqflite_common_ffi: ^2.0.0+1
