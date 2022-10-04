@@ -137,4 +137,18 @@ class FhirDb {
     _dbOpenCompleter = Completer();
     _dbOpenCompleter!.complete(db);
   }
+
+  Future<void> hardReset({Directory? directory}) async {
+    Directory _appDocDir;
+
+    if (directory == null) {
+      _appDocDir = await getApplicationDocumentsDirectory();
+    } else {
+      _appDocDir = directory;
+    }
+
+    await File('$_appDocDir/fhir.db').delete();
+
+    _dbOpenCompleter = null;
+  }
 }
