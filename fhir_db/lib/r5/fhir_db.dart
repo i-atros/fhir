@@ -138,7 +138,10 @@ class FhirDb {
     _dbOpenCompleter!.complete(db);
   }
 
-  Future<void> hardReset({Directory? directory}) async {
+  Future<void> hardReset(
+    String newPassword, {
+    Directory? directory,
+  }) async {
     Directory _appDocDir;
 
     if (directory == null) {
@@ -149,6 +152,10 @@ class FhirDb {
 
     await File('$_appDocDir/fhir.db').delete();
 
-    _dbOpenCompleter = null;
+    _dbOpenCompleter = Completer();
+
+    await _openDatabase(newPassword, directory);
+
+    await _dbOpenCompleter!.future;
   }
 }
