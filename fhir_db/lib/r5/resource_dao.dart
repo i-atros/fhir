@@ -33,6 +33,8 @@ class ResourceDao {
   /// allows one store per resourceType (Patient, Observation, etc.)
   void _setStoreType(String resourceType) => _resourceStore = stringMapStoreFactory.store(resourceType);
 
+  Future<void> hardReset(String password) async => await FhirDb.instance.hardReset(password, directory: directory);
+
   /// get list of resourceTypes stored in DB
   Future<List<String>> _getResourceTypes(String? password) async {
     if (await _typesStore.record('resourceTypes').exists(await _db(password))) {
@@ -349,7 +351,8 @@ class ResourceDao {
         finder = Finder(
           filter: equals
               ? Filter.inList('id', List<Id>.from(ids.where((e) => e != null && e.value != null)).map<String>((e) => e.value!).toList())
-              : Filter.not(Filter.inList('id', List<Id>.from(ids.where((e) => e != null && e.value != null)).map<String>((e) => e.value!).toList())),
+              : Filter.not(
+                  Filter.inList('id', List<Id>.from(ids.where((e) => e != null && e.value != null)).map<String>((e) => e.value!).toList())),
           limit: limit,
           offset: offset,
         );
