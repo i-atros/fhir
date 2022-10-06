@@ -150,7 +150,11 @@ class FhirDb {
       _appDocDir = directory;
     }
 
-    await File('${_appDocDir.path}/fhir.db').delete();
+    final file = File('${_appDocDir.path}/fhir.db');
+
+    if(await file.exists()){
+      await file.delete();
+    }
 
     _dbOpenCompleter = Completer();
 
