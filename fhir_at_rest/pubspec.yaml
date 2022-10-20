@@ -13,14 +13,14 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-  freezed_annotation: ^0.14.3
-  http: ^0.13.3
+  freezed_annotation: ^2.2.0
+  http: ^0.13.5
 
 dev_dependencies:
-  analyzer: ^2.0.0
+  analyzer: ^4.7.0
   build_runner: ^2.1.0
-  freezed: ^0.14.3
+  freezed: ^2.2.0
   pedantic: ^1.11.1
-  test: ^1.17.10
+  test: 1.21.0
 
 
