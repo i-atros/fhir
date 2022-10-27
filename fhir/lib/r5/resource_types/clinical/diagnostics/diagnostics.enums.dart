@@ -105,7 +105,16 @@ enum ObservationStatus {
   @JsonValue('entered-in-error')
   entered_in_error,
   @JsonValue('unknown')
-  unknown,
+  unknown;
+
+  String keyName() {
+    switch (this) {
+      case entered_in_error:
+        return 'entered-in-error';
+      default:
+        return this.name;
+    }
+  }
 }
 
 enum QuestionnaireResponseStatus {
