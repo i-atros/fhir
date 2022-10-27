@@ -18,7 +18,10 @@ class ObservationFilter extends FHIRFilter {
   final List<String>? identifierValues;
   final FhirDateTime? lowerBound;
   final FhirDateTime? upperBound;
+  @deprecated
   final ObservationStatus? ignoreStatus;
+  final ObservationStatus? ignoreStatusWhenDeleting;
+  final ObservationStatus? ignoreStatusForSearch;
 
   ObservationFilter({
     this.codes,
@@ -26,6 +29,8 @@ class ObservationFilter extends FHIRFilter {
     this.lowerBound,
     this.upperBound,
     this.ignoreStatus = ObservationStatus.preliminary,
+    this.ignoreStatusWhenDeleting = ObservationStatus.preliminary,
+    this.ignoreStatusForSearch = ObservationStatus.entered_in_error,
     List<Id?>? ids,
   }) : super(
           R5ResourceType.Observation,
