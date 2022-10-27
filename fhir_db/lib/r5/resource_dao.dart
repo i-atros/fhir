@@ -160,7 +160,9 @@ class ResourceDao {
               },
             );
 
+
             filters.add(customFilter);
+            filters.add(Filter.notEquals('status', ObservationStatus.entered_in_error.keyName()));
 
             final combinedFilter = Filter.and(filters);
             finder = Finder(
