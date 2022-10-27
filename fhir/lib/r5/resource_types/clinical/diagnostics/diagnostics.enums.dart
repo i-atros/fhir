@@ -105,14 +105,16 @@ enum ObservationStatus {
   @JsonValue('entered-in-error')
   entered_in_error,
   @JsonValue('unknown')
-  unknown;
+  unknown,
+}
 
+extension ObservationStatusExtension on ObservationStatus {
   String keyName() {
     switch (this) {
-      case entered_in_error:
+      case ObservationStatus.entered_in_error:
         return 'entered-in-error';
       default:
-        return this.name;
+        return name;
     }
   }
 }
