@@ -14,6 +14,7 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
+      ref: change_filter_mechanism
   flutter:
     sdk: flutter
   path: ^1.8.0
