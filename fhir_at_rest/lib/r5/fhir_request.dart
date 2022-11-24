@@ -1256,7 +1256,22 @@ class FhirRequest with _$FhirRequest {
     var body = json.decode(result.body);
 
     if (!newSchema && result.body.isNotEmpty) {
-      body = convertFromOldSchema(body, resourceType);
+      final type = ResourceUtils.resourceTypeFromStringMap[body['resourceType']];
+
+      if (type == R5ResourceType.Bundle) {
+        final entries = [];
+
+        for (var entry in body['entry']) {
+          final type = ResourceUtils.resourceTypeFromStringMap[entry['resource']['resourceType']];
+          final res = convertFromOldSchema(body, type);
+          entry['resource'] = res;
+          entries.add(entry);
+        }
+
+        body['entry'] = entries;
+      } else {
+        body = convertFromOldSchema(body, type);
+      }
     }
 
     return Resource.fromJson(body);
