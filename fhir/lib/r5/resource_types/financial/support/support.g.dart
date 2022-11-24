@@ -59,6 +59,9 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
           .toList(),
       beneficiary:
           Reference.fromJson(json['beneficiary'] as Map<String, dynamic>),
+      insurer: json['insurer'] == null
+          ? null
+          : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
       dependent: json['dependent'] as String?,
       dependentElement: json['_dependent'] == null
           ? null
@@ -130,6 +133,7 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   writeNotNull(
       'subscriberId', instance.subscriberId?.map((e) => e.toJson()).toList());
   val['beneficiary'] = instance.beneficiary.toJson();
+  writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('dependent', instance.dependent);
   writeNotNull('_dependent', instance.dependentElement?.toJson());
   writeNotNull('relationship', instance.relationship?.toJson());
