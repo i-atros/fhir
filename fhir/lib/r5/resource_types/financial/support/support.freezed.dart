@@ -45,6 +45,7 @@ mixin _$Coverage {
   Reference? get subscriber => throw _privateConstructorUsedError;
   List<Identifier>? get subscriberId => throw _privateConstructorUsedError;
   Reference get beneficiary => throw _privateConstructorUsedError;
+  Reference? get insurer => throw _privateConstructorUsedError;
   String? get dependent => throw _privateConstructorUsedError;
   @JsonKey(name: '_dependent')
   Element? get dependentElement => throw _privateConstructorUsedError;
@@ -101,6 +102,7 @@ abstract class $CoverageCopyWith<$Res> {
       Reference? subscriber,
       List<Identifier>? subscriberId,
       Reference beneficiary,
+      Reference? insurer,
       String? dependent,
       @JsonKey(name: '_dependent')
           Element? dependentElement,
@@ -129,6 +131,7 @@ abstract class $CoverageCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get policyHolder;
   $ReferenceCopyWith<$Res>? get subscriber;
   $ReferenceCopyWith<$Res> get beneficiary;
+  $ReferenceCopyWith<$Res>? get insurer;
   $ElementCopyWith<$Res>? get dependentElement;
   $CodeableConceptCopyWith<$Res>? get relationship;
   $PeriodCopyWith<$Res>? get period;
@@ -169,6 +172,7 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     Object? subscriber = freezed,
     Object? subscriberId = freezed,
     Object? beneficiary = null,
+    Object? insurer = freezed,
     Object? dependent = freezed,
     Object? dependentElement = freezed,
     Object? relationship = freezed,
@@ -260,6 +264,10 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
           ? _value.beneficiary
           : beneficiary // ignore: cast_nullable_to_non_nullable
               as Reference,
+      insurer: freezed == insurer
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       dependent: freezed == dependent
           ? _value.dependent
           : dependent // ignore: cast_nullable_to_non_nullable
@@ -421,6 +429,18 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
 
   @override
   @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get insurer {
+    if (_value.insurer == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.insurer!, (value) {
+      return _then(_value.copyWith(insurer: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dependentElement {
     if (_value.dependentElement == null) {
       return null;
@@ -524,6 +544,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       Reference? subscriber,
       List<Identifier>? subscriberId,
       Reference beneficiary,
+      Reference? insurer,
       String? dependent,
       @JsonKey(name: '_dependent')
           Element? dependentElement,
@@ -561,6 +582,8 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get subscriber;
   @override
   $ReferenceCopyWith<$Res> get beneficiary;
+  @override
+  $ReferenceCopyWith<$Res>? get insurer;
   @override
   $ElementCopyWith<$Res>? get dependentElement;
   @override
@@ -605,6 +628,7 @@ class __$$_CoverageCopyWithImpl<$Res>
     Object? subscriber = freezed,
     Object? subscriberId = freezed,
     Object? beneficiary = null,
+    Object? insurer = freezed,
     Object? dependent = freezed,
     Object? dependentElement = freezed,
     Object? relationship = freezed,
@@ -696,6 +720,10 @@ class __$$_CoverageCopyWithImpl<$Res>
           ? _value.beneficiary
           : beneficiary // ignore: cast_nullable_to_non_nullable
               as Reference,
+      insurer: freezed == insurer
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       dependent: freezed == dependent
           ? _value.dependent
           : dependent // ignore: cast_nullable_to_non_nullable
@@ -780,6 +808,7 @@ class _$_Coverage extends _Coverage {
       this.subscriber,
       final List<Identifier>? subscriberId,
       required this.beneficiary,
+      this.insurer,
       this.dependent,
       @JsonKey(name: '_dependent')
           this.dependentElement,
@@ -890,6 +919,8 @@ class _$_Coverage extends _Coverage {
   @override
   final Reference beneficiary;
   @override
+  final Reference? insurer;
+  @override
   final String? dependent;
   @override
   @JsonKey(name: '_dependent')
@@ -943,7 +974,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, dependent: $dependent, dependentElement: $dependentElement, relationship: $relationship, period: $period, class_: $class_, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, costToBeneficiary: $costToBeneficiary, subrogation: $subrogation, subrogationElement: $subrogationElement, contract: $contract)';
+    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, insurer: $insurer, dependent: $dependent, dependentElement: $dependentElement, relationship: $relationship, period: $period, class_: $class_, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, costToBeneficiary: $costToBeneficiary, subrogation: $subrogation, subrogationElement: $subrogationElement, contract: $contract)';
   }
 
   @override
@@ -984,6 +1015,7 @@ class _$_Coverage extends _Coverage {
                 .equals(other._subscriberId, _subscriberId) &&
             (identical(other.beneficiary, beneficiary) ||
                 other.beneficiary == beneficiary) &&
+            (identical(other.insurer, insurer) || other.insurer == insurer) &&
             (identical(other.dependent, dependent) ||
                 other.dependent == dependent) &&
             (identical(other.dependentElement, dependentElement) ||
@@ -1030,6 +1062,7 @@ class _$_Coverage extends _Coverage {
         subscriber,
         const DeepCollectionEquality().hash(_subscriberId),
         beneficiary,
+        insurer,
         dependent,
         dependentElement,
         relationship,
@@ -1085,6 +1118,7 @@ abstract class _Coverage extends Coverage {
       final Reference? subscriber,
       final List<Identifier>? subscriberId,
       required final Reference beneficiary,
+      final Reference? insurer,
       final String? dependent,
       @JsonKey(name: '_dependent')
           final Element? dependentElement,
@@ -1150,6 +1184,8 @@ abstract class _Coverage extends Coverage {
   List<Identifier>? get subscriberId;
   @override
   Reference get beneficiary;
+  @override
+  Reference? get insurer;
   @override
   String? get dependent;
   @override

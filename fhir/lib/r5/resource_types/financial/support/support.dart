@@ -35,6 +35,7 @@ class Coverage with Resource, _$Coverage {
     Reference? subscriber,
     List<Identifier>? subscriberId,
     required Reference beneficiary,
+    Reference? insurer,
     String? dependent,
     @JsonKey(name: '_dependent') Element? dependentElement,
     CodeableConcept? relationship,
