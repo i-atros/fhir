@@ -1264,7 +1264,7 @@ class FhirRequest with _$FhirRequest {
 
           for (var entry in body['entry']) {
             final type = ResourceUtils.resourceTypeFromStringMap[entry['resource']['resourceType']];
-            final res = convertFromOldSchema(entry, type);
+            final res = convertFromOldSchema(entry['resource'], type);
             entry['resource'] = res;
             entries.add(entry);
           }
