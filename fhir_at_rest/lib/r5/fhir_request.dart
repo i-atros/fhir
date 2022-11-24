@@ -1258,7 +1258,7 @@ class FhirRequest with _$FhirRequest {
     if (!newSchema && result.body.isNotEmpty) {
       final type = ResourceUtils.resourceTypeFromStringMap[body['resourceType']];
 
-      if (type == R5ResourceType.Bundle) {
+      if (type == R5ResourceType.Bundle && body['entry'] != null && body['entry'].isNotEmpty) {
         final entries = [];
 
         for (var entry in body['entry']) {
