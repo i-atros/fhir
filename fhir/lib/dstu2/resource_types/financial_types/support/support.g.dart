@@ -74,6 +74,9 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       subscriber: json['subscriber'] == null
           ? null
           : Reference.fromJson(json['subscriber'] as Map<String, dynamic>),
+      insurer: json['insurer'] == null
+          ? null
+          : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
       network: json['network'] == null
           ? null
           : Identifier.fromJson(json['network'] as Map<String, dynamic>),
@@ -124,6 +127,7 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   writeNotNull('_dependent', instance.dependentElement?.toJson());
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('subscriber', instance.subscriber?.toJson());
+  writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('network', instance.network?.toJson());
   writeNotNull('_network', instance.networkElement?.toJson());
   writeNotNull('contract', instance.contract?.map((e) => e.toJson()).toList());

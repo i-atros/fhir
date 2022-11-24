@@ -570,11 +570,11 @@ mixin _$AvailabilityAvailableTime {
   @JsonKey(name: '_allDay')
   Element? get allDayElement => throw _privateConstructorUsedError;
   Time? get availableStartTime => throw _privateConstructorUsedError;
-  @JsonKey(name: '_availableEndTime')
-  Element? get availableEndTimeElement => throw _privateConstructorUsedError;
-  Time? get availableEndTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_availableStartTime')
   Element? get availableStartTimeElement => throw _privateConstructorUsedError;
+  Time? get availableEndTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_availableEndTime')
+  Element? get availableEndTimeElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -596,9 +596,9 @@ abstract class $AvailabilityAvailableTimeCopyWith<$Res> {
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
-      @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
+      @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
       Time? availableEndTime,
-      @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement});
+      @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   $ElementCopyWith<$Res>? get allDayElement;
   $ElementCopyWith<$Res>? get availableStartTimeElement;
@@ -626,9 +626,9 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
     Object? allDay = freezed,
     Object? allDayElement = freezed,
     Object? availableStartTime = freezed,
-    Object? availableEndTimeElement = freezed,
-    Object? availableEndTime = freezed,
     Object? availableStartTimeElement = freezed,
+    Object? availableEndTime = freezed,
+    Object? availableEndTimeElement = freezed,
   }) {
     return _then(_value.copyWith(
       extension_: freezed == extension_
@@ -659,17 +659,17 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
           ? _value.availableStartTime
           : availableStartTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      availableEndTimeElement: freezed == availableEndTimeElement
-          ? _value.availableEndTimeElement
-          : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
+      availableStartTimeElement: freezed == availableStartTimeElement
+          ? _value.availableStartTimeElement
+          : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       availableEndTime: freezed == availableEndTime
           ? _value.availableEndTime
           : availableEndTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      availableStartTimeElement: freezed == availableStartTimeElement
-          ? _value.availableStartTimeElement
-          : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
+      availableEndTimeElement: freezed == availableEndTimeElement
+          ? _value.availableEndTimeElement
+          : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
     ) as $Val);
   }
@@ -688,18 +688,6 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get availableEndTimeElement {
-    if (_value.availableEndTimeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.availableEndTimeElement!, (value) {
-      return _then(_value.copyWith(availableEndTimeElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get availableStartTimeElement {
     if (_value.availableStartTimeElement == null) {
       return null;
@@ -707,6 +695,18 @@ class _$AvailabilityAvailableTimeCopyWithImpl<$Res,
 
     return $ElementCopyWith<$Res>(_value.availableStartTimeElement!, (value) {
       return _then(_value.copyWith(availableStartTimeElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get availableEndTimeElement {
+    if (_value.availableEndTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.availableEndTimeElement!, (value) {
+      return _then(_value.copyWith(availableEndTimeElement: value) as $Val);
     });
   }
 }
@@ -728,16 +728,16 @@ abstract class _$$_AvailabilityAvailableTimeCopyWith<$Res>
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
-      @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
+      @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
       Time? availableEndTime,
-      @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement});
+      @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement});
 
   @override
   $ElementCopyWith<$Res>? get allDayElement;
   @override
-  $ElementCopyWith<$Res>? get availableEndTimeElement;
-  @override
   $ElementCopyWith<$Res>? get availableStartTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get availableEndTimeElement;
 }
 
 /// @nodoc
@@ -760,9 +760,9 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
     Object? allDay = freezed,
     Object? allDayElement = freezed,
     Object? availableStartTime = freezed,
-    Object? availableEndTimeElement = freezed,
-    Object? availableEndTime = freezed,
     Object? availableStartTimeElement = freezed,
+    Object? availableEndTime = freezed,
+    Object? availableEndTimeElement = freezed,
   }) {
     return _then(_$_AvailabilityAvailableTime(
       extension_: freezed == extension_
@@ -793,17 +793,17 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
           ? _value.availableStartTime
           : availableStartTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      availableEndTimeElement: freezed == availableEndTimeElement
-          ? _value.availableEndTimeElement
-          : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
+      availableStartTimeElement: freezed == availableStartTimeElement
+          ? _value.availableStartTimeElement
+          : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       availableEndTime: freezed == availableEndTime
           ? _value.availableEndTime
           : availableEndTime // ignore: cast_nullable_to_non_nullable
               as Time?,
-      availableStartTimeElement: freezed == availableStartTimeElement
-          ? _value.availableStartTimeElement
-          : availableStartTimeElement // ignore: cast_nullable_to_non_nullable
+      availableEndTimeElement: freezed == availableEndTimeElement
+          ? _value.availableEndTimeElement
+          : availableEndTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
     ));
   }
@@ -820,9 +820,9 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
       this.availableStartTime,
-      @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
+      @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
       this.availableEndTime,
-      @JsonKey(name: '_availableStartTime') this.availableStartTimeElement})
+      @JsonKey(name: '_availableEndTime') this.availableEndTimeElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _daysOfWeek = daysOfWeek,
@@ -878,13 +878,13 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
   @override
   final Time? availableStartTime;
   @override
-  @JsonKey(name: '_availableEndTime')
-  final Element? availableEndTimeElement;
+  @JsonKey(name: '_availableStartTime')
+  final Element? availableStartTimeElement;
   @override
   final Time? availableEndTime;
   @override
-  @JsonKey(name: '_availableStartTime')
-  final Element? availableStartTimeElement;
+  @JsonKey(name: '_availableEndTime')
+  final Element? availableEndTimeElement;
 
   @override
   String toString() {
@@ -909,14 +909,14 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
                 other.allDayElement == allDayElement) &&
             (identical(other.availableStartTime, availableStartTime) ||
                 other.availableStartTime == availableStartTime) &&
-            (identical(
-                    other.availableEndTimeElement, availableEndTimeElement) ||
-                other.availableEndTimeElement == availableEndTimeElement) &&
+            (identical(other.availableStartTimeElement,
+                    availableStartTimeElement) ||
+                other.availableStartTimeElement == availableStartTimeElement) &&
             (identical(other.availableEndTime, availableEndTime) ||
                 other.availableEndTime == availableEndTime) &&
             (identical(
-                    other.availableStartTimeElement, availableStartTimeElement) ||
-                other.availableStartTimeElement == availableStartTimeElement));
+                    other.availableEndTimeElement, availableEndTimeElement) ||
+                other.availableEndTimeElement == availableEndTimeElement));
   }
 
   @JsonKey(ignore: true)
@@ -930,9 +930,9 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
       allDay,
       allDayElement,
       availableStartTime,
-      availableEndTimeElement,
+      availableStartTimeElement,
       availableEndTime,
-      availableStartTimeElement);
+      availableEndTimeElement);
 
   @JsonKey(ignore: true)
   @override
@@ -990,13 +990,13 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
   @override
   Time? get availableStartTime;
   @override
-  @JsonKey(name: '_availableEndTime')
-  Element? get availableEndTimeElement;
+  @JsonKey(name: '_availableStartTime')
+  Element? get availableStartTimeElement;
   @override
   Time? get availableEndTime;
   @override
-  @JsonKey(name: '_availableStartTime')
-  Element? get availableStartTimeElement;
+  @JsonKey(name: '_availableEndTime')
+  Element? get availableEndTimeElement;
   @override
   @JsonKey(ignore: true)
   _$$_AvailabilityAvailableTimeCopyWith<_$_AvailabilityAvailableTime>

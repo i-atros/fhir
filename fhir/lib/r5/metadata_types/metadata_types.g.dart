@@ -105,9 +105,10 @@ _$_AvailabilityAvailableTime _$$_AvailabilityAvailableTimeFromJson(
       availableStartTime: json['availableStartTime'] == null
           ? null
           : Time.fromJson(json['availableStartTime']),
-      availableEndTimeElement: json['_availableEndTime'] == null
+      availableStartTimeElement: json['_availableStartTime'] == null
           ? null
-          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
+          : Element.fromJson(
+              json['_availableStartTime'] as Map<String, dynamic>),
       availableEndTime: json['availableEndTime'] == null
           ? null
           : Time.fromJson(json['availableEndTime']),
@@ -137,6 +138,8 @@ Map<String, dynamic> _$$_AvailabilityAvailableTimeToJson(
   writeNotNull('allDay', instance.allDay?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
   writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
+  writeNotNull(
+      '_availableStartTime', instance.availableStartTimeElement?.toJson());
   writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
   writeNotNull('_availableEndTime', instance.availableEndTimeElement?.toJson());
   return val;

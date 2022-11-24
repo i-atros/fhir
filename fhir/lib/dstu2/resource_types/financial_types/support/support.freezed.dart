@@ -52,6 +52,7 @@ mixin _$Coverage {
   Element? get dependentElement => throw _privateConstructorUsedError;
   PositiveInt? get sequence => throw _privateConstructorUsedError;
   Reference? get subscriber => throw _privateConstructorUsedError;
+  Reference? get insurer => throw _privateConstructorUsedError;
   Identifier? get network => throw _privateConstructorUsedError;
   @JsonKey(name: '_network')
   Element? get networkElement => throw _privateConstructorUsedError;
@@ -100,6 +101,7 @@ abstract class $CoverageCopyWith<$Res> {
           Element? dependentElement,
       PositiveInt? sequence,
       Reference? subscriber,
+      Reference? insurer,
       Identifier? network,
       @JsonKey(name: '_network')
           Element? networkElement,
@@ -117,6 +119,7 @@ abstract class $CoverageCopyWith<$Res> {
   $ElementCopyWith<$Res>? get subscriberIdElement;
   $ElementCopyWith<$Res>? get dependentElement;
   $ReferenceCopyWith<$Res>? get subscriber;
+  $ReferenceCopyWith<$Res>? get insurer;
   $IdentifierCopyWith<$Res>? get network;
   $ElementCopyWith<$Res>? get networkElement;
 }
@@ -159,6 +162,7 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     Object? dependentElement = freezed,
     Object? sequence = freezed,
     Object? subscriber = freezed,
+    Object? insurer = freezed,
     Object? network = freezed,
     Object? networkElement = freezed,
     Object? contract = freezed,
@@ -263,6 +267,10 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
       subscriber: freezed == subscriber
           ? _value.subscriber
           : subscriber // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      insurer: freezed == insurer
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
               as Reference?,
       network: freezed == network
           ? _value.network
@@ -425,6 +433,18 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
 
   @override
   @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get insurer {
+    if (_value.insurer == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.insurer!, (value) {
+      return _then(_value.copyWith(insurer: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get network {
     if (_value.network == null) {
       return null;
@@ -487,6 +507,7 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
           Element? dependentElement,
       PositiveInt? sequence,
       Reference? subscriber,
+      Reference? insurer,
       Identifier? network,
       @JsonKey(name: '_network')
           Element? networkElement,
@@ -516,6 +537,8 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $ElementCopyWith<$Res>? get dependentElement;
   @override
   $ReferenceCopyWith<$Res>? get subscriber;
+  @override
+  $ReferenceCopyWith<$Res>? get insurer;
   @override
   $IdentifierCopyWith<$Res>? get network;
   @override
@@ -558,6 +581,7 @@ class __$$_CoverageCopyWithImpl<$Res>
     Object? dependentElement = freezed,
     Object? sequence = freezed,
     Object? subscriber = freezed,
+    Object? insurer = freezed,
     Object? network = freezed,
     Object? networkElement = freezed,
     Object? contract = freezed,
@@ -663,6 +687,10 @@ class __$$_CoverageCopyWithImpl<$Res>
           ? _value.subscriber
           : subscriber // ignore: cast_nullable_to_non_nullable
               as Reference?,
+      insurer: freezed == insurer
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       network: freezed == network
           ? _value.network
           : network // ignore: cast_nullable_to_non_nullable
@@ -714,6 +742,7 @@ class _$_Coverage extends _Coverage {
           this.dependentElement,
       this.sequence,
       this.subscriber,
+      this.insurer,
       this.network,
       @JsonKey(name: '_network')
           this.networkElement,
@@ -813,6 +842,8 @@ class _$_Coverage extends _Coverage {
   @override
   final Reference? subscriber;
   @override
+  final Reference? insurer;
+  @override
   final Identifier? network;
   @override
   @JsonKey(name: '_network')
@@ -828,7 +859,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issuer: $issuer, bin: $bin, period: $period, type: $type, subscriberId: $subscriberId, subscriberIdElement: $subscriberIdElement, identifier: $identifier, group: $group, plan: $plan, subPlan: $subPlan, dependent: $dependent, dependentElement: $dependentElement, sequence: $sequence, subscriber: $subscriber, network: $network, networkElement: $networkElement, contract: $contract)';
+    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issuer: $issuer, bin: $bin, period: $period, type: $type, subscriberId: $subscriberId, subscriberIdElement: $subscriberIdElement, identifier: $identifier, group: $group, plan: $plan, subPlan: $subPlan, dependent: $dependent, dependentElement: $dependentElement, sequence: $sequence, subscriber: $subscriber, insurer: $insurer, network: $network, networkElement: $networkElement, contract: $contract)';
   }
 
   @override
@@ -876,6 +907,7 @@ class _$_Coverage extends _Coverage {
                 other.sequence == sequence) &&
             (identical(other.subscriber, subscriber) ||
                 other.subscriber == subscriber) &&
+            (identical(other.insurer, insurer) || other.insurer == insurer) &&
             (identical(other.network, network) || other.network == network) &&
             (identical(other.networkElement, networkElement) ||
                 other.networkElement == networkElement) &&
@@ -911,6 +943,7 @@ class _$_Coverage extends _Coverage {
         dependentElement,
         sequence,
         subscriber,
+        insurer,
         network,
         networkElement,
         const DeepCollectionEquality().hash(_contract)
@@ -963,6 +996,7 @@ abstract class _Coverage extends Coverage {
           final Element? dependentElement,
       final PositiveInt? sequence,
       final Reference? subscriber,
+      final Reference? insurer,
       final Identifier? network,
       @JsonKey(name: '_network')
           final Element? networkElement,
@@ -1027,6 +1061,8 @@ abstract class _Coverage extends Coverage {
   PositiveInt? get sequence;
   @override
   Reference? get subscriber;
+  @override
+  Reference? get insurer;
   @override
   Identifier? get network;
   @override

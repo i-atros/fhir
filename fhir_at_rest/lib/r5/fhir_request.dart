@@ -913,6 +913,9 @@ class FhirRequest with _$FhirRequest {
         if (json['class'] != null && json['class']['value'] != null) {
           json['class']['value'] = json['class']['value']['value'];
         }
+
+        json['payor'] = [json['insurer']];
+
         break;
       case R5ResourceType.DocumentReference:
         json['encounter'] = json['context'];
@@ -975,6 +978,11 @@ class FhirRequest with _$FhirRequest {
           final newValue = {'value': json['class']['value']};
           json['class']['value'] = newValue;
         }
+
+        if (json['payor'] != null) {
+          json['insurer'] = json['payor'].first;
+        }
+
         break;
       case R5ResourceType.DocumentReference:
         json['context'] = json['encounter'];
