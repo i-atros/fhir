@@ -7,7 +7,7 @@ part of 'terminology.dart';
 // **************************************************************************
 
 _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ValueSet) ??
           Dstu2ResourceType.ValueSet,
@@ -56,7 +56,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ValueSetStatusEnumMap, json['status'],
+      status: $enumDecode(_$ValueSetStatusEnumMap, json['status'],
           unknownValue: ValueSetStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -119,7 +119,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
 
 Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -149,7 +149,7 @@ Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$ValueSetStatusEnumMap[instance.status];
+  val['status'] = _$ValueSetStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -174,43 +174,6 @@ Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('compose', instance.compose?.toJson());
   writeNotNull('expansion', instance.expansion?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -695,7 +658,7 @@ _$_ValueSetIncludeFilter _$$_ValueSetIncludeFilterFromJson(
       propertyElement: json['_property'] == null
           ? null
           : Element.fromJson(json['_property'] as Map<String, dynamic>),
-      op: _$enumDecode(_$FilterOpEnumMap, json['op'],
+      op: $enumDecode(_$FilterOpEnumMap, json['op'],
           unknownValue: FilterOp.unknown),
       opElement: json['_op'] == null
           ? null
@@ -724,7 +687,7 @@ Map<String, dynamic> _$$_ValueSetIncludeFilterToJson(
   writeNotNull('fhir_comments', instance.fhirComments);
   val['property'] = instance.property.toJson();
   writeNotNull('_property', instance.propertyElement?.toJson());
-  val['op'] = _$FilterOpEnumMap[instance.op];
+  val['op'] = _$FilterOpEnumMap[instance.op]!;
   writeNotNull('_op', instance.opElement?.toJson());
   val['value'] = instance.value.toJson();
   writeNotNull('_value', instance.valueElement?.toJson());
@@ -965,7 +928,7 @@ Map<String, dynamic> _$$_ValueSetExpansionContainsToJson(
 
 _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
     _$_ConceptMap(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ConceptMap) ??
           Dstu2ResourceType.ConceptMap,
@@ -1011,7 +974,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ConceptMapStatusEnumMap, json['status'],
+      status: $enumDecode(_$ConceptMapStatusEnumMap, json['status'],
           unknownValue: ConceptMapStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1070,7 +1033,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1099,7 +1062,7 @@ Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
   writeNotNull('_version', instance.versionElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$ConceptMapStatusEnumMap[instance.status];
+  val['status'] = _$ConceptMapStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -1228,7 +1191,7 @@ _$_ConceptMapElementTarget _$$_ConceptMapElementTargetFromJson(
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      equivalence: _$enumDecode(_$TargetEquivalenceEnumMap, json['equivalence'],
+      equivalence: $enumDecode(_$TargetEquivalenceEnumMap, json['equivalence'],
           unknownValue: TargetEquivalence.unknown),
       equivalenceElement: json['_equivalence'] == null
           ? null
@@ -1265,7 +1228,7 @@ Map<String, dynamic> _$$_ConceptMapElementTargetToJson(
   writeNotNull('codeSystem', instance.codeSystem?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
-  val['equivalence'] = _$TargetEquivalenceEnumMap[instance.equivalence];
+  val['equivalence'] = _$TargetEquivalenceEnumMap[instance.equivalence]!;
   writeNotNull('_equivalence', instance.equivalenceElement?.toJson());
   writeNotNull('comments', instance.comments);
   writeNotNull('_comments', instance.commentsElement?.toJson());
@@ -1326,7 +1289,7 @@ Map<String, dynamic> _$$_ConceptMapTargetDependsOnToJson(
 
 _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
     _$_NamingSystem(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.NamingSystem) ??
           Dstu2ResourceType.NamingSystem,
@@ -1361,12 +1324,12 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$NamingSystemStatusEnumMap, json['status'],
+      status: $enumDecode(_$NamingSystemStatusEnumMap, json['status'],
           unknownValue: NamingSystemStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      kind: _$enumDecode(_$NamingSystemKindEnumMap, json['kind'],
+      kind: $enumDecode(_$NamingSystemKindEnumMap, json['kind'],
           unknownValue: NamingSystemKind.unknown),
       kindElement: json['_kind'] == null
           ? null
@@ -1410,7 +1373,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1434,9 +1397,9 @@ Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['name'] = instance.name;
   writeNotNull('_name', instance.nameElement?.toJson());
-  val['status'] = _$NamingSystemStatusEnumMap[instance.status];
+  val['status'] = _$NamingSystemStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
-  val['kind'] = _$NamingSystemKindEnumMap[instance.kind];
+  val['kind'] = _$NamingSystemKindEnumMap[instance.kind]!;
   writeNotNull('_kind', instance.kindElement?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('_publisher', instance.publisherElement?.toJson());
@@ -1517,7 +1480,7 @@ _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$UniqueIdTypeEnumMap, json['type'],
+      type: $enumDecode(_$UniqueIdTypeEnumMap, json['type'],
           unknownValue: UniqueIdType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -1552,7 +1515,7 @@ Map<String, dynamic> _$$_NamingSystemUniqueIdToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$UniqueIdTypeEnumMap[instance.type];
+  val['type'] = _$UniqueIdTypeEnumMap[instance.type]!;
   writeNotNull('_type', instance.typeElement?.toJson());
   val['value'] = instance.value;
   writeNotNull('_value', instance.valueElement?.toJson());

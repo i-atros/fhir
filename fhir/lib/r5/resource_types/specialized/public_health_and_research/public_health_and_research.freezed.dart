@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'public_health_and_research.dart';
@@ -11,153 +12,11 @@ part of 'public_health_and_research.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
   return _ResearchStudy.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyTearOff {
-  const _$ResearchStudyTearOff();
-
-  _ResearchStudy call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType = R5ResourceType.ResearchStudy,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      List<ResearchStudyLabel>? label,
-      List<Reference>? protocol,
-      List<Reference>? partOf,
-      List<RelatedArtifact>? relatedArtifact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? primaryPurposeType,
-      CodeableConcept? phase,
-      List<CodeableConcept>? category,
-      List<ResearchStudyFocus>? focus,
-      List<CodeableConcept>? condition,
-      List<CodeableConcept>? keyword,
-      List<CodeableConcept>? location,
-      Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
-      Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Period? period,
-      List<ContactDetail>? contact,
-      Reference? sponsor,
-      Reference? principalInvestigator,
-      List<Reference>? site,
-      List<Annotation>? note,
-      List<ResearchStudyClassification>? classification,
-      List<ResearchStudyAssociatedParty>? associatedParty,
-      List<CodeableConcept>? currentState,
-      List<ResearchStudyStatusDate>? statusDate,
-      CodeableConcept? whyStopped,
-      ResearchStudyRecruitment? recruitment,
-      List<ResearchStudyComparisonGroup>? comparisonGroup,
-      List<ResearchStudyObjective>? objective,
-      List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
-      List<Reference>? result,
-      List<ResearchStudyWebLocation>? webLocation}) {
-    return _ResearchStudy(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      identifier: identifier,
-      version: version,
-      versionElement: versionElement,
-      name: name,
-      nameElement: nameElement,
-      title: title,
-      titleElement: titleElement,
-      label: label,
-      protocol: protocol,
-      partOf: partOf,
-      relatedArtifact: relatedArtifact,
-      date: date,
-      dateElement: dateElement,
-      status: status,
-      statusElement: statusElement,
-      primaryPurposeType: primaryPurposeType,
-      phase: phase,
-      category: category,
-      focus: focus,
-      condition: condition,
-      keyword: keyword,
-      location: location,
-      descriptionSummary: descriptionSummary,
-      descriptionSummaryElement: descriptionSummaryElement,
-      description: description,
-      descriptionElement: descriptionElement,
-      period: period,
-      contact: contact,
-      sponsor: sponsor,
-      principalInvestigator: principalInvestigator,
-      site: site,
-      note: note,
-      classification: classification,
-      associatedParty: associatedParty,
-      currentState: currentState,
-      statusDate: statusDate,
-      whyStopped: whyStopped,
-      recruitment: recruitment,
-      comparisonGroup: comparisonGroup,
-      objective: objective,
-      outcomeMeasure: outcomeMeasure,
-      result: result,
-      webLocation: webLocation,
-    );
-  }
-
-  ResearchStudy fromJson(Map<String, Object> json) {
-    return ResearchStudy.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudy = _$ResearchStudyTearOff();
 
 /// @nodoc
 mixin _$ResearchStudy {
@@ -251,7 +110,8 @@ mixin _$ResearchStudy {
 abstract class $ResearchStudyCopyWith<$Res> {
   factory $ResearchStudyCopyWith(
           ResearchStudy value, $Res Function(ResearchStudy) then) =
-      _$ResearchStudyCopyWithImpl<$Res>;
+      _$ResearchStudyCopyWithImpl<$Res, ResearchStudy>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
@@ -345,17 +205,19 @@ abstract class $ResearchStudyCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyCopyWithImpl<$Res>
+class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
     implements $ResearchStudyCopyWith<$Res> {
   _$ResearchStudyCopyWithImpl(this._value, this._then);
 
-  final ResearchStudy _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudy) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -413,432 +275,451 @@ class _$ResearchStudyCopyWithImpl<$Res>
     Object? webLocation = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      versionElement: versionElement == freezed
+      versionElement: freezed == versionElement
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      titleElement: titleElement == freezed
+      titleElement: freezed == titleElement
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      label: label == freezed
+      label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyLabel>?,
-      protocol: protocol == freezed
+      protocol: freezed == protocol
           ? _value.protocol
           : protocol // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      partOf: partOf == freezed
+      partOf: freezed == partOf
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      relatedArtifact: relatedArtifact == freezed
+      relatedArtifact: freezed == relatedArtifact
           ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ResearchStudyStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      primaryPurposeType: primaryPurposeType == freezed
+      primaryPurposeType: freezed == primaryPurposeType
           ? _value.primaryPurposeType
           : primaryPurposeType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      phase: phase == freezed
+      phase: freezed == phase
           ? _value.phase
           : phase // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      focus: focus == freezed
+      focus: freezed == focus
           ? _value.focus
           : focus // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyFocus>?,
-      condition: condition == freezed
+      condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      keyword: keyword == freezed
+      keyword: freezed == keyword
           ? _value.keyword
           : keyword // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      location: location == freezed
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      descriptionSummary: descriptionSummary == freezed
+      descriptionSummary: freezed == descriptionSummary
           ? _value.descriptionSummary
           : descriptionSummary // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionSummaryElement: descriptionSummaryElement == freezed
+      descriptionSummaryElement: freezed == descriptionSummaryElement
           ? _value.descriptionSummaryElement
           : descriptionSummaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
-      sponsor: sponsor == freezed
+      sponsor: freezed == sponsor
           ? _value.sponsor
           : sponsor // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      principalInvestigator: principalInvestigator == freezed
+      principalInvestigator: freezed == principalInvestigator
           ? _value.principalInvestigator
           : principalInvestigator // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      site: site == freezed
+      site: freezed == site
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      classification: classification == freezed
+      classification: freezed == classification
           ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyClassification>?,
-      associatedParty: associatedParty == freezed
+      associatedParty: freezed == associatedParty
           ? _value.associatedParty
           : associatedParty // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyAssociatedParty>?,
-      currentState: currentState == freezed
+      currentState: freezed == currentState
           ? _value.currentState
           : currentState // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      statusDate: statusDate == freezed
+      statusDate: freezed == statusDate
           ? _value.statusDate
           : statusDate // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyStatusDate>?,
-      whyStopped: whyStopped == freezed
+      whyStopped: freezed == whyStopped
           ? _value.whyStopped
           : whyStopped // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      recruitment: recruitment == freezed
+      recruitment: freezed == recruitment
           ? _value.recruitment
           : recruitment // ignore: cast_nullable_to_non_nullable
               as ResearchStudyRecruitment?,
-      comparisonGroup: comparisonGroup == freezed
+      comparisonGroup: freezed == comparisonGroup
           ? _value.comparisonGroup
           : comparisonGroup // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyComparisonGroup>?,
-      objective: objective == freezed
+      objective: freezed == objective
           ? _value.objective
           : objective // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyObjective>?,
-      outcomeMeasure: outcomeMeasure == freezed
+      outcomeMeasure: freezed == outcomeMeasure
           ? _value.outcomeMeasure
           : outcomeMeasure // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyOutcomeMeasure>?,
-      result: result == freezed
+      result: freezed == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      webLocation: webLocation == freezed
+      webLocation: freezed == webLocation
           ? _value.webLocation
           : webLocation // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyWebLocation>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
+      return _then(_value.copyWith(urlElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get versionElement {
     if (_value.versionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
-      return _then(_value.copyWith(versionElement: value));
+      return _then(_value.copyWith(versionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get titleElement {
     if (_value.titleElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.titleElement!, (value) {
-      return _then(_value.copyWith(titleElement: value));
+      return _then(_value.copyWith(titleElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
-      return _then(_value.copyWith(dateElement: value));
+      return _then(_value.copyWith(dateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get primaryPurposeType {
     if (_value.primaryPurposeType == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.primaryPurposeType!, (value) {
-      return _then(_value.copyWith(primaryPurposeType: value));
+      return _then(_value.copyWith(primaryPurposeType: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get phase {
     if (_value.phase == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.phase!, (value) {
-      return _then(_value.copyWith(phase: value));
+      return _then(_value.copyWith(phase: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionSummaryElement {
     if (_value.descriptionSummaryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionSummaryElement!, (value) {
-      return _then(_value.copyWith(descriptionSummaryElement: value));
+      return _then(_value.copyWith(descriptionSummaryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.period!, (value) {
-      return _then(_value.copyWith(period: value));
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get sponsor {
     if (_value.sponsor == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.sponsor!, (value) {
-      return _then(_value.copyWith(sponsor: value));
+      return _then(_value.copyWith(sponsor: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get principalInvestigator {
     if (_value.principalInvestigator == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.principalInvestigator!, (value) {
-      return _then(_value.copyWith(principalInvestigator: value));
+      return _then(_value.copyWith(principalInvestigator: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get whyStopped {
     if (_value.whyStopped == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.whyStopped!, (value) {
-      return _then(_value.copyWith(whyStopped: value));
+      return _then(_value.copyWith(whyStopped: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResearchStudyRecruitmentCopyWith<$Res>? get recruitment {
     if (_value.recruitment == null) {
       return null;
@@ -846,18 +727,19 @@ class _$ResearchStudyCopyWithImpl<$Res>
 
     return $ResearchStudyRecruitmentCopyWith<$Res>(_value.recruitment!,
         (value) {
-      return _then(_value.copyWith(recruitment: value));
+      return _then(_value.copyWith(recruitment: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyCopyWith<$Res>
+abstract class _$$_ResearchStudyCopyWith<$Res>
     implements $ResearchStudyCopyWith<$Res> {
-  factory _$ResearchStudyCopyWith(
-          _ResearchStudy value, $Res Function(_ResearchStudy) then) =
-      __$ResearchStudyCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyCopyWith(
+          _$_ResearchStudy value, $Res Function(_$_ResearchStudy) then) =
+      __$$_ResearchStudyCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
@@ -970,19 +852,17 @@ abstract class _$ResearchStudyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyCopyWithImpl<$Res>
-    extends _$ResearchStudyCopyWithImpl<$Res>
-    implements _$ResearchStudyCopyWith<$Res> {
-  __$ResearchStudyCopyWithImpl(
-      _ResearchStudy _value, $Res Function(_ResearchStudy) _then)
-      : super(_value, (v) => _then(v as _ResearchStudy));
+class __$$_ResearchStudyCopyWithImpl<$Res>
+    extends _$ResearchStudyCopyWithImpl<$Res, _$_ResearchStudy>
+    implements _$$_ResearchStudyCopyWith<$Res> {
+  __$$_ResearchStudyCopyWithImpl(
+      _$_ResearchStudy _value, $Res Function(_$_ResearchStudy) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudy get _value => super._value as _ResearchStudy;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1039,229 +919,229 @@ class __$ResearchStudyCopyWithImpl<$Res>
     Object? result = freezed,
     Object? webLocation = freezed,
   }) {
-    return _then(_ResearchStudy(
-      resourceType: resourceType == freezed
+    return _then(_$_ResearchStudy(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      identifier: identifier == freezed
-          ? _value.identifier
+      identifier: freezed == identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      versionElement: versionElement == freezed
+      versionElement: freezed == versionElement
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      title: title == freezed
+      title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      titleElement: titleElement == freezed
+      titleElement: freezed == titleElement
           ? _value.titleElement
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      label: label == freezed
-          ? _value.label
+      label: freezed == label
+          ? _value._label
           : label // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyLabel>?,
-      protocol: protocol == freezed
-          ? _value.protocol
+      protocol: freezed == protocol
+          ? _value._protocol
           : protocol // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      partOf: partOf == freezed
-          ? _value.partOf
+      partOf: freezed == partOf
+          ? _value._partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      relatedArtifact: relatedArtifact == freezed
-          ? _value.relatedArtifact
+      relatedArtifact: freezed == relatedArtifact
+          ? _value._relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      dateElement: dateElement == freezed
+      dateElement: freezed == dateElement
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ResearchStudyStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      primaryPurposeType: primaryPurposeType == freezed
+      primaryPurposeType: freezed == primaryPurposeType
           ? _value.primaryPurposeType
           : primaryPurposeType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      phase: phase == freezed
+      phase: freezed == phase
           ? _value.phase
           : phase // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      category: category == freezed
-          ? _value.category
+      category: freezed == category
+          ? _value._category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      focus: focus == freezed
-          ? _value.focus
+      focus: freezed == focus
+          ? _value._focus
           : focus // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyFocus>?,
-      condition: condition == freezed
-          ? _value.condition
+      condition: freezed == condition
+          ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      keyword: keyword == freezed
-          ? _value.keyword
+      keyword: freezed == keyword
+          ? _value._keyword
           : keyword // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      location: location == freezed
-          ? _value.location
+      location: freezed == location
+          ? _value._location
           : location // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      descriptionSummary: descriptionSummary == freezed
+      descriptionSummary: freezed == descriptionSummary
           ? _value.descriptionSummary
           : descriptionSummary // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionSummaryElement: descriptionSummaryElement == freezed
+      descriptionSummaryElement: freezed == descriptionSummaryElement
           ? _value.descriptionSummaryElement
           : descriptionSummaryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      contact: contact == freezed
-          ? _value.contact
+      contact: freezed == contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
-      sponsor: sponsor == freezed
+      sponsor: freezed == sponsor
           ? _value.sponsor
           : sponsor // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      principalInvestigator: principalInvestigator == freezed
+      principalInvestigator: freezed == principalInvestigator
           ? _value.principalInvestigator
           : principalInvestigator // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      site: site == freezed
-          ? _value.site
+      site: freezed == site
+          ? _value._site
           : site // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      note: note == freezed
-          ? _value.note
+      note: freezed == note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      classification: classification == freezed
-          ? _value.classification
+      classification: freezed == classification
+          ? _value._classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyClassification>?,
-      associatedParty: associatedParty == freezed
-          ? _value.associatedParty
+      associatedParty: freezed == associatedParty
+          ? _value._associatedParty
           : associatedParty // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyAssociatedParty>?,
-      currentState: currentState == freezed
-          ? _value.currentState
+      currentState: freezed == currentState
+          ? _value._currentState
           : currentState // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      statusDate: statusDate == freezed
-          ? _value.statusDate
+      statusDate: freezed == statusDate
+          ? _value._statusDate
           : statusDate // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyStatusDate>?,
-      whyStopped: whyStopped == freezed
+      whyStopped: freezed == whyStopped
           ? _value.whyStopped
           : whyStopped // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      recruitment: recruitment == freezed
+      recruitment: freezed == recruitment
           ? _value.recruitment
           : recruitment // ignore: cast_nullable_to_non_nullable
               as ResearchStudyRecruitment?,
-      comparisonGroup: comparisonGroup == freezed
-          ? _value.comparisonGroup
+      comparisonGroup: freezed == comparisonGroup
+          ? _value._comparisonGroup
           : comparisonGroup // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyComparisonGroup>?,
-      objective: objective == freezed
-          ? _value.objective
+      objective: freezed == objective
+          ? _value._objective
           : objective // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyObjective>?,
-      outcomeMeasure: outcomeMeasure == freezed
-          ? _value.outcomeMeasure
+      outcomeMeasure: freezed == outcomeMeasure
+          ? _value._outcomeMeasure
           : outcomeMeasure // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyOutcomeMeasure>?,
-      result: result == freezed
-          ? _value.result
+      result: freezed == result
+          ? _value._result
           : result // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      webLocation: webLocation == freezed
-          ? _value.webLocation
+      webLocation: freezed == webLocation
+          ? _value._webLocation
           : webLocation // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyWebLocation>?,
     ));
@@ -1283,14 +1163,14 @@ class _$_ResearchStudy extends _ResearchStudy {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      this.identifier,
+      final List<Identifier>? identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -1300,10 +1180,10 @@ class _$_ResearchStudy extends _ResearchStudy {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.label,
-      this.protocol,
-      this.partOf,
-      this.relatedArtifact,
+      final List<ResearchStudyLabel>? label,
+      final List<Reference>? protocol,
+      final List<Reference>? partOf,
+      final List<RelatedArtifact>? relatedArtifact,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
@@ -1313,11 +1193,11 @@ class _$_ResearchStudy extends _ResearchStudy {
           this.statusElement,
       this.primaryPurposeType,
       this.phase,
-      this.category,
-      this.focus,
-      this.condition,
-      this.keyword,
-      this.location,
+      final List<CodeableConcept>? category,
+      final List<ResearchStudyFocus>? focus,
+      final List<CodeableConcept>? condition,
+      final List<CodeableConcept>? keyword,
+      final List<CodeableConcept>? location,
       this.descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
           this.descriptionSummaryElement,
@@ -1325,23 +1205,48 @@ class _$_ResearchStudy extends _ResearchStudy {
       @JsonKey(name: '_description')
           this.descriptionElement,
       this.period,
-      this.contact,
+      final List<ContactDetail>? contact,
       this.sponsor,
       this.principalInvestigator,
-      this.site,
-      this.note,
-      this.classification,
-      this.associatedParty,
-      this.currentState,
-      this.statusDate,
+      final List<Reference>? site,
+      final List<Annotation>? note,
+      final List<ResearchStudyClassification>? classification,
+      final List<ResearchStudyAssociatedParty>? associatedParty,
+      final List<CodeableConcept>? currentState,
+      final List<ResearchStudyStatusDate>? statusDate,
       this.whyStopped,
       this.recruitment,
-      this.comparisonGroup,
-      this.objective,
-      this.outcomeMeasure,
-      this.result,
-      this.webLocation})
-      : super._();
+      final List<ResearchStudyComparisonGroup>? comparisonGroup,
+      final List<ResearchStudyObjective>? objective,
+      final List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
+      final List<Reference>? result,
+      final List<ResearchStudyWebLocation>? webLocation})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _label = label,
+        _protocol = protocol,
+        _partOf = partOf,
+        _relatedArtifact = relatedArtifact,
+        _category = category,
+        _focus = focus,
+        _condition = condition,
+        _keyword = keyword,
+        _location = location,
+        _contact = contact,
+        _site = site,
+        _note = note,
+        _classification = classification,
+        _associatedParty = associatedParty,
+        _currentState = currentState,
+        _statusDate = statusDate,
+        _comparisonGroup = comparisonGroup,
+        _objective = objective,
+        _outcomeMeasure = outcomeMeasure,
+        _result = result,
+        _webLocation = webLocation,
+        super._();
 
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyFromJson(json);
@@ -1365,20 +1270,48 @@ class _$_ResearchStudy extends _ResearchStudy {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? version;
   @override
@@ -1394,14 +1327,42 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+  final List<ResearchStudyLabel>? _label;
   @override
-  final List<ResearchStudyLabel>? label;
+  List<ResearchStudyLabel>? get label {
+    final value = _label;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _protocol;
   @override
-  final List<Reference>? protocol;
+  List<Reference>? get protocol {
+    final value = _protocol;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _partOf;
   @override
-  final List<Reference>? partOf;
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<RelatedArtifact>? _relatedArtifact;
   @override
-  final List<RelatedArtifact>? relatedArtifact;
+  List<RelatedArtifact>? get relatedArtifact {
+    final value = _relatedArtifact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -1417,16 +1378,51 @@ class _$_ResearchStudy extends _ResearchStudy {
   final CodeableConcept? primaryPurposeType;
   @override
   final CodeableConcept? phase;
+  final List<CodeableConcept>? _category;
   @override
-  final List<CodeableConcept>? category;
+  List<CodeableConcept>? get category {
+    final value = _category;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyFocus>? _focus;
   @override
-  final List<ResearchStudyFocus>? focus;
+  List<ResearchStudyFocus>? get focus {
+    final value = _focus;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _condition;
   @override
-  final List<CodeableConcept>? condition;
+  List<CodeableConcept>? get condition {
+    final value = _condition;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _keyword;
   @override
-  final List<CodeableConcept>? keyword;
+  List<CodeableConcept>? get keyword {
+    final value = _keyword;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _location;
   @override
-  final List<CodeableConcept>? location;
+  List<CodeableConcept>? get location {
+    final value = _location;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? descriptionSummary;
   @override
@@ -1439,38 +1435,121 @@ class _$_ResearchStudy extends _ResearchStudy {
   final Element? descriptionElement;
   @override
   final Period? period;
+  final List<ContactDetail>? _contact;
   @override
-  final List<ContactDetail>? contact;
+  List<ContactDetail>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? sponsor;
   @override
   final Reference? principalInvestigator;
+  final List<Reference>? _site;
   @override
-  final List<Reference>? site;
+  List<Reference>? get site {
+    final value = _site;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyClassification>? _classification;
   @override
-  final List<ResearchStudyClassification>? classification;
+  List<ResearchStudyClassification>? get classification {
+    final value = _classification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyAssociatedParty>? _associatedParty;
   @override
-  final List<ResearchStudyAssociatedParty>? associatedParty;
+  List<ResearchStudyAssociatedParty>? get associatedParty {
+    final value = _associatedParty;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<CodeableConcept>? _currentState;
   @override
-  final List<CodeableConcept>? currentState;
+  List<CodeableConcept>? get currentState {
+    final value = _currentState;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyStatusDate>? _statusDate;
   @override
-  final List<ResearchStudyStatusDate>? statusDate;
+  List<ResearchStudyStatusDate>? get statusDate {
+    final value = _statusDate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? whyStopped;
   @override
   final ResearchStudyRecruitment? recruitment;
+  final List<ResearchStudyComparisonGroup>? _comparisonGroup;
   @override
-  final List<ResearchStudyComparisonGroup>? comparisonGroup;
+  List<ResearchStudyComparisonGroup>? get comparisonGroup {
+    final value = _comparisonGroup;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyObjective>? _objective;
   @override
-  final List<ResearchStudyObjective>? objective;
+  List<ResearchStudyObjective>? get objective {
+    final value = _objective;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyOutcomeMeasure>? _outcomeMeasure;
   @override
-  final List<ResearchStudyOutcomeMeasure>? outcomeMeasure;
+  List<ResearchStudyOutcomeMeasure>? get outcomeMeasure {
+    final value = _outcomeMeasure;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _result;
   @override
-  final List<Reference>? result;
+  List<Reference>? get result {
+    final value = _result;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ResearchStudyWebLocation>? _webLocation;
   @override
-  final List<ResearchStudyWebLocation>? webLocation;
+  List<ResearchStudyWebLocation>? get webLocation {
+    final value = _webLocation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1480,250 +1559,247 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudy &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudy &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
+                other.urlElement == urlElement) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.versionElement, versionElement)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+                other.versionElement == versionElement) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
+                other.nameElement == nameElement) &&
+            (identical(other.title, title) || other.title == title) &&
             (identical(other.titleElement, titleElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.titleElement, titleElement)) &&
-            (identical(other.label, label) ||
-                const DeepCollectionEquality().equals(other.label, label)) &&
-            (identical(other.protocol, protocol) ||
-                const DeepCollectionEquality()
-                    .equals(other.protocol, protocol)) &&
-            (identical(other.partOf, partOf) ||
-                const DeepCollectionEquality().equals(other.partOf, partOf)) &&
-            (identical(other.relatedArtifact, relatedArtifact) ||
-                const DeepCollectionEquality()
-                    .equals(other.relatedArtifact, relatedArtifact)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
+                other.titleElement == titleElement) &&
+            const DeepCollectionEquality().equals(other._label, _label) &&
+            const DeepCollectionEquality().equals(other._protocol, _protocol) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
+            const DeepCollectionEquality()
+                .equals(other._relatedArtifact, _relatedArtifact) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.status, status) || const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) || const DeepCollectionEquality().equals(other.statusElement, statusElement)) &&
-            (identical(other.primaryPurposeType, primaryPurposeType) || const DeepCollectionEquality().equals(other.primaryPurposeType, primaryPurposeType)) &&
-            (identical(other.phase, phase) || const DeepCollectionEquality().equals(other.phase, phase)) &&
-            (identical(other.category, category) || const DeepCollectionEquality().equals(other.category, category)) &&
-            (identical(other.focus, focus) || const DeepCollectionEquality().equals(other.focus, focus)) &&
-            (identical(other.condition, condition) || const DeepCollectionEquality().equals(other.condition, condition)) &&
-            (identical(other.keyword, keyword) || const DeepCollectionEquality().equals(other.keyword, keyword)) &&
-            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
-            (identical(other.descriptionSummary, descriptionSummary) || const DeepCollectionEquality().equals(other.descriptionSummary, descriptionSummary)) &&
-            (identical(other.descriptionSummaryElement, descriptionSummaryElement) || const DeepCollectionEquality().equals(other.descriptionSummaryElement, descriptionSummaryElement)) &&
-            (identical(other.description, description) || const DeepCollectionEquality().equals(other.description, description)) &&
-            (identical(other.descriptionElement, descriptionElement) || const DeepCollectionEquality().equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.period, period) || const DeepCollectionEquality().equals(other.period, period)) &&
-            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
-            (identical(other.sponsor, sponsor) || const DeepCollectionEquality().equals(other.sponsor, sponsor)) &&
-            (identical(other.principalInvestigator, principalInvestigator) || const DeepCollectionEquality().equals(other.principalInvestigator, principalInvestigator)) &&
-            (identical(other.site, site) || const DeepCollectionEquality().equals(other.site, site)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.classification, classification) || const DeepCollectionEquality().equals(other.classification, classification)) &&
-            (identical(other.associatedParty, associatedParty) || const DeepCollectionEquality().equals(other.associatedParty, associatedParty)) &&
-            (identical(other.currentState, currentState) || const DeepCollectionEquality().equals(other.currentState, currentState)) &&
-            (identical(other.statusDate, statusDate) || const DeepCollectionEquality().equals(other.statusDate, statusDate)) &&
-            (identical(other.whyStopped, whyStopped) || const DeepCollectionEquality().equals(other.whyStopped, whyStopped)) &&
-            (identical(other.recruitment, recruitment) || const DeepCollectionEquality().equals(other.recruitment, recruitment)) &&
-            (identical(other.comparisonGroup, comparisonGroup) || const DeepCollectionEquality().equals(other.comparisonGroup, comparisonGroup)) &&
-            (identical(other.objective, objective) || const DeepCollectionEquality().equals(other.objective, objective)) &&
-            (identical(other.outcomeMeasure, outcomeMeasure) || const DeepCollectionEquality().equals(other.outcomeMeasure, outcomeMeasure)) &&
-            (identical(other.result, result) || const DeepCollectionEquality().equals(other.result, result)) &&
-            (identical(other.webLocation, webLocation) || const DeepCollectionEquality().equals(other.webLocation, webLocation)));
+                other.dateElement == dateElement) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.statusElement, statusElement) ||
+                other.statusElement == statusElement) &&
+            (identical(other.primaryPurposeType, primaryPurposeType) ||
+                other.primaryPurposeType == primaryPurposeType) &&
+            (identical(other.phase, phase) || other.phase == phase) &&
+            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other._focus, _focus) &&
+            const DeepCollectionEquality()
+                .equals(other._condition, _condition) &&
+            const DeepCollectionEquality().equals(other._keyword, _keyword) &&
+            const DeepCollectionEquality().equals(other._location, _location) &&
+            (identical(other.descriptionSummary, descriptionSummary) ||
+                other.descriptionSummary == descriptionSummary) &&
+            (identical(other.descriptionSummaryElement,
+                    descriptionSummaryElement) ||
+                other.descriptionSummaryElement == descriptionSummaryElement) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.descriptionElement, descriptionElement) ||
+                other.descriptionElement == descriptionElement) &&
+            (identical(other.period, period) || other.period == period) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.sponsor, sponsor) || other.sponsor == sponsor) &&
+            (identical(other.principalInvestigator, principalInvestigator) ||
+                other.principalInvestigator == principalInvestigator) &&
+            const DeepCollectionEquality().equals(other._site, _site) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality()
+                .equals(other._classification, _classification) &&
+            const DeepCollectionEquality()
+                .equals(other._associatedParty, _associatedParty) &&
+            const DeepCollectionEquality()
+                .equals(other._currentState, _currentState) &&
+            const DeepCollectionEquality()
+                .equals(other._statusDate, _statusDate) &&
+            (identical(other.whyStopped, whyStopped) ||
+                other.whyStopped == whyStopped) &&
+            (identical(other.recruitment, recruitment) ||
+                other.recruitment == recruitment) &&
+            const DeepCollectionEquality()
+                .equals(other._comparisonGroup, _comparisonGroup) &&
+            const DeepCollectionEquality()
+                .equals(other._objective, _objective) &&
+            const DeepCollectionEquality()
+                .equals(other._outcomeMeasure, _outcomeMeasure) &&
+            const DeepCollectionEquality().equals(other._result, _result) &&
+            const DeepCollectionEquality()
+                .equals(other._webLocation, _webLocation));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(versionElement) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(titleElement) ^
-      const DeepCollectionEquality().hash(label) ^
-      const DeepCollectionEquality().hash(protocol) ^
-      const DeepCollectionEquality().hash(partOf) ^
-      const DeepCollectionEquality().hash(relatedArtifact) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(primaryPurposeType) ^
-      const DeepCollectionEquality().hash(phase) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(focus) ^
-      const DeepCollectionEquality().hash(condition) ^
-      const DeepCollectionEquality().hash(keyword) ^
-      const DeepCollectionEquality().hash(location) ^
-      const DeepCollectionEquality().hash(descriptionSummary) ^
-      const DeepCollectionEquality().hash(descriptionSummaryElement) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(period) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(sponsor) ^
-      const DeepCollectionEquality().hash(principalInvestigator) ^
-      const DeepCollectionEquality().hash(site) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(classification) ^
-      const DeepCollectionEquality().hash(associatedParty) ^
-      const DeepCollectionEquality().hash(currentState) ^
-      const DeepCollectionEquality().hash(statusDate) ^
-      const DeepCollectionEquality().hash(whyStopped) ^
-      const DeepCollectionEquality().hash(recruitment) ^
-      const DeepCollectionEquality().hash(comparisonGroup) ^
-      const DeepCollectionEquality().hash(objective) ^
-      const DeepCollectionEquality().hash(outcomeMeasure) ^
-      const DeepCollectionEquality().hash(result) ^
-      const DeepCollectionEquality().hash(webLocation);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyCopyWith<_ResearchStudy> get copyWith =>
-      __$ResearchStudyCopyWithImpl<_ResearchStudy>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        urlElement,
+        const DeepCollectionEquality().hash(_identifier),
+        version,
+        versionElement,
+        name,
+        nameElement,
+        title,
+        titleElement,
+        const DeepCollectionEquality().hash(_label),
+        const DeepCollectionEquality().hash(_protocol),
+        const DeepCollectionEquality().hash(_partOf),
+        const DeepCollectionEquality().hash(_relatedArtifact),
+        date,
+        dateElement,
+        status,
+        statusElement,
+        primaryPurposeType,
+        phase,
+        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(_focus),
+        const DeepCollectionEquality().hash(_condition),
+        const DeepCollectionEquality().hash(_keyword),
+        const DeepCollectionEquality().hash(_location),
+        descriptionSummary,
+        descriptionSummaryElement,
+        description,
+        descriptionElement,
+        period,
+        const DeepCollectionEquality().hash(_contact),
+        sponsor,
+        principalInvestigator,
+        const DeepCollectionEquality().hash(_site),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_classification),
+        const DeepCollectionEquality().hash(_associatedParty),
+        const DeepCollectionEquality().hash(_currentState),
+        const DeepCollectionEquality().hash(_statusDate),
+        whyStopped,
+        recruitment,
+        const DeepCollectionEquality().hash(_comparisonGroup),
+        const DeepCollectionEquality().hash(_objective),
+        const DeepCollectionEquality().hash(_outcomeMeasure),
+        const DeepCollectionEquality().hash(_result),
+        const DeepCollectionEquality().hash(_webLocation)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyCopyWith<_$_ResearchStudy> get copyWith =>
+      __$$_ResearchStudyCopyWithImpl<_$_ResearchStudy>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyToJson(this);
+    return _$$_ResearchStudyToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudy extends ResearchStudy {
   factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+          final Element? urlElement,
+      final List<Identifier>? identifier,
+      final String? version,
       @JsonKey(name: '_version')
-          Element? versionElement,
-      String? name,
+          final Element? versionElement,
+      final String? name,
       @JsonKey(name: '_name')
-          Element? nameElement,
-      String? title,
+          final Element? nameElement,
+      final String? title,
       @JsonKey(name: '_title')
-          Element? titleElement,
-      List<ResearchStudyLabel>? label,
-      List<Reference>? protocol,
-      List<Reference>? partOf,
-      List<RelatedArtifact>? relatedArtifact,
-      FhirDateTime? date,
+          final Element? titleElement,
+      final List<ResearchStudyLabel>? label,
+      final List<Reference>? protocol,
+      final List<Reference>? partOf,
+      final List<RelatedArtifact>? relatedArtifact,
+      final FhirDateTime? date,
       @JsonKey(name: '_date')
-          Element? dateElement,
+          final Element? dateElement,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
+          final ResearchStudyStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? primaryPurposeType,
-      CodeableConcept? phase,
-      List<CodeableConcept>? category,
-      List<ResearchStudyFocus>? focus,
-      List<CodeableConcept>? condition,
-      List<CodeableConcept>? keyword,
-      List<CodeableConcept>? location,
-      Markdown? descriptionSummary,
+          final Element? statusElement,
+      final CodeableConcept? primaryPurposeType,
+      final CodeableConcept? phase,
+      final List<CodeableConcept>? category,
+      final List<ResearchStudyFocus>? focus,
+      final List<CodeableConcept>? condition,
+      final List<CodeableConcept>? keyword,
+      final List<CodeableConcept>? location,
+      final Markdown? descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
-      Markdown? description,
+          final Element? descriptionSummaryElement,
+      final Markdown? description,
       @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Period? period,
-      List<ContactDetail>? contact,
-      Reference? sponsor,
-      Reference? principalInvestigator,
-      List<Reference>? site,
-      List<Annotation>? note,
-      List<ResearchStudyClassification>? classification,
-      List<ResearchStudyAssociatedParty>? associatedParty,
-      List<CodeableConcept>? currentState,
-      List<ResearchStudyStatusDate>? statusDate,
-      CodeableConcept? whyStopped,
-      ResearchStudyRecruitment? recruitment,
-      List<ResearchStudyComparisonGroup>? comparisonGroup,
-      List<ResearchStudyObjective>? objective,
-      List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
-      List<Reference>? result,
-      List<ResearchStudyWebLocation>? webLocation}) = _$_ResearchStudy;
+          final Element? descriptionElement,
+      final Period? period,
+      final List<ContactDetail>? contact,
+      final Reference? sponsor,
+      final Reference? principalInvestigator,
+      final List<Reference>? site,
+      final List<Annotation>? note,
+      final List<ResearchStudyClassification>? classification,
+      final List<ResearchStudyAssociatedParty>? associatedParty,
+      final List<CodeableConcept>? currentState,
+      final List<ResearchStudyStatusDate>? statusDate,
+      final CodeableConcept? whyStopped,
+      final ResearchStudyRecruitment? recruitment,
+      final List<ResearchStudyComparisonGroup>? comparisonGroup,
+      final List<ResearchStudyObjective>? objective,
+      final List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
+      final List<Reference>? result,
+      final List<ResearchStudyWebLocation>? webLocation}) = _$_ResearchStudy;
   _ResearchStudy._() : super._();
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
@@ -1731,177 +1807,138 @@ abstract class _ResearchStudy extends ResearchStudy {
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
   @JsonKey(name: '_version')
-  Element? get versionElement => throw _privateConstructorUsedError;
+  Element? get versionElement;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get title => throw _privateConstructorUsedError;
+  String? get title;
   @override
   @JsonKey(name: '_title')
-  Element? get titleElement => throw _privateConstructorUsedError;
+  Element? get titleElement;
   @override
-  List<ResearchStudyLabel>? get label => throw _privateConstructorUsedError;
+  List<ResearchStudyLabel>? get label;
   @override
-  List<Reference>? get protocol => throw _privateConstructorUsedError;
+  List<Reference>? get protocol;
   @override
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  List<Reference>? get partOf;
   @override
-  List<RelatedArtifact>? get relatedArtifact =>
-      throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
+  Element? get dateElement;
   @override
   @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  ResearchStudyStatus? get status => throw _privateConstructorUsedError;
+  ResearchStudyStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  CodeableConcept? get primaryPurposeType => throw _privateConstructorUsedError;
+  CodeableConcept? get primaryPurposeType;
   @override
-  CodeableConcept? get phase => throw _privateConstructorUsedError;
+  CodeableConcept? get phase;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  List<ResearchStudyFocus>? get focus => throw _privateConstructorUsedError;
+  List<ResearchStudyFocus>? get focus;
   @override
-  List<CodeableConcept>? get condition => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get condition;
   @override
-  List<CodeableConcept>? get keyword => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get keyword;
   @override
-  List<CodeableConcept>? get location => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get location;
   @override
-  Markdown? get descriptionSummary => throw _privateConstructorUsedError;
+  Markdown? get descriptionSummary;
   @override
   @JsonKey(name: '_descriptionSummary')
-  Element? get descriptionSummaryElement => throw _privateConstructorUsedError;
+  Element? get descriptionSummaryElement;
   @override
-  Markdown? get description => throw _privateConstructorUsedError;
+  Markdown? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  Period? get period => throw _privateConstructorUsedError;
+  Period? get period;
   @override
-  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact;
   @override
-  Reference? get sponsor => throw _privateConstructorUsedError;
+  Reference? get sponsor;
   @override
-  Reference? get principalInvestigator => throw _privateConstructorUsedError;
+  Reference? get principalInvestigator;
   @override
-  List<Reference>? get site => throw _privateConstructorUsedError;
+  List<Reference>? get site;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
-  List<ResearchStudyClassification>? get classification =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyClassification>? get classification;
   @override
-  List<ResearchStudyAssociatedParty>? get associatedParty =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyAssociatedParty>? get associatedParty;
   @override
-  List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get currentState;
   @override
-  List<ResearchStudyStatusDate>? get statusDate =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyStatusDate>? get statusDate;
   @override
-  CodeableConcept? get whyStopped => throw _privateConstructorUsedError;
+  CodeableConcept? get whyStopped;
   @override
-  ResearchStudyRecruitment? get recruitment =>
-      throw _privateConstructorUsedError;
+  ResearchStudyRecruitment? get recruitment;
   @override
-  List<ResearchStudyComparisonGroup>? get comparisonGroup =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyComparisonGroup>? get comparisonGroup;
   @override
-  List<ResearchStudyObjective>? get objective =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyObjective>? get objective;
   @override
-  List<ResearchStudyOutcomeMeasure>? get outcomeMeasure =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyOutcomeMeasure>? get outcomeMeasure;
   @override
-  List<Reference>? get result => throw _privateConstructorUsedError;
+  List<Reference>? get result;
   @override
-  List<ResearchStudyWebLocation>? get webLocation =>
-      throw _privateConstructorUsedError;
+  List<ResearchStudyWebLocation>? get webLocation;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyCopyWith<_ResearchStudy> get copyWith =>
+  _$$_ResearchStudyCopyWith<_$_ResearchStudy> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ResearchStudyLabel _$ResearchStudyLabelFromJson(Map<String, dynamic> json) {
   return _ResearchStudyLabel.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyLabelTearOff {
-  const _$ResearchStudyLabelTearOff();
-
-  _ResearchStudyLabel call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) {
-    return _ResearchStudyLabel(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      value: value,
-      valueElement: valueElement,
-    );
-  }
-
-  ResearchStudyLabel fromJson(Map<String, Object> json) {
-    return ResearchStudyLabel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyLabel = _$ResearchStudyLabelTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyLabel {
@@ -1925,7 +1962,8 @@ mixin _$ResearchStudyLabel {
 abstract class $ResearchStudyLabelCopyWith<$Res> {
   factory $ResearchStudyLabelCopyWith(
           ResearchStudyLabel value, $Res Function(ResearchStudyLabel) then) =
-      _$ResearchStudyLabelCopyWithImpl<$Res>;
+      _$ResearchStudyLabelCopyWithImpl<$Res, ResearchStudyLabel>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1939,14 +1977,16 @@ abstract class $ResearchStudyLabelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyLabelCopyWithImpl<$Res>
+class _$ResearchStudyLabelCopyWithImpl<$Res, $Val extends ResearchStudyLabel>
     implements $ResearchStudyLabelCopyWith<$Res> {
   _$ResearchStudyLabelCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyLabel _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyLabel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -1957,63 +1997,66 @@ class _$ResearchStudyLabelCopyWithImpl<$Res>
     Object? valueElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String?,
-      valueElement: valueElement == freezed
+      valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueElement {
     if (_value.valueElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
-      return _then(_value.copyWith(valueElement: value));
+      return _then(_value.copyWith(valueElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyLabelCopyWith<$Res>
+abstract class _$$_ResearchStudyLabelCopyWith<$Res>
     implements $ResearchStudyLabelCopyWith<$Res> {
-  factory _$ResearchStudyLabelCopyWith(
-          _ResearchStudyLabel value, $Res Function(_ResearchStudyLabel) then) =
-      __$ResearchStudyLabelCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyLabelCopyWith(_$_ResearchStudyLabel value,
+          $Res Function(_$_ResearchStudyLabel) then) =
+      __$$_ResearchStudyLabelCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2029,16 +2072,14 @@ abstract class _$ResearchStudyLabelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyLabelCopyWithImpl<$Res>
-    extends _$ResearchStudyLabelCopyWithImpl<$Res>
-    implements _$ResearchStudyLabelCopyWith<$Res> {
-  __$ResearchStudyLabelCopyWithImpl(
-      _ResearchStudyLabel _value, $Res Function(_ResearchStudyLabel) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyLabel));
+class __$$_ResearchStudyLabelCopyWithImpl<$Res>
+    extends _$ResearchStudyLabelCopyWithImpl<$Res, _$_ResearchStudyLabel>
+    implements _$$_ResearchStudyLabelCopyWith<$Res> {
+  __$$_ResearchStudyLabelCopyWithImpl(
+      _$_ResearchStudyLabel _value, $Res Function(_$_ResearchStudyLabel) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyLabel get _value => super._value as _ResearchStudyLabel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2048,28 +2089,28 @@ class __$ResearchStudyLabelCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_ResearchStudyLabel(
-      id: id == freezed
+    return _then(_$_ResearchStudyLabel(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      value: value == freezed
+      value: freezed == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as String?,
-      valueElement: valueElement == freezed
+      valueElement: freezed == valueElement
           ? _value.valueElement
           : valueElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -2082,23 +2123,39 @@ class __$ResearchStudyLabelCopyWithImpl<$Res>
 class _$_ResearchStudyLabel extends _ResearchStudyLabel {
   _$_ResearchStudyLabel(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyLabelFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -2115,113 +2172,82 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyLabel &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyLabel &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.value, value) || other.value == value) &&
             (identical(other.valueElement, valueElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueElement, valueElement)));
+                other.valueElement == valueElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(valueElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyLabelCopyWith<_ResearchStudyLabel> get copyWith =>
-      __$ResearchStudyLabelCopyWithImpl<_ResearchStudyLabel>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      value,
+      valueElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyLabelCopyWith<_$_ResearchStudyLabel> get copyWith =>
+      __$$_ResearchStudyLabelCopyWithImpl<_$_ResearchStudyLabel>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyLabelToJson(this);
+    return _$$_ResearchStudyLabelToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyLabel extends ResearchStudyLabel {
   factory _ResearchStudyLabel(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      String? value,
-      @JsonKey(name: '_value') Element? valueElement}) = _$_ResearchStudyLabel;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final String? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_ResearchStudyLabel;
   _ResearchStudyLabel._() : super._();
 
   factory _ResearchStudyLabel.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyLabel.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  String? get value => throw _privateConstructorUsedError;
+  String? get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyLabelCopyWith<_ResearchStudyLabel> get copyWith =>
+  _$$_ResearchStudyLabelCopyWith<_$_ResearchStudyLabel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ResearchStudyFocus _$ResearchStudyFocusFromJson(Map<String, dynamic> json) {
   return _ResearchStudyFocus.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyFocusTearOff {
-  const _$ResearchStudyFocusTearOff();
-
-  _ResearchStudyFocus call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? productCode,
-      List<CodeableConcept>? focusType,
-      Markdown? factor,
-      @JsonKey(name: '_factor') Element? factorElement}) {
-    return _ResearchStudyFocus(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      productCode: productCode,
-      focusType: focusType,
-      factor: factor,
-      factorElement: factorElement,
-    );
-  }
-
-  ResearchStudyFocus fromJson(Map<String, Object> json) {
-    return ResearchStudyFocus.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyFocus = _$ResearchStudyFocusTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyFocus {
@@ -2246,7 +2272,8 @@ mixin _$ResearchStudyFocus {
 abstract class $ResearchStudyFocusCopyWith<$Res> {
   factory $ResearchStudyFocusCopyWith(
           ResearchStudyFocus value, $Res Function(ResearchStudyFocus) then) =
-      _$ResearchStudyFocusCopyWithImpl<$Res>;
+      _$ResearchStudyFocusCopyWithImpl<$Res, ResearchStudyFocus>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2261,14 +2288,16 @@ abstract class $ResearchStudyFocusCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyFocusCopyWithImpl<$Res>
+class _$ResearchStudyFocusCopyWithImpl<$Res, $Val extends ResearchStudyFocus>
     implements $ResearchStudyFocusCopyWith<$Res> {
   _$ResearchStudyFocusCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyFocus _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyFocus) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2280,67 +2309,70 @@ class _$ResearchStudyFocusCopyWithImpl<$Res>
     Object? factorElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      productCode: productCode == freezed
+      productCode: freezed == productCode
           ? _value.productCode
           : productCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      focusType: focusType == freezed
+      focusType: freezed == focusType
           ? _value.focusType
           : focusType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      factor: factor == freezed
+      factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      factorElement: factorElement == freezed
+      factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get productCode {
     if (_value.productCode == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.productCode!, (value) {
-      return _then(_value.copyWith(productCode: value));
+      return _then(_value.copyWith(productCode: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get factorElement {
     if (_value.factorElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.factorElement!, (value) {
-      return _then(_value.copyWith(factorElement: value));
+      return _then(_value.copyWith(factorElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyFocusCopyWith<$Res>
+abstract class _$$_ResearchStudyFocusCopyWith<$Res>
     implements $ResearchStudyFocusCopyWith<$Res> {
-  factory _$ResearchStudyFocusCopyWith(
-          _ResearchStudyFocus value, $Res Function(_ResearchStudyFocus) then) =
-      __$ResearchStudyFocusCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyFocusCopyWith(_$_ResearchStudyFocus value,
+          $Res Function(_$_ResearchStudyFocus) then) =
+      __$$_ResearchStudyFocusCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2357,16 +2389,14 @@ abstract class _$ResearchStudyFocusCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyFocusCopyWithImpl<$Res>
-    extends _$ResearchStudyFocusCopyWithImpl<$Res>
-    implements _$ResearchStudyFocusCopyWith<$Res> {
-  __$ResearchStudyFocusCopyWithImpl(
-      _ResearchStudyFocus _value, $Res Function(_ResearchStudyFocus) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyFocus));
+class __$$_ResearchStudyFocusCopyWithImpl<$Res>
+    extends _$ResearchStudyFocusCopyWithImpl<$Res, _$_ResearchStudyFocus>
+    implements _$$_ResearchStudyFocusCopyWith<$Res> {
+  __$$_ResearchStudyFocusCopyWithImpl(
+      _$_ResearchStudyFocus _value, $Res Function(_$_ResearchStudyFocus) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyFocus get _value => super._value as _ResearchStudyFocus;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2377,32 +2407,32 @@ class __$ResearchStudyFocusCopyWithImpl<$Res>
     Object? factor = freezed,
     Object? factorElement = freezed,
   }) {
-    return _then(_ResearchStudyFocus(
-      id: id == freezed
+    return _then(_$_ResearchStudyFocus(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      productCode: productCode == freezed
+      productCode: freezed == productCode
           ? _value.productCode
           : productCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      focusType: focusType == freezed
-          ? _value.focusType
+      focusType: freezed == focusType
+          ? _value._focusType
           : focusType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      factor: factor == freezed
+      factor: freezed == factor
           ? _value.factor
           : factor // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      factorElement: factorElement == freezed
+      factorElement: freezed == factorElement
           ? _value.factorElement
           : factorElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -2415,28 +2445,52 @@ class __$ResearchStudyFocusCopyWithImpl<$Res>
 class _$_ResearchStudyFocus extends _ResearchStudyFocus {
   _$_ResearchStudyFocus(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.productCode,
-      this.focusType,
+      final List<CodeableConcept>? focusType,
       this.factor,
       @JsonKey(name: '_factor') this.factorElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _focusType = focusType,
+        super._();
 
   factory _$_ResearchStudyFocus.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyFocusFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? productCode;
+  final List<CodeableConcept>? _focusType;
   @override
-  final List<CodeableConcept>? focusType;
+  List<CodeableConcept>? get focusType {
+    final value = _focusType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? factor;
   @override
@@ -2451,59 +2505,58 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyFocus &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyFocus &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.productCode, productCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.productCode, productCode)) &&
-            (identical(other.focusType, focusType) ||
-                const DeepCollectionEquality()
-                    .equals(other.focusType, focusType)) &&
-            (identical(other.factor, factor) ||
-                const DeepCollectionEquality().equals(other.factor, factor)) &&
+                other.productCode == productCode) &&
+            const DeepCollectionEquality()
+                .equals(other._focusType, _focusType) &&
+            (identical(other.factor, factor) || other.factor == factor) &&
             (identical(other.factorElement, factorElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.factorElement, factorElement)));
+                other.factorElement == factorElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(productCode) ^
-      const DeepCollectionEquality().hash(focusType) ^
-      const DeepCollectionEquality().hash(factor) ^
-      const DeepCollectionEquality().hash(factorElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyFocusCopyWith<_ResearchStudyFocus> get copyWith =>
-      __$ResearchStudyFocusCopyWithImpl<_ResearchStudyFocus>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      productCode,
+      const DeepCollectionEquality().hash(_focusType),
+      factor,
+      factorElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyFocusCopyWith<_$_ResearchStudyFocus> get copyWith =>
+      __$$_ResearchStudyFocusCopyWithImpl<_$_ResearchStudyFocus>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyFocusToJson(this);
+    return _$$_ResearchStudyFocusToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyFocus extends ResearchStudyFocus {
   factory _ResearchStudyFocus(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? productCode,
-          List<CodeableConcept>? focusType,
-          Markdown? factor,
-          @JsonKey(name: '_factor') Element? factorElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? productCode,
+          final List<CodeableConcept>? focusType,
+          final Markdown? factor,
+          @JsonKey(name: '_factor') final Element? factorElement}) =
       _$_ResearchStudyFocus;
   _ResearchStudyFocus._() : super._();
 
@@ -2511,25 +2564,24 @@ abstract class _ResearchStudyFocus extends ResearchStudyFocus {
       _$_ResearchStudyFocus.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get productCode => throw _privateConstructorUsedError;
+  CodeableConcept? get productCode;
   @override
-  List<CodeableConcept>? get focusType => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get focusType;
   @override
-  Markdown? get factor => throw _privateConstructorUsedError;
+  Markdown? get factor;
   @override
   @JsonKey(name: '_factor')
-  Element? get factorElement => throw _privateConstructorUsedError;
+  Element? get factorElement;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyFocusCopyWith<_ResearchStudyFocus> get copyWith =>
+  _$$_ResearchStudyFocusCopyWith<_$_ResearchStudyFocus> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2537,33 +2589,6 @@ ResearchStudyClassification _$ResearchStudyClassificationFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyClassification.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyClassificationTearOff {
-  const _$ResearchStudyClassificationTearOff();
-
-  _ResearchStudyClassification call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      List<CodeableConcept>? classifier}) {
-    return _ResearchStudyClassification(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      classifier: classifier,
-    );
-  }
-
-  ResearchStudyClassification fromJson(Map<String, Object> json) {
-    return ResearchStudyClassification.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyClassification = _$ResearchStudyClassificationTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyClassification {
@@ -2586,7 +2611,9 @@ abstract class $ResearchStudyClassificationCopyWith<$Res> {
   factory $ResearchStudyClassificationCopyWith(
           ResearchStudyClassification value,
           $Res Function(ResearchStudyClassification) then) =
-      _$ResearchStudyClassificationCopyWithImpl<$Res>;
+      _$ResearchStudyClassificationCopyWithImpl<$Res,
+          ResearchStudyClassification>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2598,14 +2625,17 @@ abstract class $ResearchStudyClassificationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyClassificationCopyWithImpl<$Res>
+class _$ResearchStudyClassificationCopyWithImpl<$Res,
+        $Val extends ResearchStudyClassification>
     implements $ResearchStudyClassificationCopyWith<$Res> {
   _$ResearchStudyClassificationCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyClassification _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyClassification) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2615,49 +2645,51 @@ class _$ResearchStudyClassificationCopyWithImpl<$Res>
     Object? classifier = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      classifier: classifier == freezed
+      classifier: freezed == classifier
           ? _value.classifier
           : classifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyClassificationCopyWith<$Res>
+abstract class _$$_ResearchStudyClassificationCopyWith<$Res>
     implements $ResearchStudyClassificationCopyWith<$Res> {
-  factory _$ResearchStudyClassificationCopyWith(
-          _ResearchStudyClassification value,
-          $Res Function(_ResearchStudyClassification) then) =
-      __$ResearchStudyClassificationCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyClassificationCopyWith(
+          _$_ResearchStudyClassification value,
+          $Res Function(_$_ResearchStudyClassification) then) =
+      __$$_ResearchStudyClassificationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2670,18 +2702,16 @@ abstract class _$ResearchStudyClassificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyClassificationCopyWithImpl<$Res>
-    extends _$ResearchStudyClassificationCopyWithImpl<$Res>
-    implements _$ResearchStudyClassificationCopyWith<$Res> {
-  __$ResearchStudyClassificationCopyWithImpl(
-      _ResearchStudyClassification _value,
-      $Res Function(_ResearchStudyClassification) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyClassification));
+class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
+    extends _$ResearchStudyClassificationCopyWithImpl<$Res,
+        _$_ResearchStudyClassification>
+    implements _$$_ResearchStudyClassificationCopyWith<$Res> {
+  __$$_ResearchStudyClassificationCopyWithImpl(
+      _$_ResearchStudyClassification _value,
+      $Res Function(_$_ResearchStudyClassification) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyClassification get _value =>
-      super._value as _ResearchStudyClassification;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2690,25 +2720,25 @@ class __$ResearchStudyClassificationCopyWithImpl<$Res>
     Object? type = freezed,
     Object? classifier = freezed,
   }) {
-    return _then(_ResearchStudyClassification(
-      id: id == freezed
+    return _then(_$_ResearchStudyClassification(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      classifier: classifier == freezed
-          ? _value.classifier
+      classifier: freezed == classifier
+          ? _value._classifier
           : classifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -2720,26 +2750,49 @@ class __$ResearchStudyClassificationCopyWithImpl<$Res>
 class _$_ResearchStudyClassification extends _ResearchStudyClassification {
   _$_ResearchStudyClassification(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
-      this.classifier})
-      : super._();
+      final List<CodeableConcept>? classifier})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _classifier = classifier,
+        super._();
 
   factory _$_ResearchStudyClassification.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyClassificationFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
+  final List<CodeableConcept>? _classifier;
   @override
-  final List<CodeableConcept>? classifier;
+  List<CodeableConcept>? get classifier {
+    final value = _classifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -2749,71 +2802,71 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyClassification &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.classifier, classifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.classifier, classifier)));
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyClassification &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality()
+                .equals(other._classifier, _classifier));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(classifier);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyClassificationCopyWith<_ResearchStudyClassification>
-      get copyWith => __$ResearchStudyClassificationCopyWithImpl<
-          _ResearchStudyClassification>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      const DeepCollectionEquality().hash(_classifier));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyClassificationCopyWith<_$_ResearchStudyClassification>
+      get copyWith => __$$_ResearchStudyClassificationCopyWithImpl<
+          _$_ResearchStudyClassification>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyClassificationToJson(this);
+    return _$$_ResearchStudyClassificationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyClassification
     extends ResearchStudyClassification {
   factory _ResearchStudyClassification(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      List<CodeableConcept>? classifier}) = _$_ResearchStudyClassification;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final List<CodeableConcept>? classifier}) =
+      _$_ResearchStudyClassification;
   _ResearchStudyClassification._() : super._();
 
   factory _ResearchStudyClassification.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyClassification.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get classifier;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyClassificationCopyWith<_ResearchStudyClassification>
+  _$$_ResearchStudyClassificationCopyWith<_$_ResearchStudyClassification>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2821,39 +2874,6 @@ ResearchStudyAssociatedParty _$ResearchStudyAssociatedPartyFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyAssociatedParty.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyAssociatedPartyTearOff {
-  const _$ResearchStudyAssociatedPartyTearOff();
-
-  _ResearchStudyAssociatedParty call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      required CodeableConcept role,
-      List<CodeableConcept>? classifier,
-      Reference? party}) {
-    return _ResearchStudyAssociatedParty(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      role: role,
-      classifier: classifier,
-      party: party,
-    );
-  }
-
-  ResearchStudyAssociatedParty fromJson(Map<String, Object> json) {
-    return ResearchStudyAssociatedParty.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyAssociatedParty = _$ResearchStudyAssociatedPartyTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyAssociatedParty {
@@ -2880,7 +2900,9 @@ abstract class $ResearchStudyAssociatedPartyCopyWith<$Res> {
   factory $ResearchStudyAssociatedPartyCopyWith(
           ResearchStudyAssociatedParty value,
           $Res Function(ResearchStudyAssociatedParty) then) =
-      _$ResearchStudyAssociatedPartyCopyWithImpl<$Res>;
+      _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
+          ResearchStudyAssociatedParty>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2897,14 +2919,17 @@ abstract class $ResearchStudyAssociatedPartyCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
+class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
+        $Val extends ResearchStudyAssociatedParty>
     implements $ResearchStudyAssociatedPartyCopyWith<$Res> {
   _$ResearchStudyAssociatedPartyCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyAssociatedParty _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyAssociatedParty) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2912,84 +2937,88 @@ class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
-    Object? role = freezed,
+    Object? role = null,
     Object? classifier = freezed,
     Object? party = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      role: role == freezed
+      role: null == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      classifier: classifier == freezed
+      classifier: freezed == classifier
           ? _value.classifier
           : classifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      party: party == freezed
+      party: freezed == party
           ? _value.party
           : party // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get role {
     return $CodeableConceptCopyWith<$Res>(_value.role, (value) {
-      return _then(_value.copyWith(role: value));
+      return _then(_value.copyWith(role: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get party {
     if (_value.party == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.party!, (value) {
-      return _then(_value.copyWith(party: value));
+      return _then(_value.copyWith(party: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyAssociatedPartyCopyWith<$Res>
+abstract class _$$_ResearchStudyAssociatedPartyCopyWith<$Res>
     implements $ResearchStudyAssociatedPartyCopyWith<$Res> {
-  factory _$ResearchStudyAssociatedPartyCopyWith(
-          _ResearchStudyAssociatedParty value,
-          $Res Function(_ResearchStudyAssociatedParty) then) =
-      __$ResearchStudyAssociatedPartyCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyAssociatedPartyCopyWith(
+          _$_ResearchStudyAssociatedParty value,
+          $Res Function(_$_ResearchStudyAssociatedParty) then) =
+      __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3009,18 +3038,16 @@ abstract class _$ResearchStudyAssociatedPartyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
-    extends _$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
-    implements _$ResearchStudyAssociatedPartyCopyWith<$Res> {
-  __$ResearchStudyAssociatedPartyCopyWithImpl(
-      _ResearchStudyAssociatedParty _value,
-      $Res Function(_ResearchStudyAssociatedParty) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyAssociatedParty));
+class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
+    extends _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
+        _$_ResearchStudyAssociatedParty>
+    implements _$$_ResearchStudyAssociatedPartyCopyWith<$Res> {
+  __$$_ResearchStudyAssociatedPartyCopyWithImpl(
+      _$_ResearchStudyAssociatedParty _value,
+      $Res Function(_$_ResearchStudyAssociatedParty) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyAssociatedParty get _value =>
-      super._value as _ResearchStudyAssociatedParty;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3028,40 +3055,40 @@ class __$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
-    Object? role = freezed,
+    Object? role = null,
     Object? classifier = freezed,
     Object? party = freezed,
   }) {
-    return _then(_ResearchStudyAssociatedParty(
-      id: id == freezed
+    return _then(_$_ResearchStudyAssociatedParty(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      role: role == freezed
+      role: null == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      classifier: classifier == freezed
-          ? _value.classifier
+      classifier: freezed == classifier
+          ? _value._classifier
           : classifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      party: party == freezed
+      party: freezed == party
           ? _value.party
           : party // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -3074,25 +3101,42 @@ class __$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
 class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   _$_ResearchStudyAssociatedParty(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       required this.role,
-      this.classifier,
+      final List<CodeableConcept>? classifier,
       this.party})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _classifier = classifier,
+        super._();
 
   factory _$_ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyAssociatedPartyFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
   @override
@@ -3100,8 +3144,15 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   final Element? nameElement;
   @override
   final CodeableConcept role;
+  final List<CodeableConcept>? _classifier;
   @override
-  final List<CodeableConcept>? classifier;
+  List<CodeableConcept>? get classifier {
+    final value = _classifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? party;
 
@@ -3113,91 +3164,87 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyAssociatedParty &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyAssociatedParty &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.role, role) ||
-                const DeepCollectionEquality().equals(other.role, role)) &&
-            (identical(other.classifier, classifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.classifier, classifier)) &&
-            (identical(other.party, party) ||
-                const DeepCollectionEquality().equals(other.party, party)));
+                other.nameElement == nameElement) &&
+            (identical(other.role, role) || other.role == role) &&
+            const DeepCollectionEquality()
+                .equals(other._classifier, _classifier) &&
+            (identical(other.party, party) || other.party == party));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(role) ^
-      const DeepCollectionEquality().hash(classifier) ^
-      const DeepCollectionEquality().hash(party);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyAssociatedPartyCopyWith<_ResearchStudyAssociatedParty>
-      get copyWith => __$ResearchStudyAssociatedPartyCopyWithImpl<
-          _ResearchStudyAssociatedParty>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      nameElement,
+      role,
+      const DeepCollectionEquality().hash(_classifier),
+      party);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyAssociatedPartyCopyWith<_$_ResearchStudyAssociatedParty>
+      get copyWith => __$$_ResearchStudyAssociatedPartyCopyWithImpl<
+          _$_ResearchStudyAssociatedParty>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyAssociatedPartyToJson(this);
+    return _$$_ResearchStudyAssociatedPartyToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyAssociatedParty
     extends ResearchStudyAssociatedParty {
   factory _ResearchStudyAssociatedParty(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      required CodeableConcept role,
-      List<CodeableConcept>? classifier,
-      Reference? party}) = _$_ResearchStudyAssociatedParty;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      required final CodeableConcept role,
+      final List<CodeableConcept>? classifier,
+      final Reference? party}) = _$_ResearchStudyAssociatedParty;
   _ResearchStudyAssociatedParty._() : super._();
 
   factory _ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyAssociatedParty.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  CodeableConcept get role => throw _privateConstructorUsedError;
+  CodeableConcept get role;
   @override
-  List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get classifier;
   @override
-  Reference? get party => throw _privateConstructorUsedError;
+  Reference? get party;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyAssociatedPartyCopyWith<_ResearchStudyAssociatedParty>
+  _$$_ResearchStudyAssociatedPartyCopyWith<_$_ResearchStudyAssociatedParty>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3205,37 +3252,6 @@ ResearchStudyStatusDate _$ResearchStudyStatusDateFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyStatusDate.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyStatusDateTearOff {
-  const _$ResearchStudyStatusDateTearOff();
-
-  _ResearchStudyStatusDate call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept activity,
-      Boolean? actual,
-      @JsonKey(name: '_actual') Element? actualElement,
-      required Period period}) {
-    return _ResearchStudyStatusDate(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      activity: activity,
-      actual: actual,
-      actualElement: actualElement,
-      period: period,
-    );
-  }
-
-  ResearchStudyStatusDate fromJson(Map<String, Object> json) {
-    return ResearchStudyStatusDate.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyStatusDate = _$ResearchStudyStatusDateTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyStatusDate {
@@ -3260,7 +3276,8 @@ mixin _$ResearchStudyStatusDate {
 abstract class $ResearchStudyStatusDateCopyWith<$Res> {
   factory $ResearchStudyStatusDateCopyWith(ResearchStudyStatusDate value,
           $Res Function(ResearchStudyStatusDate) then) =
-      _$ResearchStudyStatusDateCopyWithImpl<$Res>;
+      _$ResearchStudyStatusDateCopyWithImpl<$Res, ResearchStudyStatusDate>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3276,89 +3293,96 @@ abstract class $ResearchStudyStatusDateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyStatusDateCopyWithImpl<$Res>
+class _$ResearchStudyStatusDateCopyWithImpl<$Res,
+        $Val extends ResearchStudyStatusDate>
     implements $ResearchStudyStatusDateCopyWith<$Res> {
   _$ResearchStudyStatusDateCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyStatusDate _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyStatusDate) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? activity = freezed,
+    Object? activity = null,
     Object? actual = freezed,
     Object? actualElement = freezed,
-    Object? period = freezed,
+    Object? period = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      activity: activity == freezed
+      activity: null == activity
           ? _value.activity
           : activity // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      actual: actual == freezed
+      actual: freezed == actual
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      actualElement: actualElement == freezed
+      actualElement: freezed == actualElement
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      period: period == freezed
+      period: null == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get activity {
     return $CodeableConceptCopyWith<$Res>(_value.activity, (value) {
-      return _then(_value.copyWith(activity: value));
+      return _then(_value.copyWith(activity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get actualElement {
     if (_value.actualElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.actualElement!, (value) {
-      return _then(_value.copyWith(actualElement: value));
+      return _then(_value.copyWith(actualElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res> get period {
     return $PeriodCopyWith<$Res>(_value.period, (value) {
-      return _then(_value.copyWith(period: value));
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyStatusDateCopyWith<$Res>
+abstract class _$$_ResearchStudyStatusDateCopyWith<$Res>
     implements $ResearchStudyStatusDateCopyWith<$Res> {
-  factory _$ResearchStudyStatusDateCopyWith(_ResearchStudyStatusDate value,
-          $Res Function(_ResearchStudyStatusDate) then) =
-      __$ResearchStudyStatusDateCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyStatusDateCopyWith(_$_ResearchStudyStatusDate value,
+          $Res Function(_$_ResearchStudyStatusDate) then) =
+      __$$_ResearchStudyStatusDateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3377,53 +3401,51 @@ abstract class _$ResearchStudyStatusDateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyStatusDateCopyWithImpl<$Res>
-    extends _$ResearchStudyStatusDateCopyWithImpl<$Res>
-    implements _$ResearchStudyStatusDateCopyWith<$Res> {
-  __$ResearchStudyStatusDateCopyWithImpl(_ResearchStudyStatusDate _value,
-      $Res Function(_ResearchStudyStatusDate) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyStatusDate));
+class __$$_ResearchStudyStatusDateCopyWithImpl<$Res>
+    extends _$ResearchStudyStatusDateCopyWithImpl<$Res,
+        _$_ResearchStudyStatusDate>
+    implements _$$_ResearchStudyStatusDateCopyWith<$Res> {
+  __$$_ResearchStudyStatusDateCopyWithImpl(_$_ResearchStudyStatusDate _value,
+      $Res Function(_$_ResearchStudyStatusDate) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyStatusDate get _value =>
-      super._value as _ResearchStudyStatusDate;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? activity = freezed,
+    Object? activity = null,
     Object? actual = freezed,
     Object? actualElement = freezed,
-    Object? period = freezed,
+    Object? period = null,
   }) {
-    return _then(_ResearchStudyStatusDate(
-      id: id == freezed
+    return _then(_$_ResearchStudyStatusDate(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      activity: activity == freezed
+      activity: null == activity
           ? _value.activity
           : activity // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      actual: actual == freezed
+      actual: freezed == actual
           ? _value.actual
           : actual // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      actualElement: actualElement == freezed
+      actualElement: freezed == actualElement
           ? _value.actualElement
           : actualElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      period: period == freezed
+      period: null == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period,
@@ -3436,24 +3458,40 @@ class __$ResearchStudyStatusDateCopyWithImpl<$Res>
 class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
   _$_ResearchStudyStatusDate(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.activity,
       this.actual,
       @JsonKey(name: '_actual') this.actualElement,
       required this.period})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ResearchStudyStatusDate.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyStatusDateFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept activity;
   @override
@@ -3472,126 +3510,89 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyStatusDate &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyStatusDate &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.activity, activity) ||
-                const DeepCollectionEquality()
-                    .equals(other.activity, activity)) &&
-            (identical(other.actual, actual) ||
-                const DeepCollectionEquality().equals(other.actual, actual)) &&
+                other.activity == activity) &&
+            (identical(other.actual, actual) || other.actual == actual) &&
             (identical(other.actualElement, actualElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.actualElement, actualElement)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)));
+                other.actualElement == actualElement) &&
+            (identical(other.period, period) || other.period == period));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(activity) ^
-      const DeepCollectionEquality().hash(actual) ^
-      const DeepCollectionEquality().hash(actualElement) ^
-      const DeepCollectionEquality().hash(period);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyStatusDateCopyWith<_ResearchStudyStatusDate> get copyWith =>
-      __$ResearchStudyStatusDateCopyWithImpl<_ResearchStudyStatusDate>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      activity,
+      actual,
+      actualElement,
+      period);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyStatusDateCopyWith<_$_ResearchStudyStatusDate>
+      get copyWith =>
+          __$$_ResearchStudyStatusDateCopyWithImpl<_$_ResearchStudyStatusDate>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyStatusDateToJson(this);
+    return _$$_ResearchStudyStatusDateToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyStatusDate extends ResearchStudyStatusDate {
   factory _ResearchStudyStatusDate(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept activity,
-      Boolean? actual,
-      @JsonKey(name: '_actual') Element? actualElement,
-      required Period period}) = _$_ResearchStudyStatusDate;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept activity,
+      final Boolean? actual,
+      @JsonKey(name: '_actual') final Element? actualElement,
+      required final Period period}) = _$_ResearchStudyStatusDate;
   _ResearchStudyStatusDate._() : super._();
 
   factory _ResearchStudyStatusDate.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyStatusDate.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get activity => throw _privateConstructorUsedError;
+  CodeableConcept get activity;
   @override
-  Boolean? get actual => throw _privateConstructorUsedError;
+  Boolean? get actual;
   @override
   @JsonKey(name: '_actual')
-  Element? get actualElement => throw _privateConstructorUsedError;
+  Element? get actualElement;
   @override
-  Period get period => throw _privateConstructorUsedError;
+  Period get period;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyStatusDateCopyWith<_ResearchStudyStatusDate> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ResearchStudyStatusDateCopyWith<_$_ResearchStudyStatusDate>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ResearchStudyRecruitment _$ResearchStudyRecruitmentFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyRecruitment.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyRecruitmentTearOff {
-  const _$ResearchStudyRecruitmentTearOff();
-
-  _ResearchStudyRecruitment call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      UnsignedInt? targetNumber,
-      @JsonKey(name: '_targetNumber') Element? targetNumberElement,
-      UnsignedInt? actualNumber,
-      @JsonKey(name: '_actualNumber') Element? actualNumberElement,
-      Reference? eligibility,
-      Reference? actualGroup}) {
-    return _ResearchStudyRecruitment(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      targetNumber: targetNumber,
-      targetNumberElement: targetNumberElement,
-      actualNumber: actualNumber,
-      actualNumberElement: actualNumberElement,
-      eligibility: eligibility,
-      actualGroup: actualGroup,
-    );
-  }
-
-  ResearchStudyRecruitment fromJson(Map<String, Object> json) {
-    return ResearchStudyRecruitment.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyRecruitment = _$ResearchStudyRecruitmentTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyRecruitment {
@@ -3619,7 +3620,8 @@ mixin _$ResearchStudyRecruitment {
 abstract class $ResearchStudyRecruitmentCopyWith<$Res> {
   factory $ResearchStudyRecruitmentCopyWith(ResearchStudyRecruitment value,
           $Res Function(ResearchStudyRecruitment) then) =
-      _$ResearchStudyRecruitmentCopyWithImpl<$Res>;
+      _$ResearchStudyRecruitmentCopyWithImpl<$Res, ResearchStudyRecruitment>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3638,14 +3640,17 @@ abstract class $ResearchStudyRecruitmentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyRecruitmentCopyWithImpl<$Res>
+class _$ResearchStudyRecruitmentCopyWithImpl<$Res,
+        $Val extends ResearchStudyRecruitment>
     implements $ResearchStudyRecruitmentCopyWith<$Res> {
   _$ResearchStudyRecruitmentCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyRecruitment _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyRecruitment) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3659,97 +3664,103 @@ class _$ResearchStudyRecruitmentCopyWithImpl<$Res>
     Object? actualGroup = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      targetNumber: targetNumber == freezed
+      targetNumber: freezed == targetNumber
           ? _value.targetNumber
           : targetNumber // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      targetNumberElement: targetNumberElement == freezed
+      targetNumberElement: freezed == targetNumberElement
           ? _value.targetNumberElement
           : targetNumberElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      actualNumber: actualNumber == freezed
+      actualNumber: freezed == actualNumber
           ? _value.actualNumber
           : actualNumber // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      actualNumberElement: actualNumberElement == freezed
+      actualNumberElement: freezed == actualNumberElement
           ? _value.actualNumberElement
           : actualNumberElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eligibility: eligibility == freezed
+      eligibility: freezed == eligibility
           ? _value.eligibility
           : eligibility // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      actualGroup: actualGroup == freezed
+      actualGroup: freezed == actualGroup
           ? _value.actualGroup
           : actualGroup // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get targetNumberElement {
     if (_value.targetNumberElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.targetNumberElement!, (value) {
-      return _then(_value.copyWith(targetNumberElement: value));
+      return _then(_value.copyWith(targetNumberElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get actualNumberElement {
     if (_value.actualNumberElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.actualNumberElement!, (value) {
-      return _then(_value.copyWith(actualNumberElement: value));
+      return _then(_value.copyWith(actualNumberElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get eligibility {
     if (_value.eligibility == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.eligibility!, (value) {
-      return _then(_value.copyWith(eligibility: value));
+      return _then(_value.copyWith(eligibility: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get actualGroup {
     if (_value.actualGroup == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.actualGroup!, (value) {
-      return _then(_value.copyWith(actualGroup: value));
+      return _then(_value.copyWith(actualGroup: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyRecruitmentCopyWith<$Res>
+abstract class _$$_ResearchStudyRecruitmentCopyWith<$Res>
     implements $ResearchStudyRecruitmentCopyWith<$Res> {
-  factory _$ResearchStudyRecruitmentCopyWith(_ResearchStudyRecruitment value,
-          $Res Function(_ResearchStudyRecruitment) then) =
-      __$ResearchStudyRecruitmentCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyRecruitmentCopyWith(
+          _$_ResearchStudyRecruitment value,
+          $Res Function(_$_ResearchStudyRecruitment) then) =
+      __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3772,17 +3783,15 @@ abstract class _$ResearchStudyRecruitmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyRecruitmentCopyWithImpl<$Res>
-    extends _$ResearchStudyRecruitmentCopyWithImpl<$Res>
-    implements _$ResearchStudyRecruitmentCopyWith<$Res> {
-  __$ResearchStudyRecruitmentCopyWithImpl(_ResearchStudyRecruitment _value,
-      $Res Function(_ResearchStudyRecruitment) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyRecruitment));
+class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
+    extends _$ResearchStudyRecruitmentCopyWithImpl<$Res,
+        _$_ResearchStudyRecruitment>
+    implements _$$_ResearchStudyRecruitmentCopyWith<$Res> {
+  __$$_ResearchStudyRecruitmentCopyWithImpl(_$_ResearchStudyRecruitment _value,
+      $Res Function(_$_ResearchStudyRecruitment) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyRecruitment get _value =>
-      super._value as _ResearchStudyRecruitment;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3795,40 +3804,40 @@ class __$ResearchStudyRecruitmentCopyWithImpl<$Res>
     Object? eligibility = freezed,
     Object? actualGroup = freezed,
   }) {
-    return _then(_ResearchStudyRecruitment(
-      id: id == freezed
+    return _then(_$_ResearchStudyRecruitment(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      targetNumber: targetNumber == freezed
+      targetNumber: freezed == targetNumber
           ? _value.targetNumber
           : targetNumber // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      targetNumberElement: targetNumberElement == freezed
+      targetNumberElement: freezed == targetNumberElement
           ? _value.targetNumberElement
           : targetNumberElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      actualNumber: actualNumber == freezed
+      actualNumber: freezed == actualNumber
           ? _value.actualNumber
           : actualNumber // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      actualNumberElement: actualNumberElement == freezed
+      actualNumberElement: freezed == actualNumberElement
           ? _value.actualNumberElement
           : actualNumberElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eligibility: eligibility == freezed
+      eligibility: freezed == eligibility
           ? _value.eligibility
           : eligibility // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      actualGroup: actualGroup == freezed
+      actualGroup: freezed == actualGroup
           ? _value.actualGroup
           : actualGroup // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -3841,26 +3850,42 @@ class __$ResearchStudyRecruitmentCopyWithImpl<$Res>
 class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
   _$_ResearchStudyRecruitment(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.targetNumber,
       @JsonKey(name: '_targetNumber') this.targetNumberElement,
       this.actualNumber,
       @JsonKey(name: '_actualNumber') this.actualNumberElement,
       this.eligibility,
       this.actualGroup})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyRecruitmentFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final UnsignedInt? targetNumber;
   @override
@@ -3884,151 +3909,103 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyRecruitment &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyRecruitment &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.targetNumber, targetNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetNumber, targetNumber)) &&
+                other.targetNumber == targetNumber) &&
             (identical(other.targetNumberElement, targetNumberElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetNumberElement, targetNumberElement)) &&
+                other.targetNumberElement == targetNumberElement) &&
             (identical(other.actualNumber, actualNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.actualNumber, actualNumber)) &&
+                other.actualNumber == actualNumber) &&
             (identical(other.actualNumberElement, actualNumberElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.actualNumberElement, actualNumberElement)) &&
+                other.actualNumberElement == actualNumberElement) &&
             (identical(other.eligibility, eligibility) ||
-                const DeepCollectionEquality()
-                    .equals(other.eligibility, eligibility)) &&
+                other.eligibility == eligibility) &&
             (identical(other.actualGroup, actualGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.actualGroup, actualGroup)));
+                other.actualGroup == actualGroup));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(targetNumber) ^
-      const DeepCollectionEquality().hash(targetNumberElement) ^
-      const DeepCollectionEquality().hash(actualNumber) ^
-      const DeepCollectionEquality().hash(actualNumberElement) ^
-      const DeepCollectionEquality().hash(eligibility) ^
-      const DeepCollectionEquality().hash(actualGroup);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyRecruitmentCopyWith<_ResearchStudyRecruitment> get copyWith =>
-      __$ResearchStudyRecruitmentCopyWithImpl<_ResearchStudyRecruitment>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      targetNumber,
+      targetNumberElement,
+      actualNumber,
+      actualNumberElement,
+      eligibility,
+      actualGroup);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyRecruitmentCopyWith<_$_ResearchStudyRecruitment>
+      get copyWith => __$$_ResearchStudyRecruitmentCopyWithImpl<
+          _$_ResearchStudyRecruitment>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyRecruitmentToJson(this);
+    return _$$_ResearchStudyRecruitmentToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
   factory _ResearchStudyRecruitment(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      UnsignedInt? targetNumber,
-      @JsonKey(name: '_targetNumber') Element? targetNumberElement,
-      UnsignedInt? actualNumber,
-      @JsonKey(name: '_actualNumber') Element? actualNumberElement,
-      Reference? eligibility,
-      Reference? actualGroup}) = _$_ResearchStudyRecruitment;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final UnsignedInt? targetNumber,
+      @JsonKey(name: '_targetNumber') final Element? targetNumberElement,
+      final UnsignedInt? actualNumber,
+      @JsonKey(name: '_actualNumber') final Element? actualNumberElement,
+      final Reference? eligibility,
+      final Reference? actualGroup}) = _$_ResearchStudyRecruitment;
   _ResearchStudyRecruitment._() : super._();
 
   factory _ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyRecruitment.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  UnsignedInt? get targetNumber => throw _privateConstructorUsedError;
+  UnsignedInt? get targetNumber;
   @override
   @JsonKey(name: '_targetNumber')
-  Element? get targetNumberElement => throw _privateConstructorUsedError;
+  Element? get targetNumberElement;
   @override
-  UnsignedInt? get actualNumber => throw _privateConstructorUsedError;
+  UnsignedInt? get actualNumber;
   @override
   @JsonKey(name: '_actualNumber')
-  Element? get actualNumberElement => throw _privateConstructorUsedError;
+  Element? get actualNumberElement;
   @override
-  Reference? get eligibility => throw _privateConstructorUsedError;
+  Reference? get eligibility;
   @override
-  Reference? get actualGroup => throw _privateConstructorUsedError;
+  Reference? get actualGroup;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyRecruitmentCopyWith<_ResearchStudyRecruitment> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ResearchStudyRecruitmentCopyWith<_$_ResearchStudyRecruitment>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ResearchStudyComparisonGroup _$ResearchStudyComparisonGroupFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyComparisonGroup.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyComparisonGroupTearOff {
-  const _$ResearchStudyComparisonGroupTearOff();
-
-  _ResearchStudyComparisonGroup call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? identifierUri,
-      @JsonKey(name: '_identifierUri') Element? identifierUriElement,
-      Identifier? identifierIdentifier,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? type,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Reference>? intendedExposure,
-      Reference? observedGroup}) {
-    return _ResearchStudyComparisonGroup(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifierUri: identifierUri,
-      identifierUriElement: identifierUriElement,
-      identifierIdentifier: identifierIdentifier,
-      name: name,
-      nameElement: nameElement,
-      type: type,
-      description: description,
-      descriptionElement: descriptionElement,
-      intendedExposure: intendedExposure,
-      observedGroup: observedGroup,
-    );
-  }
-
-  ResearchStudyComparisonGroup fromJson(Map<String, Object> json) {
-    return ResearchStudyComparisonGroup.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyComparisonGroup = _$ResearchStudyComparisonGroupTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyComparisonGroup {
@@ -4062,7 +4039,9 @@ abstract class $ResearchStudyComparisonGroupCopyWith<$Res> {
   factory $ResearchStudyComparisonGroupCopyWith(
           ResearchStudyComparisonGroup value,
           $Res Function(ResearchStudyComparisonGroup) then) =
-      _$ResearchStudyComparisonGroupCopyWithImpl<$Res>;
+      _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
+          ResearchStudyComparisonGroup>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4087,14 +4066,17 @@ abstract class $ResearchStudyComparisonGroupCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyComparisonGroupCopyWithImpl<$Res>
+class _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
+        $Val extends ResearchStudyComparisonGroup>
     implements $ResearchStudyComparisonGroupCopyWith<$Res> {
   _$ResearchStudyComparisonGroupCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyComparisonGroup _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyComparisonGroup) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4112,136 +4094,143 @@ class _$ResearchStudyComparisonGroupCopyWithImpl<$Res>
     Object? observedGroup = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifierUri: identifierUri == freezed
+      identifierUri: freezed == identifierUri
           ? _value.identifierUri
           : identifierUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      identifierUriElement: identifierUriElement == freezed
+      identifierUriElement: freezed == identifierUriElement
           ? _value.identifierUriElement
           : identifierUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      identifierIdentifier: identifierIdentifier == freezed
+      identifierIdentifier: freezed == identifierIdentifier
           ? _value.identifierIdentifier
           : identifierIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      intendedExposure: intendedExposure == freezed
+      intendedExposure: freezed == intendedExposure
           ? _value.intendedExposure
           : intendedExposure // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      observedGroup: observedGroup == freezed
+      observedGroup: freezed == observedGroup
           ? _value.observedGroup
           : observedGroup // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get identifierUriElement {
     if (_value.identifierUriElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.identifierUriElement!, (value) {
-      return _then(_value.copyWith(identifierUriElement: value));
+      return _then(_value.copyWith(identifierUriElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifierIdentifier {
     if (_value.identifierIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.identifierIdentifier!, (value) {
-      return _then(_value.copyWith(identifierIdentifier: value));
+      return _then(_value.copyWith(identifierIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get observedGroup {
     if (_value.observedGroup == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.observedGroup!, (value) {
-      return _then(_value.copyWith(observedGroup: value));
+      return _then(_value.copyWith(observedGroup: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyComparisonGroupCopyWith<$Res>
+abstract class _$$_ResearchStudyComparisonGroupCopyWith<$Res>
     implements $ResearchStudyComparisonGroupCopyWith<$Res> {
-  factory _$ResearchStudyComparisonGroupCopyWith(
-          _ResearchStudyComparisonGroup value,
-          $Res Function(_ResearchStudyComparisonGroup) then) =
-      __$ResearchStudyComparisonGroupCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyComparisonGroupCopyWith(
+          _$_ResearchStudyComparisonGroup value,
+          $Res Function(_$_ResearchStudyComparisonGroup) then) =
+      __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4272,18 +4261,16 @@ abstract class _$ResearchStudyComparisonGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyComparisonGroupCopyWithImpl<$Res>
-    extends _$ResearchStudyComparisonGroupCopyWithImpl<$Res>
-    implements _$ResearchStudyComparisonGroupCopyWith<$Res> {
-  __$ResearchStudyComparisonGroupCopyWithImpl(
-      _ResearchStudyComparisonGroup _value,
-      $Res Function(_ResearchStudyComparisonGroup) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyComparisonGroup));
+class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
+    extends _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
+        _$_ResearchStudyComparisonGroup>
+    implements _$$_ResearchStudyComparisonGroupCopyWith<$Res> {
+  __$$_ResearchStudyComparisonGroupCopyWithImpl(
+      _$_ResearchStudyComparisonGroup _value,
+      $Res Function(_$_ResearchStudyComparisonGroup) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyComparisonGroup get _value =>
-      super._value as _ResearchStudyComparisonGroup;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4300,56 +4287,56 @@ class __$ResearchStudyComparisonGroupCopyWithImpl<$Res>
     Object? intendedExposure = freezed,
     Object? observedGroup = freezed,
   }) {
-    return _then(_ResearchStudyComparisonGroup(
-      id: id == freezed
+    return _then(_$_ResearchStudyComparisonGroup(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifierUri: identifierUri == freezed
+      identifierUri: freezed == identifierUri
           ? _value.identifierUri
           : identifierUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      identifierUriElement: identifierUriElement == freezed
+      identifierUriElement: freezed == identifierUriElement
           ? _value.identifierUriElement
           : identifierUriElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      identifierIdentifier: identifierIdentifier == freezed
+      identifierIdentifier: freezed == identifierIdentifier
           ? _value.identifierIdentifier
           : identifierIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      intendedExposure: intendedExposure == freezed
-          ? _value.intendedExposure
+      intendedExposure: freezed == intendedExposure
+          ? _value._intendedExposure
           : intendedExposure // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      observedGroup: observedGroup == freezed
+      observedGroup: freezed == observedGroup
           ? _value.observedGroup
           : observedGroup // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -4362,8 +4349,8 @@ class __$ResearchStudyComparisonGroupCopyWithImpl<$Res>
 class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   _$_ResearchStudyComparisonGroup(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.identifierUri,
       @JsonKey(name: '_identifierUri') this.identifierUriElement,
       this.identifierIdentifier,
@@ -4372,20 +4359,37 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
       this.type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      this.intendedExposure,
+      final List<Reference>? intendedExposure,
       this.observedGroup})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _intendedExposure = intendedExposure,
+        super._();
 
   factory _$_ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyComparisonGroupFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? identifierUri;
   @override
@@ -4405,8 +4409,15 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+  final List<Reference>? _intendedExposure;
   @override
-  final List<Reference>? intendedExposure;
+  List<Reference>? get intendedExposure {
+    final value = _intendedExposure;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Reference? observedGroup;
 
@@ -4418,129 +4429,120 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyComparisonGroup &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyComparisonGroup &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.identifierUri, identifierUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifierUri, identifierUri)) &&
+                other.identifierUri == identifierUri) &&
             (identical(other.identifierUriElement, identifierUriElement) ||
-                const DeepCollectionEquality().equals(
-                    other.identifierUriElement, identifierUriElement)) &&
+                other.identifierUriElement == identifierUriElement) &&
             (identical(other.identifierIdentifier, identifierIdentifier) ||
-                const DeepCollectionEquality().equals(
-                    other.identifierIdentifier, identifierIdentifier)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+                other.identifierIdentifier == identifierIdentifier) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.nameElement == nameElement) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.intendedExposure, intendedExposure) ||
-                const DeepCollectionEquality()
-                    .equals(other.intendedExposure, intendedExposure)) &&
+                other.descriptionElement == descriptionElement) &&
+            const DeepCollectionEquality()
+                .equals(other._intendedExposure, _intendedExposure) &&
             (identical(other.observedGroup, observedGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.observedGroup, observedGroup)));
+                other.observedGroup == observedGroup));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifierUri) ^
-      const DeepCollectionEquality().hash(identifierUriElement) ^
-      const DeepCollectionEquality().hash(identifierIdentifier) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(intendedExposure) ^
-      const DeepCollectionEquality().hash(observedGroup);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyComparisonGroupCopyWith<_ResearchStudyComparisonGroup>
-      get copyWith => __$ResearchStudyComparisonGroupCopyWithImpl<
-          _ResearchStudyComparisonGroup>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      identifierUri,
+      identifierUriElement,
+      identifierIdentifier,
+      name,
+      nameElement,
+      type,
+      description,
+      descriptionElement,
+      const DeepCollectionEquality().hash(_intendedExposure),
+      observedGroup);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyComparisonGroupCopyWith<_$_ResearchStudyComparisonGroup>
+      get copyWith => __$$_ResearchStudyComparisonGroupCopyWithImpl<
+          _$_ResearchStudyComparisonGroup>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyComparisonGroupToJson(this);
+    return _$$_ResearchStudyComparisonGroupToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyComparisonGroup
     extends ResearchStudyComparisonGroup {
   factory _ResearchStudyComparisonGroup(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? identifierUri,
-      @JsonKey(name: '_identifierUri') Element? identifierUriElement,
-      Identifier? identifierIdentifier,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? type,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<Reference>? intendedExposure,
-      Reference? observedGroup}) = _$_ResearchStudyComparisonGroup;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? identifierUri,
+      @JsonKey(name: '_identifierUri') final Element? identifierUriElement,
+      final Identifier? identifierIdentifier,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final CodeableConcept? type,
+      final Markdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<Reference>? intendedExposure,
+      final Reference? observedGroup}) = _$_ResearchStudyComparisonGroup;
   _ResearchStudyComparisonGroup._() : super._();
 
   factory _ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyComparisonGroup.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get identifierUri => throw _privateConstructorUsedError;
+  FhirUri? get identifierUri;
   @override
   @JsonKey(name: '_identifierUri')
-  Element? get identifierUriElement => throw _privateConstructorUsedError;
+  Element? get identifierUriElement;
   @override
-  Identifier? get identifierIdentifier => throw _privateConstructorUsedError;
+  Identifier? get identifierIdentifier;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  Markdown? get description => throw _privateConstructorUsedError;
+  Markdown? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  List<Reference>? get intendedExposure => throw _privateConstructorUsedError;
+  List<Reference>? get intendedExposure;
   @override
-  Reference? get observedGroup => throw _privateConstructorUsedError;
+  Reference? get observedGroup;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyComparisonGroupCopyWith<_ResearchStudyComparisonGroup>
+  _$$_ResearchStudyComparisonGroupCopyWith<_$_ResearchStudyComparisonGroup>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4548,39 +4550,6 @@ ResearchStudyObjective _$ResearchStudyObjectiveFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyObjective.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyObjectiveTearOff {
-  const _$ResearchStudyObjectiveTearOff();
-
-  _ResearchStudyObjective call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? type,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement}) {
-    return _ResearchStudyObjective(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      type: type,
-      description: description,
-      descriptionElement: descriptionElement,
-    );
-  }
-
-  ResearchStudyObjective fromJson(Map<String, Object> json) {
-    return ResearchStudyObjective.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyObjective = _$ResearchStudyObjectiveTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyObjective {
@@ -4607,7 +4576,8 @@ mixin _$ResearchStudyObjective {
 abstract class $ResearchStudyObjectiveCopyWith<$Res> {
   factory $ResearchStudyObjectiveCopyWith(ResearchStudyObjective value,
           $Res Function(ResearchStudyObjective) then) =
-      _$ResearchStudyObjectiveCopyWithImpl<$Res>;
+      _$ResearchStudyObjectiveCopyWithImpl<$Res, ResearchStudyObjective>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4624,14 +4594,17 @@ abstract class $ResearchStudyObjectiveCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyObjectiveCopyWithImpl<$Res>
+class _$ResearchStudyObjectiveCopyWithImpl<$Res,
+        $Val extends ResearchStudyObjective>
     implements $ResearchStudyObjectiveCopyWith<$Res> {
   _$ResearchStudyObjectiveCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyObjective _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyObjective) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4644,82 +4617,86 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyObjectiveCopyWith<$Res>
+abstract class _$$_ResearchStudyObjectiveCopyWith<$Res>
     implements $ResearchStudyObjectiveCopyWith<$Res> {
-  factory _$ResearchStudyObjectiveCopyWith(_ResearchStudyObjective value,
-          $Res Function(_ResearchStudyObjective) then) =
-      __$ResearchStudyObjectiveCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyObjectiveCopyWith(_$_ResearchStudyObjective value,
+          $Res Function(_$_ResearchStudyObjective) then) =
+      __$$_ResearchStudyObjectiveCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4739,16 +4716,15 @@ abstract class _$ResearchStudyObjectiveCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyObjectiveCopyWithImpl<$Res>
-    extends _$ResearchStudyObjectiveCopyWithImpl<$Res>
-    implements _$ResearchStudyObjectiveCopyWith<$Res> {
-  __$ResearchStudyObjectiveCopyWithImpl(_ResearchStudyObjective _value,
-      $Res Function(_ResearchStudyObjective) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyObjective));
+class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
+    extends _$ResearchStudyObjectiveCopyWithImpl<$Res,
+        _$_ResearchStudyObjective>
+    implements _$$_ResearchStudyObjectiveCopyWith<$Res> {
+  __$$_ResearchStudyObjectiveCopyWithImpl(_$_ResearchStudyObjective _value,
+      $Res Function(_$_ResearchStudyObjective) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyObjective get _value => super._value as _ResearchStudyObjective;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4760,36 +4736,36 @@ class __$ResearchStudyObjectiveCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
   }) {
-    return _then(_ResearchStudyObjective(
-      id: id == freezed
+    return _then(_$_ResearchStudyObjective(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -4802,25 +4778,41 @@ class __$ResearchStudyObjectiveCopyWithImpl<$Res>
 class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   _$_ResearchStudyObjective(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyObjectiveFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
   @override
@@ -4842,64 +4834,61 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyObjective &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyObjective &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.nameElement == nameElement) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)));
+                other.descriptionElement == descriptionElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyObjectiveCopyWith<_ResearchStudyObjective> get copyWith =>
-      __$ResearchStudyObjectiveCopyWithImpl<_ResearchStudyObjective>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      nameElement,
+      type,
+      description,
+      descriptionElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyObjectiveCopyWith<_$_ResearchStudyObjective> get copyWith =>
+      __$$_ResearchStudyObjectiveCopyWithImpl<_$_ResearchStudyObjective>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyObjectiveToJson(this);
+    return _$$_ResearchStudyObjectiveToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   factory _ResearchStudyObjective(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          CodeableConcept? type,
-          Markdown? description,
-          @JsonKey(name: '_description') Element? descriptionElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final CodeableConcept? type,
+          final Markdown? description,
+          @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ResearchStudyObjective;
   _ResearchStudyObjective._() : super._();
 
@@ -4907,28 +4896,27 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
       _$_ResearchStudyObjective.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  Markdown? get description => throw _privateConstructorUsedError;
+  Markdown? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyObjectiveCopyWith<_ResearchStudyObjective> get copyWith =>
+  _$$_ResearchStudyObjectiveCopyWith<_$_ResearchStudyObjective> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4936,41 +4924,6 @@ ResearchStudyOutcomeMeasure _$ResearchStudyOutcomeMeasureFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyOutcomeMeasure.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyOutcomeMeasureTearOff {
-  const _$ResearchStudyOutcomeMeasureTearOff();
-
-  _ResearchStudyOutcomeMeasure call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      List<CodeableConcept>? type,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Reference? reference}) {
-    return _ResearchStudyOutcomeMeasure(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      nameElement: nameElement,
-      type: type,
-      description: description,
-      descriptionElement: descriptionElement,
-      reference: reference,
-    );
-  }
-
-  ResearchStudyOutcomeMeasure fromJson(Map<String, Object> json) {
-    return ResearchStudyOutcomeMeasure.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyOutcomeMeasure = _$ResearchStudyOutcomeMeasureTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyOutcomeMeasure {
@@ -4999,7 +4952,9 @@ abstract class $ResearchStudyOutcomeMeasureCopyWith<$Res> {
   factory $ResearchStudyOutcomeMeasureCopyWith(
           ResearchStudyOutcomeMeasure value,
           $Res Function(ResearchStudyOutcomeMeasure) then) =
-      _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>;
+      _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
+          ResearchStudyOutcomeMeasure>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5017,14 +4972,17 @@ abstract class $ResearchStudyOutcomeMeasureCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
+class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
+        $Val extends ResearchStudyOutcomeMeasure>
     implements $ResearchStudyOutcomeMeasureCopyWith<$Res> {
   _$ResearchStudyOutcomeMeasureCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyOutcomeMeasure _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyOutcomeMeasure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -5038,87 +4996,91 @@ class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
     Object? reference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
-      return _then(_value.copyWith(descriptionElement: value));
+      return _then(_value.copyWith(descriptionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get reference {
     if (_value.reference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
-      return _then(_value.copyWith(reference: value));
+      return _then(_value.copyWith(reference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyOutcomeMeasureCopyWith<$Res>
+abstract class _$$_ResearchStudyOutcomeMeasureCopyWith<$Res>
     implements $ResearchStudyOutcomeMeasureCopyWith<$Res> {
-  factory _$ResearchStudyOutcomeMeasureCopyWith(
-          _ResearchStudyOutcomeMeasure value,
-          $Res Function(_ResearchStudyOutcomeMeasure) then) =
-      __$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyOutcomeMeasureCopyWith(
+          _$_ResearchStudyOutcomeMeasure value,
+          $Res Function(_$_ResearchStudyOutcomeMeasure) then) =
+      __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5139,18 +5101,16 @@ abstract class _$ResearchStudyOutcomeMeasureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
-    extends _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
-    implements _$ResearchStudyOutcomeMeasureCopyWith<$Res> {
-  __$ResearchStudyOutcomeMeasureCopyWithImpl(
-      _ResearchStudyOutcomeMeasure _value,
-      $Res Function(_ResearchStudyOutcomeMeasure) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyOutcomeMeasure));
+class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
+    extends _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
+        _$_ResearchStudyOutcomeMeasure>
+    implements _$$_ResearchStudyOutcomeMeasureCopyWith<$Res> {
+  __$$_ResearchStudyOutcomeMeasureCopyWithImpl(
+      _$_ResearchStudyOutcomeMeasure _value,
+      $Res Function(_$_ResearchStudyOutcomeMeasure) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyOutcomeMeasure get _value =>
-      super._value as _ResearchStudyOutcomeMeasure;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -5163,40 +5123,40 @@ class __$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? reference = freezed,
   }) {
-    return _then(_ResearchStudyOutcomeMeasure(
-      id: id == freezed
+    return _then(_$_ResearchStudyOutcomeMeasure(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
-          ? _value.type
+      type: freezed == type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as Markdown?,
-      descriptionElement: descriptionElement == freezed
+      descriptionElement: freezed == descriptionElement
           ? _value.descriptionElement
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -5209,33 +5169,57 @@ class __$ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
 class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
   _$_ResearchStudyOutcomeMeasure(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
-      this.type,
+      final List<CodeableConcept>? type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.reference})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _type = type,
+        super._();
 
   factory _$_ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyOutcomeMeasureFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
+  final List<CodeableConcept>? _type;
   @override
-  final List<CodeableConcept>? type;
+  List<CodeableConcept>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Markdown? description;
   @override
@@ -5252,100 +5236,95 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyOutcomeMeasure &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyOutcomeMeasure &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.nameElement == nameElement) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.descriptionElement, descriptionElement)) &&
+                other.descriptionElement == descriptionElement) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)));
+                other.reference == reference));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(descriptionElement) ^
-      const DeepCollectionEquality().hash(reference);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyOutcomeMeasureCopyWith<_ResearchStudyOutcomeMeasure>
-      get copyWith => __$ResearchStudyOutcomeMeasureCopyWithImpl<
-          _ResearchStudyOutcomeMeasure>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      nameElement,
+      const DeepCollectionEquality().hash(_type),
+      description,
+      descriptionElement,
+      reference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyOutcomeMeasureCopyWith<_$_ResearchStudyOutcomeMeasure>
+      get copyWith => __$$_ResearchStudyOutcomeMeasureCopyWithImpl<
+          _$_ResearchStudyOutcomeMeasure>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyOutcomeMeasureToJson(this);
+    return _$$_ResearchStudyOutcomeMeasureToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyOutcomeMeasure
     extends ResearchStudyOutcomeMeasure {
   factory _ResearchStudyOutcomeMeasure(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      List<CodeableConcept>? type,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      Reference? reference}) = _$_ResearchStudyOutcomeMeasure;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final List<CodeableConcept>? type,
+      final Markdown? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final Reference? reference}) = _$_ResearchStudyOutcomeMeasure;
   _ResearchStudyOutcomeMeasure._() : super._();
 
   factory _ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyOutcomeMeasure.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get type;
   @override
-  Markdown? get description => throw _privateConstructorUsedError;
+  Markdown? get description;
   @override
   @JsonKey(name: '_description')
-  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Element? get descriptionElement;
   @override
-  Reference? get reference => throw _privateConstructorUsedError;
+  Reference? get reference;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyOutcomeMeasureCopyWith<_ResearchStudyOutcomeMeasure>
+  _$$_ResearchStudyOutcomeMeasureCopyWith<_$_ResearchStudyOutcomeMeasure>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5353,35 +5332,6 @@ ResearchStudyWebLocation _$ResearchStudyWebLocationFromJson(
     Map<String, dynamic> json) {
   return _ResearchStudyWebLocation.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchStudyWebLocationTearOff {
-  const _$ResearchStudyWebLocationTearOff();
-
-  _ResearchStudyWebLocation call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement}) {
-    return _ResearchStudyWebLocation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      url: url,
-      urlElement: urlElement,
-    );
-  }
-
-  ResearchStudyWebLocation fromJson(Map<String, Object> json) {
-    return ResearchStudyWebLocation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchStudyWebLocation = _$ResearchStudyWebLocationTearOff();
 
 /// @nodoc
 mixin _$ResearchStudyWebLocation {
@@ -5405,7 +5355,8 @@ mixin _$ResearchStudyWebLocation {
 abstract class $ResearchStudyWebLocationCopyWith<$Res> {
   factory $ResearchStudyWebLocationCopyWith(ResearchStudyWebLocation value,
           $Res Function(ResearchStudyWebLocation) then) =
-      _$ResearchStudyWebLocationCopyWithImpl<$Res>;
+      _$ResearchStudyWebLocationCopyWithImpl<$Res, ResearchStudyWebLocation>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5419,14 +5370,17 @@ abstract class $ResearchStudyWebLocationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchStudyWebLocationCopyWithImpl<$Res>
+class _$ResearchStudyWebLocationCopyWithImpl<$Res,
+        $Val extends ResearchStudyWebLocation>
     implements $ResearchStudyWebLocationCopyWith<$Res> {
   _$ResearchStudyWebLocationCopyWithImpl(this._value, this._then);
 
-  final ResearchStudyWebLocation _value;
   // ignore: unused_field
-  final $Res Function(ResearchStudyWebLocation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -5437,63 +5391,67 @@ class _$ResearchStudyWebLocationCopyWithImpl<$Res>
     Object? urlElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
+      return _then(_value.copyWith(urlElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchStudyWebLocationCopyWith<$Res>
+abstract class _$$_ResearchStudyWebLocationCopyWith<$Res>
     implements $ResearchStudyWebLocationCopyWith<$Res> {
-  factory _$ResearchStudyWebLocationCopyWith(_ResearchStudyWebLocation value,
-          $Res Function(_ResearchStudyWebLocation) then) =
-      __$ResearchStudyWebLocationCopyWithImpl<$Res>;
+  factory _$$_ResearchStudyWebLocationCopyWith(
+          _$_ResearchStudyWebLocation value,
+          $Res Function(_$_ResearchStudyWebLocation) then) =
+      __$$_ResearchStudyWebLocationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5509,17 +5467,15 @@ abstract class _$ResearchStudyWebLocationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchStudyWebLocationCopyWithImpl<$Res>
-    extends _$ResearchStudyWebLocationCopyWithImpl<$Res>
-    implements _$ResearchStudyWebLocationCopyWith<$Res> {
-  __$ResearchStudyWebLocationCopyWithImpl(_ResearchStudyWebLocation _value,
-      $Res Function(_ResearchStudyWebLocation) _then)
-      : super(_value, (v) => _then(v as _ResearchStudyWebLocation));
+class __$$_ResearchStudyWebLocationCopyWithImpl<$Res>
+    extends _$ResearchStudyWebLocationCopyWithImpl<$Res,
+        _$_ResearchStudyWebLocation>
+    implements _$$_ResearchStudyWebLocationCopyWith<$Res> {
+  __$$_ResearchStudyWebLocationCopyWithImpl(_$_ResearchStudyWebLocation _value,
+      $Res Function(_$_ResearchStudyWebLocation) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchStudyWebLocation get _value =>
-      super._value as _ResearchStudyWebLocation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -5529,28 +5485,28 @@ class __$ResearchStudyWebLocationCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_ResearchStudyWebLocation(
-      id: id == freezed
+    return _then(_$_ResearchStudyWebLocation(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -5563,23 +5519,39 @@ class __$ResearchStudyWebLocationCopyWithImpl<$Res>
 class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   _$_ResearchStudyWebLocation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.url,
       @JsonKey(name: '_url') this.urlElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ResearchStudyWebLocation.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyWebLocationFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -5596,54 +5568,53 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchStudyWebLocation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchStudyWebLocation &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)));
+                other.urlElement == urlElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchStudyWebLocationCopyWith<_ResearchStudyWebLocation> get copyWith =>
-      __$ResearchStudyWebLocationCopyWithImpl<_ResearchStudyWebLocation>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      url,
+      urlElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchStudyWebLocationCopyWith<_$_ResearchStudyWebLocation>
+      get copyWith => __$$_ResearchStudyWebLocationCopyWithImpl<
+          _$_ResearchStudyWebLocation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyWebLocationToJson(this);
+    return _$$_ResearchStudyWebLocationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchStudyWebLocation extends ResearchStudyWebLocation {
   factory _ResearchStudyWebLocation(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          FhirUri? url,
-          @JsonKey(name: '_url') Element? urlElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final FhirUri? url,
+          @JsonKey(name: '_url') final Element? urlElement}) =
       _$_ResearchStudyWebLocation;
   _ResearchStudyWebLocation._() : super._();
 
@@ -5651,100 +5622,28 @@ abstract class _ResearchStudyWebLocation extends ResearchStudyWebLocation {
       _$_ResearchStudyWebLocation.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
   @JsonKey(ignore: true)
-  _$ResearchStudyWebLocationCopyWith<_ResearchStudyWebLocation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ResearchStudyWebLocationCopyWith<_$_ResearchStudyWebLocation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
   return _ResearchSubject.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchSubjectTearOff {
-  const _$ResearchSubjectTearOff();
-
-  _ResearchSubject call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType = R5ResourceType.ResearchSubject,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<ResearchSubjectProgress>? progress,
-      Period? period,
-      required Reference study,
-      required Reference subject,
-      String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
-      String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
-      Reference? consent}) {
-    return _ResearchSubject(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      progress: progress,
-      period: period,
-      study: study,
-      subject: subject,
-      assignedArm: assignedArm,
-      assignedArmElement: assignedArmElement,
-      actualArm: actualArm,
-      actualArmElement: actualArmElement,
-      consent: consent,
-    );
-  }
-
-  ResearchSubject fromJson(Map<String, Object> json) {
-    return ResearchSubject.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchSubject = _$ResearchSubjectTearOff();
 
 /// @nodoc
 mixin _$ResearchSubject {
@@ -5792,7 +5691,8 @@ mixin _$ResearchSubject {
 abstract class $ResearchSubjectCopyWith<$Res> {
   factory $ResearchSubjectCopyWith(
           ResearchSubject value, $Res Function(ResearchSubject) then) =
-      _$ResearchSubjectCopyWithImpl<$Res>;
+      _$ResearchSubjectCopyWithImpl<$Res, ResearchSubject>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
@@ -5840,17 +5740,19 @@ abstract class $ResearchSubjectCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchSubjectCopyWithImpl<$Res>
+class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
     implements $ResearchSubjectCopyWith<$Res> {
   _$ResearchSubjectCopyWithImpl(this._value, this._then);
 
-  final ResearchSubject _value;
   // ignore: unused_field
-  final $Res Function(ResearchSubject) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5866,8 +5768,8 @@ class _$ResearchSubjectCopyWithImpl<$Res>
     Object? statusElement = freezed,
     Object? progress = freezed,
     Object? period = freezed,
-    Object? study = freezed,
-    Object? subject = freezed,
+    Object? study = null,
+    Object? subject = null,
     Object? assignedArm = freezed,
     Object? assignedArmElement = freezed,
     Object? actualArm = freezed,
@@ -5875,222 +5777,234 @@ class _$ResearchSubjectCopyWithImpl<$Res>
     Object? consent = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ResearchSubjectStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      progress: progress == freezed
+      progress: freezed == progress
           ? _value.progress
           : progress // ignore: cast_nullable_to_non_nullable
               as List<ResearchSubjectProgress>?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      study: study == freezed
+      study: null == study
           ? _value.study
           : study // ignore: cast_nullable_to_non_nullable
               as Reference,
-      subject: subject == freezed
+      subject: null == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
-      assignedArm: assignedArm == freezed
+      assignedArm: freezed == assignedArm
           ? _value.assignedArm
           : assignedArm // ignore: cast_nullable_to_non_nullable
               as String?,
-      assignedArmElement: assignedArmElement == freezed
+      assignedArmElement: freezed == assignedArmElement
           ? _value.assignedArmElement
           : assignedArmElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      actualArm: actualArm == freezed
+      actualArm: freezed == actualArm
           ? _value.actualArm
           : actualArm // ignore: cast_nullable_to_non_nullable
               as String?,
-      actualArmElement: actualArmElement == freezed
+      actualArmElement: freezed == actualArmElement
           ? _value.actualArmElement
           : actualArmElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      consent: consent == freezed
+      consent: freezed == consent
           ? _value.consent
           : consent // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.period!, (value) {
-      return _then(_value.copyWith(period: value));
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get study {
     return $ReferenceCopyWith<$Res>(_value.study, (value) {
-      return _then(_value.copyWith(study: value));
+      return _then(_value.copyWith(study: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get subject {
     return $ReferenceCopyWith<$Res>(_value.subject, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get assignedArmElement {
     if (_value.assignedArmElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.assignedArmElement!, (value) {
-      return _then(_value.copyWith(assignedArmElement: value));
+      return _then(_value.copyWith(assignedArmElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get actualArmElement {
     if (_value.actualArmElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.actualArmElement!, (value) {
-      return _then(_value.copyWith(actualArmElement: value));
+      return _then(_value.copyWith(actualArmElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get consent {
     if (_value.consent == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.consent!, (value) {
-      return _then(_value.copyWith(consent: value));
+      return _then(_value.copyWith(consent: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchSubjectCopyWith<$Res>
+abstract class _$$_ResearchSubjectCopyWith<$Res>
     implements $ResearchSubjectCopyWith<$Res> {
-  factory _$ResearchSubjectCopyWith(
-          _ResearchSubject value, $Res Function(_ResearchSubject) then) =
-      __$ResearchSubjectCopyWithImpl<$Res>;
+  factory _$$_ResearchSubjectCopyWith(
+          _$_ResearchSubject value, $Res Function(_$_ResearchSubject) then) =
+      __$$_ResearchSubjectCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
@@ -6149,19 +6063,17 @@ abstract class _$ResearchSubjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchSubjectCopyWithImpl<$Res>
-    extends _$ResearchSubjectCopyWithImpl<$Res>
-    implements _$ResearchSubjectCopyWith<$Res> {
-  __$ResearchSubjectCopyWithImpl(
-      _ResearchSubject _value, $Res Function(_ResearchSubject) _then)
-      : super(_value, (v) => _then(v as _ResearchSubject));
+class __$$_ResearchSubjectCopyWithImpl<$Res>
+    extends _$ResearchSubjectCopyWithImpl<$Res, _$_ResearchSubject>
+    implements _$$_ResearchSubjectCopyWith<$Res> {
+  __$$_ResearchSubjectCopyWithImpl(
+      _$_ResearchSubject _value, $Res Function(_$_ResearchSubject) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchSubject get _value => super._value as _ResearchSubject;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6177,104 +6089,104 @@ class __$ResearchSubjectCopyWithImpl<$Res>
     Object? statusElement = freezed,
     Object? progress = freezed,
     Object? period = freezed,
-    Object? study = freezed,
-    Object? subject = freezed,
+    Object? study = null,
+    Object? subject = null,
     Object? assignedArm = freezed,
     Object? assignedArmElement = freezed,
     Object? actualArm = freezed,
     Object? actualArmElement = freezed,
     Object? consent = freezed,
   }) {
-    return _then(_ResearchSubject(
-      resourceType: resourceType == freezed
+    return _then(_$_ResearchSubject(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
-          ? _value.identifier
+      identifier: freezed == identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ResearchSubjectStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      progress: progress == freezed
-          ? _value.progress
+      progress: freezed == progress
+          ? _value._progress
           : progress // ignore: cast_nullable_to_non_nullable
               as List<ResearchSubjectProgress>?,
-      period: period == freezed
+      period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
-      study: study == freezed
+      study: null == study
           ? _value.study
           : study // ignore: cast_nullable_to_non_nullable
               as Reference,
-      subject: subject == freezed
+      subject: null == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
-      assignedArm: assignedArm == freezed
+      assignedArm: freezed == assignedArm
           ? _value.assignedArm
           : assignedArm // ignore: cast_nullable_to_non_nullable
               as String?,
-      assignedArmElement: assignedArmElement == freezed
+      assignedArmElement: freezed == assignedArmElement
           ? _value.assignedArmElement
           : assignedArmElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      actualArm: actualArm == freezed
+      actualArm: freezed == actualArm
           ? _value.actualArm
           : actualArm // ignore: cast_nullable_to_non_nullable
               as String?,
-      actualArmElement: actualArmElement == freezed
+      actualArmElement: freezed == actualArmElement
           ? _value.actualArmElement
           : actualArmElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      consent: consent == freezed
+      consent: freezed == consent
           ? _value.consent
           : consent // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -6297,16 +6209,16 @@ class _$_ResearchSubject extends _ResearchSubject {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.progress,
+      final List<ResearchSubjectProgress>? progress,
       this.period,
       required this.study,
       required this.subject,
@@ -6317,7 +6229,12 @@ class _$_ResearchSubject extends _ResearchSubject {
       @JsonKey(name: '_actualArm')
           this.actualArmElement,
       this.consent})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _progress = progress,
+        super._();
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectFromJson(json);
@@ -6341,23 +6258,58 @@ class _$_ResearchSubject extends _ResearchSubject {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   final ResearchSubjectStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+  final List<ResearchSubjectProgress>? _progress;
   @override
-  final List<ResearchSubjectProgress>? progress;
+  List<ResearchSubjectProgress>? get progress {
+    final value = _progress;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Period? period;
   @override
@@ -6385,142 +6337,123 @@ class _$_ResearchSubject extends _ResearchSubject {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchSubject &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchSubject &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.progress, progress) ||
-                const DeepCollectionEquality()
-                    .equals(other.progress, progress)) &&
-            (identical(other.period, period) ||
-                const DeepCollectionEquality().equals(other.period, period)) &&
-            (identical(other.study, study) ||
-                const DeepCollectionEquality().equals(other.study, study)) &&
-            (identical(other.subject, subject) ||
-                const DeepCollectionEquality()
-                    .equals(other.subject, subject)) &&
+                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other._progress, _progress) &&
+            (identical(other.period, period) || other.period == period) &&
+            (identical(other.study, study) || other.study == study) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
             (identical(other.assignedArm, assignedArm) ||
-                const DeepCollectionEquality()
-                    .equals(other.assignedArm, assignedArm)) &&
+                other.assignedArm == assignedArm) &&
             (identical(other.assignedArmElement, assignedArmElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.assignedArmElement, assignedArmElement)) &&
+                other.assignedArmElement == assignedArmElement) &&
             (identical(other.actualArm, actualArm) ||
-                const DeepCollectionEquality()
-                    .equals(other.actualArm, actualArm)) &&
+                other.actualArm == actualArm) &&
             (identical(other.actualArmElement, actualArmElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.actualArmElement, actualArmElement)) &&
-            (identical(other.consent, consent) ||
-                const DeepCollectionEquality().equals(other.consent, consent)));
+                other.actualArmElement == actualArmElement) &&
+            (identical(other.consent, consent) || other.consent == consent));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(progress) ^
-      const DeepCollectionEquality().hash(period) ^
-      const DeepCollectionEquality().hash(study) ^
-      const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(assignedArm) ^
-      const DeepCollectionEquality().hash(assignedArmElement) ^
-      const DeepCollectionEquality().hash(actualArm) ^
-      const DeepCollectionEquality().hash(actualArmElement) ^
-      const DeepCollectionEquality().hash(consent);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith =>
-      __$ResearchSubjectCopyWithImpl<_ResearchSubject>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        status,
+        statusElement,
+        const DeepCollectionEquality().hash(_progress),
+        period,
+        study,
+        subject,
+        assignedArm,
+        assignedArmElement,
+        actualArm,
+        actualArmElement,
+        consent
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchSubjectCopyWith<_$_ResearchSubject> get copyWith =>
+      __$$_ResearchSubjectCopyWithImpl<_$_ResearchSubject>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectToJson(this);
+    return _$$_ResearchSubjectToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchSubject extends ResearchSubject {
   factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
+          final ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<ResearchSubjectProgress>? progress,
-      Period? period,
-      required Reference study,
-      required Reference subject,
-      String? assignedArm,
+          final Element? statusElement,
+      final List<ResearchSubjectProgress>? progress,
+      final Period? period,
+      required final Reference study,
+      required final Reference subject,
+      final String? assignedArm,
       @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
-      String? actualArm,
+          final Element? assignedArmElement,
+      final String? actualArm,
       @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
-      Reference? consent}) = _$_ResearchSubject;
+          final Element? actualArmElement,
+      final Reference? consent}) = _$_ResearchSubject;
   _ResearchSubject._() : super._();
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
@@ -6528,63 +6461,61 @@ abstract class _ResearchSubject extends ResearchSubject {
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  R5ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  ResearchSubjectStatus? get status => throw _privateConstructorUsedError;
+  ResearchSubjectStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  List<ResearchSubjectProgress>? get progress =>
-      throw _privateConstructorUsedError;
+  List<ResearchSubjectProgress>? get progress;
   @override
-  Period? get period => throw _privateConstructorUsedError;
+  Period? get period;
   @override
-  Reference get study => throw _privateConstructorUsedError;
+  Reference get study;
   @override
-  Reference get subject => throw _privateConstructorUsedError;
+  Reference get subject;
   @override
-  String? get assignedArm => throw _privateConstructorUsedError;
+  String? get assignedArm;
   @override
   @JsonKey(name: '_assignedArm')
-  Element? get assignedArmElement => throw _privateConstructorUsedError;
+  Element? get assignedArmElement;
   @override
-  String? get actualArm => throw _privateConstructorUsedError;
+  String? get actualArm;
   @override
   @JsonKey(name: '_actualArm')
-  Element? get actualArmElement => throw _privateConstructorUsedError;
+  Element? get actualArmElement;
   @override
-  Reference? get consent => throw _privateConstructorUsedError;
+  Reference? get consent;
   @override
   @JsonKey(ignore: true)
-  _$ResearchSubjectCopyWith<_ResearchSubject> get copyWith =>
+  _$$_ResearchSubjectCopyWith<_$_ResearchSubject> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6592,45 +6523,6 @@ ResearchSubjectProgress _$ResearchSubjectProgressFromJson(
     Map<String, dynamic> json) {
   return _ResearchSubjectProgress.fromJson(json);
 }
-
-/// @nodoc
-class _$ResearchSubjectProgressTearOff {
-  const _$ResearchSubjectProgressTearOff();
-
-  _ResearchSubjectProgress call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? subjectState,
-      CodeableConcept? milestone,
-      CodeableConcept? reason,
-      FhirDateTime? startDate,
-      @JsonKey(name: '_startDate') Element? startDateElement,
-      FhirDateTime? endDate,
-      @JsonKey(name: '_endDate') Element? endDateElement}) {
-    return _ResearchSubjectProgress(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      subjectState: subjectState,
-      milestone: milestone,
-      reason: reason,
-      startDate: startDate,
-      startDateElement: startDateElement,
-      endDate: endDate,
-      endDateElement: endDateElement,
-    );
-  }
-
-  ResearchSubjectProgress fromJson(Map<String, Object> json) {
-    return ResearchSubjectProgress.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ResearchSubjectProgress = _$ResearchSubjectProgressTearOff();
 
 /// @nodoc
 mixin _$ResearchSubjectProgress {
@@ -6660,7 +6552,8 @@ mixin _$ResearchSubjectProgress {
 abstract class $ResearchSubjectProgressCopyWith<$Res> {
   factory $ResearchSubjectProgressCopyWith(ResearchSubjectProgress value,
           $Res Function(ResearchSubjectProgress) then) =
-      _$ResearchSubjectProgressCopyWithImpl<$Res>;
+      _$ResearchSubjectProgressCopyWithImpl<$Res, ResearchSubjectProgress>;
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6683,14 +6576,17 @@ abstract class $ResearchSubjectProgressCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResearchSubjectProgressCopyWithImpl<$Res>
+class _$ResearchSubjectProgressCopyWithImpl<$Res,
+        $Val extends ResearchSubjectProgress>
     implements $ResearchSubjectProgressCopyWith<$Res> {
   _$ResearchSubjectProgressCopyWithImpl(this._value, this._then);
 
-  final ResearchSubjectProgress _value;
   // ignore: unused_field
-  final $Res Function(ResearchSubjectProgress) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -6706,127 +6602,134 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res>
     Object? endDateElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      subjectState: subjectState == freezed
+      subjectState: freezed == subjectState
           ? _value.subjectState
           : subjectState // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      milestone: milestone == freezed
+      milestone: freezed == milestone
           ? _value.milestone
           : milestone // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      startDate: startDate == freezed
+      startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      startDateElement: startDateElement == freezed
+      startDateElement: freezed == startDateElement
           ? _value.startDateElement
           : startDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      endDate: endDate == freezed
+      endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      endDateElement: endDateElement == freezed
+      endDateElement: freezed == endDateElement
           ? _value.endDateElement
           : endDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get subjectState {
     if (_value.subjectState == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.subjectState!, (value) {
-      return _then(_value.copyWith(subjectState: value));
+      return _then(_value.copyWith(subjectState: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get milestone {
     if (_value.milestone == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.milestone!, (value) {
-      return _then(_value.copyWith(milestone: value));
+      return _then(_value.copyWith(milestone: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get reason {
     if (_value.reason == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.reason!, (value) {
-      return _then(_value.copyWith(reason: value));
+      return _then(_value.copyWith(reason: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get startDateElement {
     if (_value.startDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.startDateElement!, (value) {
-      return _then(_value.copyWith(startDateElement: value));
+      return _then(_value.copyWith(startDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get endDateElement {
     if (_value.endDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.endDateElement!, (value) {
-      return _then(_value.copyWith(endDateElement: value));
+      return _then(_value.copyWith(endDateElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ResearchSubjectProgressCopyWith<$Res>
+abstract class _$$_ResearchSubjectProgressCopyWith<$Res>
     implements $ResearchSubjectProgressCopyWith<$Res> {
-  factory _$ResearchSubjectProgressCopyWith(_ResearchSubjectProgress value,
-          $Res Function(_ResearchSubjectProgress) then) =
-      __$ResearchSubjectProgressCopyWithImpl<$Res>;
+  factory _$$_ResearchSubjectProgressCopyWith(_$_ResearchSubjectProgress value,
+          $Res Function(_$_ResearchSubjectProgress) then) =
+      __$$_ResearchSubjectProgressCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6855,17 +6758,15 @@ abstract class _$ResearchSubjectProgressCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ResearchSubjectProgressCopyWithImpl<$Res>
-    extends _$ResearchSubjectProgressCopyWithImpl<$Res>
-    implements _$ResearchSubjectProgressCopyWith<$Res> {
-  __$ResearchSubjectProgressCopyWithImpl(_ResearchSubjectProgress _value,
-      $Res Function(_ResearchSubjectProgress) _then)
-      : super(_value, (v) => _then(v as _ResearchSubjectProgress));
+class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
+    extends _$ResearchSubjectProgressCopyWithImpl<$Res,
+        _$_ResearchSubjectProgress>
+    implements _$$_ResearchSubjectProgressCopyWith<$Res> {
+  __$$_ResearchSubjectProgressCopyWithImpl(_$_ResearchSubjectProgress _value,
+      $Res Function(_$_ResearchSubjectProgress) _then)
+      : super(_value, _then);
 
-  @override
-  _ResearchSubjectProgress get _value =>
-      super._value as _ResearchSubjectProgress;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -6880,48 +6781,48 @@ class __$ResearchSubjectProgressCopyWithImpl<$Res>
     Object? endDate = freezed,
     Object? endDateElement = freezed,
   }) {
-    return _then(_ResearchSubjectProgress(
-      id: id == freezed
+    return _then(_$_ResearchSubjectProgress(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      subjectState: subjectState == freezed
+      subjectState: freezed == subjectState
           ? _value.subjectState
           : subjectState // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      milestone: milestone == freezed
+      milestone: freezed == milestone
           ? _value.milestone
           : milestone // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      reason: reason == freezed
+      reason: freezed == reason
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      startDate: startDate == freezed
+      startDate: freezed == startDate
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      startDateElement: startDateElement == freezed
+      startDateElement: freezed == startDateElement
           ? _value.startDateElement
           : startDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      endDate: endDate == freezed
+      endDate: freezed == endDate
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      endDateElement: endDateElement == freezed
+      endDateElement: freezed == endDateElement
           ? _value.endDateElement
           : endDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -6934,8 +6835,8 @@ class __$ResearchSubjectProgressCopyWithImpl<$Res>
 class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   _$_ResearchSubjectProgress(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.subjectState,
       this.milestone,
@@ -6944,18 +6845,34 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
       @JsonKey(name: '_startDate') this.startDateElement,
       this.endDate,
       @JsonKey(name: '_endDate') this.endDateElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectProgressFromJson(json);
 
   @override
   final String? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? type;
   @override
@@ -6983,79 +6900,73 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ResearchSubjectProgress &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ResearchSubjectProgress &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.subjectState, subjectState) ||
-                const DeepCollectionEquality()
-                    .equals(other.subjectState, subjectState)) &&
+                other.subjectState == subjectState) &&
             (identical(other.milestone, milestone) ||
-                const DeepCollectionEquality()
-                    .equals(other.milestone, milestone)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
+                other.milestone == milestone) &&
+            (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.startDate, startDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.startDate, startDate)) &&
+                other.startDate == startDate) &&
             (identical(other.startDateElement, startDateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.startDateElement, startDateElement)) &&
-            (identical(other.endDate, endDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.endDate, endDate)) &&
+                other.startDateElement == startDateElement) &&
+            (identical(other.endDate, endDate) || other.endDate == endDate) &&
             (identical(other.endDateElement, endDateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.endDateElement, endDateElement)));
+                other.endDateElement == endDateElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(subjectState) ^
-      const DeepCollectionEquality().hash(milestone) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(startDate) ^
-      const DeepCollectionEquality().hash(startDateElement) ^
-      const DeepCollectionEquality().hash(endDate) ^
-      const DeepCollectionEquality().hash(endDateElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ResearchSubjectProgressCopyWith<_ResearchSubjectProgress> get copyWith =>
-      __$ResearchSubjectProgressCopyWithImpl<_ResearchSubjectProgress>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      subjectState,
+      milestone,
+      reason,
+      startDate,
+      startDateElement,
+      endDate,
+      endDateElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ResearchSubjectProgressCopyWith<_$_ResearchSubjectProgress>
+      get copyWith =>
+          __$$_ResearchSubjectProgressCopyWithImpl<_$_ResearchSubjectProgress>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectProgressToJson(this);
+    return _$$_ResearchSubjectProgressToJson(
+      this,
+    );
   }
 }
 
 abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   factory _ResearchSubjectProgress(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
-          CodeableConcept? subjectState,
-          CodeableConcept? milestone,
-          CodeableConcept? reason,
-          FhirDateTime? startDate,
-          @JsonKey(name: '_startDate') Element? startDateElement,
-          FhirDateTime? endDate,
-          @JsonKey(name: '_endDate') Element? endDateElement}) =
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? subjectState,
+          final CodeableConcept? milestone,
+          final CodeableConcept? reason,
+          final FhirDateTime? startDate,
+          @JsonKey(name: '_startDate') final Element? startDateElement,
+          final FhirDateTime? endDate,
+          @JsonKey(name: '_endDate') final Element? endDateElement}) =
       _$_ResearchSubjectProgress;
   _ResearchSubjectProgress._() : super._();
 
@@ -7063,33 +6974,32 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
       _$_ResearchSubjectProgress.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  CodeableConcept? get subjectState => throw _privateConstructorUsedError;
+  CodeableConcept? get subjectState;
   @override
-  CodeableConcept? get milestone => throw _privateConstructorUsedError;
+  CodeableConcept? get milestone;
   @override
-  CodeableConcept? get reason => throw _privateConstructorUsedError;
+  CodeableConcept? get reason;
   @override
-  FhirDateTime? get startDate => throw _privateConstructorUsedError;
+  FhirDateTime? get startDate;
   @override
   @JsonKey(name: '_startDate')
-  Element? get startDateElement => throw _privateConstructorUsedError;
+  Element? get startDateElement;
   @override
-  FhirDateTime? get endDate => throw _privateConstructorUsedError;
+  FhirDateTime? get endDate;
   @override
   @JsonKey(name: '_endDate')
-  Element? get endDateElement => throw _privateConstructorUsedError;
+  Element? get endDateElement;
   @override
   @JsonKey(ignore: true)
-  _$ResearchSubjectProgressCopyWith<_ResearchSubjectProgress> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ResearchSubjectProgressCopyWith<_$_ResearchSubjectProgress>
+      get copyWith => throw _privateConstructorUsedError;
 }

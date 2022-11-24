@@ -42,7 +42,7 @@ packages:
       name: collection
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.15.0"
+    version: "1.16.0"
   convert:
     dependency: transitive
     description:
@@ -75,8 +75,8 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: "updating-to-r5-5.0.0"
-      resolved-ref: "848b2ffd67de311b331b77b64175ee7909a2ce31"
+      ref: HEAD
+      resolved-ref: "9c9a8bea47feb5ed3021e2e6ecf25eeecd15e3bc"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
@@ -105,7 +105,7 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.14.2"
+    version: "2.2.0"
   js:
     dependency: transitive
     description:
@@ -119,14 +119,14 @@ packages:
       name: json_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.0.1"
+    version: "4.7.0"
   material_color_utilities:
     dependency: transitive
     description:
       name: material_color_utilities
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.3"
+    version: "0.1.4"
   meta:
     dependency: transitive
     description:
@@ -296,7 +296,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.2"
   win32:
     dependency: transitive
     description:
@@ -319,5 +319,5 @@ packages:
     source: hosted
     version: "3.1.0"
 sdks:
-  dart: ">=2.16.0 <3.0.0"
+  dart: ">=2.17.0 <3.0.0"
   flutter: ">=2.0.0"

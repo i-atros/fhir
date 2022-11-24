@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'operations_control.dart';
@@ -11,102 +12,11 @@ part of 'operations_control.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Conformance _$ConformanceFromJson(Map<String, dynamic> json) {
   return _Conformance.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceTearOff {
-  const _$ConformanceTearOff();
-
-  _Conformance call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.Conformance,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      String? name,
-      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
-      Boolean? experimental,
-      String? publisher,
-      List<ConformanceContact>? contact,
-      required FhirDateTime date,
-      String? description,
-      String? requirements,
-      String? copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required ConformanceKind kind,
-      ConformanceSoftware? software,
-      ConformanceImplementation? implementation,
-      required Id fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
-      @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
-      required List<ConformanceFormat> format,
-      List<Reference>? profile,
-      List<ConformanceRest>? rest,
-      List<ConformanceMessaging>? messaging,
-      List<ConformanceDocument>? document}) {
-    return _Conformance(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      version: version,
-      name: name,
-      status: status,
-      experimental: experimental,
-      publisher: publisher,
-      contact: contact,
-      date: date,
-      description: description,
-      requirements: requirements,
-      copyright: copyright,
-      kind: kind,
-      software: software,
-      implementation: implementation,
-      fhirVersion: fhirVersion,
-      fhirVersionElement: fhirVersionElement,
-      acceptUnknown: acceptUnknown,
-      acceptUnknownElement: acceptUnknownElement,
-      format: format,
-      profile: profile,
-      rest: rest,
-      messaging: messaging,
-      document: document,
-    );
-  }
-
-  Conformance fromJson(Map<String, Object> json) {
-    return Conformance.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Conformance = _$ConformanceTearOff();
 
 /// @nodoc
 mixin _$Conformance {
@@ -166,7 +76,8 @@ mixin _$Conformance {
 abstract class $ConformanceCopyWith<$Res> {
   factory $ConformanceCopyWith(
           Conformance value, $Res Function(Conformance) then) =
-      _$ConformanceCopyWithImpl<$Res>;
+      _$ConformanceCopyWithImpl<$Res, Conformance>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
@@ -220,16 +131,19 @@ abstract class $ConformanceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
+class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
+    implements $ConformanceCopyWith<$Res> {
   _$ConformanceCopyWithImpl(this._value, this._then);
 
-  final Conformance _value;
   // ignore: unused_field
-  final $Res Function(Conformance) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -246,204 +160,209 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
     Object? experimental = freezed,
     Object? publisher = freezed,
     Object? contact = freezed,
-    Object? date = freezed,
+    Object? date = null,
     Object? description = freezed,
     Object? requirements = freezed,
     Object? copyright = freezed,
-    Object? kind = freezed,
+    Object? kind = null,
     Object? software = freezed,
     Object? implementation = freezed,
-    Object? fhirVersion = freezed,
+    Object? fhirVersion = null,
     Object? fhirVersionElement = freezed,
-    Object? acceptUnknown = freezed,
+    Object? acceptUnknown = null,
     Object? acceptUnknownElement = freezed,
-    Object? format = freezed,
+    Object? format = null,
     Object? profile = freezed,
     Object? rest = freezed,
     Object? messaging = freezed,
     Object? document = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ConformanceStatus?,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ConformanceContact>?,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as ConformanceKind,
-      software: software == freezed
+      software: freezed == software
           ? _value.software
           : software // ignore: cast_nullable_to_non_nullable
               as ConformanceSoftware?,
-      implementation: implementation == freezed
+      implementation: freezed == implementation
           ? _value.implementation
           : implementation // ignore: cast_nullable_to_non_nullable
               as ConformanceImplementation?,
-      fhirVersion: fhirVersion == freezed
+      fhirVersion: null == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
               as Id,
-      fhirVersionElement: fhirVersionElement == freezed
+      fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      acceptUnknown: acceptUnknown == freezed
+      acceptUnknown: null == acceptUnknown
           ? _value.acceptUnknown
           : acceptUnknown // ignore: cast_nullable_to_non_nullable
               as ConformanceAcceptUnknown,
-      acceptUnknownElement: acceptUnknownElement == freezed
+      acceptUnknownElement: freezed == acceptUnknownElement
           ? _value.acceptUnknownElement
           : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as List<ConformanceFormat>,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      rest: rest == freezed
+      rest: freezed == rest
           ? _value.rest
           : rest // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRest>?,
-      messaging: messaging == freezed
+      messaging: freezed == messaging
           ? _value.messaging
           : messaging // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessaging>?,
-      document: document == freezed
+      document: freezed == document
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
               as List<ConformanceDocument>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
+      return _then(_value.copyWith(urlElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ConformanceSoftwareCopyWith<$Res>? get software {
     if (_value.software == null) {
       return null;
     }
 
     return $ConformanceSoftwareCopyWith<$Res>(_value.software!, (value) {
-      return _then(_value.copyWith(software: value));
+      return _then(_value.copyWith(software: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ConformanceImplementationCopyWith<$Res>? get implementation {
     if (_value.implementation == null) {
       return null;
@@ -451,40 +370,43 @@ class _$ConformanceCopyWithImpl<$Res> implements $ConformanceCopyWith<$Res> {
 
     return $ConformanceImplementationCopyWith<$Res>(_value.implementation!,
         (value) {
-      return _then(_value.copyWith(implementation: value));
+      return _then(_value.copyWith(implementation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fhirVersionElement {
     if (_value.fhirVersionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fhirVersionElement!, (value) {
-      return _then(_value.copyWith(fhirVersionElement: value));
+      return _then(_value.copyWith(fhirVersionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get acceptUnknownElement {
     if (_value.acceptUnknownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.acceptUnknownElement!, (value) {
-      return _then(_value.copyWith(acceptUnknownElement: value));
+      return _then(_value.copyWith(acceptUnknownElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceCopyWith<$Res>
+abstract class _$$_ConformanceCopyWith<$Res>
     implements $ConformanceCopyWith<$Res> {
-  factory _$ConformanceCopyWith(
-          _Conformance value, $Res Function(_Conformance) then) =
-      __$ConformanceCopyWithImpl<$Res>;
+  factory _$$_ConformanceCopyWith(
+          _$_Conformance value, $Res Function(_$_Conformance) then) =
+      __$$_ConformanceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
@@ -545,18 +467,17 @@ abstract class _$ConformanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
-    implements _$ConformanceCopyWith<$Res> {
-  __$ConformanceCopyWithImpl(
-      _Conformance _value, $Res Function(_Conformance) _then)
-      : super(_value, (v) => _then(v as _Conformance));
+class __$$_ConformanceCopyWithImpl<$Res>
+    extends _$ConformanceCopyWithImpl<$Res, _$_Conformance>
+    implements _$$_ConformanceCopyWith<$Res> {
+  __$$_ConformanceCopyWithImpl(
+      _$_Conformance _value, $Res Function(_$_Conformance) _then)
+      : super(_value, _then);
 
-  @override
-  _Conformance get _value => super._value as _Conformance;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -573,154 +494,154 @@ class __$ConformanceCopyWithImpl<$Res> extends _$ConformanceCopyWithImpl<$Res>
     Object? experimental = freezed,
     Object? publisher = freezed,
     Object? contact = freezed,
-    Object? date = freezed,
+    Object? date = null,
     Object? description = freezed,
     Object? requirements = freezed,
     Object? copyright = freezed,
-    Object? kind = freezed,
+    Object? kind = null,
     Object? software = freezed,
     Object? implementation = freezed,
-    Object? fhirVersion = freezed,
+    Object? fhirVersion = null,
     Object? fhirVersionElement = freezed,
-    Object? acceptUnknown = freezed,
+    Object? acceptUnknown = null,
     Object? acceptUnknownElement = freezed,
-    Object? format = freezed,
+    Object? format = null,
     Object? profile = freezed,
     Object? rest = freezed,
     Object? messaging = freezed,
     Object? document = freezed,
   }) {
-    return _then(_Conformance(
-      resourceType: resourceType == freezed
+    return _then(_$_Conformance(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ConformanceStatus?,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
-          ? _value.contact
+      contact: freezed == contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ConformanceContact>?,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as ConformanceKind,
-      software: software == freezed
+      software: freezed == software
           ? _value.software
           : software // ignore: cast_nullable_to_non_nullable
               as ConformanceSoftware?,
-      implementation: implementation == freezed
+      implementation: freezed == implementation
           ? _value.implementation
           : implementation // ignore: cast_nullable_to_non_nullable
               as ConformanceImplementation?,
-      fhirVersion: fhirVersion == freezed
+      fhirVersion: null == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
               as Id,
-      fhirVersionElement: fhirVersionElement == freezed
+      fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      acceptUnknown: acceptUnknown == freezed
+      acceptUnknown: null == acceptUnknown
           ? _value.acceptUnknown
           : acceptUnknown // ignore: cast_nullable_to_non_nullable
               as ConformanceAcceptUnknown,
-      acceptUnknownElement: acceptUnknownElement == freezed
+      acceptUnknownElement: freezed == acceptUnknownElement
           ? _value.acceptUnknownElement
           : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      format: format == freezed
-          ? _value.format
+      format: null == format
+          ? _value._format
           : format // ignore: cast_nullable_to_non_nullable
               as List<ConformanceFormat>,
-      profile: profile == freezed
-          ? _value.profile
+      profile: freezed == profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      rest: rest == freezed
-          ? _value.rest
+      rest: freezed == rest
+          ? _value._rest
           : rest // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRest>?,
-      messaging: messaging == freezed
-          ? _value.messaging
+      messaging: freezed == messaging
+          ? _value._messaging
           : messaging // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessaging>?,
-      document: document == freezed
-          ? _value.document
+      document: freezed == document
+          ? _value._document
           : document // ignore: cast_nullable_to_non_nullable
               as List<ConformanceDocument>?,
     ));
@@ -738,10 +659,10 @@ class _$_Conformance extends _Conformance {
       this.implicitRules,
       this.language,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -751,7 +672,7 @@ class _$_Conformance extends _Conformance {
           this.status,
       this.experimental,
       this.publisher,
-      this.contact,
+      final List<ConformanceContact>? contact,
       required this.date,
       this.description,
       this.requirements,
@@ -767,12 +688,21 @@ class _$_Conformance extends _Conformance {
           required this.acceptUnknown,
       @JsonKey(name: '_acceptUnknown')
           this.acceptUnknownElement,
-      required this.format,
-      this.profile,
-      this.rest,
-      this.messaging,
-      this.document})
-      : super._();
+      required final List<ConformanceFormat> format,
+      final List<Reference>? profile,
+      final List<ConformanceRest>? rest,
+      final List<ConformanceMessaging>? messaging,
+      final List<ConformanceDocument>? document})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _format = format,
+        _profile = profile,
+        _rest = rest,
+        _messaging = messaging,
+        _document = document,
+        super._();
 
   factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceFromJson(json);
@@ -790,13 +720,34 @@ class _$_Conformance extends _Conformance {
   final Code? language;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
@@ -813,8 +764,15 @@ class _$_Conformance extends _Conformance {
   final Boolean? experimental;
   @override
   final String? publisher;
+  final List<ConformanceContact>? _contact;
   @override
-  final List<ConformanceContact>? contact;
+  List<ConformanceContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime date;
   @override
@@ -841,16 +799,48 @@ class _$_Conformance extends _Conformance {
   @override
   @JsonKey(name: '_acceptUnknown')
   final Element? acceptUnknownElement;
+  final List<ConformanceFormat> _format;
   @override
-  final List<ConformanceFormat> format;
+  List<ConformanceFormat> get format {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_format);
+  }
+
+  final List<Reference>? _profile;
   @override
-  final List<Reference>? profile;
+  List<Reference>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceRest>? _rest;
   @override
-  final List<ConformanceRest>? rest;
+  List<ConformanceRest>? get rest {
+    final value = _rest;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceMessaging>? _messaging;
   @override
-  final List<ConformanceMessaging>? messaging;
+  List<ConformanceMessaging>? get messaging {
+    final value = _messaging;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceDocument>? _document;
   @override
-  final List<ConformanceDocument>? document;
+  List<ConformanceDocument>? get document {
+    final value = _document;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -860,176 +850,158 @@ class _$_Conformance extends _Conformance {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Conformance &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Conformance &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
+                other.language == language) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.urlElement == urlElement) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.experimental, experimental) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimental, experimental)) &&
+                other.experimental == experimental) &&
             (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
+                other.publisher == publisher) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.requirements, requirements) ||
-                const DeepCollectionEquality()
-                    .equals(other.requirements, requirements)) &&
+                other.requirements == requirements) &&
             (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.kind, kind) ||
-                const DeepCollectionEquality().equals(other.kind, kind)) &&
+                other.copyright == copyright) &&
+            (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.software, software) ||
-                const DeepCollectionEquality()
-                    .equals(other.software, software)) &&
+                other.software == software) &&
             (identical(other.implementation, implementation) ||
-                const DeepCollectionEquality()
-                    .equals(other.implementation, implementation)) &&
+                other.implementation == implementation) &&
             (identical(other.fhirVersion, fhirVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirVersion, fhirVersion)) &&
+                other.fhirVersion == fhirVersion) &&
             (identical(other.fhirVersionElement, fhirVersionElement) ||
-                const DeepCollectionEquality().equals(other.fhirVersionElement, fhirVersionElement)) &&
-            (identical(other.acceptUnknown, acceptUnknown) || const DeepCollectionEquality().equals(other.acceptUnknown, acceptUnknown)) &&
-            (identical(other.acceptUnknownElement, acceptUnknownElement) || const DeepCollectionEquality().equals(other.acceptUnknownElement, acceptUnknownElement)) &&
-            (identical(other.format, format) || const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
-            (identical(other.rest, rest) || const DeepCollectionEquality().equals(other.rest, rest)) &&
-            (identical(other.messaging, messaging) || const DeepCollectionEquality().equals(other.messaging, messaging)) &&
-            (identical(other.document, document) || const DeepCollectionEquality().equals(other.document, document)));
+                other.fhirVersionElement == fhirVersionElement) &&
+            (identical(other.acceptUnknown, acceptUnknown) ||
+                other.acceptUnknown == acceptUnknown) &&
+            (identical(other.acceptUnknownElement, acceptUnknownElement) ||
+                other.acceptUnknownElement == acceptUnknownElement) &&
+            const DeepCollectionEquality().equals(other._format, _format) &&
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other._rest, _rest) &&
+            const DeepCollectionEquality()
+                .equals(other._messaging, _messaging) &&
+            const DeepCollectionEquality().equals(other._document, _document));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(experimental) ^
-      const DeepCollectionEquality().hash(publisher) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(requirements) ^
-      const DeepCollectionEquality().hash(copyright) ^
-      const DeepCollectionEquality().hash(kind) ^
-      const DeepCollectionEquality().hash(software) ^
-      const DeepCollectionEquality().hash(implementation) ^
-      const DeepCollectionEquality().hash(fhirVersion) ^
-      const DeepCollectionEquality().hash(fhirVersionElement) ^
-      const DeepCollectionEquality().hash(acceptUnknown) ^
-      const DeepCollectionEquality().hash(acceptUnknownElement) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(rest) ^
-      const DeepCollectionEquality().hash(messaging) ^
-      const DeepCollectionEquality().hash(document);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceCopyWith<_Conformance> get copyWith =>
-      __$ConformanceCopyWithImpl<_Conformance>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        language,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        urlElement,
+        version,
+        name,
+        status,
+        experimental,
+        publisher,
+        const DeepCollectionEquality().hash(_contact),
+        date,
+        description,
+        requirements,
+        copyright,
+        kind,
+        software,
+        implementation,
+        fhirVersion,
+        fhirVersionElement,
+        acceptUnknown,
+        acceptUnknownElement,
+        const DeepCollectionEquality().hash(_format),
+        const DeepCollectionEquality().hash(_profile),
+        const DeepCollectionEquality().hash(_rest),
+        const DeepCollectionEquality().hash(_messaging),
+        const DeepCollectionEquality().hash(_document)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceCopyWith<_$_Conformance> get copyWith =>
+      __$$_ConformanceCopyWithImpl<_$_Conformance>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceToJson(this);
+    return _$$_ConformanceToJson(
+      this,
+    );
   }
 }
 
 abstract class _Conformance extends Conformance {
   factory _Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      final Code? language,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      String? name,
+          final Element? urlElement,
+      final String? version,
+      final String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
-      Boolean? experimental,
-      String? publisher,
-      List<ConformanceContact>? contact,
-      required FhirDateTime date,
-      String? description,
-      String? requirements,
-      String? copyright,
+          final ConformanceStatus? status,
+      final Boolean? experimental,
+      final String? publisher,
+      final List<ConformanceContact>? contact,
+      required final FhirDateTime date,
+      final String? description,
+      final String? requirements,
+      final String? copyright,
       @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required ConformanceKind kind,
-      ConformanceSoftware? software,
-      ConformanceImplementation? implementation,
-      required Id fhirVersion,
+          required final ConformanceKind kind,
+      final ConformanceSoftware? software,
+      final ConformanceImplementation? implementation,
+      required final Id fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+          final Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required ConformanceAcceptUnknown acceptUnknown,
+          required final ConformanceAcceptUnknown acceptUnknown,
       @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
-      required List<ConformanceFormat> format,
-      List<Reference>? profile,
-      List<ConformanceRest>? rest,
-      List<ConformanceMessaging>? messaging,
-      List<ConformanceDocument>? document}) = _$_Conformance;
+          final Element? acceptUnknownElement,
+      required final List<ConformanceFormat> format,
+      final List<Reference>? profile,
+      final List<ConformanceRest>? rest,
+      final List<ConformanceMessaging>? messaging,
+      final List<ConformanceDocument>? document}) = _$_Conformance;
   _Conformance._() : super._();
 
   factory _Conformance.fromJson(Map<String, dynamic> json) =
@@ -1037,183 +1009,87 @@ abstract class _Conformance extends Conformance {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status => throw _privateConstructorUsedError;
+  ConformanceStatus? get status;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
+  List<ConformanceContact>? get contact;
   @override
-  FhirDateTime get date => throw _privateConstructorUsedError;
+  FhirDateTime get date;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind => throw _privateConstructorUsedError;
+  ConformanceKind get kind;
   @override
-  ConformanceSoftware? get software => throw _privateConstructorUsedError;
+  ConformanceSoftware? get software;
   @override
-  ConformanceImplementation? get implementation =>
-      throw _privateConstructorUsedError;
+  ConformanceImplementation? get implementation;
   @override
-  Id get fhirVersion => throw _privateConstructorUsedError;
+  Id get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement => throw _privateConstructorUsedError;
+  Element? get fhirVersionElement;
   @override
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown =>
-      throw _privateConstructorUsedError;
+  ConformanceAcceptUnknown get acceptUnknown;
   @override
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
+  Element? get acceptUnknownElement;
   @override
-  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
+  List<ConformanceFormat> get format;
   @override
-  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<Reference>? get profile;
   @override
-  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
+  List<ConformanceRest>? get rest;
   @override
-  List<ConformanceMessaging>? get messaging =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessaging>? get messaging;
   @override
-  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
+  List<ConformanceDocument>? get document;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceCopyWith<_Conformance> get copyWith =>
+  _$$_ConformanceCopyWith<_$_Conformance> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
   return _CapabilityStatement.fromJson(json);
 }
-
-/// @nodoc
-class _$CapabilityStatementTearOff {
-  const _$CapabilityStatementTearOff();
-
-  _CapabilityStatement call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-          Dstu2ResourceType
-              resourceType = Dstu2ResourceType.CapabilityStatement,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      String? name,
-      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
-      Boolean? experimental,
-      String? publisher,
-      List<ConformanceContact>? contact,
-      required FhirDateTime date,
-      String? description,
-      String? requirements,
-      String? copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required ConformanceKind kind,
-      ConformanceSoftware? software,
-      ConformanceImplementation? implementation,
-      required Id fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
-      @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
-      required List<ConformanceFormat> format,
-      List<Reference>? profile,
-      List<ConformanceRest>? rest,
-      List<ConformanceMessaging>? messaging,
-      List<ConformanceDocument>? document}) {
-    return _CapabilityStatement(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      urlElement: urlElement,
-      version: version,
-      name: name,
-      status: status,
-      experimental: experimental,
-      publisher: publisher,
-      contact: contact,
-      date: date,
-      description: description,
-      requirements: requirements,
-      copyright: copyright,
-      kind: kind,
-      software: software,
-      implementation: implementation,
-      fhirVersion: fhirVersion,
-      fhirVersionElement: fhirVersionElement,
-      acceptUnknown: acceptUnknown,
-      acceptUnknownElement: acceptUnknownElement,
-      format: format,
-      profile: profile,
-      rest: rest,
-      messaging: messaging,
-      document: document,
-    );
-  }
-
-  CapabilityStatement fromJson(Map<String, Object> json) {
-    return CapabilityStatement.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CapabilityStatement = _$CapabilityStatementTearOff();
 
 /// @nodoc
 mixin _$CapabilityStatement {
@@ -1273,7 +1149,8 @@ mixin _$CapabilityStatement {
 abstract class $CapabilityStatementCopyWith<$Res> {
   factory $CapabilityStatementCopyWith(
           CapabilityStatement value, $Res Function(CapabilityStatement) then) =
-      _$CapabilityStatementCopyWithImpl<$Res>;
+      _$CapabilityStatementCopyWithImpl<$Res, CapabilityStatement>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
@@ -1327,17 +1204,19 @@ abstract class $CapabilityStatementCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CapabilityStatementCopyWithImpl<$Res>
+class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     implements $CapabilityStatementCopyWith<$Res> {
   _$CapabilityStatementCopyWithImpl(this._value, this._then);
 
-  final CapabilityStatement _value;
   // ignore: unused_field
-  final $Res Function(CapabilityStatement) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1354,204 +1233,209 @@ class _$CapabilityStatementCopyWithImpl<$Res>
     Object? experimental = freezed,
     Object? publisher = freezed,
     Object? contact = freezed,
-    Object? date = freezed,
+    Object? date = null,
     Object? description = freezed,
     Object? requirements = freezed,
     Object? copyright = freezed,
-    Object? kind = freezed,
+    Object? kind = null,
     Object? software = freezed,
     Object? implementation = freezed,
-    Object? fhirVersion = freezed,
+    Object? fhirVersion = null,
     Object? fhirVersionElement = freezed,
-    Object? acceptUnknown = freezed,
+    Object? acceptUnknown = null,
     Object? acceptUnknownElement = freezed,
-    Object? format = freezed,
+    Object? format = null,
     Object? profile = freezed,
     Object? rest = freezed,
     Object? messaging = freezed,
     Object? document = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ConformanceStatus?,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ConformanceContact>?,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as ConformanceKind,
-      software: software == freezed
+      software: freezed == software
           ? _value.software
           : software // ignore: cast_nullable_to_non_nullable
               as ConformanceSoftware?,
-      implementation: implementation == freezed
+      implementation: freezed == implementation
           ? _value.implementation
           : implementation // ignore: cast_nullable_to_non_nullable
               as ConformanceImplementation?,
-      fhirVersion: fhirVersion == freezed
+      fhirVersion: null == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
               as Id,
-      fhirVersionElement: fhirVersionElement == freezed
+      fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      acceptUnknown: acceptUnknown == freezed
+      acceptUnknown: null == acceptUnknown
           ? _value.acceptUnknown
           : acceptUnknown // ignore: cast_nullable_to_non_nullable
               as ConformanceAcceptUnknown,
-      acceptUnknownElement: acceptUnknownElement == freezed
+      acceptUnknownElement: freezed == acceptUnknownElement
           ? _value.acceptUnknownElement
           : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as List<ConformanceFormat>,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      rest: rest == freezed
+      rest: freezed == rest
           ? _value.rest
           : rest // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRest>?,
-      messaging: messaging == freezed
+      messaging: freezed == messaging
           ? _value.messaging
           : messaging // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessaging>?,
-      document: document == freezed
+      document: freezed == document
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
               as List<ConformanceDocument>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
+      return _then(_value.copyWith(urlElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ConformanceSoftwareCopyWith<$Res>? get software {
     if (_value.software == null) {
       return null;
     }
 
     return $ConformanceSoftwareCopyWith<$Res>(_value.software!, (value) {
-      return _then(_value.copyWith(software: value));
+      return _then(_value.copyWith(software: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ConformanceImplementationCopyWith<$Res>? get implementation {
     if (_value.implementation == null) {
       return null;
@@ -1559,40 +1443,43 @@ class _$CapabilityStatementCopyWithImpl<$Res>
 
     return $ConformanceImplementationCopyWith<$Res>(_value.implementation!,
         (value) {
-      return _then(_value.copyWith(implementation: value));
+      return _then(_value.copyWith(implementation: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fhirVersionElement {
     if (_value.fhirVersionElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.fhirVersionElement!, (value) {
-      return _then(_value.copyWith(fhirVersionElement: value));
+      return _then(_value.copyWith(fhirVersionElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get acceptUnknownElement {
     if (_value.acceptUnknownElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.acceptUnknownElement!, (value) {
-      return _then(_value.copyWith(acceptUnknownElement: value));
+      return _then(_value.copyWith(acceptUnknownElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CapabilityStatementCopyWith<$Res>
+abstract class _$$_CapabilityStatementCopyWith<$Res>
     implements $CapabilityStatementCopyWith<$Res> {
-  factory _$CapabilityStatementCopyWith(_CapabilityStatement value,
-          $Res Function(_CapabilityStatement) then) =
-      __$CapabilityStatementCopyWithImpl<$Res>;
+  factory _$$_CapabilityStatementCopyWith(_$_CapabilityStatement value,
+          $Res Function(_$_CapabilityStatement) then) =
+      __$$_CapabilityStatementCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
@@ -1653,19 +1540,17 @@ abstract class _$CapabilityStatementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CapabilityStatementCopyWithImpl<$Res>
-    extends _$CapabilityStatementCopyWithImpl<$Res>
-    implements _$CapabilityStatementCopyWith<$Res> {
-  __$CapabilityStatementCopyWithImpl(
-      _CapabilityStatement _value, $Res Function(_CapabilityStatement) _then)
-      : super(_value, (v) => _then(v as _CapabilityStatement));
+class __$$_CapabilityStatementCopyWithImpl<$Res>
+    extends _$CapabilityStatementCopyWithImpl<$Res, _$_CapabilityStatement>
+    implements _$$_CapabilityStatementCopyWith<$Res> {
+  __$$_CapabilityStatementCopyWithImpl(_$_CapabilityStatement _value,
+      $Res Function(_$_CapabilityStatement) _then)
+      : super(_value, _then);
 
-  @override
-  _CapabilityStatement get _value => super._value as _CapabilityStatement;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1682,154 +1567,154 @@ class __$CapabilityStatementCopyWithImpl<$Res>
     Object? experimental = freezed,
     Object? publisher = freezed,
     Object? contact = freezed,
-    Object? date = freezed,
+    Object? date = null,
     Object? description = freezed,
     Object? requirements = freezed,
     Object? copyright = freezed,
-    Object? kind = freezed,
+    Object? kind = null,
     Object? software = freezed,
     Object? implementation = freezed,
-    Object? fhirVersion = freezed,
+    Object? fhirVersion = null,
     Object? fhirVersionElement = freezed,
-    Object? acceptUnknown = freezed,
+    Object? acceptUnknown = null,
     Object? acceptUnknownElement = freezed,
-    Object? format = freezed,
+    Object? format = null,
     Object? profile = freezed,
     Object? rest = freezed,
     Object? messaging = freezed,
     Object? document = freezed,
   }) {
-    return _then(_CapabilityStatement(
-      resourceType: resourceType == freezed
+    return _then(_$_CapabilityStatement(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as ConformanceStatus?,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
-          ? _value.contact
+      contact: freezed == contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ConformanceContact>?,
-      date: date == freezed
+      date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as ConformanceKind,
-      software: software == freezed
+      software: freezed == software
           ? _value.software
           : software // ignore: cast_nullable_to_non_nullable
               as ConformanceSoftware?,
-      implementation: implementation == freezed
+      implementation: freezed == implementation
           ? _value.implementation
           : implementation // ignore: cast_nullable_to_non_nullable
               as ConformanceImplementation?,
-      fhirVersion: fhirVersion == freezed
+      fhirVersion: null == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
               as Id,
-      fhirVersionElement: fhirVersionElement == freezed
+      fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      acceptUnknown: acceptUnknown == freezed
+      acceptUnknown: null == acceptUnknown
           ? _value.acceptUnknown
           : acceptUnknown // ignore: cast_nullable_to_non_nullable
               as ConformanceAcceptUnknown,
-      acceptUnknownElement: acceptUnknownElement == freezed
+      acceptUnknownElement: freezed == acceptUnknownElement
           ? _value.acceptUnknownElement
           : acceptUnknownElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      format: format == freezed
-          ? _value.format
+      format: null == format
+          ? _value._format
           : format // ignore: cast_nullable_to_non_nullable
               as List<ConformanceFormat>,
-      profile: profile == freezed
-          ? _value.profile
+      profile: freezed == profile
+          ? _value._profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      rest: rest == freezed
-          ? _value.rest
+      rest: freezed == rest
+          ? _value._rest
           : rest // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRest>?,
-      messaging: messaging == freezed
-          ? _value.messaging
+      messaging: freezed == messaging
+          ? _value._messaging
           : messaging // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessaging>?,
-      document: document == freezed
-          ? _value.document
+      document: freezed == document
+          ? _value._document
           : document // ignore: cast_nullable_to_non_nullable
               as List<ConformanceDocument>?,
     ));
@@ -1847,10 +1732,10 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       this.implicitRules,
       this.language,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
@@ -1860,7 +1745,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
           this.status,
       this.experimental,
       this.publisher,
-      this.contact,
+      final List<ConformanceContact>? contact,
       required this.date,
       this.description,
       this.requirements,
@@ -1876,12 +1761,21 @@ class _$_CapabilityStatement extends _CapabilityStatement {
           required this.acceptUnknown,
       @JsonKey(name: '_acceptUnknown')
           this.acceptUnknownElement,
-      required this.format,
-      this.profile,
-      this.rest,
-      this.messaging,
-      this.document})
-      : super._();
+      required final List<ConformanceFormat> format,
+      final List<Reference>? profile,
+      final List<ConformanceRest>? rest,
+      final List<ConformanceMessaging>? messaging,
+      final List<ConformanceDocument>? document})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _format = format,
+        _profile = profile,
+        _rest = rest,
+        _messaging = messaging,
+        _document = document,
+        super._();
 
   factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
       _$$_CapabilityStatementFromJson(json);
@@ -1899,13 +1793,34 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   final Code? language;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
@@ -1922,8 +1837,15 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   final Boolean? experimental;
   @override
   final String? publisher;
+  final List<ConformanceContact>? _contact;
   @override
-  final List<ConformanceContact>? contact;
+  List<ConformanceContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime date;
   @override
@@ -1950,16 +1872,48 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   @JsonKey(name: '_acceptUnknown')
   final Element? acceptUnknownElement;
+  final List<ConformanceFormat> _format;
   @override
-  final List<ConformanceFormat> format;
+  List<ConformanceFormat> get format {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_format);
+  }
+
+  final List<Reference>? _profile;
   @override
-  final List<Reference>? profile;
+  List<Reference>? get profile {
+    final value = _profile;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceRest>? _rest;
   @override
-  final List<ConformanceRest>? rest;
+  List<ConformanceRest>? get rest {
+    final value = _rest;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceMessaging>? _messaging;
   @override
-  final List<ConformanceMessaging>? messaging;
+  List<ConformanceMessaging>? get messaging {
+    final value = _messaging;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceDocument>? _document;
   @override
-  final List<ConformanceDocument>? document;
+  List<ConformanceDocument>? get document {
+    final value = _document;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -1969,177 +1923,159 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CapabilityStatement &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CapabilityStatement &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
+                other.language == language) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.urlElement == urlElement) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.experimental, experimental) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimental, experimental)) &&
+                other.experimental == experimental) &&
             (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
+                other.publisher == publisher) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.requirements, requirements) ||
-                const DeepCollectionEquality()
-                    .equals(other.requirements, requirements)) &&
+                other.requirements == requirements) &&
             (identical(other.copyright, copyright) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyright, copyright)) &&
-            (identical(other.kind, kind) ||
-                const DeepCollectionEquality().equals(other.kind, kind)) &&
+                other.copyright == copyright) &&
+            (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.software, software) ||
-                const DeepCollectionEquality()
-                    .equals(other.software, software)) &&
+                other.software == software) &&
             (identical(other.implementation, implementation) ||
-                const DeepCollectionEquality()
-                    .equals(other.implementation, implementation)) &&
+                other.implementation == implementation) &&
             (identical(other.fhirVersion, fhirVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirVersion, fhirVersion)) &&
+                other.fhirVersion == fhirVersion) &&
             (identical(other.fhirVersionElement, fhirVersionElement) ||
-                const DeepCollectionEquality().equals(other.fhirVersionElement, fhirVersionElement)) &&
-            (identical(other.acceptUnknown, acceptUnknown) || const DeepCollectionEquality().equals(other.acceptUnknown, acceptUnknown)) &&
-            (identical(other.acceptUnknownElement, acceptUnknownElement) || const DeepCollectionEquality().equals(other.acceptUnknownElement, acceptUnknownElement)) &&
-            (identical(other.format, format) || const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.profile, profile) || const DeepCollectionEquality().equals(other.profile, profile)) &&
-            (identical(other.rest, rest) || const DeepCollectionEquality().equals(other.rest, rest)) &&
-            (identical(other.messaging, messaging) || const DeepCollectionEquality().equals(other.messaging, messaging)) &&
-            (identical(other.document, document) || const DeepCollectionEquality().equals(other.document, document)));
+                other.fhirVersionElement == fhirVersionElement) &&
+            (identical(other.acceptUnknown, acceptUnknown) ||
+                other.acceptUnknown == acceptUnknown) &&
+            (identical(other.acceptUnknownElement, acceptUnknownElement) ||
+                other.acceptUnknownElement == acceptUnknownElement) &&
+            const DeepCollectionEquality().equals(other._format, _format) &&
+            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other._rest, _rest) &&
+            const DeepCollectionEquality()
+                .equals(other._messaging, _messaging) &&
+            const DeepCollectionEquality().equals(other._document, _document));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(experimental) ^
-      const DeepCollectionEquality().hash(publisher) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(requirements) ^
-      const DeepCollectionEquality().hash(copyright) ^
-      const DeepCollectionEquality().hash(kind) ^
-      const DeepCollectionEquality().hash(software) ^
-      const DeepCollectionEquality().hash(implementation) ^
-      const DeepCollectionEquality().hash(fhirVersion) ^
-      const DeepCollectionEquality().hash(fhirVersionElement) ^
-      const DeepCollectionEquality().hash(acceptUnknown) ^
-      const DeepCollectionEquality().hash(acceptUnknownElement) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(rest) ^
-      const DeepCollectionEquality().hash(messaging) ^
-      const DeepCollectionEquality().hash(document);
 
   @JsonKey(ignore: true)
   @override
-  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
-      __$CapabilityStatementCopyWithImpl<_CapabilityStatement>(
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        language,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        urlElement,
+        version,
+        name,
+        status,
+        experimental,
+        publisher,
+        const DeepCollectionEquality().hash(_contact),
+        date,
+        description,
+        requirements,
+        copyright,
+        kind,
+        software,
+        implementation,
+        fhirVersion,
+        fhirVersionElement,
+        acceptUnknown,
+        acceptUnknownElement,
+        const DeepCollectionEquality().hash(_format),
+        const DeepCollectionEquality().hash(_profile),
+        const DeepCollectionEquality().hash(_rest),
+        const DeepCollectionEquality().hash(_messaging),
+        const DeepCollectionEquality().hash(_document)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CapabilityStatementCopyWith<_$_CapabilityStatement> get copyWith =>
+      __$$_CapabilityStatementCopyWithImpl<_$_CapabilityStatement>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CapabilityStatementToJson(this);
+    return _$$_CapabilityStatementToJson(
+      this,
+    );
   }
 }
 
 abstract class _CapabilityStatement extends CapabilityStatement {
   factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      final Code? language,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-          Element? urlElement,
-      String? version,
-      String? name,
+          final Element? urlElement,
+      final String? version,
+      final String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
-      Boolean? experimental,
-      String? publisher,
-      List<ConformanceContact>? contact,
-      required FhirDateTime date,
-      String? description,
-      String? requirements,
-      String? copyright,
+          final ConformanceStatus? status,
+      final Boolean? experimental,
+      final String? publisher,
+      final List<ConformanceContact>? contact,
+      required final FhirDateTime date,
+      final String? description,
+      final String? requirements,
+      final String? copyright,
       @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required ConformanceKind kind,
-      ConformanceSoftware? software,
-      ConformanceImplementation? implementation,
-      required Id fhirVersion,
+          required final ConformanceKind kind,
+      final ConformanceSoftware? software,
+      final ConformanceImplementation? implementation,
+      required final Id fhirVersion,
       @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+          final Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required ConformanceAcceptUnknown acceptUnknown,
+          required final ConformanceAcceptUnknown acceptUnknown,
       @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
-      required List<ConformanceFormat> format,
-      List<Reference>? profile,
-      List<ConformanceRest>? rest,
-      List<ConformanceMessaging>? messaging,
-      List<ConformanceDocument>? document}) = _$_CapabilityStatement;
+          final Element? acceptUnknownElement,
+      required final List<ConformanceFormat> format,
+      final List<Reference>? profile,
+      final List<ConformanceRest>? rest,
+      final List<ConformanceMessaging>? messaging,
+      final List<ConformanceDocument>? document}) = _$_CapabilityStatement;
   _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
@@ -2147,118 +2083,87 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-  ConformanceStatus? get status => throw _privateConstructorUsedError;
+  ConformanceStatus? get status;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<ConformanceContact>? get contact => throw _privateConstructorUsedError;
+  List<ConformanceContact>? get contact;
   @override
-  FhirDateTime get date => throw _privateConstructorUsedError;
+  FhirDateTime get date;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
   @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-  ConformanceKind get kind => throw _privateConstructorUsedError;
+  ConformanceKind get kind;
   @override
-  ConformanceSoftware? get software => throw _privateConstructorUsedError;
+  ConformanceSoftware? get software;
   @override
-  ConformanceImplementation? get implementation =>
-      throw _privateConstructorUsedError;
+  ConformanceImplementation? get implementation;
   @override
-  Id get fhirVersion => throw _privateConstructorUsedError;
+  Id get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
-  Element? get fhirVersionElement => throw _privateConstructorUsedError;
+  Element? get fhirVersionElement;
   @override
   @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-  ConformanceAcceptUnknown get acceptUnknown =>
-      throw _privateConstructorUsedError;
+  ConformanceAcceptUnknown get acceptUnknown;
   @override
   @JsonKey(name: '_acceptUnknown')
-  Element? get acceptUnknownElement => throw _privateConstructorUsedError;
+  Element? get acceptUnknownElement;
   @override
-  List<ConformanceFormat> get format => throw _privateConstructorUsedError;
+  List<ConformanceFormat> get format;
   @override
-  List<Reference>? get profile => throw _privateConstructorUsedError;
+  List<Reference>? get profile;
   @override
-  List<ConformanceRest>? get rest => throw _privateConstructorUsedError;
+  List<ConformanceRest>? get rest;
   @override
-  List<ConformanceMessaging>? get messaging =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessaging>? get messaging;
   @override
-  List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
+  List<ConformanceDocument>? get document;
   @override
   @JsonKey(ignore: true)
-  _$CapabilityStatementCopyWith<_CapabilityStatement> get copyWith =>
+  _$$_CapabilityStatementCopyWith<_$_CapabilityStatement> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) {
   return _ConformanceContact.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceContactTearOff {
-  const _$ConformanceContactTearOff();
-
-  _ConformanceContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _ConformanceContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  ConformanceContact fromJson(Map<String, Object> json) {
-    return ConformanceContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceContact = _$ConformanceContactTearOff();
 
 /// @nodoc
 mixin _$ConformanceContact {
@@ -2280,7 +2185,8 @@ mixin _$ConformanceContact {
 abstract class $ConformanceContactCopyWith<$Res> {
   factory $ConformanceContactCopyWith(
           ConformanceContact value, $Res Function(ConformanceContact) then) =
-      _$ConformanceContactCopyWithImpl<$Res>;
+      _$ConformanceContactCopyWithImpl<$Res, ConformanceContact>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2290,14 +2196,16 @@ abstract class $ConformanceContactCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceContactCopyWithImpl<$Res>
+class _$ConformanceContactCopyWithImpl<$Res, $Val extends ConformanceContact>
     implements $ConformanceContactCopyWith<$Res> {
   _$ConformanceContactCopyWithImpl(this._value, this._then);
 
-  final ConformanceContact _value;
   // ignore: unused_field
-  final $Res Function(ConformanceContact) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2307,37 +2215,38 @@ class _$ConformanceContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      telecom: telecom == freezed
+      telecom: freezed == telecom
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceContactCopyWith<$Res>
+abstract class _$$_ConformanceContactCopyWith<$Res>
     implements $ConformanceContactCopyWith<$Res> {
-  factory _$ConformanceContactCopyWith(
-          _ConformanceContact value, $Res Function(_ConformanceContact) then) =
-      __$ConformanceContactCopyWithImpl<$Res>;
+  factory _$$_ConformanceContactCopyWith(_$_ConformanceContact value,
+          $Res Function(_$_ConformanceContact) then) =
+      __$$_ConformanceContactCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2347,16 +2256,14 @@ abstract class _$ConformanceContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceContactCopyWithImpl<$Res>
-    extends _$ConformanceContactCopyWithImpl<$Res>
-    implements _$ConformanceContactCopyWith<$Res> {
-  __$ConformanceContactCopyWithImpl(
-      _ConformanceContact _value, $Res Function(_ConformanceContact) _then)
-      : super(_value, (v) => _then(v as _ConformanceContact));
+class __$$_ConformanceContactCopyWithImpl<$Res>
+    extends _$ConformanceContactCopyWithImpl<$Res, _$_ConformanceContact>
+    implements _$$_ConformanceContactCopyWith<$Res> {
+  __$$_ConformanceContactCopyWithImpl(
+      _$_ConformanceContact _value, $Res Function(_$_ConformanceContact) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceContact get _value => super._value as _ConformanceContact;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2365,25 +2272,25 @@ class __$ConformanceContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_ConformanceContact(
-      id: id == freezed
+    return _then(_$_ConformanceContact(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      telecom: telecom == freezed
-          ? _value.telecom
+      telecom: freezed == telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -2395,26 +2302,49 @@ class __$ConformanceContactCopyWithImpl<$Res>
 class _$_ConformanceContact extends _ConformanceContact {
   _$_ConformanceContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_ConformanceContact.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -2424,103 +2354,74 @@ class _$_ConformanceContact extends _ConformanceContact {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceContact &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.telecom, telecom) ||
-                const DeepCollectionEquality().equals(other.telecom, telecom)));
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceContact &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(telecom);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceContactCopyWith<_ConformanceContact> get copyWith =>
-      __$ConformanceContactCopyWithImpl<_ConformanceContact>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      const DeepCollectionEquality().hash(_telecom));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceContactCopyWith<_$_ConformanceContact> get copyWith =>
+      __$$_ConformanceContactCopyWithImpl<_$_ConformanceContact>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceContactToJson(this);
+    return _$$_ConformanceContactToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceContact extends ConformanceContact {
   factory _ConformanceContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_ConformanceContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_ConformanceContact;
   _ConformanceContact._() : super._();
 
   factory _ConformanceContact.fromJson(Map<String, dynamic> json) =
       _$_ConformanceContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceContactCopyWith<_ConformanceContact> get copyWith =>
+  _$$_ConformanceContactCopyWith<_$_ConformanceContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ConformanceSoftware _$ConformanceSoftwareFromJson(Map<String, dynamic> json) {
   return _ConformanceSoftware.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceSoftwareTearOff {
-  const _$ConformanceSoftwareTearOff();
-
-  _ConformanceSoftware call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String name,
-      String? version,
-      FhirDateTime? releaseDate}) {
-    return _ConformanceSoftware(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      version: version,
-      releaseDate: releaseDate,
-    );
-  }
-
-  ConformanceSoftware fromJson(Map<String, Object> json) {
-    return ConformanceSoftware.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceSoftware = _$ConformanceSoftwareTearOff();
 
 /// @nodoc
 mixin _$ConformanceSoftware {
@@ -2543,7 +2444,8 @@ mixin _$ConformanceSoftware {
 abstract class $ConformanceSoftwareCopyWith<$Res> {
   factory $ConformanceSoftwareCopyWith(
           ConformanceSoftware value, $Res Function(ConformanceSoftware) then) =
-      _$ConformanceSoftwareCopyWithImpl<$Res>;
+      _$ConformanceSoftwareCopyWithImpl<$Res, ConformanceSoftware>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2554,59 +2456,62 @@ abstract class $ConformanceSoftwareCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceSoftwareCopyWithImpl<$Res>
+class _$ConformanceSoftwareCopyWithImpl<$Res, $Val extends ConformanceSoftware>
     implements $ConformanceSoftwareCopyWith<$Res> {
   _$ConformanceSoftwareCopyWithImpl(this._value, this._then);
 
-  final ConformanceSoftware _value;
   // ignore: unused_field
-  final $Res Function(ConformanceSoftware) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? version = freezed,
     Object? releaseDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceSoftwareCopyWith<$Res>
+abstract class _$$_ConformanceSoftwareCopyWith<$Res>
     implements $ConformanceSoftwareCopyWith<$Res> {
-  factory _$ConformanceSoftwareCopyWith(_ConformanceSoftware value,
-          $Res Function(_ConformanceSoftware) then) =
-      __$ConformanceSoftwareCopyWithImpl<$Res>;
+  factory _$$_ConformanceSoftwareCopyWith(_$_ConformanceSoftware value,
+          $Res Function(_$_ConformanceSoftware) then) =
+      __$$_ConformanceSoftwareCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2617,47 +2522,45 @@ abstract class _$ConformanceSoftwareCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceSoftwareCopyWithImpl<$Res>
-    extends _$ConformanceSoftwareCopyWithImpl<$Res>
-    implements _$ConformanceSoftwareCopyWith<$Res> {
-  __$ConformanceSoftwareCopyWithImpl(
-      _ConformanceSoftware _value, $Res Function(_ConformanceSoftware) _then)
-      : super(_value, (v) => _then(v as _ConformanceSoftware));
+class __$$_ConformanceSoftwareCopyWithImpl<$Res>
+    extends _$ConformanceSoftwareCopyWithImpl<$Res, _$_ConformanceSoftware>
+    implements _$$_ConformanceSoftwareCopyWith<$Res> {
+  __$$_ConformanceSoftwareCopyWithImpl(_$_ConformanceSoftware _value,
+      $Res Function(_$_ConformanceSoftware) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceSoftware get _value => super._value as _ConformanceSoftware;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? version = freezed,
     Object? releaseDate = freezed,
   }) {
-    return _then(_ConformanceSoftware(
-      id: id == freezed
+    return _then(_$_ConformanceSoftware(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
@@ -2670,23 +2573,39 @@ class __$ConformanceSoftwareCopyWithImpl<$Res>
 class _$_ConformanceSoftware extends _ConformanceSoftware {
   _$_ConformanceSoftware(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.name,
       this.version,
       this.releaseDate})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceSoftwareFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
@@ -2702,77 +2621,74 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceSoftware &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceSoftware &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.version, version) || other.version == version) &&
             (identical(other.releaseDate, releaseDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.releaseDate, releaseDate)));
+                other.releaseDate == releaseDate));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(releaseDate);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceSoftwareCopyWith<_ConformanceSoftware> get copyWith =>
-      __$ConformanceSoftwareCopyWithImpl<_ConformanceSoftware>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      version,
+      releaseDate);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceSoftwareCopyWith<_$_ConformanceSoftware> get copyWith =>
+      __$$_ConformanceSoftwareCopyWithImpl<_$_ConformanceSoftware>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceSoftwareToJson(this);
+    return _$$_ConformanceSoftwareToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceSoftware extends ConformanceSoftware {
   factory _ConformanceSoftware(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String name,
-      String? version,
-      FhirDateTime? releaseDate}) = _$_ConformanceSoftware;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final String name,
+      final String? version,
+      final FhirDateTime? releaseDate}) = _$_ConformanceSoftware;
   _ConformanceSoftware._() : super._();
 
   factory _ConformanceSoftware.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSoftware.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
+  FhirDateTime? get releaseDate;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceSoftwareCopyWith<_ConformanceSoftware> get copyWith =>
+  _$$_ConformanceSoftwareCopyWith<_$_ConformanceSoftware> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2780,33 +2696,6 @@ ConformanceImplementation _$ConformanceImplementationFromJson(
     Map<String, dynamic> json) {
   return _ConformanceImplementation.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceImplementationTearOff {
-  const _$ConformanceImplementationTearOff();
-
-  _ConformanceImplementation call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String description,
-      FhirUri? url}) {
-    return _ConformanceImplementation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      description: description,
-      url: url,
-    );
-  }
-
-  ConformanceImplementation fromJson(Map<String, Object> json) {
-    return ConformanceImplementation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceImplementation = _$ConformanceImplementationTearOff();
 
 /// @nodoc
 mixin _$ConformanceImplementation {
@@ -2828,7 +2717,8 @@ mixin _$ConformanceImplementation {
 abstract class $ConformanceImplementationCopyWith<$Res> {
   factory $ConformanceImplementationCopyWith(ConformanceImplementation value,
           $Res Function(ConformanceImplementation) then) =
-      _$ConformanceImplementationCopyWithImpl<$Res>;
+      _$ConformanceImplementationCopyWithImpl<$Res, ConformanceImplementation>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2838,54 +2728,59 @@ abstract class $ConformanceImplementationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceImplementationCopyWithImpl<$Res>
+class _$ConformanceImplementationCopyWithImpl<$Res,
+        $Val extends ConformanceImplementation>
     implements $ConformanceImplementationCopyWith<$Res> {
   _$ConformanceImplementationCopyWithImpl(this._value, this._then);
 
-  final ConformanceImplementation _value;
   // ignore: unused_field
-  final $Res Function(ConformanceImplementation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? description = freezed,
+    Object? description = null,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceImplementationCopyWith<$Res>
+abstract class _$$_ConformanceImplementationCopyWith<$Res>
     implements $ConformanceImplementationCopyWith<$Res> {
-  factory _$ConformanceImplementationCopyWith(_ConformanceImplementation value,
-          $Res Function(_ConformanceImplementation) then) =
-      __$ConformanceImplementationCopyWithImpl<$Res>;
+  factory _$$_ConformanceImplementationCopyWith(
+          _$_ConformanceImplementation value,
+          $Res Function(_$_ConformanceImplementation) then) =
+      __$$_ConformanceImplementationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2895,43 +2790,42 @@ abstract class _$ConformanceImplementationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceImplementationCopyWithImpl<$Res>
-    extends _$ConformanceImplementationCopyWithImpl<$Res>
-    implements _$ConformanceImplementationCopyWith<$Res> {
-  __$ConformanceImplementationCopyWithImpl(_ConformanceImplementation _value,
-      $Res Function(_ConformanceImplementation) _then)
-      : super(_value, (v) => _then(v as _ConformanceImplementation));
+class __$$_ConformanceImplementationCopyWithImpl<$Res>
+    extends _$ConformanceImplementationCopyWithImpl<$Res,
+        _$_ConformanceImplementation>
+    implements _$$_ConformanceImplementationCopyWith<$Res> {
+  __$$_ConformanceImplementationCopyWithImpl(
+      _$_ConformanceImplementation _value,
+      $Res Function(_$_ConformanceImplementation) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceImplementation get _value =>
-      super._value as _ConformanceImplementation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? description = freezed,
+    Object? description = null,
     Object? url = freezed,
   }) {
-    return _then(_ConformanceImplementation(
-      id: id == freezed
+    return _then(_$_ConformanceImplementation(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      description: description == freezed
+      description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
@@ -2944,22 +2838,38 @@ class __$ConformanceImplementationCopyWithImpl<$Res>
 class _$_ConformanceImplementation extends _ConformanceImplementation {
   _$_ConformanceImplementation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.description,
       this.url})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceImplementationFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String description;
   @override
@@ -2973,127 +2883,75 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceImplementation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceImplementation &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)));
+                other.description == description) &&
+            (identical(other.url, url) || other.url == url));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(url);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceImplementationCopyWith<_ConformanceImplementation>
-      get copyWith =>
-          __$ConformanceImplementationCopyWithImpl<_ConformanceImplementation>(
-              this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      description,
+      url);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceImplementationCopyWith<_$_ConformanceImplementation>
+      get copyWith => __$$_ConformanceImplementationCopyWithImpl<
+          _$_ConformanceImplementation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceImplementationToJson(this);
+    return _$$_ConformanceImplementationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceImplementation extends ConformanceImplementation {
   factory _ConformanceImplementation(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required String description,
-      FhirUri? url}) = _$_ConformanceImplementation;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final String description,
+      final FhirUri? url}) = _$_ConformanceImplementation;
   _ConformanceImplementation._() : super._();
 
   factory _ConformanceImplementation.fromJson(Map<String, dynamic> json) =
       _$_ConformanceImplementation.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String get description => throw _privateConstructorUsedError;
+  String get description;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceImplementationCopyWith<_ConformanceImplementation>
+  _$$_ConformanceImplementationCopyWith<_$_ConformanceImplementation>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceRest _$ConformanceRestFromJson(Map<String, dynamic> json) {
   return _ConformanceRest.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceRestTearOff {
-  const _$ConformanceRestTearOff();
-
-  _ConformanceRest call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: RestMode.unknown)
-          required RestMode mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
-      String? documentation,
-      ConformanceRestSecurity? security,
-      required List<ConformanceRestResource> resource,
-      List<ConformanceRestInteraction>? interaction,
-      @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-          RestTransactionMode? transactionMode,
-      List<ConformanceResourceSearchParam>? searchParam,
-      List<ConformanceRestOperation>? operation,
-      List<FhirUri>? compartment}) {
-    return _ConformanceRest(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      mode: mode,
-      modeElement: modeElement,
-      documentation: documentation,
-      security: security,
-      resource: resource,
-      interaction: interaction,
-      transactionMode: transactionMode,
-      searchParam: searchParam,
-      operation: operation,
-      compartment: compartment,
-    );
-  }
-
-  ConformanceRest fromJson(Map<String, Object> json) {
-    return ConformanceRest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceRest = _$ConformanceRestTearOff();
 
 /// @nodoc
 mixin _$ConformanceRest {
@@ -3133,7 +2991,8 @@ mixin _$ConformanceRest {
 abstract class $ConformanceRestCopyWith<$Res> {
   factory $ConformanceRestCopyWith(
           ConformanceRest value, $Res Function(ConformanceRest) then) =
-      _$ConformanceRestCopyWithImpl<$Res>;
+      _$ConformanceRestCopyWithImpl<$Res, ConformanceRest>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3160,25 +3019,27 @@ abstract class $ConformanceRestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceRestCopyWithImpl<$Res>
+class _$ConformanceRestCopyWithImpl<$Res, $Val extends ConformanceRest>
     implements $ConformanceRestCopyWith<$Res> {
   _$ConformanceRestCopyWithImpl(this._value, this._then);
 
-  final ConformanceRest _value;
   // ignore: unused_field
-  final $Res Function(ConformanceRest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? mode = freezed,
+    Object? mode = null,
     Object? modeElement = freezed,
     Object? documentation = freezed,
     Object? security = freezed,
-    Object? resource = freezed,
+    Object? resource = null,
     Object? interaction = freezed,
     Object? transactionMode = freezed,
     Object? searchParam = freezed,
@@ -3186,95 +3047,98 @@ class _$ConformanceRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as RestMode,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      security: security == freezed
+      security: freezed == security
           ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
               as ConformanceRestSecurity?,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRestResource>,
-      interaction: interaction == freezed
+      interaction: freezed == interaction
           ? _value.interaction
           : interaction // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRestInteraction>?,
-      transactionMode: transactionMode == freezed
+      transactionMode: freezed == transactionMode
           ? _value.transactionMode
           : transactionMode // ignore: cast_nullable_to_non_nullable
               as RestTransactionMode?,
-      searchParam: searchParam == freezed
+      searchParam: freezed == searchParam
           ? _value.searchParam
           : searchParam // ignore: cast_nullable_to_non_nullable
               as List<ConformanceResourceSearchParam>?,
-      operation: operation == freezed
+      operation: freezed == operation
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRestOperation>?,
-      compartment: compartment == freezed
+      compartment: freezed == compartment
           ? _value.compartment
           : compartment // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
     if (_value.modeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
-      return _then(_value.copyWith(modeElement: value));
+      return _then(_value.copyWith(modeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ConformanceRestSecurityCopyWith<$Res>? get security {
     if (_value.security == null) {
       return null;
     }
 
     return $ConformanceRestSecurityCopyWith<$Res>(_value.security!, (value) {
-      return _then(_value.copyWith(security: value));
+      return _then(_value.copyWith(security: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceRestCopyWith<$Res>
+abstract class _$$_ConformanceRestCopyWith<$Res>
     implements $ConformanceRestCopyWith<$Res> {
-  factory _$ConformanceRestCopyWith(
-          _ConformanceRest value, $Res Function(_ConformanceRest) then) =
-      __$ConformanceRestCopyWithImpl<$Res>;
+  factory _$$_ConformanceRestCopyWith(
+          _$_ConformanceRest value, $Res Function(_$_ConformanceRest) then) =
+      __$$_ConformanceRestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3303,88 +3167,86 @@ abstract class _$ConformanceRestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceRestCopyWithImpl<$Res>
-    extends _$ConformanceRestCopyWithImpl<$Res>
-    implements _$ConformanceRestCopyWith<$Res> {
-  __$ConformanceRestCopyWithImpl(
-      _ConformanceRest _value, $Res Function(_ConformanceRest) _then)
-      : super(_value, (v) => _then(v as _ConformanceRest));
+class __$$_ConformanceRestCopyWithImpl<$Res>
+    extends _$ConformanceRestCopyWithImpl<$Res, _$_ConformanceRest>
+    implements _$$_ConformanceRestCopyWith<$Res> {
+  __$$_ConformanceRestCopyWithImpl(
+      _$_ConformanceRest _value, $Res Function(_$_ConformanceRest) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceRest get _value => super._value as _ConformanceRest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? mode = freezed,
+    Object? mode = null,
     Object? modeElement = freezed,
     Object? documentation = freezed,
     Object? security = freezed,
-    Object? resource = freezed,
+    Object? resource = null,
     Object? interaction = freezed,
     Object? transactionMode = freezed,
     Object? searchParam = freezed,
     Object? operation = freezed,
     Object? compartment = freezed,
   }) {
-    return _then(_ConformanceRest(
-      id: id == freezed
+    return _then(_$_ConformanceRest(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as RestMode,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      security: security == freezed
+      security: freezed == security
           ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
               as ConformanceRestSecurity?,
-      resource: resource == freezed
-          ? _value.resource
+      resource: null == resource
+          ? _value._resource
           : resource // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRestResource>,
-      interaction: interaction == freezed
-          ? _value.interaction
+      interaction: freezed == interaction
+          ? _value._interaction
           : interaction // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRestInteraction>?,
-      transactionMode: transactionMode == freezed
+      transactionMode: freezed == transactionMode
           ? _value.transactionMode
           : transactionMode // ignore: cast_nullable_to_non_nullable
               as RestTransactionMode?,
-      searchParam: searchParam == freezed
-          ? _value.searchParam
+      searchParam: freezed == searchParam
+          ? _value._searchParam
           : searchParam // ignore: cast_nullable_to_non_nullable
               as List<ConformanceResourceSearchParam>?,
-      operation: operation == freezed
-          ? _value.operation
+      operation: freezed == operation
+          ? _value._operation
           : operation // ignore: cast_nullable_to_non_nullable
               as List<ConformanceRestOperation>?,
-      compartment: compartment == freezed
-          ? _value.compartment
+      compartment: freezed == compartment
+          ? _value._compartment
           : compartment // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
     ));
@@ -3397,38 +3259,67 @@ class _$_ConformanceRest extends _ConformanceRest {
   _$_ConformanceRest(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          this.fhirComments,
+          final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RestMode.unknown)
           required this.mode,
       @JsonKey(name: '_mode')
           this.modeElement,
       this.documentation,
       this.security,
-      required this.resource,
-      this.interaction,
+      required final List<ConformanceRestResource> resource,
+      final List<ConformanceRestInteraction>? interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
           this.transactionMode,
-      this.searchParam,
-      this.operation,
-      this.compartment})
-      : super._();
+      final List<ConformanceResourceSearchParam>? searchParam,
+      final List<ConformanceRestOperation>? operation,
+      final List<FhirUri>? compartment})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _resource = resource,
+        _interaction = interaction,
+        _searchParam = searchParam,
+        _operation = operation,
+        _compartment = compartment,
+        super._();
 
   factory _$_ConformanceRest.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceRestFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: RestMode.unknown)
   final RestMode mode;
@@ -3439,19 +3330,51 @@ class _$_ConformanceRest extends _ConformanceRest {
   final String? documentation;
   @override
   final ConformanceRestSecurity? security;
+  final List<ConformanceRestResource> _resource;
   @override
-  final List<ConformanceRestResource> resource;
+  List<ConformanceRestResource> get resource {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_resource);
+  }
+
+  final List<ConformanceRestInteraction>? _interaction;
   @override
-  final List<ConformanceRestInteraction>? interaction;
+  List<ConformanceRestInteraction>? get interaction {
+    final value = _interaction;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
   final RestTransactionMode? transactionMode;
+  final List<ConformanceResourceSearchParam>? _searchParam;
   @override
-  final List<ConformanceResourceSearchParam>? searchParam;
+  List<ConformanceResourceSearchParam>? get searchParam {
+    final value = _searchParam;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceRestOperation>? _operation;
   @override
-  final List<ConformanceRestOperation>? operation;
+  List<ConformanceRestOperation>? get operation {
+    final value = _operation;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirUri>? _compartment;
   @override
-  final List<FhirUri>? compartment;
+  List<FhirUri>? get compartment {
+    final value = _compartment;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3461,185 +3384,136 @@ class _$_ConformanceRest extends _ConformanceRest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceRest &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.mode, mode) ||
-                const DeepCollectionEquality().equals(other.mode, mode)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceRest &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
             (identical(other.modeElement, modeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.modeElement, modeElement)) &&
+                other.modeElement == modeElement) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
+                other.documentation == documentation) &&
             (identical(other.security, security) ||
-                const DeepCollectionEquality()
-                    .equals(other.security, security)) &&
-            (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.interaction, interaction) ||
-                const DeepCollectionEquality()
-                    .equals(other.interaction, interaction)) &&
+                other.security == security) &&
+            const DeepCollectionEquality().equals(other._resource, _resource) &&
+            const DeepCollectionEquality()
+                .equals(other._interaction, _interaction) &&
             (identical(other.transactionMode, transactionMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.transactionMode, transactionMode)) &&
-            (identical(other.searchParam, searchParam) ||
-                const DeepCollectionEquality()
-                    .equals(other.searchParam, searchParam)) &&
-            (identical(other.operation, operation) ||
-                const DeepCollectionEquality()
-                    .equals(other.operation, operation)) &&
-            (identical(other.compartment, compartment) ||
-                const DeepCollectionEquality()
-                    .equals(other.compartment, compartment)));
+                other.transactionMode == transactionMode) &&
+            const DeepCollectionEquality()
+                .equals(other._searchParam, _searchParam) &&
+            const DeepCollectionEquality()
+                .equals(other._operation, _operation) &&
+            const DeepCollectionEquality()
+                .equals(other._compartment, _compartment));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(modeElement) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(security) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(interaction) ^
-      const DeepCollectionEquality().hash(transactionMode) ^
-      const DeepCollectionEquality().hash(searchParam) ^
-      const DeepCollectionEquality().hash(operation) ^
-      const DeepCollectionEquality().hash(compartment);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceRestCopyWith<_ConformanceRest> get copyWith =>
-      __$ConformanceRestCopyWithImpl<_ConformanceRest>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      mode,
+      modeElement,
+      documentation,
+      security,
+      const DeepCollectionEquality().hash(_resource),
+      const DeepCollectionEquality().hash(_interaction),
+      transactionMode,
+      const DeepCollectionEquality().hash(_searchParam),
+      const DeepCollectionEquality().hash(_operation),
+      const DeepCollectionEquality().hash(_compartment));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceRestCopyWith<_$_ConformanceRest> get copyWith =>
+      __$$_ConformanceRestCopyWithImpl<_$_ConformanceRest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestToJson(this);
+    return _$$_ConformanceRestToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceRest extends ConformanceRest {
   factory _ConformanceRest(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RestMode.unknown)
-          required RestMode mode,
+          required final RestMode mode,
       @JsonKey(name: '_mode')
-          Element? modeElement,
-      String? documentation,
-      ConformanceRestSecurity? security,
-      required List<ConformanceRestResource> resource,
-      List<ConformanceRestInteraction>? interaction,
+          final Element? modeElement,
+      final String? documentation,
+      final ConformanceRestSecurity? security,
+      required final List<ConformanceRestResource> resource,
+      final List<ConformanceRestInteraction>? interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-          RestTransactionMode? transactionMode,
-      List<ConformanceResourceSearchParam>? searchParam,
-      List<ConformanceRestOperation>? operation,
-      List<FhirUri>? compartment}) = _$_ConformanceRest;
+          final RestTransactionMode? transactionMode,
+      final List<ConformanceResourceSearchParam>? searchParam,
+      final List<ConformanceRestOperation>? operation,
+      final List<FhirUri>? compartment}) = _$_ConformanceRest;
   _ConformanceRest._() : super._();
 
   factory _ConformanceRest.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRest.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: RestMode.unknown)
-  RestMode get mode => throw _privateConstructorUsedError;
+  RestMode get mode;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement => throw _privateConstructorUsedError;
+  Element? get modeElement;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  ConformanceRestSecurity? get security => throw _privateConstructorUsedError;
+  ConformanceRestSecurity? get security;
   @override
-  List<ConformanceRestResource> get resource =>
-      throw _privateConstructorUsedError;
+  List<ConformanceRestResource> get resource;
   @override
-  List<ConformanceRestInteraction>? get interaction =>
-      throw _privateConstructorUsedError;
+  List<ConformanceRestInteraction>? get interaction;
   @override
   @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-  RestTransactionMode? get transactionMode =>
-      throw _privateConstructorUsedError;
+  RestTransactionMode? get transactionMode;
   @override
-  List<ConformanceResourceSearchParam>? get searchParam =>
-      throw _privateConstructorUsedError;
+  List<ConformanceResourceSearchParam>? get searchParam;
   @override
-  List<ConformanceRestOperation>? get operation =>
-      throw _privateConstructorUsedError;
+  List<ConformanceRestOperation>? get operation;
   @override
-  List<FhirUri>? get compartment => throw _privateConstructorUsedError;
+  List<FhirUri>? get compartment;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestCopyWith<_ConformanceRest> get copyWith =>
+  _$$_ConformanceRestCopyWith<_$_ConformanceRest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ConformanceMessaging _$ConformanceMessagingFromJson(Map<String, dynamic> json) {
   return _ConformanceMessaging.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceMessagingTearOff {
-  const _$ConformanceMessagingTearOff();
-
-  _ConformanceMessaging call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      List<ConformanceMessagingEndpoint>? endpoint,
-      UnsignedInt? reliableCache,
-      String? documentation,
-      required List<ConformanceMessagingEvent> event}) {
-    return _ConformanceMessaging(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      endpoint: endpoint,
-      reliableCache: reliableCache,
-      documentation: documentation,
-      event: event,
-    );
-  }
-
-  ConformanceMessaging fromJson(Map<String, Object> json) {
-    return ConformanceMessaging.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceMessaging = _$ConformanceMessagingTearOff();
 
 /// @nodoc
 mixin _$ConformanceMessaging {
@@ -3667,7 +3541,8 @@ mixin _$ConformanceMessaging {
 abstract class $ConformanceMessagingCopyWith<$Res> {
   factory $ConformanceMessagingCopyWith(ConformanceMessaging value,
           $Res Function(ConformanceMessaging) then) =
-      _$ConformanceMessagingCopyWithImpl<$Res>;
+      _$ConformanceMessagingCopyWithImpl<$Res, ConformanceMessaging>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3680,14 +3555,17 @@ abstract class $ConformanceMessagingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceMessagingCopyWithImpl<$Res>
+class _$ConformanceMessagingCopyWithImpl<$Res,
+        $Val extends ConformanceMessaging>
     implements $ConformanceMessagingCopyWith<$Res> {
   _$ConformanceMessagingCopyWithImpl(this._value, this._then);
 
-  final ConformanceMessaging _value;
   // ignore: unused_field
-  final $Res Function(ConformanceMessaging) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3697,52 +3575,53 @@ class _$ConformanceMessagingCopyWithImpl<$Res>
     Object? endpoint = freezed,
     Object? reliableCache = freezed,
     Object? documentation = freezed,
-    Object? event = freezed,
+    Object? event = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      endpoint: endpoint == freezed
+      endpoint: freezed == endpoint
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessagingEndpoint>?,
-      reliableCache: reliableCache == freezed
+      reliableCache: freezed == reliableCache
           ? _value.reliableCache
           : reliableCache // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      event: event == freezed
+      event: null == event
           ? _value.event
           : event // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessagingEvent>,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceMessagingCopyWith<$Res>
+abstract class _$$_ConformanceMessagingCopyWith<$Res>
     implements $ConformanceMessagingCopyWith<$Res> {
-  factory _$ConformanceMessagingCopyWith(_ConformanceMessaging value,
-          $Res Function(_ConformanceMessaging) then) =
-      __$ConformanceMessagingCopyWithImpl<$Res>;
+  factory _$$_ConformanceMessagingCopyWith(_$_ConformanceMessaging value,
+          $Res Function(_$_ConformanceMessaging) then) =
+      __$$_ConformanceMessagingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3755,16 +3634,14 @@ abstract class _$ConformanceMessagingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceMessagingCopyWithImpl<$Res>
-    extends _$ConformanceMessagingCopyWithImpl<$Res>
-    implements _$ConformanceMessagingCopyWith<$Res> {
-  __$ConformanceMessagingCopyWithImpl(
-      _ConformanceMessaging _value, $Res Function(_ConformanceMessaging) _then)
-      : super(_value, (v) => _then(v as _ConformanceMessaging));
+class __$$_ConformanceMessagingCopyWithImpl<$Res>
+    extends _$ConformanceMessagingCopyWithImpl<$Res, _$_ConformanceMessaging>
+    implements _$$_ConformanceMessagingCopyWith<$Res> {
+  __$$_ConformanceMessagingCopyWithImpl(_$_ConformanceMessaging _value,
+      $Res Function(_$_ConformanceMessaging) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceMessaging get _value => super._value as _ConformanceMessaging;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3774,39 +3651,39 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
     Object? endpoint = freezed,
     Object? reliableCache = freezed,
     Object? documentation = freezed,
-    Object? event = freezed,
+    Object? event = null,
   }) {
-    return _then(_ConformanceMessaging(
-      id: id == freezed
+    return _then(_$_ConformanceMessaging(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      endpoint: endpoint == freezed
-          ? _value.endpoint
+      endpoint: freezed == endpoint
+          ? _value._endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessagingEndpoint>?,
-      reliableCache: reliableCache == freezed
+      reliableCache: freezed == reliableCache
           ? _value.reliableCache
           : reliableCache // ignore: cast_nullable_to_non_nullable
               as UnsignedInt?,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      event: event == freezed
-          ? _value.event
+      event: null == event
+          ? _value._event
           : event // ignore: cast_nullable_to_non_nullable
               as List<ConformanceMessagingEvent>,
     ));
@@ -3818,36 +3695,73 @@ class __$ConformanceMessagingCopyWithImpl<$Res>
 class _$_ConformanceMessaging extends _ConformanceMessaging {
   _$_ConformanceMessaging(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
-      this.endpoint,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      final List<ConformanceMessagingEndpoint>? endpoint,
       this.reliableCache,
       this.documentation,
-      required this.event})
-      : super._();
+      required final List<ConformanceMessagingEvent> event})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _endpoint = endpoint,
+        _event = event,
+        super._();
 
   factory _$_ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceMessagingFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceMessagingEndpoint>? _endpoint;
   @override
-  final List<ConformanceMessagingEndpoint>? endpoint;
+  List<ConformanceMessagingEndpoint>? get endpoint {
+    final value = _endpoint;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final UnsignedInt? reliableCache;
   @override
   final String? documentation;
+  final List<ConformanceMessagingEvent> _event;
   @override
-  final List<ConformanceMessagingEvent> event;
+  List<ConformanceMessagingEvent> get event {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_event);
+  }
 
   @override
   String toString() {
@@ -3857,65 +3771,61 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceMessaging &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.endpoint, endpoint) ||
-                const DeepCollectionEquality()
-                    .equals(other.endpoint, endpoint)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceMessaging &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
             (identical(other.reliableCache, reliableCache) ||
-                const DeepCollectionEquality()
-                    .equals(other.reliableCache, reliableCache)) &&
+                other.reliableCache == reliableCache) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
-            (identical(other.event, event) ||
-                const DeepCollectionEquality().equals(other.event, event)));
+                other.documentation == documentation) &&
+            const DeepCollectionEquality().equals(other._event, _event));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(endpoint) ^
-      const DeepCollectionEquality().hash(reliableCache) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(event);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith =>
-      __$ConformanceMessagingCopyWithImpl<_ConformanceMessaging>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      const DeepCollectionEquality().hash(_endpoint),
+      reliableCache,
+      documentation,
+      const DeepCollectionEquality().hash(_event));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceMessagingCopyWith<_$_ConformanceMessaging> get copyWith =>
+      __$$_ConformanceMessagingCopyWithImpl<_$_ConformanceMessaging>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceMessagingToJson(this);
+    return _$$_ConformanceMessagingToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceMessaging extends ConformanceMessaging {
   factory _ConformanceMessaging(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-          List<ConformanceMessagingEndpoint>? endpoint,
-          UnsignedInt? reliableCache,
-          String? documentation,
-          required List<ConformanceMessagingEvent> event}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          final List<ConformanceMessagingEndpoint>? endpoint,
+          final UnsignedInt? reliableCache,
+          final String? documentation,
+          required final List<ConformanceMessagingEvent> event}) =
       _$_ConformanceMessaging;
   _ConformanceMessaging._() : super._();
 
@@ -3923,69 +3833,32 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
       _$_ConformanceMessaging.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  List<ConformanceMessagingEndpoint>? get endpoint =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessagingEndpoint>? get endpoint;
   @override
-  UnsignedInt? get reliableCache => throw _privateConstructorUsedError;
+  UnsignedInt? get reliableCache;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  List<ConformanceMessagingEvent> get event =>
-      throw _privateConstructorUsedError;
+  List<ConformanceMessagingEvent> get event;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceMessagingCopyWith<_ConformanceMessaging> get copyWith =>
+  _$$_ConformanceMessagingCopyWith<_$_ConformanceMessaging> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 ConformanceDocument _$ConformanceDocumentFromJson(Map<String, dynamic> json) {
   return _ConformanceDocument.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceDocumentTearOff {
-  const _$ConformanceDocumentTearOff();
-
-  _ConformanceDocument call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: DocumentMode.unknown)
-          required DocumentMode mode,
-      String? documentation,
-      required Reference profile}) {
-    return _ConformanceDocument(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      mode: mode,
-      documentation: documentation,
-      profile: profile,
-    );
-  }
-
-  ConformanceDocument fromJson(Map<String, Object> json) {
-    return ConformanceDocument.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceDocument = _$ConformanceDocumentTearOff();
 
 /// @nodoc
 mixin _$ConformanceDocument {
@@ -4011,7 +3884,8 @@ mixin _$ConformanceDocument {
 abstract class $ConformanceDocumentCopyWith<$Res> {
   factory $ConformanceDocumentCopyWith(
           ConformanceDocument value, $Res Function(ConformanceDocument) then) =
-      _$ConformanceDocumentCopyWithImpl<$Res>;
+      _$ConformanceDocumentCopyWithImpl<$Res, ConformanceDocument>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4025,71 +3899,75 @@ abstract class $ConformanceDocumentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceDocumentCopyWithImpl<$Res>
+class _$ConformanceDocumentCopyWithImpl<$Res, $Val extends ConformanceDocument>
     implements $ConformanceDocumentCopyWith<$Res> {
   _$ConformanceDocumentCopyWithImpl(this._value, this._then);
 
-  final ConformanceDocument _value;
   // ignore: unused_field
-  final $Res Function(ConformanceDocument) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? mode = freezed,
+    Object? mode = null,
     Object? documentation = freezed,
-    Object? profile = freezed,
+    Object? profile = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as DocumentMode,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      profile: profile == freezed
+      profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get profile {
     return $ReferenceCopyWith<$Res>(_value.profile, (value) {
-      return _then(_value.copyWith(profile: value));
+      return _then(_value.copyWith(profile: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceDocumentCopyWith<$Res>
+abstract class _$$_ConformanceDocumentCopyWith<$Res>
     implements $ConformanceDocumentCopyWith<$Res> {
-  factory _$ConformanceDocumentCopyWith(_ConformanceDocument value,
-          $Res Function(_ConformanceDocument) then) =
-      __$ConformanceDocumentCopyWithImpl<$Res>;
+  factory _$$_ConformanceDocumentCopyWith(_$_ConformanceDocument value,
+          $Res Function(_$_ConformanceDocument) then) =
+      __$$_ConformanceDocumentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4104,52 +3982,50 @@ abstract class _$ConformanceDocumentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceDocumentCopyWithImpl<$Res>
-    extends _$ConformanceDocumentCopyWithImpl<$Res>
-    implements _$ConformanceDocumentCopyWith<$Res> {
-  __$ConformanceDocumentCopyWithImpl(
-      _ConformanceDocument _value, $Res Function(_ConformanceDocument) _then)
-      : super(_value, (v) => _then(v as _ConformanceDocument));
+class __$$_ConformanceDocumentCopyWithImpl<$Res>
+    extends _$ConformanceDocumentCopyWithImpl<$Res, _$_ConformanceDocument>
+    implements _$$_ConformanceDocumentCopyWith<$Res> {
+  __$$_ConformanceDocumentCopyWithImpl(_$_ConformanceDocument _value,
+      $Res Function(_$_ConformanceDocument) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceDocument get _value => super._value as _ConformanceDocument;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? mode = freezed,
+    Object? mode = null,
     Object? documentation = freezed,
-    Object? profile = freezed,
+    Object? profile = null,
   }) {
-    return _then(_ConformanceDocument(
-      id: id == freezed
+    return _then(_$_ConformanceDocument(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as DocumentMode,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      profile: profile == freezed
+      profile: null == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference,
@@ -4162,27 +4038,51 @@ class __$ConformanceDocumentCopyWithImpl<$Res>
 class _$_ConformanceDocument extends _ConformanceDocument {
   _$_ConformanceDocument(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: DocumentMode.unknown) required this.mode,
       this.documentation,
       required this.profile})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_ConformanceDocument.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceDocumentFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: DocumentMode.unknown)
   final DocumentMode mode;
@@ -4199,88 +4099,85 @@ class _$_ConformanceDocument extends _ConformanceDocument {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceDocument &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.mode, mode) ||
-                const DeepCollectionEquality().equals(other.mode, mode)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceDocument &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality().equals(other.profile, profile)));
+                other.documentation == documentation) &&
+            (identical(other.profile, profile) || other.profile == profile));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(profile);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceDocumentCopyWith<_ConformanceDocument> get copyWith =>
-      __$ConformanceDocumentCopyWithImpl<_ConformanceDocument>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      mode,
+      documentation,
+      profile);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceDocumentCopyWith<_$_ConformanceDocument> get copyWith =>
+      __$$_ConformanceDocumentCopyWithImpl<_$_ConformanceDocument>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceDocumentToJson(this);
+    return _$$_ConformanceDocumentToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceDocument extends ConformanceDocument {
   factory _ConformanceDocument(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+          final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: DocumentMode.unknown)
-          required DocumentMode mode,
-      String? documentation,
-      required Reference profile}) = _$_ConformanceDocument;
+          required final DocumentMode mode,
+      final String? documentation,
+      required final Reference profile}) = _$_ConformanceDocument;
   _ConformanceDocument._() : super._();
 
   factory _ConformanceDocument.fromJson(Map<String, dynamic> json) =
       _$_ConformanceDocument.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(unknownEnumValue: DocumentMode.unknown)
-  DocumentMode get mode => throw _privateConstructorUsedError;
+  DocumentMode get mode;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  Reference get profile => throw _privateConstructorUsedError;
+  Reference get profile;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceDocumentCopyWith<_ConformanceDocument> get copyWith =>
+  _$$_ConformanceDocumentCopyWith<_$_ConformanceDocument> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4288,39 +4185,6 @@ ConformanceRestSecurity _$ConformanceRestSecurityFromJson(
     Map<String, dynamic> json) {
   return _ConformanceRestSecurity.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceRestSecurityTearOff {
-  const _$ConformanceRestSecurityTearOff();
-
-  _ConformanceRestSecurity call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Boolean? cors,
-      @JsonKey(name: '_cors') Element? corsElement,
-      List<CodeableConcept>? service,
-      String? description,
-      List<ConformanceSecurityCertificate>? certificate}) {
-    return _ConformanceRestSecurity(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      cors: cors,
-      corsElement: corsElement,
-      service: service,
-      description: description,
-      certificate: certificate,
-    );
-  }
-
-  ConformanceRestSecurity fromJson(Map<String, Object> json) {
-    return ConformanceRestSecurity.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceRestSecurity = _$ConformanceRestSecurityTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestSecurity {
@@ -4347,7 +4211,8 @@ mixin _$ConformanceRestSecurity {
 abstract class $ConformanceRestSecurityCopyWith<$Res> {
   factory $ConformanceRestSecurityCopyWith(ConformanceRestSecurity value,
           $Res Function(ConformanceRestSecurity) then) =
-      _$ConformanceRestSecurityCopyWithImpl<$Res>;
+      _$ConformanceRestSecurityCopyWithImpl<$Res, ConformanceRestSecurity>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4362,14 +4227,17 @@ abstract class $ConformanceRestSecurityCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceRestSecurityCopyWithImpl<$Res>
+class _$ConformanceRestSecurityCopyWithImpl<$Res,
+        $Val extends ConformanceRestSecurity>
     implements $ConformanceRestSecurityCopyWith<$Res> {
   _$ConformanceRestSecurityCopyWithImpl(this._value, this._then);
 
-  final ConformanceRestSecurity _value;
   // ignore: unused_field
-  final $Res Function(ConformanceRestSecurity) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4382,60 +4250,62 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res>
     Object? certificate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      cors: cors == freezed
+      cors: freezed == cors
           ? _value.cors
           : cors // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      corsElement: corsElement == freezed
+      corsElement: freezed == corsElement
           ? _value.corsElement
           : corsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      service: service == freezed
+      service: freezed == service
           ? _value.service
           : service // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      certificate: certificate == freezed
+      certificate: freezed == certificate
           ? _value.certificate
           : certificate // ignore: cast_nullable_to_non_nullable
               as List<ConformanceSecurityCertificate>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get corsElement {
     if (_value.corsElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.corsElement!, (value) {
-      return _then(_value.copyWith(corsElement: value));
+      return _then(_value.copyWith(corsElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceRestSecurityCopyWith<$Res>
+abstract class _$$_ConformanceRestSecurityCopyWith<$Res>
     implements $ConformanceRestSecurityCopyWith<$Res> {
-  factory _$ConformanceRestSecurityCopyWith(_ConformanceRestSecurity value,
-          $Res Function(_ConformanceRestSecurity) then) =
-      __$ConformanceRestSecurityCopyWithImpl<$Res>;
+  factory _$$_ConformanceRestSecurityCopyWith(_$_ConformanceRestSecurity value,
+          $Res Function(_$_ConformanceRestSecurity) then) =
+      __$$_ConformanceRestSecurityCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -4451,17 +4321,15 @@ abstract class _$ConformanceRestSecurityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceRestSecurityCopyWithImpl<$Res>
-    extends _$ConformanceRestSecurityCopyWithImpl<$Res>
-    implements _$ConformanceRestSecurityCopyWith<$Res> {
-  __$ConformanceRestSecurityCopyWithImpl(_ConformanceRestSecurity _value,
-      $Res Function(_ConformanceRestSecurity) _then)
-      : super(_value, (v) => _then(v as _ConformanceRestSecurity));
+class __$$_ConformanceRestSecurityCopyWithImpl<$Res>
+    extends _$ConformanceRestSecurityCopyWithImpl<$Res,
+        _$_ConformanceRestSecurity>
+    implements _$$_ConformanceRestSecurityCopyWith<$Res> {
+  __$$_ConformanceRestSecurityCopyWithImpl(_$_ConformanceRestSecurity _value,
+      $Res Function(_$_ConformanceRestSecurity) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceRestSecurity get _value =>
-      super._value as _ConformanceRestSecurity;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -4473,37 +4341,37 @@ class __$ConformanceRestSecurityCopyWithImpl<$Res>
     Object? description = freezed,
     Object? certificate = freezed,
   }) {
-    return _then(_ConformanceRestSecurity(
-      id: id == freezed
+    return _then(_$_ConformanceRestSecurity(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      cors: cors == freezed
+      cors: freezed == cors
           ? _value.cors
           : cors // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      corsElement: corsElement == freezed
+      corsElement: freezed == corsElement
           ? _value.corsElement
           : corsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      service: service == freezed
-          ? _value.service
+      service: freezed == service
+          ? _value._service
           : service // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      certificate: certificate == freezed
-          ? _value.certificate
+      certificate: freezed == certificate
+          ? _value._certificate
           : certificate // ignore: cast_nullable_to_non_nullable
               as List<ConformanceSecurityCertificate>?,
     ));
@@ -4515,36 +4383,67 @@ class __$ConformanceRestSecurityCopyWithImpl<$Res>
 class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
   _$_ConformanceRestSecurity(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.cors,
       @JsonKey(name: '_cors') this.corsElement,
-      this.service,
+      final List<CodeableConcept>? service,
       this.description,
-      this.certificate})
-      : super._();
+      final List<ConformanceSecurityCertificate>? certificate})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _service = service,
+        _certificate = certificate,
+        super._();
 
   factory _$_ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceRestSecurityFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean? cors;
   @override
   @JsonKey(name: '_cors')
   final Element? corsElement;
+  final List<CodeableConcept>? _service;
   @override
-  final List<CodeableConcept>? service;
+  List<CodeableConcept>? get service {
+    final value = _service;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? description;
+  final List<ConformanceSecurityCertificate>? _certificate;
   @override
-  final List<ConformanceSecurityCertificate>? certificate;
+  List<ConformanceSecurityCertificate>? get certificate {
+    final value = _certificate;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -4554,65 +4453,62 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceRestSecurity &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.cors, cors) ||
-                const DeepCollectionEquality().equals(other.cors, cors)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceRestSecurity &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.cors, cors) || other.cors == cors) &&
             (identical(other.corsElement, corsElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.corsElement, corsElement)) &&
-            (identical(other.service, service) ||
-                const DeepCollectionEquality()
-                    .equals(other.service, service)) &&
+                other.corsElement == corsElement) &&
+            const DeepCollectionEquality().equals(other._service, _service) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.certificate, certificate) ||
-                const DeepCollectionEquality()
-                    .equals(other.certificate, certificate)));
+                other.description == description) &&
+            const DeepCollectionEquality()
+                .equals(other._certificate, _certificate));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(cors) ^
-      const DeepCollectionEquality().hash(corsElement) ^
-      const DeepCollectionEquality().hash(service) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(certificate);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceRestSecurityCopyWith<_ConformanceRestSecurity> get copyWith =>
-      __$ConformanceRestSecurityCopyWithImpl<_ConformanceRestSecurity>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      cors,
+      corsElement,
+      const DeepCollectionEquality().hash(_service),
+      description,
+      const DeepCollectionEquality().hash(_certificate));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceRestSecurityCopyWith<_$_ConformanceRestSecurity>
+      get copyWith =>
+          __$$_ConformanceRestSecurityCopyWithImpl<_$_ConformanceRestSecurity>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestSecurityToJson(this);
+    return _$$_ConformanceRestSecurityToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
   factory _ConformanceRestSecurity(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Boolean? cors,
-          @JsonKey(name: '_cors') Element? corsElement,
-          List<CodeableConcept>? service,
-          String? description,
-          List<ConformanceSecurityCertificate>? certificate}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Boolean? cors,
+          @JsonKey(name: '_cors') final Element? corsElement,
+          final List<CodeableConcept>? service,
+          final String? description,
+          final List<ConformanceSecurityCertificate>? certificate}) =
       _$_ConformanceRestSecurity;
   _ConformanceRestSecurity._() : super._();
 
@@ -4620,101 +4516,33 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
       _$_ConformanceRestSecurity.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Boolean? get cors => throw _privateConstructorUsedError;
+  Boolean? get cors;
   @override
   @JsonKey(name: '_cors')
-  Element? get corsElement => throw _privateConstructorUsedError;
+  Element? get corsElement;
   @override
-  List<CodeableConcept>? get service => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get service;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  List<ConformanceSecurityCertificate>? get certificate =>
-      throw _privateConstructorUsedError;
+  List<ConformanceSecurityCertificate>? get certificate;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestSecurityCopyWith<_ConformanceRestSecurity> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ConformanceRestSecurityCopyWith<_$_ConformanceRestSecurity>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceRestResource _$ConformanceRestResourceFromJson(
     Map<String, dynamic> json) {
   return _ConformanceRestResource.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceRestResourceTearOff {
-  const _$ConformanceRestResourceTearOff();
-
-  _ConformanceRestResource call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      required Code type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      Reference? profile,
-      @JsonKey(required: true)
-          required List<ConformanceResourceInteraction> interaction,
-      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-          ResourceVersioning? versioning,
-      Boolean? readHistory,
-      Boolean? updateCreate,
-      @JsonKey(name: '_updateCreate')
-          Element? updateCreateElement,
-      Boolean? conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          Element? conditionalCreateElement,
-      Boolean? conditionalUpdate,
-      @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-          ResourceConditionalDelete? conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          Element? conditionalDeleteElement,
-      List<String>? searchInclude,
-      List<String>? searchRevInclude,
-      List<ConformanceResourceSearchParam>? searchParam}) {
-    return _ConformanceRestResource(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      type: type,
-      typeElement: typeElement,
-      profile: profile,
-      interaction: interaction,
-      versioning: versioning,
-      readHistory: readHistory,
-      updateCreate: updateCreate,
-      updateCreateElement: updateCreateElement,
-      conditionalCreate: conditionalCreate,
-      conditionalCreateElement: conditionalCreateElement,
-      conditionalUpdate: conditionalUpdate,
-      conditionalDelete: conditionalDelete,
-      conditionalDeleteElement: conditionalDeleteElement,
-      searchInclude: searchInclude,
-      searchRevInclude: searchRevInclude,
-      searchParam: searchParam,
-    );
-  }
-
-  ConformanceRestResource fromJson(Map<String, Object> json) {
-    return ConformanceRestResource.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceRestResource = _$ConformanceRestResourceTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestResource {
@@ -4762,7 +4590,8 @@ mixin _$ConformanceRestResource {
 abstract class $ConformanceRestResourceCopyWith<$Res> {
   factory $ConformanceRestResourceCopyWith(ConformanceRestResource value,
           $Res Function(ConformanceRestResource) then) =
-      _$ConformanceRestResourceCopyWithImpl<$Res>;
+      _$ConformanceRestResourceCopyWithImpl<$Res, ConformanceRestResource>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -4802,24 +4631,27 @@ abstract class $ConformanceRestResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceRestResourceCopyWithImpl<$Res>
+class _$ConformanceRestResourceCopyWithImpl<$Res,
+        $Val extends ConformanceRestResource>
     implements $ConformanceRestResourceCopyWith<$Res> {
   _$ConformanceRestResourceCopyWithImpl(this._value, this._then);
 
-  final ConformanceRestResource _value;
   // ignore: unused_field
-  final $Res Function(ConformanceRestResource) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? typeElement = freezed,
     Object? profile = freezed,
-    Object? interaction = freezed,
+    Object? interaction = null,
     Object? versioning = freezed,
     Object? readHistory = freezed,
     Object? updateCreate = freezed,
@@ -4834,152 +4666,158 @@ class _$ConformanceRestResourceCopyWithImpl<$Res>
     Object? searchParam = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      interaction: interaction == freezed
+      interaction: null == interaction
           ? _value.interaction
           : interaction // ignore: cast_nullable_to_non_nullable
               as List<ConformanceResourceInteraction>,
-      versioning: versioning == freezed
+      versioning: freezed == versioning
           ? _value.versioning
           : versioning // ignore: cast_nullable_to_non_nullable
               as ResourceVersioning?,
-      readHistory: readHistory == freezed
+      readHistory: freezed == readHistory
           ? _value.readHistory
           : readHistory // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      updateCreate: updateCreate == freezed
+      updateCreate: freezed == updateCreate
           ? _value.updateCreate
           : updateCreate // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      updateCreateElement: updateCreateElement == freezed
+      updateCreateElement: freezed == updateCreateElement
           ? _value.updateCreateElement
           : updateCreateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      conditionalCreate: conditionalCreate == freezed
+      conditionalCreate: freezed == conditionalCreate
           ? _value.conditionalCreate
           : conditionalCreate // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      conditionalCreateElement: conditionalCreateElement == freezed
+      conditionalCreateElement: freezed == conditionalCreateElement
           ? _value.conditionalCreateElement
           : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      conditionalUpdate: conditionalUpdate == freezed
+      conditionalUpdate: freezed == conditionalUpdate
           ? _value.conditionalUpdate
           : conditionalUpdate // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      conditionalDelete: conditionalDelete == freezed
+      conditionalDelete: freezed == conditionalDelete
           ? _value.conditionalDelete
           : conditionalDelete // ignore: cast_nullable_to_non_nullable
               as ResourceConditionalDelete?,
-      conditionalDeleteElement: conditionalDeleteElement == freezed
+      conditionalDeleteElement: freezed == conditionalDeleteElement
           ? _value.conditionalDeleteElement
           : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      searchInclude: searchInclude == freezed
+      searchInclude: freezed == searchInclude
           ? _value.searchInclude
           : searchInclude // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      searchRevInclude: searchRevInclude == freezed
+      searchRevInclude: freezed == searchRevInclude
           ? _value.searchRevInclude
           : searchRevInclude // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      searchParam: searchParam == freezed
+      searchParam: freezed == searchParam
           ? _value.searchParam
           : searchParam // ignore: cast_nullable_to_non_nullable
               as List<ConformanceResourceSearchParam>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get profile {
     if (_value.profile == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.profile!, (value) {
-      return _then(_value.copyWith(profile: value));
+      return _then(_value.copyWith(profile: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get updateCreateElement {
     if (_value.updateCreateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.updateCreateElement!, (value) {
-      return _then(_value.copyWith(updateCreateElement: value));
+      return _then(_value.copyWith(updateCreateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get conditionalCreateElement {
     if (_value.conditionalCreateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.conditionalCreateElement!, (value) {
-      return _then(_value.copyWith(conditionalCreateElement: value));
+      return _then(_value.copyWith(conditionalCreateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get conditionalDeleteElement {
     if (_value.conditionalDeleteElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.conditionalDeleteElement!, (value) {
-      return _then(_value.copyWith(conditionalDeleteElement: value));
+      return _then(_value.copyWith(conditionalDeleteElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceRestResourceCopyWith<$Res>
+abstract class _$$_ConformanceRestResourceCopyWith<$Res>
     implements $ConformanceRestResourceCopyWith<$Res> {
-  factory _$ConformanceRestResourceCopyWith(_ConformanceRestResource value,
-          $Res Function(_ConformanceRestResource) then) =
-      __$ConformanceRestResourceCopyWithImpl<$Res>;
+  factory _$$_ConformanceRestResourceCopyWith(_$_ConformanceRestResource value,
+          $Res Function(_$_ConformanceRestResource) then) =
+      __$$_ConformanceRestResourceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -5024,27 +4862,25 @@ abstract class _$ConformanceRestResourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceRestResourceCopyWithImpl<$Res>
-    extends _$ConformanceRestResourceCopyWithImpl<$Res>
-    implements _$ConformanceRestResourceCopyWith<$Res> {
-  __$ConformanceRestResourceCopyWithImpl(_ConformanceRestResource _value,
-      $Res Function(_ConformanceRestResource) _then)
-      : super(_value, (v) => _then(v as _ConformanceRestResource));
+class __$$_ConformanceRestResourceCopyWithImpl<$Res>
+    extends _$ConformanceRestResourceCopyWithImpl<$Res,
+        _$_ConformanceRestResource>
+    implements _$$_ConformanceRestResourceCopyWith<$Res> {
+  __$$_ConformanceRestResourceCopyWithImpl(_$_ConformanceRestResource _value,
+      $Res Function(_$_ConformanceRestResource) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceRestResource get _value =>
-      super._value as _ConformanceRestResource;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? typeElement = freezed,
     Object? profile = freezed,
-    Object? interaction = freezed,
+    Object? interaction = null,
     Object? versioning = freezed,
     Object? readHistory = freezed,
     Object? updateCreate = freezed,
@@ -5058,85 +4894,85 @@ class __$ConformanceRestResourceCopyWithImpl<$Res>
     Object? searchRevInclude = freezed,
     Object? searchParam = freezed,
   }) {
-    return _then(_ConformanceRestResource(
-      id: id == freezed
+    return _then(_$_ConformanceRestResource(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      interaction: interaction == freezed
-          ? _value.interaction
+      interaction: null == interaction
+          ? _value._interaction
           : interaction // ignore: cast_nullable_to_non_nullable
               as List<ConformanceResourceInteraction>,
-      versioning: versioning == freezed
+      versioning: freezed == versioning
           ? _value.versioning
           : versioning // ignore: cast_nullable_to_non_nullable
               as ResourceVersioning?,
-      readHistory: readHistory == freezed
+      readHistory: freezed == readHistory
           ? _value.readHistory
           : readHistory // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      updateCreate: updateCreate == freezed
+      updateCreate: freezed == updateCreate
           ? _value.updateCreate
           : updateCreate // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      updateCreateElement: updateCreateElement == freezed
+      updateCreateElement: freezed == updateCreateElement
           ? _value.updateCreateElement
           : updateCreateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      conditionalCreate: conditionalCreate == freezed
+      conditionalCreate: freezed == conditionalCreate
           ? _value.conditionalCreate
           : conditionalCreate // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      conditionalCreateElement: conditionalCreateElement == freezed
+      conditionalCreateElement: freezed == conditionalCreateElement
           ? _value.conditionalCreateElement
           : conditionalCreateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      conditionalUpdate: conditionalUpdate == freezed
+      conditionalUpdate: freezed == conditionalUpdate
           ? _value.conditionalUpdate
           : conditionalUpdate // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      conditionalDelete: conditionalDelete == freezed
+      conditionalDelete: freezed == conditionalDelete
           ? _value.conditionalDelete
           : conditionalDelete // ignore: cast_nullable_to_non_nullable
               as ResourceConditionalDelete?,
-      conditionalDeleteElement: conditionalDeleteElement == freezed
+      conditionalDeleteElement: freezed == conditionalDeleteElement
           ? _value.conditionalDeleteElement
           : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      searchInclude: searchInclude == freezed
-          ? _value.searchInclude
+      searchInclude: freezed == searchInclude
+          ? _value._searchInclude
           : searchInclude // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      searchRevInclude: searchRevInclude == freezed
-          ? _value.searchRevInclude
+      searchRevInclude: freezed == searchRevInclude
+          ? _value._searchRevInclude
           : searchRevInclude // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      searchParam: searchParam == freezed
-          ? _value.searchParam
+      searchParam: freezed == searchParam
+          ? _value._searchParam
           : searchParam // ignore: cast_nullable_to_non_nullable
               as List<ConformanceResourceSearchParam>?,
     ));
@@ -5149,16 +4985,16 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
   _$_ConformanceRestResource(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          this.fhirComments,
+          final List<String>? fhirComments,
       required this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.profile,
       @JsonKey(required: true)
-          required this.interaction,
+          required final List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
           this.versioning,
       this.readHistory,
@@ -5173,24 +5009,52 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
           this.conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           this.conditionalDeleteElement,
-      this.searchInclude,
-      this.searchRevInclude,
-      this.searchParam})
-      : super._();
+      final List<String>? searchInclude,
+      final List<String>? searchRevInclude,
+      final List<ConformanceResourceSearchParam>? searchParam})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _interaction = interaction,
+        _searchInclude = searchInclude,
+        _searchRevInclude = searchRevInclude,
+        _searchParam = searchParam,
+        super._();
 
   factory _$_ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceRestResourceFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code type;
   @override
@@ -5198,9 +5062,14 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
   final Element? typeElement;
   @override
   final Reference? profile;
+  final List<ConformanceResourceInteraction> _interaction;
   @override
   @JsonKey(required: true)
-  final List<ConformanceResourceInteraction> interaction;
+  List<ConformanceResourceInteraction> get interaction {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_interaction);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
   final ResourceVersioning? versioning;
@@ -5224,12 +5093,32 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
   @override
   @JsonKey(name: '_conditionalDelete')
   final Element? conditionalDeleteElement;
+  final List<String>? _searchInclude;
   @override
-  final List<String>? searchInclude;
+  List<String>? get searchInclude {
+    final value = _searchInclude;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _searchRevInclude;
   @override
-  final List<String>? searchRevInclude;
+  List<String>? get searchRevInclude {
+    final value = _searchRevInclude;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<ConformanceResourceSearchParam>? _searchParam;
   @override
-  final List<ConformanceResourceSearchParam>? searchParam;
+  List<ConformanceResourceSearchParam>? get searchParam {
+    final value = _searchParam;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -5239,136 +5128,122 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceRestResource &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceRestResource &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
-            (identical(other.interaction, interaction) ||
-                const DeepCollectionEquality()
-                    .equals(other.interaction, interaction)) &&
+                other.typeElement == typeElement) &&
+            (identical(other.profile, profile) || other.profile == profile) &&
+            const DeepCollectionEquality()
+                .equals(other._interaction, _interaction) &&
             (identical(other.versioning, versioning) ||
-                const DeepCollectionEquality()
-                    .equals(other.versioning, versioning)) &&
+                other.versioning == versioning) &&
             (identical(other.readHistory, readHistory) ||
-                const DeepCollectionEquality()
-                    .equals(other.readHistory, readHistory)) &&
+                other.readHistory == readHistory) &&
             (identical(other.updateCreate, updateCreate) ||
-                const DeepCollectionEquality()
-                    .equals(other.updateCreate, updateCreate)) &&
+                other.updateCreate == updateCreate) &&
             (identical(other.updateCreateElement, updateCreateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.updateCreateElement, updateCreateElement)) &&
+                other.updateCreateElement == updateCreateElement) &&
             (identical(other.conditionalCreate, conditionalCreate) ||
-                const DeepCollectionEquality()
-                    .equals(other.conditionalCreate, conditionalCreate)) &&
-            (identical(other.conditionalCreateElement, conditionalCreateElement) ||
-                const DeepCollectionEquality().equals(
-                    other.conditionalCreateElement,
-                    conditionalCreateElement)) &&
+                other.conditionalCreate == conditionalCreate) &&
+            (identical(
+                    other.conditionalCreateElement, conditionalCreateElement) ||
+                other.conditionalCreateElement == conditionalCreateElement) &&
             (identical(other.conditionalUpdate, conditionalUpdate) ||
-                const DeepCollectionEquality()
-                    .equals(other.conditionalUpdate, conditionalUpdate)) &&
+                other.conditionalUpdate == conditionalUpdate) &&
             (identical(other.conditionalDelete, conditionalDelete) ||
-                const DeepCollectionEquality()
-                    .equals(other.conditionalDelete, conditionalDelete)) &&
-            (identical(other.conditionalDeleteElement, conditionalDeleteElement) ||
-                const DeepCollectionEquality().equals(
-                    other.conditionalDeleteElement,
-                    conditionalDeleteElement)) &&
-            (identical(other.searchInclude, searchInclude) ||
-                const DeepCollectionEquality()
-                    .equals(other.searchInclude, searchInclude)) &&
-            (identical(other.searchRevInclude, searchRevInclude) ||
-                const DeepCollectionEquality()
-                    .equals(other.searchRevInclude, searchRevInclude)) &&
-            (identical(other.searchParam, searchParam) ||
-                const DeepCollectionEquality()
-                    .equals(other.searchParam, searchParam)));
+                other.conditionalDelete == conditionalDelete) &&
+            (identical(
+                    other.conditionalDeleteElement, conditionalDeleteElement) ||
+                other.conditionalDeleteElement == conditionalDeleteElement) &&
+            const DeepCollectionEquality()
+                .equals(other._searchInclude, _searchInclude) &&
+            const DeepCollectionEquality()
+                .equals(other._searchRevInclude, _searchRevInclude) &&
+            const DeepCollectionEquality()
+                .equals(other._searchParam, _searchParam));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(interaction) ^
-      const DeepCollectionEquality().hash(versioning) ^
-      const DeepCollectionEquality().hash(readHistory) ^
-      const DeepCollectionEquality().hash(updateCreate) ^
-      const DeepCollectionEquality().hash(updateCreateElement) ^
-      const DeepCollectionEquality().hash(conditionalCreate) ^
-      const DeepCollectionEquality().hash(conditionalCreateElement) ^
-      const DeepCollectionEquality().hash(conditionalUpdate) ^
-      const DeepCollectionEquality().hash(conditionalDelete) ^
-      const DeepCollectionEquality().hash(conditionalDeleteElement) ^
-      const DeepCollectionEquality().hash(searchInclude) ^
-      const DeepCollectionEquality().hash(searchRevInclude) ^
-      const DeepCollectionEquality().hash(searchParam);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceRestResourceCopyWith<_ConformanceRestResource> get copyWith =>
-      __$ConformanceRestResourceCopyWithImpl<_ConformanceRestResource>(
-          this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_fhirComments),
+        type,
+        typeElement,
+        profile,
+        const DeepCollectionEquality().hash(_interaction),
+        versioning,
+        readHistory,
+        updateCreate,
+        updateCreateElement,
+        conditionalCreate,
+        conditionalCreateElement,
+        conditionalUpdate,
+        conditionalDelete,
+        conditionalDeleteElement,
+        const DeepCollectionEquality().hash(_searchInclude),
+        const DeepCollectionEquality().hash(_searchRevInclude),
+        const DeepCollectionEquality().hash(_searchParam)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceRestResourceCopyWith<_$_ConformanceRestResource>
+      get copyWith =>
+          __$$_ConformanceRestResourceCopyWithImpl<_$_ConformanceRestResource>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestResourceToJson(this);
+    return _$$_ConformanceRestResourceToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceRestResource extends ConformanceRestResource {
   factory _ConformanceRestResource(
-          {Id? id,
+          {final Id? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments')
-              List<String>? fhirComments,
-          required Code type,
+              final List<String>? fhirComments,
+          required final Code type,
           @JsonKey(name: '_type')
-              Element? typeElement,
-          Reference? profile,
+              final Element? typeElement,
+          final Reference? profile,
           @JsonKey(required: true)
-              required List<ConformanceResourceInteraction> interaction,
+              required final List<ConformanceResourceInteraction> interaction,
           @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-              ResourceVersioning? versioning,
-          Boolean? readHistory,
-          Boolean? updateCreate,
+              final ResourceVersioning? versioning,
+          final Boolean? readHistory,
+          final Boolean? updateCreate,
           @JsonKey(name: '_updateCreate')
-              Element? updateCreateElement,
-          Boolean? conditionalCreate,
+              final Element? updateCreateElement,
+          final Boolean? conditionalCreate,
           @JsonKey(name: '_conditionalCreate')
-              Element? conditionalCreateElement,
-          Boolean? conditionalUpdate,
+              final Element? conditionalCreateElement,
+          final Boolean? conditionalUpdate,
           @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-              ResourceConditionalDelete? conditionalDelete,
+              final ResourceConditionalDelete? conditionalDelete,
           @JsonKey(name: '_conditionalDelete')
-              Element? conditionalDeleteElement,
-          List<String>? searchInclude,
-          List<String>? searchRevInclude,
-          List<ConformanceResourceSearchParam>? searchParam}) =
+              final Element? conditionalDeleteElement,
+          final List<String>? searchInclude,
+          final List<String>? searchRevInclude,
+          final List<ConformanceResourceSearchParam>? searchParam}) =
       _$_ConformanceRestResource;
   _ConformanceRestResource._() : super._();
 
@@ -5376,98 +5251,64 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
       _$_ConformanceRestResource.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  Code get type => throw _privateConstructorUsedError;
+  Code get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  Reference? get profile => throw _privateConstructorUsedError;
+  Reference? get profile;
   @override
   @JsonKey(required: true)
-  List<ConformanceResourceInteraction> get interaction =>
-      throw _privateConstructorUsedError;
+  List<ConformanceResourceInteraction> get interaction;
   @override
   @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-  ResourceVersioning? get versioning => throw _privateConstructorUsedError;
+  ResourceVersioning? get versioning;
   @override
-  Boolean? get readHistory => throw _privateConstructorUsedError;
+  Boolean? get readHistory;
   @override
-  Boolean? get updateCreate => throw _privateConstructorUsedError;
+  Boolean? get updateCreate;
   @override
   @JsonKey(name: '_updateCreate')
-  Element? get updateCreateElement => throw _privateConstructorUsedError;
+  Element? get updateCreateElement;
   @override
-  Boolean? get conditionalCreate => throw _privateConstructorUsedError;
+  Boolean? get conditionalCreate;
   @override
   @JsonKey(name: '_conditionalCreate')
-  Element? get conditionalCreateElement => throw _privateConstructorUsedError;
+  Element? get conditionalCreateElement;
   @override
-  Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
+  Boolean? get conditionalUpdate;
   @override
   @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-  ResourceConditionalDelete? get conditionalDelete =>
-      throw _privateConstructorUsedError;
+  ResourceConditionalDelete? get conditionalDelete;
   @override
   @JsonKey(name: '_conditionalDelete')
-  Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
+  Element? get conditionalDeleteElement;
   @override
-  List<String>? get searchInclude => throw _privateConstructorUsedError;
+  List<String>? get searchInclude;
   @override
-  List<String>? get searchRevInclude => throw _privateConstructorUsedError;
+  List<String>? get searchRevInclude;
   @override
-  List<ConformanceResourceSearchParam>? get searchParam =>
-      throw _privateConstructorUsedError;
+  List<ConformanceResourceSearchParam>? get searchParam;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestResourceCopyWith<_ConformanceRestResource> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ConformanceRestResourceCopyWith<_$_ConformanceRestResource>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceResourceInteraction _$ConformanceResourceInteractionFromJson(
     Map<String, dynamic> json) {
   return _ConformanceResourceInteraction.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceResourceInteractionTearOff {
-  const _$ConformanceResourceInteractionTearOff();
-
-  _ConformanceResourceInteraction call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-          required ResourceInteractionCode code,
-      String? documentation}) {
-    return _ConformanceResourceInteraction(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      documentation: documentation,
-    );
-  }
-
-  ConformanceResourceInteraction fromJson(Map<String, Object> json) {
-    return ConformanceResourceInteraction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceResourceInteraction =
-    _$ConformanceResourceInteractionTearOff();
 
 /// @nodoc
 mixin _$ConformanceResourceInteraction {
@@ -5491,7 +5332,9 @@ abstract class $ConformanceResourceInteractionCopyWith<$Res> {
   factory $ConformanceResourceInteractionCopyWith(
           ConformanceResourceInteraction value,
           $Res Function(ConformanceResourceInteraction) then) =
-      _$ConformanceResourceInteractionCopyWithImpl<$Res>;
+      _$ConformanceResourceInteractionCopyWithImpl<$Res,
+          ConformanceResourceInteraction>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -5503,55 +5346,59 @@ abstract class $ConformanceResourceInteractionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceResourceInteractionCopyWithImpl<$Res>
+class _$ConformanceResourceInteractionCopyWithImpl<$Res,
+        $Val extends ConformanceResourceInteraction>
     implements $ConformanceResourceInteractionCopyWith<$Res> {
   _$ConformanceResourceInteractionCopyWithImpl(this._value, this._then);
 
-  final ConformanceResourceInteraction _value;
   // ignore: unused_field
-  final $Res Function(ConformanceResourceInteraction) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as ResourceInteractionCode,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceResourceInteractionCopyWith<$Res>
+abstract class _$$_ConformanceResourceInteractionCopyWith<$Res>
     implements $ConformanceResourceInteractionCopyWith<$Res> {
-  factory _$ConformanceResourceInteractionCopyWith(
-          _ConformanceResourceInteraction value,
-          $Res Function(_ConformanceResourceInteraction) then) =
-      __$ConformanceResourceInteractionCopyWithImpl<$Res>;
+  factory _$$_ConformanceResourceInteractionCopyWith(
+          _$_ConformanceResourceInteraction value,
+          $Res Function(_$_ConformanceResourceInteraction) then) =
+      __$$_ConformanceResourceInteractionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -5563,44 +5410,42 @@ abstract class _$ConformanceResourceInteractionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceResourceInteractionCopyWithImpl<$Res>
-    extends _$ConformanceResourceInteractionCopyWithImpl<$Res>
-    implements _$ConformanceResourceInteractionCopyWith<$Res> {
-  __$ConformanceResourceInteractionCopyWithImpl(
-      _ConformanceResourceInteraction _value,
-      $Res Function(_ConformanceResourceInteraction) _then)
-      : super(_value, (v) => _then(v as _ConformanceResourceInteraction));
+class __$$_ConformanceResourceInteractionCopyWithImpl<$Res>
+    extends _$ConformanceResourceInteractionCopyWithImpl<$Res,
+        _$_ConformanceResourceInteraction>
+    implements _$$_ConformanceResourceInteractionCopyWith<$Res> {
+  __$$_ConformanceResourceInteractionCopyWithImpl(
+      _$_ConformanceResourceInteraction _value,
+      $Res Function(_$_ConformanceResourceInteraction) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceResourceInteraction get _value =>
-      super._value as _ConformanceResourceInteraction;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? documentation = freezed,
   }) {
-    return _then(_ConformanceResourceInteraction(
-      id: id == freezed
+    return _then(_$_ConformanceResourceInteraction(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as ResourceInteractionCode,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -5615,12 +5460,14 @@ class _$_ConformanceResourceInteraction
   _$_ConformanceResourceInteraction(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
           required this.code,
       this.documentation})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceResourceInteraction.fromJson(
           Map<String, dynamic> json) =>
@@ -5628,11 +5475,25 @@ class _$_ConformanceResourceInteraction
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
   final ResourceInteractionCode code;
@@ -5647,74 +5508,73 @@ class _$_ConformanceResourceInteraction
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceResourceInteraction &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceResourceInteraction &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.code, code) || other.code == code) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)));
+                other.documentation == documentation));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(documentation);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceResourceInteractionCopyWith<_ConformanceResourceInteraction>
-      get copyWith => __$ConformanceResourceInteractionCopyWithImpl<
-          _ConformanceResourceInteraction>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      code,
+      documentation);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceResourceInteractionCopyWith<_$_ConformanceResourceInteraction>
+      get copyWith => __$$_ConformanceResourceInteractionCopyWithImpl<
+          _$_ConformanceResourceInteraction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceResourceInteractionToJson(this);
+    return _$$_ConformanceResourceInteractionToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceResourceInteraction
     extends ConformanceResourceInteraction {
   factory _ConformanceResourceInteraction(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-          required ResourceInteractionCode code,
-      String? documentation}) = _$_ConformanceResourceInteraction;
+          required final ResourceInteractionCode code,
+      final String? documentation}) = _$_ConformanceResourceInteraction;
   _ConformanceResourceInteraction._() : super._();
 
   factory _ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResourceInteraction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-  ResourceInteractionCode get code => throw _privateConstructorUsedError;
+  ResourceInteractionCode get code;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceResourceInteractionCopyWith<_ConformanceResourceInteraction>
+  _$$_ConformanceResourceInteractionCopyWith<_$_ConformanceResourceInteraction>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5722,35 +5582,6 @@ ConformanceRestOperation _$ConformanceRestOperationFromJson(
     Map<String, dynamic> json) {
   return _ConformanceRestOperation.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceRestOperationTearOff {
-  const _$ConformanceRestOperationTearOff();
-
-  _ConformanceRestOperation call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required String name,
-      required Reference definition}) {
-    return _ConformanceRestOperation(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      name: name,
-      definition: definition,
-    );
-  }
-
-  ConformanceRestOperation fromJson(Map<String, Object> json) {
-    return ConformanceRestOperation.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceRestOperation = _$ConformanceRestOperationTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestOperation {
@@ -5774,7 +5605,8 @@ mixin _$ConformanceRestOperation {
 abstract class $ConformanceRestOperationCopyWith<$Res> {
   factory $ConformanceRestOperationCopyWith(ConformanceRestOperation value,
           $Res Function(ConformanceRestOperation) then) =
-      _$ConformanceRestOperationCopyWithImpl<$Res>;
+      _$ConformanceRestOperationCopyWithImpl<$Res, ConformanceRestOperation>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5787,66 +5619,72 @@ abstract class $ConformanceRestOperationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceRestOperationCopyWithImpl<$Res>
+class _$ConformanceRestOperationCopyWithImpl<$Res,
+        $Val extends ConformanceRestOperation>
     implements $ConformanceRestOperationCopyWith<$Res> {
   _$ConformanceRestOperationCopyWithImpl(this._value, this._then);
 
-  final ConformanceRestOperation _value;
   // ignore: unused_field
-  final $Res Function(ConformanceRestOperation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? name = freezed,
-    Object? definition = freezed,
+    Object? name = null,
+    Object? definition = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      definition: definition == freezed
+      definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as Reference,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get definition {
     return $ReferenceCopyWith<$Res>(_value.definition, (value) {
-      return _then(_value.copyWith(definition: value));
+      return _then(_value.copyWith(definition: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceRestOperationCopyWith<$Res>
+abstract class _$$_ConformanceRestOperationCopyWith<$Res>
     implements $ConformanceRestOperationCopyWith<$Res> {
-  factory _$ConformanceRestOperationCopyWith(_ConformanceRestOperation value,
-          $Res Function(_ConformanceRestOperation) then) =
-      __$ConformanceRestOperationCopyWithImpl<$Res>;
+  factory _$$_ConformanceRestOperationCopyWith(
+          _$_ConformanceRestOperation value,
+          $Res Function(_$_ConformanceRestOperation) then) =
+      __$$_ConformanceRestOperationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -5860,48 +5698,46 @@ abstract class _$ConformanceRestOperationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceRestOperationCopyWithImpl<$Res>
-    extends _$ConformanceRestOperationCopyWithImpl<$Res>
-    implements _$ConformanceRestOperationCopyWith<$Res> {
-  __$ConformanceRestOperationCopyWithImpl(_ConformanceRestOperation _value,
-      $Res Function(_ConformanceRestOperation) _then)
-      : super(_value, (v) => _then(v as _ConformanceRestOperation));
+class __$$_ConformanceRestOperationCopyWithImpl<$Res>
+    extends _$ConformanceRestOperationCopyWithImpl<$Res,
+        _$_ConformanceRestOperation>
+    implements _$$_ConformanceRestOperationCopyWith<$Res> {
+  __$$_ConformanceRestOperationCopyWithImpl(_$_ConformanceRestOperation _value,
+      $Res Function(_$_ConformanceRestOperation) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceRestOperation get _value =>
-      super._value as _ConformanceRestOperation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? name = freezed,
-    Object? definition = freezed,
+    Object? name = null,
+    Object? definition = null,
   }) {
-    return _then(_ConformanceRestOperation(
-      id: id == freezed
+    return _then(_$_ConformanceRestOperation(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      definition: definition == freezed
+      definition: null == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as Reference,
@@ -5914,26 +5750,50 @@ class __$ConformanceRestOperationCopyWithImpl<$Res>
 class _$_ConformanceRestOperation extends _ConformanceRestOperation {
   _$_ConformanceRestOperation(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.name,
       required this.definition})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        super._();
 
   factory _$_ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceRestOperationFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
@@ -5947,114 +5807,83 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceRestOperation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceRestOperation &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.definition, definition) ||
-                const DeepCollectionEquality()
-                    .equals(other.definition, definition)));
+                other.definition == definition));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(definition);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceRestOperationCopyWith<_ConformanceRestOperation> get copyWith =>
-      __$ConformanceRestOperationCopyWithImpl<_ConformanceRestOperation>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      name,
+      definition);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceRestOperationCopyWith<_$_ConformanceRestOperation>
+      get copyWith => __$$_ConformanceRestOperationCopyWithImpl<
+          _$_ConformanceRestOperation>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestOperationToJson(this);
+    return _$$_ConformanceRestOperationToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceRestOperation extends ConformanceRestOperation {
   factory _ConformanceRestOperation(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-      required String name,
-      required Reference definition}) = _$_ConformanceRestOperation;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      required final String name,
+      required final Reference definition}) = _$_ConformanceRestOperation;
   _ConformanceRestOperation._() : super._();
 
   factory _ConformanceRestOperation.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestOperation.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  Reference get definition => throw _privateConstructorUsedError;
+  Reference get definition;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestOperationCopyWith<_ConformanceRestOperation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_ConformanceRestOperationCopyWith<_$_ConformanceRestOperation>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ConformanceMessagingEndpoint _$ConformanceMessagingEndpointFromJson(
     Map<String, dynamic> json) {
   return _ConformanceMessagingEndpoint.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceMessagingEndpointTearOff {
-  const _$ConformanceMessagingEndpointTearOff();
-
-  _ConformanceMessagingEndpoint call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding protocol,
-      required FhirUri address,
-      @JsonKey(name: '_address') Element? addressElement}) {
-    return _ConformanceMessagingEndpoint(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      protocol: protocol,
-      address: address,
-      addressElement: addressElement,
-    );
-  }
-
-  ConformanceMessagingEndpoint fromJson(Map<String, Object> json) {
-    return ConformanceMessagingEndpoint.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceMessagingEndpoint = _$ConformanceMessagingEndpointTearOff();
 
 /// @nodoc
 mixin _$ConformanceMessagingEndpoint {
@@ -6079,7 +5908,9 @@ abstract class $ConformanceMessagingEndpointCopyWith<$Res> {
   factory $ConformanceMessagingEndpointCopyWith(
           ConformanceMessagingEndpoint value,
           $Res Function(ConformanceMessagingEndpoint) then) =
-      _$ConformanceMessagingEndpointCopyWithImpl<$Res>;
+      _$ConformanceMessagingEndpointCopyWithImpl<$Res,
+          ConformanceMessagingEndpoint>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6093,78 +5924,84 @@ abstract class $ConformanceMessagingEndpointCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceMessagingEndpointCopyWithImpl<$Res>
+class _$ConformanceMessagingEndpointCopyWithImpl<$Res,
+        $Val extends ConformanceMessagingEndpoint>
     implements $ConformanceMessagingEndpointCopyWith<$Res> {
   _$ConformanceMessagingEndpointCopyWithImpl(this._value, this._then);
 
-  final ConformanceMessagingEndpoint _value;
   // ignore: unused_field
-  final $Res Function(ConformanceMessagingEndpoint) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? protocol = freezed,
-    Object? address = freezed,
+    Object? protocol = null,
+    Object? address = null,
     Object? addressElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      protocol: protocol == freezed
+      protocol: null == protocol
           ? _value.protocol
           : protocol // ignore: cast_nullable_to_non_nullable
               as Coding,
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as FhirUri,
-      addressElement: addressElement == freezed
+      addressElement: freezed == addressElement
           ? _value.addressElement
           : addressElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get protocol {
     return $CodingCopyWith<$Res>(_value.protocol, (value) {
-      return _then(_value.copyWith(protocol: value));
+      return _then(_value.copyWith(protocol: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get addressElement {
     if (_value.addressElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.addressElement!, (value) {
-      return _then(_value.copyWith(addressElement: value));
+      return _then(_value.copyWith(addressElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceMessagingEndpointCopyWith<$Res>
+abstract class _$$_ConformanceMessagingEndpointCopyWith<$Res>
     implements $ConformanceMessagingEndpointCopyWith<$Res> {
-  factory _$ConformanceMessagingEndpointCopyWith(
-          _ConformanceMessagingEndpoint value,
-          $Res Function(_ConformanceMessagingEndpoint) then) =
-      __$ConformanceMessagingEndpointCopyWithImpl<$Res>;
+  factory _$$_ConformanceMessagingEndpointCopyWith(
+          _$_ConformanceMessagingEndpoint value,
+          $Res Function(_$_ConformanceMessagingEndpoint) then) =
+      __$$_ConformanceMessagingEndpointCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6180,49 +6017,47 @@ abstract class _$ConformanceMessagingEndpointCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceMessagingEndpointCopyWithImpl<$Res>
-    extends _$ConformanceMessagingEndpointCopyWithImpl<$Res>
-    implements _$ConformanceMessagingEndpointCopyWith<$Res> {
-  __$ConformanceMessagingEndpointCopyWithImpl(
-      _ConformanceMessagingEndpoint _value,
-      $Res Function(_ConformanceMessagingEndpoint) _then)
-      : super(_value, (v) => _then(v as _ConformanceMessagingEndpoint));
+class __$$_ConformanceMessagingEndpointCopyWithImpl<$Res>
+    extends _$ConformanceMessagingEndpointCopyWithImpl<$Res,
+        _$_ConformanceMessagingEndpoint>
+    implements _$$_ConformanceMessagingEndpointCopyWith<$Res> {
+  __$$_ConformanceMessagingEndpointCopyWithImpl(
+      _$_ConformanceMessagingEndpoint _value,
+      $Res Function(_$_ConformanceMessagingEndpoint) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceMessagingEndpoint get _value =>
-      super._value as _ConformanceMessagingEndpoint;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? protocol = freezed,
-    Object? address = freezed,
+    Object? protocol = null,
+    Object? address = null,
     Object? addressElement = freezed,
   }) {
-    return _then(_ConformanceMessagingEndpoint(
-      id: id == freezed
+    return _then(_$_ConformanceMessagingEndpoint(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      protocol: protocol == freezed
+      protocol: null == protocol
           ? _value.protocol
           : protocol // ignore: cast_nullable_to_non_nullable
               as Coding,
-      address: address == freezed
+      address: null == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as FhirUri,
-      addressElement: addressElement == freezed
+      addressElement: freezed == addressElement
           ? _value.addressElement
           : addressElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -6235,23 +6070,39 @@ class __$ConformanceMessagingEndpointCopyWithImpl<$Res>
 class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
   _$_ConformanceMessagingEndpoint(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.protocol,
       required this.address,
       @JsonKey(name: '_address') this.addressElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceMessagingEndpointFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding protocol;
   @override
@@ -6268,57 +6119,55 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceMessagingEndpoint &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceMessagingEndpoint &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.protocol, protocol) ||
-                const DeepCollectionEquality()
-                    .equals(other.protocol, protocol)) &&
-            (identical(other.address, address) ||
-                const DeepCollectionEquality()
-                    .equals(other.address, address)) &&
+                other.protocol == protocol) &&
+            (identical(other.address, address) || other.address == address) &&
             (identical(other.addressElement, addressElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.addressElement, addressElement)));
+                other.addressElement == addressElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(protocol) ^
-      const DeepCollectionEquality().hash(address) ^
-      const DeepCollectionEquality().hash(addressElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceMessagingEndpointCopyWith<_ConformanceMessagingEndpoint>
-      get copyWith => __$ConformanceMessagingEndpointCopyWithImpl<
-          _ConformanceMessagingEndpoint>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      protocol,
+      address,
+      addressElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceMessagingEndpointCopyWith<_$_ConformanceMessagingEndpoint>
+      get copyWith => __$$_ConformanceMessagingEndpointCopyWithImpl<
+          _$_ConformanceMessagingEndpoint>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceMessagingEndpointToJson(this);
+    return _$$_ConformanceMessagingEndpointToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceMessagingEndpoint
     extends ConformanceMessagingEndpoint {
   factory _ConformanceMessagingEndpoint(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required Coding protocol,
-          required FhirUri address,
-          @JsonKey(name: '_address') Element? addressElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final Coding protocol,
+          required final FhirUri address,
+          @JsonKey(name: '_address') final Element? addressElement}) =
       _$_ConformanceMessagingEndpoint;
   _ConformanceMessagingEndpoint._() : super._();
 
@@ -6326,23 +6175,22 @@ abstract class _ConformanceMessagingEndpoint
       _$_ConformanceMessagingEndpoint.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Coding get protocol => throw _privateConstructorUsedError;
+  Coding get protocol;
   @override
-  FhirUri get address => throw _privateConstructorUsedError;
+  FhirUri get address;
   @override
   @JsonKey(name: '_address')
-  Element? get addressElement => throw _privateConstructorUsedError;
+  Element? get addressElement;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceMessagingEndpointCopyWith<_ConformanceMessagingEndpoint>
+  _$$_ConformanceMessagingEndpointCopyWith<_$_ConformanceMessagingEndpoint>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6350,45 +6198,6 @@ ConformanceMessagingEvent _$ConformanceMessagingEventFromJson(
     Map<String, dynamic> json) {
   return _ConformanceMessagingEvent.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceMessagingEventTearOff {
-  const _$ConformanceMessagingEventTearOff();
-
-  _ConformanceMessagingEvent call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding code,
-      @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) required EventMode mode,
-      @JsonKey(name: '_mode') Element? modeElement,
-      required Code focus,
-      required Reference request,
-      required Reference response,
-      String? documentation}) {
-    return _ConformanceMessagingEvent(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      category: category,
-      mode: mode,
-      modeElement: modeElement,
-      focus: focus,
-      request: request,
-      response: response,
-      documentation: documentation,
-    );
-  }
-
-  ConformanceMessagingEvent fromJson(Map<String, Object> json) {
-    return ConformanceMessagingEvent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceMessagingEvent = _$ConformanceMessagingEventTearOff();
 
 /// @nodoc
 mixin _$ConformanceMessagingEvent {
@@ -6419,7 +6228,8 @@ mixin _$ConformanceMessagingEvent {
 abstract class $ConformanceMessagingEventCopyWith<$Res> {
   factory $ConformanceMessagingEventCopyWith(ConformanceMessagingEvent value,
           $Res Function(ConformanceMessagingEvent) then) =
-      _$ConformanceMessagingEventCopyWithImpl<$Res>;
+      _$ConformanceMessagingEventCopyWithImpl<$Res, ConformanceMessagingEvent>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6440,116 +6250,125 @@ abstract class $ConformanceMessagingEventCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceMessagingEventCopyWithImpl<$Res>
+class _$ConformanceMessagingEventCopyWithImpl<$Res,
+        $Val extends ConformanceMessagingEvent>
     implements $ConformanceMessagingEventCopyWith<$Res> {
   _$ConformanceMessagingEventCopyWithImpl(this._value, this._then);
 
-  final ConformanceMessagingEvent _value;
   // ignore: unused_field
-  final $Res Function(ConformanceMessagingEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? category = freezed,
-    Object? mode = freezed,
+    Object? mode = null,
     Object? modeElement = freezed,
-    Object? focus = freezed,
-    Object? request = freezed,
-    Object? response = freezed,
+    Object? focus = null,
+    Object? request = null,
+    Object? response = null,
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Coding,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as EventCategory?,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as EventMode,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      focus: focus == freezed
+      focus: null == focus
           ? _value.focus
           : focus // ignore: cast_nullable_to_non_nullable
               as Code,
-      request: request == freezed
+      request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference,
-      response: response == freezed
+      response: null == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as Reference,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get code {
     return $CodingCopyWith<$Res>(_value.code, (value) {
-      return _then(_value.copyWith(code: value));
+      return _then(_value.copyWith(code: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
     if (_value.modeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.modeElement!, (value) {
-      return _then(_value.copyWith(modeElement: value));
+      return _then(_value.copyWith(modeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get request {
     return $ReferenceCopyWith<$Res>(_value.request, (value) {
-      return _then(_value.copyWith(request: value));
+      return _then(_value.copyWith(request: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get response {
     return $ReferenceCopyWith<$Res>(_value.response, (value) {
-      return _then(_value.copyWith(response: value));
+      return _then(_value.copyWith(response: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceMessagingEventCopyWith<$Res>
+abstract class _$$_ConformanceMessagingEventCopyWith<$Res>
     implements $ConformanceMessagingEventCopyWith<$Res> {
-  factory _$ConformanceMessagingEventCopyWith(_ConformanceMessagingEvent value,
-          $Res Function(_ConformanceMessagingEvent) then) =
-      __$ConformanceMessagingEventCopyWithImpl<$Res>;
+  factory _$$_ConformanceMessagingEventCopyWith(
+          _$_ConformanceMessagingEvent value,
+          $Res Function(_$_ConformanceMessagingEvent) then) =
+      __$$_ConformanceMessagingEventCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6574,73 +6393,72 @@ abstract class _$ConformanceMessagingEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceMessagingEventCopyWithImpl<$Res>
-    extends _$ConformanceMessagingEventCopyWithImpl<$Res>
-    implements _$ConformanceMessagingEventCopyWith<$Res> {
-  __$ConformanceMessagingEventCopyWithImpl(_ConformanceMessagingEvent _value,
-      $Res Function(_ConformanceMessagingEvent) _then)
-      : super(_value, (v) => _then(v as _ConformanceMessagingEvent));
+class __$$_ConformanceMessagingEventCopyWithImpl<$Res>
+    extends _$ConformanceMessagingEventCopyWithImpl<$Res,
+        _$_ConformanceMessagingEvent>
+    implements _$$_ConformanceMessagingEventCopyWith<$Res> {
+  __$$_ConformanceMessagingEventCopyWithImpl(
+      _$_ConformanceMessagingEvent _value,
+      $Res Function(_$_ConformanceMessagingEvent) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceMessagingEvent get _value =>
-      super._value as _ConformanceMessagingEvent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? category = freezed,
-    Object? mode = freezed,
+    Object? mode = null,
     Object? modeElement = freezed,
-    Object? focus = freezed,
-    Object? request = freezed,
-    Object? response = freezed,
+    Object? focus = null,
+    Object? request = null,
+    Object? response = null,
     Object? documentation = freezed,
   }) {
-    return _then(_ConformanceMessagingEvent(
-      id: id == freezed
+    return _then(_$_ConformanceMessagingEvent(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Coding,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as EventCategory?,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as EventMode,
-      modeElement: modeElement == freezed
+      modeElement: freezed == modeElement
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      focus: focus == freezed
+      focus: null == focus
           ? _value.focus
           : focus // ignore: cast_nullable_to_non_nullable
               as Code,
-      request: request == freezed
+      request: null == request
           ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as Reference,
-      response: response == freezed
+      response: null == response
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
               as Reference,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -6653,8 +6471,8 @@ class __$ConformanceMessagingEventCopyWithImpl<$Res>
 class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
   _$_ConformanceMessagingEvent(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.code,
       @JsonKey(unknownEnumValue: EventCategory.unknown) this.category,
       @JsonKey(unknownEnumValue: EventMode.unknown) required this.mode,
@@ -6663,18 +6481,34 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
       required this.request,
       required this.response,
       this.documentation})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceMessagingEventFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Coding code;
   @override
@@ -6703,114 +6537,109 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceMessagingEvent &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceMessagingEvent &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.code, code) || other.code == code) &&
             (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
-            (identical(other.mode, mode) ||
-                const DeepCollectionEquality().equals(other.mode, mode)) &&
+                other.category == category) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
             (identical(other.modeElement, modeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.modeElement, modeElement)) &&
-            (identical(other.focus, focus) ||
-                const DeepCollectionEquality().equals(other.focus, focus)) &&
-            (identical(other.request, request) ||
-                const DeepCollectionEquality()
-                    .equals(other.request, request)) &&
+                other.modeElement == modeElement) &&
+            (identical(other.focus, focus) || other.focus == focus) &&
+            (identical(other.request, request) || other.request == request) &&
             (identical(other.response, response) ||
-                const DeepCollectionEquality()
-                    .equals(other.response, response)) &&
+                other.response == response) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)));
+                other.documentation == documentation));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(modeElement) ^
-      const DeepCollectionEquality().hash(focus) ^
-      const DeepCollectionEquality().hash(request) ^
-      const DeepCollectionEquality().hash(response) ^
-      const DeepCollectionEquality().hash(documentation);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceMessagingEventCopyWith<_ConformanceMessagingEvent>
-      get copyWith =>
-          __$ConformanceMessagingEventCopyWithImpl<_ConformanceMessagingEvent>(
-              this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      code,
+      category,
+      mode,
+      modeElement,
+      focus,
+      request,
+      response,
+      documentation);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceMessagingEventCopyWith<_$_ConformanceMessagingEvent>
+      get copyWith => __$$_ConformanceMessagingEventCopyWithImpl<
+          _$_ConformanceMessagingEvent>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceMessagingEventToJson(this);
+    return _$$_ConformanceMessagingEventToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
   factory _ConformanceMessagingEvent(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required Coding code,
-      @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
-      @JsonKey(unknownEnumValue: EventMode.unknown) required EventMode mode,
-      @JsonKey(name: '_mode') Element? modeElement,
-      required Code focus,
-      required Reference request,
-      required Reference response,
-      String? documentation}) = _$_ConformanceMessagingEvent;
+      {final Id? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final Coding code,
+      @JsonKey(unknownEnumValue: EventCategory.unknown)
+          final EventCategory? category,
+      @JsonKey(unknownEnumValue: EventMode.unknown)
+          required final EventMode mode,
+      @JsonKey(name: '_mode')
+          final Element? modeElement,
+      required final Code focus,
+      required final Reference request,
+      required final Reference response,
+      final String? documentation}) = _$_ConformanceMessagingEvent;
   _ConformanceMessagingEvent._() : super._();
 
   factory _ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessagingEvent.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Coding get code => throw _privateConstructorUsedError;
+  Coding get code;
   @override
   @JsonKey(unknownEnumValue: EventCategory.unknown)
-  EventCategory? get category => throw _privateConstructorUsedError;
+  EventCategory? get category;
   @override
   @JsonKey(unknownEnumValue: EventMode.unknown)
-  EventMode get mode => throw _privateConstructorUsedError;
+  EventMode get mode;
   @override
   @JsonKey(name: '_mode')
-  Element? get modeElement => throw _privateConstructorUsedError;
+  Element? get modeElement;
   @override
-  Code get focus => throw _privateConstructorUsedError;
+  Code get focus;
   @override
-  Reference get request => throw _privateConstructorUsedError;
+  Reference get request;
   @override
-  Reference get response => throw _privateConstructorUsedError;
+  Reference get response;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceMessagingEventCopyWith<_ConformanceMessagingEvent>
+  _$$_ConformanceMessagingEventCopyWith<_$_ConformanceMessagingEvent>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6818,36 +6647,6 @@ ConformanceSecurityCertificate _$ConformanceSecurityCertificateFromJson(
     Map<String, dynamic> json) {
   return _ConformanceSecurityCertificate.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceSecurityCertificateTearOff {
-  const _$ConformanceSecurityCertificateTearOff();
-
-  _ConformanceSecurityCertificate call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Code? type,
-      Base64Binary? blob,
-      @JsonKey(name: '_blob') Element? blobElement}) {
-    return _ConformanceSecurityCertificate(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      blob: blob,
-      blobElement: blobElement,
-    );
-  }
-
-  ConformanceSecurityCertificate fromJson(Map<String, Object> json) {
-    return ConformanceSecurityCertificate.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceSecurityCertificate =
-    _$ConformanceSecurityCertificateTearOff();
 
 /// @nodoc
 mixin _$ConformanceSecurityCertificate {
@@ -6872,7 +6671,9 @@ abstract class $ConformanceSecurityCertificateCopyWith<$Res> {
   factory $ConformanceSecurityCertificateCopyWith(
           ConformanceSecurityCertificate value,
           $Res Function(ConformanceSecurityCertificate) then) =
-      _$ConformanceSecurityCertificateCopyWithImpl<$Res>;
+      _$ConformanceSecurityCertificateCopyWithImpl<$Res,
+          ConformanceSecurityCertificate>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6885,14 +6686,17 @@ abstract class $ConformanceSecurityCertificateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceSecurityCertificateCopyWithImpl<$Res>
+class _$ConformanceSecurityCertificateCopyWithImpl<$Res,
+        $Val extends ConformanceSecurityCertificate>
     implements $ConformanceSecurityCertificateCopyWith<$Res> {
   _$ConformanceSecurityCertificateCopyWithImpl(this._value, this._then);
 
-  final ConformanceSecurityCertificate _value;
   // ignore: unused_field
-  final $Res Function(ConformanceSecurityCertificate) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -6903,53 +6707,55 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res>
     Object? blobElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code?,
-      blob: blob == freezed
+      blob: freezed == blob
           ? _value.blob
           : blob // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      blobElement: blobElement == freezed
+      blobElement: freezed == blobElement
           ? _value.blobElement
           : blobElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get blobElement {
     if (_value.blobElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.blobElement!, (value) {
-      return _then(_value.copyWith(blobElement: value));
+      return _then(_value.copyWith(blobElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceSecurityCertificateCopyWith<$Res>
+abstract class _$$_ConformanceSecurityCertificateCopyWith<$Res>
     implements $ConformanceSecurityCertificateCopyWith<$Res> {
-  factory _$ConformanceSecurityCertificateCopyWith(
-          _ConformanceSecurityCertificate value,
-          $Res Function(_ConformanceSecurityCertificate) then) =
-      __$ConformanceSecurityCertificateCopyWithImpl<$Res>;
+  factory _$$_ConformanceSecurityCertificateCopyWith(
+          _$_ConformanceSecurityCertificate value,
+          $Res Function(_$_ConformanceSecurityCertificate) then) =
+      __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -6963,18 +6769,16 @@ abstract class _$ConformanceSecurityCertificateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceSecurityCertificateCopyWithImpl<$Res>
-    extends _$ConformanceSecurityCertificateCopyWithImpl<$Res>
-    implements _$ConformanceSecurityCertificateCopyWith<$Res> {
-  __$ConformanceSecurityCertificateCopyWithImpl(
-      _ConformanceSecurityCertificate _value,
-      $Res Function(_ConformanceSecurityCertificate) _then)
-      : super(_value, (v) => _then(v as _ConformanceSecurityCertificate));
+class __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>
+    extends _$ConformanceSecurityCertificateCopyWithImpl<$Res,
+        _$_ConformanceSecurityCertificate>
+    implements _$$_ConformanceSecurityCertificateCopyWith<$Res> {
+  __$$_ConformanceSecurityCertificateCopyWithImpl(
+      _$_ConformanceSecurityCertificate _value,
+      $Res Function(_$_ConformanceSecurityCertificate) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceSecurityCertificate get _value =>
-      super._value as _ConformanceSecurityCertificate;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -6984,28 +6788,28 @@ class __$ConformanceSecurityCertificateCopyWithImpl<$Res>
     Object? blob = freezed,
     Object? blobElement = freezed,
   }) {
-    return _then(_ConformanceSecurityCertificate(
-      id: id == freezed
+    return _then(_$_ConformanceSecurityCertificate(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code?,
-      blob: blob == freezed
+      blob: freezed == blob
           ? _value.blob
           : blob // ignore: cast_nullable_to_non_nullable
               as Base64Binary?,
-      blobElement: blobElement == freezed
+      blobElement: freezed == blobElement
           ? _value.blobElement
           : blobElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -7019,12 +6823,14 @@ class _$_ConformanceSecurityCertificate
     extends _ConformanceSecurityCertificate {
   _$_ConformanceSecurityCertificate(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.type,
       this.blob,
       @JsonKey(name: '_blob') this.blobElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceSecurityCertificate.fromJson(
           Map<String, dynamic> json) =>
@@ -7032,11 +6838,25 @@ class _$_ConformanceSecurityCertificate
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code? type;
   @override
@@ -7053,55 +6873,54 @@ class _$_ConformanceSecurityCertificate
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceSecurityCertificate &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.blob, blob) ||
-                const DeepCollectionEquality().equals(other.blob, blob)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceSecurityCertificate &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.blob, blob) || other.blob == blob) &&
             (identical(other.blobElement, blobElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.blobElement, blobElement)));
+                other.blobElement == blobElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(blob) ^
-      const DeepCollectionEquality().hash(blobElement);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceSecurityCertificateCopyWith<_ConformanceSecurityCertificate>
-      get copyWith => __$ConformanceSecurityCertificateCopyWithImpl<
-          _ConformanceSecurityCertificate>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      blob,
+      blobElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceSecurityCertificateCopyWith<_$_ConformanceSecurityCertificate>
+      get copyWith => __$$_ConformanceSecurityCertificateCopyWithImpl<
+          _$_ConformanceSecurityCertificate>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceSecurityCertificateToJson(this);
+    return _$$_ConformanceSecurityCertificateToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceSecurityCertificate
     extends ConformanceSecurityCertificate {
   factory _ConformanceSecurityCertificate(
-          {Id? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? type,
-          Base64Binary? blob,
-          @JsonKey(name: '_blob') Element? blobElement}) =
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Code? type,
+          final Base64Binary? blob,
+          @JsonKey(name: '_blob') final Element? blobElement}) =
       _$_ConformanceSecurityCertificate;
   _ConformanceSecurityCertificate._() : super._();
 
@@ -7109,23 +6928,22 @@ abstract class _ConformanceSecurityCertificate
       _$_ConformanceSecurityCertificate.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  Code? get type;
   @override
-  Base64Binary? get blob => throw _privateConstructorUsedError;
+  Base64Binary? get blob;
   @override
   @JsonKey(name: '_blob')
-  Element? get blobElement => throw _privateConstructorUsedError;
+  Element? get blobElement;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceSecurityCertificateCopyWith<_ConformanceSecurityCertificate>
+  _$$_ConformanceSecurityCertificateCopyWith<_$_ConformanceSecurityCertificate>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7133,35 +6951,6 @@ ConformanceRestInteraction _$ConformanceRestInteractionFromJson(
     Map<String, dynamic> json) {
   return _ConformanceRestInteraction.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceRestInteractionTearOff {
-  const _$ConformanceRestInteractionTearOff();
-
-  _ConformanceRestInteraction call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-          required RestInteractionCode code,
-      String? documentation}) {
-    return _ConformanceRestInteraction(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      code: code,
-      documentation: documentation,
-    );
-  }
-
-  ConformanceRestInteraction fromJson(Map<String, Object> json) {
-    return ConformanceRestInteraction.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceRestInteraction = _$ConformanceRestInteractionTearOff();
 
 /// @nodoc
 mixin _$ConformanceRestInteraction {
@@ -7184,7 +6973,9 @@ mixin _$ConformanceRestInteraction {
 abstract class $ConformanceRestInteractionCopyWith<$Res> {
   factory $ConformanceRestInteractionCopyWith(ConformanceRestInteraction value,
           $Res Function(ConformanceRestInteraction) then) =
-      _$ConformanceRestInteractionCopyWithImpl<$Res>;
+      _$ConformanceRestInteractionCopyWithImpl<$Res,
+          ConformanceRestInteraction>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -7196,55 +6987,59 @@ abstract class $ConformanceRestInteractionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceRestInteractionCopyWithImpl<$Res>
+class _$ConformanceRestInteractionCopyWithImpl<$Res,
+        $Val extends ConformanceRestInteraction>
     implements $ConformanceRestInteractionCopyWith<$Res> {
   _$ConformanceRestInteractionCopyWithImpl(this._value, this._then);
 
-  final ConformanceRestInteraction _value;
   // ignore: unused_field
-  final $Res Function(ConformanceRestInteraction) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as RestInteractionCode,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceRestInteractionCopyWith<$Res>
+abstract class _$$_ConformanceRestInteractionCopyWith<$Res>
     implements $ConformanceRestInteractionCopyWith<$Res> {
-  factory _$ConformanceRestInteractionCopyWith(
-          _ConformanceRestInteraction value,
-          $Res Function(_ConformanceRestInteraction) then) =
-      __$ConformanceRestInteractionCopyWithImpl<$Res>;
+  factory _$$_ConformanceRestInteractionCopyWith(
+          _$_ConformanceRestInteraction value,
+          $Res Function(_$_ConformanceRestInteraction) then) =
+      __$$_ConformanceRestInteractionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -7256,43 +7051,42 @@ abstract class _$ConformanceRestInteractionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceRestInteractionCopyWithImpl<$Res>
-    extends _$ConformanceRestInteractionCopyWithImpl<$Res>
-    implements _$ConformanceRestInteractionCopyWith<$Res> {
-  __$ConformanceRestInteractionCopyWithImpl(_ConformanceRestInteraction _value,
-      $Res Function(_ConformanceRestInteraction) _then)
-      : super(_value, (v) => _then(v as _ConformanceRestInteraction));
+class __$$_ConformanceRestInteractionCopyWithImpl<$Res>
+    extends _$ConformanceRestInteractionCopyWithImpl<$Res,
+        _$_ConformanceRestInteraction>
+    implements _$$_ConformanceRestInteractionCopyWith<$Res> {
+  __$$_ConformanceRestInteractionCopyWithImpl(
+      _$_ConformanceRestInteraction _value,
+      $Res Function(_$_ConformanceRestInteraction) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceRestInteraction get _value =>
-      super._value as _ConformanceRestInteraction;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? documentation = freezed,
   }) {
-    return _then(_ConformanceRestInteraction(
-      id: id == freezed
+    return _then(_$_ConformanceRestInteraction(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as RestInteractionCode,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -7306,23 +7100,39 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
   _$_ConformanceRestInteraction(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
           required this.code,
       this.documentation})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
       _$$_ConformanceRestInteractionFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
   final RestInteractionCode code;
@@ -7337,73 +7147,72 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceRestInteraction &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceRestInteraction &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.code, code) || other.code == code) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)));
+                other.documentation == documentation));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(documentation);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceRestInteractionCopyWith<_ConformanceRestInteraction>
-      get copyWith => __$ConformanceRestInteractionCopyWithImpl<
-          _ConformanceRestInteraction>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      code,
+      documentation);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceRestInteractionCopyWith<_$_ConformanceRestInteraction>
+      get copyWith => __$$_ConformanceRestInteractionCopyWithImpl<
+          _$_ConformanceRestInteraction>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceRestInteractionToJson(this);
+    return _$$_ConformanceRestInteractionToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
   factory _ConformanceRestInteraction(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-          required RestInteractionCode code,
-      String? documentation}) = _$_ConformanceRestInteraction;
+          required final RestInteractionCode code,
+      final String? documentation}) = _$_ConformanceRestInteraction;
   _ConformanceRestInteraction._() : super._();
 
   factory _ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestInteraction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-  RestInteractionCode get code => throw _privateConstructorUsedError;
+  RestInteractionCode get code;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceRestInteractionCopyWith<_ConformanceRestInteraction>
+  _$$_ConformanceRestInteractionCopyWith<_$_ConformanceRestInteraction>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7411,49 +7220,6 @@ ConformanceResourceSearchParam _$ConformanceResourceSearchParamFromJson(
     Map<String, dynamic> json) {
   return _ConformanceResourceSearchParam.fromJson(json);
 }
-
-/// @nodoc
-class _$ConformanceResourceSearchParamTearOff {
-  const _$ConformanceResourceSearchParamTearOff();
-
-  _ConformanceResourceSearchParam call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      required String name,
-      FhirUri? definition,
-      @JsonKey(unknownEnumValue: SearchParamType.unknown)
-          required SearchParamType type,
-      String? documentation,
-      List<Code>? target,
-      List<SearchParamModifier>? modifier,
-      List<String>? chain}) {
-    return _ConformanceResourceSearchParam(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      name: name,
-      definition: definition,
-      type: type,
-      documentation: documentation,
-      target: target,
-      modifier: modifier,
-      chain: chain,
-    );
-  }
-
-  ConformanceResourceSearchParam fromJson(Map<String, Object> json) {
-    return ConformanceResourceSearchParam.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ConformanceResourceSearchParam =
-    _$ConformanceResourceSearchParamTearOff();
 
 /// @nodoc
 mixin _$ConformanceResourceSearchParam {
@@ -7484,7 +7250,9 @@ abstract class $ConformanceResourceSearchParamCopyWith<$Res> {
   factory $ConformanceResourceSearchParamCopyWith(
           ConformanceResourceSearchParam value,
           $Res Function(ConformanceResourceSearchParam) then) =
-      _$ConformanceResourceSearchParamCopyWithImpl<$Res>;
+      _$ConformanceResourceSearchParamCopyWithImpl<$Res,
+          ConformanceResourceSearchParam>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -7500,85 +7268,89 @@ abstract class $ConformanceResourceSearchParamCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ConformanceResourceSearchParamCopyWithImpl<$Res>
+class _$ConformanceResourceSearchParamCopyWithImpl<$Res,
+        $Val extends ConformanceResourceSearchParam>
     implements $ConformanceResourceSearchParamCopyWith<$Res> {
   _$ConformanceResourceSearchParamCopyWithImpl(this._value, this._then);
 
-  final ConformanceResourceSearchParam _value;
   // ignore: unused_field
-  final $Res Function(ConformanceResourceSearchParam) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? definition = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? documentation = freezed,
     Object? target = freezed,
     Object? modifier = freezed,
     Object? chain = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchParamType,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      target: target == freezed
+      target: freezed == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      modifier: modifier == freezed
+      modifier: freezed == modifier
           ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<SearchParamModifier>?,
-      chain: chain == freezed
+      chain: freezed == chain
           ? _value.chain
           : chain // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$ConformanceResourceSearchParamCopyWith<$Res>
+abstract class _$$_ConformanceResourceSearchParamCopyWith<$Res>
     implements $ConformanceResourceSearchParamCopyWith<$Res> {
-  factory _$ConformanceResourceSearchParamCopyWith(
-          _ConformanceResourceSearchParam value,
-          $Res Function(_ConformanceResourceSearchParam) then) =
-      __$ConformanceResourceSearchParamCopyWithImpl<$Res>;
+  factory _$$_ConformanceResourceSearchParamCopyWith(
+          _$_ConformanceResourceSearchParam value,
+          $Res Function(_$_ConformanceResourceSearchParam) then) =
+      __$$_ConformanceResourceSearchParamCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -7594,75 +7366,73 @@ abstract class _$ConformanceResourceSearchParamCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ConformanceResourceSearchParamCopyWithImpl<$Res>
-    extends _$ConformanceResourceSearchParamCopyWithImpl<$Res>
-    implements _$ConformanceResourceSearchParamCopyWith<$Res> {
-  __$ConformanceResourceSearchParamCopyWithImpl(
-      _ConformanceResourceSearchParam _value,
-      $Res Function(_ConformanceResourceSearchParam) _then)
-      : super(_value, (v) => _then(v as _ConformanceResourceSearchParam));
+class __$$_ConformanceResourceSearchParamCopyWithImpl<$Res>
+    extends _$ConformanceResourceSearchParamCopyWithImpl<$Res,
+        _$_ConformanceResourceSearchParam>
+    implements _$$_ConformanceResourceSearchParamCopyWith<$Res> {
+  __$$_ConformanceResourceSearchParamCopyWithImpl(
+      _$_ConformanceResourceSearchParam _value,
+      $Res Function(_$_ConformanceResourceSearchParam) _then)
+      : super(_value, _then);
 
-  @override
-  _ConformanceResourceSearchParam get _value =>
-      super._value as _ConformanceResourceSearchParam;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? definition = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? documentation = freezed,
     Object? target = freezed,
     Object? modifier = freezed,
     Object? chain = freezed,
   }) {
-    return _then(_ConformanceResourceSearchParam(
-      id: id == freezed
+    return _then(_$_ConformanceResourceSearchParam(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchParamType,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      target: target == freezed
-          ? _value.target
+      target: freezed == target
+          ? _value._target
           : target // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      modifier: modifier == freezed
-          ? _value.modifier
+      modifier: freezed == modifier
+          ? _value._modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<SearchParamModifier>?,
-      chain: chain == freezed
-          ? _value.chain
+      chain: freezed == chain
+          ? _value._chain
           : chain // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
@@ -7675,17 +7445,23 @@ class _$_ConformanceResourceSearchParam
     extends _ConformanceResourceSearchParam {
   _$_ConformanceResourceSearchParam(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.name,
       this.definition,
       @JsonKey(unknownEnumValue: SearchParamType.unknown) required this.type,
       this.documentation,
-      this.target,
-      this.modifier,
-      this.chain})
-      : super._();
+      final List<Code>? target,
+      final List<SearchParamModifier>? modifier,
+      final List<String>? chain})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _target = target,
+        _modifier = modifier,
+        _chain = chain,
+        super._();
 
   factory _$_ConformanceResourceSearchParam.fromJson(
           Map<String, dynamic> json) =>
@@ -7693,14 +7469,35 @@ class _$_ConformanceResourceSearchParam
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String name;
   @override
@@ -7710,12 +7507,32 @@ class _$_ConformanceResourceSearchParam
   final SearchParamType type;
   @override
   final String? documentation;
+  final List<Code>? _target;
   @override
-  final List<Code>? target;
+  List<Code>? get target {
+    final value = _target;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<SearchParamModifier>? _modifier;
   @override
-  final List<SearchParamModifier>? modifier;
+  List<SearchParamModifier>? get modifier {
+    final value = _modifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _chain;
   @override
-  final List<String>? chain;
+  List<String>? get chain {
+    final value = _chain;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -7725,199 +7542,113 @@ class _$_ConformanceResourceSearchParam
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ConformanceResourceSearchParam &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ConformanceResourceSearchParam &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.definition, definition) ||
-                const DeepCollectionEquality()
-                    .equals(other.definition, definition)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.definition == definition) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
-            (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)) &&
-            (identical(other.modifier, modifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifier, modifier)) &&
-            (identical(other.chain, chain) ||
-                const DeepCollectionEquality().equals(other.chain, chain)));
+                other.documentation == documentation) &&
+            const DeepCollectionEquality().equals(other._target, _target) &&
+            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other._chain, _chain));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(definition) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(target) ^
-      const DeepCollectionEquality().hash(modifier) ^
-      const DeepCollectionEquality().hash(chain);
 
   @JsonKey(ignore: true)
   @override
-  _$ConformanceResourceSearchParamCopyWith<_ConformanceResourceSearchParam>
-      get copyWith => __$ConformanceResourceSearchParamCopyWithImpl<
-          _ConformanceResourceSearchParam>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      name,
+      definition,
+      type,
+      documentation,
+      const DeepCollectionEquality().hash(_target),
+      const DeepCollectionEquality().hash(_modifier),
+      const DeepCollectionEquality().hash(_chain));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ConformanceResourceSearchParamCopyWith<_$_ConformanceResourceSearchParam>
+      get copyWith => __$$_ConformanceResourceSearchParamCopyWithImpl<
+          _$_ConformanceResourceSearchParam>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConformanceResourceSearchParamToJson(this);
+    return _$$_ConformanceResourceSearchParamToJson(
+      this,
+    );
   }
 }
 
 abstract class _ConformanceResourceSearchParam
     extends ConformanceResourceSearchParam {
   factory _ConformanceResourceSearchParam(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      required String name,
-      FhirUri? definition,
+          final List<String>? fhirComments,
+      required final String name,
+      final FhirUri? definition,
       @JsonKey(unknownEnumValue: SearchParamType.unknown)
-          required SearchParamType type,
-      String? documentation,
-      List<Code>? target,
-      List<SearchParamModifier>? modifier,
-      List<String>? chain}) = _$_ConformanceResourceSearchParam;
+          required final SearchParamType type,
+      final String? documentation,
+      final List<Code>? target,
+      final List<SearchParamModifier>? modifier,
+      final List<String>? chain}) = _$_ConformanceResourceSearchParam;
   _ConformanceResourceSearchParam._() : super._();
 
   factory _ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResourceSearchParam.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  FhirUri? get definition => throw _privateConstructorUsedError;
+  FhirUri? get definition;
   @override
   @JsonKey(unknownEnumValue: SearchParamType.unknown)
-  SearchParamType get type => throw _privateConstructorUsedError;
+  SearchParamType get type;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  List<Code>? get target => throw _privateConstructorUsedError;
+  List<Code>? get target;
   @override
-  List<SearchParamModifier>? get modifier => throw _privateConstructorUsedError;
+  List<SearchParamModifier>? get modifier;
   @override
-  List<String>? get chain => throw _privateConstructorUsedError;
+  List<String>? get chain;
   @override
   @JsonKey(ignore: true)
-  _$ConformanceResourceSearchParamCopyWith<_ConformanceResourceSearchParam>
+  _$$_ConformanceResourceSearchParamCopyWith<_$_ConformanceResourceSearchParam>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
   return _OperationDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$OperationDefinitionTearOff {
-  const _$OperationDefinitionTearOff();
-
-  _OperationDefinition call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-          Dstu2ResourceType
-              resourceType = Dstu2ResourceType.OperationDefinition,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      String? version,
-      required String name,
-      @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-          required OperationDefinitionStatus status,
-      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          required OperationDefinitionKind kind,
-      Boolean? experimental,
-      String? publisher,
-      List<OperationDefinitionContact>? contact,
-      FhirDateTime? date,
-      String? description,
-      String? requirements,
-      Boolean? idempotent,
-      required Code code,
-      String? notes,
-      Reference? base,
-      required Boolean system,
-      List<Code>? type,
-      required Boolean instance,
-      List<OperationDefinitionParameter>? parameter}) {
-    return _OperationDefinition(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      version: version,
-      name: name,
-      status: status,
-      kind: kind,
-      experimental: experimental,
-      publisher: publisher,
-      contact: contact,
-      date: date,
-      description: description,
-      requirements: requirements,
-      idempotent: idempotent,
-      code: code,
-      notes: notes,
-      base: base,
-      system: system,
-      type: type,
-      instance: instance,
-      parameter: parameter,
-    );
-  }
-
-  OperationDefinition fromJson(Map<String, Object> json) {
-    return OperationDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OperationDefinition = _$OperationDefinitionTearOff();
 
 /// @nodoc
 mixin _$OperationDefinition {
@@ -7967,7 +7698,8 @@ mixin _$OperationDefinition {
 abstract class $OperationDefinitionCopyWith<$Res> {
   factory $OperationDefinitionCopyWith(
           OperationDefinition value, $Res Function(OperationDefinition) then) =
-      _$OperationDefinitionCopyWithImpl<$Res>;
+      _$OperationDefinitionCopyWithImpl<$Res, OperationDefinition>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
@@ -8008,17 +7740,19 @@ abstract class $OperationDefinitionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OperationDefinitionCopyWithImpl<$Res>
+class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
     implements $OperationDefinitionCopyWith<$Res> {
   _$OperationDefinitionCopyWithImpl(this._value, this._then);
 
-  final OperationDefinition _value;
   // ignore: unused_field
-  final $Res Function(OperationDefinition) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8029,9 +7763,9 @@ class _$OperationDefinitionCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? url = freezed,
     Object? version = freezed,
-    Object? name = freezed,
-    Object? status = freezed,
-    Object? kind = freezed,
+    Object? name = null,
+    Object? status = null,
+    Object? kind = null,
     Object? experimental = freezed,
     Object? publisher = freezed,
     Object? contact = freezed,
@@ -8039,171 +7773,175 @@ class _$OperationDefinitionCopyWithImpl<$Res>
     Object? description = freezed,
     Object? requirements = freezed,
     Object? idempotent = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? notes = freezed,
     Object? base = freezed,
-    Object? system = freezed,
+    Object? system = null,
     Object? type = freezed,
-    Object? instance = freezed,
+    Object? instance = null,
     Object? parameter = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionStatus,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionKind,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<OperationDefinitionContact>?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      idempotent: idempotent == freezed
+      idempotent: freezed == idempotent
           ? _value.idempotent
           : idempotent // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code,
-      notes: notes == freezed
+      notes: freezed == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String?,
-      base: base == freezed
+      base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      system: system == freezed
+      system: null == system
           ? _value.system
           : system // ignore: cast_nullable_to_non_nullable
               as Boolean,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      instance: instance == freezed
+      instance: null == instance
           ? _value.instance
           : instance // ignore: cast_nullable_to_non_nullable
               as Boolean,
-      parameter: parameter == freezed
+      parameter: freezed == parameter
           ? _value.parameter
           : parameter // ignore: cast_nullable_to_non_nullable
               as List<OperationDefinitionParameter>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get base {
     if (_value.base == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.base!, (value) {
-      return _then(_value.copyWith(base: value));
+      return _then(_value.copyWith(base: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$OperationDefinitionCopyWith<$Res>
+abstract class _$$_OperationDefinitionCopyWith<$Res>
     implements $OperationDefinitionCopyWith<$Res> {
-  factory _$OperationDefinitionCopyWith(_OperationDefinition value,
-          $Res Function(_OperationDefinition) then) =
-      __$OperationDefinitionCopyWithImpl<$Res>;
+  factory _$$_OperationDefinitionCopyWith(_$_OperationDefinition value,
+          $Res Function(_$_OperationDefinition) then) =
+      __$$_OperationDefinitionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
@@ -8247,19 +7985,17 @@ abstract class _$OperationDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OperationDefinitionCopyWithImpl<$Res>
-    extends _$OperationDefinitionCopyWithImpl<$Res>
-    implements _$OperationDefinitionCopyWith<$Res> {
-  __$OperationDefinitionCopyWithImpl(
-      _OperationDefinition _value, $Res Function(_OperationDefinition) _then)
-      : super(_value, (v) => _then(v as _OperationDefinition));
+class __$$_OperationDefinitionCopyWithImpl<$Res>
+    extends _$OperationDefinitionCopyWithImpl<$Res, _$_OperationDefinition>
+    implements _$$_OperationDefinitionCopyWith<$Res> {
+  __$$_OperationDefinitionCopyWithImpl(_$_OperationDefinition _value,
+      $Res Function(_$_OperationDefinition) _then)
+      : super(_value, _then);
 
-  @override
-  _OperationDefinition get _value => super._value as _OperationDefinition;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8270,9 +8006,9 @@ class __$OperationDefinitionCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? url = freezed,
     Object? version = freezed,
-    Object? name = freezed,
-    Object? status = freezed,
-    Object? kind = freezed,
+    Object? name = null,
+    Object? status = null,
+    Object? kind = null,
     Object? experimental = freezed,
     Object? publisher = freezed,
     Object? contact = freezed,
@@ -8280,125 +8016,125 @@ class __$OperationDefinitionCopyWithImpl<$Res>
     Object? description = freezed,
     Object? requirements = freezed,
     Object? idempotent = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? notes = freezed,
     Object? base = freezed,
-    Object? system = freezed,
+    Object? system = null,
     Object? type = freezed,
-    Object? instance = freezed,
+    Object? instance = null,
     Object? parameter = freezed,
   }) {
-    return _then(_OperationDefinition(
-      resourceType: resourceType == freezed
+    return _then(_$_OperationDefinition(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionStatus,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionKind,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
-          ? _value.contact
+      contact: freezed == contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<OperationDefinitionContact>?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      idempotent: idempotent == freezed
+      idempotent: freezed == idempotent
           ? _value.idempotent
           : idempotent // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code,
-      notes: notes == freezed
+      notes: freezed == notes
           ? _value.notes
           : notes // ignore: cast_nullable_to_non_nullable
               as String?,
-      base: base == freezed
+      base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      system: system == freezed
+      system: null == system
           ? _value.system
           : system // ignore: cast_nullable_to_non_nullable
               as Boolean,
-      type: type == freezed
-          ? _value.type
+      type: freezed == type
+          ? _value._type
           : type // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      instance: instance == freezed
+      instance: null == instance
           ? _value.instance
           : instance // ignore: cast_nullable_to_non_nullable
               as Boolean,
-      parameter: parameter == freezed
-          ? _value.parameter
+      parameter: freezed == parameter
+          ? _value._parameter
           : parameter // ignore: cast_nullable_to_non_nullable
               as List<OperationDefinitionParameter>?,
     ));
@@ -8416,10 +8152,10 @@ class _$_OperationDefinition extends _OperationDefinition {
       this.implicitRules,
       this.language,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.url,
       this.version,
       required this.name,
@@ -8429,7 +8165,7 @@ class _$_OperationDefinition extends _OperationDefinition {
           required this.kind,
       this.experimental,
       this.publisher,
-      this.contact,
+      final List<OperationDefinitionContact>? contact,
       this.date,
       this.description,
       this.requirements,
@@ -8438,10 +8174,16 @@ class _$_OperationDefinition extends _OperationDefinition {
       this.notes,
       this.base,
       required this.system,
-      this.type,
+      final List<Code>? type,
       required this.instance,
-      this.parameter})
-      : super._();
+      final List<OperationDefinitionParameter>? parameter})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _type = type,
+        _parameter = parameter,
+        super._();
 
   factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_OperationDefinitionFromJson(json);
@@ -8459,13 +8201,34 @@ class _$_OperationDefinition extends _OperationDefinition {
   final Code? language;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
@@ -8482,8 +8245,15 @@ class _$_OperationDefinition extends _OperationDefinition {
   final Boolean? experimental;
   @override
   final String? publisher;
+  final List<OperationDefinitionContact>? _contact;
   @override
-  final List<OperationDefinitionContact>? contact;
+  List<OperationDefinitionContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -8500,12 +8270,25 @@ class _$_OperationDefinition extends _OperationDefinition {
   final Reference? base;
   @override
   final Boolean system;
+  final List<Code>? _type;
   @override
-  final List<Code>? type;
+  List<Code>? get type {
+    final value = _type;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Boolean instance;
+  final List<OperationDefinitionParameter>? _parameter;
   @override
-  final List<OperationDefinitionParameter>? parameter;
+  List<OperationDefinitionParameter>? get parameter {
+    final value = _parameter;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8515,158 +8298,134 @@ class _$_OperationDefinition extends _OperationDefinition {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _OperationDefinition &&
+        (other.runtimeType == runtimeType &&
+            other is _$_OperationDefinition &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.kind, kind) ||
-                const DeepCollectionEquality().equals(other.kind, kind)) &&
+                other.language == language) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.experimental, experimental) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimental, experimental)) &&
+                other.experimental == experimental) &&
             (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
+                other.publisher == publisher) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
+                other.description == description) &&
             (identical(other.requirements, requirements) ||
-                const DeepCollectionEquality()
-                    .equals(other.requirements, requirements)) &&
+                other.requirements == requirements) &&
             (identical(other.idempotent, idempotent) ||
-                const DeepCollectionEquality()
-                    .equals(other.idempotent, idempotent)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.notes, notes) ||
-                const DeepCollectionEquality().equals(other.notes, notes)) &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.system, system) ||
-                const DeepCollectionEquality().equals(other.system, system)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.idempotent == idempotent) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.notes, notes) || other.notes == notes) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.system, system) || other.system == system) &&
+            const DeepCollectionEquality().equals(other._type, _type) &&
             (identical(other.instance, instance) ||
-                const DeepCollectionEquality()
-                    .equals(other.instance, instance)) &&
-            (identical(other.parameter, parameter) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameter, parameter)));
+                other.instance == instance) &&
+            const DeepCollectionEquality()
+                .equals(other._parameter, _parameter));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(kind) ^
-      const DeepCollectionEquality().hash(experimental) ^
-      const DeepCollectionEquality().hash(publisher) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(requirements) ^
-      const DeepCollectionEquality().hash(idempotent) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(notes) ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(system) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(instance) ^
-      const DeepCollectionEquality().hash(parameter);
 
   @JsonKey(ignore: true)
   @override
-  _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith =>
-      __$OperationDefinitionCopyWithImpl<_OperationDefinition>(
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        language,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        version,
+        name,
+        status,
+        kind,
+        experimental,
+        publisher,
+        const DeepCollectionEquality().hash(_contact),
+        date,
+        description,
+        requirements,
+        idempotent,
+        code,
+        notes,
+        base,
+        system,
+        const DeepCollectionEquality().hash(_type),
+        instance,
+        const DeepCollectionEquality().hash(_parameter)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OperationDefinitionCopyWith<_$_OperationDefinition> get copyWith =>
+      __$$_OperationDefinitionCopyWithImpl<_$_OperationDefinition>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionToJson(this);
+    return _$$_OperationDefinitionToJson(
+      this,
+    );
   }
 }
 
 abstract class _OperationDefinition extends OperationDefinition {
   factory _OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      final Code? language,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      String? version,
-      required String name,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirUri? url,
+      final String? version,
+      required final String name,
       @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-          required OperationDefinitionStatus status,
+          required final OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          required OperationDefinitionKind kind,
-      Boolean? experimental,
-      String? publisher,
-      List<OperationDefinitionContact>? contact,
-      FhirDateTime? date,
-      String? description,
-      String? requirements,
-      Boolean? idempotent,
-      required Code code,
-      String? notes,
-      Reference? base,
-      required Boolean system,
-      List<Code>? type,
-      required Boolean instance,
-      List<OperationDefinitionParameter>? parameter}) = _$_OperationDefinition;
+          required final OperationDefinitionKind kind,
+      final Boolean? experimental,
+      final String? publisher,
+      final List<OperationDefinitionContact>? contact,
+      final FhirDateTime? date,
+      final String? description,
+      final String? requirements,
+      final Boolean? idempotent,
+      required final Code code,
+      final String? notes,
+      final Reference? base,
+      required final Boolean system,
+      final List<Code>? type,
+      required final Boolean instance,
+      final List<OperationDefinitionParameter>? parameter}) = _$_OperationDefinition;
   _OperationDefinition._() : super._();
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
@@ -8674,70 +8433,67 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-  OperationDefinitionStatus get status => throw _privateConstructorUsedError;
+  OperationDefinitionStatus get status;
   @override
   @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-  OperationDefinitionKind get kind => throw _privateConstructorUsedError;
+  OperationDefinitionKind get kind;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<OperationDefinitionContact>? get contact =>
-      throw _privateConstructorUsedError;
+  List<OperationDefinitionContact>? get contact;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
-  Boolean? get idempotent => throw _privateConstructorUsedError;
+  Boolean? get idempotent;
   @override
-  Code get code => throw _privateConstructorUsedError;
+  Code get code;
   @override
-  String? get notes => throw _privateConstructorUsedError;
+  String? get notes;
   @override
-  Reference? get base => throw _privateConstructorUsedError;
+  Reference? get base;
   @override
-  Boolean get system => throw _privateConstructorUsedError;
+  Boolean get system;
   @override
-  List<Code>? get type => throw _privateConstructorUsedError;
+  List<Code>? get type;
   @override
-  Boolean get instance => throw _privateConstructorUsedError;
+  Boolean get instance;
   @override
-  List<OperationDefinitionParameter>? get parameter =>
-      throw _privateConstructorUsedError;
+  List<OperationDefinitionParameter>? get parameter;
   @override
   @JsonKey(ignore: true)
-  _$OperationDefinitionCopyWith<_OperationDefinition> get copyWith =>
+  _$$_OperationDefinitionCopyWith<_$_OperationDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8745,33 +8501,6 @@ OperationDefinitionContact _$OperationDefinitionContactFromJson(
     Map<String, dynamic> json) {
   return _OperationDefinitionContact.fromJson(json);
 }
-
-/// @nodoc
-class _$OperationDefinitionContactTearOff {
-  const _$OperationDefinitionContactTearOff();
-
-  _OperationDefinitionContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _OperationDefinitionContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  OperationDefinitionContact fromJson(Map<String, Object> json) {
-    return OperationDefinitionContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OperationDefinitionContact = _$OperationDefinitionContactTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionContact {
@@ -8793,7 +8522,9 @@ mixin _$OperationDefinitionContact {
 abstract class $OperationDefinitionContactCopyWith<$Res> {
   factory $OperationDefinitionContactCopyWith(OperationDefinitionContact value,
           $Res Function(OperationDefinitionContact) then) =
-      _$OperationDefinitionContactCopyWithImpl<$Res>;
+      _$OperationDefinitionContactCopyWithImpl<$Res,
+          OperationDefinitionContact>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8803,14 +8534,17 @@ abstract class $OperationDefinitionContactCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OperationDefinitionContactCopyWithImpl<$Res>
+class _$OperationDefinitionContactCopyWithImpl<$Res,
+        $Val extends OperationDefinitionContact>
     implements $OperationDefinitionContactCopyWith<$Res> {
   _$OperationDefinitionContactCopyWithImpl(this._value, this._then);
 
-  final OperationDefinitionContact _value;
   // ignore: unused_field
-  final $Res Function(OperationDefinitionContact) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -8820,38 +8554,39 @@ class _$OperationDefinitionContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      telecom: telecom == freezed
+      telecom: freezed == telecom
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$OperationDefinitionContactCopyWith<$Res>
+abstract class _$$_OperationDefinitionContactCopyWith<$Res>
     implements $OperationDefinitionContactCopyWith<$Res> {
-  factory _$OperationDefinitionContactCopyWith(
-          _OperationDefinitionContact value,
-          $Res Function(_OperationDefinitionContact) then) =
-      __$OperationDefinitionContactCopyWithImpl<$Res>;
+  factory _$$_OperationDefinitionContactCopyWith(
+          _$_OperationDefinitionContact value,
+          $Res Function(_$_OperationDefinitionContact) then) =
+      __$$_OperationDefinitionContactCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -8861,17 +8596,16 @@ abstract class _$OperationDefinitionContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OperationDefinitionContactCopyWithImpl<$Res>
-    extends _$OperationDefinitionContactCopyWithImpl<$Res>
-    implements _$OperationDefinitionContactCopyWith<$Res> {
-  __$OperationDefinitionContactCopyWithImpl(_OperationDefinitionContact _value,
-      $Res Function(_OperationDefinitionContact) _then)
-      : super(_value, (v) => _then(v as _OperationDefinitionContact));
+class __$$_OperationDefinitionContactCopyWithImpl<$Res>
+    extends _$OperationDefinitionContactCopyWithImpl<$Res,
+        _$_OperationDefinitionContact>
+    implements _$$_OperationDefinitionContactCopyWith<$Res> {
+  __$$_OperationDefinitionContactCopyWithImpl(
+      _$_OperationDefinitionContact _value,
+      $Res Function(_$_OperationDefinitionContact) _then)
+      : super(_value, _then);
 
-  @override
-  _OperationDefinitionContact get _value =>
-      super._value as _OperationDefinitionContact;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -8880,25 +8614,25 @@ class __$OperationDefinitionContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_OperationDefinitionContact(
-      id: id == freezed
+    return _then(_$_OperationDefinitionContact(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      telecom: telecom == freezed
-          ? _value.telecom
+      telecom: freezed == telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -8910,26 +8644,49 @@ class __$OperationDefinitionContactCopyWithImpl<$Res>
 class _$_OperationDefinitionContact extends _OperationDefinitionContact {
   _$_OperationDefinitionContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$$_OperationDefinitionContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -8939,69 +8696,68 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _OperationDefinitionContact &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.telecom, telecom) ||
-                const DeepCollectionEquality().equals(other.telecom, telecom)));
+        (other.runtimeType == runtimeType &&
+            other is _$_OperationDefinitionContact &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(telecom);
 
   @JsonKey(ignore: true)
   @override
-  _$OperationDefinitionContactCopyWith<_OperationDefinitionContact>
-      get copyWith => __$OperationDefinitionContactCopyWithImpl<
-          _OperationDefinitionContact>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      const DeepCollectionEquality().hash(_telecom));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OperationDefinitionContactCopyWith<_$_OperationDefinitionContact>
+      get copyWith => __$$_OperationDefinitionContactCopyWithImpl<
+          _$_OperationDefinitionContact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionContactToJson(this);
+    return _$$_OperationDefinitionContactToJson(
+      this,
+    );
   }
 }
 
 abstract class _OperationDefinitionContact extends OperationDefinitionContact {
   factory _OperationDefinitionContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_OperationDefinitionContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_OperationDefinitionContact;
   _OperationDefinitionContact._() : super._();
 
   factory _OperationDefinitionContact.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$OperationDefinitionContactCopyWith<_OperationDefinitionContact>
+  _$$_OperationDefinitionContactCopyWith<_$_OperationDefinitionContact>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9009,53 +8765,6 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
     Map<String, dynamic> json) {
   return _OperationDefinitionParameter.fromJson(json);
 }
-
-/// @nodoc
-class _$OperationDefinitionParameterTearOff {
-  const _$OperationDefinitionParameterTearOff();
-
-  _OperationDefinitionParameter call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      required Code name,
-      @JsonKey(unknownEnumValue: ParameterUse.unknown)
-          required ParameterUse use,
-      required Integer min,
-      required String max,
-      String? documentation,
-      Code? type,
-      Reference? profile,
-      OperationDefinitionParameterBinding? binding,
-      @JsonKey(name: 'part')
-          List<OperationDefinitionParameter>? part_}) {
-    return _OperationDefinitionParameter(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      fhirComments: fhirComments,
-      name: name,
-      use: use,
-      min: min,
-      max: max,
-      documentation: documentation,
-      type: type,
-      profile: profile,
-      binding: binding,
-      part_: part_,
-    );
-  }
-
-  OperationDefinitionParameter fromJson(Map<String, Object> json) {
-    return OperationDefinitionParameter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OperationDefinitionParameter = _$OperationDefinitionParameterTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionParameter {
@@ -9091,7 +8800,9 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
   factory $OperationDefinitionParameterCopyWith(
           OperationDefinitionParameter value,
           $Res Function(OperationDefinitionParameter) then) =
-      _$OperationDefinitionParameterCopyWithImpl<$Res>;
+      _$OperationDefinitionParameterCopyWithImpl<$Res,
+          OperationDefinitionParameter>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9112,24 +8823,27 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OperationDefinitionParameterCopyWithImpl<$Res>
+class _$OperationDefinitionParameterCopyWithImpl<$Res,
+        $Val extends OperationDefinitionParameter>
     implements $OperationDefinitionParameterCopyWith<$Res> {
   _$OperationDefinitionParameterCopyWithImpl(this._value, this._then);
 
-  final OperationDefinitionParameter _value;
   // ignore: unused_field
-  final $Res Function(OperationDefinitionParameter) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? name = freezed,
-    Object? use = freezed,
-    Object? min = freezed,
-    Object? max = freezed,
+    Object? name = null,
+    Object? use = null,
+    Object? min = null,
+    Object? max = null,
     Object? documentation = freezed,
     Object? type = freezed,
     Object? profile = freezed,
@@ -9137,73 +8851,75 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
     Object? part_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
+      fhirComments: freezed == fhirComments
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as Code,
-      use: use == freezed
+      use: null == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
               as ParameterUse,
-      min: min == freezed
+      min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Integer,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      binding: binding == freezed
+      binding: freezed == binding
           ? _value.binding
           : binding // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionParameterBinding?,
-      part_: part_ == freezed
+      part_: freezed == part_
           ? _value.part_
           : part_ // ignore: cast_nullable_to_non_nullable
               as List<OperationDefinitionParameter>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get profile {
     if (_value.profile == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.profile!, (value) {
-      return _then(_value.copyWith(profile: value));
+      return _then(_value.copyWith(profile: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $OperationDefinitionParameterBindingCopyWith<$Res>? get binding {
     if (_value.binding == null) {
       return null;
@@ -9211,19 +8927,20 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
 
     return $OperationDefinitionParameterBindingCopyWith<$Res>(_value.binding!,
         (value) {
-      return _then(_value.copyWith(binding: value));
+      return _then(_value.copyWith(binding: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$OperationDefinitionParameterCopyWith<$Res>
+abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
     implements $OperationDefinitionParameterCopyWith<$Res> {
-  factory _$OperationDefinitionParameterCopyWith(
-          _OperationDefinitionParameter value,
-          $Res Function(_OperationDefinitionParameter) then) =
-      __$OperationDefinitionParameterCopyWithImpl<$Res>;
+  factory _$$_OperationDefinitionParameterCopyWith(
+          _$_OperationDefinitionParameter value,
+          $Res Function(_$_OperationDefinitionParameter) then) =
+      __$$_OperationDefinitionParameterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -9246,85 +8963,83 @@ abstract class _$OperationDefinitionParameterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OperationDefinitionParameterCopyWithImpl<$Res>
-    extends _$OperationDefinitionParameterCopyWithImpl<$Res>
-    implements _$OperationDefinitionParameterCopyWith<$Res> {
-  __$OperationDefinitionParameterCopyWithImpl(
-      _OperationDefinitionParameter _value,
-      $Res Function(_OperationDefinitionParameter) _then)
-      : super(_value, (v) => _then(v as _OperationDefinitionParameter));
+class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
+    extends _$OperationDefinitionParameterCopyWithImpl<$Res,
+        _$_OperationDefinitionParameter>
+    implements _$$_OperationDefinitionParameterCopyWith<$Res> {
+  __$$_OperationDefinitionParameterCopyWithImpl(
+      _$_OperationDefinitionParameter _value,
+      $Res Function(_$_OperationDefinitionParameter) _then)
+      : super(_value, _then);
 
-  @override
-  _OperationDefinitionParameter get _value =>
-      super._value as _OperationDefinitionParameter;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
-    Object? name = freezed,
-    Object? use = freezed,
-    Object? min = freezed,
-    Object? max = freezed,
+    Object? name = null,
+    Object? use = null,
+    Object? min = null,
+    Object? max = null,
     Object? documentation = freezed,
     Object? type = freezed,
     Object? profile = freezed,
     Object? binding = freezed,
     Object? part_ = freezed,
   }) {
-    return _then(_OperationDefinitionParameter(
-      id: id == freezed
+    return _then(_$_OperationDefinitionParameter(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      fhirComments: fhirComments == freezed
-          ? _value.fhirComments
+      fhirComments: freezed == fhirComments
+          ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as Code,
-      use: use == freezed
+      use: null == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
               as ParameterUse,
-      min: min == freezed
+      min: null == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Integer,
-      max: max == freezed
+      max: null == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as Code?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      binding: binding == freezed
+      binding: freezed == binding
           ? _value.binding
           : binding // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionParameterBinding?,
-      part_: part_ == freezed
-          ? _value.part_
+      part_: freezed == part_
+          ? _value._part_
           : part_ // ignore: cast_nullable_to_non_nullable
               as List<OperationDefinitionParameter>?,
     ));
@@ -9336,9 +9051,9 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   _$_OperationDefinitionParameter(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.name,
       @JsonKey(unknownEnumValue: ParameterUse.unknown) required this.use,
       required this.min,
@@ -9347,22 +9062,47 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       this.type,
       this.profile,
       this.binding,
-      @JsonKey(name: 'part') this.part_})
-      : super._();
+      @JsonKey(name: 'part') final List<OperationDefinitionParameter>? part_})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _fhirComments = fhirComments,
+        _part_ = part_,
+        super._();
 
   factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$$_OperationDefinitionParameterFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String>? fhirComments;
+  List<String>? get fhirComments {
+    final value = _fhirComments;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final Code name;
   @override
@@ -9380,9 +9120,15 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   final Reference? profile;
   @override
   final OperationDefinitionParameterBinding? binding;
+  final List<OperationDefinitionParameter>? _part_;
   @override
   @JsonKey(name: 'part')
-  final List<OperationDefinitionParameter>? part_;
+  List<OperationDefinitionParameter>? get part_ {
+    final value = _part_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -9392,90 +9138,80 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _OperationDefinitionParameter &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.use, use) ||
-                const DeepCollectionEquality().equals(other.use, use)) &&
-            (identical(other.min, min) ||
-                const DeepCollectionEquality().equals(other.min, min)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_OperationDefinitionParameter &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.use, use) || other.use == use) &&
+            (identical(other.min, min) || other.min == min) &&
+            (identical(other.max, max) || other.max == max) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
-            (identical(other.binding, binding) ||
-                const DeepCollectionEquality()
-                    .equals(other.binding, binding)) &&
-            (identical(other.part_, part_) ||
-                const DeepCollectionEquality().equals(other.part_, part_)));
+                other.documentation == documentation) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.profile, profile) || other.profile == profile) &&
+            (identical(other.binding, binding) || other.binding == binding) &&
+            const DeepCollectionEquality().equals(other._part_, _part_));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(use) ^
-      const DeepCollectionEquality().hash(min) ^
-      const DeepCollectionEquality().hash(max) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(binding) ^
-      const DeepCollectionEquality().hash(part_);
 
   @JsonKey(ignore: true)
   @override
-  _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
-      get copyWith => __$OperationDefinitionParameterCopyWithImpl<
-          _OperationDefinitionParameter>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(_fhirComments),
+      name,
+      use,
+      min,
+      max,
+      documentation,
+      type,
+      profile,
+      binding,
+      const DeepCollectionEquality().hash(_part_));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OperationDefinitionParameterCopyWith<_$_OperationDefinitionParameter>
+      get copyWith => __$$_OperationDefinitionParameterCopyWithImpl<
+          _$_OperationDefinitionParameter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionParameterToJson(this);
+    return _$$_OperationDefinitionParameterToJson(
+      this,
+    );
   }
 }
 
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
   factory _OperationDefinitionParameter(
-          {Id? id,
+          {final Id? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments')
-              List<String>? fhirComments,
-          required Code name,
+              final List<String>? fhirComments,
+          required final Code name,
           @JsonKey(unknownEnumValue: ParameterUse.unknown)
-              required ParameterUse use,
-          required Integer min,
-          required String max,
-          String? documentation,
-          Code? type,
-          Reference? profile,
-          OperationDefinitionParameterBinding? binding,
+              required final ParameterUse use,
+          required final Integer min,
+          required final String max,
+          final String? documentation,
+          final Code? type,
+          final Reference? profile,
+          final OperationDefinitionParameterBinding? binding,
           @JsonKey(name: 'part')
-              List<OperationDefinitionParameter>? part_}) =
+              final List<OperationDefinitionParameter>? part_}) =
       _$_OperationDefinitionParameter;
   _OperationDefinitionParameter._() : super._();
 
@@ -9483,41 +9219,38 @@ abstract class _OperationDefinitionParameter
       _$_OperationDefinitionParameter.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  Code get name => throw _privateConstructorUsedError;
+  Code get name;
   @override
   @JsonKey(unknownEnumValue: ParameterUse.unknown)
-  ParameterUse get use => throw _privateConstructorUsedError;
+  ParameterUse get use;
   @override
-  Integer get min => throw _privateConstructorUsedError;
+  Integer get min;
   @override
-  String get max => throw _privateConstructorUsedError;
+  String get max;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  Code? get type;
   @override
-  Reference? get profile => throw _privateConstructorUsedError;
+  Reference? get profile;
   @override
-  OperationDefinitionParameterBinding? get binding =>
-      throw _privateConstructorUsedError;
+  OperationDefinitionParameterBinding? get binding;
   @override
   @JsonKey(name: 'part')
-  List<OperationDefinitionParameter>? get part_ =>
-      throw _privateConstructorUsedError;
+  List<OperationDefinitionParameter>? get part_;
   @override
   @JsonKey(ignore: true)
-  _$OperationDefinitionParameterCopyWith<_OperationDefinitionParameter>
+  _$$_OperationDefinitionParameterCopyWith<_$_OperationDefinitionParameter>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9525,41 +9258,6 @@ OperationDefinitionParameterBinding
     _$OperationDefinitionParameterBindingFromJson(Map<String, dynamic> json) {
   return _OperationDefinitionParameterBinding.fromJson(json);
 }
-
-/// @nodoc
-class _$OperationDefinitionParameterBindingTearOff {
-  const _$OperationDefinitionParameterBindingTearOff();
-
-  _OperationDefinitionParameterBinding call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(
-          required: true,
-          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-      @JsonKey(required: true)
-          required OperationDefinitionBindingStrength strength,
-      FhirUri? valueSetUri,
-      Reference? valueSetReference}) {
-    return _OperationDefinitionParameterBinding(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      strength: strength,
-      valueSetUri: valueSetUri,
-      valueSetReference: valueSetReference,
-    );
-  }
-
-  OperationDefinitionParameterBinding fromJson(Map<String, Object> json) {
-    return OperationDefinitionParameterBinding.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OperationDefinitionParameterBinding =
-    _$OperationDefinitionParameterBindingTearOff();
 
 /// @nodoc
 mixin _$OperationDefinitionParameterBinding {
@@ -9589,7 +9287,9 @@ abstract class $OperationDefinitionParameterBindingCopyWith<$Res> {
   factory $OperationDefinitionParameterBindingCopyWith(
           OperationDefinitionParameterBinding value,
           $Res Function(OperationDefinitionParameterBinding) then) =
-      _$OperationDefinitionParameterBindingCopyWithImpl<$Res>;
+      _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
+          OperationDefinitionParameterBinding>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -9607,71 +9307,76 @@ abstract class $OperationDefinitionParameterBindingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$OperationDefinitionParameterBindingCopyWithImpl<$Res>
+class _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
+        $Val extends OperationDefinitionParameterBinding>
     implements $OperationDefinitionParameterBindingCopyWith<$Res> {
   _$OperationDefinitionParameterBindingCopyWithImpl(this._value, this._then);
 
-  final OperationDefinitionParameterBinding _value;
   // ignore: unused_field
-  final $Res Function(OperationDefinitionParameterBinding) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? strength = freezed,
+    Object? strength = null,
     Object? valueSetUri = freezed,
     Object? valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      strength: strength == freezed
+      strength: null == strength
           ? _value.strength
           : strength // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionBindingStrength,
-      valueSetUri: valueSetUri == freezed
+      valueSetUri: freezed == valueSetUri
           ? _value.valueSetUri
           : valueSetUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      valueSetReference: valueSetReference == freezed
+      valueSetReference: freezed == valueSetReference
           ? _value.valueSetReference
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueSetReference {
     if (_value.valueSetReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.valueSetReference!, (value) {
-      return _then(_value.copyWith(valueSetReference: value));
+      return _then(_value.copyWith(valueSetReference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$OperationDefinitionParameterBindingCopyWith<$Res>
+abstract class _$$_OperationDefinitionParameterBindingCopyWith<$Res>
     implements $OperationDefinitionParameterBindingCopyWith<$Res> {
-  factory _$OperationDefinitionParameterBindingCopyWith(
-          _OperationDefinitionParameterBinding value,
-          $Res Function(_OperationDefinitionParameterBinding) then) =
-      __$OperationDefinitionParameterBindingCopyWithImpl<$Res>;
+  factory _$$_OperationDefinitionParameterBindingCopyWith(
+          _$_OperationDefinitionParameterBinding value,
+          $Res Function(_$_OperationDefinitionParameterBinding) then) =
+      __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -9690,49 +9395,47 @@ abstract class _$OperationDefinitionParameterBindingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$OperationDefinitionParameterBindingCopyWithImpl<$Res>
-    extends _$OperationDefinitionParameterBindingCopyWithImpl<$Res>
-    implements _$OperationDefinitionParameterBindingCopyWith<$Res> {
-  __$OperationDefinitionParameterBindingCopyWithImpl(
-      _OperationDefinitionParameterBinding _value,
-      $Res Function(_OperationDefinitionParameterBinding) _then)
-      : super(_value, (v) => _then(v as _OperationDefinitionParameterBinding));
+class __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>
+    extends _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
+        _$_OperationDefinitionParameterBinding>
+    implements _$$_OperationDefinitionParameterBindingCopyWith<$Res> {
+  __$$_OperationDefinitionParameterBindingCopyWithImpl(
+      _$_OperationDefinitionParameterBinding _value,
+      $Res Function(_$_OperationDefinitionParameterBinding) _then)
+      : super(_value, _then);
 
-  @override
-  _OperationDefinitionParameterBinding get _value =>
-      super._value as _OperationDefinitionParameterBinding;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? strength = freezed,
+    Object? strength = null,
     Object? valueSetUri = freezed,
     Object? valueSetReference = freezed,
   }) {
-    return _then(_OperationDefinitionParameterBinding(
-      id: id == freezed
+    return _then(_$_OperationDefinitionParameterBinding(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      strength: strength == freezed
+      strength: null == strength
           ? _value.strength
           : strength // ignore: cast_nullable_to_non_nullable
               as OperationDefinitionBindingStrength,
-      valueSetUri: valueSetUri == freezed
+      valueSetUri: freezed == valueSetUri
           ? _value.valueSetUri
           : valueSetUri // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      valueSetReference: valueSetReference == freezed
+      valueSetReference: freezed == valueSetReference
           ? _value.valueSetReference
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -9747,8 +9450,8 @@ class _$_OperationDefinitionParameterBinding
   _$_OperationDefinitionParameterBinding(
       {this.id,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(
           required: true,
           unknownEnumValue: OperationDefinitionBindingStrength.unknown)
@@ -9756,7 +9459,9 @@ class _$_OperationDefinitionParameterBinding
           required this.strength,
       this.valueSetUri,
       this.valueSetReference})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =>
@@ -9764,11 +9469,25 @@ class _$_OperationDefinitionParameterBinding
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(
       required: true,
@@ -9788,63 +9507,63 @@ class _$_OperationDefinitionParameterBinding
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _OperationDefinitionParameterBinding &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_OperationDefinitionParameterBinding &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.strength, strength) ||
-                const DeepCollectionEquality()
-                    .equals(other.strength, strength)) &&
+                other.strength == strength) &&
             (identical(other.valueSetUri, valueSetUri) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueSetUri, valueSetUri)) &&
+                other.valueSetUri == valueSetUri) &&
             (identical(other.valueSetReference, valueSetReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueSetReference, valueSetReference)));
+                other.valueSetReference == valueSetReference));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(strength) ^
-      const DeepCollectionEquality().hash(valueSetUri) ^
-      const DeepCollectionEquality().hash(valueSetReference);
 
   @JsonKey(ignore: true)
   @override
-  _$OperationDefinitionParameterBindingCopyWith<
-          _OperationDefinitionParameterBinding>
-      get copyWith => __$OperationDefinitionParameterBindingCopyWithImpl<
-          _OperationDefinitionParameterBinding>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      strength,
+      valueSetUri,
+      valueSetReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_OperationDefinitionParameterBindingCopyWith<
+          _$_OperationDefinitionParameterBinding>
+      get copyWith => __$$_OperationDefinitionParameterBindingCopyWithImpl<
+          _$_OperationDefinitionParameterBinding>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_OperationDefinitionParameterBindingToJson(this);
+    return _$$_OperationDefinitionParameterBindingToJson(
+      this,
+    );
   }
 }
 
 abstract class _OperationDefinitionParameterBinding
     extends OperationDefinitionParameterBinding {
   factory _OperationDefinitionParameterBinding(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(
-          required: true,
-          unknownEnumValue: OperationDefinitionBindingStrength.unknown)
-      @JsonKey(required: true)
-          required OperationDefinitionBindingStrength strength,
-      FhirUri? valueSetUri,
-      Reference? valueSetReference}) = _$_OperationDefinitionParameterBinding;
+          {final Id? id,
+          @JsonKey(name: 'extension')
+              final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(
+              required: true,
+              unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+          @JsonKey(required: true)
+              required final OperationDefinitionBindingStrength strength,
+          final FhirUri? valueSetUri,
+          final Reference? valueSetReference}) =
+      _$_OperationDefinitionParameterBinding;
   _OperationDefinitionParameterBinding._() : super._();
 
   factory _OperationDefinitionParameterBinding.fromJson(
@@ -9852,107 +9571,32 @@ abstract class _OperationDefinitionParameterBinding
       _$_OperationDefinitionParameterBinding.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(
       required: true,
       unknownEnumValue: OperationDefinitionBindingStrength.unknown)
   @JsonKey(required: true)
-  OperationDefinitionBindingStrength get strength =>
-      throw _privateConstructorUsedError;
+  OperationDefinitionBindingStrength get strength;
   @override
-  FhirUri? get valueSetUri => throw _privateConstructorUsedError;
+  FhirUri? get valueSetUri;
   @override
-  Reference? get valueSetReference => throw _privateConstructorUsedError;
+  Reference? get valueSetReference;
   @override
   @JsonKey(ignore: true)
-  _$OperationDefinitionParameterBindingCopyWith<
-          _OperationDefinitionParameterBinding>
+  _$$_OperationDefinitionParameterBindingCopyWith<
+          _$_OperationDefinitionParameterBinding>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
   return _SearchParameter.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchParameterTearOff {
-  const _$SearchParameterTearOff();
-
-  _SearchParameter call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.SearchParameter,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
-      required String name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus? status,
-      Boolean? experimental,
-      String? publisher,
-      List<SearchParameterContact>? contact,
-      FhirDateTime? date,
-      String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      required Code code,
-      Code? base,
-      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          required SearchParameterType type,
-      String? description,
-      String? xpath,
-      @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-          SearchParameterXpathUsage? xpathUsage,
-      List<Code>? target}) {
-    return _SearchParameter(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      url: url,
-      name: name,
-      status: status,
-      experimental: experimental,
-      publisher: publisher,
-      contact: contact,
-      date: date,
-      requirements: requirements,
-      requirementsElement: requirementsElement,
-      code: code,
-      base: base,
-      type: type,
-      description: description,
-      xpath: xpath,
-      xpathUsage: xpathUsage,
-      target: target,
-    );
-  }
-
-  SearchParameter fromJson(Map<String, Object> json) {
-    return SearchParameter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchParameter = _$SearchParameterTearOff();
 
 /// @nodoc
 mixin _$SearchParameter {
@@ -10001,7 +9645,8 @@ mixin _$SearchParameter {
 abstract class $SearchParameterCopyWith<$Res> {
   factory $SearchParameterCopyWith(
           SearchParameter value, $Res Function(SearchParameter) then) =
-      _$SearchParameterCopyWithImpl<$Res>;
+      _$SearchParameterCopyWithImpl<$Res, SearchParameter>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
@@ -10041,17 +9686,19 @@ abstract class $SearchParameterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchParameterCopyWithImpl<$Res>
+class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
     implements $SearchParameterCopyWith<$Res> {
   _$SearchParameterCopyWithImpl(this._value, this._then);
 
-  final SearchParameter _value;
   // ignore: unused_field
-  final $Res Function(SearchParameter) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10060,8 +9707,8 @@ class _$SearchParameterCopyWithImpl<$Res>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? url = freezed,
-    Object? name = freezed,
+    Object? url = null,
+    Object? name = null,
     Object? status = freezed,
     Object? experimental = freezed,
     Object? publisher = freezed,
@@ -10069,159 +9716,163 @@ class _$SearchParameterCopyWithImpl<$Res>
     Object? date = freezed,
     Object? requirements = freezed,
     Object? requirementsElement = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? base = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? description = freezed,
     Object? xpath = freezed,
     Object? xpathUsage = freezed,
     Object? target = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as SearchParameterStatus?,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<SearchParameterContact>?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirementsElement: requirementsElement == freezed
+      requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code,
-      base: base == freezed
+      base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Code?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchParameterType,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      xpath: xpath == freezed
+      xpath: freezed == xpath
           ? _value.xpath
           : xpath // ignore: cast_nullable_to_non_nullable
               as String?,
-      xpathUsage: xpathUsage == freezed
+      xpathUsage: freezed == xpathUsage
           ? _value.xpathUsage
           : xpathUsage // ignore: cast_nullable_to_non_nullable
               as SearchParameterXpathUsage?,
-      target: target == freezed
+      target: freezed == target
           ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requirementsElement {
     if (_value.requirementsElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.requirementsElement!, (value) {
-      return _then(_value.copyWith(requirementsElement: value));
+      return _then(_value.copyWith(requirementsElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SearchParameterCopyWith<$Res>
+abstract class _$$_SearchParameterCopyWith<$Res>
     implements $SearchParameterCopyWith<$Res> {
-  factory _$SearchParameterCopyWith(
-          _SearchParameter value, $Res Function(_SearchParameter) then) =
-      __$SearchParameterCopyWithImpl<$Res>;
+  factory _$$_SearchParameterCopyWith(
+          _$_SearchParameter value, $Res Function(_$_SearchParameter) then) =
+      __$$_SearchParameterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
@@ -10264,19 +9915,17 @@ abstract class _$SearchParameterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchParameterCopyWithImpl<$Res>
-    extends _$SearchParameterCopyWithImpl<$Res>
-    implements _$SearchParameterCopyWith<$Res> {
-  __$SearchParameterCopyWithImpl(
-      _SearchParameter _value, $Res Function(_SearchParameter) _then)
-      : super(_value, (v) => _then(v as _SearchParameter));
+class __$$_SearchParameterCopyWithImpl<$Res>
+    extends _$SearchParameterCopyWithImpl<$Res, _$_SearchParameter>
+    implements _$$_SearchParameterCopyWith<$Res> {
+  __$$_SearchParameterCopyWithImpl(
+      _$_SearchParameter _value, $Res Function(_$_SearchParameter) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchParameter get _value => super._value as _SearchParameter;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10285,8 +9934,8 @@ class __$SearchParameterCopyWithImpl<$Res>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? url = freezed,
-    Object? name = freezed,
+    Object? url = null,
+    Object? name = null,
     Object? status = freezed,
     Object? experimental = freezed,
     Object? publisher = freezed,
@@ -10294,113 +9943,113 @@ class __$SearchParameterCopyWithImpl<$Res>
     Object? date = freezed,
     Object? requirements = freezed,
     Object? requirementsElement = freezed,
-    Object? code = freezed,
+    Object? code = null,
     Object? base = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? description = freezed,
     Object? xpath = freezed,
     Object? xpathUsage = freezed,
     Object? target = freezed,
   }) {
-    return _then(_SearchParameter(
-      resourceType: resourceType == freezed
+    return _then(_$_SearchParameter(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as SearchParameterStatus?,
-      experimental: experimental == freezed
+      experimental: freezed == experimental
           ? _value.experimental
           : experimental // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      publisher: publisher == freezed
+      publisher: freezed == publisher
           ? _value.publisher
           : publisher // ignore: cast_nullable_to_non_nullable
               as String?,
-      contact: contact == freezed
-          ? _value.contact
+      contact: freezed == contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<SearchParameterContact>?,
-      date: date == freezed
+      date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      requirements: requirements == freezed
+      requirements: freezed == requirements
           ? _value.requirements
           : requirements // ignore: cast_nullable_to_non_nullable
               as String?,
-      requirementsElement: requirementsElement == freezed
+      requirementsElement: freezed == requirementsElement
           ? _value.requirementsElement
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Code,
-      base: base == freezed
+      base: freezed == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Code?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as SearchParameterType,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as String?,
-      xpath: xpath == freezed
+      xpath: freezed == xpath
           ? _value.xpath
           : xpath // ignore: cast_nullable_to_non_nullable
               as String?,
-      xpathUsage: xpathUsage == freezed
+      xpathUsage: freezed == xpathUsage
           ? _value.xpathUsage
           : xpathUsage // ignore: cast_nullable_to_non_nullable
               as SearchParameterXpathUsage?,
-      target: target == freezed
-          ? _value.target
+      target: freezed == target
+          ? _value._target
           : target // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
     ));
@@ -10418,17 +10067,17 @@ class _$_SearchParameter extends _SearchParameter {
       this.implicitRules,
       this.language,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.url,
       required this.name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
           this.status,
       this.experimental,
       this.publisher,
-      this.contact,
+      final List<SearchParameterContact>? contact,
       this.date,
       this.requirements,
       @JsonKey(name: '_requirements')
@@ -10441,8 +10090,13 @@ class _$_SearchParameter extends _SearchParameter {
       this.xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           this.xpathUsage,
-      this.target})
-      : super._();
+      final List<Code>? target})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _contact = contact,
+        _target = target,
+        super._();
 
   factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
       _$$_SearchParameterFromJson(json);
@@ -10460,13 +10114,34 @@ class _$_SearchParameter extends _SearchParameter {
   final Code? language;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri url;
   @override
@@ -10478,8 +10153,15 @@ class _$_SearchParameter extends _SearchParameter {
   final Boolean? experimental;
   @override
   final String? publisher;
+  final List<SearchParameterContact>? _contact;
   @override
-  final List<SearchParameterContact>? contact;
+  List<SearchParameterContact>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirDateTime? date;
   @override
@@ -10501,8 +10183,14 @@ class _$_SearchParameter extends _SearchParameter {
   @override
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
   final SearchParameterXpathUsage? xpathUsage;
+  final List<Code>? _target;
   @override
-  final List<Code>? target;
+  List<Code>? get target {
+    final value = _target;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -10512,145 +10200,125 @@ class _$_SearchParameter extends _SearchParameter {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SearchParameter &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SearchParameter &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.language == language) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.experimental, experimental) ||
-                const DeepCollectionEquality()
-                    .equals(other.experimental, experimental)) &&
+                other.experimental == experimental) &&
             (identical(other.publisher, publisher) ||
-                const DeepCollectionEquality()
-                    .equals(other.publisher, publisher)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality()
-                    .equals(other.contact, contact)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
+                other.publisher == publisher) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.date, date) || other.date == date) &&
             (identical(other.requirements, requirements) ||
-                const DeepCollectionEquality()
-                    .equals(other.requirements, requirements)) &&
+                other.requirements == requirements) &&
             (identical(other.requirementsElement, requirementsElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.requirementsElement, requirementsElement)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.requirementsElement == requirementsElement) &&
+            (identical(other.code, code) || other.code == code) &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.xpath, xpath) ||
-                const DeepCollectionEquality().equals(other.xpath, xpath)) &&
+                other.description == description) &&
+            (identical(other.xpath, xpath) || other.xpath == xpath) &&
             (identical(other.xpathUsage, xpathUsage) ||
-                const DeepCollectionEquality()
-                    .equals(other.xpathUsage, xpathUsage)) &&
-            (identical(other.target, target) ||
-                const DeepCollectionEquality().equals(other.target, target)));
+                other.xpathUsage == xpathUsage) &&
+            const DeepCollectionEquality().equals(other._target, _target));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(experimental) ^
-      const DeepCollectionEquality().hash(publisher) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(requirements) ^
-      const DeepCollectionEquality().hash(requirementsElement) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(xpath) ^
-      const DeepCollectionEquality().hash(xpathUsage) ^
-      const DeepCollectionEquality().hash(target);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
-      __$SearchParameterCopyWithImpl<_SearchParameter>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        language,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        url,
+        name,
+        status,
+        experimental,
+        publisher,
+        const DeepCollectionEquality().hash(_contact),
+        date,
+        requirements,
+        requirementsElement,
+        code,
+        base,
+        type,
+        description,
+        xpath,
+        xpathUsage,
+        const DeepCollectionEquality().hash(_target)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchParameterCopyWith<_$_SearchParameter> get copyWith =>
+      __$$_SearchParameterCopyWithImpl<_$_SearchParameter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchParameterToJson(this);
+    return _$$_SearchParameterToJson(
+      this,
+    );
   }
 }
 
 abstract class _SearchParameter extends SearchParameter {
   factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      final Code? language,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required FhirUri url,
-      required String name,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final FhirUri url,
+      required final String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus? status,
-      Boolean? experimental,
-      String? publisher,
-      List<SearchParameterContact>? contact,
-      FhirDateTime? date,
-      String? requirements,
+          final SearchParameterStatus? status,
+      final Boolean? experimental,
+      final String? publisher,
+      final List<SearchParameterContact>? contact,
+      final FhirDateTime? date,
+      final String? requirements,
       @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      required Code code,
-      Code? base,
+          final Element? requirementsElement,
+      required final Code code,
+      final Code? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          required SearchParameterType type,
-      String? description,
-      String? xpath,
+          required final SearchParameterType type,
+      final String? description,
+      final String? xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-          SearchParameterXpathUsage? xpathUsage,
-      List<Code>? target}) = _$_SearchParameter;
+          final SearchParameterXpathUsage? xpathUsage,
+      final List<Code>? target}) = _$_SearchParameter;
   _SearchParameter._() : super._();
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
@@ -10658,66 +10326,63 @@ abstract class _SearchParameter extends SearchParameter {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirUri get url => throw _privateConstructorUsedError;
+  FhirUri get url;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-  SearchParameterStatus? get status => throw _privateConstructorUsedError;
+  SearchParameterStatus? get status;
   @override
-  Boolean? get experimental => throw _privateConstructorUsedError;
+  Boolean? get experimental;
   @override
-  String? get publisher => throw _privateConstructorUsedError;
+  String? get publisher;
   @override
-  List<SearchParameterContact>? get contact =>
-      throw _privateConstructorUsedError;
+  List<SearchParameterContact>? get contact;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
-  String? get requirements => throw _privateConstructorUsedError;
+  String? get requirements;
   @override
   @JsonKey(name: '_requirements')
-  Element? get requirementsElement => throw _privateConstructorUsedError;
+  Element? get requirementsElement;
   @override
-  Code get code => throw _privateConstructorUsedError;
+  Code get code;
   @override
-  Code? get base => throw _privateConstructorUsedError;
+  Code? get base;
   @override
   @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-  SearchParameterType get type => throw _privateConstructorUsedError;
+  SearchParameterType get type;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  String? get xpath => throw _privateConstructorUsedError;
+  String? get xpath;
   @override
   @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-  SearchParameterXpathUsage? get xpathUsage =>
-      throw _privateConstructorUsedError;
+  SearchParameterXpathUsage? get xpathUsage;
   @override
-  List<Code>? get target => throw _privateConstructorUsedError;
+  List<Code>? get target;
   @override
   @JsonKey(ignore: true)
-  _$SearchParameterCopyWith<_SearchParameter> get copyWith =>
+  _$$_SearchParameterCopyWith<_$_SearchParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -10725,33 +10390,6 @@ SearchParameterContact _$SearchParameterContactFromJson(
     Map<String, dynamic> json) {
   return _SearchParameterContact.fromJson(json);
 }
-
-/// @nodoc
-class _$SearchParameterContactTearOff {
-  const _$SearchParameterContactTearOff();
-
-  _SearchParameterContact call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) {
-    return _SearchParameterContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      name: name,
-      telecom: telecom,
-    );
-  }
-
-  SearchParameterContact fromJson(Map<String, Object> json) {
-    return SearchParameterContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SearchParameterContact = _$SearchParameterContactTearOff();
 
 /// @nodoc
 mixin _$SearchParameterContact {
@@ -10773,7 +10411,8 @@ mixin _$SearchParameterContact {
 abstract class $SearchParameterContactCopyWith<$Res> {
   factory $SearchParameterContactCopyWith(SearchParameterContact value,
           $Res Function(SearchParameterContact) then) =
-      _$SearchParameterContactCopyWithImpl<$Res>;
+      _$SearchParameterContactCopyWithImpl<$Res, SearchParameterContact>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -10783,14 +10422,17 @@ abstract class $SearchParameterContactCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchParameterContactCopyWithImpl<$Res>
+class _$SearchParameterContactCopyWithImpl<$Res,
+        $Val extends SearchParameterContact>
     implements $SearchParameterContactCopyWith<$Res> {
   _$SearchParameterContactCopyWithImpl(this._value, this._then);
 
-  final SearchParameterContact _value;
   // ignore: unused_field
-  final $Res Function(SearchParameterContact) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -10800,37 +10442,38 @@ class _$SearchParameterContactCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      telecom: telecom == freezed
+      telecom: freezed == telecom
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$SearchParameterContactCopyWith<$Res>
+abstract class _$$_SearchParameterContactCopyWith<$Res>
     implements $SearchParameterContactCopyWith<$Res> {
-  factory _$SearchParameterContactCopyWith(_SearchParameterContact value,
-          $Res Function(_SearchParameterContact) then) =
-      __$SearchParameterContactCopyWithImpl<$Res>;
+  factory _$$_SearchParameterContactCopyWith(_$_SearchParameterContact value,
+          $Res Function(_$_SearchParameterContact) then) =
+      __$$_SearchParameterContactCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -10840,16 +10483,15 @@ abstract class _$SearchParameterContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SearchParameterContactCopyWithImpl<$Res>
-    extends _$SearchParameterContactCopyWithImpl<$Res>
-    implements _$SearchParameterContactCopyWith<$Res> {
-  __$SearchParameterContactCopyWithImpl(_SearchParameterContact _value,
-      $Res Function(_SearchParameterContact) _then)
-      : super(_value, (v) => _then(v as _SearchParameterContact));
+class __$$_SearchParameterContactCopyWithImpl<$Res>
+    extends _$SearchParameterContactCopyWithImpl<$Res,
+        _$_SearchParameterContact>
+    implements _$$_SearchParameterContactCopyWith<$Res> {
+  __$$_SearchParameterContactCopyWithImpl(_$_SearchParameterContact _value,
+      $Res Function(_$_SearchParameterContact) _then)
+      : super(_value, _then);
 
-  @override
-  _SearchParameterContact get _value => super._value as _SearchParameterContact;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -10858,25 +10500,25 @@ class __$SearchParameterContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_SearchParameterContact(
-      id: id == freezed
+    return _then(_$_SearchParameterContact(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      telecom: telecom == freezed
-          ? _value.telecom
+      telecom: freezed == telecom
+          ? _value._telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -10888,26 +10530,49 @@ class __$SearchParameterContactCopyWithImpl<$Res>
 class _$_SearchParameterContact extends _SearchParameterContact {
   _$_SearchParameterContact(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.name,
-      this.telecom})
-      : super._();
+      final List<ContactPoint>? telecom})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _telecom = telecom,
+        super._();
 
   factory _$_SearchParameterContact.fromJson(Map<String, dynamic> json) =>
       _$$_SearchParameterContactFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final String? name;
+  final List<ContactPoint>? _telecom;
   @override
-  final List<ContactPoint>? telecom;
+  List<ContactPoint>? get telecom {
+    final value = _telecom;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -10917,68 +10582,67 @@ class _$_SearchParameterContact extends _SearchParameterContact {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SearchParameterContact &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.telecom, telecom) ||
-                const DeepCollectionEquality().equals(other.telecom, telecom)));
+        (other.runtimeType == runtimeType &&
+            other is _$_SearchParameterContact &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
+            const DeepCollectionEquality().equals(other._telecom, _telecom));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(telecom);
 
   @JsonKey(ignore: true)
   @override
-  _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith =>
-      __$SearchParameterContactCopyWithImpl<_SearchParameterContact>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      const DeepCollectionEquality().hash(_telecom));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchParameterContactCopyWith<_$_SearchParameterContact> get copyWith =>
+      __$$_SearchParameterContactCopyWithImpl<_$_SearchParameterContact>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchParameterContactToJson(this);
+    return _$$_SearchParameterContactToJson(
+      this,
+    );
   }
 }
 
 abstract class _SearchParameterContact extends SearchParameterContact {
   factory _SearchParameterContact(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      List<ContactPoint>? telecom}) = _$_SearchParameterContact;
+      {final Id? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      final List<ContactPoint>? telecom}) = _$_SearchParameterContact;
   _SearchParameterContact._() : super._();
 
   factory _SearchParameterContact.fromJson(Map<String, dynamic> json) =
       _$_SearchParameterContact.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$SearchParameterContactCopyWith<_SearchParameterContact> get copyWith =>
+  _$$_SearchParameterContactCopyWith<_$_SearchParameterContact> get copyWith =>
       throw _privateConstructorUsedError;
 }

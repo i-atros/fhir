@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'devices.dart';
@@ -11,105 +12,11 @@ part of 'devices.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Device _$DeviceFromJson(Map<String, dynamic> json) {
   return _Device.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceTearOff {
-  const _$DeviceTearOff();
-
-  _Device call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.Device,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required CodeableConcept type,
-      List<Annotation>? note,
-      @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-          DeviceStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      String? manufacturer,
-      @JsonKey(name: '_manufacturer')
-          Element? manufacturerElement,
-      String? model,
-      String? version,
-      FhirDateTime? manufactureDate,
-      @JsonKey(name: '_manufactureDate')
-          Element? manufactureDateElement,
-      FhirDateTime? expiry,
-      String? udi,
-      @JsonKey(name: '_udi')
-          Element? udiElement,
-      String? lotNumber,
-      @JsonKey(name: '_lotNumber')
-          Element? lotNumberElement,
-      Reference? owner,
-      Reference? location,
-      Reference? patient,
-      List<ContactPoint>? contact,
-      FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement}) {
-    return _Device(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      type: type,
-      note: note,
-      status: status,
-      statusElement: statusElement,
-      manufacturer: manufacturer,
-      manufacturerElement: manufacturerElement,
-      model: model,
-      version: version,
-      manufactureDate: manufactureDate,
-      manufactureDateElement: manufactureDateElement,
-      expiry: expiry,
-      udi: udi,
-      udiElement: udiElement,
-      lotNumber: lotNumber,
-      lotNumberElement: lotNumberElement,
-      owner: owner,
-      location: location,
-      patient: patient,
-      contact: contact,
-      url: url,
-      urlElement: urlElement,
-    );
-  }
-
-  Device fromJson(Map<String, Object> json) {
-    return Device.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Device = _$DeviceTearOff();
 
 /// @nodoc
 mixin _$Device {
@@ -167,7 +74,8 @@ mixin _$Device {
 /// @nodoc
 abstract class $DeviceCopyWith<$Res> {
   factory $DeviceCopyWith(Device value, $Res Function(Device) then) =
-      _$DeviceCopyWithImpl<$Res>;
+      _$DeviceCopyWithImpl<$Res, Device>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           Dstu2ResourceType resourceType,
@@ -231,16 +139,19 @@ abstract class $DeviceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
+class _$DeviceCopyWithImpl<$Res, $Val extends Device>
+    implements $DeviceCopyWith<$Res> {
   _$DeviceCopyWithImpl(this._value, this._then);
 
-  final Device _value;
   // ignore: unused_field
-  final $Res Function(Device) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -252,7 +163,7 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? note = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
@@ -275,297 +186,312 @@ class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
     Object? urlElement = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as DeviceStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      manufacturer: manufacturer == freezed
+      manufacturer: freezed == manufacturer
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as String?,
-      manufacturerElement: manufacturerElement == freezed
+      manufacturerElement: freezed == manufacturerElement
           ? _value.manufacturerElement
           : manufacturerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      model: model == freezed
+      model: freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
               as String?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      manufactureDate: manufactureDate == freezed
+      manufactureDate: freezed == manufactureDate
           ? _value.manufactureDate
           : manufactureDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      manufactureDateElement: manufactureDateElement == freezed
+      manufactureDateElement: freezed == manufactureDateElement
           ? _value.manufactureDateElement
           : manufactureDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      expiry: expiry == freezed
+      expiry: freezed == expiry
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      udi: udi == freezed
+      udi: freezed == udi
           ? _value.udi
           : udi // ignore: cast_nullable_to_non_nullable
               as String?,
-      udiElement: udiElement == freezed
+      udiElement: freezed == udiElement
           ? _value.udiElement
           : udiElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      lotNumber: lotNumber == freezed
+      lotNumber: freezed == lotNumber
           ? _value.lotNumber
           : lotNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      lotNumberElement: lotNumberElement == freezed
+      lotNumberElement: freezed == lotNumberElement
           ? _value.lotNumberElement
           : lotNumberElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      owner: owner == freezed
+      owner: freezed == owner
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      location: location == freezed
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      patient: patient == freezed
+      patient: freezed == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get manufacturerElement {
     if (_value.manufacturerElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.manufacturerElement!, (value) {
-      return _then(_value.copyWith(manufacturerElement: value));
+      return _then(_value.copyWith(manufacturerElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get manufactureDateElement {
     if (_value.manufactureDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.manufactureDateElement!, (value) {
-      return _then(_value.copyWith(manufactureDateElement: value));
+      return _then(_value.copyWith(manufactureDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get udiElement {
     if (_value.udiElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.udiElement!, (value) {
-      return _then(_value.copyWith(udiElement: value));
+      return _then(_value.copyWith(udiElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get lotNumberElement {
     if (_value.lotNumberElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.lotNumberElement!, (value) {
-      return _then(_value.copyWith(lotNumberElement: value));
+      return _then(_value.copyWith(lotNumberElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get owner {
     if (_value.owner == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.owner!, (value) {
-      return _then(_value.copyWith(owner: value));
+      return _then(_value.copyWith(owner: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get location {
     if (_value.location == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.location!, (value) {
-      return _then(_value.copyWith(location: value));
+      return _then(_value.copyWith(location: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patient {
     if (_value.patient == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.patient!, (value) {
-      return _then(_value.copyWith(patient: value));
+      return _then(_value.copyWith(patient: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
+      return _then(_value.copyWith(urlElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
-  factory _$DeviceCopyWith(_Device value, $Res Function(_Device) then) =
-      __$DeviceCopyWithImpl<$Res>;
+abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
+  factory _$$_DeviceCopyWith(_$_Device value, $Res Function(_$_Device) then) =
+      __$$_DeviceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
           Dstu2ResourceType resourceType,
@@ -643,17 +569,16 @@ abstract class _$DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
-    implements _$DeviceCopyWith<$Res> {
-  __$DeviceCopyWithImpl(_Device _value, $Res Function(_Device) _then)
-      : super(_value, (v) => _then(v as _Device));
+class __$$_DeviceCopyWithImpl<$Res>
+    extends _$DeviceCopyWithImpl<$Res, _$_Device>
+    implements _$$_DeviceCopyWith<$Res> {
+  __$$_DeviceCopyWithImpl(_$_Device _value, $Res Function(_$_Device) _then)
+      : super(_value, _then);
 
-  @override
-  _Device get _value => super._value as _Device;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -665,7 +590,7 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? type = freezed,
+    Object? type = null,
     Object? note = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
@@ -687,136 +612,136 @@ class __$DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_Device(
-      resourceType: resourceType == freezed
+    return _then(_$_Device(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
-          ? _value.identifier
+      identifier: freezed == identifier
+          ? _value._identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      note: note == freezed
-          ? _value.note
+      note: freezed == note
+          ? _value._note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as DeviceStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      manufacturer: manufacturer == freezed
+      manufacturer: freezed == manufacturer
           ? _value.manufacturer
           : manufacturer // ignore: cast_nullable_to_non_nullable
               as String?,
-      manufacturerElement: manufacturerElement == freezed
+      manufacturerElement: freezed == manufacturerElement
           ? _value.manufacturerElement
           : manufacturerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      model: model == freezed
+      model: freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
               as String?,
-      version: version == freezed
+      version: freezed == version
           ? _value.version
           : version // ignore: cast_nullable_to_non_nullable
               as String?,
-      manufactureDate: manufactureDate == freezed
+      manufactureDate: freezed == manufactureDate
           ? _value.manufactureDate
           : manufactureDate // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      manufactureDateElement: manufactureDateElement == freezed
+      manufactureDateElement: freezed == manufactureDateElement
           ? _value.manufactureDateElement
           : manufactureDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      expiry: expiry == freezed
+      expiry: freezed == expiry
           ? _value.expiry
           : expiry // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      udi: udi == freezed
+      udi: freezed == udi
           ? _value.udi
           : udi // ignore: cast_nullable_to_non_nullable
               as String?,
-      udiElement: udiElement == freezed
+      udiElement: freezed == udiElement
           ? _value.udiElement
           : udiElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      lotNumber: lotNumber == freezed
+      lotNumber: freezed == lotNumber
           ? _value.lotNumber
           : lotNumber // ignore: cast_nullable_to_non_nullable
               as String?,
-      lotNumberElement: lotNumberElement == freezed
+      lotNumberElement: freezed == lotNumberElement
           ? _value.lotNumberElement
           : lotNumberElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      owner: owner == freezed
+      owner: freezed == owner
           ? _value.owner
           : owner // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      location: location == freezed
+      location: freezed == location
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      patient: patient == freezed
+      patient: freezed == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      contact: contact == freezed
-          ? _value.contact
+      contact: freezed == contact
+          ? _value._contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -839,13 +764,13 @@ class _$_Device extends _Device {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
-      this.identifier,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
       required this.type,
-      this.note,
+      final List<Annotation>? note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -868,11 +793,17 @@ class _$_Device extends _Device {
       this.owner,
       this.location,
       this.patient,
-      this.contact,
+      final List<ContactPoint>? contact,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _note = note,
+        _contact = contact,
+        super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceFromJson(json);
@@ -896,19 +827,54 @@ class _$_Device extends _Device {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
   @override
-  final List<Identifier>? identifier;
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
+  final List<Annotation>? _note;
   @override
-  final List<Annotation>? note;
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus? status;
@@ -947,8 +913,15 @@ class _$_Device extends _Device {
   final Reference? location;
   @override
   final Reference? patient;
+  final List<ContactPoint>? _contact;
   @override
-  final List<ContactPoint>? contact;
+  List<ContactPoint>? get contact {
+    final value = _contact;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final FhirUri? url;
   @override
@@ -963,329 +936,251 @@ class _$_Device extends _Device {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Device &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Device &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
+                other.statusElement == statusElement) &&
             (identical(other.manufacturer, manufacturer) ||
-                const DeepCollectionEquality()
-                    .equals(other.manufacturer, manufacturer)) &&
+                other.manufacturer == manufacturer) &&
             (identical(other.manufacturerElement, manufacturerElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.manufacturerElement, manufacturerElement)) &&
-            (identical(other.model, model) ||
-                const DeepCollectionEquality().equals(other.model, model)) &&
-            (identical(other.version, version) ||
-                const DeepCollectionEquality()
-                    .equals(other.version, version)) &&
+                other.manufacturerElement == manufacturerElement) &&
+            (identical(other.model, model) || other.model == model) &&
+            (identical(other.version, version) || other.version == version) &&
             (identical(other.manufactureDate, manufactureDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.manufactureDate, manufactureDate)) &&
+                other.manufactureDate == manufactureDate) &&
             (identical(other.manufactureDateElement, manufactureDateElement) ||
-                const DeepCollectionEquality().equals(
-                    other.manufactureDateElement, manufactureDateElement)) &&
-            (identical(other.expiry, expiry) ||
-                const DeepCollectionEquality().equals(other.expiry, expiry)) &&
-            (identical(other.udi, udi) ||
-                const DeepCollectionEquality().equals(other.udi, udi)) &&
+                other.manufactureDateElement == manufactureDateElement) &&
+            (identical(other.expiry, expiry) || other.expiry == expiry) &&
+            (identical(other.udi, udi) || other.udi == udi) &&
             (identical(other.udiElement, udiElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.udiElement, udiElement)) &&
+                other.udiElement == udiElement) &&
             (identical(other.lotNumber, lotNumber) ||
-                const DeepCollectionEquality().equals(other.lotNumber, lotNumber)) &&
-            (identical(other.lotNumberElement, lotNumberElement) || const DeepCollectionEquality().equals(other.lotNumberElement, lotNumberElement)) &&
-            (identical(other.owner, owner) || const DeepCollectionEquality().equals(other.owner, owner)) &&
-            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
-            (identical(other.patient, patient) || const DeepCollectionEquality().equals(other.patient, patient)) &&
-            (identical(other.contact, contact) || const DeepCollectionEquality().equals(other.contact, contact)) &&
-            (identical(other.url, url) || const DeepCollectionEquality().equals(other.url, url)) &&
-            (identical(other.urlElement, urlElement) || const DeepCollectionEquality().equals(other.urlElement, urlElement)));
+                other.lotNumber == lotNumber) &&
+            (identical(other.lotNumberElement, lotNumberElement) ||
+                other.lotNumberElement == lotNumberElement) &&
+            (identical(other.owner, owner) || other.owner == owner) &&
+            (identical(other.location, location) ||
+                other.location == location) &&
+            (identical(other.patient, patient) || other.patient == patient) &&
+            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.urlElement, urlElement) ||
+                other.urlElement == urlElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(manufacturer) ^
-      const DeepCollectionEquality().hash(manufacturerElement) ^
-      const DeepCollectionEquality().hash(model) ^
-      const DeepCollectionEquality().hash(version) ^
-      const DeepCollectionEquality().hash(manufactureDate) ^
-      const DeepCollectionEquality().hash(manufactureDateElement) ^
-      const DeepCollectionEquality().hash(expiry) ^
-      const DeepCollectionEquality().hash(udi) ^
-      const DeepCollectionEquality().hash(udiElement) ^
-      const DeepCollectionEquality().hash(lotNumber) ^
-      const DeepCollectionEquality().hash(lotNumberElement) ^
-      const DeepCollectionEquality().hash(owner) ^
-      const DeepCollectionEquality().hash(location) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(contact) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceCopyWith<_Device> get copyWith =>
-      __$DeviceCopyWithImpl<_Device>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        type,
+        const DeepCollectionEquality().hash(_note),
+        status,
+        statusElement,
+        manufacturer,
+        manufacturerElement,
+        model,
+        version,
+        manufactureDate,
+        manufactureDateElement,
+        expiry,
+        udi,
+        udiElement,
+        lotNumber,
+        lotNumberElement,
+        owner,
+        location,
+        patient,
+        const DeepCollectionEquality().hash(_contact),
+        url,
+        urlElement
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceCopyWith<_$_Device> get copyWith =>
+      __$$_DeviceCopyWithImpl<_$_Device>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceToJson(this);
+    return _$$_DeviceToJson(
+      this,
+    );
   }
 }
 
 abstract class _Device extends Device {
   factory _Device(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      required CodeableConcept type,
-      List<Annotation>? note,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required final CodeableConcept type,
+      final List<Annotation>? note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-          DeviceStatus? status,
+          final DeviceStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      String? manufacturer,
+          final Element? statusElement,
+      final String? manufacturer,
       @JsonKey(name: '_manufacturer')
-          Element? manufacturerElement,
-      String? model,
-      String? version,
-      FhirDateTime? manufactureDate,
+          final Element? manufacturerElement,
+      final String? model,
+      final String? version,
+      final FhirDateTime? manufactureDate,
       @JsonKey(name: '_manufactureDate')
-          Element? manufactureDateElement,
-      FhirDateTime? expiry,
-      String? udi,
+          final Element? manufactureDateElement,
+      final FhirDateTime? expiry,
+      final String? udi,
       @JsonKey(name: '_udi')
-          Element? udiElement,
-      String? lotNumber,
+          final Element? udiElement,
+      final String? lotNumber,
       @JsonKey(name: '_lotNumber')
-          Element? lotNumberElement,
-      Reference? owner,
-      Reference? location,
-      Reference? patient,
-      List<ContactPoint>? contact,
-      FhirUri? url,
+          final Element? lotNumberElement,
+      final Reference? owner,
+      final Reference? location,
+      final Reference? patient,
+      final List<ContactPoint>? contact,
+      final FhirUri? url,
       @JsonKey(name: '_url')
-          Element? urlElement}) = _$_Device;
+          final Element? urlElement}) = _$_Device;
   _Device._() : super._();
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  CodeableConcept get type => throw _privateConstructorUsedError;
+  CodeableConcept get type;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
-  DeviceStatus? get status => throw _privateConstructorUsedError;
+  DeviceStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  String? get manufacturer => throw _privateConstructorUsedError;
+  String? get manufacturer;
   @override
   @JsonKey(name: '_manufacturer')
-  Element? get manufacturerElement => throw _privateConstructorUsedError;
+  Element? get manufacturerElement;
   @override
-  String? get model => throw _privateConstructorUsedError;
+  String? get model;
   @override
-  String? get version => throw _privateConstructorUsedError;
+  String? get version;
   @override
-  FhirDateTime? get manufactureDate => throw _privateConstructorUsedError;
+  FhirDateTime? get manufactureDate;
   @override
   @JsonKey(name: '_manufactureDate')
-  Element? get manufactureDateElement => throw _privateConstructorUsedError;
+  Element? get manufactureDateElement;
   @override
-  FhirDateTime? get expiry => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry;
   @override
-  String? get udi => throw _privateConstructorUsedError;
+  String? get udi;
   @override
   @JsonKey(name: '_udi')
-  Element? get udiElement => throw _privateConstructorUsedError;
+  Element? get udiElement;
   @override
-  String? get lotNumber => throw _privateConstructorUsedError;
+  String? get lotNumber;
   @override
   @JsonKey(name: '_lotNumber')
-  Element? get lotNumberElement => throw _privateConstructorUsedError;
+  Element? get lotNumberElement;
   @override
-  Reference? get owner => throw _privateConstructorUsedError;
+  Reference? get owner;
   @override
-  Reference? get location => throw _privateConstructorUsedError;
+  Reference? get location;
   @override
-  Reference? get patient => throw _privateConstructorUsedError;
+  Reference? get patient;
   @override
-  List<ContactPoint>? get contact => throw _privateConstructorUsedError;
+  List<ContactPoint>? get contact;
   @override
-  FhirUri? get url => throw _privateConstructorUsedError;
+  FhirUri? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
   @JsonKey(ignore: true)
-  _$DeviceCopyWith<_Device> get copyWith => throw _privateConstructorUsedError;
+  _$$_DeviceCopyWith<_$_Device> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DeviceComponent _$DeviceComponentFromJson(Map<String, dynamic> json) {
   return _DeviceComponent.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceComponentTearOff {
-  const _$DeviceComponentTearOff();
-
-  _DeviceComponent call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.DeviceComponent,
-      Id? id,
-      @JsonKey(name: '_id')
-          Element? idElement,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required Identifier identifier,
-      required Instant lastSystemChange,
-      Reference? source,
-      Reference? parent,
-      List<CodeableConcept>? operationalStatus,
-      CodeableConcept? parameterGroup,
-      @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
-          DeviceComponentMeasurementPrinciple? measurementPrinciple,
-      List<DeviceComponentProductionSpecification>? productionSpecification,
-      CodeableConcept? languageCode}) {
-    return _DeviceComponent(
-      resourceType: resourceType,
-      id: id,
-      idElement: idElement,
-      meta: meta,
-      implicitRules: implicitRules,
-      language: language,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      identifier: identifier,
-      lastSystemChange: lastSystemChange,
-      source: source,
-      parent: parent,
-      operationalStatus: operationalStatus,
-      parameterGroup: parameterGroup,
-      measurementPrinciple: measurementPrinciple,
-      productionSpecification: productionSpecification,
-      languageCode: languageCode,
-    );
-  }
-
-  DeviceComponent fromJson(Map<String, Object> json) {
-    return DeviceComponent.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceComponent = _$DeviceComponentTearOff();
 
 /// @nodoc
 mixin _$DeviceComponent {
@@ -1328,7 +1223,8 @@ mixin _$DeviceComponent {
 abstract class $DeviceComponentCopyWith<$Res> {
   factory $DeviceComponentCopyWith(
           DeviceComponent value, $Res Function(DeviceComponent) then) =
-      _$DeviceComponentCopyWithImpl<$Res>;
+      _$DeviceComponentCopyWithImpl<$Res, DeviceComponent>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
           Dstu2ResourceType resourceType,
@@ -1367,17 +1263,19 @@ abstract class $DeviceComponentCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceComponentCopyWithImpl<$Res>
+class _$DeviceComponentCopyWithImpl<$Res, $Val extends DeviceComponent>
     implements $DeviceComponentCopyWith<$Res> {
   _$DeviceComponentCopyWithImpl(this._value, this._then);
 
-  final DeviceComponent _value;
   // ignore: unused_field
-  final $Res Function(DeviceComponent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -1387,9 +1285,9 @@ class _$DeviceComponentCopyWithImpl<$Res>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? identifier = freezed,
-    Object? lastSystemChange = freezed,
+    Object? type = null,
+    Object? identifier = null,
+    Object? lastSystemChange = null,
     Object? source = freezed,
     Object? parent = freezed,
     Object? operationalStatus = freezed,
@@ -1399,188 +1297,198 @@ class _$DeviceComponentCopyWithImpl<$Res>
     Object? languageCode = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      idElement: idElement == freezed
+      idElement: freezed == idElement
           ? _value.idElement
           : idElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier,
-      lastSystemChange: lastSystemChange == freezed
+      lastSystemChange: null == lastSystemChange
           ? _value.lastSystemChange
           : lastSystemChange // ignore: cast_nullable_to_non_nullable
               as Instant,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      parent: parent == freezed
+      parent: freezed == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      operationalStatus: operationalStatus == freezed
+      operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      parameterGroup: parameterGroup == freezed
+      parameterGroup: freezed == parameterGroup
           ? _value.parameterGroup
           : parameterGroup // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      measurementPrinciple: measurementPrinciple == freezed
+      measurementPrinciple: freezed == measurementPrinciple
           ? _value.measurementPrinciple
           : measurementPrinciple // ignore: cast_nullable_to_non_nullable
               as DeviceComponentMeasurementPrinciple?,
-      productionSpecification: productionSpecification == freezed
+      productionSpecification: freezed == productionSpecification
           ? _value.productionSpecification
           : productionSpecification // ignore: cast_nullable_to_non_nullable
               as List<DeviceComponentProductionSpecification>?,
-      languageCode: languageCode == freezed
+      languageCode: freezed == languageCode
           ? _value.languageCode
           : languageCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get idElement {
     if (_value.idElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.idElement!, (value) {
-      return _then(_value.copyWith(idElement: value));
+      return _then(_value.copyWith(idElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res> get identifier {
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get source {
     if (_value.source == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.source!, (value) {
-      return _then(_value.copyWith(source: value));
+      return _then(_value.copyWith(source: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get parent {
     if (_value.parent == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.parent!, (value) {
-      return _then(_value.copyWith(parent: value));
+      return _then(_value.copyWith(parent: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get parameterGroup {
     if (_value.parameterGroup == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.parameterGroup!, (value) {
-      return _then(_value.copyWith(parameterGroup: value));
+      return _then(_value.copyWith(parameterGroup: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get languageCode {
     if (_value.languageCode == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.languageCode!, (value) {
-      return _then(_value.copyWith(languageCode: value));
+      return _then(_value.copyWith(languageCode: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceComponentCopyWith<$Res>
+abstract class _$$_DeviceComponentCopyWith<$Res>
     implements $DeviceComponentCopyWith<$Res> {
-  factory _$DeviceComponentCopyWith(
-          _DeviceComponent value, $Res Function(_DeviceComponent) then) =
-      __$DeviceComponentCopyWithImpl<$Res>;
+  factory _$$_DeviceComponentCopyWith(
+          _$_DeviceComponent value, $Res Function(_$_DeviceComponent) then) =
+      __$$_DeviceComponentCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
           Dstu2ResourceType resourceType,
@@ -1628,19 +1536,17 @@ abstract class _$DeviceComponentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceComponentCopyWithImpl<$Res>
-    extends _$DeviceComponentCopyWithImpl<$Res>
-    implements _$DeviceComponentCopyWith<$Res> {
-  __$DeviceComponentCopyWithImpl(
-      _DeviceComponent _value, $Res Function(_DeviceComponent) _then)
-      : super(_value, (v) => _then(v as _DeviceComponent));
+class __$$_DeviceComponentCopyWithImpl<$Res>
+    extends _$DeviceComponentCopyWithImpl<$Res, _$_DeviceComponent>
+    implements _$$_DeviceComponentCopyWith<$Res> {
+  __$$_DeviceComponentCopyWithImpl(
+      _$_DeviceComponent _value, $Res Function(_$_DeviceComponent) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceComponent get _value => super._value as _DeviceComponent;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -1650,9 +1556,9 @@ class __$DeviceComponentCopyWithImpl<$Res>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? identifier = freezed,
-    Object? lastSystemChange = freezed,
+    Object? type = null,
+    Object? identifier = null,
+    Object? lastSystemChange = null,
     Object? source = freezed,
     Object? parent = freezed,
     Object? operationalStatus = freezed,
@@ -1661,84 +1567,84 @@ class __$DeviceComponentCopyWithImpl<$Res>
     Object? productionSpecification = freezed,
     Object? languageCode = freezed,
   }) {
-    return _then(_DeviceComponent(
-      resourceType: resourceType == freezed
+    return _then(_$_DeviceComponent(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      idElement: idElement == freezed
+      idElement: freezed == idElement
           ? _value.idElement
           : idElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier,
-      lastSystemChange: lastSystemChange == freezed
+      lastSystemChange: null == lastSystemChange
           ? _value.lastSystemChange
           : lastSystemChange // ignore: cast_nullable_to_non_nullable
               as Instant,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      parent: parent == freezed
+      parent: freezed == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      operationalStatus: operationalStatus == freezed
-          ? _value.operationalStatus
+      operationalStatus: freezed == operationalStatus
+          ? _value._operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      parameterGroup: parameterGroup == freezed
+      parameterGroup: freezed == parameterGroup
           ? _value.parameterGroup
           : parameterGroup // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      measurementPrinciple: measurementPrinciple == freezed
+      measurementPrinciple: freezed == measurementPrinciple
           ? _value.measurementPrinciple
           : measurementPrinciple // ignore: cast_nullable_to_non_nullable
               as DeviceComponentMeasurementPrinciple?,
-      productionSpecification: productionSpecification == freezed
-          ? _value.productionSpecification
+      productionSpecification: freezed == productionSpecification
+          ? _value._productionSpecification
           : productionSpecification // ignore: cast_nullable_to_non_nullable
               as List<DeviceComponentProductionSpecification>?,
-      languageCode: languageCode == freezed
+      languageCode: freezed == languageCode
           ? _value.languageCode
           : languageCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
@@ -1759,22 +1665,28 @@ class _$_DeviceComponent extends _DeviceComponent {
       this.implicitRules,
       this.language,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       required this.identifier,
       required this.lastSystemChange,
       this.source,
       this.parent,
-      this.operationalStatus,
+      final List<CodeableConcept>? operationalStatus,
       this.parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           this.measurementPrinciple,
-      this.productionSpecification,
+      final List<DeviceComponentProductionSpecification>?
+          productionSpecification,
       this.languageCode})
-      : super._();
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _operationalStatus = operationalStatus,
+        _productionSpecification = productionSpecification,
+        super._();
 
   factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceComponentFromJson(json);
@@ -1795,13 +1707,34 @@ class _$_DeviceComponent extends _DeviceComponent {
   final Code? language;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -1812,15 +1745,29 @@ class _$_DeviceComponent extends _DeviceComponent {
   final Reference? source;
   @override
   final Reference? parent;
+  final List<CodeableConcept>? _operationalStatus;
   @override
-  final List<CodeableConcept>? operationalStatus;
+  List<CodeableConcept>? get operationalStatus {
+    final value = _operationalStatus;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   final DeviceComponentMeasurementPrinciple? measurementPrinciple;
+  final List<DeviceComponentProductionSpecification>? _productionSpecification;
   @override
-  final List<DeviceComponentProductionSpecification>? productionSpecification;
+  List<DeviceComponentProductionSpecification>? get productionSpecification {
+    final value = _productionSpecification;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? languageCode;
 
@@ -1832,125 +1779,111 @@ class _$_DeviceComponent extends _DeviceComponent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceComponent &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceComponent &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.idElement, idElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.idElement, idElement)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.idElement == idElement) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.language == language) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
+                other.identifier == identifier) &&
             (identical(other.lastSystemChange, lastSystemChange) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastSystemChange, lastSystemChange)) &&
-            (identical(other.source, source) ||
-                const DeepCollectionEquality().equals(other.source, source)) &&
-            (identical(other.parent, parent) ||
-                const DeepCollectionEquality().equals(other.parent, parent)) &&
-            (identical(other.operationalStatus, operationalStatus) ||
-                const DeepCollectionEquality()
-                    .equals(other.operationalStatus, operationalStatus)) &&
+                other.lastSystemChange == lastSystemChange) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.parent, parent) || other.parent == parent) &&
+            const DeepCollectionEquality()
+                .equals(other._operationalStatus, _operationalStatus) &&
             (identical(other.parameterGroup, parameterGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameterGroup, parameterGroup)) &&
+                other.parameterGroup == parameterGroup) &&
             (identical(other.measurementPrinciple, measurementPrinciple) ||
-                const DeepCollectionEquality().equals(
-                    other.measurementPrinciple, measurementPrinciple)) &&
-            (identical(
-                    other.productionSpecification, productionSpecification) ||
-                const DeepCollectionEquality().equals(
-                    other.productionSpecification, productionSpecification)) &&
+                other.measurementPrinciple == measurementPrinciple) &&
+            const DeepCollectionEquality().equals(
+                other._productionSpecification, _productionSpecification) &&
             (identical(other.languageCode, languageCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageCode, languageCode)));
+                other.languageCode == languageCode));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(idElement) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(lastSystemChange) ^
-      const DeepCollectionEquality().hash(source) ^
-      const DeepCollectionEquality().hash(parent) ^
-      const DeepCollectionEquality().hash(operationalStatus) ^
-      const DeepCollectionEquality().hash(parameterGroup) ^
-      const DeepCollectionEquality().hash(measurementPrinciple) ^
-      const DeepCollectionEquality().hash(productionSpecification) ^
-      const DeepCollectionEquality().hash(languageCode);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceComponentCopyWith<_DeviceComponent> get copyWith =>
-      __$DeviceComponentCopyWithImpl<_DeviceComponent>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        idElement,
+        meta,
+        implicitRules,
+        language,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        type,
+        identifier,
+        lastSystemChange,
+        source,
+        parent,
+        const DeepCollectionEquality().hash(_operationalStatus),
+        parameterGroup,
+        measurementPrinciple,
+        const DeepCollectionEquality().hash(_productionSpecification),
+        languageCode
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceComponentCopyWith<_$_DeviceComponent> get copyWith =>
+      __$$_DeviceComponentCopyWithImpl<_$_DeviceComponent>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceComponentToJson(this);
+    return _$$_DeviceComponentToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceComponent extends DeviceComponent {
   factory _DeviceComponent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
-          Dstu2ResourceType resourceType,
-      Id? id,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
       @JsonKey(name: '_id')
-          Element? idElement,
-      Meta? meta,
-      FhirUri? implicitRules,
-      Code? language,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? idElement,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      final Code? language,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required Identifier identifier,
-      required Instant lastSystemChange,
-      Reference? source,
-      Reference? parent,
-      List<CodeableConcept>? operationalStatus,
-      CodeableConcept? parameterGroup,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      required final Identifier identifier,
+      required final Instant lastSystemChange,
+      final Reference? source,
+      final Reference? parent,
+      final List<CodeableConcept>? operationalStatus,
+      final CodeableConcept? parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
-          DeviceComponentMeasurementPrinciple? measurementPrinciple,
-      List<DeviceComponentProductionSpecification>? productionSpecification,
-      CodeableConcept? languageCode}) = _$_DeviceComponent;
+          final DeviceComponentMeasurementPrinciple? measurementPrinciple,
+      final List<DeviceComponentProductionSpecification>?
+          productionSpecification,
+      final CodeableConcept? languageCode}) = _$_DeviceComponent;
   _DeviceComponent._() : super._();
 
   factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
@@ -1958,55 +1891,51 @@ abstract class _DeviceComponent extends DeviceComponent {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: '_id')
-  Element? get idElement => throw _privateConstructorUsedError;
+  Element? get idElement;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get type => throw _privateConstructorUsedError;
+  CodeableConcept get type;
   @override
-  Identifier get identifier => throw _privateConstructorUsedError;
+  Identifier get identifier;
   @override
-  Instant get lastSystemChange => throw _privateConstructorUsedError;
+  Instant get lastSystemChange;
   @override
-  Reference? get source => throw _privateConstructorUsedError;
+  Reference? get source;
   @override
-  Reference? get parent => throw _privateConstructorUsedError;
+  Reference? get parent;
   @override
-  List<CodeableConcept>? get operationalStatus =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get operationalStatus;
   @override
-  CodeableConcept? get parameterGroup => throw _privateConstructorUsedError;
+  CodeableConcept? get parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
-  DeviceComponentMeasurementPrinciple? get measurementPrinciple =>
-      throw _privateConstructorUsedError;
+  DeviceComponentMeasurementPrinciple? get measurementPrinciple;
   @override
-  List<DeviceComponentProductionSpecification>? get productionSpecification =>
-      throw _privateConstructorUsedError;
+  List<DeviceComponentProductionSpecification>? get productionSpecification;
   @override
-  CodeableConcept? get languageCode => throw _privateConstructorUsedError;
+  CodeableConcept? get languageCode;
   @override
   @JsonKey(ignore: true)
-  _$DeviceComponentCopyWith<_DeviceComponent> get copyWith =>
+  _$$_DeviceComponentCopyWith<_$_DeviceComponent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2015,36 +1944,6 @@ DeviceComponentProductionSpecification
         Map<String, dynamic> json) {
   return _DeviceComponentProductionSpecification.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceComponentProductionSpecificationTearOff {
-  const _$DeviceComponentProductionSpecificationTearOff();
-
-  _DeviceComponentProductionSpecification call(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? specType,
-      Identifier? componentId,
-      String? productionSpec}) {
-    return _DeviceComponentProductionSpecification(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      specType: specType,
-      componentId: componentId,
-      productionSpec: productionSpec,
-    );
-  }
-
-  DeviceComponentProductionSpecification fromJson(Map<String, Object> json) {
-    return DeviceComponentProductionSpecification.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceComponentProductionSpecification =
-    _$DeviceComponentProductionSpecificationTearOff();
 
 /// @nodoc
 mixin _$DeviceComponentProductionSpecification {
@@ -2069,7 +1968,9 @@ abstract class $DeviceComponentProductionSpecificationCopyWith<$Res> {
   factory $DeviceComponentProductionSpecificationCopyWith(
           DeviceComponentProductionSpecification value,
           $Res Function(DeviceComponentProductionSpecification) then) =
-      _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>;
+      _$DeviceComponentProductionSpecificationCopyWithImpl<$Res,
+          DeviceComponentProductionSpecification>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2083,14 +1984,17 @@ abstract class $DeviceComponentProductionSpecificationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
+class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res,
+        $Val extends DeviceComponentProductionSpecification>
     implements $DeviceComponentProductionSpecificationCopyWith<$Res> {
   _$DeviceComponentProductionSpecificationCopyWithImpl(this._value, this._then);
 
-  final DeviceComponentProductionSpecification _value;
   // ignore: unused_field
-  final $Res Function(DeviceComponentProductionSpecification) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2101,64 +2005,67 @@ class _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
     Object? productionSpec = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      specType: specType == freezed
+      specType: freezed == specType
           ? _value.specType
           : specType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      componentId: componentId == freezed
+      componentId: freezed == componentId
           ? _value.componentId
           : componentId // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      productionSpec: productionSpec == freezed
+      productionSpec: freezed == productionSpec
           ? _value.productionSpec
           : productionSpec // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get specType {
     if (_value.specType == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.specType!, (value) {
-      return _then(_value.copyWith(specType: value));
+      return _then(_value.copyWith(specType: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get componentId {
     if (_value.componentId == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.componentId!, (value) {
-      return _then(_value.copyWith(componentId: value));
+      return _then(_value.copyWith(componentId: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceComponentProductionSpecificationCopyWith<$Res>
+abstract class _$$_DeviceComponentProductionSpecificationCopyWith<$Res>
     implements $DeviceComponentProductionSpecificationCopyWith<$Res> {
-  factory _$DeviceComponentProductionSpecificationCopyWith(
-          _DeviceComponentProductionSpecification value,
-          $Res Function(_DeviceComponentProductionSpecification) then) =
-      __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>;
+  factory _$$_DeviceComponentProductionSpecificationCopyWith(
+          _$_DeviceComponentProductionSpecification value,
+          $Res Function(_$_DeviceComponentProductionSpecification) then) =
+      __$$_DeviceComponentProductionSpecificationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2174,19 +2081,16 @@ abstract class _$DeviceComponentProductionSpecificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
-    extends _$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
-    implements _$DeviceComponentProductionSpecificationCopyWith<$Res> {
-  __$DeviceComponentProductionSpecificationCopyWithImpl(
-      _DeviceComponentProductionSpecification _value,
-      $Res Function(_DeviceComponentProductionSpecification) _then)
-      : super(
-            _value, (v) => _then(v as _DeviceComponentProductionSpecification));
+class __$$_DeviceComponentProductionSpecificationCopyWithImpl<$Res>
+    extends _$DeviceComponentProductionSpecificationCopyWithImpl<$Res,
+        _$_DeviceComponentProductionSpecification>
+    implements _$$_DeviceComponentProductionSpecificationCopyWith<$Res> {
+  __$$_DeviceComponentProductionSpecificationCopyWithImpl(
+      _$_DeviceComponentProductionSpecification _value,
+      $Res Function(_$_DeviceComponentProductionSpecification) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceComponentProductionSpecification get _value =>
-      super._value as _DeviceComponentProductionSpecification;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -2196,28 +2100,28 @@ class __$DeviceComponentProductionSpecificationCopyWithImpl<$Res>
     Object? componentId = freezed,
     Object? productionSpec = freezed,
   }) {
-    return _then(_DeviceComponentProductionSpecification(
-      id: id == freezed
+    return _then(_$_DeviceComponentProductionSpecification(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      specType: specType == freezed
+      specType: freezed == specType
           ? _value.specType
           : specType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      componentId: componentId == freezed
+      componentId: freezed == componentId
           ? _value.componentId
           : componentId // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      productionSpec: productionSpec == freezed
+      productionSpec: freezed == productionSpec
           ? _value.productionSpec
           : productionSpec // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -2231,12 +2135,14 @@ class _$_DeviceComponentProductionSpecification
     extends _DeviceComponentProductionSpecification {
   _$_DeviceComponentProductionSpecification(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       this.specType,
       this.componentId,
       this.productionSpec})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
@@ -2244,11 +2150,25 @@ class _$_DeviceComponentProductionSpecification
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept? specType;
   @override
@@ -2264,58 +2184,58 @@ class _$_DeviceComponentProductionSpecification
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceComponentProductionSpecification &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceComponentProductionSpecification &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.specType, specType) ||
-                const DeepCollectionEquality()
-                    .equals(other.specType, specType)) &&
+                other.specType == specType) &&
             (identical(other.componentId, componentId) ||
-                const DeepCollectionEquality()
-                    .equals(other.componentId, componentId)) &&
+                other.componentId == componentId) &&
             (identical(other.productionSpec, productionSpec) ||
-                const DeepCollectionEquality()
-                    .equals(other.productionSpec, productionSpec)));
+                other.productionSpec == productionSpec));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(specType) ^
-      const DeepCollectionEquality().hash(componentId) ^
-      const DeepCollectionEquality().hash(productionSpec);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceComponentProductionSpecificationCopyWith<
-          _DeviceComponentProductionSpecification>
-      get copyWith => __$DeviceComponentProductionSpecificationCopyWithImpl<
-          _DeviceComponentProductionSpecification>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      specType,
+      componentId,
+      productionSpec);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceComponentProductionSpecificationCopyWith<
+          _$_DeviceComponentProductionSpecification>
+      get copyWith => __$$_DeviceComponentProductionSpecificationCopyWithImpl<
+          _$_DeviceComponentProductionSpecification>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceComponentProductionSpecificationToJson(this);
+    return _$$_DeviceComponentProductionSpecificationToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceComponentProductionSpecification
     extends DeviceComponentProductionSpecification {
   factory _DeviceComponentProductionSpecification(
-      {Id? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? specType,
-      Identifier? componentId,
-      String? productionSpec}) = _$_DeviceComponentProductionSpecification;
+          {final Id? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? specType,
+          final Identifier? componentId,
+          final String? productionSpec}) =
+      _$_DeviceComponentProductionSpecification;
   _DeviceComponentProductionSpecification._() : super._();
 
   factory _DeviceComponentProductionSpecification.fromJson(
@@ -2323,104 +2243,28 @@ abstract class _DeviceComponentProductionSpecification
       _$_DeviceComponentProductionSpecification.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get specType => throw _privateConstructorUsedError;
+  CodeableConcept? get specType;
   @override
-  Identifier? get componentId => throw _privateConstructorUsedError;
+  Identifier? get componentId;
   @override
-  String? get productionSpec => throw _privateConstructorUsedError;
+  String? get productionSpec;
   @override
   @JsonKey(ignore: true)
-  _$DeviceComponentProductionSpecificationCopyWith<
-          _DeviceComponentProductionSpecification>
+  _$$_DeviceComponentProductionSpecificationCopyWith<
+          _$_DeviceComponentProductionSpecification>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 DeviceMetric _$DeviceMetricFromJson(Map<String, dynamic> json) {
   return _DeviceMetric.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceMetricTearOff {
-  const _$DeviceMetricTearOff();
-
-  _DeviceMetric call(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
-          Dstu2ResourceType resourceType = Dstu2ResourceType.DeviceMetric,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required Identifier identifier,
-      CodeableConcept? unit,
-      Reference? source,
-      Reference? parent,
-      @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-          DeviceMetricOperationalStatus? operationalStatus,
-      @JsonKey(name: '_operationalStatus')
-          Element? operationalStatusElement,
-      @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-          DeviceMetricColor? color,
-      @JsonKey(name: '_color')
-          Element? colorElement,
-      @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-          required DeviceMetricCategory category,
-      @JsonKey(name: '_category')
-          Element? categoryElement,
-      Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration}) {
-    return _DeviceMetric(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      identifier: identifier,
-      unit: unit,
-      source: source,
-      parent: parent,
-      operationalStatus: operationalStatus,
-      operationalStatusElement: operationalStatusElement,
-      color: color,
-      colorElement: colorElement,
-      category: category,
-      categoryElement: categoryElement,
-      measurementPeriod: measurementPeriod,
-      calibration: calibration,
-    );
-  }
-
-  DeviceMetric fromJson(Map<String, Object> json) {
-    return DeviceMetric.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceMetric = _$DeviceMetricTearOff();
 
 /// @nodoc
 mixin _$DeviceMetric {
@@ -2472,7 +2316,8 @@ mixin _$DeviceMetric {
 abstract class $DeviceMetricCopyWith<$Res> {
   factory $DeviceMetricCopyWith(
           DeviceMetric value, $Res Function(DeviceMetric) then) =
-      _$DeviceMetricCopyWithImpl<$Res>;
+      _$DeviceMetricCopyWithImpl<$Res, DeviceMetric>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           Dstu2ResourceType resourceType,
@@ -2525,16 +2370,19 @@ abstract class $DeviceMetricCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
+class _$DeviceMetricCopyWithImpl<$Res, $Val extends DeviceMetric>
+    implements $DeviceMetricCopyWith<$Res> {
   _$DeviceMetricCopyWithImpl(this._value, this._then);
 
-  final DeviceMetric _value;
   // ignore: unused_field
-  final $Res Function(DeviceMetric) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2545,8 +2393,8 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? identifier = freezed,
+    Object? type = null,
+    Object? identifier = null,
     Object? unit = freezed,
     Object? source = freezed,
     Object? parent = freezed,
@@ -2554,254 +2402,268 @@ class _$DeviceMetricCopyWithImpl<$Res> implements $DeviceMetricCopyWith<$Res> {
     Object? operationalStatusElement = freezed,
     Object? color = freezed,
     Object? colorElement = freezed,
-    Object? category = freezed,
+    Object? category = null,
     Object? categoryElement = freezed,
     Object? measurementPeriod = freezed,
     Object? calibration = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier,
-      unit: unit == freezed
+      unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      parent: parent == freezed
+      parent: freezed == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      operationalStatus: operationalStatus == freezed
+      operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
               as DeviceMetricOperationalStatus?,
-      operationalStatusElement: operationalStatusElement == freezed
+      operationalStatusElement: freezed == operationalStatusElement
           ? _value.operationalStatusElement
           : operationalStatusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      color: color == freezed
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as DeviceMetricColor?,
-      colorElement: colorElement == freezed
+      colorElement: freezed == colorElement
           ? _value.colorElement
           : colorElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      category: category == freezed
+      category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as DeviceMetricCategory,
-      categoryElement: categoryElement == freezed
+      categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      measurementPeriod: measurementPeriod == freezed
+      measurementPeriod: freezed == measurementPeriod
           ? _value.measurementPeriod
           : measurementPeriod // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      calibration: calibration == freezed
+      calibration: freezed == calibration
           ? _value.calibration
           : calibration // ignore: cast_nullable_to_non_nullable
               as List<DeviceMetricCalibration>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res> get identifier {
     return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get unit {
     if (_value.unit == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.unit!, (value) {
-      return _then(_value.copyWith(unit: value));
+      return _then(_value.copyWith(unit: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get source {
     if (_value.source == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.source!, (value) {
-      return _then(_value.copyWith(source: value));
+      return _then(_value.copyWith(source: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get parent {
     if (_value.parent == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.parent!, (value) {
-      return _then(_value.copyWith(parent: value));
+      return _then(_value.copyWith(parent: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get operationalStatusElement {
     if (_value.operationalStatusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.operationalStatusElement!, (value) {
-      return _then(_value.copyWith(operationalStatusElement: value));
+      return _then(_value.copyWith(operationalStatusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get colorElement {
     if (_value.colorElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.colorElement!, (value) {
-      return _then(_value.copyWith(colorElement: value));
+      return _then(_value.copyWith(colorElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get categoryElement {
     if (_value.categoryElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.categoryElement!, (value) {
-      return _then(_value.copyWith(categoryElement: value));
+      return _then(_value.copyWith(categoryElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get measurementPeriod {
     if (_value.measurementPeriod == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.measurementPeriod!, (value) {
-      return _then(_value.copyWith(measurementPeriod: value));
+      return _then(_value.copyWith(measurementPeriod: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceMetricCopyWith<$Res>
+abstract class _$$_DeviceMetricCopyWith<$Res>
     implements $DeviceMetricCopyWith<$Res> {
-  factory _$DeviceMetricCopyWith(
-          _DeviceMetric value, $Res Function(_DeviceMetric) then) =
-      __$DeviceMetricCopyWithImpl<$Res>;
+  factory _$$_DeviceMetricCopyWith(
+          _$_DeviceMetric value, $Res Function(_$_DeviceMetric) then) =
+      __$$_DeviceMetricCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
           Dstu2ResourceType resourceType,
@@ -2867,18 +2729,17 @@ abstract class _$DeviceMetricCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
-    implements _$DeviceMetricCopyWith<$Res> {
-  __$DeviceMetricCopyWithImpl(
-      _DeviceMetric _value, $Res Function(_DeviceMetric) _then)
-      : super(_value, (v) => _then(v as _DeviceMetric));
+class __$$_DeviceMetricCopyWithImpl<$Res>
+    extends _$DeviceMetricCopyWithImpl<$Res, _$_DeviceMetric>
+    implements _$$_DeviceMetricCopyWith<$Res> {
+  __$$_DeviceMetricCopyWithImpl(
+      _$_DeviceMetric _value, $Res Function(_$_DeviceMetric) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceMetric get _value => super._value as _DeviceMetric;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2889,8 +2750,8 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
     Object? contained = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? identifier = freezed,
+    Object? type = null,
+    Object? identifier = null,
     Object? unit = freezed,
     Object? source = freezed,
     Object? parent = freezed,
@@ -2898,106 +2759,106 @@ class __$DeviceMetricCopyWithImpl<$Res> extends _$DeviceMetricCopyWithImpl<$Res>
     Object? operationalStatusElement = freezed,
     Object? color = freezed,
     Object? colorElement = freezed,
-    Object? category = freezed,
+    Object? category = null,
     Object? categoryElement = freezed,
     Object? measurementPeriod = freezed,
     Object? calibration = freezed,
   }) {
-    return _then(_DeviceMetric(
-      resourceType: resourceType == freezed
+    return _then(_$_DeviceMetric(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
-          ? _value.contained
+      contained: freezed == contained
+          ? _value._contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      identifier: identifier == freezed
+      identifier: null == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier,
-      unit: unit == freezed
+      unit: freezed == unit
           ? _value.unit
           : unit // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      parent: parent == freezed
+      parent: freezed == parent
           ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      operationalStatus: operationalStatus == freezed
+      operationalStatus: freezed == operationalStatus
           ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
               as DeviceMetricOperationalStatus?,
-      operationalStatusElement: operationalStatusElement == freezed
+      operationalStatusElement: freezed == operationalStatusElement
           ? _value.operationalStatusElement
           : operationalStatusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      color: color == freezed
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as DeviceMetricColor?,
-      colorElement: colorElement == freezed
+      colorElement: freezed == colorElement
           ? _value.colorElement
           : colorElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      category: category == freezed
+      category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as DeviceMetricCategory,
-      categoryElement: categoryElement == freezed
+      categoryElement: freezed == categoryElement
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      measurementPeriod: measurementPeriod == freezed
+      measurementPeriod: freezed == measurementPeriod
           ? _value.measurementPeriod
           : measurementPeriod // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      calibration: calibration == freezed
-          ? _value.calibration
+      calibration: freezed == calibration
+          ? _value._calibration
           : calibration // ignore: cast_nullable_to_non_nullable
               as List<DeviceMetricCalibration>?,
     ));
@@ -3019,10 +2880,10 @@ class _$_DeviceMetric extends _DeviceMetric {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      this.contained,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          this.extension_,
-      this.modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       required this.type,
       required this.identifier,
       this.unit,
@@ -3041,8 +2902,12 @@ class _$_DeviceMetric extends _DeviceMetric {
       @JsonKey(name: '_category')
           this.categoryElement,
       this.measurementPeriod,
-      this.calibration})
-      : super._();
+      final List<DeviceMetricCalibration>? calibration})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _calibration = calibration,
+        super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceMetricFromJson(json);
@@ -3066,13 +2931,34 @@ class _$_DeviceMetric extends _DeviceMetric {
   final Element? languageElement;
   @override
   final Narrative? text;
+  final List<Resource>? _contained;
   @override
-  final List<Resource>? contained;
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final CodeableConcept type;
   @override
@@ -3103,8 +2989,14 @@ class _$_DeviceMetric extends _DeviceMetric {
   final Element? categoryElement;
   @override
   final Timing? measurementPeriod;
+  final List<DeviceMetricCalibration>? _calibration;
   @override
-  final List<DeviceMetricCalibration>? calibration;
+  List<DeviceMetricCalibration>? get calibration {
+    final value = _calibration;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
@@ -3114,149 +3006,131 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceMetric &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceMetric &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.unit, unit) ||
-                const DeepCollectionEquality().equals(other.unit, unit)) &&
-            (identical(other.source, source) ||
-                const DeepCollectionEquality().equals(other.source, source)) &&
-            (identical(other.parent, parent) ||
-                const DeepCollectionEquality().equals(other.parent, parent)) &&
+                other.identifier == identifier) &&
+            (identical(other.unit, unit) || other.unit == unit) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.parent, parent) || other.parent == parent) &&
             (identical(other.operationalStatus, operationalStatus) ||
-                const DeepCollectionEquality()
-                    .equals(other.operationalStatus, operationalStatus)) &&
-            (identical(other.operationalStatusElement, operationalStatusElement) ||
-                const DeepCollectionEquality().equals(
-                    other.operationalStatusElement,
-                    operationalStatusElement)) &&
-            (identical(other.color, color) ||
-                const DeepCollectionEquality().equals(other.color, color)) &&
+                other.operationalStatus == operationalStatus) &&
+            (identical(
+                    other.operationalStatusElement, operationalStatusElement) ||
+                other.operationalStatusElement == operationalStatusElement) &&
+            (identical(other.color, color) || other.color == color) &&
             (identical(other.colorElement, colorElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.colorElement, colorElement)) &&
+                other.colorElement == colorElement) &&
             (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
+                other.category == category) &&
             (identical(other.categoryElement, categoryElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.categoryElement, categoryElement)) &&
+                other.categoryElement == categoryElement) &&
             (identical(other.measurementPeriod, measurementPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.measurementPeriod, measurementPeriod)) &&
-            (identical(other.calibration, calibration) ||
-                const DeepCollectionEquality()
-                    .equals(other.calibration, calibration)));
+                other.measurementPeriod == measurementPeriod) &&
+            const DeepCollectionEquality()
+                .equals(other._calibration, _calibration));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(unit) ^
-      const DeepCollectionEquality().hash(source) ^
-      const DeepCollectionEquality().hash(parent) ^
-      const DeepCollectionEquality().hash(operationalStatus) ^
-      const DeepCollectionEquality().hash(operationalStatusElement) ^
-      const DeepCollectionEquality().hash(color) ^
-      const DeepCollectionEquality().hash(colorElement) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(categoryElement) ^
-      const DeepCollectionEquality().hash(measurementPeriod) ^
-      const DeepCollectionEquality().hash(calibration);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceMetricCopyWith<_DeviceMetric> get copyWith =>
-      __$DeviceMetricCopyWithImpl<_DeviceMetric>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        type,
+        identifier,
+        unit,
+        source,
+        parent,
+        operationalStatus,
+        operationalStatusElement,
+        color,
+        colorElement,
+        category,
+        categoryElement,
+        measurementPeriod,
+        const DeepCollectionEquality().hash(_calibration)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceMetricCopyWith<_$_DeviceMetric> get copyWith =>
+      __$$_DeviceMetricCopyWithImpl<_$_DeviceMetric>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceMetric extends DeviceMetric {
   factory _DeviceMetric(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
-          Dstu2ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Dstu2ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      required CodeableConcept type,
-      required Identifier identifier,
-      CodeableConcept? unit,
-      Reference? source,
-      Reference? parent,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      required final Identifier identifier,
+      final CodeableConcept? unit,
+      final Reference? source,
+      final Reference? parent,
       @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-          DeviceMetricOperationalStatus? operationalStatus,
+          final DeviceMetricOperationalStatus? operationalStatus,
       @JsonKey(name: '_operationalStatus')
-          Element? operationalStatusElement,
+          final Element? operationalStatusElement,
       @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-          DeviceMetricColor? color,
+          final DeviceMetricColor? color,
       @JsonKey(name: '_color')
-          Element? colorElement,
+          final Element? colorElement,
       @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-          required DeviceMetricCategory category,
+          required final DeviceMetricCategory category,
       @JsonKey(name: '_category')
-          Element? categoryElement,
-      Timing? measurementPeriod,
-      List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
+          final Element? categoryElement,
+      final Timing? measurementPeriod,
+      final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
   _DeviceMetric._() : super._();
 
   factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
@@ -3264,68 +3138,65 @@ abstract class _DeviceMetric extends DeviceMetric {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get type => throw _privateConstructorUsedError;
+  CodeableConcept get type;
   @override
-  Identifier get identifier => throw _privateConstructorUsedError;
+  Identifier get identifier;
   @override
-  CodeableConcept? get unit => throw _privateConstructorUsedError;
+  CodeableConcept? get unit;
   @override
-  Reference? get source => throw _privateConstructorUsedError;
+  Reference? get source;
   @override
-  Reference? get parent => throw _privateConstructorUsedError;
+  Reference? get parent;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-  DeviceMetricOperationalStatus? get operationalStatus =>
-      throw _privateConstructorUsedError;
+  DeviceMetricOperationalStatus? get operationalStatus;
   @override
   @JsonKey(name: '_operationalStatus')
-  Element? get operationalStatusElement => throw _privateConstructorUsedError;
+  Element? get operationalStatusElement;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-  DeviceMetricColor? get color => throw _privateConstructorUsedError;
+  DeviceMetricColor? get color;
   @override
   @JsonKey(name: '_color')
-  Element? get colorElement => throw _privateConstructorUsedError;
+  Element? get colorElement;
   @override
   @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-  DeviceMetricCategory get category => throw _privateConstructorUsedError;
+  DeviceMetricCategory get category;
   @override
   @JsonKey(name: '_category')
-  Element? get categoryElement => throw _privateConstructorUsedError;
+  Element? get categoryElement;
   @override
-  Timing? get measurementPeriod => throw _privateConstructorUsedError;
+  Timing? get measurementPeriod;
   @override
-  List<DeviceMetricCalibration>? get calibration =>
-      throw _privateConstructorUsedError;
+  List<DeviceMetricCalibration>? get calibration;
   @override
   @JsonKey(ignore: true)
-  _$DeviceMetricCopyWith<_DeviceMetric> get copyWith =>
+  _$$_DeviceMetricCopyWith<_$_DeviceMetric> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3333,47 +3204,6 @@ DeviceMetricCalibration _$DeviceMetricCalibrationFromJson(
     Map<String, dynamic> json) {
   return _DeviceMetricCalibration.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceMetricCalibrationTearOff {
-  const _$DeviceMetricCalibrationTearOff();
-
-  _DeviceMetricCalibration call(
-      {Id? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: CalibrationType.unknown)
-          CalibrationType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      @JsonKey(unknownEnumValue: CalibrationState.unknown)
-          CalibrationState? state,
-      @JsonKey(name: '_state')
-          Element? stateElement,
-      Instant? time,
-      @JsonKey(name: '_time')
-          Element? timeElement}) {
-    return _DeviceMetricCalibration(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      type: type,
-      typeElement: typeElement,
-      state: state,
-      stateElement: stateElement,
-      time: time,
-      timeElement: timeElement,
-    );
-  }
-
-  DeviceMetricCalibration fromJson(Map<String, Object> json) {
-    return DeviceMetricCalibration.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceMetricCalibration = _$DeviceMetricCalibrationTearOff();
 
 /// @nodoc
 mixin _$DeviceMetricCalibration {
@@ -3404,7 +3234,8 @@ mixin _$DeviceMetricCalibration {
 abstract class $DeviceMetricCalibrationCopyWith<$Res> {
   factory $DeviceMetricCalibrationCopyWith(DeviceMetricCalibration value,
           $Res Function(DeviceMetricCalibration) then) =
-      _$DeviceMetricCalibrationCopyWithImpl<$Res>;
+      _$DeviceMetricCalibrationCopyWithImpl<$Res, DeviceMetricCalibration>;
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3428,14 +3259,17 @@ abstract class $DeviceMetricCalibrationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceMetricCalibrationCopyWithImpl<$Res>
+class _$DeviceMetricCalibrationCopyWithImpl<$Res,
+        $Val extends DeviceMetricCalibration>
     implements $DeviceMetricCalibrationCopyWith<$Res> {
   _$DeviceMetricCalibrationCopyWithImpl(this._value, this._then);
 
-  final DeviceMetricCalibration _value;
   // ignore: unused_field
-  final $Res Function(DeviceMetricCalibration) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3449,86 +3283,90 @@ class _$DeviceMetricCalibrationCopyWithImpl<$Res>
     Object? timeElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CalibrationType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      state: state == freezed
+      state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
               as CalibrationState?,
-      stateElement: stateElement == freezed
+      stateElement: freezed == stateElement
           ? _value.stateElement
           : stateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      time: time == freezed
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      timeElement: timeElement == freezed
+      timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get stateElement {
     if (_value.stateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.stateElement!, (value) {
-      return _then(_value.copyWith(stateElement: value));
+      return _then(_value.copyWith(stateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get timeElement {
     if (_value.timeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.timeElement!, (value) {
-      return _then(_value.copyWith(timeElement: value));
+      return _then(_value.copyWith(timeElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceMetricCalibrationCopyWith<$Res>
+abstract class _$$_DeviceMetricCalibrationCopyWith<$Res>
     implements $DeviceMetricCalibrationCopyWith<$Res> {
-  factory _$DeviceMetricCalibrationCopyWith(_DeviceMetricCalibration value,
-          $Res Function(_DeviceMetricCalibration) then) =
-      __$DeviceMetricCalibrationCopyWithImpl<$Res>;
+  factory _$$_DeviceMetricCalibrationCopyWith(_$_DeviceMetricCalibration value,
+          $Res Function(_$_DeviceMetricCalibration) then) =
+      __$$_DeviceMetricCalibrationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Id? id,
       @JsonKey(name: 'extension')
@@ -3555,17 +3393,15 @@ abstract class _$DeviceMetricCalibrationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceMetricCalibrationCopyWithImpl<$Res>
-    extends _$DeviceMetricCalibrationCopyWithImpl<$Res>
-    implements _$DeviceMetricCalibrationCopyWith<$Res> {
-  __$DeviceMetricCalibrationCopyWithImpl(_DeviceMetricCalibration _value,
-      $Res Function(_DeviceMetricCalibration) _then)
-      : super(_value, (v) => _then(v as _DeviceMetricCalibration));
+class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
+    extends _$DeviceMetricCalibrationCopyWithImpl<$Res,
+        _$_DeviceMetricCalibration>
+    implements _$$_DeviceMetricCalibrationCopyWith<$Res> {
+  __$$_DeviceMetricCalibrationCopyWithImpl(_$_DeviceMetricCalibration _value,
+      $Res Function(_$_DeviceMetricCalibration) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceMetricCalibration get _value =>
-      super._value as _DeviceMetricCalibration;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
@@ -3578,40 +3414,40 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
     Object? time = freezed,
     Object? timeElement = freezed,
   }) {
-    return _then(_DeviceMetricCalibration(
-      id: id == freezed
+    return _then(_$_DeviceMetricCalibration(
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      extension_: extension_ == freezed
-          ? _value.extension_
+      extension_: freezed == extension_
+          ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CalibrationType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      state: state == freezed
+      state: freezed == state
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
               as CalibrationState?,
-      stateElement: stateElement == freezed
+      stateElement: freezed == stateElement
           ? _value.stateElement
           : stateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      time: time == freezed
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      timeElement: timeElement == freezed
+      timeElement: freezed == timeElement
           ? _value.timeElement
           : timeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
@@ -3624,26 +3460,42 @@ class __$DeviceMetricCalibrationCopyWithImpl<$Res>
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       @JsonKey(unknownEnumValue: CalibrationState.unknown) this.state,
       @JsonKey(name: '_state') this.stateElement,
       this.time,
       @JsonKey(name: '_time') this.timeElement})
-      : super._();
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
   final Id? id;
+  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
   @override
-  final List<FhirExtension>? modifierExtension;
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
   final CalibrationType? type;
@@ -3670,106 +3522,102 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceMetricCalibration &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceMetricCalibration &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.state, state) ||
-                const DeepCollectionEquality().equals(other.state, state)) &&
+                other.typeElement == typeElement) &&
+            (identical(other.state, state) || other.state == state) &&
             (identical(other.stateElement, stateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.stateElement, stateElement)) &&
-            (identical(other.time, time) ||
-                const DeepCollectionEquality().equals(other.time, time)) &&
+                other.stateElement == stateElement) &&
+            (identical(other.time, time) || other.time == time) &&
             (identical(other.timeElement, timeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.timeElement, timeElement)));
+                other.timeElement == timeElement));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(state) ^
-      const DeepCollectionEquality().hash(stateElement) ^
-      const DeepCollectionEquality().hash(time) ^
-      const DeepCollectionEquality().hash(timeElement);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith =>
-      __$DeviceMetricCalibrationCopyWithImpl<_DeviceMetricCalibration>(
-          this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      typeElement,
+      state,
+      stateElement,
+      time,
+      timeElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceMetricCalibrationCopyWith<_$_DeviceMetricCalibration>
+      get copyWith =>
+          __$$_DeviceMetricCalibrationCopyWithImpl<_$_DeviceMetricCalibration>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
   factory _DeviceMetricCalibration(
-      {Id? id,
+      {final Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown)
-          CalibrationType? type,
+          final CalibrationType? type,
       @JsonKey(name: '_type')
-          Element? typeElement,
+          final Element? typeElement,
       @JsonKey(unknownEnumValue: CalibrationState.unknown)
-          CalibrationState? state,
+          final CalibrationState? state,
       @JsonKey(name: '_state')
-          Element? stateElement,
-      Instant? time,
+          final Element? stateElement,
+      final Instant? time,
       @JsonKey(name: '_time')
-          Element? timeElement}) = _$_DeviceMetricCalibration;
+          final Element? timeElement}) = _$_DeviceMetricCalibration;
   _DeviceMetricCalibration._() : super._();
 
   factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
       _$_DeviceMetricCalibration.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
-  CalibrationType? get type => throw _privateConstructorUsedError;
+  CalibrationType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
   @JsonKey(unknownEnumValue: CalibrationState.unknown)
-  CalibrationState? get state => throw _privateConstructorUsedError;
+  CalibrationState? get state;
   @override
   @JsonKey(name: '_state')
-  Element? get stateElement => throw _privateConstructorUsedError;
+  Element? get stateElement;
   @override
-  Instant? get time => throw _privateConstructorUsedError;
+  Instant? get time;
   @override
   @JsonKey(name: '_time')
-  Element? get timeElement => throw _privateConstructorUsedError;
+  Element? get timeElement;
   @override
   @JsonKey(ignore: true)
-  _$DeviceMetricCalibrationCopyWith<_DeviceMetricCalibration> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_DeviceMetricCalibrationCopyWith<_$_DeviceMetricCalibration>
+      get copyWith => throw _privateConstructorUsedError;
 }

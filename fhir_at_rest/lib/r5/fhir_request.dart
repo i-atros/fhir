@@ -23,9 +23,10 @@ class FhirRequest with _$FhirRequest {
     bool newSchema = true,
     String? formData,
   }) {
-    final json = resource?.toJson();
-    if (json != null && !newSchema && resource!.resourceType == R5ResourceType.QuestionnaireResponse) {
-      json['identifier'] = (resource as QuestionnaireResponse).identifier?.first;
+    var json = resource?.toJson();
+
+    if (json != null && !newSchema) {
+      json = convertToOldSchema(json, resource?.resourceType);
     }
 
     return {
@@ -617,9 +618,9 @@ class FhirRequest with _$FhirRequest {
   /// authorization or other headers can be passed in as well
   Future<Resource?> request({
     required Map<String, String> headers,
-    R5Version r5Version = R5Version.v4_6_0,
+    R5Version r5Version = R5Version.v5_0_0_snapshot,
   }) async {
-    final newSchema = r5Version == R5Version.v5_0_0;
+    final newSchema = r5Version == R5Version.v5_0_0_ballot;
 
     return await map(
       read: (m) async => await _request(RestfulRequest.get_, uri(parameters: m.parameters), headers, 'Read', newSchema),
@@ -830,7 +831,7 @@ class FhirRequest with _$FhirRequest {
 
     final poweredBy = result.headers['x-powered-by'] ?? '';
 
-    return poweredBy.contains('4.6.0/R5') ? R5Version.v4_6_0 : R5Version.v5_0_0;
+    return poweredBy.contains('FHIR 5.0.0-snapshot1/R5') ? R5Version.v5_0_0_snapshot : R5Version.v5_0_0_ballot;
   }
 
   /// _hxParameters
@@ -879,22 +880,156 @@ class FhirRequest with _$FhirRequest {
         json = removeMeta(_json);
       }
 
-      if (json != null && !newSchema && resource!.resourceType == R5ResourceType.QuestionnaireResponse) {
-        final identifiers = (resource as QuestionnaireResponse).identifier;
-
-        if(identifiers != null && identifiers.isNotEmpty){
-          json['identifier'] = identifiers.first.toJson();
-        }
+      if (json != null && !newSchema) {
+        json = convertToOldSchema(json, resource?.resourceType);
       }
 
-      final result = await _makeRequest(type: type, thisRequest: uri, client: client, headers: headers, resource: json);
+      final result = await _makeRequest(
+        type: type,
+        thisRequest: uri,
+        client: client,
+        headers: headers,
+        resource: json,
+        newSchema: newSchema,
+        resourceType: resource?.resourceType,
+      );
       return result;
     } catch (e) {
       return _operationOutcome('Failed to complete a $requestType request, ', diagnostics: 'Exception: $e');
     }
   }
 
-  Map<String, dynamic>? removeMeta(Map<String, dynamic> meh) {
+  Map<String, dynamic> convertToOldSchema(Map<String, dynamic> resource, R5ResourceType? resourceType) {
+    Map<String, dynamic> json = Map.from(resource);
+
+    switch (resourceType) {
+      case R5ResourceType.Appointment:
+        if (json['serviceType'] != null) {
+          json['serviceType'] = json['serviceType'].map((e) => e['concept']).toList();
+        }
+        break;
+      case R5ResourceType.Coverage:
+        json['subscriberId'] = json['subscriberId']?.first;
+        if (json['class'] != null && json['class']['value'] != null) {
+          json['class']['value'] = json['class']['value']['value'];
+        }
+        break;
+      case R5ResourceType.DocumentReference:
+        json['encounter'] = json['context'];
+        if (json['event'] != null) {
+          json['event'] = json['event'].map((e) => e['concept']).toList();
+        }
+        break;
+      case R5ResourceType.Location:
+        json['physicalType'] = json['form'];
+
+        if (json['contact'] != null) {
+          json['telecom'] = json['contact'].map((e) => e['telecom']).toList();
+        }
+
+        if (json['hoursOfOperation'] != null) {
+          final availability = json['hoursOfOperation'].first;
+          final newBackboneItem = {};
+          newBackboneItem['daysOfWeek'] = availability['availableTime'].first['daysOfWeek'];
+          newBackboneItem['allDay'] = availability['availableTime'].first['allDay'];
+          newBackboneItem['openingTime'] = availability['availableTime'].first['availableStartTime'];
+          newBackboneItem['closingTime'] = availability['availableTime'].first['availableEndTime'];
+
+          json['hoursOfOperation'] = [newBackboneItem];
+          if (availability['notAvailableTime'] != null) {
+            json['availabilityExceptions'] = availability['notAvailableTime']['description'];
+          }
+        }
+        break;
+      case R5ResourceType.MedicationRequest:
+        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.MedicationUsage:
+        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.ServiceRequest:
+        if (json['code'] != null) {
+          json['code'] = json['code']['concept'];
+        }
+        break;
+      default:
+        break;
+    }
+
+    return json;
+  }
+
+  Map<String, dynamic> convertFromOldSchema(Map<String, dynamic> resource, R5ResourceType? resourceType) {
+    Map<String, dynamic> json = Map.from(resource);
+
+    switch (resourceType) {
+      case R5ResourceType.Appointment:
+        if (json['serviceType'] != null) {
+          json['serviceType'] = json['serviceType'].map((e) => {'concept': e}).toList();
+        }
+        break;
+      case R5ResourceType.Coverage:
+        json['subscriberId'] = [json['subscriberId']];
+
+        if (json['class'] != null) {
+          final newValue = {'value': json['class']['value']};
+          json['class']['value'] = newValue;
+        }
+        break;
+      case R5ResourceType.DocumentReference:
+        json['context'] = json['encounter'];
+
+        if (json['event'] != null) {
+          json['event'] = json['event'].map((e) => {'concept': e}).toList();
+        }
+        break;
+      case R5ResourceType.Location:
+        json['form'] = json['physicalType'];
+
+        if (json['telecom'] != null) {
+          json['contact'] = json['telecom'].map((e) => {'telecom': e}).toList();
+        }
+
+        if (json['hoursOfOperation'] != null) {
+          final backboneItem = json['hoursOfOperation'].first;
+
+          final availableTime = {
+            'daysOfWeek': backboneItem['daysOfWeek'],
+            'allDay': backboneItem['allDay'],
+            'availableStartTime': backboneItem['openingTime'],
+            'availableEndTime': backboneItem['closingTime'],
+          };
+
+          final notAvailableTime = {'description': json['availabilityExceptions']};
+
+          final availability = {
+            'availableTime': [availableTime],
+            'notAvailableTime': [notAvailableTime],
+          };
+
+          json['hoursOfOperation'] = [availability];
+        }
+        break;
+      case R5ResourceType.MedicationRequest:
+        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.MedicationUsage:
+        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.ServiceRequest:
+        if (json['code'] != null) {
+          final newCode = {'concept': json['code']};
+          json['code'] = newCode;
+        }
+        break;
+      default:
+        break;
+    }
+
+    return json;
+  }
+
+  Map<String, dynamic>? removeMeta(Map<String, dynamic>? meh) {
     if (meh == null) {
       return null;
     }
@@ -1026,9 +1161,11 @@ class FhirRequest with _$FhirRequest {
     required String thisRequest,
     required Map<String, String> headers,
     Map<String, dynamic>? resource,
+    bool newSchema = false,
     String? formData,
     Encoding? encoding,
     Client? client,
+    R5ResourceType? resourceType,
   }) async {
     Response result;
     client ??= Client();
@@ -1107,7 +1244,14 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
     }
-    return Resource.fromJson(json.decode(result.body));
+
+    var body = json.decode(result.body);
+
+    if (!newSchema && result.body.isNotEmpty) {
+      body = convertFromOldSchema(body, resourceType);
+    }
+
+    return Resource.fromJson(body);
   }
 
   OperationOutcomeIssueCode _getIssueCodeByStatusCode(int statusCode) {
@@ -1164,6 +1308,6 @@ class FhirRequest with _$FhirRequest {
 }
 
 enum R5Version {
-  v4_6_0,
-  v5_0_0,
+  v5_0_0_snapshot,
+  v5_0_0_ballot,
 }
