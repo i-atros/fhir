@@ -1141,7 +1141,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
     @JsonKey(name: '_priority') Element? priorityElement,
     Boolean? doNotPerform,
     @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
-    CodeableConcept? code,
+    CodeableReference? code,
     List<CodeableConcept>? orderDetail,
     Quantity? quantityQuantity,
     Ratio? quantityRatio,
