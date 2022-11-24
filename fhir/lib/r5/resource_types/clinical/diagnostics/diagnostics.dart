@@ -863,18 +863,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  // factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) => _$QuestionnaireResponseFromJson(json);
-
-  // /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) {
-    if (json != null && json['identifier'] != null && json['identifier'] is Map) {
-      var newMap = Map<String, dynamic>.from(json);
-      newMap['identifier'] = <Map<String, dynamic>>[newMap['identifier'] as Map<String, dynamic>];
-      return _$QuestionnaireResponseFromJson(newMap);
-
-    }
-    return _$QuestionnaireResponseFromJson(json);
-  }
+  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) => _$QuestionnaireResponseFromJson(json);
 }
 
 @freezed

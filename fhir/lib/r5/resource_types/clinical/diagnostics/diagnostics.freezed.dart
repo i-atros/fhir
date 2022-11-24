@@ -14913,6 +14913,11 @@ abstract class _ObservationComponent extends ObservationComponent {
       throw _privateConstructorUsedError;
 }
 
+QuestionnaireResponse _$QuestionnaireResponseFromJson(
+    Map<String, dynamic> json) {
+  return _QuestionnaireResponse.fromJson(json);
+}
+
 /// @nodoc
 mixin _$QuestionnaireResponse {
   @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
@@ -14949,6 +14954,7 @@ mixin _$QuestionnaireResponse {
   List<QuestionnaireResponseItem>? get item =>
       throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $QuestionnaireResponseCopyWith<QuestionnaireResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -15466,7 +15472,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
@@ -15508,6 +15514,9 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         _partOf = partOf,
         _item = item,
         super._();
+
+  factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_QuestionnaireResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
@@ -15663,6 +15672,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
             const DeepCollectionEquality().equals(other._item, _item));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -15698,6 +15708,13 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$$_QuestionnaireResponseCopyWith<_$_QuestionnaireResponse> get copyWith =>
       __$$_QuestionnaireResponseCopyWithImpl<_$_QuestionnaireResponse>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_QuestionnaireResponseToJson(
+      this,
+    );
+  }
 }
 
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
@@ -15734,6 +15751,9 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final Reference? source,
       final List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponse;
   _QuestionnaireResponse._() : super._();
+
+  factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
+      _$_QuestionnaireResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)

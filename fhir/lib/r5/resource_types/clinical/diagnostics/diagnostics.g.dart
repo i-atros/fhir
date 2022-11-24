@@ -2086,6 +2086,133 @@ Map<String, dynamic> _$$_ObservationComponentToJson(
   return val;
 }
 
+_$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
+        Map<String, dynamic> json) =>
+    _$_QuestionnaireResponse(
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.QuestionnaireResponse) ??
+          R5ResourceType.QuestionnaireResponse,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      basedOn: (json['basedOn'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      partOf: (json['partOf'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      questionnaire: json['questionnaire'] == null
+          ? null
+          : Canonical.fromJson(json['questionnaire']),
+      status: $enumDecodeNullable(
+          _$QuestionnaireResponseStatusEnumMap, json['status'],
+          unknownValue: QuestionnaireResponseStatus.unknown),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      subject: json['subject'] == null
+          ? null
+          : Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+      authored: json['authored'] == null
+          ? null
+          : FhirDateTime.fromJson(json['authored']),
+      authoredElement: json['_authored'] == null
+          ? null
+          : Element.fromJson(json['_authored'] as Map<String, dynamic>),
+      author: json['author'] == null
+          ? null
+          : Reference.fromJson(json['author'] as Map<String, dynamic>),
+      source: json['source'] == null
+          ? null
+          : Reference.fromJson(json['source'] as Map<String, dynamic>),
+      item: (json['item'] as List<dynamic>?)
+          ?.map((e) =>
+              QuestionnaireResponseItem.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_QuestionnaireResponseToJson(
+    _$_QuestionnaireResponse instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
+  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
+  writeNotNull('questionnaire', instance.questionnaire?.toJson());
+  writeNotNull('status', _$QuestionnaireResponseStatusEnumMap[instance.status]);
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('subject', instance.subject?.toJson());
+  writeNotNull('encounter', instance.encounter?.toJson());
+  writeNotNull('authored', instance.authored?.toJson());
+  writeNotNull('_authored', instance.authoredElement?.toJson());
+  writeNotNull('author', instance.author?.toJson());
+  writeNotNull('source', instance.source?.toJson());
+  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+const _$QuestionnaireResponseStatusEnumMap = {
+  QuestionnaireResponseStatus.in_progress: 'in-progress',
+  QuestionnaireResponseStatus.completed: 'completed',
+  QuestionnaireResponseStatus.amended: 'amended',
+  QuestionnaireResponseStatus.entered_in_error: 'entered-in-error',
+  QuestionnaireResponseStatus.stopped: 'stopped',
+  QuestionnaireResponseStatus.unknown: 'unknown',
+};
+
 _$_QuestionnaireResponseItem _$$_QuestionnaireResponseItemFromJson(
         Map<String, dynamic> json) =>
     _$_QuestionnaireResponseItem(
