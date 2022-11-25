@@ -1263,8 +1263,8 @@ class FhirRequest with _$FhirRequest {
           final entries = [];
 
           for (var entry in body['entry']) {
-            final res = entry['resource'] as Map<String, dynamic>;
-            if (res['resourceType'] != null) {
+            final res = entry['resource'] as Map<String, dynamic>?;
+            if (res != null && res['resourceType'] != null) {
               final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
               final res2 = convertFromOldSchema(res, type);
               entry['resource'] = res2;
