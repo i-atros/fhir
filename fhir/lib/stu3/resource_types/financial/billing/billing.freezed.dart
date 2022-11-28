@@ -901,19 +901,19 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -929,7 +929,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       subType: freezed == subType
-          ? _value._subType
+          ? _value.subType
           : subType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       use: freezed == use
@@ -981,7 +981,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
           : fundsReserve // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       related: freezed == related
-          ? _value._related
+          ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
               as List<ClaimRelated>?,
       prescription: freezed == prescription
@@ -1005,23 +1005,23 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
           : facility // ignore: cast_nullable_to_non_nullable
               as Reference?,
       careTeam: freezed == careTeam
-          ? _value._careTeam
+          ? _value.careTeam
           : careTeam // ignore: cast_nullable_to_non_nullable
               as List<ClaimCareTeam>?,
       information: freezed == information
-          ? _value._information
+          ? _value.information
           : information // ignore: cast_nullable_to_non_nullable
               as List<ClaimInformation>?,
       diagnosis: freezed == diagnosis
-          ? _value._diagnosis
+          ? _value.diagnosis
           : diagnosis // ignore: cast_nullable_to_non_nullable
               as List<ClaimDiagnosis>?,
       procedure: freezed == procedure
-          ? _value._procedure
+          ? _value.procedure
           : procedure // ignore: cast_nullable_to_non_nullable
               as List<ClaimProcedure>?,
       insurance: freezed == insurance
-          ? _value._insurance
+          ? _value.insurance
           : insurance // ignore: cast_nullable_to_non_nullable
               as List<ClaimInsurance>?,
       accident: freezed == accident
@@ -1037,7 +1037,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
           : hospitalization // ignore: cast_nullable_to_non_nullable
               as Period?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<ClaimItem>?,
       total: freezed == total
@@ -1063,16 +1063,16 @@ class _$_Claim extends _Claim {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
-      final List<CodeableConcept>? subType,
+      this.subType,
       this.use,
       @JsonKey(name: '_use')
           this.useElement,
@@ -1087,35 +1087,23 @@ class _$_Claim extends _Claim {
       this.organization,
       this.priority,
       this.fundsReserve,
-      final List<ClaimRelated>? related,
+      this.related,
       this.prescription,
       this.originalPrescription,
       this.payee,
       this.referral,
       this.facility,
-      final List<ClaimCareTeam>? careTeam,
-      final List<ClaimInformation>? information,
-      final List<ClaimDiagnosis>? diagnosis,
-      final List<ClaimProcedure>? procedure,
-      final List<ClaimInsurance>? insurance,
+      this.careTeam,
+      this.information,
+      this.diagnosis,
+      this.procedure,
+      this.insurance,
       this.accident,
       this.employmentImpacted,
       this.hospitalization,
-      final List<ClaimItem>? item,
+      this.item,
       this.total})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _subType = subType,
-        _related = related,
-        _careTeam = careTeam,
-        _information = information,
-        _diagnosis = diagnosis,
-        _procedure = procedure,
-        _insurance = insurance,
-        _item = item,
-        super._();
+      : super._();
 
   factory _$_Claim.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimFromJson(json);
@@ -1139,43 +1127,15 @@ class _$_Claim extends _Claim {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? status;
   @override
@@ -1183,15 +1143,8 @@ class _$_Claim extends _Claim {
   final Element? statusElement;
   @override
   final CodeableConcept? type;
-  final List<CodeableConcept>? _subType;
   @override
-  List<CodeableConcept>? get subType {
-    final value = _subType;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? subType;
   @override
   final ClaimUse? use;
   @override
@@ -1218,15 +1171,8 @@ class _$_Claim extends _Claim {
   final CodeableConcept? priority;
   @override
   final CodeableConcept? fundsReserve;
-  final List<ClaimRelated>? _related;
   @override
-  List<ClaimRelated>? get related {
-    final value = _related;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ClaimRelated>? related;
   @override
   final Reference? prescription;
   @override
@@ -1237,66 +1183,24 @@ class _$_Claim extends _Claim {
   final Reference? referral;
   @override
   final Reference? facility;
-  final List<ClaimCareTeam>? _careTeam;
   @override
-  List<ClaimCareTeam>? get careTeam {
-    final value = _careTeam;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimInformation>? _information;
+  final List<ClaimCareTeam>? careTeam;
   @override
-  List<ClaimInformation>? get information {
-    final value = _information;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimDiagnosis>? _diagnosis;
+  final List<ClaimInformation>? information;
   @override
-  List<ClaimDiagnosis>? get diagnosis {
-    final value = _diagnosis;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimProcedure>? _procedure;
+  final List<ClaimDiagnosis>? diagnosis;
   @override
-  List<ClaimProcedure>? get procedure {
-    final value = _procedure;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimInsurance>? _insurance;
+  final List<ClaimProcedure>? procedure;
   @override
-  List<ClaimInsurance>? get insurance {
-    final value = _insurance;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ClaimInsurance>? insurance;
   @override
   final ClaimAccident? accident;
   @override
   final Period? employmentImpacted;
   @override
   final Period? hospitalization;
-  final List<ClaimItem>? _item;
   @override
-  List<ClaimItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ClaimItem>? item;
   @override
   final Money? total;
 
@@ -1323,19 +1227,18 @@ class _$_Claim extends _Claim {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._subType, _subType) &&
+            const DeepCollectionEquality().equals(other.subType, subType) &&
             (identical(other.use, use) || other.use == use) &&
             (identical(other.useElement, useElement) ||
                 other.useElement == useElement) &&
@@ -1355,7 +1258,7 @@ class _$_Claim extends _Claim {
                 other.priority == priority) &&
             (identical(other.fundsReserve, fundsReserve) ||
                 other.fundsReserve == fundsReserve) &&
-            const DeepCollectionEquality().equals(other._related, _related) &&
+            const DeepCollectionEquality().equals(other.related, related) &&
             (identical(other.prescription, prescription) ||
                 other.prescription == prescription) &&
             (identical(other.originalPrescription, originalPrescription) ||
@@ -1365,22 +1268,19 @@ class _$_Claim extends _Claim {
                 other.referral == referral) &&
             (identical(other.facility, facility) ||
                 other.facility == facility) &&
-            const DeepCollectionEquality().equals(other._careTeam, _careTeam) &&
+            const DeepCollectionEquality().equals(other.careTeam, careTeam) &&
             const DeepCollectionEquality()
-                .equals(other._information, _information) &&
-            const DeepCollectionEquality()
-                .equals(other._diagnosis, _diagnosis) &&
-            const DeepCollectionEquality()
-                .equals(other._procedure, _procedure) &&
-            const DeepCollectionEquality()
-                .equals(other._insurance, _insurance) &&
+                .equals(other.information, information) &&
+            const DeepCollectionEquality().equals(other.diagnosis, diagnosis) &&
+            const DeepCollectionEquality().equals(other.procedure, procedure) &&
+            const DeepCollectionEquality().equals(other.insurance, insurance) &&
             (identical(other.accident, accident) ||
                 other.accident == accident) &&
             (identical(other.employmentImpacted, employmentImpacted) ||
                 other.employmentImpacted == employmentImpacted) &&
             (identical(other.hospitalization, hospitalization) ||
                 other.hospitalization == hospitalization) &&
-            const DeepCollectionEquality().equals(other._item, _item) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
             (identical(other.total, total) || other.total == total));
   }
 
@@ -1396,14 +1296,14 @@ class _$_Claim extends _Claim {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         type,
-        const DeepCollectionEquality().hash(_subType),
+        const DeepCollectionEquality().hash(subType),
         use,
         useElement,
         patient,
@@ -1416,21 +1316,21 @@ class _$_Claim extends _Claim {
         organization,
         priority,
         fundsReserve,
-        const DeepCollectionEquality().hash(_related),
+        const DeepCollectionEquality().hash(related),
         prescription,
         originalPrescription,
         payee,
         referral,
         facility,
-        const DeepCollectionEquality().hash(_careTeam),
-        const DeepCollectionEquality().hash(_information),
-        const DeepCollectionEquality().hash(_diagnosis),
-        const DeepCollectionEquality().hash(_procedure),
-        const DeepCollectionEquality().hash(_insurance),
+        const DeepCollectionEquality().hash(careTeam),
+        const DeepCollectionEquality().hash(information),
+        const DeepCollectionEquality().hash(diagnosis),
+        const DeepCollectionEquality().hash(procedure),
+        const DeepCollectionEquality().hash(insurance),
         accident,
         employmentImpacted,
         hospitalization,
-        const DeepCollectionEquality().hash(_item),
+        const DeepCollectionEquality().hash(item),
         total
       ]);
 
@@ -3125,7 +3025,7 @@ class __$$_ClaimDiagnosisCopyWithImpl<$Res>
           : diagnosisReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       packageCode: freezed == packageCode
@@ -3144,10 +3044,9 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
       @JsonKey(name: '_sequence') this.sequenceElement,
       this.diagnosisCodeableConcept,
       this.diagnosisReference,
-      final List<CodeableConcept>? type,
+      this.type,
       this.packageCode})
-      : _type = type,
-        super._();
+      : super._();
 
   factory _$_ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimDiagnosisFromJson(json);
@@ -3161,15 +3060,8 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
   final CodeableConcept? diagnosisCodeableConcept;
   @override
   final Reference? diagnosisReference;
-  final List<CodeableConcept>? _type;
   @override
-  List<CodeableConcept>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? type;
   @override
   final CodeableConcept? packageCode;
 
@@ -3192,7 +3084,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
                 other.diagnosisCodeableConcept == diagnosisCodeableConcept) &&
             (identical(other.diagnosisReference, diagnosisReference) ||
                 other.diagnosisReference == diagnosisReference) &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.packageCode, packageCode) ||
                 other.packageCode == packageCode));
   }
@@ -3205,7 +3097,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
       sequenceElement,
       diagnosisCodeableConcept,
       diagnosisReference,
-      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(type),
       packageCode);
 
   @JsonKey(ignore: true)
@@ -3842,11 +3734,11 @@ class __$$_ClaimInsuranceCopyWithImpl<$Res>
           : businessArrangementElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       preAuthRef: freezed == preAuthRef
-          ? _value._preAuthRef
+          ? _value.preAuthRef
           : preAuthRef // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       preAuthRefElement: freezed == preAuthRefElement
-          ? _value._preAuthRefElement
+          ? _value.preAuthRefElement
           : preAuthRefElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       claimResponse: freezed == claimResponse
@@ -3868,12 +3760,10 @@ class _$_ClaimInsurance extends _ClaimInsurance {
       required this.coverage,
       this.businessArrangement,
       @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
-      final List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef') final List<Element?>? preAuthRefElement,
+      this.preAuthRef,
+      @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
       this.claimResponse})
-      : _preAuthRef = preAuthRef,
-        _preAuthRefElement = preAuthRefElement,
-        super._();
+      : super._();
 
   factory _$_ClaimInsurance.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimInsuranceFromJson(json);
@@ -3895,25 +3785,11 @@ class _$_ClaimInsurance extends _ClaimInsurance {
   @override
   @JsonKey(name: '_businessArrangement')
   final Element? businessArrangementElement;
-  final List<String>? _preAuthRef;
   @override
-  List<String>? get preAuthRef {
-    final value = _preAuthRef;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _preAuthRefElement;
+  final List<String>? preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  List<Element?>? get preAuthRefElement {
-    final value = _preAuthRefElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? preAuthRefElement;
   @override
   final Reference? claimResponse;
 
@@ -3943,9 +3819,9 @@ class _$_ClaimInsurance extends _ClaimInsurance {
                 other.businessArrangementElement ==
                     businessArrangementElement) &&
             const DeepCollectionEquality()
-                .equals(other._preAuthRef, _preAuthRef) &&
+                .equals(other.preAuthRef, preAuthRef) &&
             const DeepCollectionEquality()
-                .equals(other._preAuthRefElement, _preAuthRefElement) &&
+                .equals(other.preAuthRefElement, preAuthRefElement) &&
             (identical(other.claimResponse, claimResponse) ||
                 other.claimResponse == claimResponse));
   }
@@ -3961,8 +3837,8 @@ class _$_ClaimInsurance extends _ClaimInsurance {
       coverage,
       businessArrangement,
       businessArrangementElement,
-      const DeepCollectionEquality().hash(_preAuthRef),
-      const DeepCollectionEquality().hash(_preAuthRefElement),
+      const DeepCollectionEquality().hash(preAuthRef),
+      const DeepCollectionEquality().hash(preAuthRefElement),
       claimResponse);
 
   @JsonKey(ignore: true)
@@ -4911,35 +4787,35 @@ class __$$_ClaimItemCopyWithImpl<$Res>
           : sequenceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       careTeamLinkId: freezed == careTeamLinkId
-          ? _value._careTeamLinkId
+          ? _value.careTeamLinkId
           : careTeamLinkId // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       careTeamLinkIdElement: freezed == careTeamLinkIdElement
-          ? _value._careTeamLinkIdElement
+          ? _value.careTeamLinkIdElement
           : careTeamLinkIdElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       diagnosisLinkId: freezed == diagnosisLinkId
-          ? _value._diagnosisLinkId
+          ? _value.diagnosisLinkId
           : diagnosisLinkId // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       diagnosisLinkIdElement: freezed == diagnosisLinkIdElement
-          ? _value._diagnosisLinkIdElement
+          ? _value.diagnosisLinkIdElement
           : diagnosisLinkIdElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       procedureLinkId: freezed == procedureLinkId
-          ? _value._procedureLinkId
+          ? _value.procedureLinkId
           : procedureLinkId // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       procedureLinkIdElement: freezed == procedureLinkIdElement
-          ? _value._procedureLinkIdElement
+          ? _value.procedureLinkIdElement
           : procedureLinkIdElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       informationLinkId: freezed == informationLinkId
-          ? _value._informationLinkId
+          ? _value.informationLinkId
           : informationLinkId // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       informationLinkIdElement: freezed == informationLinkIdElement
-          ? _value._informationLinkIdElement
+          ? _value.informationLinkIdElement
           : informationLinkIdElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       revenue: freezed == revenue
@@ -4955,11 +4831,11 @@ class __$$_ClaimItemCopyWithImpl<$Res>
           : service // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       programCode: freezed == programCode
-          ? _value._programCode
+          ? _value.programCode
           : programCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       servicedDate: freezed == servicedDate
@@ -5007,7 +4883,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
           : net // ignore: cast_nullable_to_non_nullable
               as Money?,
       udi: freezed == udi
-          ? _value._udi
+          ? _value.udi
           : udi // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       bodySite: freezed == bodySite
@@ -5015,15 +4891,15 @@ class __$$_ClaimItemCopyWithImpl<$Res>
           : bodySite // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       subSite: freezed == subSite
-          ? _value._subSite
+          ? _value.subSite
           : subSite // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       encounter: freezed == encounter
-          ? _value._encounter
+          ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       detail: freezed == detail
-          ? _value._detail
+          ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<ClaimDetail>?,
     ));
@@ -5035,28 +4911,22 @@ class __$$_ClaimItemCopyWithImpl<$Res>
 class _$_ClaimItem extends _ClaimItem {
   _$_ClaimItem(
       {this.sequence,
-      @JsonKey(name: '_sequence')
-          this.sequenceElement,
-      final List<Id>? careTeamLinkId,
-      @JsonKey(name: '_careTeamLinkId')
-          final List<Element?>? careTeamLinkIdElement,
-      final List<Id>? diagnosisLinkId,
-      @JsonKey(name: '_diagnosisLinkId')
-          final List<Element?>? diagnosisLinkIdElement,
-      final List<Id>? procedureLinkId,
-      @JsonKey(name: '_procedureLinkId')
-          final List<Element?>? procedureLinkIdElement,
-      final List<Id>? informationLinkId,
-      @JsonKey(name: '_informationLinkId')
-          final List<Element>? informationLinkIdElement,
+      @JsonKey(name: '_sequence') this.sequenceElement,
+      this.careTeamLinkId,
+      @JsonKey(name: '_careTeamLinkId') this.careTeamLinkIdElement,
+      this.diagnosisLinkId,
+      @JsonKey(name: '_diagnosisLinkId') this.diagnosisLinkIdElement,
+      this.procedureLinkId,
+      @JsonKey(name: '_procedureLinkId') this.procedureLinkIdElement,
+      this.informationLinkId,
+      @JsonKey(name: '_informationLinkId') this.informationLinkIdElement,
       this.revenue,
       this.category,
       this.service,
-      final List<CodeableConcept>? modifier,
-      final List<CodeableConcept>? programCode,
+      this.modifier,
+      this.programCode,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.locationCodeableConcept,
       this.locationAddress,
@@ -5064,29 +4934,14 @@ class _$_ClaimItem extends _ClaimItem {
       this.quantity,
       this.unitPrice,
       this.factor,
-      @JsonKey(name: '_factor')
-          this.factorElement,
+      @JsonKey(name: '_factor') this.factorElement,
       this.net,
-      final List<Reference>? udi,
+      this.udi,
       this.bodySite,
-      final List<CodeableConcept>? subSite,
-      final List<Reference>? encounter,
-      final List<ClaimDetail>? detail})
-      : _careTeamLinkId = careTeamLinkId,
-        _careTeamLinkIdElement = careTeamLinkIdElement,
-        _diagnosisLinkId = diagnosisLinkId,
-        _diagnosisLinkIdElement = diagnosisLinkIdElement,
-        _procedureLinkId = procedureLinkId,
-        _procedureLinkIdElement = procedureLinkIdElement,
-        _informationLinkId = informationLinkId,
-        _informationLinkIdElement = informationLinkIdElement,
-        _modifier = modifier,
-        _programCode = programCode,
-        _udi = udi,
-        _subSite = subSite,
-        _encounter = encounter,
-        _detail = detail,
-        super._();
+      this.subSite,
+      this.encounter,
+      this.detail})
+      : super._();
 
   factory _$_ClaimItem.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimItemFromJson(json);
@@ -5096,106 +4951,36 @@ class _$_ClaimItem extends _ClaimItem {
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
-  final List<Id>? _careTeamLinkId;
   @override
-  List<Id>? get careTeamLinkId {
-    final value = _careTeamLinkId;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _careTeamLinkIdElement;
+  final List<Id>? careTeamLinkId;
   @override
   @JsonKey(name: '_careTeamLinkId')
-  List<Element?>? get careTeamLinkIdElement {
-    final value = _careTeamLinkIdElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Id>? _diagnosisLinkId;
+  final List<Element?>? careTeamLinkIdElement;
   @override
-  List<Id>? get diagnosisLinkId {
-    final value = _diagnosisLinkId;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _diagnosisLinkIdElement;
+  final List<Id>? diagnosisLinkId;
   @override
   @JsonKey(name: '_diagnosisLinkId')
-  List<Element?>? get diagnosisLinkIdElement {
-    final value = _diagnosisLinkIdElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Id>? _procedureLinkId;
+  final List<Element?>? diagnosisLinkIdElement;
   @override
-  List<Id>? get procedureLinkId {
-    final value = _procedureLinkId;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _procedureLinkIdElement;
+  final List<Id>? procedureLinkId;
   @override
   @JsonKey(name: '_procedureLinkId')
-  List<Element?>? get procedureLinkIdElement {
-    final value = _procedureLinkIdElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Id>? _informationLinkId;
+  final List<Element?>? procedureLinkIdElement;
   @override
-  List<Id>? get informationLinkId {
-    final value = _informationLinkId;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _informationLinkIdElement;
+  final List<Id>? informationLinkId;
   @override
   @JsonKey(name: '_informationLinkId')
-  List<Element>? get informationLinkIdElement {
-    final value = _informationLinkIdElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element>? informationLinkIdElement;
   @override
   final CodeableConcept? revenue;
   @override
   final CodeableConcept? category;
   @override
   final CodeableConcept? service;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _programCode;
+  final List<CodeableConcept>? modifier;
   @override
-  List<CodeableConcept>? get programCode {
-    final value = _programCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? programCode;
   @override
   final Date? servicedDate;
   @override
@@ -5220,43 +5005,16 @@ class _$_ClaimItem extends _ClaimItem {
   final Element? factorElement;
   @override
   final Money? net;
-  final List<Reference>? _udi;
   @override
-  List<Reference>? get udi {
-    final value = _udi;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? udi;
   @override
   final CodeableConcept? bodySite;
-  final List<CodeableConcept>? _subSite;
   @override
-  List<CodeableConcept>? get subSite {
-    final value = _subSite;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _encounter;
+  final List<CodeableConcept>? subSite;
   @override
-  List<Reference>? get encounter {
-    final value = _encounter;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimDetail>? _detail;
+  final List<Reference>? encounter;
   @override
-  List<ClaimDetail>? get detail {
-    final value = _detail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimDetail>? detail;
 
   @override
   String toString() {
@@ -5273,28 +5031,28 @@ class _$_ClaimItem extends _ClaimItem {
             (identical(other.sequenceElement, sequenceElement) ||
                 other.sequenceElement == sequenceElement) &&
             const DeepCollectionEquality()
-                .equals(other._careTeamLinkId, _careTeamLinkId) &&
+                .equals(other.careTeamLinkId, careTeamLinkId) &&
             const DeepCollectionEquality()
-                .equals(other._careTeamLinkIdElement, _careTeamLinkIdElement) &&
+                .equals(other.careTeamLinkIdElement, careTeamLinkIdElement) &&
             const DeepCollectionEquality()
-                .equals(other._diagnosisLinkId, _diagnosisLinkId) &&
+                .equals(other.diagnosisLinkId, diagnosisLinkId) &&
+            const DeepCollectionEquality()
+                .equals(other.diagnosisLinkIdElement, diagnosisLinkIdElement) &&
+            const DeepCollectionEquality()
+                .equals(other.procedureLinkId, procedureLinkId) &&
+            const DeepCollectionEquality()
+                .equals(other.procedureLinkIdElement, procedureLinkIdElement) &&
+            const DeepCollectionEquality()
+                .equals(other.informationLinkId, informationLinkId) &&
             const DeepCollectionEquality().equals(
-                other._diagnosisLinkIdElement, _diagnosisLinkIdElement) &&
-            const DeepCollectionEquality()
-                .equals(other._procedureLinkId, _procedureLinkId) &&
-            const DeepCollectionEquality().equals(
-                other._procedureLinkIdElement, _procedureLinkIdElement) &&
-            const DeepCollectionEquality()
-                .equals(other._informationLinkId, _informationLinkId) &&
-            const DeepCollectionEquality().equals(
-                other._informationLinkIdElement, _informationLinkIdElement) &&
+                other.informationLinkIdElement, informationLinkIdElement) &&
             (identical(other.revenue, revenue) || other.revenue == revenue) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.service, service) || other.service == service) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             const DeepCollectionEquality()
-                .equals(other._programCode, _programCode) &&
+                .equals(other.programCode, programCode) &&
             (identical(other.servicedDate, servicedDate) ||
                 other.servicedDate == servicedDate) &&
             (identical(other.servicedDateElement, servicedDateElement) ||
@@ -5316,13 +5074,12 @@ class _$_ClaimItem extends _ClaimItem {
             (identical(other.factorElement, factorElement) ||
                 other.factorElement == factorElement) &&
             (identical(other.net, net) || other.net == net) &&
-            const DeepCollectionEquality().equals(other._udi, _udi) &&
+            const DeepCollectionEquality().equals(other.udi, udi) &&
             (identical(other.bodySite, bodySite) ||
                 other.bodySite == bodySite) &&
-            const DeepCollectionEquality().equals(other._subSite, _subSite) &&
-            const DeepCollectionEquality()
-                .equals(other._encounter, _encounter) &&
-            const DeepCollectionEquality().equals(other._detail, _detail));
+            const DeepCollectionEquality().equals(other.subSite, subSite) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality().equals(other.detail, detail));
   }
 
   @JsonKey(ignore: true)
@@ -5331,19 +5088,19 @@ class _$_ClaimItem extends _ClaimItem {
         runtimeType,
         sequence,
         sequenceElement,
-        const DeepCollectionEquality().hash(_careTeamLinkId),
-        const DeepCollectionEquality().hash(_careTeamLinkIdElement),
-        const DeepCollectionEquality().hash(_diagnosisLinkId),
-        const DeepCollectionEquality().hash(_diagnosisLinkIdElement),
-        const DeepCollectionEquality().hash(_procedureLinkId),
-        const DeepCollectionEquality().hash(_procedureLinkIdElement),
-        const DeepCollectionEquality().hash(_informationLinkId),
-        const DeepCollectionEquality().hash(_informationLinkIdElement),
+        const DeepCollectionEquality().hash(careTeamLinkId),
+        const DeepCollectionEquality().hash(careTeamLinkIdElement),
+        const DeepCollectionEquality().hash(diagnosisLinkId),
+        const DeepCollectionEquality().hash(diagnosisLinkIdElement),
+        const DeepCollectionEquality().hash(procedureLinkId),
+        const DeepCollectionEquality().hash(procedureLinkIdElement),
+        const DeepCollectionEquality().hash(informationLinkId),
+        const DeepCollectionEquality().hash(informationLinkIdElement),
         revenue,
         category,
         service,
-        const DeepCollectionEquality().hash(_modifier),
-        const DeepCollectionEquality().hash(_programCode),
+        const DeepCollectionEquality().hash(modifier),
+        const DeepCollectionEquality().hash(programCode),
         servicedDate,
         servicedDateElement,
         servicedPeriod,
@@ -5355,11 +5112,11 @@ class _$_ClaimItem extends _ClaimItem {
         factor,
         factorElement,
         net,
-        const DeepCollectionEquality().hash(_udi),
+        const DeepCollectionEquality().hash(udi),
         bodySite,
-        const DeepCollectionEquality().hash(_subSite),
-        const DeepCollectionEquality().hash(_encounter),
-        const DeepCollectionEquality().hash(_detail)
+        const DeepCollectionEquality().hash(subSite),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(detail)
       ]);
 
   @JsonKey(ignore: true)
@@ -5832,11 +5589,11 @@ class __$$_ClaimDetailCopyWithImpl<$Res>
           : service // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       programCode: freezed == programCode
-          ? _value._programCode
+          ? _value.programCode
           : programCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       quantity: freezed == quantity
@@ -5860,11 +5617,11 @@ class __$$_ClaimDetailCopyWithImpl<$Res>
           : net // ignore: cast_nullable_to_non_nullable
               as Money?,
       udi: freezed == udi
-          ? _value._udi
+          ? _value.udi
           : udi // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       subDetail: freezed == subDetail
-          ? _value._subDetail
+          ? _value.subDetail
           : subDetail // ignore: cast_nullable_to_non_nullable
               as List<ClaimSubDetail>?,
     ));
@@ -5880,20 +5637,16 @@ class _$_ClaimDetail extends _ClaimDetail {
       this.revenue,
       this.category,
       this.service,
-      final List<CodeableConcept>? modifier,
-      final List<CodeableConcept>? programCode,
+      this.modifier,
+      this.programCode,
       this.quantity,
       this.unitPrice,
       this.factor,
       @JsonKey(name: '_factor') this.factorElement,
       this.net,
-      final List<Reference>? udi,
-      final List<ClaimSubDetail>? subDetail})
-      : _modifier = modifier,
-        _programCode = programCode,
-        _udi = udi,
-        _subDetail = subDetail,
-        super._();
+      this.udi,
+      this.subDetail})
+      : super._();
 
   factory _$_ClaimDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimDetailFromJson(json);
@@ -5909,24 +5662,10 @@ class _$_ClaimDetail extends _ClaimDetail {
   final CodeableConcept? category;
   @override
   final CodeableConcept? service;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _programCode;
+  final List<CodeableConcept>? modifier;
   @override
-  List<CodeableConcept>? get programCode {
-    final value = _programCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? programCode;
   @override
   final Quantity? quantity;
   @override
@@ -5938,23 +5677,10 @@ class _$_ClaimDetail extends _ClaimDetail {
   final Element? factorElement;
   @override
   final Money? net;
-  final List<Reference>? _udi;
   @override
-  List<Reference>? get udi {
-    final value = _udi;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimSubDetail>? _subDetail;
+  final List<Reference>? udi;
   @override
-  List<ClaimSubDetail>? get subDetail {
-    final value = _subDetail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimSubDetail>? subDetail;
 
   @override
   String toString() {
@@ -5974,9 +5700,9 @@ class _$_ClaimDetail extends _ClaimDetail {
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.service, service) || other.service == service) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             const DeepCollectionEquality()
-                .equals(other._programCode, _programCode) &&
+                .equals(other.programCode, programCode) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.unitPrice, unitPrice) ||
@@ -5985,9 +5711,8 @@ class _$_ClaimDetail extends _ClaimDetail {
             (identical(other.factorElement, factorElement) ||
                 other.factorElement == factorElement) &&
             (identical(other.net, net) || other.net == net) &&
-            const DeepCollectionEquality().equals(other._udi, _udi) &&
-            const DeepCollectionEquality()
-                .equals(other._subDetail, _subDetail));
+            const DeepCollectionEquality().equals(other.udi, udi) &&
+            const DeepCollectionEquality().equals(other.subDetail, subDetail));
   }
 
   @JsonKey(ignore: true)
@@ -5999,15 +5724,15 @@ class _$_ClaimDetail extends _ClaimDetail {
       revenue,
       category,
       service,
-      const DeepCollectionEquality().hash(_modifier),
-      const DeepCollectionEquality().hash(_programCode),
+      const DeepCollectionEquality().hash(modifier),
+      const DeepCollectionEquality().hash(programCode),
       quantity,
       unitPrice,
       factor,
       factorElement,
       net,
-      const DeepCollectionEquality().hash(_udi),
-      const DeepCollectionEquality().hash(_subDetail));
+      const DeepCollectionEquality().hash(udi),
+      const DeepCollectionEquality().hash(subDetail));
 
   @JsonKey(ignore: true)
   @override
@@ -6407,11 +6132,11 @@ class __$$_ClaimSubDetailCopyWithImpl<$Res>
           : service // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       programCode: freezed == programCode
-          ? _value._programCode
+          ? _value.programCode
           : programCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       quantity: freezed == quantity
@@ -6435,7 +6160,7 @@ class __$$_ClaimSubDetailCopyWithImpl<$Res>
           : net // ignore: cast_nullable_to_non_nullable
               as Money?,
       udi: freezed == udi
-          ? _value._udi
+          ? _value.udi
           : udi // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -6451,18 +6176,15 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
       this.revenue,
       this.category,
       this.service,
-      final List<CodeableConcept>? modifier,
-      final List<CodeableConcept>? programCode,
+      this.modifier,
+      this.programCode,
       this.quantity,
       this.unitPrice,
       this.factor,
       @JsonKey(name: '_factor') this.factorElement,
       this.net,
-      final List<Reference>? udi})
-      : _modifier = modifier,
-        _programCode = programCode,
-        _udi = udi,
-        super._();
+      this.udi})
+      : super._();
 
   factory _$_ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimSubDetailFromJson(json);
@@ -6478,24 +6200,10 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   final CodeableConcept? category;
   @override
   final CodeableConcept? service;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _programCode;
+  final List<CodeableConcept>? modifier;
   @override
-  List<CodeableConcept>? get programCode {
-    final value = _programCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? programCode;
   @override
   final Quantity? quantity;
   @override
@@ -6507,14 +6215,8 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
   final Element? factorElement;
   @override
   final Money? net;
-  final List<Reference>? _udi;
   @override
-  List<Reference>? get udi {
-    final value = _udi;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? udi;
 
   @override
   String toString() {
@@ -6534,9 +6236,9 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.service, service) || other.service == service) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             const DeepCollectionEquality()
-                .equals(other._programCode, _programCode) &&
+                .equals(other.programCode, programCode) &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.unitPrice, unitPrice) ||
@@ -6545,7 +6247,7 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
             (identical(other.factorElement, factorElement) ||
                 other.factorElement == factorElement) &&
             (identical(other.net, net) || other.net == net) &&
-            const DeepCollectionEquality().equals(other._udi, _udi));
+            const DeepCollectionEquality().equals(other.udi, udi));
   }
 
   @JsonKey(ignore: true)
@@ -6557,14 +6259,14 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
       revenue,
       category,
       service,
-      const DeepCollectionEquality().hash(_modifier),
-      const DeepCollectionEquality().hash(_programCode),
+      const DeepCollectionEquality().hash(modifier),
+      const DeepCollectionEquality().hash(programCode),
       quantity,
       unitPrice,
       factor,
       factorElement,
       net,
-      const DeepCollectionEquality().hash(_udi));
+      const DeepCollectionEquality().hash(udi));
 
   @JsonKey(ignore: true)
   @override
@@ -7392,19 +7094,19 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -7460,15 +7162,15 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
           : payeeType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseItem>?,
       addItem: freezed == addItem
-          ? _value._addItem
+          ? _value.addItem
           : addItem // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseAddItem>?,
       error: freezed == error
-          ? _value._error
+          ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseError>?,
       totalCost: freezed == totalCost
@@ -7496,15 +7198,15 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
           : form // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       processNote: freezed == processNote
-          ? _value._processNote
+          ? _value.processNote
           : processNote // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseProcessNote>?,
       communicationRequest: freezed == communicationRequest
-          ? _value._communicationRequest
+          ? _value.communicationRequest
           : communicationRequest // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       insurance: freezed == insurance
-          ? _value._insurance
+          ? _value.insurance
           : insurance // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseInsurance>?,
     ));
@@ -7526,11 +7228,11 @@ class _$_ClaimResponse extends _ClaimResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -7547,29 +7249,19 @@ class _$_ClaimResponse extends _ClaimResponse {
       @JsonKey(name: '_disposition')
           this.dispositionElement,
       this.payeeType,
-      final List<ClaimResponseItem>? item,
-      final List<ClaimResponseAddItem>? addItem,
-      final List<ClaimResponseError>? error,
+      this.item,
+      this.addItem,
+      this.error,
       this.totalCost,
       this.unallocDeductable,
       this.totalBenefit,
       this.payment,
       this.reserved,
       this.form,
-      final List<ClaimResponseProcessNote>? processNote,
-      final List<Reference>? communicationRequest,
-      final List<ClaimResponseInsurance>? insurance})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _item = item,
-        _addItem = addItem,
-        _error = error,
-        _processNote = processNote,
-        _communicationRequest = communicationRequest,
-        _insurance = insurance,
-        super._();
+      this.processNote,
+      this.communicationRequest,
+      this.insurance})
+      : super._();
 
   factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseFromJson(json);
@@ -7593,43 +7285,15 @@ class _$_ClaimResponse extends _ClaimResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? status;
   @override
@@ -7659,33 +7323,12 @@ class _$_ClaimResponse extends _ClaimResponse {
   final Element? dispositionElement;
   @override
   final CodeableConcept? payeeType;
-  final List<ClaimResponseItem>? _item;
   @override
-  List<ClaimResponseItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseAddItem>? _addItem;
+  final List<ClaimResponseItem>? item;
   @override
-  List<ClaimResponseAddItem>? get addItem {
-    final value = _addItem;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseError>? _error;
+  final List<ClaimResponseAddItem>? addItem;
   @override
-  List<ClaimResponseError>? get error {
-    final value = _error;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ClaimResponseError>? error;
   @override
   final Money? totalCost;
   @override
@@ -7698,32 +7341,12 @@ class _$_ClaimResponse extends _ClaimResponse {
   final Coding? reserved;
   @override
   final CodeableConcept? form;
-  final List<ClaimResponseProcessNote>? _processNote;
   @override
-  List<ClaimResponseProcessNote>? get processNote {
-    final value = _processNote;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _communicationRequest;
+  final List<ClaimResponseProcessNote>? processNote;
   @override
-  List<Reference>? get communicationRequest {
-    final value = _communicationRequest;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseInsurance>? _insurance;
+  final List<Reference>? communicationRequest;
   @override
-  List<ClaimResponseInsurance>? get insurance {
-    final value = _insurance;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimResponseInsurance>? insurance;
 
   @override
   String toString() {
@@ -7748,14 +7371,13 @@ class _$_ClaimResponse extends _ClaimResponse {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -7776,9 +7398,9 @@ class _$_ClaimResponse extends _ClaimResponse {
                 other.dispositionElement == dispositionElement) &&
             (identical(other.payeeType, payeeType) ||
                 other.payeeType == payeeType) &&
-            const DeepCollectionEquality().equals(other._item, _item) &&
-            const DeepCollectionEquality().equals(other._addItem, _addItem) &&
-            const DeepCollectionEquality().equals(other._error, _error) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
+            const DeepCollectionEquality().equals(other.addItem, addItem) &&
+            const DeepCollectionEquality().equals(other.error, error) &&
             (identical(other.totalCost, totalCost) ||
                 other.totalCost == totalCost) &&
             (identical(other.unallocDeductable, unallocDeductable) ||
@@ -7790,11 +7412,10 @@ class _$_ClaimResponse extends _ClaimResponse {
                 other.reserved == reserved) &&
             (identical(other.form, form) || other.form == form) &&
             const DeepCollectionEquality()
-                .equals(other._processNote, _processNote) &&
+                .equals(other.processNote, processNote) &&
             const DeepCollectionEquality()
-                .equals(other._communicationRequest, _communicationRequest) &&
-            const DeepCollectionEquality()
-                .equals(other._insurance, _insurance));
+                .equals(other.communicationRequest, communicationRequest) &&
+            const DeepCollectionEquality().equals(other.insurance, insurance));
   }
 
   @JsonKey(ignore: true)
@@ -7809,10 +7430,10 @@ class _$_ClaimResponse extends _ClaimResponse {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         patient,
@@ -7826,18 +7447,18 @@ class _$_ClaimResponse extends _ClaimResponse {
         disposition,
         dispositionElement,
         payeeType,
-        const DeepCollectionEquality().hash(_item),
-        const DeepCollectionEquality().hash(_addItem),
-        const DeepCollectionEquality().hash(_error),
+        const DeepCollectionEquality().hash(item),
+        const DeepCollectionEquality().hash(addItem),
+        const DeepCollectionEquality().hash(error),
         totalCost,
         unallocDeductable,
         totalBenefit,
         payment,
         reserved,
         form,
-        const DeepCollectionEquality().hash(_processNote),
-        const DeepCollectionEquality().hash(_communicationRequest),
-        const DeepCollectionEquality().hash(_insurance)
+        const DeepCollectionEquality().hash(processNote),
+        const DeepCollectionEquality().hash(communicationRequest),
+        const DeepCollectionEquality().hash(insurance)
       ]);
 
   @JsonKey(ignore: true)
@@ -8140,19 +7761,19 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       noteNumber: freezed == noteNumber
-          ? _value._noteNumber
+          ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       noteNumberElement: freezed == noteNumberElement
-          ? _value._noteNumberElement
+          ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       adjudication: freezed == adjudication
-          ? _value._adjudication
+          ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseAdjudication>?,
       detail: freezed == detail
-          ? _value._detail
+          ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseDetail>?,
     ));
@@ -8165,15 +7786,11 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   _$_ClaimResponseItem(
       {this.sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
-      final List<Decimal>? noteNumber,
-      @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
-      final List<ClaimResponseAdjudication>? adjudication,
-      final List<ClaimResponseDetail>? detail})
-      : _noteNumber = noteNumber,
-        _noteNumberElement = noteNumberElement,
-        _adjudication = adjudication,
-        _detail = detail,
-        super._();
+      this.noteNumber,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement,
+      this.adjudication,
+      this.detail})
+      : super._();
 
   factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseItemFromJson(json);
@@ -8183,42 +7800,15 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
-  final List<Decimal>? _noteNumber;
   @override
-  List<Decimal>? get noteNumber {
-    final value = _noteNumber;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _noteNumberElement;
+  final List<Decimal>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement {
-    final value = _noteNumberElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseAdjudication>? _adjudication;
+  final List<Element?>? noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication {
-    final value = _adjudication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseDetail>? _detail;
+  final List<ClaimResponseAdjudication>? adjudication;
   @override
-  List<ClaimResponseDetail>? get detail {
-    final value = _detail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimResponseDetail>? detail;
 
   @override
   String toString() {
@@ -8235,12 +7825,12 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
             (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
                 other.sequenceLinkIdElement == sequenceLinkIdElement) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumber, _noteNumber) &&
+                .equals(other.noteNumber, noteNumber) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumberElement, _noteNumberElement) &&
+                .equals(other.noteNumberElement, noteNumberElement) &&
             const DeepCollectionEquality()
-                .equals(other._adjudication, _adjudication) &&
-            const DeepCollectionEquality().equals(other._detail, _detail));
+                .equals(other.adjudication, adjudication) &&
+            const DeepCollectionEquality().equals(other.detail, detail));
   }
 
   @JsonKey(ignore: true)
@@ -8249,10 +7839,10 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       runtimeType,
       sequenceLinkId,
       sequenceLinkIdElement,
-      const DeepCollectionEquality().hash(_noteNumber),
-      const DeepCollectionEquality().hash(_noteNumberElement),
-      const DeepCollectionEquality().hash(_adjudication),
-      const DeepCollectionEquality().hash(_detail));
+      const DeepCollectionEquality().hash(noteNumber),
+      const DeepCollectionEquality().hash(noteNumberElement),
+      const DeepCollectionEquality().hash(adjudication),
+      const DeepCollectionEquality().hash(detail));
 
   @JsonKey(ignore: true)
   @override
@@ -8744,19 +8334,19 @@ class __$$_ClaimResponseDetailCopyWithImpl<$Res>
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       noteNumber: freezed == noteNumber
-          ? _value._noteNumber
+          ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       noteNumberElement: freezed == noteNumberElement
-          ? _value._noteNumberElement
+          ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       adjudication: freezed == adjudication
-          ? _value._adjudication
+          ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseAdjudication>?,
       subDetail: freezed == subDetail
-          ? _value._subDetail
+          ? _value.subDetail
           : subDetail // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseSubDetail>?,
     ));
@@ -8769,15 +8359,11 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   _$_ClaimResponseDetail(
       {this.sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
-      final List<Decimal>? noteNumber,
-      @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
-      final List<ClaimResponseAdjudication>? adjudication,
-      final List<ClaimResponseSubDetail>? subDetail})
-      : _noteNumber = noteNumber,
-        _noteNumberElement = noteNumberElement,
-        _adjudication = adjudication,
-        _subDetail = subDetail,
-        super._();
+      this.noteNumber,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement,
+      this.adjudication,
+      this.subDetail})
+      : super._();
 
   factory _$_ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseDetailFromJson(json);
@@ -8787,42 +8373,15 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
-  final List<Decimal>? _noteNumber;
   @override
-  List<Decimal>? get noteNumber {
-    final value = _noteNumber;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _noteNumberElement;
+  final List<Decimal>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement {
-    final value = _noteNumberElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseAdjudication>? _adjudication;
+  final List<Element?>? noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication {
-    final value = _adjudication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseSubDetail>? _subDetail;
+  final List<ClaimResponseAdjudication>? adjudication;
   @override
-  List<ClaimResponseSubDetail>? get subDetail {
-    final value = _subDetail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimResponseSubDetail>? subDetail;
 
   @override
   String toString() {
@@ -8839,13 +8398,12 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
             (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
                 other.sequenceLinkIdElement == sequenceLinkIdElement) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumber, _noteNumber) &&
+                .equals(other.noteNumber, noteNumber) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumberElement, _noteNumberElement) &&
+                .equals(other.noteNumberElement, noteNumberElement) &&
             const DeepCollectionEquality()
-                .equals(other._adjudication, _adjudication) &&
-            const DeepCollectionEquality()
-                .equals(other._subDetail, _subDetail));
+                .equals(other.adjudication, adjudication) &&
+            const DeepCollectionEquality().equals(other.subDetail, subDetail));
   }
 
   @JsonKey(ignore: true)
@@ -8854,10 +8412,10 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
       runtimeType,
       sequenceLinkId,
       sequenceLinkIdElement,
-      const DeepCollectionEquality().hash(_noteNumber),
-      const DeepCollectionEquality().hash(_noteNumberElement),
-      const DeepCollectionEquality().hash(_adjudication),
-      const DeepCollectionEquality().hash(_subDetail));
+      const DeepCollectionEquality().hash(noteNumber),
+      const DeepCollectionEquality().hash(noteNumberElement),
+      const DeepCollectionEquality().hash(adjudication),
+      const DeepCollectionEquality().hash(subDetail));
 
   @JsonKey(ignore: true)
   @override
@@ -9049,15 +8607,15 @@ class __$$_ClaimResponseSubDetailCopyWithImpl<$Res>
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       noteNumber: freezed == noteNumber
-          ? _value._noteNumber
+          ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       noteNumberElement: freezed == noteNumberElement
-          ? _value._noteNumberElement
+          ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       adjudication: freezed == adjudication
-          ? _value._adjudication
+          ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseAdjudication>?,
     ));
@@ -9070,13 +8628,10 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   _$_ClaimResponseSubDetail(
       {this.sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
-      final List<Decimal>? noteNumber,
-      @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
-      final List<ClaimResponseAdjudication>? adjudication})
-      : _noteNumber = noteNumber,
-        _noteNumberElement = noteNumberElement,
-        _adjudication = adjudication,
-        super._();
+      this.noteNumber,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement,
+      this.adjudication})
+      : super._();
 
   factory _$_ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseSubDetailFromJson(json);
@@ -9086,33 +8641,13 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
-  final List<Decimal>? _noteNumber;
   @override
-  List<Decimal>? get noteNumber {
-    final value = _noteNumber;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _noteNumberElement;
+  final List<Decimal>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement {
-    final value = _noteNumberElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseAdjudication>? _adjudication;
+  final List<Element?>? noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication {
-    final value = _adjudication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimResponseAdjudication>? adjudication;
 
   @override
   String toString() {
@@ -9129,11 +8664,11 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
             (identical(other.sequenceLinkIdElement, sequenceLinkIdElement) ||
                 other.sequenceLinkIdElement == sequenceLinkIdElement) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumber, _noteNumber) &&
+                .equals(other.noteNumber, noteNumber) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumberElement, _noteNumberElement) &&
+                .equals(other.noteNumberElement, noteNumberElement) &&
             const DeepCollectionEquality()
-                .equals(other._adjudication, _adjudication));
+                .equals(other.adjudication, adjudication));
   }
 
   @JsonKey(ignore: true)
@@ -9142,9 +8677,9 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
       runtimeType,
       sequenceLinkId,
       sequenceLinkIdElement,
-      const DeepCollectionEquality().hash(_noteNumber),
-      const DeepCollectionEquality().hash(_noteNumberElement),
-      const DeepCollectionEquality().hash(_adjudication));
+      const DeepCollectionEquality().hash(noteNumber),
+      const DeepCollectionEquality().hash(noteNumberElement),
+      const DeepCollectionEquality().hash(adjudication));
 
   @JsonKey(ignore: true)
   @override
@@ -9424,11 +8959,11 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
   }) {
     return _then(_$_ClaimResponseAddItem(
       sequenceLinkId: freezed == sequenceLinkId
-          ? _value._sequenceLinkId
+          ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
-          ? _value._sequenceLinkIdElement
+          ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       revenue: freezed == revenue
@@ -9444,7 +8979,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
           : service // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       fee: freezed == fee
@@ -9452,19 +8987,19 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
           : fee // ignore: cast_nullable_to_non_nullable
               as Money?,
       noteNumber: freezed == noteNumber
-          ? _value._noteNumber
+          ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       noteNumberElement: freezed == noteNumberElement
-          ? _value._noteNumberElement
+          ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       adjudication: freezed == adjudication
-          ? _value._adjudication
+          ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseAdjudication>?,
       detail: freezed == detail
-          ? _value._detail
+          ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseDetail1>?,
     ));
@@ -9475,103 +9010,46 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   _$_ClaimResponseAddItem(
-      {final List<Id>? sequenceLinkId,
-      @JsonKey(name: '_sequenceLinkId')
-          final List<Element?>? sequenceLinkIdElement,
+      {this.sequenceLinkId,
+      @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
       this.revenue,
       this.category,
       this.service,
-      final List<CodeableConcept>? modifier,
+      this.modifier,
       this.fee,
-      final List<Decimal>? noteNumber,
-      @JsonKey(name: '_noteNumber')
-          final List<Element?>? noteNumberElement,
-      final List<ClaimResponseAdjudication>? adjudication,
-      final List<ClaimResponseDetail1>? detail})
-      : _sequenceLinkId = sequenceLinkId,
-        _sequenceLinkIdElement = sequenceLinkIdElement,
-        _modifier = modifier,
-        _noteNumber = noteNumber,
-        _noteNumberElement = noteNumberElement,
-        _adjudication = adjudication,
-        _detail = detail,
-        super._();
+      this.noteNumber,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement,
+      this.adjudication,
+      this.detail})
+      : super._();
 
   factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseAddItemFromJson(json);
 
-  final List<Id>? _sequenceLinkId;
   @override
-  List<Id>? get sequenceLinkId {
-    final value = _sequenceLinkId;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _sequenceLinkIdElement;
+  final List<Id>? sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
-  List<Element?>? get sequenceLinkIdElement {
-    final value = _sequenceLinkIdElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? sequenceLinkIdElement;
   @override
   final CodeableConcept? revenue;
   @override
   final CodeableConcept? category;
   @override
   final CodeableConcept? service;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? modifier;
   @override
   final Money? fee;
-  final List<Decimal>? _noteNumber;
   @override
-  List<Decimal>? get noteNumber {
-    final value = _noteNumber;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _noteNumberElement;
+  final List<Decimal>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement {
-    final value = _noteNumberElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseAdjudication>? _adjudication;
+  final List<Element?>? noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication {
-    final value = _adjudication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseDetail1>? _detail;
+  final List<ClaimResponseAdjudication>? adjudication;
   @override
-  List<ClaimResponseDetail1>? get detail {
-    final value = _detail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimResponseDetail1>? detail;
 
   @override
   String toString() {
@@ -9584,39 +9062,39 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
         (other.runtimeType == runtimeType &&
             other is _$_ClaimResponseAddItem &&
             const DeepCollectionEquality()
-                .equals(other._sequenceLinkId, _sequenceLinkId) &&
+                .equals(other.sequenceLinkId, sequenceLinkId) &&
             const DeepCollectionEquality()
-                .equals(other._sequenceLinkIdElement, _sequenceLinkIdElement) &&
+                .equals(other.sequenceLinkIdElement, sequenceLinkIdElement) &&
             (identical(other.revenue, revenue) || other.revenue == revenue) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.service, service) || other.service == service) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             (identical(other.fee, fee) || other.fee == fee) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumber, _noteNumber) &&
+                .equals(other.noteNumber, noteNumber) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumberElement, _noteNumberElement) &&
+                .equals(other.noteNumberElement, noteNumberElement) &&
             const DeepCollectionEquality()
-                .equals(other._adjudication, _adjudication) &&
-            const DeepCollectionEquality().equals(other._detail, _detail));
+                .equals(other.adjudication, adjudication) &&
+            const DeepCollectionEquality().equals(other.detail, detail));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_sequenceLinkId),
-      const DeepCollectionEquality().hash(_sequenceLinkIdElement),
+      const DeepCollectionEquality().hash(sequenceLinkId),
+      const DeepCollectionEquality().hash(sequenceLinkIdElement),
       revenue,
       category,
       service,
-      const DeepCollectionEquality().hash(_modifier),
+      const DeepCollectionEquality().hash(modifier),
       fee,
-      const DeepCollectionEquality().hash(_noteNumber),
-      const DeepCollectionEquality().hash(_noteNumberElement),
-      const DeepCollectionEquality().hash(_adjudication),
-      const DeepCollectionEquality().hash(_detail));
+      const DeepCollectionEquality().hash(noteNumber),
+      const DeepCollectionEquality().hash(noteNumberElement),
+      const DeepCollectionEquality().hash(adjudication),
+      const DeepCollectionEquality().hash(detail));
 
   @JsonKey(ignore: true)
   @override
@@ -9898,7 +9376,7 @@ class __$$_ClaimResponseDetail1CopyWithImpl<$Res>
           : service // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       fee: freezed == fee
@@ -9906,15 +9384,15 @@ class __$$_ClaimResponseDetail1CopyWithImpl<$Res>
           : fee // ignore: cast_nullable_to_non_nullable
               as Money?,
       noteNumber: freezed == noteNumber
-          ? _value._noteNumber
+          ? _value.noteNumber
           : noteNumber // ignore: cast_nullable_to_non_nullable
               as List<Decimal>?,
       noteNumberElement: freezed == noteNumberElement
-          ? _value._noteNumberElement
+          ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       adjudication: freezed == adjudication
-          ? _value._adjudication
+          ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
               as List<ClaimResponseAdjudication>?,
     ));
@@ -9928,16 +9406,12 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
       {this.revenue,
       this.category,
       this.service,
-      final List<CodeableConcept>? modifier,
+      this.modifier,
       this.fee,
-      final List<Decimal>? noteNumber,
-      @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
-      final List<ClaimResponseAdjudication>? adjudication})
-      : _modifier = modifier,
-        _noteNumber = noteNumber,
-        _noteNumberElement = noteNumberElement,
-        _adjudication = adjudication,
-        super._();
+      this.noteNumber,
+      @JsonKey(name: '_noteNumber') this.noteNumberElement,
+      this.adjudication})
+      : super._();
 
   factory _$_ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseDetail1FromJson(json);
@@ -9948,44 +9422,17 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
   final CodeableConcept? category;
   @override
   final CodeableConcept? service;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? modifier;
   @override
   final Money? fee;
-  final List<Decimal>? _noteNumber;
   @override
-  List<Decimal>? get noteNumber {
-    final value = _noteNumber;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _noteNumberElement;
+  final List<Decimal>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement {
-    final value = _noteNumberElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ClaimResponseAdjudication>? _adjudication;
+  final List<Element?>? noteNumberElement;
   @override
-  List<ClaimResponseAdjudication>? get adjudication {
-    final value = _adjudication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ClaimResponseAdjudication>? adjudication;
 
   @override
   String toString() {
@@ -10001,14 +9448,14 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.service, service) || other.service == service) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             (identical(other.fee, fee) || other.fee == fee) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumber, _noteNumber) &&
+                .equals(other.noteNumber, noteNumber) &&
             const DeepCollectionEquality()
-                .equals(other._noteNumberElement, _noteNumberElement) &&
+                .equals(other.noteNumberElement, noteNumberElement) &&
             const DeepCollectionEquality()
-                .equals(other._adjudication, _adjudication));
+                .equals(other.adjudication, adjudication));
   }
 
   @JsonKey(ignore: true)
@@ -10018,11 +9465,11 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
       revenue,
       category,
       service,
-      const DeepCollectionEquality().hash(_modifier),
+      const DeepCollectionEquality().hash(modifier),
       fee,
-      const DeepCollectionEquality().hash(_noteNumber),
-      const DeepCollectionEquality().hash(_noteNumberElement),
-      const DeepCollectionEquality().hash(_adjudication));
+      const DeepCollectionEquality().hash(noteNumber),
+      const DeepCollectionEquality().hash(noteNumberElement),
+      const DeepCollectionEquality().hash(adjudication));
 
   @JsonKey(ignore: true)
   @override
@@ -11398,11 +10845,11 @@ class __$$_ClaimResponseInsuranceCopyWithImpl<$Res>
           : businessArrangementElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       preAuthRef: freezed == preAuthRef
-          ? _value._preAuthRef
+          ? _value.preAuthRef
           : preAuthRef // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       preAuthRefElement: freezed == preAuthRefElement
-          ? _value._preAuthRefElement
+          ? _value.preAuthRefElement
           : preAuthRefElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       claimResponse: freezed == claimResponse
@@ -11424,12 +10871,10 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
       required this.coverage,
       this.businessArrangement,
       @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
-      final List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef') final List<Element?>? preAuthRefElement,
+      this.preAuthRef,
+      @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
       this.claimResponse})
-      : _preAuthRef = preAuthRef,
-        _preAuthRefElement = preAuthRefElement,
-        super._();
+      : super._();
 
   factory _$_ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseInsuranceFromJson(json);
@@ -11451,25 +10896,11 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
   @override
   @JsonKey(name: '_businessArrangement')
   final Element? businessArrangementElement;
-  final List<String>? _preAuthRef;
   @override
-  List<String>? get preAuthRef {
-    final value = _preAuthRef;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _preAuthRefElement;
+  final List<String>? preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  List<Element?>? get preAuthRefElement {
-    final value = _preAuthRefElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? preAuthRefElement;
   @override
   final Reference? claimResponse;
 
@@ -11499,9 +10930,9 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
                 other.businessArrangementElement ==
                     businessArrangementElement) &&
             const DeepCollectionEquality()
-                .equals(other._preAuthRef, _preAuthRef) &&
+                .equals(other.preAuthRef, preAuthRef) &&
             const DeepCollectionEquality()
-                .equals(other._preAuthRefElement, _preAuthRefElement) &&
+                .equals(other.preAuthRefElement, preAuthRefElement) &&
             (identical(other.claimResponse, claimResponse) ||
                 other.claimResponse == claimResponse));
   }
@@ -11517,8 +10948,8 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
       coverage,
       businessArrangement,
       businessArrangementElement,
-      const DeepCollectionEquality().hash(_preAuthRef),
-      const DeepCollectionEquality().hash(_preAuthRefElement),
+      const DeepCollectionEquality().hash(preAuthRef),
+      const DeepCollectionEquality().hash(preAuthRefElement),
       claimResponse);
 
   @JsonKey(ignore: true)

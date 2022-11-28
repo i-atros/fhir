@@ -953,15 +953,15 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -973,7 +973,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -1001,19 +1001,19 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : titleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       label: freezed == label
-          ? _value._label
+          ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyLabel>?,
       protocol: freezed == protocol
-          ? _value._protocol
+          ? _value.protocol
           : protocol // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: freezed == partOf
-          ? _value._partOf
+          ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       date: freezed == date
@@ -1041,23 +1041,23 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : phase // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       category: freezed == category
-          ? _value._category
+          ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       focus: freezed == focus
-          ? _value._focus
+          ? _value.focus
           : focus // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyFocus>?,
       condition: freezed == condition
-          ? _value._condition
+          ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       keyword: freezed == keyword
-          ? _value._keyword
+          ? _value.keyword
           : keyword // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       location: freezed == location
-          ? _value._location
+          ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       descriptionSummary: freezed == descriptionSummary
@@ -1081,7 +1081,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       sponsor: freezed == sponsor
@@ -1093,27 +1093,27 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : principalInvestigator // ignore: cast_nullable_to_non_nullable
               as Reference?,
       site: freezed == site
-          ? _value._site
+          ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       classification: freezed == classification
-          ? _value._classification
+          ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyClassification>?,
       associatedParty: freezed == associatedParty
-          ? _value._associatedParty
+          ? _value.associatedParty
           : associatedParty // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyAssociatedParty>?,
       currentState: freezed == currentState
-          ? _value._currentState
+          ? _value.currentState
           : currentState // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       statusDate: freezed == statusDate
-          ? _value._statusDate
+          ? _value.statusDate
           : statusDate // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyStatusDate>?,
       whyStopped: freezed == whyStopped
@@ -1125,23 +1125,23 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           : recruitment // ignore: cast_nullable_to_non_nullable
               as ResearchStudyRecruitment?,
       comparisonGroup: freezed == comparisonGroup
-          ? _value._comparisonGroup
+          ? _value.comparisonGroup
           : comparisonGroup // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyComparisonGroup>?,
       objective: freezed == objective
-          ? _value._objective
+          ? _value.objective
           : objective // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyObjective>?,
       outcomeMeasure: freezed == outcomeMeasure
-          ? _value._outcomeMeasure
+          ? _value.outcomeMeasure
           : outcomeMeasure // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyOutcomeMeasure>?,
       result: freezed == result
-          ? _value._result
+          ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       webLocation: freezed == webLocation
-          ? _value._webLocation
+          ? _value.webLocation
           : webLocation // ignore: cast_nullable_to_non_nullable
               as List<ResearchStudyWebLocation>?,
     ));
@@ -1163,14 +1163,14 @@ class _$_ResearchStudy extends _ResearchStudy {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -1180,10 +1180,10 @@ class _$_ResearchStudy extends _ResearchStudy {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      final List<ResearchStudyLabel>? label,
-      final List<Reference>? protocol,
-      final List<Reference>? partOf,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.label,
+      this.protocol,
+      this.partOf,
+      this.relatedArtifact,
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
@@ -1193,11 +1193,11 @@ class _$_ResearchStudy extends _ResearchStudy {
           this.statusElement,
       this.primaryPurposeType,
       this.phase,
-      final List<CodeableConcept>? category,
-      final List<ResearchStudyFocus>? focus,
-      final List<CodeableConcept>? condition,
-      final List<CodeableConcept>? keyword,
-      final List<CodeableConcept>? location,
+      this.category,
+      this.focus,
+      this.condition,
+      this.keyword,
+      this.location,
       this.descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
           this.descriptionSummaryElement,
@@ -1205,48 +1205,23 @@ class _$_ResearchStudy extends _ResearchStudy {
       @JsonKey(name: '_description')
           this.descriptionElement,
       this.period,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.sponsor,
       this.principalInvestigator,
-      final List<Reference>? site,
-      final List<Annotation>? note,
-      final List<ResearchStudyClassification>? classification,
-      final List<ResearchStudyAssociatedParty>? associatedParty,
-      final List<CodeableConcept>? currentState,
-      final List<ResearchStudyStatusDate>? statusDate,
+      this.site,
+      this.note,
+      this.classification,
+      this.associatedParty,
+      this.currentState,
+      this.statusDate,
       this.whyStopped,
       this.recruitment,
-      final List<ResearchStudyComparisonGroup>? comparisonGroup,
-      final List<ResearchStudyObjective>? objective,
-      final List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
-      final List<Reference>? result,
-      final List<ResearchStudyWebLocation>? webLocation})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _label = label,
-        _protocol = protocol,
-        _partOf = partOf,
-        _relatedArtifact = relatedArtifact,
-        _category = category,
-        _focus = focus,
-        _condition = condition,
-        _keyword = keyword,
-        _location = location,
-        _contact = contact,
-        _site = site,
-        _note = note,
-        _classification = classification,
-        _associatedParty = associatedParty,
-        _currentState = currentState,
-        _statusDate = statusDate,
-        _comparisonGroup = comparisonGroup,
-        _objective = objective,
-        _outcomeMeasure = outcomeMeasure,
-        _result = result,
-        _webLocation = webLocation,
-        super._();
+      this.comparisonGroup,
+      this.objective,
+      this.outcomeMeasure,
+      this.result,
+      this.webLocation})
+      : super._();
 
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyFromJson(json);
@@ -1270,48 +1245,20 @@ class _$_ResearchStudy extends _ResearchStudy {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1327,42 +1274,14 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
-  final List<ResearchStudyLabel>? _label;
   @override
-  List<ResearchStudyLabel>? get label {
-    final value = _label;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _protocol;
+  final List<ResearchStudyLabel>? label;
   @override
-  List<Reference>? get protocol {
-    final value = _protocol;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _partOf;
+  final List<Reference>? protocol;
   @override
-  List<Reference>? get partOf {
-    final value = _partOf;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<Reference>? partOf;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   final FhirDateTime? date;
   @override
@@ -1378,51 +1297,16 @@ class _$_ResearchStudy extends _ResearchStudy {
   final CodeableConcept? primaryPurposeType;
   @override
   final CodeableConcept? phase;
-  final List<CodeableConcept>? _category;
   @override
-  List<CodeableConcept>? get category {
-    final value = _category;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyFocus>? _focus;
+  final List<CodeableConcept>? category;
   @override
-  List<ResearchStudyFocus>? get focus {
-    final value = _focus;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _condition;
+  final List<ResearchStudyFocus>? focus;
   @override
-  List<CodeableConcept>? get condition {
-    final value = _condition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _keyword;
+  final List<CodeableConcept>? condition;
   @override
-  List<CodeableConcept>? get keyword {
-    final value = _keyword;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _location;
+  final List<CodeableConcept>? keyword;
   @override
-  List<CodeableConcept>? get location {
-    final value = _location;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? location;
   @override
   final Markdown? descriptionSummary;
   @override
@@ -1435,121 +1319,38 @@ class _$_ResearchStudy extends _ResearchStudy {
   final Element? descriptionElement;
   @override
   final Period? period;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Reference? sponsor;
   @override
   final Reference? principalInvestigator;
-  final List<Reference>? _site;
   @override
-  List<Reference>? get site {
-    final value = _site;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<Reference>? site;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyClassification>? _classification;
+  final List<Annotation>? note;
   @override
-  List<ResearchStudyClassification>? get classification {
-    final value = _classification;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyAssociatedParty>? _associatedParty;
+  final List<ResearchStudyClassification>? classification;
   @override
-  List<ResearchStudyAssociatedParty>? get associatedParty {
-    final value = _associatedParty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _currentState;
+  final List<ResearchStudyAssociatedParty>? associatedParty;
   @override
-  List<CodeableConcept>? get currentState {
-    final value = _currentState;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyStatusDate>? _statusDate;
+  final List<CodeableConcept>? currentState;
   @override
-  List<ResearchStudyStatusDate>? get statusDate {
-    final value = _statusDate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ResearchStudyStatusDate>? statusDate;
   @override
   final CodeableConcept? whyStopped;
   @override
   final ResearchStudyRecruitment? recruitment;
-  final List<ResearchStudyComparisonGroup>? _comparisonGroup;
   @override
-  List<ResearchStudyComparisonGroup>? get comparisonGroup {
-    final value = _comparisonGroup;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyObjective>? _objective;
+  final List<ResearchStudyComparisonGroup>? comparisonGroup;
   @override
-  List<ResearchStudyObjective>? get objective {
-    final value = _objective;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyOutcomeMeasure>? _outcomeMeasure;
+  final List<ResearchStudyObjective>? objective;
   @override
-  List<ResearchStudyOutcomeMeasure>? get outcomeMeasure {
-    final value = _outcomeMeasure;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _result;
+  final List<ResearchStudyOutcomeMeasure>? outcomeMeasure;
   @override
-  List<Reference>? get result {
-    final value = _result;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ResearchStudyWebLocation>? _webLocation;
+  final List<Reference>? result;
   @override
-  List<ResearchStudyWebLocation>? get webLocation {
-    final value = _webLocation;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ResearchStudyWebLocation>? webLocation;
 
   @override
   String toString() {
@@ -1574,17 +1375,16 @@ class _$_ResearchStudy extends _ResearchStudy {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -1594,11 +1394,11 @@ class _$_ResearchStudy extends _ResearchStudy {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.titleElement, titleElement) ||
                 other.titleElement == titleElement) &&
-            const DeepCollectionEquality().equals(other._label, _label) &&
-            const DeepCollectionEquality().equals(other._protocol, _protocol) &&
-            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
+            const DeepCollectionEquality().equals(other.label, label) &&
+            const DeepCollectionEquality().equals(other.protocol, protocol) &&
+            const DeepCollectionEquality().equals(other.partOf, partOf) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.dateElement, dateElement) ||
                 other.dateElement == dateElement) &&
@@ -1608,12 +1408,11 @@ class _$_ResearchStudy extends _ResearchStudy {
             (identical(other.primaryPurposeType, primaryPurposeType) ||
                 other.primaryPurposeType == primaryPurposeType) &&
             (identical(other.phase, phase) || other.phase == phase) &&
-            const DeepCollectionEquality().equals(other._category, _category) &&
-            const DeepCollectionEquality().equals(other._focus, _focus) &&
-            const DeepCollectionEquality()
-                .equals(other._condition, _condition) &&
-            const DeepCollectionEquality().equals(other._keyword, _keyword) &&
-            const DeepCollectionEquality().equals(other._location, _location) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other.focus, focus) &&
+            const DeepCollectionEquality().equals(other.condition, condition) &&
+            const DeepCollectionEquality().equals(other.keyword, keyword) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
             (identical(other.descriptionSummary, descriptionSummary) ||
                 other.descriptionSummary == descriptionSummary) &&
             (identical(other.descriptionSummaryElement,
@@ -1624,33 +1423,32 @@ class _$_ResearchStudy extends _ResearchStudy {
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
             (identical(other.period, period) || other.period == period) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.sponsor, sponsor) || other.sponsor == sponsor) &&
             (identical(other.principalInvestigator, principalInvestigator) ||
                 other.principalInvestigator == principalInvestigator) &&
-            const DeepCollectionEquality().equals(other._site, _site) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.site, site) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._classification, _classification) &&
+                .equals(other.classification, classification) &&
             const DeepCollectionEquality()
-                .equals(other._associatedParty, _associatedParty) &&
+                .equals(other.associatedParty, associatedParty) &&
             const DeepCollectionEquality()
-                .equals(other._currentState, _currentState) &&
+                .equals(other.currentState, currentState) &&
             const DeepCollectionEquality()
-                .equals(other._statusDate, _statusDate) &&
+                .equals(other.statusDate, statusDate) &&
             (identical(other.whyStopped, whyStopped) ||
                 other.whyStopped == whyStopped) &&
             (identical(other.recruitment, recruitment) ||
                 other.recruitment == recruitment) &&
             const DeepCollectionEquality()
-                .equals(other._comparisonGroup, _comparisonGroup) &&
+                .equals(other.comparisonGroup, comparisonGroup) &&
+            const DeepCollectionEquality().equals(other.objective, objective) &&
             const DeepCollectionEquality()
-                .equals(other._objective, _objective) &&
+                .equals(other.outcomeMeasure, outcomeMeasure) &&
+            const DeepCollectionEquality().equals(other.result, result) &&
             const DeepCollectionEquality()
-                .equals(other._outcomeMeasure, _outcomeMeasure) &&
-            const DeepCollectionEquality().equals(other._result, _result) &&
-            const DeepCollectionEquality()
-                .equals(other._webLocation, _webLocation));
+                .equals(other.webLocation, webLocation));
   }
 
   @JsonKey(ignore: true)
@@ -1665,54 +1463,54 @@ class _$_ResearchStudy extends _ResearchStudy {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
         nameElement,
         title,
         titleElement,
-        const DeepCollectionEquality().hash(_label),
-        const DeepCollectionEquality().hash(_protocol),
-        const DeepCollectionEquality().hash(_partOf),
-        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(label),
+        const DeepCollectionEquality().hash(protocol),
+        const DeepCollectionEquality().hash(partOf),
+        const DeepCollectionEquality().hash(relatedArtifact),
         date,
         dateElement,
         status,
         statusElement,
         primaryPurposeType,
         phase,
-        const DeepCollectionEquality().hash(_category),
-        const DeepCollectionEquality().hash(_focus),
-        const DeepCollectionEquality().hash(_condition),
-        const DeepCollectionEquality().hash(_keyword),
-        const DeepCollectionEquality().hash(_location),
+        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(focus),
+        const DeepCollectionEquality().hash(condition),
+        const DeepCollectionEquality().hash(keyword),
+        const DeepCollectionEquality().hash(location),
         descriptionSummary,
         descriptionSummaryElement,
         description,
         descriptionElement,
         period,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         sponsor,
         principalInvestigator,
-        const DeepCollectionEquality().hash(_site),
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_classification),
-        const DeepCollectionEquality().hash(_associatedParty),
-        const DeepCollectionEquality().hash(_currentState),
-        const DeepCollectionEquality().hash(_statusDate),
+        const DeepCollectionEquality().hash(site),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(classification),
+        const DeepCollectionEquality().hash(associatedParty),
+        const DeepCollectionEquality().hash(currentState),
+        const DeepCollectionEquality().hash(statusDate),
         whyStopped,
         recruitment,
-        const DeepCollectionEquality().hash(_comparisonGroup),
-        const DeepCollectionEquality().hash(_objective),
-        const DeepCollectionEquality().hash(_outcomeMeasure),
-        const DeepCollectionEquality().hash(_result),
-        const DeepCollectionEquality().hash(_webLocation)
+        const DeepCollectionEquality().hash(comparisonGroup),
+        const DeepCollectionEquality().hash(objective),
+        const DeepCollectionEquality().hash(outcomeMeasure),
+        const DeepCollectionEquality().hash(result),
+        const DeepCollectionEquality().hash(webLocation)
       ]);
 
   @JsonKey(ignore: true)
@@ -2095,11 +1893,11 @@ class __$$_ResearchStudyLabelCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -2123,39 +1921,23 @@ class __$$_ResearchStudyLabelCopyWithImpl<$Res>
 class _$_ResearchStudyLabel extends _ResearchStudyLabel {
   _$_ResearchStudyLabel(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyLabelFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -2176,9 +1958,9 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
             other is _$_ResearchStudyLabel &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.valueElement, valueElement) ||
@@ -2190,8 +1972,8 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       value,
       valueElement);
@@ -2413,11 +2195,11 @@ class __$$_ResearchStudyFocusCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       productCode: freezed == productCode
@@ -2425,7 +2207,7 @@ class __$$_ResearchStudyFocusCopyWithImpl<$Res>
           : productCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       focusType: freezed == focusType
-          ? _value._focusType
+          ? _value.focusType
           : focusType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       factor: freezed == factor
@@ -2445,52 +2227,28 @@ class __$$_ResearchStudyFocusCopyWithImpl<$Res>
 class _$_ResearchStudyFocus extends _ResearchStudyFocus {
   _$_ResearchStudyFocus(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.productCode,
-      final List<CodeableConcept>? focusType,
+      this.focusType,
       this.factor,
       @JsonKey(name: '_factor') this.factorElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _focusType = focusType,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyFocus.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyFocusFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? productCode;
-  final List<CodeableConcept>? _focusType;
   @override
-  List<CodeableConcept>? get focusType {
-    final value = _focusType;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? focusType;
   @override
   final Markdown? factor;
   @override
@@ -2509,13 +2267,12 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
             other is _$_ResearchStudyFocus &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.productCode, productCode) ||
                 other.productCode == productCode) &&
-            const DeepCollectionEquality()
-                .equals(other._focusType, _focusType) &&
+            const DeepCollectionEquality().equals(other.focusType, focusType) &&
             (identical(other.factor, factor) || other.factor == factor) &&
             (identical(other.factorElement, factorElement) ||
                 other.factorElement == factorElement));
@@ -2526,10 +2283,10 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       productCode,
-      const DeepCollectionEquality().hash(_focusType),
+      const DeepCollectionEquality().hash(focusType),
       factor,
       factorElement);
 
@@ -2726,11 +2483,11 @@ class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -2738,7 +2495,7 @@ class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       classifier: freezed == classifier
-          ? _value._classifier
+          ? _value.classifier
           : classifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -2750,49 +2507,26 @@ class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
 class _$_ResearchStudyClassification extends _ResearchStudyClassification {
   _$_ResearchStudyClassification(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
-      final List<CodeableConcept>? classifier})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _classifier = classifier,
-        super._();
+      this.classifier})
+      : super._();
 
   factory _$_ResearchStudyClassification.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyClassificationFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
-  final List<CodeableConcept>? _classifier;
   @override
-  List<CodeableConcept>? get classifier {
-    final value = _classifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CodeableConcept>? classifier;
 
   @override
   String toString() {
@@ -2806,12 +2540,12 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
             other is _$_ResearchStudyClassification &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality()
-                .equals(other._classifier, _classifier));
+                .equals(other.classifier, classifier));
   }
 
   @JsonKey(ignore: true)
@@ -2819,10 +2553,10 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
-      const DeepCollectionEquality().hash(_classifier));
+      const DeepCollectionEquality().hash(classifier));
 
   @JsonKey(ignore: true)
   @override
@@ -3065,11 +2799,11 @@ class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: freezed == name
@@ -3085,7 +2819,7 @@ class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       classifier: freezed == classifier
-          ? _value._classifier
+          ? _value.classifier
           : classifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       party: freezed == party
@@ -3101,42 +2835,25 @@ class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
 class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   _$_ResearchStudyAssociatedParty(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       required this.role,
-      final List<CodeableConcept>? classifier,
+      this.classifier,
       this.party})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _classifier = classifier,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyAssociatedPartyFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -3144,15 +2861,8 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   final Element? nameElement;
   @override
   final CodeableConcept role;
-  final List<CodeableConcept>? _classifier;
   @override
-  List<CodeableConcept>? get classifier {
-    final value = _classifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? classifier;
   @override
   final Reference? party;
 
@@ -3168,15 +2878,15 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
             other is _$_ResearchStudyAssociatedParty &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
             (identical(other.role, role) || other.role == role) &&
             const DeepCollectionEquality()
-                .equals(other._classifier, _classifier) &&
+                .equals(other.classifier, classifier) &&
             (identical(other.party, party) || other.party == party));
   }
 
@@ -3185,12 +2895,12 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       name,
       nameElement,
       role,
-      const DeepCollectionEquality().hash(_classifier),
+      const DeepCollectionEquality().hash(classifier),
       party);
 
   @JsonKey(ignore: true)
@@ -3426,11 +3136,11 @@ class __$$_ResearchStudyStatusDateCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       activity: null == activity
@@ -3458,40 +3168,24 @@ class __$$_ResearchStudyStatusDateCopyWithImpl<$Res>
 class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
   _$_ResearchStudyStatusDate(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.activity,
       this.actual,
       @JsonKey(name: '_actual') this.actualElement,
       required this.period})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyStatusDate.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyStatusDateFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept activity;
   @override
@@ -3514,9 +3208,9 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
             other is _$_ResearchStudyStatusDate &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.activity, activity) ||
                 other.activity == activity) &&
             (identical(other.actual, actual) || other.actual == actual) &&
@@ -3530,8 +3224,8 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       activity,
       actual,
       actualElement,
@@ -3810,11 +3504,11 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       targetNumber: freezed == targetNumber
@@ -3850,42 +3544,26 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
 class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
   _$_ResearchStudyRecruitment(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.targetNumber,
       @JsonKey(name: '_targetNumber') this.targetNumberElement,
       this.actualNumber,
       @JsonKey(name: '_actualNumber') this.actualNumberElement,
       this.eligibility,
       this.actualGroup})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyRecruitmentFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final UnsignedInt? targetNumber;
   @override
@@ -3913,9 +3591,9 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
             other is _$_ResearchStudyRecruitment &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.targetNumber, targetNumber) ||
                 other.targetNumber == targetNumber) &&
             (identical(other.targetNumberElement, targetNumberElement) ||
@@ -3935,8 +3613,8 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       targetNumber,
       targetNumberElement,
       actualNumber,
@@ -4293,11 +3971,11 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifierUri: freezed == identifierUri
@@ -4333,7 +4011,7 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       intendedExposure: freezed == intendedExposure
-          ? _value._intendedExposure
+          ? _value.intendedExposure
           : intendedExposure // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       observedGroup: freezed == observedGroup
@@ -4349,8 +4027,8 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
 class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   _$_ResearchStudyComparisonGroup(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.identifierUri,
       @JsonKey(name: '_identifierUri') this.identifierUriElement,
       this.identifierIdentifier,
@@ -4359,37 +4037,20 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
       this.type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      final List<Reference>? intendedExposure,
+      this.intendedExposure,
       this.observedGroup})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _intendedExposure = intendedExposure,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyComparisonGroupFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? identifierUri;
   @override
@@ -4409,15 +4070,8 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Reference>? _intendedExposure;
   @override
-  List<Reference>? get intendedExposure {
-    final value = _intendedExposure;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? intendedExposure;
   @override
   final Reference? observedGroup;
 
@@ -4433,9 +4087,9 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
             other is _$_ResearchStudyComparisonGroup &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifierUri, identifierUri) ||
                 other.identifierUri == identifierUri) &&
             (identical(other.identifierUriElement, identifierUriElement) ||
@@ -4451,7 +4105,7 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other._intendedExposure, _intendedExposure) &&
+                .equals(other.intendedExposure, intendedExposure) &&
             (identical(other.observedGroup, observedGroup) ||
                 other.observedGroup == observedGroup));
   }
@@ -4461,8 +4115,8 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       identifierUri,
       identifierUriElement,
       identifierIdentifier,
@@ -4471,7 +4125,7 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
       type,
       description,
       descriptionElement,
-      const DeepCollectionEquality().hash(_intendedExposure),
+      const DeepCollectionEquality().hash(intendedExposure),
       observedGroup);
 
   @JsonKey(ignore: true)
@@ -4742,11 +4396,11 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: freezed == name
@@ -4778,41 +4432,25 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
 class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   _$_ResearchStudyObjective(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyObjectiveFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
@@ -4838,9 +4476,9 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
             other is _$_ResearchStudyObjective &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -4856,8 +4494,8 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       name,
       nameElement,
       type,
@@ -5129,11 +4767,11 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: freezed == name
@@ -5145,7 +4783,7 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       description: freezed == description
@@ -5169,57 +4807,33 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
 class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
   _$_ResearchStudyOutcomeMeasure(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
-      final List<CodeableConcept>? type,
+      this.type,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.reference})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _type = type,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyOutcomeMeasureFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? name;
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
-  final List<CodeableConcept>? _type;
   @override
-  List<CodeableConcept>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? type;
   @override
   final Markdown? description;
   @override
@@ -5240,13 +4854,13 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
             other is _$_ResearchStudyOutcomeMeasure &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -5260,11 +4874,11 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       name,
       nameElement,
-      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(type),
       description,
       descriptionElement,
       reference);
@@ -5491,11 +5105,11 @@ class __$$_ResearchStudyWebLocationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -5519,39 +5133,23 @@ class __$$_ResearchStudyWebLocationCopyWithImpl<$Res>
 class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   _$_ResearchStudyWebLocation(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
       this.url,
       @JsonKey(name: '_url') this.urlElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_ResearchStudyWebLocation.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyWebLocationFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -5572,9 +5170,9 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
             other is _$_ResearchStudyWebLocation &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
@@ -5586,8 +5184,8 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       url,
       urlElement);
@@ -6131,19 +5729,19 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -6155,7 +5753,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       progress: freezed == progress
-          ? _value._progress
+          ? _value.progress
           : progress // ignore: cast_nullable_to_non_nullable
               as List<ResearchSubjectProgress>?,
       period: freezed == period
@@ -6209,16 +5807,16 @@ class _$_ResearchSubject extends _ResearchSubject {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<ResearchSubjectProgress>? progress,
+      this.progress,
       this.period,
       required this.study,
       required this.subject,
@@ -6229,12 +5827,7 @@ class _$_ResearchSubject extends _ResearchSubject {
       @JsonKey(name: '_actualArm')
           this.actualArmElement,
       this.consent})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _progress = progress,
-        super._();
+      : super._();
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectFromJson(json);
@@ -6258,58 +5851,23 @@ class _$_ResearchSubject extends _ResearchSubject {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
   final ResearchSubjectStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
-  final List<ResearchSubjectProgress>? _progress;
   @override
-  List<ResearchSubjectProgress>? get progress {
-    final value = _progress;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ResearchSubjectProgress>? progress;
   @override
   final Period? period;
   @override
@@ -6352,18 +5910,17 @@ class _$_ResearchSubject extends _ResearchSubject {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
-            const DeepCollectionEquality().equals(other._progress, _progress) &&
+            const DeepCollectionEquality().equals(other.progress, progress) &&
             (identical(other.period, period) || other.period == period) &&
             (identical(other.study, study) || other.study == study) &&
             (identical(other.subject, subject) || other.subject == subject) &&
@@ -6390,13 +5947,13 @@ class _$_ResearchSubject extends _ResearchSubject {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
-        const DeepCollectionEquality().hash(_progress),
+        const DeepCollectionEquality().hash(progress),
         period,
         study,
         subject,
@@ -6787,11 +6344,11 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -6835,8 +6392,8 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
 class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   _$_ResearchSubjectProgress(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
       this.subjectState,
       this.milestone,
@@ -6845,34 +6402,18 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
       @JsonKey(name: '_startDate') this.startDateElement,
       this.endDate,
       @JsonKey(name: '_endDate') this.endDateElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectProgressFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -6904,9 +6445,9 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
             other is _$_ResearchSubjectProgress &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.subjectState, subjectState) ||
                 other.subjectState == subjectState) &&
@@ -6927,8 +6468,8 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       subjectState,
       milestone,

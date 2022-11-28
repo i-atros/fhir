@@ -617,19 +617,19 @@ class __$$_AppointmentCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: null == status
@@ -689,7 +689,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
           : minutesDurationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       slot: freezed == slot
-          ? _value._slot
+          ? _value.slot
           : slot // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       comment: freezed == comment
@@ -701,7 +701,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
           : commentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       participant: null == participant
-          ? _value._participant
+          ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
               as List<AppointmentParticipant>,
     ));
@@ -723,11 +723,11 @@ class _$_Appointment extends _Appointment {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
           required this.status,
       @JsonKey(name: '_status')
@@ -749,18 +749,12 @@ class _$_Appointment extends _Appointment {
       this.minutesDuration,
       @JsonKey(name: '_minutesDuration')
           this.minutesDurationElement,
-      final List<Reference>? slot,
+      this.slot,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement,
-      required final List<AppointmentParticipant> participant})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _slot = slot,
-        _participant = participant,
-        super._();
+      required this.participant})
+      : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentFromJson(json);
@@ -784,43 +778,15 @@ class _$_Appointment extends _Appointment {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
   final AppointmentStatus status;
@@ -856,26 +822,15 @@ class _$_Appointment extends _Appointment {
   @override
   @JsonKey(name: '_minutesDuration')
   final Element? minutesDurationElement;
-  final List<Reference>? _slot;
   @override
-  List<Reference>? get slot {
-    final value = _slot;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? slot;
   @override
   final String? comment;
   @override
   @JsonKey(name: '_comment')
   final Element? commentElement;
-  final List<AppointmentParticipant> _participant;
   @override
-  List<AppointmentParticipant> get participant {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_participant);
-  }
+  final List<AppointmentParticipant> participant;
 
   @override
   String toString() {
@@ -900,14 +855,13 @@ class _$_Appointment extends _Appointment {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -931,12 +885,12 @@ class _$_Appointment extends _Appointment {
                 other.minutesDuration == minutesDuration) &&
             (identical(other.minutesDurationElement, minutesDurationElement) ||
                 other.minutesDurationElement == minutesDurationElement) &&
-            const DeepCollectionEquality().equals(other._slot, _slot) &&
+            const DeepCollectionEquality().equals(other.slot, slot) &&
             (identical(other.comment, comment) || other.comment == comment) &&
             (identical(other.commentElement, commentElement) ||
                 other.commentElement == commentElement) &&
             const DeepCollectionEquality()
-                .equals(other._participant, _participant));
+                .equals(other.participant, participant));
   }
 
   @JsonKey(ignore: true)
@@ -951,10 +905,10 @@ class _$_Appointment extends _Appointment {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         type,
@@ -969,10 +923,10 @@ class _$_Appointment extends _Appointment {
         endElement,
         minutesDuration,
         minutesDurationElement,
-        const DeepCollectionEquality().hash(_slot),
+        const DeepCollectionEquality().hash(slot),
         comment,
         commentElement,
-        const DeepCollectionEquality().hash(_participant)
+        const DeepCollectionEquality().hash(participant)
       ]);
 
   @JsonKey(ignore: true)
@@ -1334,15 +1288,15 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: freezed == actor
@@ -1375,9 +1329,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? type,
+          this.extension_,
+      this.modifierExtension,
+      this.type,
       this.actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
           this.required_,
@@ -1387,44 +1341,20 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
           required this.status,
       @JsonKey(name: '_status')
           this.statusElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _type = type,
-        super._();
+      : super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentParticipantFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _type;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<CodeableConcept>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? type;
   @override
   final Reference? actor;
   @override
@@ -1452,10 +1382,10 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
             other is _$_AppointmentParticipant &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.actor, actor) || other.actor == actor) &&
             (identical(other.required_, required_) ||
                 other.required_ == required_) &&
@@ -1471,9 +1401,9 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(type),
       actor,
       required_,
       requiredElement,
@@ -2030,19 +1960,19 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       appointment: null == appointment
@@ -2066,7 +1996,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
           : endElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       participantType: freezed == participantType
-          ? _value._participantType
+          ? _value.participantType
           : participantType // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: freezed == actor
@@ -2108,11 +2038,11 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       required this.appointment,
       this.start,
       @JsonKey(name: '_start')
@@ -2120,7 +2050,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       this.end,
       @JsonKey(name: '_end')
           this.endElement,
-      final List<CodeableConcept>? participantType,
+      this.participantType,
       this.actor,
       @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           required this.participantStatus,
@@ -2129,12 +2059,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _participantType = participantType,
-        super._();
+      : super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
       _$$_AppointmentResponseFromJson(json);
@@ -2158,43 +2083,15 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Reference appointment;
   @override
@@ -2207,15 +2104,8 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   @JsonKey(name: '_end')
   final Element? endElement;
-  final List<CodeableConcept>? _participantType;
   @override
-  List<CodeableConcept>? get participantType {
-    final value = _participantType;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? participantType;
   @override
   final Reference? actor;
   @override
@@ -2255,14 +2145,13 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.appointment, appointment) ||
                 other.appointment == appointment) &&
             (identical(other.start, start) || other.start == start) &&
@@ -2272,7 +2161,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             (identical(other.endElement, endElement) ||
                 other.endElement == endElement) &&
             const DeepCollectionEquality()
-                .equals(other._participantType, _participantType) &&
+                .equals(other.participantType, participantType) &&
             (identical(other.actor, actor) || other.actor == actor) &&
             (identical(other.participantStatus, participantStatus) ||
                 other.participantStatus == participantStatus) &&
@@ -2296,16 +2185,16 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         appointment,
         start,
         startElement,
         end,
         endElement,
-        const DeepCollectionEquality().hash(_participantType),
+        const DeepCollectionEquality().hash(participantType),
         actor,
         participantStatus,
         participantStatusElement,
@@ -2798,23 +2687,23 @@ class __$$_ScheduleCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       actor: null == actor
@@ -2852,23 +2741,18 @@ class _$_Schedule extends _Schedule {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<CodeableConcept>? type,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.type,
       required this.actor,
       this.planningHorizon,
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _type = type,
-        super._();
+      : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
       _$$_ScheduleFromJson(json);
@@ -2892,52 +2776,17 @@ class _$_Schedule extends _Schedule {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _type;
+  final List<Identifier>? identifier;
   @override
-  List<CodeableConcept>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? type;
   @override
   final Reference actor;
   @override
@@ -2971,15 +2820,14 @@ class _$_Schedule extends _Schedule {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.actor, actor) || other.actor == actor) &&
             (identical(other.planningHorizon, planningHorizon) ||
                 other.planningHorizon == planningHorizon) &&
@@ -3000,11 +2848,11 @@ class _$_Schedule extends _Schedule {
       language,
       languageElement,
       text,
-      const DeepCollectionEquality().hash(_contained),
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_identifier),
-      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(contained),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(type),
       actor,
       planningHorizon,
       comment,
@@ -3572,19 +3420,19 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: freezed == type
@@ -3650,11 +3498,11 @@ class _$_Slot extends _Slot {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.type,
       required this.schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
@@ -3671,11 +3519,7 @@ class _$_Slot extends _Slot {
       this.comment,
       @JsonKey(name: '_comment')
           this.commentElement})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        super._();
+      : super._();
 
   factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
 
@@ -3698,43 +3542,15 @@ class _$_Slot extends _Slot {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final CodeableConcept? type;
   @override
@@ -3786,14 +3602,13 @@ class _$_Slot extends _Slot {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.schedule, schedule) ||
                 other.schedule == schedule) &&
@@ -3826,10 +3641,10 @@ class _$_Slot extends _Slot {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         type,
         schedule,
         freeBusyType,

@@ -99,7 +99,7 @@ class __$$_ElementCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
     ));
@@ -109,26 +109,17 @@ class __$$_ElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Element extends _Element {
-  _$_Element(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
-      : _extension_ = extension_,
-        super._();
+  _$_Element({this.id, @JsonKey(name: 'extension') this.extension_})
+      : super._();
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$$_ElementFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<FhirExtension>? extension_;
 
   @override
   String toString() {
@@ -142,13 +133,13 @@ class _$_Element extends _Element {
             other is _$_Element &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_));
+                .equals(other.extension_, extension_));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, const DeepCollectionEquality().hash(_extension_));
+      runtimeType, id, const DeepCollectionEquality().hash(extension_));
 
   @JsonKey(ignore: true)
   @override

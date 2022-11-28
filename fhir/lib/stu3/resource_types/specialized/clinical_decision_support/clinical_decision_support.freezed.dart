@@ -636,15 +636,15 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       requestId: freezed == requestId
@@ -700,11 +700,11 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       evaluationMessage: freezed == evaluationMessage
-          ? _value._evaluationMessage
+          ? _value.evaluationMessage
           : evaluationMessage // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       outputParameters: freezed == outputParameters
@@ -716,7 +716,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
           : result // ignore: cast_nullable_to_non_nullable
               as Reference?,
       dataRequirement: freezed == dataRequirement
-          ? _value._dataRequirement
+          ? _value.dataRequirement
           : dataRequirement // ignore: cast_nullable_to_non_nullable
               as List<DataRequirement>?,
     ));
@@ -738,10 +738,10 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.requestId,
       @JsonKey(name: '_requestId')
           this.requestIdElement,
@@ -758,18 +758,12 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       this.performer,
       this.reasonCodeableConcept,
       this.reasonReference,
-      final List<Annotation>? note,
-      final List<Reference>? evaluationMessage,
+      this.note,
+      this.evaluationMessage,
       this.outputParameters,
       this.result,
-      final List<DataRequirement>? dataRequirement})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _note = note,
-        _evaluationMessage = evaluationMessage,
-        _dataRequirement = dataRequirement,
-        super._();
+      this.dataRequirement})
+      : super._();
 
   factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$$_GuidanceResponseFromJson(json);
@@ -793,34 +787,13 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Id? requestId;
   @override
@@ -850,36 +823,16 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   final CodeableConcept? reasonCodeableConcept;
   @override
   final Reference? reasonReference;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _evaluationMessage;
+  final List<Annotation>? note;
   @override
-  List<Reference>? get evaluationMessage {
-    final value = _evaluationMessage;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? evaluationMessage;
   @override
   final Reference? outputParameters;
   @override
   final Reference? result;
-  final List<DataRequirement>? _dataRequirement;
   @override
-  List<DataRequirement>? get dataRequirement {
-    final value = _dataRequirement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<DataRequirement>? dataRequirement;
 
   @override
   String toString() {
@@ -904,12 +857,11 @@ class _$_GuidanceResponse extends _GuidanceResponse {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.requestId, requestId) ||
                 other.requestId == requestId) &&
             (identical(other.requestIdElement, requestIdElement) ||
@@ -933,14 +885,14 @@ class _$_GuidanceResponse extends _GuidanceResponse {
                 other.reasonCodeableConcept == reasonCodeableConcept) &&
             (identical(other.reasonReference, reasonReference) ||
                 other.reasonReference == reasonReference) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._evaluationMessage, _evaluationMessage) &&
+                .equals(other.evaluationMessage, evaluationMessage) &&
             (identical(other.outputParameters, outputParameters) ||
                 other.outputParameters == outputParameters) &&
             (identical(other.result, result) || other.result == result) &&
             const DeepCollectionEquality()
-                .equals(other._dataRequirement, _dataRequirement));
+                .equals(other.dataRequirement, dataRequirement));
   }
 
   @JsonKey(ignore: true)
@@ -955,9 +907,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         requestId,
         requestIdElement,
         identifier,
@@ -971,11 +923,11 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         performer,
         reasonCodeableConcept,
         reasonReference,
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_evaluationMessage),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(evaluationMessage),
         outputParameters,
         result,
-        const DeepCollectionEquality().hash(_dataRequirement)
+        const DeepCollectionEquality().hash(dataRequirement)
       ]);
 
   @JsonKey(ignore: true)

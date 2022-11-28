@@ -634,31 +634,31 @@ class __$$_CommunicationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       definition: freezed == definition
-          ? _value._definition
+          ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: freezed == partOf
-          ? _value._partOf
+          ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: freezed == status
@@ -682,11 +682,11 @@ class __$$_CommunicationCopyWithImpl<$Res>
           : notDoneReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       category: freezed == category
-          ? _value._category
+          ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       medium: freezed == medium
-          ? _value._medium
+          ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       subject: freezed == subject
@@ -694,11 +694,11 @@ class __$$_CommunicationCopyWithImpl<$Res>
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
       recipient: freezed == recipient
-          ? _value._recipient
+          ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       context: freezed == context
@@ -726,19 +726,19 @@ class __$$_CommunicationCopyWithImpl<$Res>
           : sender // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reasonCode: freezed == reasonCode
-          ? _value._reasonCode
+          ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reasonReference: freezed == reasonReference
-          ? _value._reasonReference
+          ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       payload: freezed == payload
-          ? _value._payload
+          ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as List<CommunicationPayload>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -760,14 +760,14 @@ class _$_Communication extends _Communication {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? definition,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.definition,
+      this.basedOn,
+      this.partOf,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -775,11 +775,11 @@ class _$_Communication extends _Communication {
       @JsonKey(name: '_notDone')
           this.notDoneElement,
       this.notDoneReason,
-      final List<CodeableConcept>? category,
-      final List<CodeableConcept>? medium,
+      this.category,
+      this.medium,
       this.subject,
-      final List<Reference>? recipient,
-      final List<Reference>? topic,
+      this.recipient,
+      this.topic,
       this.context,
       this.sent,
       @JsonKey(name: '_sent')
@@ -788,26 +788,11 @@ class _$_Communication extends _Communication {
       @JsonKey(name: '_received')
           this.receivedElement,
       this.sender,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<CommunicationPayload>? payload,
-      final List<Annotation>? note})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _definition = definition,
-        _basedOn = basedOn,
-        _partOf = partOf,
-        _category = category,
-        _medium = medium,
-        _recipient = recipient,
-        _topic = topic,
-        _reasonCode = reasonCode,
-        _reasonReference = reasonReference,
-        _payload = payload,
-        _note = note,
-        super._();
+      this.reasonCode,
+      this.reasonReference,
+      this.payload,
+      this.note})
+      : super._();
 
   factory _$_Communication.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationFromJson(json);
@@ -831,70 +816,21 @@ class _$_Communication extends _Communication {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _definition;
+  final List<Identifier>? identifier;
   @override
-  List<Reference>? get definition {
-    final value = _definition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _basedOn;
+  final List<Reference>? definition;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _partOf;
+  final List<Reference>? basedOn;
   @override
-  List<Reference>? get partOf {
-    final value = _partOf;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? partOf;
   @override
   final String? status;
   @override
@@ -907,44 +843,16 @@ class _$_Communication extends _Communication {
   final Element? notDoneElement;
   @override
   final CodeableConcept? notDoneReason;
-  final List<CodeableConcept>? _category;
   @override
-  List<CodeableConcept>? get category {
-    final value = _category;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _medium;
+  final List<CodeableConcept>? category;
   @override
-  List<CodeableConcept>? get medium {
-    final value = _medium;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? medium;
   @override
   final Reference? subject;
-  final List<Reference>? _recipient;
   @override
-  List<Reference>? get recipient {
-    final value = _recipient;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _topic;
+  final List<Reference>? recipient;
   @override
-  List<Reference>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? topic;
   @override
   final Reference? context;
   @override
@@ -959,41 +867,14 @@ class _$_Communication extends _Communication {
   final Element? receivedElement;
   @override
   final Reference? sender;
-  final List<CodeableConcept>? _reasonCode;
   @override
-  List<CodeableConcept>? get reasonCode {
-    final value = _reasonCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _reasonReference;
+  final List<CodeableConcept>? reasonCode;
   @override
-  List<Reference>? get reasonReference {
-    final value = _reasonReference;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CommunicationPayload>? _payload;
+  final List<Reference>? reasonReference;
   @override
-  List<CommunicationPayload>? get payload {
-    final value = _payload;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<CommunicationPayload>? payload;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -1018,18 +899,17 @@ class _$_Communication extends _Communication {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.identifier, identifier) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality()
-                .equals(other._definition, _definition) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
-            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
+                .equals(other.definition, definition) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.partOf, partOf) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -1038,12 +918,11 @@ class _$_Communication extends _Communication {
                 other.notDoneElement == notDoneElement) &&
             (identical(other.notDoneReason, notDoneReason) ||
                 other.notDoneReason == notDoneReason) &&
-            const DeepCollectionEquality().equals(other._category, _category) &&
-            const DeepCollectionEquality().equals(other._medium, _medium) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other.medium, medium) &&
             (identical(other.subject, subject) || other.subject == subject) &&
-            const DeepCollectionEquality()
-                .equals(other._recipient, _recipient) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
             (identical(other.context, context) || other.context == context) &&
             (identical(other.sent, sent) || other.sent == sent) &&
             (identical(other.sentElement, sentElement) ||
@@ -1054,11 +933,11 @@ class _$_Communication extends _Communication {
                 other.receivedElement == receivedElement) &&
             (identical(other.sender, sender) || other.sender == sender) &&
             const DeepCollectionEquality()
-                .equals(other._reasonCode, _reasonCode) &&
+                .equals(other.reasonCode, reasonCode) &&
             const DeepCollectionEquality()
-                .equals(other._reasonReference, _reasonReference) &&
-            const DeepCollectionEquality().equals(other._payload, _payload) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality().equals(other.payload, payload) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
@@ -1073,33 +952,33 @@ class _$_Communication extends _Communication {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_definition),
-        const DeepCollectionEquality().hash(_basedOn),
-        const DeepCollectionEquality().hash(_partOf),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(definition),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(partOf),
         status,
         statusElement,
         notDone,
         notDoneElement,
         notDoneReason,
-        const DeepCollectionEquality().hash(_category),
-        const DeepCollectionEquality().hash(_medium),
+        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(medium),
         subject,
-        const DeepCollectionEquality().hash(_recipient),
-        const DeepCollectionEquality().hash(_topic),
+        const DeepCollectionEquality().hash(recipient),
+        const DeepCollectionEquality().hash(topic),
         context,
         sent,
         sentElement,
         received,
         receivedElement,
         sender,
-        const DeepCollectionEquality().hash(_reasonCode),
-        const DeepCollectionEquality().hash(_reasonReference),
-        const DeepCollectionEquality().hash(_payload),
-        const DeepCollectionEquality().hash(_note)
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(payload),
+        const DeepCollectionEquality().hash(note)
       ]);
 
   @JsonKey(ignore: true)
@@ -2172,27 +2051,27 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       replaces: freezed == replaces
-          ? _value._replaces
+          ? _value.replaces
           : replaces // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       groupIdentifier: freezed == groupIdentifier
@@ -2208,7 +2087,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       category: freezed == category
-          ? _value._category
+          ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       priority: freezed == priority
@@ -2220,7 +2099,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       medium: freezed == medium
-          ? _value._medium
+          ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       subject: freezed == subject
@@ -2228,11 +2107,11 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
       recipient: freezed == recipient
-          ? _value._recipient
+          ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       context: freezed == context
@@ -2240,7 +2119,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
       payload: freezed == payload
-          ? _value._payload
+          ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as List<CommunicationRequestPayload>?,
       occurrenceDateTime: freezed == occurrenceDateTime
@@ -2272,15 +2151,15 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
           : requester // ignore: cast_nullable_to_non_nullable
               as CommunicationRequestRequester?,
       reasonCode: freezed == reasonCode
-          ? _value._reasonCode
+          ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reasonReference: freezed == reasonReference
-          ? _value._reasonReference
+          ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -2302,27 +2181,27 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? replaces,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.basedOn,
+      this.replaces,
       this.groupIdentifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<CodeableConcept>? category,
+      this.category,
       this.priority,
       @JsonKey(name: '_priority')
           this.priorityElement,
-      final List<CodeableConcept>? medium,
+      this.medium,
       this.subject,
-      final List<Reference>? recipient,
-      final List<Reference>? topic,
+      this.recipient,
+      this.topic,
       this.context,
-      final List<CommunicationRequestPayload>? payload,
+      this.payload,
       this.occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           this.occurrenceDateTimeElement,
@@ -2332,24 +2211,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
           this.authoredOnElement,
       this.sender,
       this.requester,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Annotation>? note})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _basedOn = basedOn,
-        _replaces = replaces,
-        _category = category,
-        _medium = medium,
-        _recipient = recipient,
-        _topic = topic,
-        _payload = payload,
-        _reasonCode = reasonCode,
-        _reasonReference = reasonReference,
-        _note = note,
-        super._();
+      this.reasonCode,
+      this.reasonReference,
+      this.note})
+      : super._();
 
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationRequestFromJson(json);
@@ -2373,61 +2238,19 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _basedOn;
+  final List<Identifier>? identifier;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _replaces;
+  final List<Reference>? basedOn;
   @override
-  List<Reference>? get replaces {
-    final value = _replaces;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? replaces;
   @override
   final Identifier? groupIdentifier;
   @override
@@ -2435,60 +2258,25 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
-  final List<CodeableConcept>? _category;
   @override
-  List<CodeableConcept>? get category {
-    final value = _category;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? category;
   @override
   final String? priority;
   @override
   @JsonKey(name: '_priority')
   final Element? priorityElement;
-  final List<CodeableConcept>? _medium;
   @override
-  List<CodeableConcept>? get medium {
-    final value = _medium;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? medium;
   @override
   final Reference? subject;
-  final List<Reference>? _recipient;
   @override
-  List<Reference>? get recipient {
-    final value = _recipient;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _topic;
+  final List<Reference>? recipient;
   @override
-  List<Reference>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? topic;
   @override
   final Reference? context;
-  final List<CommunicationRequestPayload>? _payload;
   @override
-  List<CommunicationRequestPayload>? get payload {
-    final value = _payload;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CommunicationRequestPayload>? payload;
   @override
   final FhirDateTime? occurrenceDateTime;
   @override
@@ -2505,32 +2293,12 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   final Reference? sender;
   @override
   final CommunicationRequestRequester? requester;
-  final List<CodeableConcept>? _reasonCode;
   @override
-  List<CodeableConcept>? get reasonCode {
-    final value = _reasonCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _reasonReference;
+  final List<CodeableConcept>? reasonCode;
   @override
-  List<Reference>? get reasonReference {
-    final value = _reasonReference;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<Reference>? reasonReference;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -2555,33 +2323,31 @@ class _$_CommunicationRequest extends _CommunicationRequest {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
-            const DeepCollectionEquality().equals(other._replaces, _replaces) &&
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.replaces, replaces) &&
             (identical(other.groupIdentifier, groupIdentifier) ||
                 other.groupIdentifier == groupIdentifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
-            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
             (identical(other.priority, priority) ||
                 other.priority == priority) &&
             (identical(other.priorityElement, priorityElement) ||
                 other.priorityElement == priorityElement) &&
-            const DeepCollectionEquality().equals(other._medium, _medium) &&
+            const DeepCollectionEquality().equals(other.medium, medium) &&
             (identical(other.subject, subject) || other.subject == subject) &&
-            const DeepCollectionEquality()
-                .equals(other._recipient, _recipient) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
             (identical(other.context, context) || other.context == context) &&
-            const DeepCollectionEquality().equals(other._payload, _payload) &&
+            const DeepCollectionEquality().equals(other.payload, payload) &&
             (identical(other.occurrenceDateTime, occurrenceDateTime) ||
                 other.occurrenceDateTime == occurrenceDateTime) &&
             (identical(other.occurrenceDateTimeElement,
@@ -2597,10 +2363,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
             (identical(other.requester, requester) ||
                 other.requester == requester) &&
             const DeepCollectionEquality()
-                .equals(other._reasonCode, _reasonCode) &&
+                .equals(other.reasonCode, reasonCode) &&
             const DeepCollectionEquality()
-                .equals(other._reasonReference, _reasonReference) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
@@ -2615,24 +2381,24 @@ class _$_CommunicationRequest extends _CommunicationRequest {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_basedOn),
-        const DeepCollectionEquality().hash(_replaces),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(replaces),
         groupIdentifier,
         status,
         statusElement,
-        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(category),
         priority,
         priorityElement,
-        const DeepCollectionEquality().hash(_medium),
+        const DeepCollectionEquality().hash(medium),
         subject,
-        const DeepCollectionEquality().hash(_recipient),
-        const DeepCollectionEquality().hash(_topic),
+        const DeepCollectionEquality().hash(recipient),
+        const DeepCollectionEquality().hash(topic),
         context,
-        const DeepCollectionEquality().hash(_payload),
+        const DeepCollectionEquality().hash(payload),
         occurrenceDateTime,
         occurrenceDateTimeElement,
         occurrencePeriod,
@@ -2640,9 +2406,9 @@ class _$_CommunicationRequest extends _CommunicationRequest {
         authoredOnElement,
         sender,
         requester,
-        const DeepCollectionEquality().hash(_reasonCode),
-        const DeepCollectionEquality().hash(_reasonReference),
-        const DeepCollectionEquality().hash(_note)
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(note)
       ]);
 
   @JsonKey(ignore: true)
@@ -4012,31 +3778,31 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       definition: freezed == definition
-          ? _value._definition
+          ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       priorRequest: freezed == priorRequest
-          ? _value._priorRequest
+          ? _value.priorRequest
           : priorRequest // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       groupIdentifier: freezed == groupIdentifier
@@ -4116,23 +3882,23 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
           : performer // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reasonCode: freezed == reasonCode
-          ? _value._reasonCode
+          ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reasonReference: freezed == reasonReference
-          ? _value._reasonReference
+          ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       supportingInfo: freezed == supportingInfo
-          ? _value._supportingInfo
+          ? _value.supportingInfo
           : supportingInfo // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       relevantHistory: freezed == relevantHistory
-          ? _value._relevantHistory
+          ? _value.relevantHistory
           : relevantHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -4154,14 +3920,14 @@ class _$_DeviceRequest extends _DeviceRequest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? definition,
-      final List<Reference>? basedOn,
-      final List<Reference>? priorRequest,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.definition,
+      this.basedOn,
+      this.priorRequest,
       this.groupIdentifier,
       this.status,
       @JsonKey(name: '_status')
@@ -4185,24 +3951,12 @@ class _$_DeviceRequest extends _DeviceRequest {
       this.requester,
       this.performerType,
       this.performer,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Reference>? supportingInfo,
-      final List<Annotation>? note,
-      final List<Reference>? relevantHistory})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _definition = definition,
-        _basedOn = basedOn,
-        _priorRequest = priorRequest,
-        _reasonCode = reasonCode,
-        _reasonReference = reasonReference,
-        _supportingInfo = supportingInfo,
-        _note = note,
-        _relevantHistory = relevantHistory,
-        super._();
+      this.reasonCode,
+      this.reasonReference,
+      this.supportingInfo,
+      this.note,
+      this.relevantHistory})
+      : super._();
 
   factory _$_DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceRequestFromJson(json);
@@ -4226,70 +3980,21 @@ class _$_DeviceRequest extends _DeviceRequest {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _definition;
+  final List<Identifier>? identifier;
   @override
-  List<Reference>? get definition {
-    final value = _definition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _basedOn;
+  final List<Reference>? definition;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _priorRequest;
+  final List<Reference>? basedOn;
   @override
-  List<Reference>? get priorRequest {
-    final value = _priorRequest;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? priorRequest;
   @override
   final Identifier? groupIdentifier;
   @override
@@ -4332,50 +4037,16 @@ class _$_DeviceRequest extends _DeviceRequest {
   final CodeableConcept? performerType;
   @override
   final Reference? performer;
-  final List<CodeableConcept>? _reasonCode;
   @override
-  List<CodeableConcept>? get reasonCode {
-    final value = _reasonCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _reasonReference;
+  final List<CodeableConcept>? reasonCode;
   @override
-  List<Reference>? get reasonReference {
-    final value = _reasonReference;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _supportingInfo;
+  final List<Reference>? reasonReference;
   @override
-  List<Reference>? get supportingInfo {
-    final value = _supportingInfo;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<Reference>? supportingInfo;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _relevantHistory;
+  final List<Annotation>? note;
   @override
-  List<Reference>? get relevantHistory {
-    final value = _relevantHistory;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? relevantHistory;
 
   @override
   String toString() {
@@ -4400,19 +4071,18 @@ class _$_DeviceRequest extends _DeviceRequest {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.identifier, identifier) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.definition, definition) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
             const DeepCollectionEquality()
-                .equals(other._definition, _definition) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
-            const DeepCollectionEquality()
-                .equals(other._priorRequest, _priorRequest) &&
+                .equals(other.priorRequest, priorRequest) &&
             (identical(other.groupIdentifier, groupIdentifier) ||
                 other.groupIdentifier == groupIdentifier) &&
             (identical(other.status, status) || other.status == status) &&
@@ -4449,14 +4119,14 @@ class _$_DeviceRequest extends _DeviceRequest {
             (identical(other.performer, performer) ||
                 other.performer == performer) &&
             const DeepCollectionEquality()
-                .equals(other._reasonCode, _reasonCode) &&
+                .equals(other.reasonCode, reasonCode) &&
             const DeepCollectionEquality()
-                .equals(other._reasonReference, _reasonReference) &&
+                .equals(other.reasonReference, reasonReference) &&
             const DeepCollectionEquality()
-                .equals(other._supportingInfo, _supportingInfo) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+                .equals(other.supportingInfo, supportingInfo) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._relevantHistory, _relevantHistory));
+                .equals(other.relevantHistory, relevantHistory));
   }
 
   @JsonKey(ignore: true)
@@ -4471,13 +4141,13 @@ class _$_DeviceRequest extends _DeviceRequest {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_definition),
-        const DeepCollectionEquality().hash(_basedOn),
-        const DeepCollectionEquality().hash(_priorRequest),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(definition),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(priorRequest),
         groupIdentifier,
         status,
         statusElement,
@@ -4497,11 +4167,11 @@ class _$_DeviceRequest extends _DeviceRequest {
         requester,
         performerType,
         performer,
-        const DeepCollectionEquality().hash(_reasonCode),
-        const DeepCollectionEquality().hash(_reasonReference),
-        const DeepCollectionEquality().hash(_supportingInfo),
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_relevantHistory)
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(supportingInfo),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(relevantHistory)
       ]);
 
   @JsonKey(ignore: true)
@@ -5419,19 +5089,19 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -5483,7 +5153,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
           : device // ignore: cast_nullable_to_non_nullable
               as Reference,
       indication: freezed == indication
-          ? _value._indication
+          ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       bodySite: freezed == bodySite
@@ -5491,7 +5161,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
           : bodySite // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -5513,11 +5183,11 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -5533,16 +5203,10 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
           this.recordedOnElement,
       this.source,
       required this.device,
-      final List<CodeableConcept>? indication,
+      this.indication,
       this.bodySite,
-      final List<Annotation>? note})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _indication = indication,
-        _note = note,
-        super._();
+      this.note})
+      : super._();
 
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceUseStatementFromJson(json);
@@ -5566,43 +5230,15 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final DeviceUseStatementStatus? status;
   @override
@@ -5630,25 +5266,12 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   final Reference? source;
   @override
   final Reference device;
-  final List<CodeableConcept>? _indication;
   @override
-  List<CodeableConcept>? get indication {
-    final value = _indication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? indication;
   @override
   final CodeableConcept? bodySite;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -5673,14 +5296,13 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -5702,10 +5324,10 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
             (identical(other.source, source) || other.source == source) &&
             (identical(other.device, device) || other.device == device) &&
             const DeepCollectionEquality()
-                .equals(other._indication, _indication) &&
+                .equals(other.indication, indication) &&
             (identical(other.bodySite, bodySite) ||
                 other.bodySite == bodySite) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
@@ -5720,10 +5342,10 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         subject,
@@ -5736,9 +5358,9 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
         recordedOnElement,
         source,
         device,
-        const DeepCollectionEquality().hash(_indication),
+        const DeepCollectionEquality().hash(indication),
         bodySite,
-        const DeepCollectionEquality().hash(_note)
+        const DeepCollectionEquality().hash(note)
       ]);
 
   @JsonKey(ignore: true)
@@ -6429,15 +6051,15 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -6445,11 +6067,11 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       partOf: freezed == partOf
-          ? _value._partOf
+          ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: freezed == status
@@ -6497,7 +6119,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
           : destination // ignore: cast_nullable_to_non_nullable
               as Reference?,
       receiver: freezed == receiver
-          ? _value._receiver
+          ? _value.receiver
           : receiver // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -6519,13 +6141,13 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
+      this.basedOn,
+      this.partOf,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -6539,14 +6161,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       this.occurrenceTiming,
       this.supplier,
       this.destination,
-      final List<Reference>? receiver})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _basedOn = basedOn,
-        _partOf = partOf,
-        _receiver = receiver,
-        super._();
+      this.receiver})
+      : super._();
 
   factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyDeliveryFromJson(json);
@@ -6570,54 +6186,19 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
-  final List<Reference>? _basedOn;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _partOf;
+  final List<Reference>? basedOn;
   @override
-  List<Reference>? get partOf {
-    final value = _partOf;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? partOf;
   @override
   final SupplyDeliveryStatus? status;
   @override
@@ -6642,14 +6223,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   final Reference? supplier;
   @override
   final Reference? destination;
-  final List<Reference>? _receiver;
   @override
-  List<Reference>? get receiver {
-    final value = _receiver;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? receiver;
 
   @override
   String toString() {
@@ -6674,16 +6249,15 @@ class _$_SupplyDelivery extends _SupplyDelivery {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
-            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.partOf, partOf) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -6704,7 +6278,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
                 other.supplier == supplier) &&
             (identical(other.destination, destination) ||
                 other.destination == destination) &&
-            const DeepCollectionEquality().equals(other._receiver, _receiver));
+            const DeepCollectionEquality().equals(other.receiver, receiver));
   }
 
   @JsonKey(ignore: true)
@@ -6719,12 +6293,12 @@ class _$_SupplyDelivery extends _SupplyDelivery {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         identifier,
-        const DeepCollectionEquality().hash(_basedOn),
-        const DeepCollectionEquality().hash(_partOf),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(partOf),
         status,
         statusElement,
         patient,
@@ -6736,7 +6310,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
         occurrenceTiming,
         supplier,
         destination,
-        const DeepCollectionEquality().hash(_receiver)
+        const DeepCollectionEquality().hash(receiver)
       ]);
 
   @JsonKey(ignore: true)
@@ -7764,15 +7338,15 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -7832,7 +7406,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
           : requester // ignore: cast_nullable_to_non_nullable
               as SupplyRequestRequester?,
       supplier: freezed == supplier
-          ? _value._supplier
+          ? _value.supplier
           : supplier // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       reasonCodeableConcept: freezed == reasonCodeableConcept
@@ -7870,10 +7444,10 @@ class _$_SupplyRequest extends _SupplyRequest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.status,
       @JsonKey(name: '_status')
@@ -7892,16 +7466,12 @@ class _$_SupplyRequest extends _SupplyRequest {
       @JsonKey(name: '_authoredOn')
           this.authoredOnElement,
       this.requester,
-      final List<Reference>? supplier,
+      this.supplier,
       this.reasonCodeableConcept,
       this.reasonReference,
       this.deliverFrom,
       this.deliverTo})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _supplier = supplier,
-        super._();
+      : super._();
 
   factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyRequestFromJson(json);
@@ -7925,34 +7495,13 @@ class _$_SupplyRequest extends _SupplyRequest {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -7985,15 +7534,8 @@ class _$_SupplyRequest extends _SupplyRequest {
   final Element? authoredOnElement;
   @override
   final SupplyRequestRequester? requester;
-  final List<Reference>? _supplier;
   @override
-  List<Reference>? get supplier {
-    final value = _supplier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? supplier;
   @override
   final CodeableConcept? reasonCodeableConcept;
   @override
@@ -8026,12 +7568,11 @@ class _$_SupplyRequest extends _SupplyRequest {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.status, status) || other.status == status) &&
@@ -8060,7 +7601,7 @@ class _$_SupplyRequest extends _SupplyRequest {
                 other.authoredOnElement == authoredOnElement) &&
             (identical(other.requester, requester) ||
                 other.requester == requester) &&
-            const DeepCollectionEquality().equals(other._supplier, _supplier) &&
+            const DeepCollectionEquality().equals(other.supplier, supplier) &&
             (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
                 other.reasonCodeableConcept == reasonCodeableConcept) &&
             (identical(other.reasonReference, reasonReference) ||
@@ -8083,9 +7624,9 @@ class _$_SupplyRequest extends _SupplyRequest {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         identifier,
         status,
         statusElement,
@@ -8100,7 +7641,7 @@ class _$_SupplyRequest extends _SupplyRequest {
         authoredOn,
         authoredOnElement,
         requester,
-        const DeepCollectionEquality().hash(_supplier),
+        const DeepCollectionEquality().hash(supplier),
         reasonCodeableConcept,
         reasonReference,
         deliverFrom,

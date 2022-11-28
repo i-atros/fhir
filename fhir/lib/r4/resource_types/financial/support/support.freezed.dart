@@ -689,19 +689,19 @@ class __$$_CoverageCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -753,11 +753,11 @@ class __$$_CoverageCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       payor: null == payor
-          ? _value._payor
+          ? _value.payor
           : payor // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
       class_: freezed == class_
-          ? _value._class_
+          ? _value.class_
           : class_ // ignore: cast_nullable_to_non_nullable
               as List<CoverageClass>?,
       order: freezed == order
@@ -777,7 +777,7 @@ class __$$_CoverageCopyWithImpl<$Res>
           : networkElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       costToBeneficiary: freezed == costToBeneficiary
-          ? _value._costToBeneficiary
+          ? _value.costToBeneficiary
           : costToBeneficiary // ignore: cast_nullable_to_non_nullable
               as List<CoverageCostToBeneficiary>?,
       subrogation: freezed == subrogation
@@ -789,7 +789,7 @@ class __$$_CoverageCopyWithImpl<$Res>
           : subrogationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contract: freezed == contract
-          ? _value._contract
+          ? _value.contract
           : contract // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -811,11 +811,11 @@ class _$_Coverage extends _Coverage {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -831,29 +831,21 @@ class _$_Coverage extends _Coverage {
           this.dependentElement,
       this.relationship,
       this.period,
-      required final List<Reference> payor,
+      required this.payor,
       @JsonKey(name: 'class')
-          final List<CoverageClass>? class_,
+          this.class_,
       this.order,
       @JsonKey(name: '_order')
           this.orderElement,
       this.network,
       @JsonKey(name: '_network')
           this.networkElement,
-      final List<CoverageCostToBeneficiary>? costToBeneficiary,
+      this.costToBeneficiary,
       this.subrogation,
       @JsonKey(name: '_subrogation')
           this.subrogationElement,
-      final List<Reference>? contract})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _payor = payor,
-        _class_ = class_,
-        _costToBeneficiary = costToBeneficiary,
-        _contract = contract,
-        super._();
+      this.contract})
+      : super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageFromJson(json);
@@ -877,43 +869,15 @@ class _$_Coverage extends _Coverage {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -941,23 +905,11 @@ class _$_Coverage extends _Coverage {
   final CodeableConcept? relationship;
   @override
   final Period? period;
-  final List<Reference> _payor;
   @override
-  List<Reference> get payor {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_payor);
-  }
-
-  final List<CoverageClass>? _class_;
+  final List<Reference> payor;
   @override
   @JsonKey(name: 'class')
-  List<CoverageClass>? get class_ {
-    final value = _class_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CoverageClass>? class_;
   @override
   final PositiveInt? order;
   @override
@@ -968,28 +920,15 @@ class _$_Coverage extends _Coverage {
   @override
   @JsonKey(name: '_network')
   final Element? networkElement;
-  final List<CoverageCostToBeneficiary>? _costToBeneficiary;
   @override
-  List<CoverageCostToBeneficiary>? get costToBeneficiary {
-    final value = _costToBeneficiary;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CoverageCostToBeneficiary>? costToBeneficiary;
   @override
   final Boolean? subrogation;
   @override
   @JsonKey(name: '_subrogation')
   final Element? subrogationElement;
-  final List<Reference>? _contract;
   @override
-  List<Reference>? get contract {
-    final value = _contract;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? contract;
 
   @override
   String toString() {
@@ -1014,14 +953,13 @@ class _$_Coverage extends _Coverage {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -1043,8 +981,8 @@ class _$_Coverage extends _Coverage {
             (identical(other.relationship, relationship) ||
                 other.relationship == relationship) &&
             (identical(other.period, period) || other.period == period) &&
-            const DeepCollectionEquality().equals(other._payor, _payor) &&
-            const DeepCollectionEquality().equals(other._class_, _class_) &&
+            const DeepCollectionEquality().equals(other.payor, payor) &&
+            const DeepCollectionEquality().equals(other.class_, class_) &&
             (identical(other.order, order) || other.order == order) &&
             (identical(other.orderElement, orderElement) ||
                 other.orderElement == orderElement) &&
@@ -1052,12 +990,12 @@ class _$_Coverage extends _Coverage {
             (identical(other.networkElement, networkElement) ||
                 other.networkElement == networkElement) &&
             const DeepCollectionEquality()
-                .equals(other._costToBeneficiary, _costToBeneficiary) &&
+                .equals(other.costToBeneficiary, costToBeneficiary) &&
             (identical(other.subrogation, subrogation) ||
                 other.subrogation == subrogation) &&
             (identical(other.subrogationElement, subrogationElement) ||
                 other.subrogationElement == subrogationElement) &&
-            const DeepCollectionEquality().equals(other._contract, _contract));
+            const DeepCollectionEquality().equals(other.contract, contract));
   }
 
   @JsonKey(ignore: true)
@@ -1072,10 +1010,10 @@ class _$_Coverage extends _Coverage {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         type,
@@ -1088,16 +1026,16 @@ class _$_Coverage extends _Coverage {
         dependentElement,
         relationship,
         period,
-        const DeepCollectionEquality().hash(_payor),
-        const DeepCollectionEquality().hash(_class_),
+        const DeepCollectionEquality().hash(payor),
+        const DeepCollectionEquality().hash(class_),
         order,
         orderElement,
         network,
         networkElement,
-        const DeepCollectionEquality().hash(_costToBeneficiary),
+        const DeepCollectionEquality().hash(costToBeneficiary),
         subrogation,
         subrogationElement,
-        const DeepCollectionEquality().hash(_contract)
+        const DeepCollectionEquality().hash(contract)
       ]);
 
   @JsonKey(ignore: true)
@@ -1439,11 +1377,11 @@ class __$$_CoverageClassCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: null == type
@@ -1475,41 +1413,25 @@ class __$$_CoverageClassCopyWithImpl<$Res>
 class _$_CoverageClass extends _CoverageClass {
   _$_CoverageClass(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.type,
       this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageClassFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -1535,9 +1457,9 @@ class _$_CoverageClass extends _CoverageClass {
             other is _$_CoverageClass &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.valueElement, valueElement) ||
@@ -1552,8 +1474,8 @@ class _$_CoverageClass extends _CoverageClass {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       value,
       valueElement,
@@ -1801,11 +1723,11 @@ class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -1821,7 +1743,7 @@ class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
           : valueMoney // ignore: cast_nullable_to_non_nullable
               as Money?,
       exception: freezed == exception
-          ? _value._exception
+          ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as List<CoverageException>?,
     ));
@@ -1833,55 +1755,32 @@ class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
 class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   _$_CoverageCostToBeneficiary(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
       this.valueQuantity,
       this.valueMoney,
-      final List<CoverageException>? exception})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _exception = exception,
-        super._();
+      this.exception})
+      : super._();
 
   factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageCostToBeneficiaryFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
   final Quantity? valueQuantity;
   @override
   final Money? valueMoney;
-  final List<CoverageException>? _exception;
   @override
-  List<CoverageException>? get exception {
-    final value = _exception;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CoverageException>? exception;
 
   @override
   String toString() {
@@ -1895,16 +1794,15 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
             other is _$_CoverageCostToBeneficiary &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.valueQuantity, valueQuantity) ||
                 other.valueQuantity == valueQuantity) &&
             (identical(other.valueMoney, valueMoney) ||
                 other.valueMoney == valueMoney) &&
-            const DeepCollectionEquality()
-                .equals(other._exception, _exception));
+            const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @JsonKey(ignore: true)
@@ -1912,12 +1810,12 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       valueQuantity,
       valueMoney,
-      const DeepCollectionEquality().hash(_exception));
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -2114,11 +2012,11 @@ class __$$_CoverageExceptionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: null == type
@@ -2138,38 +2036,22 @@ class __$$_CoverageExceptionCopyWithImpl<$Res>
 class _$_CoverageException extends _CoverageException {
   _$_CoverageException(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.type,
       this.period})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageExceptionFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -2187,9 +2069,9 @@ class _$_CoverageException extends _CoverageException {
             other is _$_CoverageException &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.period, period) || other.period == period));
   }
@@ -2199,8 +2081,8 @@ class _$_CoverageException extends _CoverageException {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       period);
 
@@ -2855,19 +2737,19 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -2883,11 +2765,11 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
           : priority // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       purpose: freezed == purpose
-          ? _value._purpose
+          ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityRequestPurpose>?,
       purposeElement: freezed == purposeElement
-          ? _value._purposeElement
+          ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       patient: null == patient
@@ -2931,15 +2813,15 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
           : facility // ignore: cast_nullable_to_non_nullable
               as Reference?,
       supportingInfo: freezed == supportingInfo
-          ? _value._supportingInfo
+          ? _value.supportingInfo
           : supportingInfo // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityRequestSupportingInfo>?,
       insurance: freezed == insurance
-          ? _value._insurance
+          ? _value.insurance
           : insurance // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityRequestInsurance>?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityRequestItem>?,
     ));
@@ -2961,18 +2843,18 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.priority,
-      final List<CoverageEligibilityRequestPurpose>? purpose,
+      this.purpose,
       @JsonKey(name: '_purpose')
-          final List<Element?>? purposeElement,
+          this.purposeElement,
       required this.patient,
       this.servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -2985,19 +2867,10 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       this.provider,
       required this.insurer,
       this.facility,
-      final List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
-      final List<CoverageEligibilityRequestInsurance>? insurance,
-      final List<CoverageEligibilityRequestItem>? item})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _purpose = purpose,
-        _purposeElement = purposeElement,
-        _supportingInfo = supportingInfo,
-        _insurance = insurance,
-        _item = item,
-        super._();
+      this.supportingInfo,
+      this.insurance,
+      this.item})
+      : super._();
 
   factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageEligibilityRequestFromJson(json);
@@ -3021,43 +2894,15 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -3065,25 +2910,11 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   final Element? statusElement;
   @override
   final CodeableConcept? priority;
-  final List<CoverageEligibilityRequestPurpose>? _purpose;
   @override
-  List<CoverageEligibilityRequestPurpose>? get purpose {
-    final value = _purpose;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _purposeElement;
+  final List<CoverageEligibilityRequestPurpose>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  List<Element?>? get purposeElement {
-    final value = _purposeElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? purposeElement;
   @override
   final Reference patient;
   @override
@@ -3106,32 +2937,12 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   final Reference insurer;
   @override
   final Reference? facility;
-  final List<CoverageEligibilityRequestSupportingInfo>? _supportingInfo;
   @override
-  List<CoverageEligibilityRequestSupportingInfo>? get supportingInfo {
-    final value = _supportingInfo;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CoverageEligibilityRequestInsurance>? _insurance;
+  final List<CoverageEligibilityRequestSupportingInfo>? supportingInfo;
   @override
-  List<CoverageEligibilityRequestInsurance>? get insurance {
-    final value = _insurance;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CoverageEligibilityRequestItem>? _item;
+  final List<CoverageEligibilityRequestInsurance>? insurance;
   @override
-  List<CoverageEligibilityRequestItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CoverageEligibilityRequestItem>? item;
 
   @override
   String toString() {
@@ -3156,22 +2967,21 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
             (identical(other.priority, priority) ||
                 other.priority == priority) &&
-            const DeepCollectionEquality().equals(other._purpose, _purpose) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
             const DeepCollectionEquality()
-                .equals(other._purposeElement, _purposeElement) &&
+                .equals(other.purposeElement, purposeElement) &&
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.servicedDate, servicedDate) ||
                 other.servicedDate == servicedDate) &&
@@ -3189,10 +2999,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
             (identical(other.facility, facility) ||
                 other.facility == facility) &&
             const DeepCollectionEquality()
-                .equals(other._supportingInfo, _supportingInfo) &&
-            const DeepCollectionEquality()
-                .equals(other._insurance, _insurance) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+                .equals(other.supportingInfo, supportingInfo) &&
+            const DeepCollectionEquality().equals(other.insurance, insurance) &&
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -3207,15 +3016,15 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         priority,
-        const DeepCollectionEquality().hash(_purpose),
-        const DeepCollectionEquality().hash(_purposeElement),
+        const DeepCollectionEquality().hash(purpose),
+        const DeepCollectionEquality().hash(purposeElement),
         patient,
         servicedDate,
         servicedDateElement,
@@ -3226,9 +3035,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
         provider,
         insurer,
         facility,
-        const DeepCollectionEquality().hash(_supportingInfo),
-        const DeepCollectionEquality().hash(_insurance),
-        const DeepCollectionEquality().hash(_item)
+        const DeepCollectionEquality().hash(supportingInfo),
+        const DeepCollectionEquality().hash(insurance),
+        const DeepCollectionEquality().hash(item)
       ]);
 
   @JsonKey(ignore: true)
@@ -3565,11 +3374,11 @@ class __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       sequence: freezed == sequence
@@ -3602,16 +3411,14 @@ class _$_CoverageEligibilityRequestSupportingInfo
     extends _CoverageEligibilityRequestSupportingInfo {
   _$_CoverageEligibilityRequestSupportingInfo(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
       required this.information,
       this.appliesToAll,
       @JsonKey(name: '_appliesToAll') this.appliesToAllElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
@@ -3619,25 +3426,11 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final PositiveInt? sequence;
   @override
@@ -3663,9 +3456,9 @@ class _$_CoverageEligibilityRequestSupportingInfo
             other is _$_CoverageEligibilityRequestSupportingInfo &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.sequence, sequence) ||
                 other.sequence == sequence) &&
             (identical(other.sequenceElement, sequenceElement) ||
@@ -3683,8 +3476,8 @@ class _$_CoverageEligibilityRequestSupportingInfo
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       sequence,
       sequenceElement,
       information,
@@ -3954,11 +3747,11 @@ class __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       focal: freezed == focal
@@ -3991,16 +3784,14 @@ class _$_CoverageEligibilityRequestInsurance
     extends _CoverageEligibilityRequestInsurance {
   _$_CoverageEligibilityRequestInsurance(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.focal,
       @JsonKey(name: '_focal') this.focalElement,
       required this.coverage,
       this.businessArrangement,
       @JsonKey(name: '_businessArrangement') this.businessArrangementElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -4008,25 +3799,11 @@ class _$_CoverageEligibilityRequestInsurance
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Boolean? focal;
   @override
@@ -4052,9 +3829,9 @@ class _$_CoverageEligibilityRequestInsurance
             other is _$_CoverageEligibilityRequestInsurance &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.focal, focal) || other.focal == focal) &&
             (identical(other.focalElement, focalElement) ||
                 other.focalElement == focalElement) &&
@@ -4073,8 +3850,8 @@ class _$_CoverageEligibilityRequestInsurance
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       focal,
       focalElement,
       coverage,
@@ -4449,19 +4226,19 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       supportingInfoSequence: freezed == supportingInfoSequence
-          ? _value._supportingInfoSequence
+          ? _value.supportingInfoSequence
           : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
               as List<PositiveInt>?,
       supportingInfoSequenceElement: freezed == supportingInfoSequenceElement
-          ? _value._supportingInfoSequenceElement
+          ? _value.supportingInfoSequenceElement
           : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       category: freezed == category
@@ -4473,7 +4250,7 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
           : productOrService // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       provider: freezed == provider
@@ -4493,11 +4270,11 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
           : facility // ignore: cast_nullable_to_non_nullable
               as Reference?,
       diagnosis: freezed == diagnosis
-          ? _value._diagnosis
+          ? _value.diagnosis
           : diagnosis // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityRequestDiagnosis>?,
       detail: freezed == detail
-          ? _value._detail
+          ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -4511,28 +4288,21 @@ class _$_CoverageEligibilityRequestItem
   _$_CoverageEligibilityRequestItem(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<PositiveInt>? supportingInfoSequence,
+          this.extension_,
+      this.modifierExtension,
+      this.supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          final List<Element>? supportingInfoSequenceElement,
+          this.supportingInfoSequenceElement,
       this.category,
       this.productOrService,
-      final List<CodeableConcept>? modifier,
+      this.modifier,
       this.provider,
       this.quantity,
       this.unitPrice,
       this.facility,
-      final List<CoverageEligibilityRequestDiagnosis>? diagnosis,
-      final List<Reference>? detail})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _supportingInfoSequence = supportingInfoSequence,
-        _supportingInfoSequenceElement = supportingInfoSequenceElement,
-        _modifier = modifier,
-        _diagnosis = diagnosis,
-        _detail = detail,
-        super._();
+      this.diagnosis,
+      this.detail})
+      : super._();
 
   factory _$_CoverageEligibilityRequestItem.fromJson(
           Map<String, dynamic> json) =>
@@ -4540,57 +4310,22 @@ class _$_CoverageEligibilityRequestItem
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PositiveInt>? _supportingInfoSequence;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<PositiveInt>? get supportingInfoSequence {
-    final value = _supportingInfoSequence;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _supportingInfoSequenceElement;
+  final List<PositiveInt>? supportingInfoSequence;
   @override
   @JsonKey(name: '_supportingInfoSequence')
-  List<Element>? get supportingInfoSequenceElement {
-    final value = _supportingInfoSequenceElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element>? supportingInfoSequenceElement;
   @override
   final CodeableConcept? category;
   @override
   final CodeableConcept? productOrService;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? modifier;
   @override
   final Reference? provider;
   @override
@@ -4599,23 +4334,10 @@ class _$_CoverageEligibilityRequestItem
   final Money? unitPrice;
   @override
   final Reference? facility;
-  final List<CoverageEligibilityRequestDiagnosis>? _diagnosis;
   @override
-  List<CoverageEligibilityRequestDiagnosis>? get diagnosis {
-    final value = _diagnosis;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _detail;
+  final List<CoverageEligibilityRequestDiagnosis>? diagnosis;
   @override
-  List<Reference>? get detail {
-    final value = _detail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? detail;
 
   @override
   String toString() {
@@ -4629,19 +4351,19 @@ class _$_CoverageEligibilityRequestItem
             other is _$_CoverageEligibilityRequestItem &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.supportingInfoSequence, supportingInfoSequence) &&
             const DeepCollectionEquality().equals(
-                other._supportingInfoSequence, _supportingInfoSequence) &&
-            const DeepCollectionEquality().equals(
-                other._supportingInfoSequenceElement,
-                _supportingInfoSequenceElement) &&
+                other.supportingInfoSequenceElement,
+                supportingInfoSequenceElement) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.productOrService, productOrService) ||
                 other.productOrService == productOrService) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             (identical(other.provider, provider) ||
                 other.provider == provider) &&
             (identical(other.quantity, quantity) ||
@@ -4650,9 +4372,8 @@ class _$_CoverageEligibilityRequestItem
                 other.unitPrice == unitPrice) &&
             (identical(other.facility, facility) ||
                 other.facility == facility) &&
-            const DeepCollectionEquality()
-                .equals(other._diagnosis, _diagnosis) &&
-            const DeepCollectionEquality().equals(other._detail, _detail));
+            const DeepCollectionEquality().equals(other.diagnosis, diagnosis) &&
+            const DeepCollectionEquality().equals(other.detail, detail));
   }
 
   @JsonKey(ignore: true)
@@ -4660,19 +4381,19 @@ class _$_CoverageEligibilityRequestItem
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_supportingInfoSequence),
-      const DeepCollectionEquality().hash(_supportingInfoSequenceElement),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(supportingInfoSequence),
+      const DeepCollectionEquality().hash(supportingInfoSequenceElement),
       category,
       productOrService,
-      const DeepCollectionEquality().hash(_modifier),
+      const DeepCollectionEquality().hash(modifier),
       provider,
       quantity,
       unitPrice,
       facility,
-      const DeepCollectionEquality().hash(_diagnosis),
-      const DeepCollectionEquality().hash(_detail));
+      const DeepCollectionEquality().hash(diagnosis),
+      const DeepCollectionEquality().hash(detail));
 
   @JsonKey(ignore: true)
   @override
@@ -4908,11 +4629,11 @@ class __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       diagnosisCodeableConcept: freezed == diagnosisCodeableConcept
@@ -4933,13 +4654,11 @@ class _$_CoverageEligibilityRequestDiagnosis
     extends _CoverageEligibilityRequestDiagnosis {
   _$_CoverageEligibilityRequestDiagnosis(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.diagnosisCodeableConcept,
       this.diagnosisReference})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
@@ -4947,25 +4666,11 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? diagnosisCodeableConcept;
   @override
@@ -4983,9 +4688,9 @@ class _$_CoverageEligibilityRequestDiagnosis
             other is _$_CoverageEligibilityRequestDiagnosis &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(
                     other.diagnosisCodeableConcept, diagnosisCodeableConcept) ||
                 other.diagnosisCodeableConcept == diagnosisCodeableConcept) &&
@@ -4998,8 +4703,8 @@ class _$_CoverageEligibilityRequestDiagnosis
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       diagnosisCodeableConcept,
       diagnosisReference);
 
@@ -5734,19 +5439,19 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -5758,11 +5463,11 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       purpose: freezed == purpose
-          ? _value._purpose
+          ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityResponsePurpose>?,
       purposeElement: freezed == purposeElement
-          ? _value._purposeElement
+          ? _value.purposeElement
           : purposeElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       patient: null == patient
@@ -5818,7 +5523,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
           : insurer // ignore: cast_nullable_to_non_nullable
               as Reference,
       insurance: freezed == insurance
-          ? _value._insurance
+          ? _value.insurance
           : insurance // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityResponseInsurance>?,
       preAuthRef: freezed == preAuthRef
@@ -5834,7 +5539,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
           : form // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       error: freezed == error
-          ? _value._error
+          ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityResponseError>?,
     ));
@@ -5856,17 +5561,17 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<CoverageEligibilityResponsePurpose>? purpose,
+      this.purpose,
       @JsonKey(name: '_purpose')
-          final List<Element?>? purposeElement,
+          this.purposeElement,
       required this.patient,
       this.servicedDate,
       @JsonKey(name: '_servicedDate')
@@ -5885,21 +5590,13 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       @JsonKey(name: '_disposition')
           this.dispositionElement,
       required this.insurer,
-      final List<CoverageEligibilityResponseInsurance>? insurance,
+      this.insurance,
       this.preAuthRef,
       @JsonKey(name: '_preAuthRef')
           this.preAuthRefElement,
       this.form,
-      final List<CoverageEligibilityResponseError>? error})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _purpose = purpose,
-        _purposeElement = purposeElement,
-        _insurance = insurance,
-        _error = error,
-        super._();
+      this.error})
+      : super._();
 
   factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageEligibilityResponseFromJson(json);
@@ -5923,67 +5620,25 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
-  final List<CoverageEligibilityResponsePurpose>? _purpose;
   @override
-  List<CoverageEligibilityResponsePurpose>? get purpose {
-    final value = _purpose;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _purposeElement;
+  final List<CoverageEligibilityResponsePurpose>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  List<Element?>? get purposeElement {
-    final value = _purposeElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? purposeElement;
   @override
   final Reference patient;
   @override
@@ -6015,15 +5670,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   final Element? dispositionElement;
   @override
   final Reference insurer;
-  final List<CoverageEligibilityResponseInsurance>? _insurance;
   @override
-  List<CoverageEligibilityResponseInsurance>? get insurance {
-    final value = _insurance;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CoverageEligibilityResponseInsurance>? insurance;
   @override
   final String? preAuthRef;
   @override
@@ -6031,14 +5679,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   final Element? preAuthRefElement;
   @override
   final CodeableConcept? form;
-  final List<CoverageEligibilityResponseError>? _error;
   @override
-  List<CoverageEligibilityResponseError>? get error {
-    final value = _error;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CoverageEligibilityResponseError>? error;
 
   @override
   String toString() {
@@ -6063,20 +5705,19 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
-            const DeepCollectionEquality().equals(other._purpose, _purpose) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
             const DeepCollectionEquality()
-                .equals(other._purposeElement, _purposeElement) &&
+                .equals(other.purposeElement, purposeElement) &&
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.servicedDate, servicedDate) ||
                 other.servicedDate == servicedDate) &&
@@ -6098,14 +5739,13 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
             (identical(other.dispositionElement, dispositionElement) ||
                 other.dispositionElement == dispositionElement) &&
             (identical(other.insurer, insurer) || other.insurer == insurer) &&
-            const DeepCollectionEquality()
-                .equals(other._insurance, _insurance) &&
+            const DeepCollectionEquality().equals(other.insurance, insurance) &&
             (identical(other.preAuthRef, preAuthRef) ||
                 other.preAuthRef == preAuthRef) &&
             (identical(other.preAuthRefElement, preAuthRefElement) ||
                 other.preAuthRefElement == preAuthRefElement) &&
             (identical(other.form, form) || other.form == form) &&
-            const DeepCollectionEquality().equals(other._error, _error));
+            const DeepCollectionEquality().equals(other.error, error));
   }
 
   @JsonKey(ignore: true)
@@ -6120,14 +5760,14 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
-        const DeepCollectionEquality().hash(_purpose),
-        const DeepCollectionEquality().hash(_purposeElement),
+        const DeepCollectionEquality().hash(purpose),
+        const DeepCollectionEquality().hash(purposeElement),
         patient,
         servicedDate,
         servicedDateElement,
@@ -6141,11 +5781,11 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
         disposition,
         dispositionElement,
         insurer,
-        const DeepCollectionEquality().hash(_insurance),
+        const DeepCollectionEquality().hash(insurance),
         preAuthRef,
         preAuthRefElement,
         form,
-        const DeepCollectionEquality().hash(_error)
+        const DeepCollectionEquality().hash(error)
       ]);
 
   @JsonKey(ignore: true)
@@ -6501,11 +6141,11 @@ class __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       coverage: null == coverage
@@ -6525,7 +6165,7 @@ class __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
           : benefitPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityResponseItem>?,
     ));
@@ -6538,17 +6178,14 @@ class _$_CoverageEligibilityResponseInsurance
     extends _CoverageEligibilityResponseInsurance {
   _$_CoverageEligibilityResponseInsurance(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.coverage,
       this.inforce,
       @JsonKey(name: '_inforce') this.inforceElement,
       this.benefitPeriod,
-      final List<CoverageEligibilityResponseItem>? item})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _item = item,
-        super._();
+      this.item})
+      : super._();
 
   factory _$_CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
@@ -6556,25 +6193,11 @@ class _$_CoverageEligibilityResponseInsurance
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Reference coverage;
   @override
@@ -6584,14 +6207,8 @@ class _$_CoverageEligibilityResponseInsurance
   final Element? inforceElement;
   @override
   final Period? benefitPeriod;
-  final List<CoverageEligibilityResponseItem>? _item;
   @override
-  List<CoverageEligibilityResponseItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CoverageEligibilityResponseItem>? item;
 
   @override
   String toString() {
@@ -6605,9 +6222,9 @@ class _$_CoverageEligibilityResponseInsurance
             other is _$_CoverageEligibilityResponseInsurance &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.coverage, coverage) ||
                 other.coverage == coverage) &&
             (identical(other.inforce, inforce) || other.inforce == inforce) &&
@@ -6615,7 +6232,7 @@ class _$_CoverageEligibilityResponseInsurance
                 other.inforceElement == inforceElement) &&
             (identical(other.benefitPeriod, benefitPeriod) ||
                 other.benefitPeriod == benefitPeriod) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -6623,13 +6240,13 @@ class _$_CoverageEligibilityResponseInsurance
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       coverage,
       inforce,
       inforceElement,
       benefitPeriod,
-      const DeepCollectionEquality().hash(_item));
+      const DeepCollectionEquality().hash(item));
 
   @JsonKey(ignore: true)
   @override
@@ -7156,11 +6773,11 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       category: freezed == category
@@ -7172,7 +6789,7 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
           : productOrService // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       modifier: freezed == modifier
-          ? _value._modifier
+          ? _value.modifier
           : modifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       provider: freezed == provider
@@ -7216,7 +6833,7 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
           : term // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       benefit: freezed == benefit
-          ? _value._benefit
+          ? _value.benefit
           : benefit // ignore: cast_nullable_to_non_nullable
               as List<CoverageEligibilityResponseBenefit>?,
       authorizationRequired: freezed == authorizationRequired
@@ -7228,7 +6845,7 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
           : authorizationRequiredElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       authorizationSupporting: freezed == authorizationSupporting
-          ? _value._authorizationSupporting
+          ? _value.authorizationSupporting
           : authorizationSupporting // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       authorizationUrl: freezed == authorizationUrl
@@ -7250,11 +6867,11 @@ class _$_CoverageEligibilityResponseItem
   _$_CoverageEligibilityResponseItem(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.category,
       this.productOrService,
-      final List<CodeableConcept>? modifier,
+      this.modifier,
       this.provider,
       this.excluded,
       @JsonKey(name: '_excluded')
@@ -7268,20 +6885,15 @@ class _$_CoverageEligibilityResponseItem
       this.network,
       this.unit,
       this.term,
-      final List<CoverageEligibilityResponseBenefit>? benefit,
+      this.benefit,
       this.authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
           this.authorizationRequiredElement,
-      final List<CodeableConcept>? authorizationSupporting,
+      this.authorizationSupporting,
       this.authorizationUrl,
       @JsonKey(name: '_authorizationUrl')
           this.authorizationUrlElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _modifier = modifier,
-        _benefit = benefit,
-        _authorizationSupporting = authorizationSupporting,
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityResponseItem.fromJson(
           Map<String, dynamic> json) =>
@@ -7289,38 +6901,17 @@ class _$_CoverageEligibilityResponseItem
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? category;
   @override
   final CodeableConcept? productOrService;
-  final List<CodeableConcept>? _modifier;
   @override
-  List<CodeableConcept>? get modifier {
-    final value = _modifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? modifier;
   @override
   final Reference? provider;
   @override
@@ -7344,29 +6935,15 @@ class _$_CoverageEligibilityResponseItem
   final CodeableConcept? unit;
   @override
   final CodeableConcept? term;
-  final List<CoverageEligibilityResponseBenefit>? _benefit;
   @override
-  List<CoverageEligibilityResponseBenefit>? get benefit {
-    final value = _benefit;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CoverageEligibilityResponseBenefit>? benefit;
   @override
   final Boolean? authorizationRequired;
   @override
   @JsonKey(name: '_authorizationRequired')
   final Element? authorizationRequiredElement;
-  final List<CodeableConcept>? _authorizationSupporting;
   @override
-  List<CodeableConcept>? get authorizationSupporting {
-    final value = _authorizationSupporting;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? authorizationSupporting;
   @override
   final FhirUri? authorizationUrl;
   @override
@@ -7385,14 +6962,14 @@ class _$_CoverageEligibilityResponseItem
             other is _$_CoverageEligibilityResponseItem &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.productOrService, productOrService) ||
                 other.productOrService == productOrService) &&
-            const DeepCollectionEquality().equals(other._modifier, _modifier) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
             (identical(other.provider, provider) ||
                 other.provider == provider) &&
             (identical(other.excluded, excluded) ||
@@ -7409,7 +6986,7 @@ class _$_CoverageEligibilityResponseItem
             (identical(other.network, network) || other.network == network) &&
             (identical(other.unit, unit) || other.unit == unit) &&
             (identical(other.term, term) || other.term == term) &&
-            const DeepCollectionEquality().equals(other._benefit, _benefit) &&
+            const DeepCollectionEquality().equals(other.benefit, benefit) &&
             (identical(other.authorizationRequired, authorizationRequired) ||
                 other.authorizationRequired == authorizationRequired) &&
             (identical(other.authorizationRequiredElement,
@@ -7417,7 +6994,7 @@ class _$_CoverageEligibilityResponseItem
                 other.authorizationRequiredElement ==
                     authorizationRequiredElement) &&
             const DeepCollectionEquality().equals(
-                other._authorizationSupporting, _authorizationSupporting) &&
+                other.authorizationSupporting, authorizationSupporting) &&
             (identical(other.authorizationUrl, authorizationUrl) ||
                 other.authorizationUrl == authorizationUrl) &&
             (identical(
@@ -7430,11 +7007,11 @@ class _$_CoverageEligibilityResponseItem
   int get hashCode => Object.hashAll([
         runtimeType,
         id,
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         category,
         productOrService,
-        const DeepCollectionEquality().hash(_modifier),
+        const DeepCollectionEquality().hash(modifier),
         provider,
         excluded,
         excludedElement,
@@ -7445,10 +7022,10 @@ class _$_CoverageEligibilityResponseItem
         network,
         unit,
         term,
-        const DeepCollectionEquality().hash(_benefit),
+        const DeepCollectionEquality().hash(benefit),
         authorizationRequired,
         authorizationRequiredElement,
-        const DeepCollectionEquality().hash(_authorizationSupporting),
+        const DeepCollectionEquality().hash(authorizationSupporting),
         authorizationUrl,
         authorizationUrlElement
       ]);
@@ -7876,11 +7453,11 @@ class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: null == type
@@ -7937,8 +7514,8 @@ class _$_CoverageEligibilityResponseBenefit
     extends _CoverageEligibilityResponseBenefit {
   _$_CoverageEligibilityResponseBenefit(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.type,
       this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
@@ -7950,9 +7527,7 @@ class _$_CoverageEligibilityResponseBenefit
       this.usedString,
       @JsonKey(name: '_usedString') this.usedStringElement,
       this.usedMoney})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
@@ -7960,25 +7535,11 @@ class _$_CoverageEligibilityResponseBenefit
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -8018,9 +7579,9 @@ class _$_CoverageEligibilityResponseBenefit
             other is _$_CoverageEligibilityResponseBenefit &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.allowedUnsignedInt, allowedUnsignedInt) ||
                 other.allowedUnsignedInt == allowedUnsignedInt) &&
@@ -8050,8 +7611,8 @@ class _$_CoverageEligibilityResponseBenefit
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       allowedUnsignedInt,
       allowedUnsignedIntElement,
@@ -8276,11 +7837,11 @@ class __$$_CoverageEligibilityResponseErrorCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: null == code
@@ -8297,12 +7858,10 @@ class _$_CoverageEligibilityResponseError
     extends _CoverageEligibilityResponseError {
   _$_CoverageEligibilityResponseError(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.code})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>
@@ -8310,25 +7869,11 @@ class _$_CoverageEligibilityResponseError
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept code;
 
@@ -8344,9 +7889,9 @@ class _$_CoverageEligibilityResponseError
             other is _$_CoverageEligibilityResponseError &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.code, code) || other.code == code));
   }
 
@@ -8355,8 +7900,8 @@ class _$_CoverageEligibilityResponseError
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       code);
 
   @JsonKey(ignore: true)
@@ -8853,19 +8398,19 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -8919,11 +8464,11 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -8934,11 +8479,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       this.provider,
       this.candidate,
       this.coverage})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        super._();
+      : super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$$_EnrollmentRequestFromJson(json);
@@ -8962,43 +8503,15 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -9041,14 +8554,13 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -9076,10 +8588,10 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         created,
@@ -9690,19 +9202,19 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -9768,11 +9280,11 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -9789,11 +9301,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
           this.createdElement,
       this.organization,
       this.requestProvider})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        super._();
+      : super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$$_EnrollmentResponseFromJson(json);
@@ -9817,43 +9325,15 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -9905,14 +9385,13 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -9945,10 +9424,10 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         request,

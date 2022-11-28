@@ -724,19 +724,19 @@ class __$$_PatientCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       active: freezed == active
@@ -748,11 +748,11 @@ class __$$_PatientCopyWithImpl<$Res>
           : activeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       name: freezed == name
-          ? _value._name
+          ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as List<HumanName>?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       gender: freezed == gender
@@ -788,7 +788,7 @@ class __$$_PatientCopyWithImpl<$Res>
           : deceasedDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       address: freezed == address
-          ? _value._address
+          ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as List<Address>?,
       maritalStatus: freezed == maritalStatus
@@ -812,11 +812,11 @@ class __$$_PatientCopyWithImpl<$Res>
           : multipleBirthIntegerElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       photo: freezed == photo
-          ? _value._photo
+          ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<PatientContact>?,
       animal: freezed == animal
@@ -824,11 +824,11 @@ class __$$_PatientCopyWithImpl<$Res>
           : animal // ignore: cast_nullable_to_non_nullable
               as PatientAnimal?,
       communication: freezed == communication
-          ? _value._communication
+          ? _value.communication
           : communication // ignore: cast_nullable_to_non_nullable
               as List<PatientCommunication>?,
       careProvider: freezed == careProvider
-          ? _value._careProvider
+          ? _value.careProvider
           : careProvider // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       managingOrganization: freezed == managingOrganization
@@ -836,7 +836,7 @@ class __$$_PatientCopyWithImpl<$Res>
           : managingOrganization // ignore: cast_nullable_to_non_nullable
               as Reference?,
       link: freezed == link
-          ? _value._link
+          ? _value.link
           : link // ignore: cast_nullable_to_non_nullable
               as List<PatientLink>?,
     ));
@@ -860,16 +860,16 @@ class _$_Patient extends _Patient {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
-      final List<HumanName>? name,
-      final List<ContactPoint>? telecom,
+      this.name,
+      this.telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
           this.gender,
       @JsonKey(name: '_gender')
@@ -883,7 +883,7 @@ class _$_Patient extends _Patient {
       this.deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
           this.deceasedDateTimeElement,
-      final List<Address>? address,
+      this.address,
       this.maritalStatus,
       this.multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
@@ -891,26 +891,14 @@ class _$_Patient extends _Patient {
       this.multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
           this.multipleBirthIntegerElement,
-      final List<Attachment>? photo,
-      final List<PatientContact>? contact,
+      this.photo,
+      this.contact,
       this.animal,
-      final List<PatientCommunication>? communication,
-      final List<Reference>? careProvider,
+      this.communication,
+      this.careProvider,
       this.managingOrganization,
-      final List<PatientLink>? link})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _name = name,
-        _telecom = telecom,
-        _address = address,
-        _photo = photo,
-        _contact = contact,
-        _communication = communication,
-        _careProvider = careProvider,
-        _link = link,
-        super._();
+      this.link})
+      : super._();
 
   factory _$_Patient.fromJson(Map<String, dynamic> json) =>
       _$$_PatientFromJson(json);
@@ -937,66 +925,24 @@ class _$_Patient extends _Patient {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Boolean? active;
   @override
   @JsonKey(name: '_active')
   final Element? activeElement;
-  final List<HumanName>? _name;
   @override
-  List<HumanName>? get name {
-    final value = _name;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactPoint>? _telecom;
+  final List<HumanName>? name;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactPoint>? telecom;
   @override
   @JsonKey(unknownEnumValue: PatientGender.unknown)
   final PatientGender? gender;
@@ -1018,15 +964,8 @@ class _$_Patient extends _Patient {
   @override
   @JsonKey(name: '_deceasedDateTime')
   final Element? deceasedDateTimeElement;
-  final List<Address>? _address;
   @override
-  List<Address>? get address {
-    final value = _address;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Address>? address;
   @override
   final CodeableConcept? maritalStatus;
   @override
@@ -1039,54 +978,20 @@ class _$_Patient extends _Patient {
   @override
   @JsonKey(name: '_multipleBirthInteger')
   final Element? multipleBirthIntegerElement;
-  final List<Attachment>? _photo;
   @override
-  List<Attachment>? get photo {
-    final value = _photo;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PatientContact>? _contact;
+  final List<Attachment>? photo;
   @override
-  List<PatientContact>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<PatientContact>? contact;
   @override
   final PatientAnimal? animal;
-  final List<PatientCommunication>? _communication;
   @override
-  List<PatientCommunication>? get communication {
-    final value = _communication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _careProvider;
+  final List<PatientCommunication>? communication;
   @override
-  List<Reference>? get careProvider {
-    final value = _careProvider;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? careProvider;
   @override
   final Reference? managingOrganization;
-  final List<PatientLink>? _link;
   @override
-  List<PatientLink>? get link {
-    final value = _link;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<PatientLink>? link;
 
   @override
   String toString() {
@@ -1113,19 +1018,18 @@ class _$_Patient extends _Patient {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.active, active) || other.active == active) &&
             (identical(other.activeElement, activeElement) ||
                 other.activeElement == activeElement) &&
-            const DeepCollectionEquality().equals(other._name, _name) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.genderElement, genderElement) ||
                 other.genderElement == genderElement) &&
@@ -1142,7 +1046,7 @@ class _$_Patient extends _Patient {
             (identical(
                     other.deceasedDateTimeElement, deceasedDateTimeElement) ||
                 other.deceasedDateTimeElement == deceasedDateTimeElement) &&
-            const DeepCollectionEquality().equals(other._address, _address) &&
+            const DeepCollectionEquality().equals(other.address, address) &&
             (identical(other.maritalStatus, maritalStatus) ||
                 other.maritalStatus == maritalStatus) &&
             (identical(other.multipleBirthBoolean, multipleBirthBoolean) ||
@@ -1157,16 +1061,16 @@ class _$_Patient extends _Patient {
                     multipleBirthIntegerElement) ||
                 other.multipleBirthIntegerElement ==
                     multipleBirthIntegerElement) &&
-            const DeepCollectionEquality().equals(other._photo, _photo) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.photo, photo) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.animal, animal) || other.animal == animal) &&
             const DeepCollectionEquality()
-                .equals(other._communication, _communication) &&
+                .equals(other.communication, communication) &&
             const DeepCollectionEquality()
-                .equals(other._careProvider, _careProvider) &&
+                .equals(other.careProvider, careProvider) &&
             (identical(other.managingOrganization, managingOrganization) ||
                 other.managingOrganization == managingOrganization) &&
-            const DeepCollectionEquality().equals(other._link, _link));
+            const DeepCollectionEquality().equals(other.link, link));
   }
 
   @JsonKey(ignore: true)
@@ -1182,14 +1086,14 @@ class _$_Patient extends _Patient {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         active,
         activeElement,
-        const DeepCollectionEquality().hash(_name),
-        const DeepCollectionEquality().hash(_telecom),
+        const DeepCollectionEquality().hash(name),
+        const DeepCollectionEquality().hash(telecom),
         gender,
         genderElement,
         birthDate,
@@ -1198,19 +1102,19 @@ class _$_Patient extends _Patient {
         deceasedBooleanElement,
         deceasedDateTime,
         deceasedDateTimeElement,
-        const DeepCollectionEquality().hash(_address),
+        const DeepCollectionEquality().hash(address),
         maritalStatus,
         multipleBirthBoolean,
         multipleBirthBooleanElement,
         multipleBirthInteger,
         multipleBirthIntegerElement,
-        const DeepCollectionEquality().hash(_photo),
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(photo),
+        const DeepCollectionEquality().hash(contact),
         animal,
-        const DeepCollectionEquality().hash(_communication),
-        const DeepCollectionEquality().hash(_careProvider),
+        const DeepCollectionEquality().hash(communication),
+        const DeepCollectionEquality().hash(careProvider),
         managingOrganization,
-        const DeepCollectionEquality().hash(_link)
+        const DeepCollectionEquality().hash(link)
       ]);
 
   @JsonKey(ignore: true)
@@ -1629,15 +1533,15 @@ class __$$_PatientContactCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       relationship: freezed == relationship
-          ? _value._relationship
+          ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       name: freezed == name
@@ -1645,7 +1549,7 @@ class __$$_PatientContactCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as HumanName?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       address: freezed == address
@@ -1677,66 +1581,34 @@ class __$$_PatientContactCopyWithImpl<$Res>
 class _$_PatientContact extends _PatientContact {
   _$_PatientContact(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? relationship,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.relationship,
       this.name,
-      final List<ContactPoint>? telecom,
+      this.telecom,
       this.address,
       @JsonKey(unknownEnumValue: ContactGender.unknown) this.gender,
       @JsonKey(name: '_gender') this.genderElement,
       this.organization,
       this.period})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _relationship = relationship,
-        _telecom = telecom,
-        super._();
+      : super._();
 
   factory _$_PatientContact.fromJson(Map<String, dynamic> json) =>
       _$$_PatientContactFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _relationship;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<CodeableConcept>? get relationship {
-    final value = _relationship;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? relationship;
   @override
   final HumanName? name;
-  final List<ContactPoint>? _telecom;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactPoint>? telecom;
   @override
   final Address? address;
   @override
@@ -1762,13 +1634,13 @@ class _$_PatientContact extends _PatientContact {
             other is _$_PatientContact &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._relationship, _relationship) &&
+                .equals(other.relationship, relationship) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom) &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.genderElement, genderElement) ||
@@ -1783,11 +1655,11 @@ class _$_PatientContact extends _PatientContact {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_relationship),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(relationship),
       name,
-      const DeepCollectionEquality().hash(_telecom),
+      const DeepCollectionEquality().hash(telecom),
       address,
       gender,
       genderElement,
@@ -2029,11 +1901,11 @@ class __$$_PatientAnimalCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       species: null == species
@@ -2057,39 +1929,23 @@ class __$$_PatientAnimalCopyWithImpl<$Res>
 class _$_PatientAnimal extends _PatientAnimal {
   _$_PatientAnimal(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.species,
       this.breed,
       this.genderStatus})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_PatientAnimal.fromJson(Map<String, dynamic> json) =>
       _$$_PatientAnimalFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept species;
   @override
@@ -2109,9 +1965,9 @@ class _$_PatientAnimal extends _PatientAnimal {
             other is _$_PatientAnimal &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.species, species) || other.species == species) &&
             (identical(other.breed, breed) || other.breed == breed) &&
             (identical(other.genderStatus, genderStatus) ||
@@ -2123,8 +1979,8 @@ class _$_PatientAnimal extends _PatientAnimal {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       species,
       breed,
       genderStatus);
@@ -2331,11 +2187,11 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       language: null == language
@@ -2359,39 +2215,23 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
 class _$_PatientCommunication extends _PatientCommunication {
   _$_PatientCommunication(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.language,
       this.preferred,
       @JsonKey(name: '_preferred') this.preferredElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_PatientCommunication.fromJson(Map<String, dynamic> json) =>
       _$$_PatientCommunicationFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept language;
   @override
@@ -2412,9 +2252,9 @@ class _$_PatientCommunication extends _PatientCommunication {
             other is _$_PatientCommunication &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.language, language) ||
                 other.language == language) &&
             (identical(other.preferred, preferred) ||
@@ -2428,8 +2268,8 @@ class _$_PatientCommunication extends _PatientCommunication {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       language,
       preferred,
       preferredElement);
@@ -2639,11 +2479,11 @@ class __$$_PatientLinkCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       other: null == other
@@ -2667,39 +2507,23 @@ class __$$_PatientLinkCopyWithImpl<$Res>
 class _$_PatientLink extends _PatientLink {
   _$_PatientLink(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.other,
       @JsonKey(unknownEnumValue: LinkType.unknown) required this.type,
       @JsonKey(name: '_type') this.typeElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
       _$$_PatientLinkFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Reference other;
   @override
@@ -2721,9 +2545,9 @@ class _$_PatientLink extends _PatientLink {
             other is _$_PatientLink &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.other, this.other) || other.other == this.other) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
@@ -2735,8 +2559,8 @@ class _$_PatientLink extends _PatientLink {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       other,
       type,
       typeElement);
@@ -3262,19 +3086,19 @@ class __$$_PractitionerCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       active: freezed == active
@@ -3290,11 +3114,11 @@ class __$$_PractitionerCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as HumanName?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       address: freezed == address
-          ? _value._address
+          ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as List<Address>?,
       gender: freezed == gender
@@ -3314,19 +3138,19 @@ class __$$_PractitionerCopyWithImpl<$Res>
           : birthDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       photo: freezed == photo
-          ? _value._photo
+          ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
       practitionerRole: freezed == practitionerRole
-          ? _value._practitionerRole
+          ? _value.practitionerRole
           : practitionerRole // ignore: cast_nullable_to_non_nullable
               as List<PractitionerPractitionerRole>?,
       qualification: freezed == qualification
-          ? _value._qualification
+          ? _value.qualification
           : qualification // ignore: cast_nullable_to_non_nullable
               as List<PractitionerQualification>?,
       communication: freezed == communication
-          ? _value._communication
+          ? _value.communication
           : communication // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -3348,17 +3172,17 @@ class _$_Practitioner extends _Practitioner {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
       this.name,
-      final List<ContactPoint>? telecom,
-      final List<Address>? address,
+      this.telecom,
+      this.address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
           this.gender,
       @JsonKey(name: '_gender')
@@ -3366,21 +3190,11 @@ class _$_Practitioner extends _Practitioner {
       this.birthDate,
       @JsonKey(name: '_birthDate')
           this.birthDateElement,
-      final List<Attachment>? photo,
-      final List<PractitionerPractitionerRole>? practitionerRole,
-      final List<PractitionerQualification>? qualification,
-      final List<CodeableConcept>? communication})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _telecom = telecom,
-        _address = address,
-        _photo = photo,
-        _practitionerRole = practitionerRole,
-        _qualification = qualification,
-        _communication = communication,
-        super._();
+      this.photo,
+      this.practitionerRole,
+      this.qualification,
+      this.communication})
+      : super._();
 
   factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
       _$$_PractitionerFromJson(json);
@@ -3404,43 +3218,15 @@ class _$_Practitioner extends _Practitioner {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Boolean? active;
   @override
@@ -3448,24 +3234,10 @@ class _$_Practitioner extends _Practitioner {
   final Element? activeElement;
   @override
   final HumanName? name;
-  final List<ContactPoint>? _telecom;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Address>? _address;
+  final List<ContactPoint>? telecom;
   @override
-  List<Address>? get address {
-    final value = _address;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Address>? address;
   @override
   @JsonKey(unknownEnumValue: PractitionerGender.unknown)
   final PractitionerGender? gender;
@@ -3477,41 +3249,14 @@ class _$_Practitioner extends _Practitioner {
   @override
   @JsonKey(name: '_birthDate')
   final Element? birthDateElement;
-  final List<Attachment>? _photo;
   @override
-  List<Attachment>? get photo {
-    final value = _photo;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PractitionerPractitionerRole>? _practitionerRole;
+  final List<Attachment>? photo;
   @override
-  List<PractitionerPractitionerRole>? get practitionerRole {
-    final value = _practitionerRole;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PractitionerQualification>? _qualification;
+  final List<PractitionerPractitionerRole>? practitionerRole;
   @override
-  List<PractitionerQualification>? get qualification {
-    final value = _qualification;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _communication;
+  final List<PractitionerQualification>? qualification;
   @override
-  List<CodeableConcept>? get communication {
-    final value = _communication;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CodeableConcept>? communication;
 
   @override
   String toString() {
@@ -3536,20 +3281,19 @@ class _$_Practitioner extends _Practitioner {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.active, active) || other.active == active) &&
             (identical(other.activeElement, activeElement) ||
                 other.activeElement == activeElement) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom) &&
-            const DeepCollectionEquality().equals(other._address, _address) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom) &&
+            const DeepCollectionEquality().equals(other.address, address) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.genderElement, genderElement) ||
                 other.genderElement == genderElement) &&
@@ -3557,13 +3301,13 @@ class _$_Practitioner extends _Practitioner {
                 other.birthDate == birthDate) &&
             (identical(other.birthDateElement, birthDateElement) ||
                 other.birthDateElement == birthDateElement) &&
-            const DeepCollectionEquality().equals(other._photo, _photo) &&
+            const DeepCollectionEquality().equals(other.photo, photo) &&
             const DeepCollectionEquality()
-                .equals(other._practitionerRole, _practitionerRole) &&
+                .equals(other.practitionerRole, practitionerRole) &&
             const DeepCollectionEquality()
-                .equals(other._qualification, _qualification) &&
+                .equals(other.qualification, qualification) &&
             const DeepCollectionEquality()
-                .equals(other._communication, _communication));
+                .equals(other.communication, communication));
   }
 
   @JsonKey(ignore: true)
@@ -3578,23 +3322,23 @@ class _$_Practitioner extends _Practitioner {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         active,
         activeElement,
         name,
-        const DeepCollectionEquality().hash(_telecom),
-        const DeepCollectionEquality().hash(_address),
+        const DeepCollectionEquality().hash(telecom),
+        const DeepCollectionEquality().hash(address),
         gender,
         genderElement,
         birthDate,
         birthDateElement,
-        const DeepCollectionEquality().hash(_photo),
-        const DeepCollectionEquality().hash(_practitionerRole),
-        const DeepCollectionEquality().hash(_qualification),
-        const DeepCollectionEquality().hash(_communication)
+        const DeepCollectionEquality().hash(photo),
+        const DeepCollectionEquality().hash(practitionerRole),
+        const DeepCollectionEquality().hash(qualification),
+        const DeepCollectionEquality().hash(communication)
       ]);
 
   @JsonKey(ignore: true)
@@ -3932,15 +3676,15 @@ class __$$_PractitionerPractitionerRoleCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: freezed == fhirComments
-          ? _value._fhirComments
+          ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       managingOrganization: freezed == managingOrganization
@@ -3952,7 +3696,7 @@ class __$$_PractitionerPractitionerRoleCopyWithImpl<$Res>
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       specialty: freezed == specialty
-          ? _value._specialty
+          ? _value.specialty
           : specialty // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       period: freezed == period
@@ -3960,11 +3704,11 @@ class __$$_PractitionerPractitionerRoleCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       location: freezed == location
-          ? _value._location
+          ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       healthcareService: freezed == healthcareService
-          ? _value._healthcareService
+          ? _value.healthcareService
           : healthcareService // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -3976,89 +3720,42 @@ class __$$_PractitionerPractitionerRoleCopyWithImpl<$Res>
 class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
   _$_PractitionerPractitionerRole(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
+      this.modifierExtension,
       this.managingOrganization,
       this.role,
-      final List<CodeableConcept>? specialty,
+      this.specialty,
       this.period,
-      final List<Reference>? location,
-      final List<Reference>? healthcareService})
-      : _extension_ = extension_,
-        _fhirComments = fhirComments,
-        _modifierExtension = modifierExtension,
-        _specialty = specialty,
-        _location = location,
-        _healthcareService = healthcareService,
-        super._();
+      this.location,
+      this.healthcareService})
+      : super._();
 
   factory _$_PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
       _$$_PractitionerPractitionerRoleFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _fhirComments;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments {
-    final value = _fhirComments;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<String>? fhirComments;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Reference? managingOrganization;
   @override
   final CodeableConcept? role;
-  final List<CodeableConcept>? _specialty;
   @override
-  List<CodeableConcept>? get specialty {
-    final value = _specialty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? specialty;
   @override
   final Period? period;
-  final List<Reference>? _location;
   @override
-  List<Reference>? get location {
-    final value = _location;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _healthcareService;
+  final List<Reference>? location;
   @override
-  List<Reference>? get healthcareService {
-    final value = _healthcareService;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? healthcareService;
 
   @override
   String toString() {
@@ -4072,20 +3769,19 @@ class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
             other is _$_PractitionerPractitionerRole &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._fhirComments, _fhirComments) &&
+                .equals(other.fhirComments, fhirComments) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.managingOrganization, managingOrganization) ||
                 other.managingOrganization == managingOrganization) &&
             (identical(other.role, role) || other.role == role) &&
-            const DeepCollectionEquality()
-                .equals(other._specialty, _specialty) &&
+            const DeepCollectionEquality().equals(other.specialty, specialty) &&
             (identical(other.period, period) || other.period == period) &&
-            const DeepCollectionEquality().equals(other._location, _location) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
             const DeepCollectionEquality()
-                .equals(other._healthcareService, _healthcareService));
+                .equals(other.healthcareService, healthcareService));
   }
 
   @JsonKey(ignore: true)
@@ -4093,15 +3789,15 @@ class _$_PractitionerPractitionerRole extends _PractitionerPractitionerRole {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_fhirComments),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(modifierExtension),
       managingOrganization,
       role,
-      const DeepCollectionEquality().hash(_specialty),
+      const DeepCollectionEquality().hash(specialty),
       period,
-      const DeepCollectionEquality().hash(_location),
-      const DeepCollectionEquality().hash(_healthcareService));
+      const DeepCollectionEquality().hash(location),
+      const DeepCollectionEquality().hash(healthcareService));
 
   @JsonKey(ignore: true)
   @override
@@ -4348,15 +4044,15 @@ class __$$_PractitionerQualificationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       code: null == code
@@ -4380,50 +4076,26 @@ class __$$_PractitionerQualificationCopyWithImpl<$Res>
 class _$_PractitionerQualification extends _PractitionerQualification {
   _$_PractitionerQualification(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.identifier,
       required this.code,
       this.period,
       this.issuer})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        super._();
+      : super._();
 
   factory _$_PractitionerQualification.fromJson(Map<String, dynamic> json) =>
       _$$_PractitionerQualificationFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final CodeableConcept code;
   @override
@@ -4443,11 +4115,11 @@ class _$_PractitionerQualification extends _PractitionerQualification {
             other is _$_PractitionerQualification &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.period, period) || other.period == period) &&
             (identical(other.issuer, issuer) || other.issuer == issuer));
@@ -4458,9 +4130,9 @@ class _$_PractitionerQualification extends _PractitionerQualification {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_identifier),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(identifier),
       code,
       period,
       issuer);
@@ -4990,19 +4662,19 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       patient: null == patient
@@ -5018,7 +4690,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
           : name // ignore: cast_nullable_to_non_nullable
               as HumanName?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       gender: freezed == gender
@@ -5038,11 +4710,11 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
           : birthDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       address: freezed == address
-          ? _value._address
+          ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
               as List<Address>?,
       photo: freezed == photo
-          ? _value._photo
+          ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
       period: freezed == period
@@ -5068,15 +4740,15 @@ class _$_RelatedPerson extends _RelatedPerson {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       required this.patient,
       this.relationship,
       this.name,
-      final List<ContactPoint>? telecom,
+      this.telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
           this.gender,
       @JsonKey(name: '_gender')
@@ -5084,17 +4756,10 @@ class _$_RelatedPerson extends _RelatedPerson {
       this.birthDate,
       @JsonKey(name: '_birthDate')
           this.birthDateElement,
-      final List<Address>? address,
-      final List<Attachment>? photo,
+      this.address,
+      this.photo,
       this.period})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _telecom = telecom,
-        _address = address,
-        _photo = photo,
-        super._();
+      : super._();
 
   factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
       _$$_RelatedPersonFromJson(json);
@@ -5118,58 +4783,23 @@ class _$_RelatedPerson extends _RelatedPerson {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Reference patient;
   @override
   final CodeableConcept? relationship;
   @override
   final HumanName? name;
-  final List<ContactPoint>? _telecom;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactPoint>? telecom;
   @override
   @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
   final RelatedPersonGender? gender;
@@ -5181,24 +4811,10 @@ class _$_RelatedPerson extends _RelatedPerson {
   @override
   @JsonKey(name: '_birthDate')
   final Element? birthDateElement;
-  final List<Address>? _address;
   @override
-  List<Address>? get address {
-    final value = _address;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Attachment>? _photo;
+  final List<Address>? address;
   @override
-  List<Attachment>? get photo {
-    final value = _photo;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Attachment>? photo;
   @override
   final Period? period;
 
@@ -5225,19 +4841,18 @@ class _$_RelatedPerson extends _RelatedPerson {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.relationship, relationship) ||
                 other.relationship == relationship) &&
             (identical(other.name, name) || other.name == name) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.genderElement, genderElement) ||
                 other.genderElement == genderElement) &&
@@ -5245,8 +4860,8 @@ class _$_RelatedPerson extends _RelatedPerson {
                 other.birthDate == birthDate) &&
             (identical(other.birthDateElement, birthDateElement) ||
                 other.birthDateElement == birthDateElement) &&
-            const DeepCollectionEquality().equals(other._address, _address) &&
-            const DeepCollectionEquality().equals(other._photo, _photo) &&
+            const DeepCollectionEquality().equals(other.address, address) &&
+            const DeepCollectionEquality().equals(other.photo, photo) &&
             (identical(other.period, period) || other.period == period));
   }
 
@@ -5262,20 +4877,20 @@ class _$_RelatedPerson extends _RelatedPerson {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         patient,
         relationship,
         name,
-        const DeepCollectionEquality().hash(_telecom),
+        const DeepCollectionEquality().hash(telecom),
         gender,
         genderElement,
         birthDate,
         birthDateElement,
-        const DeepCollectionEquality().hash(_address),
-        const DeepCollectionEquality().hash(_photo),
+        const DeepCollectionEquality().hash(address),
+        const DeepCollectionEquality().hash(photo),
         period
       ]);
 

@@ -507,15 +507,15 @@ class __$$_AuditEventCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: null == type
@@ -523,7 +523,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as Coding,
       subtype: freezed == subtype
-          ? _value._subtype
+          ? _value.subtype
           : subtype // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       action: freezed == action
@@ -559,11 +559,11 @@ class __$$_AuditEventCopyWithImpl<$Res>
           : outcomeDescElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       purposeOfEvent: freezed == purposeOfEvent
-          ? _value._purposeOfEvent
+          ? _value.purposeOfEvent
           : purposeOfEvent // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       agent: null == agent
-          ? _value._agent
+          ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as List<AuditEventAgent>,
       source: null == source
@@ -571,7 +571,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
           : source // ignore: cast_nullable_to_non_nullable
               as AuditEventSource,
       entity: freezed == entity
-          ? _value._entity
+          ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as List<AuditEventEntity>?,
     ));
@@ -593,12 +593,12 @@ class _$_AuditEvent extends _AuditEvent {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       required this.type,
-      final List<Coding>? subtype,
+      this.subtype,
       this.action,
       @JsonKey(name: '_action')
           this.actionElement,
@@ -611,18 +611,11 @@ class _$_AuditEvent extends _AuditEvent {
       this.outcomeDesc,
       @JsonKey(name: '_outcomeDesc')
           this.outcomeDescElement,
-      final List<CodeableConcept>? purposeOfEvent,
-      required final List<AuditEventAgent> agent,
+      this.purposeOfEvent,
+      required this.agent,
       required this.source,
-      final List<AuditEventEntity>? entity})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _subtype = subtype,
-        _purposeOfEvent = purposeOfEvent,
-        _agent = agent,
-        _entity = entity,
-        super._();
+      this.entity})
+      : super._();
 
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventFromJson(json);
@@ -646,45 +639,17 @@ class _$_AuditEvent extends _AuditEvent {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Coding type;
-  final List<Coding>? _subtype;
   @override
-  List<Coding>? get subtype {
-    final value = _subtype;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? subtype;
   @override
   final AuditEventAction? action;
   @override
@@ -705,32 +670,14 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   @JsonKey(name: '_outcomeDesc')
   final Element? outcomeDescElement;
-  final List<CodeableConcept>? _purposeOfEvent;
   @override
-  List<CodeableConcept>? get purposeOfEvent {
-    final value = _purposeOfEvent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<AuditEventAgent> _agent;
+  final List<CodeableConcept>? purposeOfEvent;
   @override
-  List<AuditEventAgent> get agent {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_agent);
-  }
-
+  final List<AuditEventAgent> agent;
   @override
   final AuditEventSource source;
-  final List<AuditEventEntity>? _entity;
   @override
-  List<AuditEventEntity>? get entity {
-    final value = _entity;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<AuditEventEntity>? entity;
 
   @override
   String toString() {
@@ -755,14 +702,13 @@ class _$_AuditEvent extends _AuditEvent {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._subtype, _subtype) &&
+            const DeepCollectionEquality().equals(other.subtype, subtype) &&
             (identical(other.action, action) || other.action == action) &&
             (identical(other.actionElement, actionElement) ||
                 other.actionElement == actionElement) &&
@@ -778,10 +724,10 @@ class _$_AuditEvent extends _AuditEvent {
             (identical(other.outcomeDescElement, outcomeDescElement) ||
                 other.outcomeDescElement == outcomeDescElement) &&
             const DeepCollectionEquality()
-                .equals(other._purposeOfEvent, _purposeOfEvent) &&
-            const DeepCollectionEquality().equals(other._agent, _agent) &&
+                .equals(other.purposeOfEvent, purposeOfEvent) &&
+            const DeepCollectionEquality().equals(other.agent, agent) &&
             (identical(other.source, source) || other.source == source) &&
-            const DeepCollectionEquality().equals(other._entity, _entity));
+            const DeepCollectionEquality().equals(other.entity, entity));
   }
 
   @JsonKey(ignore: true)
@@ -796,11 +742,11 @@ class _$_AuditEvent extends _AuditEvent {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         type,
-        const DeepCollectionEquality().hash(_subtype),
+        const DeepCollectionEquality().hash(subtype),
         action,
         actionElement,
         recorded,
@@ -809,10 +755,10 @@ class _$_AuditEvent extends _AuditEvent {
         outcomeElement,
         outcomeDesc,
         outcomeDescElement,
-        const DeepCollectionEquality().hash(_purposeOfEvent),
-        const DeepCollectionEquality().hash(_agent),
+        const DeepCollectionEquality().hash(purposeOfEvent),
+        const DeepCollectionEquality().hash(agent),
         source,
-        const DeepCollectionEquality().hash(_entity)
+        const DeepCollectionEquality().hash(entity)
       ]);
 
   @JsonKey(ignore: true)
@@ -1260,7 +1206,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
   }) {
     return _then(_$_AuditEventAgent(
       role: freezed == role
-          ? _value._role
+          ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reference: freezed == reference
@@ -1300,11 +1246,11 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
       policy: freezed == policy
-          ? _value._policy
+          ? _value.policy
           : policy // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       policyElement: freezed == policyElement
-          ? _value._policyElement
+          ? _value.policyElement
           : policyElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       media: freezed == media
@@ -1316,7 +1262,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
           : network // ignore: cast_nullable_to_non_nullable
               as AuditEventNetwork?,
       purposeOfUse: freezed == purposeOfUse
-          ? _value._purposeOfUse
+          ? _value.purposeOfUse
           : purposeOfUse // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -1327,7 +1273,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AuditEventAgent extends _AuditEventAgent {
   _$_AuditEventAgent(
-      {final List<CodeableConcept>? role,
+      {this.role,
       this.reference,
       this.userId,
       this.altId,
@@ -1337,29 +1283,18 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       this.requestor,
       @JsonKey(name: '_requestor') this.requestorElement,
       this.location,
-      final List<String>? policy,
-      @JsonKey(name: '_policy') final List<Element?>? policyElement,
+      this.policy,
+      @JsonKey(name: '_policy') this.policyElement,
       this.media,
       this.network,
-      final List<CodeableConcept>? purposeOfUse})
-      : _role = role,
-        _policy = policy,
-        _policyElement = policyElement,
-        _purposeOfUse = purposeOfUse,
-        super._();
+      this.purposeOfUse})
+      : super._();
 
   factory _$_AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventAgentFromJson(json);
 
-  final List<CodeableConcept>? _role;
   @override
-  List<CodeableConcept>? get role {
-    final value = _role;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? role;
   @override
   final Reference? reference;
   @override
@@ -1381,37 +1316,17 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   final Element? requestorElement;
   @override
   final Reference? location;
-  final List<String>? _policy;
   @override
-  List<String>? get policy {
-    final value = _policy;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _policyElement;
+  final List<String>? policy;
   @override
   @JsonKey(name: '_policy')
-  List<Element?>? get policyElement {
-    final value = _policyElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? policyElement;
   @override
   final Coding? media;
   @override
   final AuditEventNetwork? network;
-  final List<CodeableConcept>? _purposeOfUse;
   @override
-  List<CodeableConcept>? get purposeOfUse {
-    final value = _purposeOfUse;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CodeableConcept>? purposeOfUse;
 
   @override
   String toString() {
@@ -1423,7 +1338,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AuditEventAgent &&
-            const DeepCollectionEquality().equals(other._role, _role) &&
+            const DeepCollectionEquality().equals(other.role, role) &&
             (identical(other.reference, reference) ||
                 other.reference == reference) &&
             (identical(other.userId, userId) || other.userId == userId) &&
@@ -1439,20 +1354,20 @@ class _$_AuditEventAgent extends _AuditEventAgent {
                 other.requestorElement == requestorElement) &&
             (identical(other.location, location) ||
                 other.location == location) &&
-            const DeepCollectionEquality().equals(other._policy, _policy) &&
+            const DeepCollectionEquality().equals(other.policy, policy) &&
             const DeepCollectionEquality()
-                .equals(other._policyElement, _policyElement) &&
+                .equals(other.policyElement, policyElement) &&
             (identical(other.media, media) || other.media == media) &&
             (identical(other.network, network) || other.network == network) &&
             const DeepCollectionEquality()
-                .equals(other._purposeOfUse, _purposeOfUse));
+                .equals(other.purposeOfUse, purposeOfUse));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_role),
+      const DeepCollectionEquality().hash(role),
       reference,
       userId,
       altId,
@@ -1462,11 +1377,11 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       requestor,
       requestorElement,
       location,
-      const DeepCollectionEquality().hash(_policy),
-      const DeepCollectionEquality().hash(_policyElement),
+      const DeepCollectionEquality().hash(policy),
+      const DeepCollectionEquality().hash(policyElement),
       media,
       network,
-      const DeepCollectionEquality().hash(_purposeOfUse));
+      const DeepCollectionEquality().hash(purposeOfUse));
 
   @JsonKey(ignore: true)
   @override
@@ -1932,7 +1847,7 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
     ));
@@ -1946,9 +1861,8 @@ class _$_AuditEventSource extends _AuditEventSource {
       {this.site,
       @JsonKey(name: '_site') this.siteElement,
       required this.identifier,
-      final List<Coding>? type})
-      : _type = type,
-        super._();
+      this.type})
+      : super._();
 
   factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventSourceFromJson(json);
@@ -1960,14 +1874,8 @@ class _$_AuditEventSource extends _AuditEventSource {
   final Element? siteElement;
   @override
   final Identifier identifier;
-  final List<Coding>? _type;
   @override
-  List<Coding>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Coding>? type;
 
   @override
   String toString() {
@@ -1984,13 +1892,13 @@ class _$_AuditEventSource extends _AuditEventSource {
                 other.siteElement == siteElement) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
-            const DeepCollectionEquality().equals(other._type, _type));
+            const DeepCollectionEquality().equals(other.type, type));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, site, siteElement, identifier,
-      const DeepCollectionEquality().hash(_type));
+      const DeepCollectionEquality().hash(type));
 
   @JsonKey(ignore: true)
   @override
@@ -2360,7 +2268,7 @@ class __$$_AuditEventEntityCopyWithImpl<$Res>
           : lifecycle // ignore: cast_nullable_to_non_nullable
               as Coding?,
       securityLabel: freezed == securityLabel
-          ? _value._securityLabel
+          ? _value.securityLabel
           : securityLabel // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       name: freezed == name
@@ -2388,7 +2296,7 @@ class __$$_AuditEventEntityCopyWithImpl<$Res>
           : queryElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       detail: freezed == detail
-          ? _value._detail
+          ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<AuditEventDetail>?,
     ));
@@ -2404,17 +2312,15 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       this.type,
       this.role,
       this.lifecycle,
-      final List<Coding>? securityLabel,
+      this.securityLabel,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.query,
       @JsonKey(name: '_query') this.queryElement,
-      final List<AuditEventDetail>? detail})
-      : _securityLabel = securityLabel,
-        _detail = detail,
-        super._();
+      this.detail})
+      : super._();
 
   factory _$_AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventEntityFromJson(json);
@@ -2429,15 +2335,8 @@ class _$_AuditEventEntity extends _AuditEventEntity {
   final Coding? role;
   @override
   final Coding? lifecycle;
-  final List<Coding>? _securityLabel;
   @override
-  List<Coding>? get securityLabel {
-    final value = _securityLabel;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? securityLabel;
   @override
   final String? name;
   @override
@@ -2453,14 +2352,8 @@ class _$_AuditEventEntity extends _AuditEventEntity {
   @override
   @JsonKey(name: '_query')
   final Element? queryElement;
-  final List<AuditEventDetail>? _detail;
   @override
-  List<AuditEventDetail>? get detail {
-    final value = _detail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<AuditEventDetail>? detail;
 
   @override
   String toString() {
@@ -2481,7 +2374,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
             (identical(other.lifecycle, lifecycle) ||
                 other.lifecycle == lifecycle) &&
             const DeepCollectionEquality()
-                .equals(other._securityLabel, _securityLabel) &&
+                .equals(other.securityLabel, securityLabel) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -2492,7 +2385,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
             (identical(other.query, query) || other.query == query) &&
             (identical(other.queryElement, queryElement) ||
                 other.queryElement == queryElement) &&
-            const DeepCollectionEquality().equals(other._detail, _detail));
+            const DeepCollectionEquality().equals(other.detail, detail));
   }
 
   @JsonKey(ignore: true)
@@ -2504,14 +2397,14 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       type,
       role,
       lifecycle,
-      const DeepCollectionEquality().hash(_securityLabel),
+      const DeepCollectionEquality().hash(securityLabel),
       name,
       nameElement,
       description,
       descriptionElement,
       query,
       queryElement,
-      const DeepCollectionEquality().hash(_detail));
+      const DeepCollectionEquality().hash(detail));
 
   @JsonKey(ignore: true)
   @override
@@ -3456,15 +3349,15 @@ class __$$_ConsentCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -3480,7 +3373,7 @@ class __$$_ConsentCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       category: freezed == category
-          ? _value._category
+          ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       patient: null == patient
@@ -3500,19 +3393,19 @@ class __$$_ConsentCopyWithImpl<$Res>
           : dateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       consentingParty: freezed == consentingParty
-          ? _value._consentingParty
+          ? _value.consentingParty
           : consentingParty // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       actor: freezed == actor
-          ? _value._actor
+          ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
               as List<ConsentActor>?,
       action: freezed == action
-          ? _value._action
+          ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       organization: freezed == organization
-          ? _value._organization
+          ? _value.organization
           : organization // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       sourceAttachment: freezed == sourceAttachment
@@ -3528,7 +3421,7 @@ class __$$_ConsentCopyWithImpl<$Res>
           : sourceReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       policy: freezed == policy
-          ? _value._policy
+          ? _value.policy
           : policy // ignore: cast_nullable_to_non_nullable
               as List<ConsentPolicy>?,
       policyRule: freezed == policyRule
@@ -3540,11 +3433,11 @@ class __$$_ConsentCopyWithImpl<$Res>
           : policyRuleElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       securityLabel: freezed == securityLabel
-          ? _value._securityLabel
+          ? _value.securityLabel
           : securityLabel // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       purpose: freezed == purpose
-          ? _value._purpose
+          ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       dataPeriod: freezed == dataPeriod
@@ -3552,11 +3445,11 @@ class __$$_ConsentCopyWithImpl<$Res>
           : dataPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       data: freezed == data
-          ? _value._data
+          ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ConsentData>?,
       except: freezed == except
-          ? _value._except
+          ? _value.except
           : except // ignore: cast_nullable_to_non_nullable
               as List<ConsentExcept>?,
     ));
@@ -3578,50 +3471,37 @@ class _$_Consent extends _Consent {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<CodeableConcept>? category,
+      this.category,
       required this.patient,
       this.period,
       this.dateTime,
       @JsonKey(name: '_dateTime')
           this.dateTimeElement,
-      final List<Reference>? consentingParty,
-      final List<ConsentActor>? actor,
-      final List<CodeableConcept>? action,
-      final List<Reference>? organization,
+      this.consentingParty,
+      this.actor,
+      this.action,
+      this.organization,
       this.sourceAttachment,
       this.sourceIdentifier,
       this.sourceReference,
-      final List<ConsentPolicy>? policy,
+      this.policy,
       this.policyRule,
       @JsonKey(name: '_policyRule')
           this.policyRuleElement,
-      final List<Coding>? securityLabel,
-      final List<Coding>? purpose,
+      this.securityLabel,
+      this.purpose,
       this.dataPeriod,
-      final List<ConsentData>? data,
-      final List<ConsentExcept>? except})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _category = category,
-        _consentingParty = consentingParty,
-        _actor = actor,
-        _action = action,
-        _organization = organization,
-        _policy = policy,
-        _securityLabel = securityLabel,
-        _purpose = purpose,
-        _data = data,
-        _except = except,
-        super._();
+      this.data,
+      this.except})
+      : super._();
 
   factory _$_Consent.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentFromJson(json);
@@ -3645,34 +3525,13 @@ class _$_Consent extends _Consent {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -3680,15 +3539,8 @@ class _$_Consent extends _Consent {
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
-  final List<CodeableConcept>? _category;
   @override
-  List<CodeableConcept>? get category {
-    final value = _category;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? category;
   @override
   final Reference patient;
   @override
@@ -3698,99 +3550,37 @@ class _$_Consent extends _Consent {
   @override
   @JsonKey(name: '_dateTime')
   final Element? dateTimeElement;
-  final List<Reference>? _consentingParty;
   @override
-  List<Reference>? get consentingParty {
-    final value = _consentingParty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ConsentActor>? _actor;
+  final List<Reference>? consentingParty;
   @override
-  List<ConsentActor>? get actor {
-    final value = _actor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _action;
+  final List<ConsentActor>? actor;
   @override
-  List<CodeableConcept>? get action {
-    final value = _action;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _organization;
+  final List<CodeableConcept>? action;
   @override
-  List<Reference>? get organization {
-    final value = _organization;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? organization;
   @override
   final Attachment? sourceAttachment;
   @override
   final Identifier? sourceIdentifier;
   @override
   final Reference? sourceReference;
-  final List<ConsentPolicy>? _policy;
   @override
-  List<ConsentPolicy>? get policy {
-    final value = _policy;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ConsentPolicy>? policy;
   @override
   final String? policyRule;
   @override
   @JsonKey(name: '_policyRule')
   final Element? policyRuleElement;
-  final List<Coding>? _securityLabel;
   @override
-  List<Coding>? get securityLabel {
-    final value = _securityLabel;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _purpose;
+  final List<Coding>? securityLabel;
   @override
-  List<Coding>? get purpose {
-    final value = _purpose;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? purpose;
   @override
   final Period? dataPeriod;
-  final List<ConsentData>? _data;
   @override
-  List<ConsentData>? get data {
-    final value = _data;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ConsentExcept>? _except;
+  final List<ConsentData>? data;
   @override
-  List<ConsentExcept>? get except {
-    final value = _except;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ConsentExcept>? except;
 
   @override
   String toString() {
@@ -3815,18 +3605,17 @@ class _$_Consent extends _Consent {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
-            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.period, period) || other.period == period) &&
             (identical(other.dateTime, dateTime) ||
@@ -3834,29 +3623,29 @@ class _$_Consent extends _Consent {
             (identical(other.dateTimeElement, dateTimeElement) ||
                 other.dateTimeElement == dateTimeElement) &&
             const DeepCollectionEquality()
-                .equals(other._consentingParty, _consentingParty) &&
-            const DeepCollectionEquality().equals(other._actor, _actor) &&
-            const DeepCollectionEquality().equals(other._action, _action) &&
+                .equals(other.consentingParty, consentingParty) &&
+            const DeepCollectionEquality().equals(other.actor, actor) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
             const DeepCollectionEquality()
-                .equals(other._organization, _organization) &&
+                .equals(other.organization, organization) &&
             (identical(other.sourceAttachment, sourceAttachment) ||
                 other.sourceAttachment == sourceAttachment) &&
             (identical(other.sourceIdentifier, sourceIdentifier) ||
                 other.sourceIdentifier == sourceIdentifier) &&
             (identical(other.sourceReference, sourceReference) ||
                 other.sourceReference == sourceReference) &&
-            const DeepCollectionEquality().equals(other._policy, _policy) &&
+            const DeepCollectionEquality().equals(other.policy, policy) &&
             (identical(other.policyRule, policyRule) ||
                 other.policyRule == policyRule) &&
             (identical(other.policyRuleElement, policyRuleElement) ||
                 other.policyRuleElement == policyRuleElement) &&
             const DeepCollectionEquality()
-                .equals(other._securityLabel, _securityLabel) &&
-            const DeepCollectionEquality().equals(other._purpose, _purpose) &&
+                .equals(other.securityLabel, securityLabel) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
             (identical(other.dataPeriod, dataPeriod) ||
                 other.dataPeriod == dataPeriod) &&
-            const DeepCollectionEquality().equals(other._data, _data) &&
-            const DeepCollectionEquality().equals(other._except, _except));
+            const DeepCollectionEquality().equals(other.data, data) &&
+            const DeepCollectionEquality().equals(other.except, except));
   }
 
   @JsonKey(ignore: true)
@@ -3871,32 +3660,32 @@ class _$_Consent extends _Consent {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         identifier,
         status,
         statusElement,
-        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(category),
         patient,
         period,
         dateTime,
         dateTimeElement,
-        const DeepCollectionEquality().hash(_consentingParty),
-        const DeepCollectionEquality().hash(_actor),
-        const DeepCollectionEquality().hash(_action),
-        const DeepCollectionEquality().hash(_organization),
+        const DeepCollectionEquality().hash(consentingParty),
+        const DeepCollectionEquality().hash(actor),
+        const DeepCollectionEquality().hash(action),
+        const DeepCollectionEquality().hash(organization),
         sourceAttachment,
         sourceIdentifier,
         sourceReference,
-        const DeepCollectionEquality().hash(_policy),
+        const DeepCollectionEquality().hash(policy),
         policyRule,
         policyRuleElement,
-        const DeepCollectionEquality().hash(_securityLabel),
-        const DeepCollectionEquality().hash(_purpose),
+        const DeepCollectionEquality().hash(securityLabel),
+        const DeepCollectionEquality().hash(purpose),
         dataPeriod,
-        const DeepCollectionEquality().hash(_data),
-        const DeepCollectionEquality().hash(_except)
+        const DeepCollectionEquality().hash(data),
+        const DeepCollectionEquality().hash(except)
       ]);
 
   @JsonKey(ignore: true)
@@ -4907,27 +4696,27 @@ class __$$_ConsentExceptCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       actor: freezed == actor
-          ? _value._actor
+          ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
               as List<ConsentActor1>?,
       action: freezed == action
-          ? _value._action
+          ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       securityLabel: freezed == securityLabel
-          ? _value._securityLabel
+          ? _value.securityLabel
           : securityLabel // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       purpose: freezed == purpose
-          ? _value._purpose
+          ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       class_: freezed == class_
-          ? _value._class_
+          ? _value.class_
           : class_ // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       code: freezed == code
-          ? _value._code
+          ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       dataPeriod: freezed == dataPeriod
@@ -4935,7 +4724,7 @@ class __$$_ConsentExceptCopyWithImpl<$Res>
           : dataPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       data: freezed == data
-          ? _value._data
+          ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ConsentData1>?,
     ));
@@ -4949,22 +4738,15 @@ class _$_ConsentExcept extends _ConsentExcept {
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.period,
-      final List<ConsentActor1>? actor,
-      final List<CodeableConcept>? action,
-      final List<Coding>? securityLabel,
-      final List<Coding>? purpose,
-      @JsonKey(name: 'class') final List<Coding>? class_,
-      final List<Coding>? code,
+      this.actor,
+      this.action,
+      this.securityLabel,
+      this.purpose,
+      @JsonKey(name: 'class') this.class_,
+      this.code,
       this.dataPeriod,
-      final List<ConsentData1>? data})
-      : _actor = actor,
-        _action = action,
-        _securityLabel = securityLabel,
-        _purpose = purpose,
-        _class_ = class_,
-        _code = code,
-        _data = data,
-        super._();
+      this.data})
+      : super._();
 
   factory _$_ConsentExcept.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentExceptFromJson(json);
@@ -4976,71 +4758,23 @@ class _$_ConsentExcept extends _ConsentExcept {
   final Element? typeElement;
   @override
   final Period? period;
-  final List<ConsentActor1>? _actor;
   @override
-  List<ConsentActor1>? get actor {
-    final value = _actor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _action;
+  final List<ConsentActor1>? actor;
   @override
-  List<CodeableConcept>? get action {
-    final value = _action;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _securityLabel;
+  final List<CodeableConcept>? action;
   @override
-  List<Coding>? get securityLabel {
-    final value = _securityLabel;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _purpose;
+  final List<Coding>? securityLabel;
   @override
-  List<Coding>? get purpose {
-    final value = _purpose;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _class_;
+  final List<Coding>? purpose;
   @override
   @JsonKey(name: 'class')
-  List<Coding>? get class_ {
-    final value = _class_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _code;
+  final List<Coding>? class_;
   @override
-  List<Coding>? get code {
-    final value = _code;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? code;
   @override
   final Period? dataPeriod;
-  final List<ConsentData1>? _data;
   @override
-  List<ConsentData1>? get data {
-    final value = _data;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ConsentData1>? data;
 
   @override
   String toString() {
@@ -5056,16 +4790,16 @@ class _$_ConsentExcept extends _ConsentExcept {
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
             (identical(other.period, period) || other.period == period) &&
-            const DeepCollectionEquality().equals(other._actor, _actor) &&
-            const DeepCollectionEquality().equals(other._action, _action) &&
+            const DeepCollectionEquality().equals(other.actor, actor) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
             const DeepCollectionEquality()
-                .equals(other._securityLabel, _securityLabel) &&
-            const DeepCollectionEquality().equals(other._purpose, _purpose) &&
-            const DeepCollectionEquality().equals(other._class_, _class_) &&
-            const DeepCollectionEquality().equals(other._code, _code) &&
+                .equals(other.securityLabel, securityLabel) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
+            const DeepCollectionEquality().equals(other.class_, class_) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
             (identical(other.dataPeriod, dataPeriod) ||
                 other.dataPeriod == dataPeriod) &&
-            const DeepCollectionEquality().equals(other._data, _data));
+            const DeepCollectionEquality().equals(other.data, data));
   }
 
   @JsonKey(ignore: true)
@@ -5075,14 +4809,14 @@ class _$_ConsentExcept extends _ConsentExcept {
       type,
       typeElement,
       period,
-      const DeepCollectionEquality().hash(_actor),
-      const DeepCollectionEquality().hash(_action),
-      const DeepCollectionEquality().hash(_securityLabel),
-      const DeepCollectionEquality().hash(_purpose),
-      const DeepCollectionEquality().hash(_class_),
-      const DeepCollectionEquality().hash(_code),
+      const DeepCollectionEquality().hash(actor),
+      const DeepCollectionEquality().hash(action),
+      const DeepCollectionEquality().hash(securityLabel),
+      const DeepCollectionEquality().hash(purpose),
+      const DeepCollectionEquality().hash(class_),
+      const DeepCollectionEquality().hash(code),
       dataPeriod,
-      const DeepCollectionEquality().hash(_data));
+      const DeepCollectionEquality().hash(data));
 
   @JsonKey(ignore: true)
   @override
@@ -5988,19 +5722,19 @@ class __$$_ProvenanceCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       target: null == target
-          ? _value._target
+          ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
               as List<Reference>,
       period: freezed == period
@@ -6016,11 +5750,11 @@ class __$$_ProvenanceCopyWithImpl<$Res>
           : recordedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       policy: freezed == policy
-          ? _value._policy
+          ? _value.policy
           : policy // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       policyElement: freezed == policyElement
-          ? _value._policyElement
+          ? _value.policyElement
           : policyElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       location: freezed == location
@@ -6028,7 +5762,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
       reason: freezed == reason
-          ? _value._reason
+          ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       activity: freezed == activity
@@ -6036,15 +5770,15 @@ class __$$_ProvenanceCopyWithImpl<$Res>
           : activity // ignore: cast_nullable_to_non_nullable
               as Coding?,
       agent: null == agent
-          ? _value._agent
+          ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as List<ProvenanceAgent>,
       entity: freezed == entity
-          ? _value._entity
+          ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as List<ProvenanceEntity>?,
       signature: freezed == signature
-          ? _value._signature
+          ? _value.signature
           : signature // ignore: cast_nullable_to_non_nullable
               as List<Signature>?,
     ));
@@ -6066,35 +5800,25 @@ class _$_Provenance extends _Provenance {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final List<Reference> target,
+          this.extension_,
+      this.modifierExtension,
+      required this.target,
       this.period,
       this.recorded,
       @JsonKey(name: '_recorded')
           this.recordedElement,
-      final List<String>? policy,
+      this.policy,
       @JsonKey(name: '_policy')
-          final List<Element?>? policyElement,
+          this.policyElement,
       this.location,
-      final List<Coding>? reason,
+      this.reason,
       this.activity,
-      required final List<ProvenanceAgent> agent,
-      final List<ProvenanceEntity>? entity,
-      final List<Signature>? signature})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _target = target,
-        _policy = policy,
-        _policyElement = policyElement,
-        _reason = reason,
-        _agent = agent,
-        _entity = entity,
-        _signature = signature,
-        super._();
+      required this.agent,
+      this.entity,
+      this.signature})
+      : super._();
 
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$$_ProvenanceFromJson(json);
@@ -6118,41 +5842,15 @@ class _$_Provenance extends _Provenance {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference> _target;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Reference> get target {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_target);
-  }
-
+  final List<Reference> target;
   @override
   final Period? period;
   @override
@@ -6160,62 +5858,23 @@ class _$_Provenance extends _Provenance {
   @override
   @JsonKey(name: '_recorded')
   final Element? recordedElement;
-  final List<String>? _policy;
   @override
-  List<String>? get policy {
-    final value = _policy;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _policyElement;
+  final List<String>? policy;
   @override
   @JsonKey(name: '_policy')
-  List<Element?>? get policyElement {
-    final value = _policyElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? policyElement;
   @override
   final Reference? location;
-  final List<Coding>? _reason;
   @override
-  List<Coding>? get reason {
-    final value = _reason;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? reason;
   @override
   final Coding? activity;
-  final List<ProvenanceAgent> _agent;
   @override
-  List<ProvenanceAgent> get agent {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_agent);
-  }
-
-  final List<ProvenanceEntity>? _entity;
+  final List<ProvenanceAgent> agent;
   @override
-  List<ProvenanceEntity>? get entity {
-    final value = _entity;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Signature>? _signature;
+  final List<ProvenanceEntity>? entity;
   @override
-  List<Signature>? get signature {
-    final value = _signature;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Signature>? signature;
 
   @override
   String toString() {
@@ -6240,30 +5899,28 @@ class _$_Provenance extends _Provenance {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other._target, _target) &&
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.target, target) &&
             (identical(other.period, period) || other.period == period) &&
             (identical(other.recorded, recorded) ||
                 other.recorded == recorded) &&
             (identical(other.recordedElement, recordedElement) ||
                 other.recordedElement == recordedElement) &&
-            const DeepCollectionEquality().equals(other._policy, _policy) &&
+            const DeepCollectionEquality().equals(other.policy, policy) &&
             const DeepCollectionEquality()
-                .equals(other._policyElement, _policyElement) &&
+                .equals(other.policyElement, policyElement) &&
             (identical(other.location, location) ||
                 other.location == location) &&
-            const DeepCollectionEquality().equals(other._reason, _reason) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
             (identical(other.activity, activity) ||
                 other.activity == activity) &&
-            const DeepCollectionEquality().equals(other._agent, _agent) &&
-            const DeepCollectionEquality().equals(other._entity, _entity) &&
-            const DeepCollectionEquality()
-                .equals(other._signature, _signature));
+            const DeepCollectionEquality().equals(other.agent, agent) &&
+            const DeepCollectionEquality().equals(other.entity, entity) &&
+            const DeepCollectionEquality().equals(other.signature, signature));
   }
 
   @JsonKey(ignore: true)
@@ -6278,21 +5935,21 @@ class _$_Provenance extends _Provenance {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_target),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(target),
         period,
         recorded,
         recordedElement,
-        const DeepCollectionEquality().hash(_policy),
-        const DeepCollectionEquality().hash(_policyElement),
+        const DeepCollectionEquality().hash(policy),
+        const DeepCollectionEquality().hash(policyElement),
         location,
-        const DeepCollectionEquality().hash(_reason),
+        const DeepCollectionEquality().hash(reason),
         activity,
-        const DeepCollectionEquality().hash(_agent),
-        const DeepCollectionEquality().hash(_entity),
-        const DeepCollectionEquality().hash(_signature)
+        const DeepCollectionEquality().hash(agent),
+        const DeepCollectionEquality().hash(entity),
+        const DeepCollectionEquality().hash(signature)
       ]);
 
   @JsonKey(ignore: true)
@@ -6620,7 +6277,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
   }) {
     return _then(_$_ProvenanceAgent(
       role: freezed == role
-          ? _value._role
+          ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       whoUri: freezed == whoUri
@@ -6659,7 +6316,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ProvenanceAgent extends _ProvenanceAgent {
   _$_ProvenanceAgent(
-      {final List<CodeableConcept>? role,
+      {this.role,
       this.whoUri,
       @JsonKey(name: '_whoUri') this.whoUriElement,
       this.whoReference,
@@ -6667,21 +6324,13 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       @JsonKey(name: '_onBehalfOfUri') this.onBehalfOfUriElement,
       this.onBehalfOfReference,
       this.relatedAgentType})
-      : _role = role,
-        super._();
+      : super._();
 
   factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$$_ProvenanceAgentFromJson(json);
 
-  final List<CodeableConcept>? _role;
   @override
-  List<CodeableConcept>? get role {
-    final value = _role;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? role;
   @override
   final String? whoUri;
   @override
@@ -6709,7 +6358,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ProvenanceAgent &&
-            const DeepCollectionEquality().equals(other._role, _role) &&
+            const DeepCollectionEquality().equals(other.role, role) &&
             (identical(other.whoUri, whoUri) || other.whoUri == whoUri) &&
             (identical(other.whoUriElement, whoUriElement) ||
                 other.whoUriElement == whoUriElement) &&
@@ -6729,7 +6378,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_role),
+      const DeepCollectionEquality().hash(role),
       whoUri,
       whoUriElement,
       whoReference,
@@ -7008,7 +6657,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
           : whatIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       agent: freezed == agent
-          ? _value._agent
+          ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as List<ProvenanceAgent>?,
     ));
@@ -7025,9 +6674,8 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       @JsonKey(name: '_whatUri') this.whatUriElement,
       this.whatReference,
       this.whatIdentifier,
-      final List<ProvenanceAgent>? agent})
-      : _agent = agent,
-        super._();
+      this.agent})
+      : super._();
 
   factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$$_ProvenanceEntityFromJson(json);
@@ -7046,14 +6694,8 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   final Reference? whatReference;
   @override
   final Identifier? whatIdentifier;
-  final List<ProvenanceAgent>? _agent;
   @override
-  List<ProvenanceAgent>? get agent {
-    final value = _agent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ProvenanceAgent>? agent;
 
   @override
   String toString() {
@@ -7075,7 +6717,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
                 other.whatReference == whatReference) &&
             (identical(other.whatIdentifier, whatIdentifier) ||
                 other.whatIdentifier == whatIdentifier) &&
-            const DeepCollectionEquality().equals(other._agent, _agent));
+            const DeepCollectionEquality().equals(other.agent, agent));
   }
 
   @JsonKey(ignore: true)
@@ -7088,7 +6730,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       whatUriElement,
       whatReference,
       whatIdentifier,
-      const DeepCollectionEquality().hash(_agent));
+      const DeepCollectionEquality().hash(agent));
 
   @JsonKey(ignore: true)
   @override

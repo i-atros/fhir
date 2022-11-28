@@ -583,19 +583,19 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -673,11 +673,11 @@ class _$_PaymentNotice extends _PaymentNotice {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -695,11 +695,7 @@ class _$_PaymentNotice extends _PaymentNotice {
       required this.recipient,
       required this.amount,
       this.paymentStatus})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        super._();
+      : super._();
 
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentNoticeFromJson(json);
@@ -723,43 +719,15 @@ class _$_PaymentNotice extends _PaymentNotice {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -815,14 +783,13 @@ class _$_PaymentNotice extends _PaymentNotice {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -859,10 +826,10 @@ class _$_PaymentNotice extends _PaymentNotice {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         request,
@@ -1649,19 +1616,19 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       status: freezed == status
@@ -1729,7 +1696,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
           : paymentIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       detail: freezed == detail
-          ? _value._detail
+          ? _value.detail
           : detail // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationDetail>?,
       formCode: freezed == formCode
@@ -1737,7 +1704,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
           : formCode // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       processNote: freezed == processNote
-          ? _value._processNote
+          ? _value.processNote
           : processNote // ignore: cast_nullable_to_non_nullable
               as List<PaymentReconciliationProcessNote>?,
     ));
@@ -1759,11 +1726,11 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -1786,16 +1753,10 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
           this.paymentDateElement,
       required this.paymentAmount,
       this.paymentIdentifier,
-      final List<PaymentReconciliationDetail>? detail,
+      this.detail,
       this.formCode,
-      final List<PaymentReconciliationProcessNote>? processNote})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _detail = detail,
-        _processNote = processNote,
-        super._();
+      this.processNote})
+      : super._();
 
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentReconciliationFromJson(json);
@@ -1819,43 +1780,15 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Code? status;
   @override
@@ -1894,25 +1827,12 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   final Money paymentAmount;
   @override
   final Identifier? paymentIdentifier;
-  final List<PaymentReconciliationDetail>? _detail;
   @override
-  List<PaymentReconciliationDetail>? get detail {
-    final value = _detail;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<PaymentReconciliationDetail>? detail;
   @override
   final CodeableConcept? formCode;
-  final List<PaymentReconciliationProcessNote>? _processNote;
   @override
-  List<PaymentReconciliationProcessNote>? get processNote {
-    final value = _processNote;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<PaymentReconciliationProcessNote>? processNote;
 
   @override
   String toString() {
@@ -1937,14 +1857,13 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -1972,11 +1891,11 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
                 other.paymentAmount == paymentAmount) &&
             (identical(other.paymentIdentifier, paymentIdentifier) ||
                 other.paymentIdentifier == paymentIdentifier) &&
-            const DeepCollectionEquality().equals(other._detail, _detail) &&
+            const DeepCollectionEquality().equals(other.detail, detail) &&
             (identical(other.formCode, formCode) ||
                 other.formCode == formCode) &&
             const DeepCollectionEquality()
-                .equals(other._processNote, _processNote));
+                .equals(other.processNote, processNote));
   }
 
   @JsonKey(ignore: true)
@@ -1991,10 +1910,10 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         status,
         statusElement,
         period,
@@ -2011,9 +1930,9 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         paymentDateElement,
         paymentAmount,
         paymentIdentifier,
-        const DeepCollectionEquality().hash(_detail),
+        const DeepCollectionEquality().hash(detail),
         formCode,
-        const DeepCollectionEquality().hash(_processNote)
+        const DeepCollectionEquality().hash(processNote)
       ]);
 
   @JsonKey(ignore: true)
@@ -2512,11 +2431,11 @@ class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -2572,8 +2491,8 @@ class __$$_PaymentReconciliationDetailCopyWithImpl<$Res>
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.predecessor,
       required this.type,
@@ -2585,34 +2504,18 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       this.responsible,
       this.payee,
       this.amount})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$$_PaymentReconciliationDetailFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -2649,9 +2552,9 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
             other is _$_PaymentReconciliationDetail &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.predecessor, predecessor) ||
@@ -2676,8 +2579,8 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       identifier,
       predecessor,
       type,
@@ -2949,11 +2852,11 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -2983,8 +2886,8 @@ class _$_PaymentReconciliationProcessNote
   _$_PaymentReconciliationProcessNote(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
           this.type,
       @JsonKey(name: '_type')
@@ -2992,9 +2895,7 @@ class _$_PaymentReconciliationProcessNote
       this.text,
       @JsonKey(name: '_text')
           this.textElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
@@ -3002,25 +2903,11 @@ class _$_PaymentReconciliationProcessNote
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
   final PaymentReconciliationProcessNoteType? type;
@@ -3045,9 +2932,9 @@ class _$_PaymentReconciliationProcessNote
             other is _$_PaymentReconciliationProcessNote &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -3061,8 +2948,8 @@ class _$_PaymentReconciliationProcessNote
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       typeElement,
       text,

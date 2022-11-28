@@ -206,7 +206,7 @@ class __$$_VirtualServiceDetailCopyWithImpl<$Res>
           : addressExtendedContactDetail // ignore: cast_nullable_to_non_nullable
               as ExtendedContactDetail?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
     ));
@@ -222,9 +222,8 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
       this.addressString,
       this.addressContactPoint,
       this.addressExtendedContactDetail,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
-      : _extension_ = extension_,
-        super._();
+      @JsonKey(name: 'extension') this.extension_})
+      : super._();
 
   factory _$_VirtualServiceDetail.fromJson(Map<String, dynamic> json) =>
       _$$_VirtualServiceDetailFromJson(json);
@@ -239,15 +238,9 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
   final ContactPoint? addressContactPoint;
   @override
   final ExtendedContactDetail? addressExtendedContactDetail;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<FhirExtension>? extension_;
 
   @override
   String toString() {
@@ -272,7 +265,7 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
                 other.addressExtendedContactDetail ==
                     addressExtendedContactDetail) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_));
+                .equals(other.extension_, extension_));
   }
 
   @JsonKey(ignore: true)
@@ -284,7 +277,7 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
       addressString,
       addressContactPoint,
       addressExtendedContactDetail,
-      const DeepCollectionEquality().hash(_extension_));
+      const DeepCollectionEquality().hash(extension_));
 
   @JsonKey(ignore: true)
   @override
@@ -430,15 +423,15 @@ class __$$_AvailabilityCopyWithImpl<$Res>
   }) {
     return _then(_$_Availability(
       availableTime: freezed == availableTime
-          ? _value._availableTime
+          ? _value.availableTime
           : availableTime // ignore: cast_nullable_to_non_nullable
               as List<AvailabilityAvailableTime>?,
       notAvailableTime: freezed == notAvailableTime
-          ? _value._notAvailableTime
+          ? _value.notAvailableTime
           : notAvailableTime // ignore: cast_nullable_to_non_nullable
               as List<AvailabilityNotAvailableTime>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
     ));
@@ -449,44 +442,21 @@ class __$$_AvailabilityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Availability extends _Availability {
   _$_Availability(
-      {final List<AvailabilityAvailableTime>? availableTime,
-      final List<AvailabilityNotAvailableTime>? notAvailableTime,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
-      : _availableTime = availableTime,
-        _notAvailableTime = notAvailableTime,
-        _extension_ = extension_,
-        super._();
+      {this.availableTime,
+      this.notAvailableTime,
+      @JsonKey(name: 'extension') this.extension_})
+      : super._();
 
   factory _$_Availability.fromJson(Map<String, dynamic> json) =>
       _$$_AvailabilityFromJson(json);
 
-  final List<AvailabilityAvailableTime>? _availableTime;
   @override
-  List<AvailabilityAvailableTime>? get availableTime {
-    final value = _availableTime;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<AvailabilityNotAvailableTime>? _notAvailableTime;
+  final List<AvailabilityAvailableTime>? availableTime;
   @override
-  List<AvailabilityNotAvailableTime>? get notAvailableTime {
-    final value = _notAvailableTime;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<AvailabilityNotAvailableTime>? notAvailableTime;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<FhirExtension>? extension_;
 
   @override
   String toString() {
@@ -499,20 +469,20 @@ class _$_Availability extends _Availability {
         (other.runtimeType == runtimeType &&
             other is _$_Availability &&
             const DeepCollectionEquality()
-                .equals(other._availableTime, _availableTime) &&
+                .equals(other.availableTime, availableTime) &&
             const DeepCollectionEquality()
-                .equals(other._notAvailableTime, _notAvailableTime) &&
+                .equals(other.notAvailableTime, notAvailableTime) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_));
+                .equals(other.extension_, extension_));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_availableTime),
-      const DeepCollectionEquality().hash(_notAvailableTime),
-      const DeepCollectionEquality().hash(_extension_));
+      const DeepCollectionEquality().hash(availableTime),
+      const DeepCollectionEquality().hash(notAvailableTime),
+      const DeepCollectionEquality().hash(extension_));
 
   @JsonKey(ignore: true)
   @override
@@ -766,19 +736,19 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
   }) {
     return _then(_$_AvailabilityAvailableTime(
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       daysOfWeek: freezed == daysOfWeek
-          ? _value._daysOfWeek
+          ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
       daysOfWeekElement: freezed == daysOfWeekElement
-          ? _value._daysOfWeekElement
+          ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       allDay: freezed == allDay
@@ -813,63 +783,31 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
   _$_AvailabilityAvailableTime(
-      {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') final List<Element>? daysOfWeekElement,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.daysOfWeek,
+      @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
       this.allDay,
       @JsonKey(name: '_allDay') this.allDayElement,
       this.availableStartTime,
       @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
       this.availableEndTime,
       @JsonKey(name: '_availableEndTime') this.availableEndTimeElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _daysOfWeek = daysOfWeek,
-        _daysOfWeekElement = daysOfWeekElement,
-        super._();
+      : super._();
 
   factory _$_AvailabilityAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$$_AvailabilityAvailableTimeFromJson(json);
 
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Code>? _daysOfWeek;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Code>? get daysOfWeek {
-    final value = _daysOfWeek;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _daysOfWeekElement;
+  final List<Code>? daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  List<Element>? get daysOfWeekElement {
-    final value = _daysOfWeekElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element>? daysOfWeekElement;
   @override
   final Boolean? allDay;
   @override
@@ -897,13 +835,13 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
         (other.runtimeType == runtimeType &&
             other is _$_AvailabilityAvailableTime &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._daysOfWeek, _daysOfWeek) &&
+                .equals(other.daysOfWeek, daysOfWeek) &&
             const DeepCollectionEquality()
-                .equals(other._daysOfWeekElement, _daysOfWeekElement) &&
+                .equals(other.daysOfWeekElement, daysOfWeekElement) &&
             (identical(other.allDay, allDay) || other.allDay == allDay) &&
             (identical(other.allDayElement, allDayElement) ||
                 other.allDayElement == allDayElement) &&
@@ -923,10 +861,10 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_daysOfWeek),
-      const DeepCollectionEquality().hash(_daysOfWeekElement),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(daysOfWeek),
+      const DeepCollectionEquality().hash(daysOfWeekElement),
       allDay,
       allDayElement,
       availableStartTime,
@@ -1181,11 +1119,11 @@ class __$$_AvailabilityNotAvailableTimeCopyWithImpl<$Res>
   }) {
     return _then(_$_AvailabilityNotAvailableTime(
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -1212,38 +1150,22 @@ class __$$_AvailabilityNotAvailableTimeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AvailabilityNotAvailableTime extends _AvailabilityNotAvailableTime {
   _$_AvailabilityNotAvailableTime(
-      {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      {@JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.during,
       @JsonKey(name: '_during') this.duringElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_AvailabilityNotAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$$_AvailabilityNotAvailableTimeFromJson(json);
 
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -1266,9 +1188,9 @@ class _$_AvailabilityNotAvailableTime extends _AvailabilityNotAvailableTime {
         (other.runtimeType == runtimeType &&
             other is _$_AvailabilityNotAvailableTime &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -1282,8 +1204,8 @@ class _$_AvailabilityNotAvailableTime extends _AvailabilityNotAvailableTime {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       description,
       descriptionElement,
       during,
@@ -1538,11 +1460,11 @@ class __$$_ExtendedContactDetailCopyWithImpl<$Res>
           : purpose // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       name: freezed == name
-          ? _value._name
+          ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as List<HumanName>?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       address: freezed == address
@@ -1558,7 +1480,7 @@ class __$$_ExtendedContactDetailCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
     ));
@@ -1570,55 +1492,32 @@ class __$$_ExtendedContactDetailCopyWithImpl<$Res>
 class _$_ExtendedContactDetail extends _ExtendedContactDetail {
   _$_ExtendedContactDetail(
       {this.purpose,
-      final List<HumanName>? name,
-      final List<ContactPoint>? telecom,
+      this.name,
+      this.telecom,
       this.address,
       this.organization,
       this.period,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
-      : _name = name,
-        _telecom = telecom,
-        _extension_ = extension_,
-        super._();
+      @JsonKey(name: 'extension') this.extension_})
+      : super._();
 
   factory _$_ExtendedContactDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ExtendedContactDetailFromJson(json);
 
   @override
   final CodeableConcept? purpose;
-  final List<HumanName>? _name;
   @override
-  List<HumanName>? get name {
-    final value = _name;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactPoint>? _telecom;
+  final List<HumanName>? name;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactPoint>? telecom;
   @override
   final Address? address;
   @override
   final Reference? organization;
   @override
   final Period? period;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<FhirExtension>? extension_;
 
   @override
   String toString() {
@@ -1631,14 +1530,14 @@ class _$_ExtendedContactDetail extends _ExtendedContactDetail {
         (other.runtimeType == runtimeType &&
             other is _$_ExtendedContactDetail &&
             (identical(other.purpose, purpose) || other.purpose == purpose) &&
-            const DeepCollectionEquality().equals(other._name, _name) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom) &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.organization, organization) ||
                 other.organization == organization) &&
             (identical(other.period, period) || other.period == period) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_));
+                .equals(other.extension_, extension_));
   }
 
   @JsonKey(ignore: true)
@@ -1646,12 +1545,12 @@ class _$_ExtendedContactDetail extends _ExtendedContactDetail {
   int get hashCode => Object.hash(
       runtimeType,
       purpose,
-      const DeepCollectionEquality().hash(_name),
-      const DeepCollectionEquality().hash(_telecom),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(telecom),
       address,
       organization,
       period,
-      const DeepCollectionEquality().hash(_extension_));
+      const DeepCollectionEquality().hash(extension_));
 
   @JsonKey(ignore: true)
   @override
@@ -1838,7 +1737,7 @@ class __$$_ContactDetailCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: freezed == name
@@ -1850,7 +1749,7 @@ class __$$_ContactDetailCopyWithImpl<$Res>
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -1862,42 +1761,27 @@ class __$$_ContactDetailCopyWithImpl<$Res>
 class _$_ContactDetail extends _ContactDetail {
   _$_ContactDetail(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
-      final List<ContactPoint>? telecom})
-      : _extension_ = extension_,
-        _telecom = telecom,
-        super._();
+      this.telecom})
+      : super._();
 
   factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ContactDetailFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final String? name;
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
-  final List<ContactPoint>? _telecom;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ContactPoint>? telecom;
 
   @override
   String toString() {
@@ -1911,11 +1795,11 @@ class _$_ContactDetail extends _ContactDetail {
             other is _$_ContactDetail &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom));
+            const DeepCollectionEquality().equals(other.telecom, telecom));
   }
 
   @JsonKey(ignore: true)
@@ -1923,10 +1807,10 @@ class _$_ContactDetail extends _ContactDetail {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       name,
       nameElement,
-      const DeepCollectionEquality().hash(_telecom));
+      const DeepCollectionEquality().hash(telecom));
 
   @JsonKey(ignore: true)
   @override
@@ -2141,7 +2025,7 @@ class __$$_ContributorCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -2161,7 +2045,7 @@ class __$$_ContributorCopyWithImpl<$Res>
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
     ));
@@ -2173,31 +2057,22 @@ class __$$_ContributorCopyWithImpl<$Res>
 class _$_Contributor extends _Contributor {
   _$_Contributor(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
-      final List<ContactDetail>? contact})
-      : _extension_ = extension_,
-        _contact = contact,
-        super._();
+      this.contact})
+      : super._();
 
   factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
       _$$_ContributorFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: ContributorType.unknown)
   final ContributorType? type;
@@ -2209,14 +2084,8 @@ class _$_Contributor extends _Contributor {
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ContactDetail>? contact;
 
   @override
   String toString() {
@@ -2230,14 +2099,14 @@ class _$_Contributor extends _Contributor {
             other is _$_Contributor &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact));
+            const DeepCollectionEquality().equals(other.contact, contact));
   }
 
   @JsonKey(ignore: true)
@@ -2245,12 +2114,12 @@ class _$_Contributor extends _Contributor {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       type,
       typeElement,
       name,
       nameElement,
-      const DeepCollectionEquality().hash(_contact));
+      const DeepCollectionEquality().hash(contact));
 
   @JsonKey(ignore: true)
   @override
@@ -2574,7 +2443,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -2586,7 +2455,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       profile: freezed == profile
-          ? _value._profile
+          ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       subjectCodeableConcept: freezed == subjectCodeableConcept
@@ -2598,19 +2467,19 @@ class __$$_DataRequirementCopyWithImpl<$Res>
           : subjectReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       mustSupport: freezed == mustSupport
-          ? _value._mustSupport
+          ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       mustSupportElement: freezed == mustSupportElement
-          ? _value._mustSupportElement
+          ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       codeFilter: freezed == codeFilter
-          ? _value._codeFilter
+          ? _value.codeFilter
           : codeFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementCodeFilter>?,
       dateFilter: freezed == dateFilter
-          ? _value._dateFilter
+          ? _value.dateFilter
           : dateFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementDateFilter>?,
       limit: freezed == limit
@@ -2622,7 +2491,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
           : limitElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       sort: freezed == sort
-          ? _value._sort
+          ? _value.sort
           : sort // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementSort>?,
     ));
@@ -2634,111 +2503,56 @@ class __$$_DataRequirementCopyWithImpl<$Res>
 class _$_DataRequirement extends _DataRequirement {
   _$_DataRequirement(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
-      final List<Canonical>? profile,
+      this.profile,
       this.subjectCodeableConcept,
       this.subjectReference,
-      final List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') final List<Element>? mustSupportElement,
-      final List<DataRequirementCodeFilter>? codeFilter,
-      final List<DataRequirementDateFilter>? dateFilter,
+      this.mustSupport,
+      @JsonKey(name: '_mustSupport') this.mustSupportElement,
+      this.codeFilter,
+      this.dateFilter,
       this.limit,
       @JsonKey(name: '_limit') this.limitElement,
-      final List<DataRequirementSort>? sort})
-      : _extension_ = extension_,
-        _profile = profile,
-        _mustSupport = mustSupport,
-        _mustSupportElement = mustSupportElement,
-        _codeFilter = codeFilter,
-        _dateFilter = dateFilter,
-        _sort = sort,
-        super._();
+      this.sort})
+      : super._();
 
   factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final Code? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
-  final List<Canonical>? _profile;
   @override
-  List<Canonical>? get profile {
-    final value = _profile;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Canonical>? profile;
   @override
   final CodeableConcept? subjectCodeableConcept;
   @override
   final Reference? subjectReference;
-  final List<String>? _mustSupport;
   @override
-  List<String>? get mustSupport {
-    final value = _mustSupport;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element>? _mustSupportElement;
+  final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element>? get mustSupportElement {
-    final value = _mustSupportElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirementCodeFilter>? _codeFilter;
+  final List<Element>? mustSupportElement;
   @override
-  List<DataRequirementCodeFilter>? get codeFilter {
-    final value = _codeFilter;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirementDateFilter>? _dateFilter;
+  final List<DataRequirementCodeFilter>? codeFilter;
   @override
-  List<DataRequirementDateFilter>? get dateFilter {
-    final value = _dateFilter;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<DataRequirementDateFilter>? dateFilter;
   @override
   final PositiveInt? limit;
   @override
   @JsonKey(name: '_limit')
   final Element? limitElement;
-  final List<DataRequirementSort>? _sort;
   @override
-  List<DataRequirementSort>? get sort {
-    final value = _sort;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<DataRequirementSort>? sort;
 
   @override
   String toString() {
@@ -2752,27 +2566,27 @@ class _$_DataRequirement extends _DataRequirement {
             other is _$_DataRequirement &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
-            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other.profile, profile) &&
             (identical(other.subjectCodeableConcept, subjectCodeableConcept) ||
                 other.subjectCodeableConcept == subjectCodeableConcept) &&
             (identical(other.subjectReference, subjectReference) ||
                 other.subjectReference == subjectReference) &&
             const DeepCollectionEquality()
-                .equals(other._mustSupport, _mustSupport) &&
+                .equals(other.mustSupport, mustSupport) &&
             const DeepCollectionEquality()
-                .equals(other._mustSupportElement, _mustSupportElement) &&
+                .equals(other.mustSupportElement, mustSupportElement) &&
             const DeepCollectionEquality()
-                .equals(other._codeFilter, _codeFilter) &&
+                .equals(other.codeFilter, codeFilter) &&
             const DeepCollectionEquality()
-                .equals(other._dateFilter, _dateFilter) &&
+                .equals(other.dateFilter, dateFilter) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             (identical(other.limitElement, limitElement) ||
                 other.limitElement == limitElement) &&
-            const DeepCollectionEquality().equals(other._sort, _sort));
+            const DeepCollectionEquality().equals(other.sort, sort));
   }
 
   @JsonKey(ignore: true)
@@ -2780,19 +2594,19 @@ class _$_DataRequirement extends _DataRequirement {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       type,
       typeElement,
-      const DeepCollectionEquality().hash(_profile),
+      const DeepCollectionEquality().hash(profile),
       subjectCodeableConcept,
       subjectReference,
-      const DeepCollectionEquality().hash(_mustSupport),
-      const DeepCollectionEquality().hash(_mustSupportElement),
-      const DeepCollectionEquality().hash(_codeFilter),
-      const DeepCollectionEquality().hash(_dateFilter),
+      const DeepCollectionEquality().hash(mustSupport),
+      const DeepCollectionEquality().hash(mustSupportElement),
+      const DeepCollectionEquality().hash(codeFilter),
+      const DeepCollectionEquality().hash(dateFilter),
       limit,
       limitElement,
-      const DeepCollectionEquality().hash(_sort));
+      const DeepCollectionEquality().hash(sort));
 
   @JsonKey(ignore: true)
   @override
@@ -3059,11 +2873,11 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: freezed == path
@@ -3087,7 +2901,7 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
           : valueSet // ignore: cast_nullable_to_non_nullable
               as Canonical?,
       code: freezed == code
-          ? _value._code
+          ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
     ));
@@ -3099,43 +2913,26 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
 class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   _$_DataRequirementCodeFilter(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.searchParam,
       @JsonKey(name: '_searchParam') this.searchParamElement,
       this.valueSet,
-      final List<Coding>? code})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _code = code,
-        super._();
+      this.code})
+      : super._();
 
   factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementCodeFilterFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? path;
   @override
@@ -3148,14 +2945,8 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   final Element? searchParamElement;
   @override
   final Canonical? valueSet;
-  final List<Coding>? _code;
   @override
-  List<Coding>? get code {
-    final value = _code;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Coding>? code;
 
   @override
   String toString() {
@@ -3169,9 +2960,9 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
             other is _$_DataRequirementCodeFilter &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
                 other.pathElement == pathElement) &&
@@ -3181,7 +2972,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
                 other.searchParamElement == searchParamElement) &&
             (identical(other.valueSet, valueSet) ||
                 other.valueSet == valueSet) &&
-            const DeepCollectionEquality().equals(other._code, _code));
+            const DeepCollectionEquality().equals(other.code, code));
   }
 
   @JsonKey(ignore: true)
@@ -3189,14 +2980,14 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       path,
       pathElement,
       searchParam,
       searchParamElement,
       valueSet,
-      const DeepCollectionEquality().hash(_code));
+      const DeepCollectionEquality().hash(code));
 
   @JsonKey(ignore: true)
   @override
@@ -3512,11 +3303,11 @@ class __$$_DataRequirementDateFilterCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: freezed == path
@@ -3560,8 +3351,8 @@ class __$$_DataRequirementDateFilterCopyWithImpl<$Res>
 class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   _$_DataRequirementDateFilter(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.path,
       @JsonKey(name: '_path') this.pathElement,
       this.searchParam,
@@ -3570,34 +3361,18 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
       this.valuePeriod,
       this.valueDuration})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementDateFilterFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? path;
   @override
@@ -3630,9 +3405,9 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
             other is _$_DataRequirementDateFilter &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
                 other.pathElement == pathElement) &&
@@ -3655,8 +3430,8 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       path,
       pathElement,
       searchParam,
@@ -3910,11 +3685,11 @@ class __$$_DataRequirementSortCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: freezed == path
@@ -3943,8 +3718,8 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   _$_DataRequirementSort(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.path,
       @JsonKey(name: '_path')
           this.pathElement,
@@ -3952,34 +3727,18 @@ class _$_DataRequirementSort extends _DataRequirementSort {
           this.direction,
       @JsonKey(name: '_direction')
           this.directionElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementSortFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? path;
   @override
@@ -4004,9 +3763,9 @@ class _$_DataRequirementSort extends _DataRequirementSort {
             other is _$_DataRequirementSort &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
                 other.pathElement == pathElement) &&
@@ -4021,8 +3780,8 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       path,
       pathElement,
       direction,
@@ -4389,7 +4148,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       name: freezed == name
@@ -4453,7 +4212,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
 class _$_ParameterDefinition extends _ParameterDefinition {
   _$_ParameterDefinition(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.use,
@@ -4467,24 +4226,16 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.profile})
-      : _extension_ = extension_,
-        super._();
+      : super._();
 
   factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ParameterDefinitionFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final Code? name;
   @override
@@ -4530,7 +4281,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
             other is _$_ParameterDefinition &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -4558,7 +4309,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       name,
       nameElement,
       use,
@@ -4962,7 +4713,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -5022,7 +4773,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
 class _$_RelatedArtifact extends _RelatedArtifact {
   _$_RelatedArtifact(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.label,
@@ -5035,24 +4786,16 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       @JsonKey(name: '_url') this.urlElement,
       this.document,
       this.resource})
-      : _extension_ = extension_,
-        super._();
+      : super._();
 
   factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$$_RelatedArtifactFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   final RelatedArtifactType? type;
@@ -5096,7 +4839,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
             other is _$_RelatedArtifact &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -5124,7 +4867,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       type,
       typeElement,
       label,
@@ -5542,7 +5285,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -5586,7 +5329,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
           : timingDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       data: freezed == data
-          ? _value._data
+          ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<DataRequirement>?,
       condition: freezed == condition
@@ -5602,7 +5345,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
 class _$_TriggerDefinition extends _TriggerDefinition {
   _$_TriggerDefinition(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.name,
@@ -5613,27 +5356,18 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       @JsonKey(name: '_timingDate') this.timingDateElement,
       this.timingDateTime,
       @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
-      final List<DataRequirement>? data,
+      this.data,
       this.condition})
-      : _extension_ = extension_,
-        _data = data,
-        super._();
+      : super._();
 
   factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_TriggerDefinitionFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   final TriggerDefinitionType? type;
@@ -5659,15 +5393,8 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   @override
   @JsonKey(name: '_timingDateTime')
   final Element? timingDateTimeElement;
-  final List<DataRequirement>? _data;
   @override
-  List<DataRequirement>? get data {
-    final value = _data;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<DataRequirement>? data;
   @override
   final Expression? condition;
 
@@ -5683,7 +5410,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
             other is _$_TriggerDefinition &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -5702,7 +5429,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
                 other.timingDateTime == timingDateTime) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) ||
                 other.timingDateTimeElement == timingDateTimeElement) &&
-            const DeepCollectionEquality().equals(other._data, _data) &&
+            const DeepCollectionEquality().equals(other.data, data) &&
             (identical(other.condition, condition) ||
                 other.condition == condition));
   }
@@ -5712,7 +5439,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       type,
       typeElement,
       name,
@@ -5723,7 +5450,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       timingDateElement,
       timingDateTime,
       timingDateTimeElement,
-      const DeepCollectionEquality().hash(_data),
+      const DeepCollectionEquality().hash(data),
       condition);
 
   @JsonKey(ignore: true)
@@ -6017,7 +5744,7 @@ class __$$_UsageContextCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: null == code
@@ -6049,30 +5776,22 @@ class __$$_UsageContextCopyWithImpl<$Res>
 class _$_UsageContext extends _UsageContext {
   _$_UsageContext(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       required this.code,
       this.valueCodeableConcept,
       this.valueQuantity,
       this.valueRange,
       this.valueReference})
-      : _extension_ = extension_,
-        super._();
+      : super._();
 
   factory _$_UsageContext.fromJson(Map<String, dynamic> json) =>
       _$$_UsageContextFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final Coding code;
   @override
@@ -6096,7 +5815,7 @@ class _$_UsageContext extends _UsageContext {
             other is _$_UsageContext &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
                 other.valueCodeableConcept == valueCodeableConcept) &&
@@ -6113,7 +5832,7 @@ class _$_UsageContext extends _UsageContext {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       code,
       valueCodeableConcept,
       valueQuantity,
@@ -6430,7 +6149,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -6482,7 +6201,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
 class _$_Expression extends _Expression {
   _$_Expression(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.name,
@@ -6493,24 +6212,16 @@ class _$_Expression extends _Expression {
       @JsonKey(name: '_expression') this.expressionElement,
       this.reference,
       @JsonKey(name: '_reference') this.referenceElement})
-      : _extension_ = extension_,
-        super._();
+      : super._();
 
   factory _$_Expression.fromJson(Map<String, dynamic> json) =>
       _$$_ExpressionFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final String? description;
   @override
@@ -6549,7 +6260,7 @@ class _$_Expression extends _Expression {
             other is _$_Expression &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -6576,7 +6287,7 @@ class _$_Expression extends _Expression {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       description,
       descriptionElement,
       name,

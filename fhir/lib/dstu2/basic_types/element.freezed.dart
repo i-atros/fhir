@@ -109,11 +109,11 @@ class __$$_ElementCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       fhirComments: freezed == fhirComments
-          ? _value._fhirComments
+          ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
@@ -125,36 +125,21 @@ class __$$_ElementCopyWithImpl<$Res>
 class _$_Element extends _Element {
   _$_Element(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments})
-      : _extension_ = extension_,
-        _fhirComments = fhirComments,
-        super._();
+      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'fhir_comments') this.fhirComments})
+      : super._();
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$$_ElementFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _fhirComments;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments {
-    final value = _fhirComments;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<String>? fhirComments;
 
   @override
   String toString() {
@@ -168,9 +153,9 @@ class _$_Element extends _Element {
             other is _$_Element &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._fhirComments, _fhirComments));
+                .equals(other.fhirComments, fhirComments));
   }
 
   @JsonKey(ignore: true)
@@ -178,8 +163,8 @@ class _$_Element extends _Element {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_fhirComments));
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(fhirComments));
 
   @JsonKey(ignore: true)
   @override

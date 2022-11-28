@@ -1539,7 +1539,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -1835,7 +1835,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
 class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.url,
       @JsonKey(name: '_url') this.urlElement,
       this.valueBase64Binary,
@@ -1907,24 +1907,16 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueUsageContext,
       this.valueDosage,
       this.valueMeta})
-      : _extension_ = extension_,
-        super._();
+      : super._();
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$$_FhirExtensionFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final FhirUri? url;
   @override
@@ -2100,7 +2092,7 @@ class _$_FhirExtension extends _FhirExtension {
             other is _$_FhirExtension &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
@@ -2210,7 +2202,7 @@ class _$_FhirExtension extends _FhirExtension {
   int get hashCode => Object.hashAll([
         runtimeType,
         id,
-        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(extension_),
         url,
         urlElement,
         valueBase64Binary,

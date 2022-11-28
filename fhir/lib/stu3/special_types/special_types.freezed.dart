@@ -676,19 +676,19 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
           : lastUpdatedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       profile: freezed == profile
-          ? _value._profile
+          ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<FhirUri>?,
       profileElement: freezed == profileElement
-          ? _value._profileElement
+          ? _value.profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       security: freezed == security
-          ? _value._security
+          ? _value.security
           : security // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       tag: freezed == tag
-          ? _value._tag
+          ? _value.tag
           : tag // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
     ));
@@ -703,15 +703,11 @@ class _$_Meta extends _Meta {
       @JsonKey(name: '_versionId') this.versionIdElement,
       this.lastUpdated,
       @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
-      final List<FhirUri>? profile,
-      @JsonKey(name: '_profile') final List<Element?>? profileElement,
-      final List<Coding>? security,
-      final List<Coding>? tag})
-      : _profile = profile,
-        _profileElement = profileElement,
-        _security = security,
-        _tag = tag,
-        super._();
+      this.profile,
+      @JsonKey(name: '_profile') this.profileElement,
+      this.security,
+      this.tag})
+      : super._();
 
   factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
 
@@ -725,42 +721,15 @@ class _$_Meta extends _Meta {
   @override
   @JsonKey(name: '_lastUpdated')
   final Element? lastUpdatedElement;
-  final List<FhirUri>? _profile;
   @override
-  List<FhirUri>? get profile {
-    final value = _profile;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _profileElement;
+  final List<FhirUri>? profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element?>? get profileElement {
-    final value = _profileElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _security;
+  final List<Element?>? profileElement;
   @override
-  List<Coding>? get security {
-    final value = _security;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _tag;
+  final List<Coding>? security;
   @override
-  List<Coding>? get tag {
-    final value = _tag;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Coding>? tag;
 
   @override
   String toString() {
@@ -780,11 +749,11 @@ class _$_Meta extends _Meta {
                 other.lastUpdated == lastUpdated) &&
             (identical(other.lastUpdatedElement, lastUpdatedElement) ||
                 other.lastUpdatedElement == lastUpdatedElement) &&
-            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other.profile, profile) &&
             const DeepCollectionEquality()
-                .equals(other._profileElement, _profileElement) &&
-            const DeepCollectionEquality().equals(other._security, _security) &&
-            const DeepCollectionEquality().equals(other._tag, _tag));
+                .equals(other.profileElement, profileElement) &&
+            const DeepCollectionEquality().equals(other.security, security) &&
+            const DeepCollectionEquality().equals(other.tag, tag));
   }
 
   @JsonKey(ignore: true)
@@ -795,10 +764,10 @@ class _$_Meta extends _Meta {
       versionIdElement,
       lastUpdated,
       lastUpdatedElement,
-      const DeepCollectionEquality().hash(_profile),
-      const DeepCollectionEquality().hash(_profileElement),
-      const DeepCollectionEquality().hash(_security),
-      const DeepCollectionEquality().hash(_tag));
+      const DeepCollectionEquality().hash(profile),
+      const DeepCollectionEquality().hash(profileElement),
+      const DeepCollectionEquality().hash(security),
+      const DeepCollectionEquality().hash(tag));
 
   @JsonKey(ignore: true)
   @override
@@ -6826,7 +6795,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       path: freezed == path
@@ -6838,11 +6807,11 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       representation: freezed == representation
-          ? _value._representation
+          ? _value.representation
           : representation // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionRepresentation>?,
       representationElement: freezed == representationElement
-          ? _value._representationElement
+          ? _value.representationElement
           : representationElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       sliceName: freezed == sliceName
@@ -6862,7 +6831,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : labelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       code: freezed == code
-          ? _value._code
+          ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       slicing: freezed == slicing
@@ -6902,11 +6871,11 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : requirementsElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       alias: freezed == alias
-          ? _value._alias
+          ? _value.alias
           : alias // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       aliasElement: freezed == aliasElement
-          ? _value._aliasElement
+          ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       min: freezed == min
@@ -6938,7 +6907,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : contentReferenceElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionType>?,
       defaultValueBoolean: freezed == defaultValueBoolean
@@ -7800,7 +7769,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : patternTriggerDefinition // ignore: cast_nullable_to_non_nullable
               as TriggerDefinition?,
       example: freezed == example
-          ? _value._example
+          ? _value.example
           : example // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionExample>?,
       minValueDate: freezed == minValueDate
@@ -7948,15 +7917,15 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : maxLengthElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       condition: freezed == condition
-          ? _value._condition
+          ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       conditionElement: freezed == conditionElement
-          ? _value._conditionElement
+          ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       constraint: freezed == constraint
-          ? _value._constraint
+          ? _value.constraint
           : constraint // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionConstraint>?,
       mustSupport: freezed == mustSupport
@@ -7988,7 +7957,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
           : binding // ignore: cast_nullable_to_non_nullable
               as ElementDefinitionBinding?,
       mapping: freezed == mapping
-          ? _value._mapping
+          ? _value.mapping
           : mapping // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionMapping>?,
     ));
@@ -8001,20 +7970,20 @@ class _$_ElementDefinition extends _ElementDefinition {
   _$_ElementDefinition(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+          this.extension_,
       this.path,
       @JsonKey(name: '_path')
           this.pathElement,
-      final List<ElementDefinitionRepresentation>? representation,
+      this.representation,
       @JsonKey(name: '_representation')
-          final List<Element?>? representationElement,
+          this.representationElement,
       this.sliceName,
       @JsonKey(name: '_sliceName')
           this.sliceNameElement,
       this.label,
       @JsonKey(name: '_label')
           this.labelElement,
-      final List<Coding>? code,
+      this.code,
       this.slicing,
       this.short,
       @JsonKey(name: '_short')
@@ -8028,9 +7997,9 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.requirements,
       @JsonKey(name: '_requirements')
           this.requirementsElement,
-      final List<String>? alias,
+      this.alias,
       @JsonKey(name: '_alias')
-          final List<Element?>? aliasElement,
+          this.aliasElement,
       this.min,
       @JsonKey(name: '_min')
           this.minElement,
@@ -8041,7 +8010,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.contentReference,
       @JsonKey(name: '_contentReference')
           this.contentReferenceElement,
-      final List<ElementDefinitionType>? type,
+      this.type,
       this.defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
           this.defaultValueBooleanElement,
@@ -8309,7 +8278,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternDataRequirement,
       this.patternParameterDefinition,
       this.patternTriggerDefinition,
-      final List<ElementDefinitionExample>? example,
+      this.example,
       this.minValueDate,
       @JsonKey(name: '_minValueDate')
           this.minValueDateElement,
@@ -8363,10 +8332,10 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.maxLength,
       @JsonKey(name: '_maxLength')
           this.maxLengthElement,
-      final List<String>? condition,
+      this.condition,
       @JsonKey(name: '_condition')
-          final List<Element?>? conditionElement,
-      final List<ElementDefinitionConstraint>? constraint,
+          this.conditionElement,
+      this.constraint,
       this.mustSupport,
       @JsonKey(name: '_mustSupport')
           this.mustSupportElement,
@@ -8377,60 +8346,27 @@ class _$_ElementDefinition extends _ElementDefinition {
       @JsonKey(name: '_isSummary')
           this.isSummaryElement,
       this.binding,
-      final List<ElementDefinitionMapping>? mapping})
-      : _extension_ = extension_,
-        _representation = representation,
-        _representationElement = representationElement,
-        _code = code,
-        _alias = alias,
-        _aliasElement = aliasElement,
-        _type = type,
-        _example = example,
-        _condition = condition,
-        _conditionElement = conditionElement,
-        _constraint = constraint,
-        _mapping = mapping,
-        super._();
+      this.mapping})
+      : super._();
 
   factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final String? path;
   @override
   @JsonKey(name: '_path')
   final Element? pathElement;
-  final List<ElementDefinitionRepresentation>? _representation;
   @override
-  List<ElementDefinitionRepresentation>? get representation {
-    final value = _representation;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _representationElement;
+  final List<ElementDefinitionRepresentation>? representation;
   @override
   @JsonKey(name: '_representation')
-  List<Element?>? get representationElement {
-    final value = _representationElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? representationElement;
   @override
   final String? sliceName;
   @override
@@ -8441,15 +8377,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_label')
   final Element? labelElement;
-  final List<Coding>? _code;
   @override
-  List<Coding>? get code {
-    final value = _code;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? code;
   @override
   final ElementDefinitionSlicing? slicing;
   @override
@@ -8472,25 +8401,11 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
-  final List<String>? _alias;
   @override
-  List<String>? get alias {
-    final value = _alias;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _aliasElement;
+  final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement {
-    final value = _aliasElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? aliasElement;
   @override
   final Decimal? min;
   @override
@@ -8508,15 +8423,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_contentReference')
   final Element? contentReferenceElement;
-  final List<ElementDefinitionType>? _type;
   @override
-  List<ElementDefinitionType>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ElementDefinitionType>? type;
   @override
   final Boolean? defaultValueBoolean;
   @override
@@ -8998,15 +8906,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final ParameterDefinition? patternParameterDefinition;
   @override
   final TriggerDefinition? patternTriggerDefinition;
-  final List<ElementDefinitionExample>? _example;
   @override
-  List<ElementDefinitionExample>? get example {
-    final value = _example;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ElementDefinitionExample>? example;
   @override
   final Date? minValueDate;
   @override
@@ -9096,34 +8997,13 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   @JsonKey(name: '_maxLength')
   final Element? maxLengthElement;
-  final List<String>? _condition;
   @override
-  List<String>? get condition {
-    final value = _condition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _conditionElement;
+  final List<String>? condition;
   @override
   @JsonKey(name: '_condition')
-  List<Element?>? get conditionElement {
-    final value = _conditionElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ElementDefinitionConstraint>? _constraint;
+  final List<Element?>? conditionElement;
   @override
-  List<ElementDefinitionConstraint>? get constraint {
-    final value = _constraint;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ElementDefinitionConstraint>? constraint;
   @override
   final Boolean? mustSupport;
   @override
@@ -9141,14 +9021,8 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Element? isSummaryElement;
   @override
   final ElementDefinitionBinding? binding;
-  final List<ElementDefinitionMapping>? _mapping;
   @override
-  List<ElementDefinitionMapping>? get mapping {
-    final value = _mapping;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ElementDefinitionMapping>? mapping;
 
   @override
   String toString() {
@@ -9162,14 +9036,14 @@ class _$_ElementDefinition extends _ElementDefinition {
             other is _$_ElementDefinition &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
                 other.pathElement == pathElement) &&
             const DeepCollectionEquality()
-                .equals(other._representation, _representation) &&
+                .equals(other.representation, representation) &&
             const DeepCollectionEquality()
-                .equals(other._representationElement, _representationElement) &&
+                .equals(other.representationElement, representationElement) &&
             (identical(other.sliceName, sliceName) ||
                 other.sliceName == sliceName) &&
             (identical(other.sliceNameElement, sliceNameElement) ||
@@ -9177,7 +9051,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             (identical(other.label, label) || other.label == label) &&
             (identical(other.labelElement, labelElement) ||
                 other.labelElement == labelElement) &&
-            const DeepCollectionEquality().equals(other._code, _code) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
             (identical(other.slicing, slicing) || other.slicing == slicing) &&
             (identical(other.short, short) || other.short == short) &&
             (identical(other.shortElement, shortElement) ||
@@ -9193,9 +9067,9 @@ class _$_ElementDefinition extends _ElementDefinition {
                 other.requirements == requirements) &&
             (identical(other.requirementsElement, requirementsElement) ||
                 other.requirementsElement == requirementsElement) &&
-            const DeepCollectionEquality().equals(other._alias, _alias) &&
+            const DeepCollectionEquality().equals(other.alias, alias) &&
             const DeepCollectionEquality()
-                .equals(other._aliasElement, _aliasElement) &&
+                .equals(other.aliasElement, aliasElement) &&
             (identical(other.min, min) || other.min == min) &&
             (identical(other.minElement, minElement) ||
                 other.minElement == minElement) &&
@@ -9207,7 +9081,7 @@ class _$_ElementDefinition extends _ElementDefinition {
                 other.contentReference == contentReference) &&
             (identical(other.contentReferenceElement, contentReferenceElement) ||
                 other.contentReferenceElement == contentReferenceElement) &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.defaultValueBoolean, defaultValueBoolean) ||
                 other.defaultValueBoolean == defaultValueBoolean) &&
             (identical(other.defaultValueBooleanElement, defaultValueBooleanElement) ||
@@ -9440,7 +9314,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             (identical(other.patternDataRequirement, patternDataRequirement) || other.patternDataRequirement == patternDataRequirement) &&
             (identical(other.patternParameterDefinition, patternParameterDefinition) || other.patternParameterDefinition == patternParameterDefinition) &&
             (identical(other.patternTriggerDefinition, patternTriggerDefinition) || other.patternTriggerDefinition == patternTriggerDefinition) &&
-            const DeepCollectionEquality().equals(other._example, _example) &&
+            const DeepCollectionEquality().equals(other.example, example) &&
             (identical(other.minValueDate, minValueDate) || other.minValueDate == minValueDate) &&
             (identical(other.minValueDateElement, minValueDateElement) || other.minValueDateElement == minValueDateElement) &&
             (identical(other.minValueDateTime, minValueDateTime) || other.minValueDateTime == minValueDateTime) &&
@@ -9477,9 +9351,9 @@ class _$_ElementDefinition extends _ElementDefinition {
             (identical(other.maxValueQuantity, maxValueQuantity) || other.maxValueQuantity == maxValueQuantity) &&
             (identical(other.maxLength, maxLength) || other.maxLength == maxLength) &&
             (identical(other.maxLengthElement, maxLengthElement) || other.maxLengthElement == maxLengthElement) &&
-            const DeepCollectionEquality().equals(other._condition, _condition) &&
-            const DeepCollectionEquality().equals(other._conditionElement, _conditionElement) &&
-            const DeepCollectionEquality().equals(other._constraint, _constraint) &&
+            const DeepCollectionEquality().equals(other.condition, condition) &&
+            const DeepCollectionEquality().equals(other.conditionElement, conditionElement) &&
+            const DeepCollectionEquality().equals(other.constraint, constraint) &&
             (identical(other.mustSupport, mustSupport) || other.mustSupport == mustSupport) &&
             (identical(other.mustSupportElement, mustSupportElement) || other.mustSupportElement == mustSupportElement) &&
             (identical(other.isModifier, isModifier) || other.isModifier == isModifier) &&
@@ -9487,7 +9361,7 @@ class _$_ElementDefinition extends _ElementDefinition {
             (identical(other.isSummary, isSummary) || other.isSummary == isSummary) &&
             (identical(other.isSummaryElement, isSummaryElement) || other.isSummaryElement == isSummaryElement) &&
             (identical(other.binding, binding) || other.binding == binding) &&
-            const DeepCollectionEquality().equals(other._mapping, _mapping));
+            const DeepCollectionEquality().equals(other.mapping, mapping));
   }
 
   @JsonKey(ignore: true)
@@ -9495,16 +9369,16 @@ class _$_ElementDefinition extends _ElementDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         id,
-        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(extension_),
         path,
         pathElement,
-        const DeepCollectionEquality().hash(_representation),
-        const DeepCollectionEquality().hash(_representationElement),
+        const DeepCollectionEquality().hash(representation),
+        const DeepCollectionEquality().hash(representationElement),
         sliceName,
         sliceNameElement,
         label,
         labelElement,
-        const DeepCollectionEquality().hash(_code),
+        const DeepCollectionEquality().hash(code),
         slicing,
         short,
         shortElement,
@@ -9514,8 +9388,8 @@ class _$_ElementDefinition extends _ElementDefinition {
         commentElement,
         requirements,
         requirementsElement,
-        const DeepCollectionEquality().hash(_alias),
-        const DeepCollectionEquality().hash(_aliasElement),
+        const DeepCollectionEquality().hash(alias),
+        const DeepCollectionEquality().hash(aliasElement),
         min,
         minElement,
         max,
@@ -9523,7 +9397,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         base,
         contentReference,
         contentReferenceElement,
-        const DeepCollectionEquality().hash(_type),
+        const DeepCollectionEquality().hash(type),
         defaultValueBoolean,
         defaultValueBooleanElement,
         defaultValueInteger,
@@ -9738,7 +9612,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         patternDataRequirement,
         patternParameterDefinition,
         patternTriggerDefinition,
-        const DeepCollectionEquality().hash(_example),
+        const DeepCollectionEquality().hash(example),
         minValueDate,
         minValueDateElement,
         minValueDateTime,
@@ -9775,9 +9649,9 @@ class _$_ElementDefinition extends _ElementDefinition {
         maxValueQuantity,
         maxLength,
         maxLengthElement,
-        const DeepCollectionEquality().hash(_condition),
-        const DeepCollectionEquality().hash(_conditionElement),
-        const DeepCollectionEquality().hash(_constraint),
+        const DeepCollectionEquality().hash(condition),
+        const DeepCollectionEquality().hash(conditionElement),
+        const DeepCollectionEquality().hash(constraint),
         mustSupport,
         mustSupportElement,
         isModifier,
@@ -9785,7 +9659,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         isSummary,
         isSummaryElement,
         binding,
-        const DeepCollectionEquality().hash(_mapping)
+        const DeepCollectionEquality().hash(mapping)
       ]);
 
   @JsonKey(ignore: true)
@@ -11051,7 +10925,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
   }) {
     return _then(_$_ElementDefinitionSlicing(
       discriminator: freezed == discriminator
-          ? _value._discriminator
+          ? _value.discriminator
           : discriminator // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionDiscriminator>?,
       description: freezed == description
@@ -11086,28 +10960,20 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
-      {final List<ElementDefinitionDiscriminator>? discriminator,
+      {this.discriminator,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.ordered,
       @JsonKey(name: '_ordered') this.orderedElement,
       this.rules,
       @JsonKey(name: '_rules') this.rulesElement})
-      : _discriminator = discriminator,
-        super._();
+      : super._();
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionSlicingFromJson(json);
 
-  final List<ElementDefinitionDiscriminator>? _discriminator;
   @override
-  List<ElementDefinitionDiscriminator>? get discriminator {
-    final value = _discriminator;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ElementDefinitionDiscriminator>? discriminator;
   @override
   final String? description;
   @override
@@ -11135,7 +11001,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionSlicing &&
             const DeepCollectionEquality()
-                .equals(other._discriminator, _discriminator) &&
+                .equals(other.discriminator, discriminator) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -11152,7 +11018,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_discriminator),
+      const DeepCollectionEquality().hash(discriminator),
       description,
       descriptionElement,
       ordered,
@@ -12012,7 +11878,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
   }) {
     return _then(_$_ElementDefinitionType(
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       code: freezed == code
@@ -12040,11 +11906,11 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
           : targetProfileElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       aggregation: freezed == aggregation
-          ? _value._aggregation
+          ? _value.aggregation
           : aggregation // ignore: cast_nullable_to_non_nullable
               as List<ElementDefinitionTypeAggregation>?,
       aggregationElement: freezed == aggregationElement
-          ? _value._aggregationElement
+          ? _value.aggregationElement
           : aggregationElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       versioning: freezed == versioning
@@ -12063,35 +11929,25 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
-      {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') this.extension_,
       this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.profile,
       @JsonKey(name: '_profile') this.profileElement,
       this.targetProfile,
       @JsonKey(name: '_targetProfile') this.targetProfileElement,
-      final List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation') final List<Element?>? aggregationElement,
+      this.aggregation,
+      @JsonKey(name: '_aggregation') this.aggregationElement,
       this.versioning,
       @JsonKey(name: '_versioning') this.versioningElement})
-      : _extension_ = extension_,
-        _aggregation = aggregation,
-        _aggregationElement = aggregationElement,
-        super._();
+      : super._();
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionTypeFromJson(json);
 
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final String? code;
   @override
@@ -12107,25 +11963,11 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   @JsonKey(name: '_targetProfile')
   final Element? targetProfileElement;
-  final List<ElementDefinitionTypeAggregation>? _aggregation;
   @override
-  List<ElementDefinitionTypeAggregation>? get aggregation {
-    final value = _aggregation;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _aggregationElement;
+  final List<ElementDefinitionTypeAggregation>? aggregation;
   @override
   @JsonKey(name: '_aggregation')
-  List<Element?>? get aggregationElement {
-    final value = _aggregationElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? aggregationElement;
   @override
   final ElementDefinitionTypeVersioning? versioning;
   @override
@@ -12143,7 +11985,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionType &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.codeElement, codeElement) ||
                 other.codeElement == codeElement) &&
@@ -12155,9 +11997,9 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
             (identical(other.targetProfileElement, targetProfileElement) ||
                 other.targetProfileElement == targetProfileElement) &&
             const DeepCollectionEquality()
-                .equals(other._aggregation, _aggregation) &&
+                .equals(other.aggregation, aggregation) &&
             const DeepCollectionEquality()
-                .equals(other._aggregationElement, _aggregationElement) &&
+                .equals(other.aggregationElement, aggregationElement) &&
             (identical(other.versioning, versioning) ||
                 other.versioning == versioning) &&
             (identical(other.versioningElement, versioningElement) ||
@@ -12168,15 +12010,15 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       code,
       codeElement,
       profile,
       profileElement,
       targetProfile,
       targetProfileElement,
-      const DeepCollectionEquality().hash(_aggregation),
-      const DeepCollectionEquality().hash(_aggregationElement),
+      const DeepCollectionEquality().hash(aggregation),
+      const DeepCollectionEquality().hash(aggregationElement),
       versioning,
       versioningElement);
 
@@ -15602,7 +15444,7 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
   }) {
     return _then(_$_ElementDefinitionBinding(
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       strength: freezed == strength
@@ -15641,7 +15483,7 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
-      {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'extension') this.extension_,
       this.strength,
       @JsonKey(name: '_strength') this.strengthElement,
       this.description,
@@ -15649,22 +15491,14 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       this.valueSetUri,
       @JsonKey(name: '_valueSetUri') this.valueSetUriElement,
       this.valueSetReference})
-      : _extension_ = extension_,
-        super._();
+      : super._();
 
   factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$$_ElementDefinitionBindingFromJson(json);
 
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final ElementDefinitionBindingStrength? strength;
   @override
@@ -15694,7 +15528,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionBinding &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.strength, strength) ||
                 other.strength == strength) &&
             (identical(other.strengthElement, strengthElement) ||
@@ -15715,7 +15549,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(extension_),
       strength,
       strengthElement,
       description,
@@ -16688,7 +16522,7 @@ class __$$_DosageCopyWithImpl<$Res>
           : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       additionalInstruction: freezed == additionalInstruction
-          ? _value._additionalInstruction
+          ? _value.additionalInstruction
           : additionalInstruction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       patientInstruction: freezed == patientInstruction
@@ -16771,7 +16605,7 @@ class _$_Dosage extends _Dosage {
       @JsonKey(name: '_sequence') this.sequenceElement,
       this.text,
       @JsonKey(name: '_text') this.textElement,
-      final List<CodeableConcept>? additionalInstruction,
+      this.additionalInstruction,
       this.patientInstruction,
       @JsonKey(name: '_patientInstruction') this.patientInstructionElement,
       this.timing,
@@ -16789,8 +16623,7 @@ class _$_Dosage extends _Dosage {
       this.rateRatio,
       this.rateRange,
       this.rateSimpleQuantity})
-      : _additionalInstruction = additionalInstruction,
-        super._();
+      : super._();
 
   factory _$_Dosage.fromJson(Map<String, dynamic> json) =>
       _$$_DosageFromJson(json);
@@ -16805,15 +16638,8 @@ class _$_Dosage extends _Dosage {
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
-  final List<CodeableConcept>? _additionalInstruction;
   @override
-  List<CodeableConcept>? get additionalInstruction {
-    final value = _additionalInstruction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? additionalInstruction;
   @override
   final String? patientInstruction;
   @override
@@ -16869,7 +16695,7 @@ class _$_Dosage extends _Dosage {
             (identical(other.textElement, textElement) ||
                 other.textElement == textElement) &&
             const DeepCollectionEquality()
-                .equals(other._additionalInstruction, _additionalInstruction) &&
+                .equals(other.additionalInstruction, additionalInstruction) &&
             (identical(other.patientInstruction, patientInstruction) ||
                 other.patientInstruction == patientInstruction) &&
             (identical(other.patientInstructionElement,
@@ -16913,7 +16739,7 @@ class _$_Dosage extends _Dosage {
         sequenceElement,
         text,
         textElement,
-        const DeepCollectionEquality().hash(_additionalInstruction),
+        const DeepCollectionEquality().hash(additionalInstruction),
         patientInstruction,
         patientInstructionElement,
         timing,

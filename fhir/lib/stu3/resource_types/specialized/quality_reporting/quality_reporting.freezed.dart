@@ -1280,15 +1280,15 @@ class __$$_MeasureCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -1300,7 +1300,7 @@ class __$$_MeasureCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -1404,23 +1404,23 @@ class __$$_MeasureCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       contributor: freezed == contributor
-          ? _value._contributor
+          ? _value.contributor
           : contributor // ignore: cast_nullable_to_non_nullable
               as List<Contributor>?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       copyright: freezed == copyright
@@ -1432,11 +1432,11 @@ class __$$_MeasureCopyWithImpl<$Res>
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       library_: freezed == library_
-          ? _value._library_
+          ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       disclaimer: freezed == disclaimer
@@ -1456,7 +1456,7 @@ class __$$_MeasureCopyWithImpl<$Res>
           : compositeScoring // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       type: freezed == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       riskAdjustment: freezed == riskAdjustment
@@ -1502,11 +1502,11 @@ class __$$_MeasureCopyWithImpl<$Res>
           : improvementNotationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       definition: freezed == definition
-          ? _value._definition
+          ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       definitionElement: freezed == definitionElement
-          ? _value._definitionElement
+          ? _value.definitionElement
           : definitionElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       guidance: freezed == guidance
@@ -1526,11 +1526,11 @@ class __$$_MeasureCopyWithImpl<$Res>
           : setElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       group: freezed == group
-          ? _value._group
+          ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
               as List<MeasureGroup>?,
       supplementalData: freezed == supplementalData
-          ? _value._supplementalData
+          ? _value.supplementalData
           : supplementalData // ignore: cast_nullable_to_non_nullable
               as List<MeasureSupplementalData>?,
     ));
@@ -1552,14 +1552,14 @@ class _$_Measure extends _Measure {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -1597,23 +1597,23 @@ class _$_Measure extends _Measure {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final List<CodeableConcept>? topic,
-      final List<Contributor>? contributor,
-      final List<ContactDetail>? contact,
+      this.useContext,
+      this.jurisdiction,
+      this.topic,
+      this.contributor,
+      this.contact,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Reference>? library_,
+          this.library_,
       this.disclaimer,
       @JsonKey(name: '_disclaimer')
           this.disclaimerElement,
       this.scoring,
       this.compositeScoring,
-      final List<CodeableConcept>? type,
+      this.type,
       this.riskAdjustment,
       @JsonKey(name: '_riskAdjustment')
           this.riskAdjustmentElement,
@@ -1629,9 +1629,9 @@ class _$_Measure extends _Measure {
       this.improvementNotation,
       @JsonKey(name: '_improvementNotation')
           this.improvementNotationElement,
-      final List<String>? definition,
+      this.definition,
       @JsonKey(name: '_definition')
-          final List<Element?>? definitionElement,
+          this.definitionElement,
       this.guidance,
       @JsonKey(name: '_guidance')
           this.guidanceElement,
@@ -1639,25 +1639,9 @@ class _$_Measure extends _Measure {
           this.set_,
       @JsonKey(name: '_set')
           this.setElement,
-      final List<MeasureGroup>? group,
-      final List<MeasureSupplementalData>? supplementalData})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _contributor = contributor,
-        _contact = contact,
-        _relatedArtifact = relatedArtifact,
-        _library_ = library_,
-        _type = type,
-        _definition = definition,
-        _definitionElement = definitionElement,
-        _group = group,
-        _supplementalData = supplementalData,
-        super._();
+      this.group,
+      this.supplementalData})
+      : super._();
 
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureFromJson(json);
@@ -1681,48 +1665,20 @@ class _$_Measure extends _Measure {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1785,75 +1741,26 @@ class _$_Measure extends _Measure {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<UsageContext>? _useContext;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _topic;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Contributor>? _contributor;
+  final List<CodeableConcept>? topic;
   @override
-  List<Contributor>? get contributor {
-    final value = _contributor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _contact;
+  final List<Contributor>? contributor;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  final List<RelatedArtifact>? _relatedArtifact;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _library_;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference>? get library_ {
-    final value = _library_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? library_;
   @override
   final String? disclaimer;
   @override
@@ -1863,15 +1770,8 @@ class _$_Measure extends _Measure {
   final CodeableConcept? scoring;
   @override
   final CodeableConcept? compositeScoring;
-  final List<CodeableConcept>? _type;
   @override
-  List<CodeableConcept>? get type {
-    final value = _type;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? type;
   @override
   final String? riskAdjustment;
   @override
@@ -1897,25 +1797,11 @@ class _$_Measure extends _Measure {
   @override
   @JsonKey(name: '_improvementNotation')
   final Element? improvementNotationElement;
-  final List<String>? _definition;
   @override
-  List<String>? get definition {
-    final value = _definition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _definitionElement;
+  final List<String>? definition;
   @override
   @JsonKey(name: '_definition')
-  List<Element?>? get definitionElement {
-    final value = _definitionElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? definitionElement;
   @override
   final String? guidance;
   @override
@@ -1927,23 +1813,10 @@ class _$_Measure extends _Measure {
   @override
   @JsonKey(name: '_set')
   final Element? setElement;
-  final List<MeasureGroup>? _group;
   @override
-  List<MeasureGroup>? get group {
-    final value = _group;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<MeasureSupplementalData>? _supplementalData;
+  final List<MeasureGroup>? group;
   @override
-  List<MeasureSupplementalData>? get supplementalData {
-    final value = _supplementalData;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<MeasureSupplementalData>? supplementalData;
 
   @override
   String toString() {
@@ -1968,17 +1841,16 @@ class _$_Measure extends _Measure {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -2023,20 +1895,20 @@ class _$_Measure extends _Measure {
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
+                .equals(other.jurisdiction, jurisdiction) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
             const DeepCollectionEquality()
-                .equals(other._contributor, _contributor) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+                .equals(other.contributor, contributor) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality().equals(other._library_, _library_) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.library_, library_) &&
             (identical(other.disclaimer, disclaimer) ||
                 other.disclaimer == disclaimer) &&
             (identical(other.disclaimerElement, disclaimerElement) ||
@@ -2044,7 +1916,7 @@ class _$_Measure extends _Measure {
             (identical(other.scoring, scoring) || other.scoring == scoring) &&
             (identical(other.compositeScoring, compositeScoring) ||
                 other.compositeScoring == compositeScoring) &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.riskAdjustment, riskAdjustment) ||
                 other.riskAdjustment == riskAdjustment) &&
             (identical(other.riskAdjustmentElement, riskAdjustmentElement) ||
@@ -2057,18 +1929,19 @@ class _$_Measure extends _Measure {
                 other.rationale == rationale) &&
             (identical(other.rationaleElement, rationaleElement) ||
                 other.rationaleElement == rationaleElement) &&
-            (identical(other.clinicalRecommendationStatement, clinicalRecommendationStatement) || other.clinicalRecommendationStatement == clinicalRecommendationStatement) &&
+            (identical(other.clinicalRecommendationStatement, clinicalRecommendationStatement) ||
+                other.clinicalRecommendationStatement == clinicalRecommendationStatement) &&
             (identical(other.clinicalRecommendationStatementElement, clinicalRecommendationStatementElement) || other.clinicalRecommendationStatementElement == clinicalRecommendationStatementElement) &&
             (identical(other.improvementNotation, improvementNotation) || other.improvementNotation == improvementNotation) &&
             (identical(other.improvementNotationElement, improvementNotationElement) || other.improvementNotationElement == improvementNotationElement) &&
-            const DeepCollectionEquality().equals(other._definition, _definition) &&
-            const DeepCollectionEquality().equals(other._definitionElement, _definitionElement) &&
+            const DeepCollectionEquality().equals(other.definition, definition) &&
+            const DeepCollectionEquality().equals(other.definitionElement, definitionElement) &&
             (identical(other.guidance, guidance) || other.guidance == guidance) &&
             (identical(other.guidanceElement, guidanceElement) || other.guidanceElement == guidanceElement) &&
             (identical(other.set_, set_) || other.set_ == set_) &&
             (identical(other.setElement, setElement) || other.setElement == setElement) &&
-            const DeepCollectionEquality().equals(other._group, _group) &&
-            const DeepCollectionEquality().equals(other._supplementalData, _supplementalData));
+            const DeepCollectionEquality().equals(other.group, group) &&
+            const DeepCollectionEquality().equals(other.supplementalData, supplementalData));
   }
 
   @JsonKey(ignore: true)
@@ -2083,12 +1956,12 @@ class _$_Measure extends _Measure {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -2114,20 +1987,20 @@ class _$_Measure extends _Measure {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_contributor),
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(contributor),
+        const DeepCollectionEquality().hash(contact),
         copyright,
         copyrightElement,
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(_library_),
+        const DeepCollectionEquality().hash(relatedArtifact),
+        const DeepCollectionEquality().hash(library_),
         disclaimer,
         disclaimerElement,
         scoring,
         compositeScoring,
-        const DeepCollectionEquality().hash(_type),
+        const DeepCollectionEquality().hash(type),
         riskAdjustment,
         riskAdjustmentElement,
         rateAggregation,
@@ -2138,14 +2011,14 @@ class _$_Measure extends _Measure {
         clinicalRecommendationStatementElement,
         improvementNotation,
         improvementNotationElement,
-        const DeepCollectionEquality().hash(_definition),
-        const DeepCollectionEquality().hash(_definitionElement),
+        const DeepCollectionEquality().hash(definition),
+        const DeepCollectionEquality().hash(definitionElement),
         guidance,
         guidanceElement,
         set_,
         setElement,
-        const DeepCollectionEquality().hash(_group),
-        const DeepCollectionEquality().hash(_supplementalData)
+        const DeepCollectionEquality().hash(group),
+        const DeepCollectionEquality().hash(supplementalData)
       ]);
 
   @JsonKey(ignore: true)
@@ -2639,11 +2512,11 @@ class __$$_MeasureGroupCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       population: freezed == population
-          ? _value._population
+          ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasurePopulation>?,
       stratifier: freezed == stratifier
-          ? _value._stratifier
+          ? _value.stratifier
           : stratifier // ignore: cast_nullable_to_non_nullable
               as List<MeasureStratifier>?,
     ));
@@ -2659,11 +2532,9 @@ class _$_MeasureGroup extends _MeasureGroup {
       @JsonKey(name: '_name') this.nameElement,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
-      final List<MeasurePopulation>? population,
-      final List<MeasureStratifier>? stratifier})
-      : _population = population,
-        _stratifier = stratifier,
-        super._();
+      this.population,
+      this.stratifier})
+      : super._();
 
   factory _$_MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureGroupFromJson(json);
@@ -2680,23 +2551,10 @@ class _$_MeasureGroup extends _MeasureGroup {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<MeasurePopulation>? _population;
   @override
-  List<MeasurePopulation>? get population {
-    final value = _population;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<MeasureStratifier>? _stratifier;
+  final List<MeasurePopulation>? population;
   @override
-  List<MeasureStratifier>? get stratifier {
-    final value = _stratifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<MeasureStratifier>? stratifier;
 
   @override
   String toString() {
@@ -2718,9 +2576,9 @@ class _$_MeasureGroup extends _MeasureGroup {
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
             const DeepCollectionEquality()
-                .equals(other._population, _population) &&
+                .equals(other.population, population) &&
             const DeepCollectionEquality()
-                .equals(other._stratifier, _stratifier));
+                .equals(other.stratifier, stratifier));
   }
 
   @JsonKey(ignore: true)
@@ -2732,8 +2590,8 @@ class _$_MeasureGroup extends _MeasureGroup {
       nameElement,
       description,
       descriptionElement,
-      const DeepCollectionEquality().hash(_population),
-      const DeepCollectionEquality().hash(_stratifier));
+      const DeepCollectionEquality().hash(population),
+      const DeepCollectionEquality().hash(stratifier));
 
   @JsonKey(ignore: true)
   @override
@@ -3620,7 +3478,7 @@ class __$$_MeasureSupplementalDataCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       usage: freezed == usage
-          ? _value._usage
+          ? _value.usage
           : usage // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       criteria: freezed == criteria
@@ -3648,28 +3506,20 @@ class __$$_MeasureSupplementalDataCopyWithImpl<$Res>
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   _$_MeasureSupplementalData(
       {this.identifier,
-      final List<CodeableConcept>? usage,
+      this.usage,
       this.criteria,
       @JsonKey(name: '_criteria') this.criteriaElement,
       this.path,
       @JsonKey(name: '_path') this.pathElement})
-      : _usage = usage,
-        super._();
+      : super._();
 
   factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureSupplementalDataFromJson(json);
 
   @override
   final Identifier? identifier;
-  final List<CodeableConcept>? _usage;
   @override
-  List<CodeableConcept>? get usage {
-    final value = _usage;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? usage;
   @override
   final String? criteria;
   @override
@@ -3693,7 +3543,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
             other is _$_MeasureSupplementalData &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
-            const DeepCollectionEquality().equals(other._usage, _usage) &&
+            const DeepCollectionEquality().equals(other.usage, usage) &&
             (identical(other.criteria, criteria) ||
                 other.criteria == criteria) &&
             (identical(other.criteriaElement, criteriaElement) ||
@@ -3708,7 +3558,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   int get hashCode => Object.hash(
       runtimeType,
       identifier,
-      const DeepCollectionEquality().hash(_usage),
+      const DeepCollectionEquality().hash(usage),
       criteria,
       criteriaElement,
       path,
@@ -4289,15 +4139,15 @@ class __$$_MeasureReportCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -4345,7 +4195,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Period,
       group: freezed == group
-          ? _value._group
+          ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportGroup>?,
       evaluatedResources: freezed == evaluatedResources
@@ -4371,10 +4221,10 @@ class _$_MeasureReport extends _MeasureReport {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       this.status,
       @JsonKey(name: '_status')
@@ -4389,13 +4239,9 @@ class _$_MeasureReport extends _MeasureReport {
           this.dateElement,
       this.reportingOrganization,
       required this.period,
-      final List<MeasureReportGroup>? group,
+      this.group,
       this.evaluatedResources})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _group = group,
-        super._();
+      : super._();
 
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureReportFromJson(json);
@@ -4419,34 +4265,13 @@ class _$_MeasureReport extends _MeasureReport {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -4472,15 +4297,8 @@ class _$_MeasureReport extends _MeasureReport {
   final Reference? reportingOrganization;
   @override
   final Period period;
-  final List<MeasureReportGroup>? _group;
   @override
-  List<MeasureReportGroup>? get group {
-    final value = _group;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<MeasureReportGroup>? group;
   @override
   final Reference? evaluatedResources;
 
@@ -4507,12 +4325,11 @@ class _$_MeasureReport extends _MeasureReport {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.status, status) || other.status == status) &&
@@ -4529,7 +4346,7 @@ class _$_MeasureReport extends _MeasureReport {
             (identical(other.reportingOrganization, reportingOrganization) ||
                 other.reportingOrganization == reportingOrganization) &&
             (identical(other.period, period) || other.period == period) &&
-            const DeepCollectionEquality().equals(other._group, _group) &&
+            const DeepCollectionEquality().equals(other.group, group) &&
             (identical(other.evaluatedResources, evaluatedResources) ||
                 other.evaluatedResources == evaluatedResources));
   }
@@ -4546,9 +4363,9 @@ class _$_MeasureReport extends _MeasureReport {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         identifier,
         status,
         statusElement,
@@ -4560,7 +4377,7 @@ class _$_MeasureReport extends _MeasureReport {
         dateElement,
         reportingOrganization,
         period,
-        const DeepCollectionEquality().hash(_group),
+        const DeepCollectionEquality().hash(group),
         evaluatedResources
       ]);
 
@@ -4823,7 +4640,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier,
       population: freezed == population
-          ? _value._population
+          ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportPopulation>?,
       measureScore: freezed == measureScore
@@ -4835,7 +4652,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
           : measureScoreElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       stratifier: freezed == stratifier
-          ? _value._stratifier
+          ? _value.stratifier
           : stratifier // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportStratifier>?,
     ));
@@ -4847,41 +4664,26 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
 class _$_MeasureReportGroup extends _MeasureReportGroup {
   _$_MeasureReportGroup(
       {required this.identifier,
-      final List<MeasureReportPopulation>? population,
+      this.population,
       this.measureScore,
       @JsonKey(name: '_measureScore') this.measureScoreElement,
-      final List<MeasureReportStratifier>? stratifier})
-      : _population = population,
-        _stratifier = stratifier,
-        super._();
+      this.stratifier})
+      : super._();
 
   factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureReportGroupFromJson(json);
 
   @override
   final Identifier identifier;
-  final List<MeasureReportPopulation>? _population;
   @override
-  List<MeasureReportPopulation>? get population {
-    final value = _population;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<MeasureReportPopulation>? population;
   @override
   final Decimal? measureScore;
   @override
   @JsonKey(name: '_measureScore')
   final Element? measureScoreElement;
-  final List<MeasureReportStratifier>? _stratifier;
   @override
-  List<MeasureReportStratifier>? get stratifier {
-    final value = _stratifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<MeasureReportStratifier>? stratifier;
 
   @override
   String toString() {
@@ -4896,13 +4698,13 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             const DeepCollectionEquality()
-                .equals(other._population, _population) &&
+                .equals(other.population, population) &&
             (identical(other.measureScore, measureScore) ||
                 other.measureScore == measureScore) &&
             (identical(other.measureScoreElement, measureScoreElement) ||
                 other.measureScoreElement == measureScoreElement) &&
             const DeepCollectionEquality()
-                .equals(other._stratifier, _stratifier));
+                .equals(other.stratifier, stratifier));
   }
 
   @JsonKey(ignore: true)
@@ -4910,10 +4712,10 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   int get hashCode => Object.hash(
       runtimeType,
       identifier,
-      const DeepCollectionEquality().hash(_population),
+      const DeepCollectionEquality().hash(population),
       measureScore,
       measureScoreElement,
-      const DeepCollectionEquality().hash(_stratifier));
+      const DeepCollectionEquality().hash(stratifier));
 
   @JsonKey(ignore: true)
   @override
@@ -5359,7 +5161,7 @@ class __$$_MeasureReportStratifierCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       stratum: freezed == stratum
-          ? _value._stratum
+          ? _value.stratum
           : stratum // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportStratum>?,
     ));
@@ -5369,24 +5171,15 @@ class __$$_MeasureReportStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
-  _$_MeasureReportStratifier(
-      {this.identifier, final List<MeasureReportStratum>? stratum})
-      : _stratum = stratum,
-        super._();
+  _$_MeasureReportStratifier({this.identifier, this.stratum}) : super._();
 
   factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureReportStratifierFromJson(json);
 
   @override
   final Identifier? identifier;
-  final List<MeasureReportStratum>? _stratum;
   @override
-  List<MeasureReportStratum>? get stratum {
-    final value = _stratum;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<MeasureReportStratum>? stratum;
 
   @override
   String toString() {
@@ -5400,13 +5193,13 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
             other is _$_MeasureReportStratifier &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
-            const DeepCollectionEquality().equals(other._stratum, _stratum));
+            const DeepCollectionEquality().equals(other.stratum, stratum));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, identifier, const DeepCollectionEquality().hash(_stratum));
+      runtimeType, identifier, const DeepCollectionEquality().hash(stratum));
 
   @JsonKey(ignore: true)
   @override
@@ -5598,7 +5391,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
           : valueElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       population: freezed == population
-          ? _value._population
+          ? _value.population
           : population // ignore: cast_nullable_to_non_nullable
               as List<MeasureReportPopulation1>?,
       measureScore: freezed == measureScore
@@ -5619,11 +5412,10 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   _$_MeasureReportStratum(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
-      final List<MeasureReportPopulation1>? population,
+      this.population,
       this.measureScore,
       @JsonKey(name: '_measureScore') this.measureScoreElement})
-      : _population = population,
-        super._();
+      : super._();
 
   factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$$_MeasureReportStratumFromJson(json);
@@ -5633,15 +5425,8 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
-  final List<MeasureReportPopulation1>? _population;
   @override
-  List<MeasureReportPopulation1>? get population {
-    final value = _population;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<MeasureReportPopulation1>? population;
   @override
   final Decimal? measureScore;
   @override
@@ -5662,7 +5447,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
             (identical(other.valueElement, valueElement) ||
                 other.valueElement == valueElement) &&
             const DeepCollectionEquality()
-                .equals(other._population, _population) &&
+                .equals(other.population, population) &&
             (identical(other.measureScore, measureScore) ||
                 other.measureScore == measureScore) &&
             (identical(other.measureScoreElement, measureScoreElement) ||
@@ -5675,7 +5460,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
       runtimeType,
       value,
       valueElement,
-      const DeepCollectionEquality().hash(_population),
+      const DeepCollectionEquality().hash(population),
       measureScore,
       measureScoreElement);
 

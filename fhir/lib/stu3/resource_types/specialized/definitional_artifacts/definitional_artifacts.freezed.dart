@@ -1218,15 +1218,15 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -1238,7 +1238,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -1342,23 +1342,23 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       contributor: freezed == contributor
-          ? _value._contributor
+          ? _value.contributor
           : contributor // ignore: cast_nullable_to_non_nullable
               as List<Contributor>?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       copyright: freezed == copyright
@@ -1370,11 +1370,11 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       library_: freezed == library_
-          ? _value._library_
+          ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       kind: freezed == kind
@@ -1414,7 +1414,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : location // ignore: cast_nullable_to_non_nullable
               as Reference?,
       participant: freezed == participant
-          ? _value._participant
+          ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
               as List<ActivityDefinitionParticipant>?,
       productReference: freezed == productReference
@@ -1430,11 +1430,11 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : quantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
       dosage: freezed == dosage
-          ? _value._dosage
+          ? _value.dosage
           : dosage // ignore: cast_nullable_to_non_nullable
               as List<Dosage>?,
       bodySite: freezed == bodySite
-          ? _value._bodySite
+          ? _value.bodySite
           : bodySite // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       transform: freezed == transform
@@ -1442,7 +1442,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           : transform // ignore: cast_nullable_to_non_nullable
               as Reference?,
       dynamicValue: freezed == dynamicValue
-          ? _value._dynamicValue
+          ? _value.dynamicValue
           : dynamicValue // ignore: cast_nullable_to_non_nullable
               as List<ActivityDefinitionDynamicValue>?,
     ));
@@ -1464,14 +1464,14 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -1509,17 +1509,17 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final List<CodeableConcept>? topic,
-      final List<Contributor>? contributor,
-      final List<ContactDetail>? contact,
+      this.useContext,
+      this.jurisdiction,
+      this.topic,
+      this.contributor,
+      this.contact,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Reference>? library_,
+          this.library_,
       this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
@@ -1531,30 +1531,15 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.timingPeriod,
       this.timingRange,
       this.location,
-      final List<ActivityDefinitionParticipant>? participant,
+      this.participant,
       this.productReference,
       this.productCodeableConcept,
       this.quantity,
-      final List<Dosage>? dosage,
-      final List<CodeableConcept>? bodySite,
+      this.dosage,
+      this.bodySite,
       this.transform,
-      final List<ActivityDefinitionDynamicValue>? dynamicValue})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _contributor = contributor,
-        _contact = contact,
-        _relatedArtifact = relatedArtifact,
-        _library_ = library_,
-        _participant = participant,
-        _dosage = dosage,
-        _bodySite = bodySite,
-        _dynamicValue = dynamicValue,
-        super._();
+      this.dynamicValue})
+      : super._();
 
   factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ActivityDefinitionFromJson(json);
@@ -1578,48 +1563,20 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1682,75 +1639,26 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<UsageContext>? _useContext;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _topic;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Contributor>? _contributor;
+  final List<CodeableConcept>? topic;
   @override
-  List<Contributor>? get contributor {
-    final value = _contributor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _contact;
+  final List<Contributor>? contributor;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  final List<RelatedArtifact>? _relatedArtifact;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _library_;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference>? get library_ {
-    final value = _library_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? library_;
   @override
   final String? kind;
   @override
@@ -1771,49 +1679,22 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   final Range? timingRange;
   @override
   final Reference? location;
-  final List<ActivityDefinitionParticipant>? _participant;
   @override
-  List<ActivityDefinitionParticipant>? get participant {
-    final value = _participant;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ActivityDefinitionParticipant>? participant;
   @override
   final Reference? productReference;
   @override
   final CodeableConcept? productCodeableConcept;
   @override
   final Quantity? quantity;
-  final List<Dosage>? _dosage;
   @override
-  List<Dosage>? get dosage {
-    final value = _dosage;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _bodySite;
+  final List<Dosage>? dosage;
   @override
-  List<CodeableConcept>? get bodySite {
-    final value = _bodySite;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? bodySite;
   @override
   final Reference? transform;
-  final List<ActivityDefinitionDynamicValue>? _dynamicValue;
   @override
-  List<ActivityDefinitionDynamicValue>? get dynamicValue {
-    final value = _dynamicValue;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ActivityDefinitionDynamicValue>? dynamicValue;
 
   @override
   String toString() {
@@ -1838,17 +1719,16 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -1893,20 +1773,20 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
+                .equals(other.jurisdiction, jurisdiction) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
             const DeepCollectionEquality()
-                .equals(other._contributor, _contributor) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+                .equals(other.contributor, contributor) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality().equals(other._library_, _library_) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.library_, library_) &&
             (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.kindElement, kindElement) ||
                 other.kindElement == kindElement) &&
@@ -1924,15 +1804,16 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.location, location) ||
                 other.location == location) &&
             const DeepCollectionEquality()
-                .equals(other._participant, _participant) &&
+                .equals(other.participant, participant) &&
             (identical(other.productReference, productReference) ||
                 other.productReference == productReference) &&
-            (identical(other.productCodeableConcept, productCodeableConcept) || other.productCodeableConcept == productCodeableConcept) &&
+            (identical(other.productCodeableConcept, productCodeableConcept) ||
+                other.productCodeableConcept == productCodeableConcept) &&
             (identical(other.quantity, quantity) || other.quantity == quantity) &&
-            const DeepCollectionEquality().equals(other._dosage, _dosage) &&
-            const DeepCollectionEquality().equals(other._bodySite, _bodySite) &&
+            const DeepCollectionEquality().equals(other.dosage, dosage) &&
+            const DeepCollectionEquality().equals(other.bodySite, bodySite) &&
             (identical(other.transform, transform) || other.transform == transform) &&
-            const DeepCollectionEquality().equals(other._dynamicValue, _dynamicValue));
+            const DeepCollectionEquality().equals(other.dynamicValue, dynamicValue));
   }
 
   @JsonKey(ignore: true)
@@ -1947,12 +1828,12 @@ class _$_ActivityDefinition extends _ActivityDefinition {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -1978,15 +1859,15 @@ class _$_ActivityDefinition extends _ActivityDefinition {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_contributor),
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(contributor),
+        const DeepCollectionEquality().hash(contact),
         copyright,
         copyrightElement,
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(_library_),
+        const DeepCollectionEquality().hash(relatedArtifact),
+        const DeepCollectionEquality().hash(library_),
         kind,
         kindElement,
         code,
@@ -1996,14 +1877,14 @@ class _$_ActivityDefinition extends _ActivityDefinition {
         timingPeriod,
         timingRange,
         location,
-        const DeepCollectionEquality().hash(_participant),
+        const DeepCollectionEquality().hash(participant),
         productReference,
         productCodeableConcept,
         quantity,
-        const DeepCollectionEquality().hash(_dosage),
-        const DeepCollectionEquality().hash(_bodySite),
+        const DeepCollectionEquality().hash(dosage),
+        const DeepCollectionEquality().hash(bodySite),
         transform,
-        const DeepCollectionEquality().hash(_dynamicValue)
+        const DeepCollectionEquality().hash(dynamicValue)
       ]);
 
   @JsonKey(ignore: true)
@@ -3800,15 +3681,15 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -3820,7 +3701,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -3928,23 +3809,23 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       contributor: freezed == contributor
-          ? _value._contributor
+          ? _value.contributor
           : contributor // ignore: cast_nullable_to_non_nullable
               as List<Contributor>?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       copyright: freezed == copyright
@@ -3956,19 +3837,19 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       library_: freezed == library_
-          ? _value._library_
+          ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       goal: freezed == goal
-          ? _value._goal
+          ? _value.goal
           : goal // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionGoal>?,
       action: freezed == action
-          ? _value._action
+          ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionAction>?,
     ));
@@ -3990,14 +3871,14 @@ class _$_PlanDefinition extends _PlanDefinition {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -4036,33 +3917,20 @@ class _$_PlanDefinition extends _PlanDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final List<CodeableConcept>? topic,
-      final List<Contributor>? contributor,
-      final List<ContactDetail>? contact,
+      this.useContext,
+      this.jurisdiction,
+      this.topic,
+      this.contributor,
+      this.contact,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Reference>? library_,
-      final List<PlanDefinitionGoal>? goal,
-      final List<PlanDefinitionAction>? action})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _contributor = contributor,
-        _contact = contact,
-        _relatedArtifact = relatedArtifact,
-        _library_ = library_,
-        _goal = goal,
-        _action = action,
-        super._();
+          this.library_,
+      this.goal,
+      this.action})
+      : super._();
 
   factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionFromJson(json);
@@ -4086,48 +3954,20 @@ class _$_PlanDefinition extends _PlanDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -4192,92 +4032,30 @@ class _$_PlanDefinition extends _PlanDefinition {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<UsageContext>? _useContext;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _topic;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Contributor>? _contributor;
+  final List<CodeableConcept>? topic;
   @override
-  List<Contributor>? get contributor {
-    final value = _contributor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _contact;
+  final List<Contributor>? contributor;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  final List<RelatedArtifact>? _relatedArtifact;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _library_;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Reference>? get library_ {
-    final value = _library_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PlanDefinitionGoal>? _goal;
+  final List<Reference>? library_;
   @override
-  List<PlanDefinitionGoal>? get goal {
-    final value = _goal;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PlanDefinitionAction>? _action;
+  final List<PlanDefinitionGoal>? goal;
   @override
-  List<PlanDefinitionAction>? get action {
-    final value = _action;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<PlanDefinitionAction>? action;
 
   @override
   String toString() {
@@ -4302,17 +4080,16 @@ class _$_PlanDefinition extends _PlanDefinition {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -4358,22 +4135,22 @@ class _$_PlanDefinition extends _PlanDefinition {
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
+                .equals(other.jurisdiction, jurisdiction) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
             const DeepCollectionEquality()
-                .equals(other._contributor, _contributor) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+                .equals(other.contributor, contributor) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality().equals(other._library_, _library_) &&
-            const DeepCollectionEquality().equals(other._goal, _goal) &&
-            const DeepCollectionEquality().equals(other._action, _action));
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.library_, library_) &&
+            const DeepCollectionEquality().equals(other.goal, goal) &&
+            const DeepCollectionEquality().equals(other.action, action));
   }
 
   @JsonKey(ignore: true)
@@ -4388,12 +4165,12 @@ class _$_PlanDefinition extends _PlanDefinition {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -4420,17 +4197,17 @@ class _$_PlanDefinition extends _PlanDefinition {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_contributor),
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(contributor),
+        const DeepCollectionEquality().hash(contact),
         copyright,
         copyrightElement,
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(_library_),
-        const DeepCollectionEquality().hash(_goal),
-        const DeepCollectionEquality().hash(_action)
+        const DeepCollectionEquality().hash(relatedArtifact),
+        const DeepCollectionEquality().hash(library_),
+        const DeepCollectionEquality().hash(goal),
+        const DeepCollectionEquality().hash(action)
       ]);
 
   @JsonKey(ignore: true)
@@ -4855,15 +4632,15 @@ class __$$_PlanDefinitionGoalCopyWithImpl<$Res>
           : start // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       addresses: freezed == addresses
-          ? _value._addresses
+          ? _value.addresses
           : addresses // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       documentation: freezed == documentation
-          ? _value._documentation
+          ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       target: freezed == target
-          ? _value._target
+          ? _value.target
           : target // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionTarget>?,
     ));
@@ -4878,13 +4655,10 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
       required this.description,
       this.priority,
       this.start,
-      final List<CodeableConcept>? addresses,
-      final List<RelatedArtifact>? documentation,
-      final List<PlanDefinitionTarget>? target})
-      : _addresses = addresses,
-        _documentation = documentation,
-        _target = target,
-        super._();
+      this.addresses,
+      this.documentation,
+      this.target})
+      : super._();
 
   factory _$_PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionGoalFromJson(json);
@@ -4897,32 +4671,12 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
   final CodeableConcept? priority;
   @override
   final CodeableConcept? start;
-  final List<CodeableConcept>? _addresses;
   @override
-  List<CodeableConcept>? get addresses {
-    final value = _addresses;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _documentation;
+  final List<CodeableConcept>? addresses;
   @override
-  List<RelatedArtifact>? get documentation {
-    final value = _documentation;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PlanDefinitionTarget>? _target;
+  final List<RelatedArtifact>? documentation;
   @override
-  List<PlanDefinitionTarget>? get target {
-    final value = _target;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<PlanDefinitionTarget>? target;
 
   @override
   String toString() {
@@ -4941,11 +4695,10 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
             (identical(other.priority, priority) ||
                 other.priority == priority) &&
             (identical(other.start, start) || other.start == start) &&
+            const DeepCollectionEquality().equals(other.addresses, addresses) &&
             const DeepCollectionEquality()
-                .equals(other._addresses, _addresses) &&
-            const DeepCollectionEquality()
-                .equals(other._documentation, _documentation) &&
-            const DeepCollectionEquality().equals(other._target, _target));
+                .equals(other.documentation, documentation) &&
+            const DeepCollectionEquality().equals(other.target, target));
   }
 
   @JsonKey(ignore: true)
@@ -4956,9 +4709,9 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
       description,
       priority,
       start,
-      const DeepCollectionEquality().hash(_addresses),
-      const DeepCollectionEquality().hash(_documentation),
-      const DeepCollectionEquality().hash(_target));
+      const DeepCollectionEquality().hash(addresses),
+      const DeepCollectionEquality().hash(documentation),
+      const DeepCollectionEquality().hash(target));
 
   @JsonKey(ignore: true)
   @override
@@ -6076,43 +5829,43 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
           : textEquivalentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       code: freezed == code
-          ? _value._code
+          ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reason: freezed == reason
-          ? _value._reason
+          ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       documentation: freezed == documentation
-          ? _value._documentation
+          ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       goalId: freezed == goalId
-          ? _value._goalId
+          ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
               as List<Id>?,
       goalIdElement: freezed == goalIdElement
-          ? _value._goalIdElement
+          ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       triggerDefinition: freezed == triggerDefinition
-          ? _value._triggerDefinition
+          ? _value.triggerDefinition
           : triggerDefinition // ignore: cast_nullable_to_non_nullable
               as List<TriggerDefinition>?,
       condition: freezed == condition
-          ? _value._condition
+          ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionCondition>?,
       input: freezed == input
-          ? _value._input
+          ? _value.input
           : input // ignore: cast_nullable_to_non_nullable
               as List<DataRequirement>?,
       output: freezed == output
-          ? _value._output
+          ? _value.output
           : output // ignore: cast_nullable_to_non_nullable
               as List<DataRequirement>?,
       relatedAction: freezed == relatedAction
-          ? _value._relatedAction
+          ? _value.relatedAction
           : relatedAction // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionRelatedAction>?,
       timingDateTime: freezed == timingDateTime
@@ -6140,7 +5893,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
           : timingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
       participant: freezed == participant
-          ? _value._participant
+          ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionParticipant>?,
       type: freezed == type
@@ -6196,11 +5949,11 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
           : transform // ignore: cast_nullable_to_non_nullable
               as Reference?,
       dynamicValue: freezed == dynamicValue
-          ? _value._dynamicValue
+          ? _value.dynamicValue
           : dynamicValue // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionDynamicValue>?,
       action: freezed == action
-          ? _value._action
+          ? _value.action
           : action // ignore: cast_nullable_to_non_nullable
               as List<PlanDefinitionAction>?,
     ));
@@ -6219,23 +5972,23 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       @JsonKey(name: '_description') this.descriptionElement,
       this.textEquivalent,
       @JsonKey(name: '_textEquivalent') this.textEquivalentElement,
-      final List<CodeableConcept>? code,
-      final List<CodeableConcept>? reason,
-      final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
-      @JsonKey(name: '_goalId') final List<Element?>? goalIdElement,
-      final List<TriggerDefinition>? triggerDefinition,
-      final List<PlanDefinitionCondition>? condition,
-      final List<DataRequirement>? input,
-      final List<DataRequirement>? output,
-      final List<PlanDefinitionRelatedAction>? relatedAction,
+      this.code,
+      this.reason,
+      this.documentation,
+      this.goalId,
+      @JsonKey(name: '_goalId') this.goalIdElement,
+      this.triggerDefinition,
+      this.condition,
+      this.input,
+      this.output,
+      this.relatedAction,
       this.timingDateTime,
       @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.timingPeriod,
       this.timingDuration,
       this.timingRange,
       this.timingTiming,
-      final List<PlanDefinitionParticipant>? participant,
+      this.participant,
       this.type,
       this.groupingBehavior,
       @JsonKey(name: '_groupingBehavior') this.groupingBehaviorElement,
@@ -6249,22 +6002,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       @JsonKey(name: '_cardinalityBehavior') this.cardinalityBehaviorElement,
       this.definition,
       this.transform,
-      final List<PlanDefinitionDynamicValue>? dynamicValue,
-      final List<PlanDefinitionAction>? action})
-      : _code = code,
-        _reason = reason,
-        _documentation = documentation,
-        _goalId = goalId,
-        _goalIdElement = goalIdElement,
-        _triggerDefinition = triggerDefinition,
-        _condition = condition,
-        _input = input,
-        _output = output,
-        _relatedAction = relatedAction,
-        _participant = participant,
-        _dynamicValue = dynamicValue,
-        _action = action,
-        super._();
+      this.dynamicValue,
+      this.action})
+      : super._();
 
   factory _$_PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionActionFromJson(json);
@@ -6289,97 +6029,27 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   @JsonKey(name: '_textEquivalent')
   final Element? textEquivalentElement;
-  final List<CodeableConcept>? _code;
   @override
-  List<CodeableConcept>? get code {
-    final value = _code;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _reason;
+  final List<CodeableConcept>? code;
   @override
-  List<CodeableConcept>? get reason {
-    final value = _reason;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _documentation;
+  final List<CodeableConcept>? reason;
   @override
-  List<RelatedArtifact>? get documentation {
-    final value = _documentation;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Id>? _goalId;
+  final List<RelatedArtifact>? documentation;
   @override
-  List<Id>? get goalId {
-    final value = _goalId;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _goalIdElement;
+  final List<Id>? goalId;
   @override
   @JsonKey(name: '_goalId')
-  List<Element?>? get goalIdElement {
-    final value = _goalIdElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TriggerDefinition>? _triggerDefinition;
+  final List<Element?>? goalIdElement;
   @override
-  List<TriggerDefinition>? get triggerDefinition {
-    final value = _triggerDefinition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PlanDefinitionCondition>? _condition;
+  final List<TriggerDefinition>? triggerDefinition;
   @override
-  List<PlanDefinitionCondition>? get condition {
-    final value = _condition;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirement>? _input;
+  final List<PlanDefinitionCondition>? condition;
   @override
-  List<DataRequirement>? get input {
-    final value = _input;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirement>? _output;
+  final List<DataRequirement>? input;
   @override
-  List<DataRequirement>? get output {
-    final value = _output;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PlanDefinitionRelatedAction>? _relatedAction;
+  final List<DataRequirement>? output;
   @override
-  List<PlanDefinitionRelatedAction>? get relatedAction {
-    final value = _relatedAction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<PlanDefinitionRelatedAction>? relatedAction;
   @override
   final FhirDateTime? timingDateTime;
   @override
@@ -6393,15 +6063,8 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final Range? timingRange;
   @override
   final Timing? timingTiming;
-  final List<PlanDefinitionParticipant>? _participant;
   @override
-  List<PlanDefinitionParticipant>? get participant {
-    final value = _participant;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<PlanDefinitionParticipant>? participant;
   @override
   final Coding? type;
   @override
@@ -6433,23 +6096,10 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   final Reference? definition;
   @override
   final Reference? transform;
-  final List<PlanDefinitionDynamicValue>? _dynamicValue;
   @override
-  List<PlanDefinitionDynamicValue>? get dynamicValue {
-    final value = _dynamicValue;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<PlanDefinitionAction>? _action;
+  final List<PlanDefinitionDynamicValue>? dynamicValue;
   @override
-  List<PlanDefinitionAction>? get action {
-    final value = _action;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<PlanDefinitionAction>? action;
 
   @override
   String toString() {
@@ -6475,21 +6125,20 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
                 other.textEquivalent == textEquivalent) &&
             (identical(other.textEquivalentElement, textEquivalentElement) ||
                 other.textEquivalentElement == textEquivalentElement) &&
-            const DeepCollectionEquality().equals(other._code, _code) &&
-            const DeepCollectionEquality().equals(other._reason, _reason) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
             const DeepCollectionEquality()
-                .equals(other._documentation, _documentation) &&
-            const DeepCollectionEquality().equals(other._goalId, _goalId) &&
+                .equals(other.documentation, documentation) &&
+            const DeepCollectionEquality().equals(other.goalId, goalId) &&
             const DeepCollectionEquality()
-                .equals(other._goalIdElement, _goalIdElement) &&
+                .equals(other.goalIdElement, goalIdElement) &&
             const DeepCollectionEquality()
-                .equals(other._triggerDefinition, _triggerDefinition) &&
+                .equals(other.triggerDefinition, triggerDefinition) &&
+            const DeepCollectionEquality().equals(other.condition, condition) &&
+            const DeepCollectionEquality().equals(other.input, input) &&
+            const DeepCollectionEquality().equals(other.output, output) &&
             const DeepCollectionEquality()
-                .equals(other._condition, _condition) &&
-            const DeepCollectionEquality().equals(other._input, _input) &&
-            const DeepCollectionEquality().equals(other._output, _output) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedAction, _relatedAction) &&
+                .equals(other.relatedAction, relatedAction) &&
             (identical(other.timingDateTime, timingDateTime) ||
                 other.timingDateTime == timingDateTime) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) ||
@@ -6503,7 +6152,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
             (identical(other.timingTiming, timingTiming) ||
                 other.timingTiming == timingTiming) &&
             const DeepCollectionEquality()
-                .equals(other._participant, _participant) &&
+                .equals(other.participant, participant) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.groupingBehavior, groupingBehavior) ||
                 other.groupingBehavior == groupingBehavior) &&
@@ -6511,7 +6160,8 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
                 other.groupingBehaviorElement == groupingBehaviorElement) &&
             (identical(other.selectionBehavior, selectionBehavior) ||
                 other.selectionBehavior == selectionBehavior) &&
-            (identical(other.selectionBehaviorElement, selectionBehaviorElement) ||
+            (identical(
+                    other.selectionBehaviorElement, selectionBehaviorElement) ||
                 other.selectionBehaviorElement == selectionBehaviorElement) &&
             (identical(other.requiredBehavior, requiredBehavior) ||
                 other.requiredBehavior == requiredBehavior) &&
@@ -6532,8 +6182,8 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
             (identical(other.transform, transform) ||
                 other.transform == transform) &&
             const DeepCollectionEquality()
-                .equals(other._dynamicValue, _dynamicValue) &&
-            const DeepCollectionEquality().equals(other._action, _action));
+                .equals(other.dynamicValue, dynamicValue) &&
+            const DeepCollectionEquality().equals(other.action, action));
   }
 
   @JsonKey(ignore: true)
@@ -6548,23 +6198,23 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
         descriptionElement,
         textEquivalent,
         textEquivalentElement,
-        const DeepCollectionEquality().hash(_code),
-        const DeepCollectionEquality().hash(_reason),
-        const DeepCollectionEquality().hash(_documentation),
-        const DeepCollectionEquality().hash(_goalId),
-        const DeepCollectionEquality().hash(_goalIdElement),
-        const DeepCollectionEquality().hash(_triggerDefinition),
-        const DeepCollectionEquality().hash(_condition),
-        const DeepCollectionEquality().hash(_input),
-        const DeepCollectionEquality().hash(_output),
-        const DeepCollectionEquality().hash(_relatedAction),
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(reason),
+        const DeepCollectionEquality().hash(documentation),
+        const DeepCollectionEquality().hash(goalId),
+        const DeepCollectionEquality().hash(goalIdElement),
+        const DeepCollectionEquality().hash(triggerDefinition),
+        const DeepCollectionEquality().hash(condition),
+        const DeepCollectionEquality().hash(input),
+        const DeepCollectionEquality().hash(output),
+        const DeepCollectionEquality().hash(relatedAction),
         timingDateTime,
         timingDateTimeElement,
         timingPeriod,
         timingDuration,
         timingRange,
         timingTiming,
-        const DeepCollectionEquality().hash(_participant),
+        const DeepCollectionEquality().hash(participant),
         type,
         groupingBehavior,
         groupingBehaviorElement,
@@ -6578,8 +6228,8 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
         cardinalityBehaviorElement,
         definition,
         transform,
-        const DeepCollectionEquality().hash(_dynamicValue),
-        const DeepCollectionEquality().hash(_action)
+        const DeepCollectionEquality().hash(dynamicValue),
+        const DeepCollectionEquality().hash(action)
       ]);
 
   @JsonKey(ignore: true)
@@ -8898,15 +8548,15 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -8918,7 +8568,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -9014,15 +8664,15 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       copyright: freezed == copyright
@@ -9034,19 +8684,19 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       code: freezed == code
-          ? _value._code
+          ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       subjectType: freezed == subjectType
-          ? _value._subjectType
+          ? _value.subjectType
           : subjectType // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       subjectTypeElement: freezed == subjectTypeElement
-          ? _value._subjectTypeElement
+          ? _value.subjectTypeElement
           : subjectTypeElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireItem>?,
     ));
@@ -9068,14 +8718,14 @@ class _$_Questionnaire extends _Questionnaire {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -9110,29 +8760,18 @@ class _$_Questionnaire extends _Questionnaire {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final List<ContactDetail>? contact,
+      this.useContext,
+      this.jurisdiction,
+      this.contact,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      final List<Coding>? code,
-      final List<String>? subjectType,
+      this.code,
+      this.subjectType,
       @JsonKey(name: '_subjectType')
-          final List<Element?>? subjectTypeElement,
-      final List<QuestionnaireItem>? item})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _contact = contact,
-        _code = code,
-        _subjectType = subjectType,
-        _subjectTypeElement = subjectTypeElement,
-        _item = item,
-        super._();
+          this.subjectTypeElement,
+      this.item})
+      : super._();
 
   factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireFromJson(json);
@@ -9156,48 +8795,20 @@ class _$_Questionnaire extends _Questionnaire {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -9255,74 +8866,26 @@ class _$_Questionnaire extends _Questionnaire {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<UsageContext>? _useContext;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _contact;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  final List<Coding>? _code;
   @override
-  List<Coding>? get code {
-    final value = _code;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _subjectType;
+  final List<Coding>? code;
   @override
-  List<String>? get subjectType {
-    final value = _subjectType;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _subjectTypeElement;
+  final List<String>? subjectType;
   @override
   @JsonKey(name: '_subjectType')
-  List<Element?>? get subjectTypeElement {
-    final value = _subjectTypeElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<QuestionnaireItem>? _item;
+  final List<Element?>? subjectTypeElement;
   @override
-  List<QuestionnaireItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<QuestionnaireItem>? item;
 
   @override
   String toString() {
@@ -9347,17 +8910,16 @@ class _$_Questionnaire extends _Questionnaire {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -9399,20 +8961,20 @@ class _$_Questionnaire extends _Questionnaire {
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+                .equals(other.jurisdiction, jurisdiction) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
-            const DeepCollectionEquality().equals(other._code, _code) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
-                .equals(other._subjectType, _subjectType) &&
+                .equals(other.subjectType, subjectType) &&
             const DeepCollectionEquality()
-                .equals(other._subjectTypeElement, _subjectTypeElement) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+                .equals(other.subjectTypeElement, subjectTypeElement) &&
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -9427,12 +8989,12 @@ class _$_Questionnaire extends _Questionnaire {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -9456,15 +9018,15 @@ class _$_Questionnaire extends _Questionnaire {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
+        const DeepCollectionEquality().hash(contact),
         copyright,
         copyrightElement,
-        const DeepCollectionEquality().hash(_code),
-        const DeepCollectionEquality().hash(_subjectType),
-        const DeepCollectionEquality().hash(_subjectTypeElement),
-        const DeepCollectionEquality().hash(_item)
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(subjectType),
+        const DeepCollectionEquality().hash(subjectTypeElement),
+        const DeepCollectionEquality().hash(item)
       ]);
 
   @JsonKey(ignore: true)
@@ -10498,11 +10060,11 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
           : definitionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       code: freezed == code
-          ? _value._code
+          ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       prefix: freezed == prefix
@@ -10530,7 +10092,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       enableWhen: freezed == enableWhen
-          ? _value._enableWhen
+          ? _value.enableWhen
           : enableWhen // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireEnableWhen>?,
       required_: freezed == required_
@@ -10570,7 +10132,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
           : options // ignore: cast_nullable_to_non_nullable
               as Reference?,
       option: freezed == option
-          ? _value._option
+          ? _value.option
           : option // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireOption>?,
       initialBoolean: freezed == initialBoolean
@@ -10654,7 +10216,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
           : initialReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireItem>?,
     ));
@@ -10669,15 +10231,15 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       @JsonKey(name: '_linkId') this.linkIdElement,
       this.definition,
       @JsonKey(name: '_definition') this.definitionElement,
-      final List<Coding>? code,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      this.code,
+      @JsonKey(name: 'extension') this.extension_,
       this.prefix,
       @JsonKey(name: '_prefix') this.prefixElement,
       this.text,
       @JsonKey(name: '_text') this.textElement,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
-      final List<QuestionnaireEnableWhen>? enableWhen,
+      this.enableWhen,
       @JsonKey(name: 'required') this.required_,
       @JsonKey(name: '_required') this.requiredElement,
       this.repeats,
@@ -10687,7 +10249,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       this.maxLength,
       @JsonKey(name: '_maxLength') this.maxLengthElement,
       this.options,
-      final List<QuestionnaireOption>? option,
+      this.option,
       this.initialBoolean,
       @JsonKey(name: '_initialBoolean') this.initialBooleanElement,
       this.initialDecimal,
@@ -10708,13 +10270,8 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       this.initialCoding,
       this.initialQuantity,
       this.initialReference,
-      final List<QuestionnaireItem>? item})
-      : _code = code,
-        _extension_ = extension_,
-        _enableWhen = enableWhen,
-        _option = option,
-        _item = item,
-        super._();
+      this.item})
+      : super._();
 
   factory _$_QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireItemFromJson(json);
@@ -10729,25 +10286,11 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @override
   @JsonKey(name: '_definition')
   final Element? definitionElement;
-  final List<Coding>? _code;
   @override
-  List<Coding>? get code {
-    final value = _code;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Coding>? code;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final String? prefix;
   @override
@@ -10763,15 +10306,8 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
-  final List<QuestionnaireEnableWhen>? _enableWhen;
   @override
-  List<QuestionnaireEnableWhen>? get enableWhen {
-    final value = _enableWhen;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<QuestionnaireEnableWhen>? enableWhen;
   @override
   @JsonKey(name: 'required')
   final Boolean? required_;
@@ -10795,15 +10331,8 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   final Element? maxLengthElement;
   @override
   final Reference? options;
-  final List<QuestionnaireOption>? _option;
   @override
-  List<QuestionnaireOption>? get option {
-    final value = _option;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<QuestionnaireOption>? option;
   @override
   final Boolean? initialBoolean;
   @override
@@ -10852,14 +10381,8 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   final Quantity? initialQuantity;
   @override
   final Reference? initialReference;
-  final List<QuestionnaireItem>? _item;
   @override
-  List<QuestionnaireItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<QuestionnaireItem>? item;
 
   @override
   String toString() {
@@ -10878,9 +10401,9 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
                 other.definition == definition) &&
             (identical(other.definitionElement, definitionElement) ||
                 other.definitionElement == definitionElement) &&
-            const DeepCollectionEquality().equals(other._code, _code) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.prefix, prefix) || other.prefix == prefix) &&
             (identical(other.prefixElement, prefixElement) ||
                 other.prefixElement == prefixElement) &&
@@ -10891,7 +10414,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
             const DeepCollectionEquality()
-                .equals(other._enableWhen, _enableWhen) &&
+                .equals(other.enableWhen, enableWhen) &&
             (identical(other.required_, required_) ||
                 other.required_ == required_) &&
             (identical(other.requiredElement, requiredElement) ||
@@ -10908,7 +10431,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
             (identical(other.maxLengthElement, maxLengthElement) ||
                 other.maxLengthElement == maxLengthElement) &&
             (identical(other.options, options) || other.options == options) &&
-            const DeepCollectionEquality().equals(other._option, _option) &&
+            const DeepCollectionEquality().equals(other.option, option) &&
             (identical(other.initialBoolean, initialBoolean) ||
                 other.initialBoolean == initialBoolean) &&
             (identical(other.initialBooleanElement, initialBooleanElement) ||
@@ -10949,7 +10472,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
                 other.initialQuantity == initialQuantity) &&
             (identical(other.initialReference, initialReference) ||
                 other.initialReference == initialReference) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -10960,15 +10483,15 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
         linkIdElement,
         definition,
         definitionElement,
-        const DeepCollectionEquality().hash(_code),
-        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(extension_),
         prefix,
         prefixElement,
         text,
         textElement,
         type,
         typeElement,
-        const DeepCollectionEquality().hash(_enableWhen),
+        const DeepCollectionEquality().hash(enableWhen),
         required_,
         requiredElement,
         repeats,
@@ -10978,7 +10501,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
         maxLength,
         maxLengthElement,
         options,
-        const DeepCollectionEquality().hash(_option),
+        const DeepCollectionEquality().hash(option),
         initialBoolean,
         initialBooleanElement,
         initialDecimal,
@@ -10999,7 +10522,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
         initialCoding,
         initialQuantity,
         initialReference,
-        const DeepCollectionEquality().hash(_item)
+        const DeepCollectionEquality().hash(item)
       ]);
 
   @JsonKey(ignore: true)
@@ -13398,15 +12921,15 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -13418,7 +12941,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -13522,23 +13045,23 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       contributor: freezed == contributor
-          ? _value._contributor
+          ? _value.contributor
           : contributor // ignore: cast_nullable_to_non_nullable
               as List<Contributor>?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       copyright: freezed == copyright
@@ -13550,15 +13073,15 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       trigger: freezed == trigger
-          ? _value._trigger
+          ? _value.trigger
           : trigger // ignore: cast_nullable_to_non_nullable
               as List<TriggerDefinition>?,
       dataRequirement: freezed == dataRequirement
-          ? _value._dataRequirement
+          ? _value.dataRequirement
           : dataRequirement // ignore: cast_nullable_to_non_nullable
               as List<DataRequirement>?,
       operationDefinition: freezed == operationDefinition
@@ -13584,14 +13107,14 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -13629,31 +13152,19 @@ class _$_ServiceDefinition extends _ServiceDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final List<CodeableConcept>? topic,
-      final List<Contributor>? contributor,
-      final List<ContactDetail>? contact,
+      this.useContext,
+      this.jurisdiction,
+      this.topic,
+      this.contributor,
+      this.contact,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      final List<RelatedArtifact>? relatedArtifact,
-      final List<TriggerDefinition>? trigger,
-      final List<DataRequirement>? dataRequirement,
+      this.relatedArtifact,
+      this.trigger,
+      this.dataRequirement,
       this.operationDefinition})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _contributor = contributor,
-        _contact = contact,
-        _relatedArtifact = relatedArtifact,
-        _trigger = trigger,
-        _dataRequirement = dataRequirement,
-        super._();
+      : super._();
 
   factory _$_ServiceDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ServiceDefinitionFromJson(json);
@@ -13677,48 +13188,20 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -13781,83 +13264,27 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<UsageContext>? _useContext;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _topic;
+  final List<CodeableConcept>? jurisdiction;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Contributor>? _contributor;
+  final List<CodeableConcept>? topic;
   @override
-  List<Contributor>? get contributor {
-    final value = _contributor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _contact;
+  final List<Contributor>? contributor;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final String? copyright;
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
-  final List<RelatedArtifact>? _relatedArtifact;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TriggerDefinition>? _trigger;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
-  List<TriggerDefinition>? get trigger {
-    final value = _trigger;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirement>? _dataRequirement;
+  final List<TriggerDefinition>? trigger;
   @override
-  List<DataRequirement>? get dataRequirement {
-    final value = _dataRequirement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<DataRequirement>? dataRequirement;
   @override
   final Reference? operationDefinition;
 
@@ -13884,17 +13311,16 @@ class _$_ServiceDefinition extends _ServiceDefinition {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -13939,22 +13365,22 @@ class _$_ServiceDefinition extends _ServiceDefinition {
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
+                .equals(other.jurisdiction, jurisdiction) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
             const DeepCollectionEquality()
-                .equals(other._contributor, _contributor) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+                .equals(other.contributor, contributor) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality().equals(other._trigger, _trigger) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.trigger, trigger) &&
             const DeepCollectionEquality()
-                .equals(other._dataRequirement, _dataRequirement) &&
+                .equals(other.dataRequirement, dataRequirement) &&
             (identical(other.operationDefinition, operationDefinition) ||
                 other.operationDefinition == operationDefinition));
   }
@@ -13971,12 +13397,12 @@ class _$_ServiceDefinition extends _ServiceDefinition {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -14002,16 +13428,16 @@ class _$_ServiceDefinition extends _ServiceDefinition {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_contributor),
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(contributor),
+        const DeepCollectionEquality().hash(contact),
         copyright,
         copyrightElement,
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(_trigger),
-        const DeepCollectionEquality().hash(_dataRequirement),
+        const DeepCollectionEquality().hash(relatedArtifact),
+        const DeepCollectionEquality().hash(trigger),
+        const DeepCollectionEquality().hash(dataRequirement),
         operationDefinition
       ]);
 

@@ -237,11 +237,11 @@ class __$$_PopulationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       ageRange: freezed == ageRange
@@ -273,41 +273,25 @@ class __$$_PopulationCopyWithImpl<$Res>
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.ageRange,
       this.ageCodeableConcept,
       this.gender,
       this.race,
       this.physiologicalCondition})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_Population.fromJson(Map<String, dynamic> json) =>
       _$$_PopulationFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Range? ageRange;
   @override
@@ -331,9 +315,9 @@ class _$_Population extends _Population {
             other is _$_Population &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.ageRange, ageRange) ||
                 other.ageRange == ageRange) &&
             (identical(other.ageCodeableConcept, ageCodeableConcept) ||
@@ -349,8 +333,8 @@ class _$_Population extends _Population {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       ageRange,
       ageCodeableConcept,
       gender,
@@ -584,11 +568,11 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -604,7 +588,7 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
           : period // ignore: cast_nullable_to_non_nullable
               as Quantity,
       specialPrecautionsForStorage: freezed == specialPrecautionsForStorage
-          ? _value._specialPrecautionsForStorage
+          ? _value.specialPrecautionsForStorage
           : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -616,55 +600,32 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.identifier,
       required this.type,
       required this.period,
-      final List<CodeableConcept>? specialPrecautionsForStorage})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _specialPrecautionsForStorage = specialPrecautionsForStorage,
-        super._();
+      this.specialPrecautionsForStorage})
+      : super._();
 
   factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$$_ProductShelfLifeFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
   final CodeableConcept type;
   @override
   final Quantity period;
-  final List<CodeableConcept>? _specialPrecautionsForStorage;
   @override
-  List<CodeableConcept>? get specialPrecautionsForStorage {
-    final value = _specialPrecautionsForStorage;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CodeableConcept>? specialPrecautionsForStorage;
 
   @override
   String toString() {
@@ -678,16 +639,16 @@ class _$_ProductShelfLife extends _ProductShelfLife {
             other is _$_ProductShelfLife &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.period, period) || other.period == period) &&
             const DeepCollectionEquality().equals(
-                other._specialPrecautionsForStorage,
-                _specialPrecautionsForStorage));
+                other.specialPrecautionsForStorage,
+                specialPrecautionsForStorage));
   }
 
   @JsonKey(ignore: true)
@@ -695,12 +656,12 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       identifier,
       type,
       period,
-      const DeepCollectionEquality().hash(_specialPrecautionsForStorage));
+      const DeepCollectionEquality().hash(specialPrecautionsForStorage));
 
   @JsonKey(ignore: true)
   @override
@@ -1102,11 +1063,11 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       height: freezed == height
@@ -1142,23 +1103,23 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
           : shapeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       color: freezed == color
-          ? _value._color
+          ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       colorElement: freezed == colorElement
-          ? _value._colorElement
+          ? _value.colorElement
           : colorElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       imprint: freezed == imprint
-          ? _value._imprint
+          ? _value.imprint
           : imprint // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       imprintElement: freezed == imprintElement
-          ? _value._imprintElement
+          ? _value.imprintElement
           : imprintElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       image: freezed == image
-          ? _value._image
+          ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
       scoring: freezed == scoring
@@ -1174,8 +1135,8 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.height,
       this.width,
       this.depth,
@@ -1184,45 +1145,24 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       this.externalDiameter,
       this.shape,
       @JsonKey(name: '_shape') this.shapeElement,
-      final List<String>? color,
-      @JsonKey(name: '_color') final List<Element?>? colorElement,
-      final List<String>? imprint,
-      @JsonKey(name: '_imprint') final List<Element?>? imprintElement,
-      final List<Attachment>? image,
+      this.color,
+      @JsonKey(name: '_color') this.colorElement,
+      this.imprint,
+      @JsonKey(name: '_imprint') this.imprintElement,
+      this.image,
       this.scoring})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _color = color,
-        _colorElement = colorElement,
-        _imprint = imprint,
-        _imprintElement = imprintElement,
-        _image = image,
-        super._();
+      : super._();
 
   factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$$_ProdCharacteristicFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Quantity? height;
   @override
@@ -1240,53 +1180,18 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   @override
   @JsonKey(name: '_shape')
   final Element? shapeElement;
-  final List<String>? _color;
   @override
-  List<String>? get color {
-    final value = _color;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _colorElement;
+  final List<String>? color;
   @override
   @JsonKey(name: '_color')
-  List<Element?>? get colorElement {
-    final value = _colorElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _imprint;
+  final List<Element?>? colorElement;
   @override
-  List<String>? get imprint {
-    final value = _imprint;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _imprintElement;
+  final List<String>? imprint;
   @override
   @JsonKey(name: '_imprint')
-  List<Element?>? get imprintElement {
-    final value = _imprintElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Attachment>? _image;
+  final List<Element?>? imprintElement;
   @override
-  List<Attachment>? get image {
-    final value = _image;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Attachment>? image;
   @override
   final CodeableConcept? scoring;
 
@@ -1302,9 +1207,9 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
             other is _$_ProdCharacteristic &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.width, width) || other.width == width) &&
             (identical(other.depth, depth) || other.depth == depth) &&
@@ -1316,13 +1221,13 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
             (identical(other.shape, shape) || other.shape == shape) &&
             (identical(other.shapeElement, shapeElement) ||
                 other.shapeElement == shapeElement) &&
-            const DeepCollectionEquality().equals(other._color, _color) &&
+            const DeepCollectionEquality().equals(other.color, color) &&
             const DeepCollectionEquality()
-                .equals(other._colorElement, _colorElement) &&
-            const DeepCollectionEquality().equals(other._imprint, _imprint) &&
+                .equals(other.colorElement, colorElement) &&
+            const DeepCollectionEquality().equals(other.imprint, imprint) &&
             const DeepCollectionEquality()
-                .equals(other._imprintElement, _imprintElement) &&
-            const DeepCollectionEquality().equals(other._image, _image) &&
+                .equals(other.imprintElement, imprintElement) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
             (identical(other.scoring, scoring) || other.scoring == scoring));
   }
 
@@ -1331,8 +1236,8 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       height,
       width,
       depth,
@@ -1341,11 +1246,11 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       externalDiameter,
       shape,
       shapeElement,
-      const DeepCollectionEquality().hash(_color),
-      const DeepCollectionEquality().hash(_colorElement),
-      const DeepCollectionEquality().hash(_imprint),
-      const DeepCollectionEquality().hash(_imprintElement),
-      const DeepCollectionEquality().hash(_image),
+      const DeepCollectionEquality().hash(color),
+      const DeepCollectionEquality().hash(colorElement),
+      const DeepCollectionEquality().hash(imprint),
+      const DeepCollectionEquality().hash(imprintElement),
+      const DeepCollectionEquality().hash(image),
       scoring);
 
   @JsonKey(ignore: true)
@@ -1650,11 +1555,11 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       country: null == country
@@ -1690,42 +1595,26 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       required this.country,
       this.jurisdiction,
       required this.status,
       required this.dateRange,
       this.restoreDate,
       @JsonKey(name: '_restoreDate') this.restoreDateElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$$_MarketingStatusFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept country;
   @override
@@ -1752,9 +1641,9 @@ class _$_MarketingStatus extends _MarketingStatus {
             other is _$_MarketingStatus &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.country, country) || other.country == country) &&
             (identical(other.jurisdiction, jurisdiction) ||
                 other.jurisdiction == jurisdiction) &&
@@ -1772,8 +1661,8 @@ class _$_MarketingStatus extends _MarketingStatus {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       country,
       jurisdiction,
       status,
@@ -2105,11 +1994,11 @@ class __$$_SubstanceAmountCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       amountQuantity: freezed == amountQuantity
@@ -2153,8 +2042,8 @@ class __$$_SubstanceAmountCopyWithImpl<$Res>
 class _$_SubstanceAmount extends _SubstanceAmount {
   _$_SubstanceAmount(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.amountQuantity,
       this.amountRange,
       this.amountString,
@@ -2163,34 +2052,18 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       this.amountText,
       @JsonKey(name: '_amountText') this.amountTextElement,
       this.referenceRange})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceAmountFromJson(json);
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Quantity? amountQuantity;
   @override
@@ -2222,9 +2095,9 @@ class _$_SubstanceAmount extends _SubstanceAmount {
             other is _$_SubstanceAmount &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.amountQuantity, amountQuantity) ||
                 other.amountQuantity == amountQuantity) &&
             (identical(other.amountRange, amountRange) ||
@@ -2248,8 +2121,8 @@ class _$_SubstanceAmount extends _SubstanceAmount {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       amountQuantity,
       amountRange,
       amountString,
@@ -2479,11 +2352,11 @@ class __$$_SubstanceAmountReferenceRangeCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       lowLimit: freezed == lowLimit
@@ -2503,13 +2376,11 @@ class __$$_SubstanceAmountReferenceRangeCopyWithImpl<$Res>
 class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   _$_SubstanceAmountReferenceRange(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.lowLimit,
       this.highLimit})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_SubstanceAmountReferenceRange.fromJson(
           Map<String, dynamic> json) =>
@@ -2517,25 +2388,11 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Quantity? lowLimit;
   @override
@@ -2553,9 +2410,9 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
             other is _$_SubstanceAmountReferenceRange &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.lowLimit, lowLimit) ||
                 other.lowLimit == lowLimit) &&
             (identical(other.highLimit, highLimit) ||
@@ -2567,8 +2424,8 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       lowLimit,
       highLimit);
 

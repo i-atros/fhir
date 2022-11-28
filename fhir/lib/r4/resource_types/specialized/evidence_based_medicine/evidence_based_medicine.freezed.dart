@@ -997,15 +997,15 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -1017,7 +1017,7 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -1069,7 +1069,7 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: freezed == description
@@ -1081,15 +1081,15 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       copyright: freezed == copyright
@@ -1121,27 +1121,27 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       author: freezed == author
-          ? _value._author
+          ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       editor: freezed == editor
-          ? _value._editor
+          ? _value.editor
           : editor // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       reviewer: freezed == reviewer
-          ? _value._reviewer
+          ? _value.reviewer
           : reviewer // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       endorser: freezed == endorser
-          ? _value._endorser
+          ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       synthesisType: freezed == synthesisType
@@ -1173,15 +1173,15 @@ class __$$_EffectEvidenceSynthesisCopyWithImpl<$Res>
           : sampleSize // ignore: cast_nullable_to_non_nullable
               as EffectEvidenceSynthesisSampleSize?,
       resultsByExposure: freezed == resultsByExposure
-          ? _value._resultsByExposure
+          ? _value.resultsByExposure
           : resultsByExposure // ignore: cast_nullable_to_non_nullable
               as List<EffectEvidenceSynthesisResultsByExposure>?,
       effectEstimate: freezed == effectEstimate
-          ? _value._effectEstimate
+          ? _value.effectEstimate
           : effectEstimate // ignore: cast_nullable_to_non_nullable
               as List<EffectEvidenceSynthesisEffectEstimate>?,
       certainty: freezed == certainty
-          ? _value._certainty
+          ? _value.certainty
           : certainty // ignore: cast_nullable_to_non_nullable
               as List<EffectEvidenceSynthesisCertainty>?,
     ));
@@ -1203,14 +1203,14 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -1230,13 +1230,13 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
+      this.note,
+      this.useContext,
+      this.jurisdiction,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
@@ -1247,12 +1247,12 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       this.synthesisType,
       this.studyType,
       required this.population,
@@ -1260,27 +1260,10 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
       required this.exposureAlternative,
       required this.outcome,
       this.sampleSize,
-      final List<EffectEvidenceSynthesisResultsByExposure>? resultsByExposure,
-      final List<EffectEvidenceSynthesisEffectEstimate>? effectEstimate,
-      final List<EffectEvidenceSynthesisCertainty>? certainty})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _note = note,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _resultsByExposure = resultsByExposure,
-        _effectEstimate = effectEstimate,
-        _certainty = certainty,
-        super._();
+      this.resultsByExposure,
+      this.effectEstimate,
+      this.certainty})
+      : super._();
 
   factory _$_EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$$_EffectEvidenceSynthesisFromJson(json);
@@ -1304,48 +1287,20 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -1377,47 +1332,19 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
+  final List<Annotation>? note;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? copyright;
   @override
@@ -1435,60 +1362,18 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
+  final List<CodeableConcept>? topic;
   @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
+  final List<ContactDetail>? author;
   @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
+  final List<ContactDetail>? editor;
   @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
+  final List<ContactDetail>? reviewer;
   @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<ContactDetail>? endorser;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   final CodeableConcept? synthesisType;
   @override
@@ -1503,32 +1388,12 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
   final Reference outcome;
   @override
   final EffectEvidenceSynthesisSampleSize? sampleSize;
-  final List<EffectEvidenceSynthesisResultsByExposure>? _resultsByExposure;
   @override
-  List<EffectEvidenceSynthesisResultsByExposure>? get resultsByExposure {
-    final value = _resultsByExposure;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<EffectEvidenceSynthesisEffectEstimate>? _effectEstimate;
+  final List<EffectEvidenceSynthesisResultsByExposure>? resultsByExposure;
   @override
-  List<EffectEvidenceSynthesisEffectEstimate>? get effectEstimate {
-    final value = _effectEstimate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<EffectEvidenceSynthesisCertainty>? _certainty;
+  final List<EffectEvidenceSynthesisEffectEstimate>? effectEstimate;
   @override
-  List<EffectEvidenceSynthesisCertainty>? get certainty {
-    final value = _certainty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<EffectEvidenceSynthesisCertainty>? certainty;
 
   @override
   String toString() {
@@ -1553,17 +1418,16 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -1583,16 +1447,16 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
                 other.publisher == publisher) &&
             (identical(other.publisherElement, publisherElement) ||
                 other.publisherElement == publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
+                .equals(other.jurisdiction, jurisdiction) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
@@ -1607,13 +1471,13 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
                 other.lastReviewDateElement == lastReviewDateElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.editor, editor) &&
+            const DeepCollectionEquality().equals(other.reviewer, reviewer) &&
+            const DeepCollectionEquality().equals(other.endorser, endorser) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
             (identical(other.synthesisType, synthesisType) ||
                 other.synthesisType == synthesisType) &&
             (identical(other.studyType, studyType) ||
@@ -1628,11 +1492,10 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
             (identical(other.sampleSize, sampleSize) ||
                 other.sampleSize == sampleSize) &&
             const DeepCollectionEquality()
-                .equals(other._resultsByExposure, _resultsByExposure) &&
+                .equals(other.resultsByExposure, resultsByExposure) &&
             const DeepCollectionEquality()
-                .equals(other._effectEstimate, _effectEstimate) &&
-            const DeepCollectionEquality()
-                .equals(other._certainty, _certainty));
+                .equals(other.effectEstimate, effectEstimate) &&
+            const DeepCollectionEquality().equals(other.certainty, certainty));
   }
 
   @JsonKey(ignore: true)
@@ -1647,12 +1510,12 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -1665,12 +1528,12 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         dateElement,
         publisher,
         publisherElement,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
         copyright,
         copyrightElement,
         approvalDate,
@@ -1678,12 +1541,12 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(editor),
+        const DeepCollectionEquality().hash(reviewer),
+        const DeepCollectionEquality().hash(endorser),
+        const DeepCollectionEquality().hash(relatedArtifact),
         synthesisType,
         studyType,
         population,
@@ -1691,9 +1554,9 @@ class _$_EffectEvidenceSynthesis extends _EffectEvidenceSynthesis {
         exposureAlternative,
         outcome,
         sampleSize,
-        const DeepCollectionEquality().hash(_resultsByExposure),
-        const DeepCollectionEquality().hash(_effectEstimate),
-        const DeepCollectionEquality().hash(_certainty)
+        const DeepCollectionEquality().hash(resultsByExposure),
+        const DeepCollectionEquality().hash(effectEstimate),
+        const DeepCollectionEquality().hash(certainty)
       ]);
 
   @JsonKey(ignore: true)
@@ -2142,11 +2005,11 @@ class __$$_EffectEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -2183,17 +2046,15 @@ class _$_EffectEvidenceSynthesisSampleSize
     extends _EffectEvidenceSynthesisSampleSize {
   _$_EffectEvidenceSynthesisSampleSize(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.numberOfStudies,
       @JsonKey(name: '_numberOfStudies') this.numberOfStudiesElement,
       this.numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_EffectEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
@@ -2201,25 +2062,11 @@ class _$_EffectEvidenceSynthesisSampleSize
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -2248,9 +2095,9 @@ class _$_EffectEvidenceSynthesisSampleSize
             other is _$_EffectEvidenceSynthesisSampleSize &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -2272,8 +2119,8 @@ class _$_EffectEvidenceSynthesisSampleSize
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       description,
       descriptionElement,
       numberOfStudies,
@@ -2588,11 +2435,11 @@ class __$$_EffectEvidenceSynthesisResultsByExposureCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -2630,8 +2477,8 @@ class _$_EffectEvidenceSynthesisResultsByExposure
   _$_EffectEvidenceSynthesisResultsByExposure(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
@@ -2643,9 +2490,7 @@ class _$_EffectEvidenceSynthesisResultsByExposure
           this.exposureStateElement,
       this.variantState,
       required this.riskEvidenceSynthesis})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_EffectEvidenceSynthesisResultsByExposure.fromJson(
           Map<String, dynamic> json) =>
@@ -2653,25 +2498,11 @@ class _$_EffectEvidenceSynthesisResultsByExposure
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -2702,9 +2533,9 @@ class _$_EffectEvidenceSynthesisResultsByExposure
             other is _$_EffectEvidenceSynthesisResultsByExposure &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -2724,8 +2555,8 @@ class _$_EffectEvidenceSynthesisResultsByExposure
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       description,
       descriptionElement,
       exposureState,
@@ -3065,11 +2896,11 @@ class __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -3101,7 +2932,7 @@ class __$$_EffectEvidenceSynthesisEffectEstimateCopyWithImpl<$Res>
           : unitOfMeasure // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       precisionEstimate: freezed == precisionEstimate
-          ? _value._precisionEstimate
+          ? _value.precisionEstimate
           : precisionEstimate // ignore: cast_nullable_to_non_nullable
               as List<EffectEvidenceSynthesisPrecisionEstimate>?,
     ));
@@ -3114,8 +2945,8 @@ class _$_EffectEvidenceSynthesisEffectEstimate
     extends _EffectEvidenceSynthesisEffectEstimate {
   _$_EffectEvidenceSynthesisEffectEstimate(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.type,
@@ -3123,11 +2954,8 @@ class _$_EffectEvidenceSynthesisEffectEstimate
       this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.unitOfMeasure,
-      final List<EffectEvidenceSynthesisPrecisionEstimate>? precisionEstimate})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _precisionEstimate = precisionEstimate,
-        super._();
+      this.precisionEstimate})
+      : super._();
 
   factory _$_EffectEvidenceSynthesisEffectEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -3135,25 +2963,11 @@ class _$_EffectEvidenceSynthesisEffectEstimate
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -3170,14 +2984,8 @@ class _$_EffectEvidenceSynthesisEffectEstimate
   final Element? valueElement;
   @override
   final CodeableConcept? unitOfMeasure;
-  final List<EffectEvidenceSynthesisPrecisionEstimate>? _precisionEstimate;
   @override
-  List<EffectEvidenceSynthesisPrecisionEstimate>? get precisionEstimate {
-    final value = _precisionEstimate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<EffectEvidenceSynthesisPrecisionEstimate>? precisionEstimate;
 
   @override
   String toString() {
@@ -3191,9 +2999,9 @@ class _$_EffectEvidenceSynthesisEffectEstimate
             other is _$_EffectEvidenceSynthesisEffectEstimate &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -3207,7 +3015,7 @@ class _$_EffectEvidenceSynthesisEffectEstimate
             (identical(other.unitOfMeasure, unitOfMeasure) ||
                 other.unitOfMeasure == unitOfMeasure) &&
             const DeepCollectionEquality()
-                .equals(other._precisionEstimate, _precisionEstimate));
+                .equals(other.precisionEstimate, precisionEstimate));
   }
 
   @JsonKey(ignore: true)
@@ -3215,8 +3023,8 @@ class _$_EffectEvidenceSynthesisEffectEstimate
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       description,
       descriptionElement,
       type,
@@ -3224,7 +3032,7 @@ class _$_EffectEvidenceSynthesisEffectEstimate
       value,
       valueElement,
       unitOfMeasure,
-      const DeepCollectionEquality().hash(_precisionEstimate));
+      const DeepCollectionEquality().hash(precisionEstimate));
 
   @JsonKey(ignore: true)
   @override
@@ -3532,11 +3340,11 @@ class __$$_EffectEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -3577,8 +3385,8 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
     extends _EffectEvidenceSynthesisPrecisionEstimate {
   _$_EffectEvidenceSynthesisPrecisionEstimate(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
       this.level,
       @JsonKey(name: '_level') this.levelElement,
@@ -3586,9 +3394,7 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
       @JsonKey(name: '_from') this.fromElement,
       this.to,
       @JsonKey(name: '_to') this.toElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_EffectEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -3596,25 +3402,11 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -3645,9 +3437,9 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
             other is _$_EffectEvidenceSynthesisPrecisionEstimate &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.level, level) || other.level == level) &&
             (identical(other.levelElement, levelElement) ||
@@ -3665,8 +3457,8 @@ class _$_EffectEvidenceSynthesisPrecisionEstimate
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       level,
       levelElement,
@@ -3878,23 +3670,23 @@ class __$$_EffectEvidenceSynthesisCertaintyCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       rating: freezed == rating
-          ? _value._rating
+          ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       certaintySubcomponent: freezed == certaintySubcomponent
-          ? _value._certaintySubcomponent
+          ? _value.certaintySubcomponent
           : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
               as List<EffectEvidenceSynthesisCertaintySubcomponent>?,
     ));
@@ -3907,18 +3699,12 @@ class _$_EffectEvidenceSynthesisCertainty
     extends _EffectEvidenceSynthesisCertainty {
   _$_EffectEvidenceSynthesisCertainty(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note,
-      final List<EffectEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        _certaintySubcomponent = certaintySubcomponent,
-        super._();
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.rating,
+      this.note,
+      this.certaintySubcomponent})
+      : super._();
 
   factory _$_EffectEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
@@ -3926,53 +3712,18 @@ class _$_EffectEvidenceSynthesisCertainty
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _rating;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<CodeableConcept>? rating;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Annotation>? note;
+  @override
   final List<EffectEvidenceSynthesisCertaintySubcomponent>?
-      _certaintySubcomponent;
-  @override
-  List<EffectEvidenceSynthesisCertaintySubcomponent>?
-      get certaintySubcomponent {
-    final value = _certaintySubcomponent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+      certaintySubcomponent;
 
   @override
   String toString() {
@@ -3986,13 +3737,13 @@ class _$_EffectEvidenceSynthesisCertainty
             other is _$_EffectEvidenceSynthesisCertainty &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.rating, rating) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._certaintySubcomponent, _certaintySubcomponent));
+                .equals(other.certaintySubcomponent, certaintySubcomponent));
   }
 
   @JsonKey(ignore: true)
@@ -4000,11 +3751,11 @@ class _$_EffectEvidenceSynthesisCertainty
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note),
-      const DeepCollectionEquality().hash(_certaintySubcomponent));
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(rating),
+      const DeepCollectionEquality().hash(note),
+      const DeepCollectionEquality().hash(certaintySubcomponent));
 
   @JsonKey(ignore: true)
   @override
@@ -4210,11 +3961,11 @@ class __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -4222,11 +3973,11 @@ class __$$_EffectEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       rating: freezed == rating
-          ? _value._rating
+          ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -4239,16 +3990,12 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
     extends _EffectEvidenceSynthesisCertaintySubcomponent {
   _$_EffectEvidenceSynthesisCertaintySubcomponent(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        super._();
+      this.rating,
+      this.note})
+      : super._();
 
   factory _$_EffectEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
@@ -4256,44 +4003,17 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
-  final List<CodeableConcept>? _rating;
   @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<CodeableConcept>? rating;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -4307,12 +4027,12 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
             other is _$_EffectEvidenceSynthesisCertaintySubcomponent &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+            const DeepCollectionEquality().equals(other.rating, rating) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
@@ -4320,11 +4040,11 @@ class _$_EffectEvidenceSynthesisCertaintySubcomponent
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note));
+      const DeepCollectionEquality().hash(rating),
+      const DeepCollectionEquality().hash(note));
 
   @JsonKey(ignore: true)
   @override
@@ -5283,15 +5003,15 @@ class __$$_EvidenceCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -5303,7 +5023,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -5371,7 +5091,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: freezed == description
@@ -5383,15 +5103,15 @@ class __$$_EvidenceCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       copyright: freezed == copyright
@@ -5423,27 +5143,27 @@ class __$$_EvidenceCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       author: freezed == author
-          ? _value._author
+          ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       editor: freezed == editor
-          ? _value._editor
+          ? _value.editor
           : editor // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       reviewer: freezed == reviewer
-          ? _value._reviewer
+          ? _value.reviewer
           : reviewer // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       endorser: freezed == endorser
-          ? _value._endorser
+          ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       exposureBackground: null == exposureBackground
@@ -5451,11 +5171,11 @@ class __$$_EvidenceCopyWithImpl<$Res>
           : exposureBackground // ignore: cast_nullable_to_non_nullable
               as Reference,
       exposureVariant: freezed == exposureVariant
-          ? _value._exposureVariant
+          ? _value.exposureVariant
           : exposureVariant // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       outcome: freezed == outcome
-          ? _value._outcome
+          ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -5477,14 +5197,14 @@ class _$_Evidence extends _Evidence {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -5510,13 +5230,13 @@ class _$_Evidence extends _Evidence {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
+      this.note,
+      this.useContext,
+      this.jurisdiction,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
@@ -5527,32 +5247,16 @@ class _$_Evidence extends _Evidence {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       required this.exposureBackground,
-      final List<Reference>? exposureVariant,
-      final List<Reference>? outcome})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _note = note,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _exposureVariant = exposureVariant,
-        _outcome = outcome,
-        super._();
+      this.exposureVariant,
+      this.outcome})
+      : super._();
 
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceFromJson(json);
@@ -5576,48 +5280,20 @@ class _$_Evidence extends _Evidence {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -5659,47 +5335,19 @@ class _$_Evidence extends _Evidence {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
+  final List<Annotation>? note;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? copyright;
   @override
@@ -5717,79 +5365,24 @@ class _$_Evidence extends _Evidence {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
+  final List<CodeableConcept>? topic;
   @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
+  final List<ContactDetail>? author;
   @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
+  final List<ContactDetail>? editor;
   @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
+  final List<ContactDetail>? reviewer;
   @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<ContactDetail>? endorser;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   final Reference exposureBackground;
-  final List<Reference>? _exposureVariant;
   @override
-  List<Reference>? get exposureVariant {
-    final value = _exposureVariant;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _outcome;
+  final List<Reference>? exposureVariant;
   @override
-  List<Reference>? get outcome {
-    final value = _outcome;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? outcome;
 
   @override
   String toString() {
@@ -5814,17 +5407,16 @@ class _$_Evidence extends _Evidence {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -5852,16 +5444,16 @@ class _$_Evidence extends _Evidence {
                 other.publisher == publisher) &&
             (identical(other.publisherElement, publisherElement) ||
                 other.publisherElement == publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
+                .equals(other.jurisdiction, jurisdiction) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
@@ -5876,18 +5468,18 @@ class _$_Evidence extends _Evidence {
                 other.lastReviewDateElement == lastReviewDateElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.editor, editor) &&
+            const DeepCollectionEquality().equals(other.reviewer, reviewer) &&
+            const DeepCollectionEquality().equals(other.endorser, endorser) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
             (identical(other.exposureBackground, exposureBackground) ||
                 other.exposureBackground == exposureBackground) &&
             const DeepCollectionEquality()
-                .equals(other._exposureVariant, _exposureVariant) &&
-            const DeepCollectionEquality().equals(other._outcome, _outcome));
+                .equals(other.exposureVariant, exposureVariant) &&
+            const DeepCollectionEquality().equals(other.outcome, outcome));
   }
 
   @JsonKey(ignore: true)
@@ -5902,12 +5494,12 @@ class _$_Evidence extends _Evidence {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -5924,12 +5516,12 @@ class _$_Evidence extends _Evidence {
         dateElement,
         publisher,
         publisherElement,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
         copyright,
         copyrightElement,
         approvalDate,
@@ -5937,15 +5529,15 @@ class _$_Evidence extends _Evidence {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(editor),
+        const DeepCollectionEquality().hash(reviewer),
+        const DeepCollectionEquality().hash(endorser),
+        const DeepCollectionEquality().hash(relatedArtifact),
         exposureBackground,
-        const DeepCollectionEquality().hash(_exposureVariant),
-        const DeepCollectionEquality().hash(_outcome)
+        const DeepCollectionEquality().hash(exposureVariant),
+        const DeepCollectionEquality().hash(outcome)
       ]);
 
   @JsonKey(ignore: true)
@@ -7082,15 +6674,15 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -7102,7 +6694,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -7170,7 +6762,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: freezed == description
@@ -7182,15 +6774,15 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       copyright: freezed == copyright
@@ -7222,27 +6814,27 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       author: freezed == author
-          ? _value._author
+          ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       editor: freezed == editor
-          ? _value._editor
+          ? _value.editor
           : editor // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       reviewer: freezed == reviewer
-          ? _value._reviewer
+          ? _value.reviewer
           : reviewer // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       endorser: freezed == endorser
-          ? _value._endorser
+          ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       type: freezed == type
@@ -7254,7 +6846,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       characteristic: null == characteristic
-          ? _value._characteristic
+          ? _value.characteristic
           : characteristic // ignore: cast_nullable_to_non_nullable
               as List<EvidenceVariableCharacteristic>,
     ));
@@ -7276,14 +6868,14 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -7309,13 +6901,13 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
+      this.note,
+      this.useContext,
+      this.jurisdiction,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
@@ -7326,33 +6918,18 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
           this.type,
       @JsonKey(name: '_type')
           this.typeElement,
-      required final List<EvidenceVariableCharacteristic> characteristic})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _note = note,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _characteristic = characteristic,
-        super._();
+      required this.characteristic})
+      : super._();
 
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceVariableFromJson(json);
@@ -7376,48 +6953,20 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -7459,47 +7008,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
+  final List<Annotation>? note;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? copyright;
   @override
@@ -7517,72 +7038,26 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
+  final List<CodeableConcept>? topic;
   @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
+  final List<ContactDetail>? author;
   @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
+  final List<ContactDetail>? editor;
   @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
+  final List<ContactDetail>? reviewer;
   @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<ContactDetail>? endorser;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(unknownEnumValue: EvidenceVariableType.unknown)
   final EvidenceVariableType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
-  final List<EvidenceVariableCharacteristic> _characteristic;
   @override
-  List<EvidenceVariableCharacteristic> get characteristic {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_characteristic);
-  }
+  final List<EvidenceVariableCharacteristic> characteristic;
 
   @override
   String toString() {
@@ -7607,17 +7082,16 @@ class _$_EvidenceVariable extends _EvidenceVariable {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -7645,16 +7119,16 @@ class _$_EvidenceVariable extends _EvidenceVariable {
                 other.publisher == publisher) &&
             (identical(other.publisherElement, publisherElement) ||
                 other.publisherElement == publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
+                .equals(other.jurisdiction, jurisdiction) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
@@ -7669,18 +7143,18 @@ class _$_EvidenceVariable extends _EvidenceVariable {
                 other.lastReviewDateElement == lastReviewDateElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.editor, editor) &&
+            const DeepCollectionEquality().equals(other.reviewer, reviewer) &&
+            const DeepCollectionEquality().equals(other.endorser, endorser) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
             const DeepCollectionEquality()
-                .equals(other._characteristic, _characteristic));
+                .equals(other.characteristic, characteristic));
   }
 
   @JsonKey(ignore: true)
@@ -7695,12 +7169,12 @@ class _$_EvidenceVariable extends _EvidenceVariable {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -7717,12 +7191,12 @@ class _$_EvidenceVariable extends _EvidenceVariable {
         dateElement,
         publisher,
         publisherElement,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
         copyright,
         copyrightElement,
         approvalDate,
@@ -7730,15 +7204,15 @@ class _$_EvidenceVariable extends _EvidenceVariable {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(editor),
+        const DeepCollectionEquality().hash(reviewer),
+        const DeepCollectionEquality().hash(endorser),
+        const DeepCollectionEquality().hash(relatedArtifact),
         type,
         typeElement,
-        const DeepCollectionEquality().hash(_characteristic)
+        const DeepCollectionEquality().hash(characteristic)
       ]);
 
   @JsonKey(ignore: true)
@@ -8504,11 +7978,11 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -8548,7 +8022,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
           : definitionTriggerDefinition // ignore: cast_nullable_to_non_nullable
               as TriggerDefinition?,
       usageContext: freezed == usageContext
-          ? _value._usageContext
+          ? _value.usageContext
           : usageContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       exclude: freezed == exclude
@@ -8603,8 +8077,8 @@ class _$_EvidenceVariableCharacteristic
   _$_EvidenceVariableCharacteristic(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
@@ -8616,7 +8090,7 @@ class _$_EvidenceVariableCharacteristic
       this.definitionExpression,
       this.definitionDataRequirement,
       this.definitionTriggerDefinition,
-      final List<UsageContext>? usageContext,
+      this.usageContext,
       this.exclude,
       @JsonKey(name: '_exclude')
           this.excludeElement,
@@ -8631,10 +8105,7 @@ class _$_EvidenceVariableCharacteristic
           this.groupMeasure,
       @JsonKey(name: '_groupMeasure')
           this.groupMeasureElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _usageContext = usageContext,
-        super._();
+      : super._();
 
   factory _$_EvidenceVariableCharacteristic.fromJson(
           Map<String, dynamic> json) =>
@@ -8642,25 +8113,11 @@ class _$_EvidenceVariableCharacteristic
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -8681,15 +8138,8 @@ class _$_EvidenceVariableCharacteristic
   final DataRequirement? definitionDataRequirement;
   @override
   final TriggerDefinition? definitionTriggerDefinition;
-  final List<UsageContext>? _usageContext;
   @override
-  List<UsageContext>? get usageContext {
-    final value = _usageContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<UsageContext>? usageContext;
   @override
   final Boolean? exclude;
   @override
@@ -8727,9 +8177,9 @@ class _$_EvidenceVariableCharacteristic
             other is _$_EvidenceVariableCharacteristic &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -8751,7 +8201,7 @@ class _$_EvidenceVariableCharacteristic
                 other.definitionTriggerDefinition ==
                     definitionTriggerDefinition) &&
             const DeepCollectionEquality()
-                .equals(other._usageContext, _usageContext) &&
+                .equals(other.usageContext, usageContext) &&
             (identical(other.exclude, exclude) || other.exclude == exclude) &&
             (identical(other.excludeElement, excludeElement) ||
                 other.excludeElement == excludeElement) &&
@@ -8780,8 +8230,8 @@ class _$_EvidenceVariableCharacteristic
   int get hashCode => Object.hashAll([
         runtimeType,
         id,
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         description,
         descriptionElement,
         definitionReference,
@@ -8791,7 +8241,7 @@ class _$_EvidenceVariableCharacteristic
         definitionExpression,
         definitionDataRequirement,
         definitionTriggerDefinition,
-        const DeepCollectionEquality().hash(_usageContext),
+        const DeepCollectionEquality().hash(usageContext),
         exclude,
         excludeElement,
         participantEffectiveDateTime,
@@ -10057,15 +9507,15 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -10077,7 +9527,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -10161,7 +9611,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: freezed == description
@@ -10173,19 +9623,19 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       comment: freezed == comment
-          ? _value._comment
+          ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       commentElement: freezed == commentElement
-          ? _value._commentElement
+          ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       purpose: freezed == purpose
@@ -10233,31 +9683,31 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       author: freezed == author
-          ? _value._author
+          ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       editor: freezed == editor
-          ? _value._editor
+          ? _value.editor
           : editor // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       reviewer: freezed == reviewer
-          ? _value._reviewer
+          ? _value.reviewer
           : reviewer // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       endorser: freezed == endorser
-          ? _value._endorser
+          ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       library_: freezed == library_
-          ? _value._library_
+          ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       population: null == population
@@ -10295,14 +9745,14 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -10333,15 +9783,15 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<String>? comment,
+      this.comment,
       @JsonKey(name: '_comment')
-          final List<Element?>? commentElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
+          this.commentElement,
+      this.useContext,
+      this.jurisdiction,
       this.purpose,
       @JsonKey(name: '_purpose')
           this.purposeElement,
@@ -10358,35 +9808,19 @@ class _$_ResearchDefinition extends _ResearchDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          this.library_,
       required this.population,
       this.exposure,
       this.exposureAlternative,
       this.outcome})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _comment = comment,
-        _commentElement = commentElement,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _library_ = library_,
-        super._();
+      : super._();
 
   factory _$_ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchDefinitionFromJson(json);
@@ -10410,48 +9844,20 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -10502,57 +9908,22 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<String>? _comment;
   @override
-  List<String>? get comment {
-    final value = _comment;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _commentElement;
+  final List<String>? comment;
   @override
   @JsonKey(name: '_comment')
-  List<Element?>? get commentElement {
-    final value = _commentElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
+  final List<Element?>? commentElement;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -10580,70 +9951,21 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
+  final List<CodeableConcept>? topic;
   @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
+  final List<ContactDetail>? author;
   @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
+  final List<ContactDetail>? editor;
   @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
+  final List<ContactDetail>? reviewer;
   @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<ContactDetail>? endorser;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Canonical>? _library_;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
-    final value = _library_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Canonical>? library_;
   @override
   final Reference population;
   @override
@@ -10676,17 +9998,16 @@ class _$_ResearchDefinition extends _ResearchDefinition {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -10722,18 +10043,18 @@ class _$_ResearchDefinition extends _ResearchDefinition {
                 other.publisher == publisher) &&
             (identical(other.publisherElement, publisherElement) ||
                 other.publisherElement == publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._comment, _comment) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
             const DeepCollectionEquality()
-                .equals(other._commentElement, _commentElement) &&
+                .equals(other.commentElement, commentElement) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
+                .equals(other.jurisdiction, jurisdiction) &&
             (identical(other.purpose, purpose) || other.purpose == purpose) &&
             (identical(other.purposeElement, purposeElement) ||
                 other.purposeElement == purposeElement) &&
@@ -10754,14 +10075,14 @@ class _$_ResearchDefinition extends _ResearchDefinition {
                 other.lastReviewDateElement == lastReviewDateElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.editor, editor) &&
+            const DeepCollectionEquality().equals(other.reviewer, reviewer) &&
+            const DeepCollectionEquality().equals(other.endorser, endorser) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality().equals(other._library_, _library_) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.library_, library_) &&
             (identical(other.population, population) ||
                 other.population == population) &&
             (identical(other.exposure, exposure) ||
@@ -10783,12 +10104,12 @@ class _$_ResearchDefinition extends _ResearchDefinition {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -10809,13 +10130,13 @@ class _$_ResearchDefinition extends _ResearchDefinition {
         dateElement,
         publisher,
         publisherElement,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_comment),
-        const DeepCollectionEquality().hash(_commentElement),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(comment),
+        const DeepCollectionEquality().hash(commentElement),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
         purpose,
         purposeElement,
         usage,
@@ -10827,13 +10148,13 @@ class _$_ResearchDefinition extends _ResearchDefinition {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(_library_),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(editor),
+        const DeepCollectionEquality().hash(reviewer),
+        const DeepCollectionEquality().hash(endorser),
+        const DeepCollectionEquality().hash(relatedArtifact),
+        const DeepCollectionEquality().hash(library_),
         population,
         exposure,
         exposureAlternative,
@@ -12247,15 +11568,15 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -12267,7 +11588,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -12351,7 +11672,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: freezed == description
@@ -12363,19 +11684,19 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       comment: freezed == comment
-          ? _value._comment
+          ? _value.comment
           : comment // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       commentElement: freezed == commentElement
-          ? _value._commentElement
+          ? _value.commentElement
           : commentElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       purpose: freezed == purpose
@@ -12423,31 +11744,31 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       author: freezed == author
-          ? _value._author
+          ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       editor: freezed == editor
-          ? _value._editor
+          ? _value.editor
           : editor // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       reviewer: freezed == reviewer
-          ? _value._reviewer
+          ? _value.reviewer
           : reviewer // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       endorser: freezed == endorser
-          ? _value._endorser
+          ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       library_: freezed == library_
-          ? _value._library_
+          ? _value.library_
           : library_ // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
       type: freezed == type
@@ -12467,7 +11788,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           : variableTypeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       characteristic: null == characteristic
-          ? _value._characteristic
+          ? _value.characteristic
           : characteristic // ignore: cast_nullable_to_non_nullable
               as List<ResearchElementDefinitionCharacteristic>,
     ));
@@ -12489,14 +11810,14 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -12527,15 +11848,15 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<String>? comment,
+      this.comment,
       @JsonKey(name: '_comment')
-          final List<Element?>? commentElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
+          this.commentElement,
+      this.useContext,
+      this.jurisdiction,
       this.purpose,
       @JsonKey(name: '_purpose')
           this.purposeElement,
@@ -12552,14 +11873,14 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       @JsonKey(name: 'library')
-          final List<Canonical>? library_,
+          this.library_,
       @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
           this.type,
       @JsonKey(name: '_type')
@@ -12568,26 +11889,8 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
           this.variableType,
       @JsonKey(name: '_variableType')
           this.variableTypeElement,
-      required final List<ResearchElementDefinitionCharacteristic>
-          characteristic})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _comment = comment,
-        _commentElement = commentElement,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _library_ = library_,
-        _characteristic = characteristic,
-        super._();
+      required this.characteristic})
+      : super._();
 
   factory _$_ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchElementDefinitionFromJson(json);
@@ -12611,48 +11914,20 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -12703,57 +11978,22 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<String>? _comment;
   @override
-  List<String>? get comment {
-    final value = _comment;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _commentElement;
+  final List<String>? comment;
   @override
   @JsonKey(name: '_comment')
-  List<Element?>? get commentElement {
-    final value = _commentElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
+  final List<Element?>? commentElement;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? purpose;
   @override
@@ -12781,70 +12021,21 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
+  final List<CodeableConcept>? topic;
   @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
+  final List<ContactDetail>? author;
   @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
+  final List<ContactDetail>? editor;
   @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
+  final List<ContactDetail>? reviewer;
   @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<ContactDetail>? endorser;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Canonical>? _library_;
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   @JsonKey(name: 'library')
-  List<Canonical>? get library_ {
-    final value = _library_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Canonical>? library_;
   @override
   @JsonKey(unknownEnumValue: ResearchElementDefinitionType.unknown)
   final ResearchElementDefinitionType? type;
@@ -12857,12 +12048,8 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @override
   @JsonKey(name: '_variableType')
   final Element? variableTypeElement;
-  final List<ResearchElementDefinitionCharacteristic> _characteristic;
   @override
-  List<ResearchElementDefinitionCharacteristic> get characteristic {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_characteristic);
-  }
+  final List<ResearchElementDefinitionCharacteristic> characteristic;
 
   @override
   String toString() {
@@ -12887,17 +12074,16 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -12933,18 +12119,18 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
                 other.publisher == publisher) &&
             (identical(other.publisherElement, publisherElement) ||
                 other.publisherElement == publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._comment, _comment) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
             const DeepCollectionEquality()
-                .equals(other._commentElement, _commentElement) &&
+                .equals(other.commentElement, commentElement) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
+                .equals(other.jurisdiction, jurisdiction) &&
             (identical(other.purpose, purpose) || other.purpose == purpose) &&
             (identical(other.purposeElement, purposeElement) ||
                 other.purposeElement == purposeElement) &&
@@ -12965,14 +12151,14 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
                 other.lastReviewDateElement == lastReviewDateElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.editor, editor) &&
+            const DeepCollectionEquality().equals(other.reviewer, reviewer) &&
+            const DeepCollectionEquality().equals(other.endorser, endorser) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality().equals(other._library_, _library_) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
+            const DeepCollectionEquality().equals(other.library_, library_) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -12980,7 +12166,8 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
                 other.variableType == variableType) &&
             (identical(other.variableTypeElement, variableTypeElement) ||
                 other.variableTypeElement == variableTypeElement) &&
-            const DeepCollectionEquality().equals(other._characteristic, _characteristic));
+            const DeepCollectionEquality()
+                .equals(other.characteristic, characteristic));
   }
 
   @JsonKey(ignore: true)
@@ -12995,12 +12182,12 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -13021,13 +12208,13 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
         dateElement,
         publisher,
         publisherElement,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_comment),
-        const DeepCollectionEquality().hash(_commentElement),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(comment),
+        const DeepCollectionEquality().hash(commentElement),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
         purpose,
         purposeElement,
         usage,
@@ -13039,18 +12226,18 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
-        const DeepCollectionEquality().hash(_library_),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(editor),
+        const DeepCollectionEquality().hash(reviewer),
+        const DeepCollectionEquality().hash(endorser),
+        const DeepCollectionEquality().hash(relatedArtifact),
+        const DeepCollectionEquality().hash(library_),
         type,
         typeElement,
         variableType,
         variableTypeElement,
-        const DeepCollectionEquality().hash(_characteristic)
+        const DeepCollectionEquality().hash(characteristic)
       ]);
 
   @JsonKey(ignore: true)
@@ -14099,11 +13286,11 @@ class __$$_ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       definitionCodeableConcept: freezed == definitionCodeableConcept
@@ -14127,7 +13314,7 @@ class __$$_ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
           : definitionDataRequirement // ignore: cast_nullable_to_non_nullable
               as DataRequirement?,
       usageContext: freezed == usageContext
-          ? _value._usageContext
+          ? _value.usageContext
           : usageContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       exclude: freezed == exclude
@@ -14241,15 +13428,15 @@ class _$_ResearchElementDefinitionCharacteristic
   _$_ResearchElementDefinitionCharacteristic(
       {this.id,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.definitionCodeableConcept,
       this.definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           this.definitionCanonicalElement,
       this.definitionExpression,
       this.definitionDataRequirement,
-      final List<UsageContext>? usageContext,
+      this.usageContext,
       this.exclude,
       @JsonKey(name: '_exclude')
           this.excludeElement,
@@ -14288,10 +13475,7 @@ class _$_ResearchElementDefinitionCharacteristic
           this.participantEffectiveGroupMeasure,
       @JsonKey(name: '_participantEffectiveGroupMeasure')
           this.participantEffectiveGroupMeasureElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _usageContext = usageContext,
-        super._();
+      : super._();
 
   factory _$_ResearchElementDefinitionCharacteristic.fromJson(
           Map<String, dynamic> json) =>
@@ -14299,25 +13483,11 @@ class _$_ResearchElementDefinitionCharacteristic
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? definitionCodeableConcept;
   @override
@@ -14329,15 +13499,8 @@ class _$_ResearchElementDefinitionCharacteristic
   final Expression? definitionExpression;
   @override
   final DataRequirement? definitionDataRequirement;
-  final List<UsageContext>? _usageContext;
   @override
-  List<UsageContext>? get usageContext {
-    final value = _usageContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<UsageContext>? usageContext;
   @override
   final Boolean? exclude;
   @override
@@ -14414,9 +13577,9 @@ class _$_ResearchElementDefinitionCharacteristic
             other is _$_ResearchElementDefinitionCharacteristic &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.definitionCodeableConcept, definitionCodeableConcept) ||
                 other.definitionCodeableConcept == definitionCodeableConcept) &&
             (identical(other.definitionCanonical, definitionCanonical) ||
@@ -14429,7 +13592,7 @@ class _$_ResearchElementDefinitionCharacteristic
             (identical(other.definitionDataRequirement, definitionDataRequirement) ||
                 other.definitionDataRequirement == definitionDataRequirement) &&
             const DeepCollectionEquality()
-                .equals(other._usageContext, _usageContext) &&
+                .equals(other.usageContext, usageContext) &&
             (identical(other.exclude, exclude) || other.exclude == exclude) &&
             (identical(other.excludeElement, excludeElement) ||
                 other.excludeElement == excludeElement) &&
@@ -14476,14 +13639,14 @@ class _$_ResearchElementDefinitionCharacteristic
   int get hashCode => Object.hashAll([
         runtimeType,
         id,
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         definitionCodeableConcept,
         definitionCanonical,
         definitionCanonicalElement,
         definitionExpression,
         definitionDataRequirement,
-        const DeepCollectionEquality().hash(_usageContext),
+        const DeepCollectionEquality().hash(usageContext),
         exclude,
         excludeElement,
         unitOfMeasure,
@@ -15647,15 +14810,15 @@ class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: freezed == url
@@ -15667,7 +14830,7 @@ class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       version: freezed == version
@@ -15719,7 +14882,7 @@ class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
           : publisherElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       description: freezed == description
@@ -15731,15 +14894,15 @@ class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       useContext: freezed == useContext
-          ? _value._useContext
+          ? _value.useContext
           : useContext // ignore: cast_nullable_to_non_nullable
               as List<UsageContext>?,
       jurisdiction: freezed == jurisdiction
-          ? _value._jurisdiction
+          ? _value.jurisdiction
           : jurisdiction // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       copyright: freezed == copyright
@@ -15771,27 +14934,27 @@ class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
       topic: freezed == topic
-          ? _value._topic
+          ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       author: freezed == author
-          ? _value._author
+          ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       editor: freezed == editor
-          ? _value._editor
+          ? _value.editor
           : editor // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       reviewer: freezed == reviewer
-          ? _value._reviewer
+          ? _value.reviewer
           : reviewer // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       endorser: freezed == endorser
-          ? _value._endorser
+          ? _value.endorser
           : endorser // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
       relatedArtifact: freezed == relatedArtifact
-          ? _value._relatedArtifact
+          ? _value.relatedArtifact
           : relatedArtifact // ignore: cast_nullable_to_non_nullable
               as List<RelatedArtifact>?,
       synthesisType: freezed == synthesisType
@@ -15823,7 +14986,7 @@ class __$$_RiskEvidenceSynthesisCopyWithImpl<$Res>
           : riskEstimate // ignore: cast_nullable_to_non_nullable
               as RiskEvidenceSynthesisRiskEstimate?,
       certainty: freezed == certainty
-          ? _value._certainty
+          ? _value.certainty
           : certainty // ignore: cast_nullable_to_non_nullable
               as List<RiskEvidenceSynthesisCertainty>?,
     ));
@@ -15845,14 +15008,14 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.version,
       @JsonKey(name: '_version')
           this.versionElement,
@@ -15872,13 +15035,13 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       this.publisher,
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
+      this.contact,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
+      this.note,
+      this.useContext,
+      this.jurisdiction,
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
@@ -15889,12 +15052,12 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       this.synthesisType,
       this.studyType,
       required this.population,
@@ -15902,23 +15065,8 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
       required this.outcome,
       this.sampleSize,
       this.riskEstimate,
-      final List<RiskEvidenceSynthesisCertainty>? certainty})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _contact = contact,
-        _note = note,
-        _useContext = useContext,
-        _jurisdiction = jurisdiction,
-        _topic = topic,
-        _author = author,
-        _editor = editor,
-        _reviewer = reviewer,
-        _endorser = endorser,
-        _relatedArtifact = relatedArtifact,
-        _certainty = certainty,
-        super._();
+      this.certainty})
+      : super._();
 
   factory _$_RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$$_RiskEvidenceSynthesisFromJson(json);
@@ -15942,48 +15090,20 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final FhirUri? url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? version;
   @override
@@ -16015,47 +15135,19 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactDetail>? contact;
   @override
   final Markdown? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<UsageContext>? _useContext;
+  final List<Annotation>? note;
   @override
-  List<UsageContext>? get useContext {
-    final value = _useContext;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _jurisdiction;
+  final List<UsageContext>? useContext;
   @override
-  List<CodeableConcept>? get jurisdiction {
-    final value = _jurisdiction;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? jurisdiction;
   @override
   final Markdown? copyright;
   @override
@@ -16073,60 +15165,18 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   final Element? lastReviewDateElement;
   @override
   final Period? effectivePeriod;
-  final List<CodeableConcept>? _topic;
   @override
-  List<CodeableConcept>? get topic {
-    final value = _topic;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _author;
+  final List<CodeableConcept>? topic;
   @override
-  List<ContactDetail>? get author {
-    final value = _author;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _editor;
+  final List<ContactDetail>? author;
   @override
-  List<ContactDetail>? get editor {
-    final value = _editor;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _reviewer;
+  final List<ContactDetail>? editor;
   @override
-  List<ContactDetail>? get reviewer {
-    final value = _reviewer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ContactDetail>? _endorser;
+  final List<ContactDetail>? reviewer;
   @override
-  List<ContactDetail>? get endorser {
-    final value = _endorser;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RelatedArtifact>? _relatedArtifact;
+  final List<ContactDetail>? endorser;
   @override
-  List<RelatedArtifact>? get relatedArtifact {
-    final value = _relatedArtifact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<RelatedArtifact>? relatedArtifact;
   @override
   final CodeableConcept? synthesisType;
   @override
@@ -16141,14 +15191,8 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
   final RiskEvidenceSynthesisSampleSize? sampleSize;
   @override
   final RiskEvidenceSynthesisRiskEstimate? riskEstimate;
-  final List<RiskEvidenceSynthesisCertainty>? _certainty;
   @override
-  List<RiskEvidenceSynthesisCertainty>? get certainty {
-    final value = _certainty;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<RiskEvidenceSynthesisCertainty>? certainty;
 
   @override
   String toString() {
@@ -16173,17 +15217,16 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
@@ -16203,16 +15246,16 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
                 other.publisher == publisher) &&
             (identical(other.publisherElement, publisherElement) ||
                 other.publisherElement == publisherElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._useContext, _useContext) &&
+                .equals(other.useContext, useContext) &&
             const DeepCollectionEquality()
-                .equals(other._jurisdiction, _jurisdiction) &&
+                .equals(other.jurisdiction, jurisdiction) &&
             (identical(other.copyright, copyright) ||
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
@@ -16227,13 +15270,13 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
                 other.lastReviewDateElement == lastReviewDateElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
-            const DeepCollectionEquality().equals(other._topic, _topic) &&
-            const DeepCollectionEquality().equals(other._author, _author) &&
-            const DeepCollectionEquality().equals(other._editor, _editor) &&
-            const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
-            const DeepCollectionEquality().equals(other._endorser, _endorser) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            const DeepCollectionEquality().equals(other.author, author) &&
+            const DeepCollectionEquality().equals(other.editor, editor) &&
+            const DeepCollectionEquality().equals(other.reviewer, reviewer) &&
+            const DeepCollectionEquality().equals(other.endorser, endorser) &&
             const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+                .equals(other.relatedArtifact, relatedArtifact) &&
             (identical(other.synthesisType, synthesisType) ||
                 other.synthesisType == synthesisType) &&
             (identical(other.studyType, studyType) ||
@@ -16247,8 +15290,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
                 other.sampleSize == sampleSize) &&
             (identical(other.riskEstimate, riskEstimate) ||
                 other.riskEstimate == riskEstimate) &&
-            const DeepCollectionEquality()
-                .equals(other._certainty, _certainty));
+            const DeepCollectionEquality().equals(other.certainty, certainty));
   }
 
   @JsonKey(ignore: true)
@@ -16263,12 +15305,12 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         version,
         versionElement,
         name,
@@ -16281,12 +15323,12 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
         dateElement,
         publisher,
         publisherElement,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_note),
-        const DeepCollectionEquality().hash(_useContext),
-        const DeepCollectionEquality().hash(_jurisdiction),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(useContext),
+        const DeepCollectionEquality().hash(jurisdiction),
         copyright,
         copyrightElement,
         approvalDate,
@@ -16294,12 +15336,12 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
         lastReviewDate,
         lastReviewDateElement,
         effectivePeriod,
-        const DeepCollectionEquality().hash(_topic),
-        const DeepCollectionEquality().hash(_author),
-        const DeepCollectionEquality().hash(_editor),
-        const DeepCollectionEquality().hash(_reviewer),
-        const DeepCollectionEquality().hash(_endorser),
-        const DeepCollectionEquality().hash(_relatedArtifact),
+        const DeepCollectionEquality().hash(topic),
+        const DeepCollectionEquality().hash(author),
+        const DeepCollectionEquality().hash(editor),
+        const DeepCollectionEquality().hash(reviewer),
+        const DeepCollectionEquality().hash(endorser),
+        const DeepCollectionEquality().hash(relatedArtifact),
         synthesisType,
         studyType,
         population,
@@ -16307,7 +15349,7 @@ class _$_RiskEvidenceSynthesis extends _RiskEvidenceSynthesis {
         outcome,
         sampleSize,
         riskEstimate,
-        const DeepCollectionEquality().hash(_certainty)
+        const DeepCollectionEquality().hash(certainty)
       ]);
 
   @JsonKey(ignore: true)
@@ -16749,11 +15791,11 @@ class __$$_RiskEvidenceSynthesisSampleSizeCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -16790,17 +15832,15 @@ class _$_RiskEvidenceSynthesisSampleSize
     extends _RiskEvidenceSynthesisSampleSize {
   _$_RiskEvidenceSynthesisSampleSize(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.numberOfStudies,
       @JsonKey(name: '_numberOfStudies') this.numberOfStudiesElement,
       this.numberOfParticipants,
       @JsonKey(name: '_numberOfParticipants') this.numberOfParticipantsElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_RiskEvidenceSynthesisSampleSize.fromJson(
           Map<String, dynamic> json) =>
@@ -16808,25 +15848,11 @@ class _$_RiskEvidenceSynthesisSampleSize
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -16855,9 +15881,9 @@ class _$_RiskEvidenceSynthesisSampleSize
             other is _$_RiskEvidenceSynthesisSampleSize &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -16879,8 +15905,8 @@ class _$_RiskEvidenceSynthesisSampleSize
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       description,
       descriptionElement,
       numberOfStudies,
@@ -17257,11 +16283,11 @@ class __$$_RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       description: freezed == description
@@ -17305,7 +16331,7 @@ class __$$_RiskEvidenceSynthesisRiskEstimateCopyWithImpl<$Res>
           : numeratorCountElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       precisionEstimate: freezed == precisionEstimate
-          ? _value._precisionEstimate
+          ? _value.precisionEstimate
           : precisionEstimate // ignore: cast_nullable_to_non_nullable
               as List<RiskEvidenceSynthesisPrecisionEstimate>?,
     ));
@@ -17318,8 +16344,8 @@ class _$_RiskEvidenceSynthesisRiskEstimate
     extends _RiskEvidenceSynthesisRiskEstimate {
   _$_RiskEvidenceSynthesisRiskEstimate(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.type,
@@ -17330,11 +16356,8 @@ class _$_RiskEvidenceSynthesisRiskEstimate
       @JsonKey(name: '_denominatorCount') this.denominatorCountElement,
       this.numeratorCount,
       @JsonKey(name: '_numeratorCount') this.numeratorCountElement,
-      final List<RiskEvidenceSynthesisPrecisionEstimate>? precisionEstimate})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _precisionEstimate = precisionEstimate,
-        super._();
+      this.precisionEstimate})
+      : super._();
 
   factory _$_RiskEvidenceSynthesisRiskEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -17342,25 +16365,11 @@ class _$_RiskEvidenceSynthesisRiskEstimate
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final String? description;
   @override
@@ -17385,14 +16394,8 @@ class _$_RiskEvidenceSynthesisRiskEstimate
   @override
   @JsonKey(name: '_numeratorCount')
   final Element? numeratorCountElement;
-  final List<RiskEvidenceSynthesisPrecisionEstimate>? _precisionEstimate;
   @override
-  List<RiskEvidenceSynthesisPrecisionEstimate>? get precisionEstimate {
-    final value = _precisionEstimate;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<RiskEvidenceSynthesisPrecisionEstimate>? precisionEstimate;
 
   @override
   String toString() {
@@ -17406,9 +16409,9 @@ class _$_RiskEvidenceSynthesisRiskEstimate
             other is _$_RiskEvidenceSynthesisRiskEstimate &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -17429,7 +16432,7 @@ class _$_RiskEvidenceSynthesisRiskEstimate
             (identical(other.numeratorCountElement, numeratorCountElement) ||
                 other.numeratorCountElement == numeratorCountElement) &&
             const DeepCollectionEquality()
-                .equals(other._precisionEstimate, _precisionEstimate));
+                .equals(other.precisionEstimate, precisionEstimate));
   }
 
   @JsonKey(ignore: true)
@@ -17437,8 +16440,8 @@ class _$_RiskEvidenceSynthesisRiskEstimate
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       description,
       descriptionElement,
       type,
@@ -17449,7 +16452,7 @@ class _$_RiskEvidenceSynthesisRiskEstimate
       denominatorCountElement,
       numeratorCount,
       numeratorCountElement,
-      const DeepCollectionEquality().hash(_precisionEstimate));
+      const DeepCollectionEquality().hash(precisionEstimate));
 
   @JsonKey(ignore: true)
   @override
@@ -17772,11 +16775,11 @@ class __$$_RiskEvidenceSynthesisPrecisionEstimateCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -17817,8 +16820,8 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
     extends _RiskEvidenceSynthesisPrecisionEstimate {
   _$_RiskEvidenceSynthesisPrecisionEstimate(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
       this.level,
       @JsonKey(name: '_level') this.levelElement,
@@ -17826,9 +16829,7 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
       @JsonKey(name: '_from') this.fromElement,
       this.to,
       @JsonKey(name: '_to') this.toElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_RiskEvidenceSynthesisPrecisionEstimate.fromJson(
           Map<String, dynamic> json) =>
@@ -17836,25 +16837,11 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
   @override
@@ -17885,9 +16872,9 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
             other is _$_RiskEvidenceSynthesisPrecisionEstimate &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.level, level) || other.level == level) &&
             (identical(other.levelElement, levelElement) ||
@@ -17905,8 +16892,8 @@ class _$_RiskEvidenceSynthesisPrecisionEstimate
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       level,
       levelElement,
@@ -18116,23 +17103,23 @@ class __$$_RiskEvidenceSynthesisCertaintyCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       rating: freezed == rating
-          ? _value._rating
+          ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       certaintySubcomponent: freezed == certaintySubcomponent
-          ? _value._certaintySubcomponent
+          ? _value.certaintySubcomponent
           : certaintySubcomponent // ignore: cast_nullable_to_non_nullable
               as List<RiskEvidenceSynthesisCertaintySubcomponent>?,
     ));
@@ -18145,18 +17132,12 @@ class _$_RiskEvidenceSynthesisCertainty
     extends _RiskEvidenceSynthesisCertainty {
   _$_RiskEvidenceSynthesisCertainty(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note,
-      final List<RiskEvidenceSynthesisCertaintySubcomponent>?
-          certaintySubcomponent})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        _certaintySubcomponent = certaintySubcomponent,
-        super._();
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.rating,
+      this.note,
+      this.certaintySubcomponent})
+      : super._();
 
   factory _$_RiskEvidenceSynthesisCertainty.fromJson(
           Map<String, dynamic> json) =>
@@ -18164,52 +17145,17 @@ class _$_RiskEvidenceSynthesisCertainty
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _rating;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<CodeableConcept>? rating;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<RiskEvidenceSynthesisCertaintySubcomponent>?
-      _certaintySubcomponent;
+  final List<Annotation>? note;
   @override
-  List<RiskEvidenceSynthesisCertaintySubcomponent>? get certaintySubcomponent {
-    final value = _certaintySubcomponent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<RiskEvidenceSynthesisCertaintySubcomponent>? certaintySubcomponent;
 
   @override
   String toString() {
@@ -18223,13 +17169,13 @@ class _$_RiskEvidenceSynthesisCertainty
             other is _$_RiskEvidenceSynthesisCertainty &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.rating, rating) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality()
-                .equals(other._certaintySubcomponent, _certaintySubcomponent));
+                .equals(other.certaintySubcomponent, certaintySubcomponent));
   }
 
   @JsonKey(ignore: true)
@@ -18237,11 +17183,11 @@ class _$_RiskEvidenceSynthesisCertainty
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note),
-      const DeepCollectionEquality().hash(_certaintySubcomponent));
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(rating),
+      const DeepCollectionEquality().hash(note),
+      const DeepCollectionEquality().hash(certaintySubcomponent));
 
   @JsonKey(ignore: true)
   @override
@@ -18445,11 +17391,11 @@ class __$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -18457,11 +17403,11 @@ class __$$_RiskEvidenceSynthesisCertaintySubcomponentCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       rating: freezed == rating
-          ? _value._rating
+          ? _value.rating
           : rating // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -18474,16 +17420,12 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
     extends _RiskEvidenceSynthesisCertaintySubcomponent {
   _$_RiskEvidenceSynthesisCertaintySubcomponent(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.type,
-      final List<CodeableConcept>? rating,
-      final List<Annotation>? note})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _rating = rating,
-        _note = note,
-        super._();
+      this.rating,
+      this.note})
+      : super._();
 
   factory _$_RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
@@ -18491,44 +17433,17 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
 
   @override
   final String? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? type;
-  final List<CodeableConcept>? _rating;
   @override
-  List<CodeableConcept>? get rating {
-    final value = _rating;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<CodeableConcept>? rating;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -18542,12 +17457,12 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
             other is _$_RiskEvidenceSynthesisCertaintySubcomponent &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._rating, _rating) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+            const DeepCollectionEquality().equals(other.rating, rating) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
@@ -18555,11 +17470,11 @@ class _$_RiskEvidenceSynthesisCertaintySubcomponent
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
-      const DeepCollectionEquality().hash(_rating),
-      const DeepCollectionEquality().hash(_note));
+      const DeepCollectionEquality().hash(rating),
+      const DeepCollectionEquality().hash(note));
 
   @JsonKey(ignore: true)
   @override

@@ -88,7 +88,7 @@ class __$$_BackboneElementCopyWithImpl<$Res>
   }) {
     return _then(_$_BackboneElement(
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
     ));
@@ -98,21 +98,13 @@ class __$$_BackboneElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BackboneElement extends _BackboneElement {
-  _$_BackboneElement({final List<FhirExtension>? modifierExtension})
-      : _modifierExtension = modifierExtension,
-        super._();
+  _$_BackboneElement({this.modifierExtension}) : super._();
 
   factory _$_BackboneElement.fromJson(Map<String, dynamic> json) =>
       _$$_BackboneElementFromJson(json);
 
-  final List<FhirExtension>? _modifierExtension;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<FhirExtension>? modifierExtension;
 
   @override
   String toString() {
@@ -125,13 +117,13 @@ class _$_BackboneElement extends _BackboneElement {
         (other.runtimeType == runtimeType &&
             other is _$_BackboneElement &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension));
+                .equals(other.modifierExtension, modifierExtension));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_modifierExtension));
+      runtimeType, const DeepCollectionEquality().hash(modifierExtension));
 
   @JsonKey(ignore: true)
   @override
@@ -1638,7 +1630,7 @@ class __$$_CodeableConceptCopyWithImpl<$Res>
   }) {
     return _then(_$_CodeableConcept(
       coding: freezed == coding
-          ? _value._coding
+          ? _value.coding
           : coding // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       text: freezed == text
@@ -1657,24 +1649,14 @@ class __$$_CodeableConceptCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CodeableConcept extends _CodeableConcept {
   _$_CodeableConcept(
-      {final List<Coding>? coding,
-      this.text,
-      @JsonKey(name: '_text') this.textElement})
-      : _coding = coding,
-        super._();
+      {this.coding, this.text, @JsonKey(name: '_text') this.textElement})
+      : super._();
 
   factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
       _$$_CodeableConceptFromJson(json);
 
-  final List<Coding>? _coding;
   @override
-  List<Coding>? get coding {
-    final value = _coding;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? coding;
   @override
   final String? text;
   @override
@@ -1691,7 +1673,7 @@ class _$_CodeableConcept extends _CodeableConcept {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CodeableConcept &&
-            const DeepCollectionEquality().equals(other._coding, _coding) &&
+            const DeepCollectionEquality().equals(other.coding, coding) &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.textElement, textElement) ||
                 other.textElement == textElement));
@@ -1700,7 +1682,7 @@ class _$_CodeableConcept extends _CodeableConcept {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_coding), text, textElement);
+      const DeepCollectionEquality().hash(coding), text, textElement);
 
   @JsonKey(ignore: true)
   @override
@@ -6136,7 +6118,7 @@ class __$$_SignatureCopyWithImpl<$Res>
   }) {
     return _then(_$_Signature(
       type: null == type
-          ? _value._type
+          ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<Coding>,
       when: freezed == when
@@ -6195,7 +6177,7 @@ class __$$_SignatureCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Signature extends _Signature {
   _$_Signature(
-      {required final List<Coding> type,
+      {required this.type,
       this.when,
       @JsonKey(name: '_when') this.whenElement,
       this.whoUri,
@@ -6208,19 +6190,13 @@ class _$_Signature extends _Signature {
       @JsonKey(name: '_contentType') this.contentTypeElement,
       this.blob,
       @JsonKey(name: '_blob') this.blobElement})
-      : _type = type,
-        super._();
+      : super._();
 
   factory _$_Signature.fromJson(Map<String, dynamic> json) =>
       _$$_SignatureFromJson(json);
 
-  final List<Coding> _type;
   @override
-  List<Coding> get type {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_type);
-  }
-
+  final List<Coding> type;
   @override
   final String? when;
   @override
@@ -6261,7 +6237,7 @@ class _$_Signature extends _Signature {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Signature &&
-            const DeepCollectionEquality().equals(other._type, _type) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             (identical(other.when, when) || other.when == when) &&
             (identical(other.whenElement, whenElement) ||
                 other.whenElement == whenElement) &&
@@ -6289,7 +6265,7 @@ class _$_Signature extends _Signature {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_type),
+      const DeepCollectionEquality().hash(type),
       when,
       whenElement,
       whoUri,
@@ -6647,27 +6623,27 @@ class __$$_HumanNameCopyWithImpl<$Res>
           : familyElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       given: freezed == given
-          ? _value._given
+          ? _value.given
           : given // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       givenElement: freezed == givenElement
-          ? _value._givenElement
+          ? _value.givenElement
           : givenElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       prefix: freezed == prefix
-          ? _value._prefix
+          ? _value.prefix
           : prefix // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       prefixElement: freezed == prefixElement
-          ? _value._prefixElement
+          ? _value.prefixElement
           : prefixElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       suffix: freezed == suffix
-          ? _value._suffix
+          ? _value.suffix
           : suffix // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       suffixElement: freezed == suffixElement
-          ? _value._suffixElement
+          ? _value.suffixElement
           : suffixElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       period: freezed == period
@@ -6688,20 +6664,14 @@ class _$_HumanName extends _HumanName {
       @JsonKey(name: '_text') this.textElement,
       this.family,
       @JsonKey(name: '_family') this.familyElement,
-      final List<String>? given,
-      @JsonKey(name: '_given') final List<Element?>? givenElement,
-      final List<String>? prefix,
-      @JsonKey(name: '_prefix') final List<Element?>? prefixElement,
-      final List<String>? suffix,
-      @JsonKey(name: '_suffix') final List<Element?>? suffixElement,
+      this.given,
+      @JsonKey(name: '_given') this.givenElement,
+      this.prefix,
+      @JsonKey(name: '_prefix') this.prefixElement,
+      this.suffix,
+      @JsonKey(name: '_suffix') this.suffixElement,
       this.period})
-      : _given = given,
-        _givenElement = givenElement,
-        _prefix = prefix,
-        _prefixElement = prefixElement,
-        _suffix = suffix,
-        _suffixElement = suffixElement,
-        super._();
+      : super._();
 
   factory _$_HumanName.fromJson(Map<String, dynamic> json) =>
       _$$_HumanNameFromJson(json);
@@ -6721,63 +6691,21 @@ class _$_HumanName extends _HumanName {
   @override
   @JsonKey(name: '_family')
   final Element? familyElement;
-  final List<String>? _given;
   @override
-  List<String>? get given {
-    final value = _given;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _givenElement;
+  final List<String>? given;
   @override
   @JsonKey(name: '_given')
-  List<Element?>? get givenElement {
-    final value = _givenElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _prefix;
+  final List<Element?>? givenElement;
   @override
-  List<String>? get prefix {
-    final value = _prefix;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _prefixElement;
+  final List<String>? prefix;
   @override
   @JsonKey(name: '_prefix')
-  List<Element?>? get prefixElement {
-    final value = _prefixElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _suffix;
+  final List<Element?>? prefixElement;
   @override
-  List<String>? get suffix {
-    final value = _suffix;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _suffixElement;
+  final List<String>? suffix;
   @override
   @JsonKey(name: '_suffix')
-  List<Element?>? get suffixElement {
-    final value = _suffixElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? suffixElement;
   @override
   final Period? period;
 
@@ -6800,15 +6728,15 @@ class _$_HumanName extends _HumanName {
             (identical(other.family, family) || other.family == family) &&
             (identical(other.familyElement, familyElement) ||
                 other.familyElement == familyElement) &&
-            const DeepCollectionEquality().equals(other._given, _given) &&
+            const DeepCollectionEquality().equals(other.given, given) &&
             const DeepCollectionEquality()
-                .equals(other._givenElement, _givenElement) &&
-            const DeepCollectionEquality().equals(other._prefix, _prefix) &&
+                .equals(other.givenElement, givenElement) &&
+            const DeepCollectionEquality().equals(other.prefix, prefix) &&
             const DeepCollectionEquality()
-                .equals(other._prefixElement, _prefixElement) &&
-            const DeepCollectionEquality().equals(other._suffix, _suffix) &&
+                .equals(other.prefixElement, prefixElement) &&
+            const DeepCollectionEquality().equals(other.suffix, suffix) &&
             const DeepCollectionEquality()
-                .equals(other._suffixElement, _suffixElement) &&
+                .equals(other.suffixElement, suffixElement) &&
             (identical(other.period, period) || other.period == period));
   }
 
@@ -6822,12 +6750,12 @@ class _$_HumanName extends _HumanName {
       textElement,
       family,
       familyElement,
-      const DeepCollectionEquality().hash(_given),
-      const DeepCollectionEquality().hash(_givenElement),
-      const DeepCollectionEquality().hash(_prefix),
-      const DeepCollectionEquality().hash(_prefixElement),
-      const DeepCollectionEquality().hash(_suffix),
-      const DeepCollectionEquality().hash(_suffixElement),
+      const DeepCollectionEquality().hash(given),
+      const DeepCollectionEquality().hash(givenElement),
+      const DeepCollectionEquality().hash(prefix),
+      const DeepCollectionEquality().hash(prefixElement),
+      const DeepCollectionEquality().hash(suffix),
+      const DeepCollectionEquality().hash(suffixElement),
       period);
 
   @JsonKey(ignore: true)
@@ -7305,11 +7233,11 @@ class __$$_AddressCopyWithImpl<$Res>
           : textElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       line: freezed == line
-          ? _value._line
+          ? _value.line
           : line // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       lineElement: freezed == lineElement
-          ? _value._lineElement
+          ? _value.lineElement
           : lineElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       city: freezed == city
@@ -7370,8 +7298,8 @@ class _$_Address extends _Address {
       @JsonKey(name: '_type') this.typeElement,
       this.text,
       @JsonKey(name: '_text') this.textElement,
-      final List<String>? line,
-      @JsonKey(name: '_line') final List<Element?>? lineElement,
+      this.line,
+      @JsonKey(name: '_line') this.lineElement,
       this.city,
       @JsonKey(name: '_city') this.cityElement,
       this.district,
@@ -7383,9 +7311,7 @@ class _$_Address extends _Address {
       this.country,
       @JsonKey(name: '_country') this.countryElement,
       this.period})
-      : _line = line,
-        _lineElement = lineElement,
-        super._();
+      : super._();
 
   factory _$_Address.fromJson(Map<String, dynamic> json) =>
       _$$_AddressFromJson(json);
@@ -7405,25 +7331,11 @@ class _$_Address extends _Address {
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
-  final List<String>? _line;
   @override
-  List<String>? get line {
-    final value = _line;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _lineElement;
+  final List<String>? line;
   @override
   @JsonKey(name: '_line')
-  List<Element?>? get lineElement {
-    final value = _lineElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? lineElement;
   @override
   final String? city;
   @override
@@ -7471,9 +7383,9 @@ class _$_Address extends _Address {
             (identical(other.text, text) || other.text == text) &&
             (identical(other.textElement, textElement) ||
                 other.textElement == textElement) &&
-            const DeepCollectionEquality().equals(other._line, _line) &&
+            const DeepCollectionEquality().equals(other.line, line) &&
             const DeepCollectionEquality()
-                .equals(other._lineElement, _lineElement) &&
+                .equals(other.lineElement, lineElement) &&
             (identical(other.city, city) || other.city == city) &&
             (identical(other.cityElement, cityElement) ||
                 other.cityElement == cityElement) &&
@@ -7504,8 +7416,8 @@ class _$_Address extends _Address {
         typeElement,
         text,
         textElement,
-        const DeepCollectionEquality().hash(_line),
-        const DeepCollectionEquality().hash(_lineElement),
+        const DeepCollectionEquality().hash(line),
+        const DeepCollectionEquality().hash(lineElement),
         city,
         cityElement,
         district,
@@ -8137,11 +8049,11 @@ class __$$_TimingCopyWithImpl<$Res>
   }) {
     return _then(_$_Timing(
       event: freezed == event
-          ? _value._event
+          ? _value.event
           : event // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       eventElement: freezed == eventElement
-          ? _value._eventElement
+          ? _value.eventElement
           : eventElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       repeat: freezed == repeat
@@ -8160,36 +8072,20 @@ class __$$_TimingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Timing extends _Timing {
   _$_Timing(
-      {final List<String>? event,
-      @JsonKey(name: '_event') final List<Element?>? eventElement,
+      {this.event,
+      @JsonKey(name: '_event') this.eventElement,
       this.repeat,
       this.code})
-      : _event = event,
-        _eventElement = eventElement,
-        super._();
+      : super._();
 
   factory _$_Timing.fromJson(Map<String, dynamic> json) =>
       _$$_TimingFromJson(json);
 
-  final List<String>? _event;
   @override
-  List<String>? get event {
-    final value = _event;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _eventElement;
+  final List<String>? event;
   @override
   @JsonKey(name: '_event')
-  List<Element?>? get eventElement {
-    final value = _eventElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? eventElement;
   @override
   final TimingRepeat? repeat;
   @override
@@ -8205,9 +8101,9 @@ class _$_Timing extends _Timing {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Timing &&
-            const DeepCollectionEquality().equals(other._event, _event) &&
+            const DeepCollectionEquality().equals(other.event, event) &&
             const DeepCollectionEquality()
-                .equals(other._eventElement, _eventElement) &&
+                .equals(other.eventElement, eventElement) &&
             (identical(other.repeat, repeat) || other.repeat == repeat) &&
             (identical(other.code, code) || other.code == code));
   }
@@ -8216,8 +8112,8 @@ class _$_Timing extends _Timing {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_event),
-      const DeepCollectionEquality().hash(_eventElement),
+      const DeepCollectionEquality().hash(event),
+      const DeepCollectionEquality().hash(eventElement),
       repeat,
       code);
 
@@ -8924,27 +8820,27 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
           : periodUnitElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       dayOfWeek: freezed == dayOfWeek
-          ? _value._dayOfWeek
+          ? _value.dayOfWeek
           : dayOfWeek // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       dayOfWeekElement: freezed == dayOfWeekElement
-          ? _value._dayOfWeekElement
+          ? _value.dayOfWeekElement
           : dayOfWeekElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       timeOfDay: freezed == timeOfDay
-          ? _value._timeOfDay
+          ? _value.timeOfDay
           : timeOfDay // ignore: cast_nullable_to_non_nullable
               as List<Time>?,
       timeOfDayElement: freezed == timeOfDayElement
-          ? _value._timeOfDayElement
+          ? _value.timeOfDayElement
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       when: freezed == when
-          ? _value._when
+          ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
               as List<TimingRepeatWhen>?,
       whenElement: freezed == whenElement
-          ? _value._whenElement
+          ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       offset: freezed == offset
@@ -8986,21 +8882,15 @@ class _$_TimingRepeat extends _TimingRepeat {
       @JsonKey(name: '_periodMax') this.periodMaxElement,
       this.periodUnit,
       @JsonKey(name: '_periodUnit') this.periodUnitElement,
-      final List<String>? dayOfWeek,
-      @JsonKey(name: '_dayOfWeek') final List<Element?>? dayOfWeekElement,
-      final List<Time>? timeOfDay,
-      @JsonKey(name: '_timeOfDay') final List<Element?>? timeOfDayElement,
-      final List<TimingRepeatWhen>? when,
-      @JsonKey(name: '_when') final List<Element?>? whenElement,
+      this.dayOfWeek,
+      @JsonKey(name: '_dayOfWeek') this.dayOfWeekElement,
+      this.timeOfDay,
+      @JsonKey(name: '_timeOfDay') this.timeOfDayElement,
+      this.when,
+      @JsonKey(name: '_when') this.whenElement,
       this.offset,
       @JsonKey(name: '_offset') this.offsetElement})
-      : _dayOfWeek = dayOfWeek,
-        _dayOfWeekElement = dayOfWeekElement,
-        _timeOfDay = timeOfDay,
-        _timeOfDayElement = timeOfDayElement,
-        _when = when,
-        _whenElement = whenElement,
-        super._();
+      : super._();
 
   factory _$_TimingRepeat.fromJson(Map<String, dynamic> json) =>
       _$$_TimingRepeatFromJson(json);
@@ -9061,63 +8951,21 @@ class _$_TimingRepeat extends _TimingRepeat {
   @override
   @JsonKey(name: '_periodUnit')
   final Element? periodUnitElement;
-  final List<String>? _dayOfWeek;
   @override
-  List<String>? get dayOfWeek {
-    final value = _dayOfWeek;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _dayOfWeekElement;
+  final List<String>? dayOfWeek;
   @override
   @JsonKey(name: '_dayOfWeek')
-  List<Element?>? get dayOfWeekElement {
-    final value = _dayOfWeekElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Time>? _timeOfDay;
+  final List<Element?>? dayOfWeekElement;
   @override
-  List<Time>? get timeOfDay {
-    final value = _timeOfDay;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _timeOfDayElement;
+  final List<Time>? timeOfDay;
   @override
   @JsonKey(name: '_timeOfDay')
-  List<Element?>? get timeOfDayElement {
-    final value = _timeOfDayElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<TimingRepeatWhen>? _when;
+  final List<Element?>? timeOfDayElement;
   @override
-  List<TimingRepeatWhen>? get when {
-    final value = _when;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _whenElement;
+  final List<TimingRepeatWhen>? when;
   @override
   @JsonKey(name: '_when')
-  List<Element?>? get whenElement {
-    final value = _whenElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Element?>? whenElement;
   @override
   final Decimal? offset;
   @override
@@ -9178,17 +9026,15 @@ class _$_TimingRepeat extends _TimingRepeat {
                 other.periodUnit == periodUnit) &&
             (identical(other.periodUnitElement, periodUnitElement) ||
                 other.periodUnitElement == periodUnitElement) &&
+            const DeepCollectionEquality().equals(other.dayOfWeek, dayOfWeek) &&
             const DeepCollectionEquality()
-                .equals(other._dayOfWeek, _dayOfWeek) &&
+                .equals(other.dayOfWeekElement, dayOfWeekElement) &&
+            const DeepCollectionEquality().equals(other.timeOfDay, timeOfDay) &&
             const DeepCollectionEquality()
-                .equals(other._dayOfWeekElement, _dayOfWeekElement) &&
+                .equals(other.timeOfDayElement, timeOfDayElement) &&
+            const DeepCollectionEquality().equals(other.when, when) &&
             const DeepCollectionEquality()
-                .equals(other._timeOfDay, _timeOfDay) &&
-            const DeepCollectionEquality()
-                .equals(other._timeOfDayElement, _timeOfDayElement) &&
-            const DeepCollectionEquality().equals(other._when, _when) &&
-            const DeepCollectionEquality()
-                .equals(other._whenElement, _whenElement) &&
+                .equals(other.whenElement, whenElement) &&
             (identical(other.offset, offset) || other.offset == offset) &&
             (identical(other.offsetElement, offsetElement) ||
                 other.offsetElement == offsetElement));
@@ -9221,12 +9067,12 @@ class _$_TimingRepeat extends _TimingRepeat {
         periodMaxElement,
         periodUnit,
         periodUnitElement,
-        const DeepCollectionEquality().hash(_dayOfWeek),
-        const DeepCollectionEquality().hash(_dayOfWeekElement),
-        const DeepCollectionEquality().hash(_timeOfDay),
-        const DeepCollectionEquality().hash(_timeOfDayElement),
-        const DeepCollectionEquality().hash(_when),
-        const DeepCollectionEquality().hash(_whenElement),
+        const DeepCollectionEquality().hash(dayOfWeek),
+        const DeepCollectionEquality().hash(dayOfWeekElement),
+        const DeepCollectionEquality().hash(timeOfDay),
+        const DeepCollectionEquality().hash(timeOfDayElement),
+        const DeepCollectionEquality().hash(when),
+        const DeepCollectionEquality().hash(whenElement),
         offset,
         offsetElement
       ]);

@@ -646,19 +646,19 @@ class __$$_DeviceCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: null == type
@@ -666,7 +666,7 @@ class __$$_DeviceCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
       status: freezed == status
@@ -734,7 +734,7 @@ class __$$_DeviceCopyWithImpl<$Res>
           : patient // ignore: cast_nullable_to_non_nullable
               as Reference?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
       url: freezed == url
@@ -764,13 +764,13 @@ class _$_Device extends _Device {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       required this.type,
-      final List<Annotation>? note,
+      this.note,
       @JsonKey(unknownEnumValue: DeviceStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
@@ -793,17 +793,11 @@ class _$_Device extends _Device {
       this.owner,
       this.location,
       this.patient,
-      final List<ContactPoint>? contact,
+      this.contact,
       this.url,
       @JsonKey(name: '_url')
           this.urlElement})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _note = note,
-        _contact = contact,
-        super._();
+      : super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceFromJson(json);
@@ -827,54 +821,19 @@ class _$_Device extends _Device {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final CodeableConcept type;
-  final List<Annotation>? _note;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Annotation>? note;
   @override
   @JsonKey(unknownEnumValue: DeviceStatus.unknown)
   final DeviceStatus? status;
@@ -913,15 +872,8 @@ class _$_Device extends _Device {
   final Reference? location;
   @override
   final Reference? patient;
-  final List<ContactPoint>? _contact;
   @override
-  List<ContactPoint>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<ContactPoint>? contact;
   @override
   final FhirUri? url;
   @override
@@ -951,16 +903,15 @@ class _$_Device extends _Device {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -986,7 +937,7 @@ class _$_Device extends _Device {
             (identical(other.location, location) ||
                 other.location == location) &&
             (identical(other.patient, patient) || other.patient == patient) &&
-            const DeepCollectionEquality().equals(other._contact, _contact) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement));
@@ -1004,12 +955,12 @@ class _$_Device extends _Device {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         type,
-        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(note),
         status,
         statusElement,
         manufacturer,
@@ -1026,7 +977,7 @@ class _$_Device extends _Device {
         owner,
         location,
         patient,
-        const DeepCollectionEquality().hash(_contact),
+        const DeepCollectionEquality().hash(contact),
         url,
         urlElement
       ]);
@@ -1597,15 +1548,15 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: null == type
@@ -1629,7 +1580,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
           : parent // ignore: cast_nullable_to_non_nullable
               as Reference?,
       operationalStatus: freezed == operationalStatus
-          ? _value._operationalStatus
+          ? _value.operationalStatus
           : operationalStatus // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       parameterGroup: freezed == parameterGroup
@@ -1641,7 +1592,7 @@ class __$$_DeviceComponentCopyWithImpl<$Res>
           : measurementPrinciple // ignore: cast_nullable_to_non_nullable
               as DeviceComponentMeasurementPrinciple?,
       productionSpecification: freezed == productionSpecification
-          ? _value._productionSpecification
+          ? _value.productionSpecification
           : productionSpecification // ignore: cast_nullable_to_non_nullable
               as List<DeviceComponentProductionSpecification>?,
       languageCode: freezed == languageCode
@@ -1665,28 +1616,22 @@ class _$_DeviceComponent extends _DeviceComponent {
       this.implicitRules,
       this.language,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       required this.type,
       required this.identifier,
       required this.lastSystemChange,
       this.source,
       this.parent,
-      final List<CodeableConcept>? operationalStatus,
+      this.operationalStatus,
       this.parameterGroup,
       @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
           this.measurementPrinciple,
-      final List<DeviceComponentProductionSpecification>?
-          productionSpecification,
+      this.productionSpecification,
       this.languageCode})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _operationalStatus = operationalStatus,
-        _productionSpecification = productionSpecification,
-        super._();
+      : super._();
 
   factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceComponentFromJson(json);
@@ -1707,34 +1652,13 @@ class _$_DeviceComponent extends _DeviceComponent {
   final Code? language;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -1745,29 +1669,15 @@ class _$_DeviceComponent extends _DeviceComponent {
   final Reference? source;
   @override
   final Reference? parent;
-  final List<CodeableConcept>? _operationalStatus;
   @override
-  List<CodeableConcept>? get operationalStatus {
-    final value = _operationalStatus;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? operationalStatus;
   @override
   final CodeableConcept? parameterGroup;
   @override
   @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
   final DeviceComponentMeasurementPrinciple? measurementPrinciple;
-  final List<DeviceComponentProductionSpecification>? _productionSpecification;
   @override
-  List<DeviceComponentProductionSpecification>? get productionSpecification {
-    final value = _productionSpecification;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<DeviceComponentProductionSpecification>? productionSpecification;
   @override
   final CodeableConcept? languageCode;
 
@@ -1792,12 +1702,11 @@ class _$_DeviceComponent extends _DeviceComponent {
             (identical(other.language, language) ||
                 other.language == language) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
@@ -1806,13 +1715,13 @@ class _$_DeviceComponent extends _DeviceComponent {
             (identical(other.source, source) || other.source == source) &&
             (identical(other.parent, parent) || other.parent == parent) &&
             const DeepCollectionEquality()
-                .equals(other._operationalStatus, _operationalStatus) &&
+                .equals(other.operationalStatus, operationalStatus) &&
             (identical(other.parameterGroup, parameterGroup) ||
                 other.parameterGroup == parameterGroup) &&
             (identical(other.measurementPrinciple, measurementPrinciple) ||
                 other.measurementPrinciple == measurementPrinciple) &&
             const DeepCollectionEquality().equals(
-                other._productionSpecification, _productionSpecification) &&
+                other.productionSpecification, productionSpecification) &&
             (identical(other.languageCode, languageCode) ||
                 other.languageCode == languageCode));
   }
@@ -1828,18 +1737,18 @@ class _$_DeviceComponent extends _DeviceComponent {
         implicitRules,
         language,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         type,
         identifier,
         lastSystemChange,
         source,
         parent,
-        const DeepCollectionEquality().hash(_operationalStatus),
+        const DeepCollectionEquality().hash(operationalStatus),
         parameterGroup,
         measurementPrinciple,
-        const DeepCollectionEquality().hash(_productionSpecification),
+        const DeepCollectionEquality().hash(productionSpecification),
         languageCode
       ]);
 
@@ -2106,11 +2015,11 @@ class __$$_DeviceComponentProductionSpecificationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       specType: freezed == specType
@@ -2135,14 +2044,12 @@ class _$_DeviceComponentProductionSpecification
     extends _DeviceComponentProductionSpecification {
   _$_DeviceComponentProductionSpecification(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       this.specType,
       this.componentId,
       this.productionSpec})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_DeviceComponentProductionSpecification.fromJson(
           Map<String, dynamic> json) =>
@@ -2150,25 +2057,11 @@ class _$_DeviceComponentProductionSpecification
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept? specType;
   @override
@@ -2188,9 +2081,9 @@ class _$_DeviceComponentProductionSpecification
             other is _$_DeviceComponentProductionSpecification &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.specType, specType) ||
                 other.specType == specType) &&
             (identical(other.componentId, componentId) ||
@@ -2204,8 +2097,8 @@ class _$_DeviceComponentProductionSpecification
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       specType,
       componentId,
       productionSpec);
@@ -2798,15 +2691,15 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: null == type
@@ -2858,7 +2751,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
           : measurementPeriod // ignore: cast_nullable_to_non_nullable
               as Timing?,
       calibration: freezed == calibration
-          ? _value._calibration
+          ? _value.calibration
           : calibration // ignore: cast_nullable_to_non_nullable
               as List<DeviceMetricCalibration>?,
     ));
@@ -2880,10 +2773,10 @@ class _$_DeviceMetric extends _DeviceMetric {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       required this.type,
       required this.identifier,
       this.unit,
@@ -2902,12 +2795,8 @@ class _$_DeviceMetric extends _DeviceMetric {
       @JsonKey(name: '_category')
           this.categoryElement,
       this.measurementPeriod,
-      final List<DeviceMetricCalibration>? calibration})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _calibration = calibration,
-        super._();
+      this.calibration})
+      : super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceMetricFromJson(json);
@@ -2931,34 +2820,13 @@ class _$_DeviceMetric extends _DeviceMetric {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
@@ -2989,14 +2857,8 @@ class _$_DeviceMetric extends _DeviceMetric {
   final Element? categoryElement;
   @override
   final Timing? measurementPeriod;
-  final List<DeviceMetricCalibration>? _calibration;
   @override
-  List<DeviceMetricCalibration>? get calibration {
-    final value = _calibration;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<DeviceMetricCalibration>? calibration;
 
   @override
   String toString() {
@@ -3021,12 +2883,11 @@ class _$_DeviceMetric extends _DeviceMetric {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
@@ -3048,7 +2909,7 @@ class _$_DeviceMetric extends _DeviceMetric {
             (identical(other.measurementPeriod, measurementPeriod) ||
                 other.measurementPeriod == measurementPeriod) &&
             const DeepCollectionEquality()
-                .equals(other._calibration, _calibration));
+                .equals(other.calibration, calibration));
   }
 
   @JsonKey(ignore: true)
@@ -3063,9 +2924,9 @@ class _$_DeviceMetric extends _DeviceMetric {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         type,
         identifier,
         unit,
@@ -3078,7 +2939,7 @@ class _$_DeviceMetric extends _DeviceMetric {
         category,
         categoryElement,
         measurementPeriod,
-        const DeepCollectionEquality().hash(_calibration)
+        const DeepCollectionEquality().hash(calibration)
       ]);
 
   @JsonKey(ignore: true)
@@ -3420,11 +3281,11 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       type: freezed == type
@@ -3460,42 +3321,26 @@ class __$$_DeviceMetricCalibrationCopyWithImpl<$Res>
 class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   _$_DeviceMetricCalibration(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
       @JsonKey(unknownEnumValue: CalibrationType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       @JsonKey(unknownEnumValue: CalibrationState.unknown) this.state,
       @JsonKey(name: '_state') this.stateElement,
       this.time,
       @JsonKey(name: '_time') this.timeElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
+      : super._();
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: CalibrationType.unknown)
   final CalibrationType? type;
@@ -3526,9 +3371,9 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
             other is _$_DeviceMetricCalibration &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -3545,8 +3390,8 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
       type,
       typeElement,
       state,

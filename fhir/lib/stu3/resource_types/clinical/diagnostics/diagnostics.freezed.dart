@@ -427,19 +427,19 @@ class __$$_BodySiteCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       active: freezed == active
@@ -455,7 +455,7 @@ class __$$_BodySiteCopyWithImpl<$Res>
           : code // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       qualifier: freezed == qualifier
-          ? _value._qualifier
+          ? _value.qualifier
           : qualifier // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       description: freezed == description
@@ -467,7 +467,7 @@ class __$$_BodySiteCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       image: freezed == image
-          ? _value._image
+          ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
       patient: null == patient
@@ -493,28 +493,22 @@ class _$_BodySite extends _BodySite {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
       this.code,
-      final List<CodeableConcept>? qualifier,
+      this.qualifier,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<Attachment>? image,
+      this.image,
       required this.patient})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _qualifier = qualifier,
-        _image = image,
-        super._();
+      : super._();
 
   factory _$_BodySite.fromJson(Map<String, dynamic> json) =>
       _$$_BodySiteFromJson(json);
@@ -538,43 +532,15 @@ class _$_BodySite extends _BodySite {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Boolean? active;
   @override
@@ -582,29 +548,15 @@ class _$_BodySite extends _BodySite {
   final Element? activeElement;
   @override
   final CodeableConcept? code;
-  final List<CodeableConcept>? _qualifier;
   @override
-  List<CodeableConcept>? get qualifier {
-    final value = _qualifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? qualifier;
   @override
   final String? description;
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<Attachment>? _image;
   @override
-  List<Attachment>? get image {
-    final value = _image;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Attachment>? image;
   @override
   final Reference patient;
 
@@ -631,25 +583,23 @@ class _$_BodySite extends _BodySite {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.active, active) || other.active == active) &&
             (identical(other.activeElement, activeElement) ||
                 other.activeElement == activeElement) &&
             (identical(other.code, code) || other.code == code) &&
-            const DeepCollectionEquality()
-                .equals(other._qualifier, _qualifier) &&
+            const DeepCollectionEquality().equals(other.qualifier, qualifier) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._image, _image) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
             (identical(other.patient, patient) || other.patient == patient));
   }
 
@@ -665,17 +615,17 @@ class _$_BodySite extends _BodySite {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         active,
         activeElement,
         code,
-        const DeepCollectionEquality().hash(_qualifier),
+        const DeepCollectionEquality().hash(qualifier),
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_image),
+        const DeepCollectionEquality().hash(image),
         patient
       ]);
 
@@ -1392,23 +1342,23 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: freezed == status
@@ -1456,23 +1406,23 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
           : issuedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       performer: freezed == performer
-          ? _value._performer
+          ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<DiagnosticReportPerformer>?,
       specimen: freezed == specimen
-          ? _value._specimen
+          ? _value.specimen
           : specimen // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       result: freezed == result
-          ? _value._result
+          ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       imagingStudy: freezed == imagingStudy
-          ? _value._imagingStudy
+          ? _value.imagingStudy
           : imagingStudy // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       image: freezed == image
-          ? _value._image
+          ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as List<DiagnosticReportImage>?,
       conclusion: freezed == conclusion
@@ -1484,11 +1434,11 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
           : conclusionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       codedDiagnosis: freezed == codedDiagnosis
-          ? _value._codedDiagnosis
+          ? _value.codedDiagnosis
           : codedDiagnosis // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       presentedForm: freezed == presentedForm
-          ? _value._presentedForm
+          ? _value.presentedForm
           : presentedForm // ignore: cast_nullable_to_non_nullable
               as List<Attachment>?,
     ));
@@ -1510,12 +1460,12 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.basedOn,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -1530,29 +1480,17 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       this.issued,
       @JsonKey(name: '_issued')
           this.issuedElement,
-      final List<DiagnosticReportPerformer>? performer,
-      final List<Reference>? specimen,
-      final List<Reference>? result,
-      final List<Reference>? imagingStudy,
-      final List<DiagnosticReportImage>? image,
+      this.performer,
+      this.specimen,
+      this.result,
+      this.imagingStudy,
+      this.image,
       this.conclusion,
       @JsonKey(name: '_conclusion')
           this.conclusionElement,
-      final List<CodeableConcept>? codedDiagnosis,
-      final List<Attachment>? presentedForm})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _basedOn = basedOn,
-        _performer = performer,
-        _specimen = specimen,
-        _result = result,
-        _imagingStudy = imagingStudy,
-        _image = image,
-        _codedDiagnosis = codedDiagnosis,
-        _presentedForm = presentedForm,
-        super._();
+      this.codedDiagnosis,
+      this.presentedForm})
+      : super._();
 
   factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
       _$$_DiagnosticReportFromJson(json);
@@ -1576,52 +1514,17 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _basedOn;
+  final List<Identifier>? identifier;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? basedOn;
   @override
   final DiagnosticReportStatus? status;
   @override
@@ -1647,73 +1550,25 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
-  final List<DiagnosticReportPerformer>? _performer;
   @override
-  List<DiagnosticReportPerformer>? get performer {
-    final value = _performer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _specimen;
+  final List<DiagnosticReportPerformer>? performer;
   @override
-  List<Reference>? get specimen {
-    final value = _specimen;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _result;
+  final List<Reference>? specimen;
   @override
-  List<Reference>? get result {
-    final value = _result;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _imagingStudy;
+  final List<Reference>? result;
   @override
-  List<Reference>? get imagingStudy {
-    final value = _imagingStudy;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DiagnosticReportImage>? _image;
+  final List<Reference>? imagingStudy;
   @override
-  List<DiagnosticReportImage>? get image {
-    final value = _image;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<DiagnosticReportImage>? image;
   @override
   final String? conclusion;
   @override
   @JsonKey(name: '_conclusion')
   final Element? conclusionElement;
-  final List<CodeableConcept>? _codedDiagnosis;
   @override
-  List<CodeableConcept>? get codedDiagnosis {
-    final value = _codedDiagnosis;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Attachment>? _presentedForm;
+  final List<CodeableConcept>? codedDiagnosis;
   @override
-  List<Attachment>? get presentedForm {
-    final value = _presentedForm;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Attachment>? presentedForm;
 
   @override
   String toString() {
@@ -1738,15 +1593,14 @@ class _$_DiagnosticReport extends _DiagnosticReport {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
@@ -1765,21 +1619,20 @@ class _$_DiagnosticReport extends _DiagnosticReport {
             (identical(other.issued, issued) || other.issued == issued) &&
             (identical(other.issuedElement, issuedElement) ||
                 other.issuedElement == issuedElement) &&
+            const DeepCollectionEquality().equals(other.performer, performer) &&
+            const DeepCollectionEquality().equals(other.specimen, specimen) &&
+            const DeepCollectionEquality().equals(other.result, result) &&
             const DeepCollectionEquality()
-                .equals(other._performer, _performer) &&
-            const DeepCollectionEquality().equals(other._specimen, _specimen) &&
-            const DeepCollectionEquality().equals(other._result, _result) &&
-            const DeepCollectionEquality()
-                .equals(other._imagingStudy, _imagingStudy) &&
-            const DeepCollectionEquality().equals(other._image, _image) &&
+                .equals(other.imagingStudy, imagingStudy) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
             (identical(other.conclusion, conclusion) ||
                 other.conclusion == conclusion) &&
             (identical(other.conclusionElement, conclusionElement) ||
                 other.conclusionElement == conclusionElement) &&
             const DeepCollectionEquality()
-                .equals(other._codedDiagnosis, _codedDiagnosis) &&
+                .equals(other.codedDiagnosis, codedDiagnosis) &&
             const DeepCollectionEquality()
-                .equals(other._presentedForm, _presentedForm));
+                .equals(other.presentedForm, presentedForm));
   }
 
   @JsonKey(ignore: true)
@@ -1794,11 +1647,11 @@ class _$_DiagnosticReport extends _DiagnosticReport {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(basedOn),
         status,
         statusElement,
         category,
@@ -1810,15 +1663,15 @@ class _$_DiagnosticReport extends _DiagnosticReport {
         effectivePeriod,
         issued,
         issuedElement,
-        const DeepCollectionEquality().hash(_performer),
-        const DeepCollectionEquality().hash(_specimen),
-        const DeepCollectionEquality().hash(_result),
-        const DeepCollectionEquality().hash(_imagingStudy),
-        const DeepCollectionEquality().hash(_image),
+        const DeepCollectionEquality().hash(performer),
+        const DeepCollectionEquality().hash(specimen),
+        const DeepCollectionEquality().hash(result),
+        const DeepCollectionEquality().hash(imagingStudy),
+        const DeepCollectionEquality().hash(image),
         conclusion,
         conclusionElement,
-        const DeepCollectionEquality().hash(_codedDiagnosis),
-        const DeepCollectionEquality().hash(_presentedForm)
+        const DeepCollectionEquality().hash(codedDiagnosis),
+        const DeepCollectionEquality().hash(presentedForm)
       ]);
 
   @JsonKey(ignore: true)
@@ -2790,15 +2643,15 @@ class __$$_ImagingManifestCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -2830,7 +2683,7 @@ class __$$_ImagingManifestCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       study: null == study
-          ? _value._study
+          ? _value.study
           : study // ignore: cast_nullable_to_non_nullable
               as List<ImagingManifestStudy>,
     ));
@@ -2852,10 +2705,10 @@ class _$_ImagingManifest extends _ImagingManifest {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
       required this.patient,
       this.authoringTime,
@@ -2865,12 +2718,8 @@ class _$_ImagingManifest extends _ImagingManifest {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      required final List<ImagingManifestStudy> study})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _study = study,
-        super._();
+      required this.study})
+      : super._();
 
   factory _$_ImagingManifest.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingManifestFromJson(json);
@@ -2894,34 +2743,13 @@ class _$_ImagingManifest extends _ImagingManifest {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
   @override
@@ -2938,12 +2766,8 @@ class _$_ImagingManifest extends _ImagingManifest {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<ImagingManifestStudy> _study;
   @override
-  List<ImagingManifestStudy> get study {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_study);
-  }
+  final List<ImagingManifestStudy> study;
 
   @override
   String toString() {
@@ -2968,12 +2792,11 @@ class _$_ImagingManifest extends _ImagingManifest {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.patient, patient) || other.patient == patient) &&
@@ -2986,7 +2809,7 @@ class _$_ImagingManifest extends _ImagingManifest {
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._study, _study));
+            const DeepCollectionEquality().equals(other.study, study));
   }
 
   @JsonKey(ignore: true)
@@ -3001,9 +2824,9 @@ class _$_ImagingManifest extends _ImagingManifest {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         identifier,
         patient,
         authoringTime,
@@ -3011,7 +2834,7 @@ class _$_ImagingManifest extends _ImagingManifest {
         author,
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_study)
+        const DeepCollectionEquality().hash(study)
       ]);
 
   @JsonKey(ignore: true)
@@ -3267,11 +3090,11 @@ class __$$_ImagingManifestStudyCopyWithImpl<$Res>
           : imagingStudy // ignore: cast_nullable_to_non_nullable
               as Reference?,
       endpoint: freezed == endpoint
-          ? _value._endpoint
+          ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       series: null == series
-          ? _value._series
+          ? _value.series
           : series // ignore: cast_nullable_to_non_nullable
               as List<ImagingManifestSeries>,
     ));
@@ -3285,11 +3108,9 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
       {this.uid,
       @JsonKey(name: '_uid') this.uidElement,
       this.imagingStudy,
-      final List<Reference>? endpoint,
-      required final List<ImagingManifestSeries> series})
-      : _endpoint = endpoint,
-        _series = series,
-        super._();
+      this.endpoint,
+      required this.series})
+      : super._();
 
   factory _$_ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingManifestStudyFromJson(json);
@@ -3301,21 +3122,10 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
   final Element? uidElement;
   @override
   final Reference? imagingStudy;
-  final List<Reference>? _endpoint;
   @override
-  List<Reference>? get endpoint {
-    final value = _endpoint;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ImagingManifestSeries> _series;
+  final List<Reference>? endpoint;
   @override
-  List<ImagingManifestSeries> get series {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_series);
-  }
+  final List<ImagingManifestSeries> series;
 
   @override
   String toString() {
@@ -3332,8 +3142,8 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
                 other.uidElement == uidElement) &&
             (identical(other.imagingStudy, imagingStudy) ||
                 other.imagingStudy == imagingStudy) &&
-            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
-            const DeepCollectionEquality().equals(other._series, _series));
+            const DeepCollectionEquality().equals(other.endpoint, endpoint) &&
+            const DeepCollectionEquality().equals(other.series, series));
   }
 
   @JsonKey(ignore: true)
@@ -3343,8 +3153,8 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
       uid,
       uidElement,
       imagingStudy,
-      const DeepCollectionEquality().hash(_endpoint),
-      const DeepCollectionEquality().hash(_series));
+      const DeepCollectionEquality().hash(endpoint),
+      const DeepCollectionEquality().hash(series));
 
   @JsonKey(ignore: true)
   @override
@@ -3522,11 +3332,11 @@ class __$$_ImagingManifestSeriesCopyWithImpl<$Res>
           : uidElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       endpoint: freezed == endpoint
-          ? _value._endpoint
+          ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       instance: null == instance
-          ? _value._instance
+          ? _value.instance
           : instance // ignore: cast_nullable_to_non_nullable
               as List<ImagingManifestInstance>,
     ));
@@ -3539,11 +3349,9 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
   _$_ImagingManifestSeries(
       {this.uid,
       @JsonKey(name: '_uid') this.uidElement,
-      final List<Reference>? endpoint,
-      required final List<ImagingManifestInstance> instance})
-      : _endpoint = endpoint,
-        _instance = instance,
-        super._();
+      this.endpoint,
+      required this.instance})
+      : super._();
 
   factory _$_ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingManifestSeriesFromJson(json);
@@ -3553,21 +3361,10 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
-  final List<Reference>? _endpoint;
   @override
-  List<Reference>? get endpoint {
-    final value = _endpoint;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ImagingManifestInstance> _instance;
+  final List<Reference>? endpoint;
   @override
-  List<ImagingManifestInstance> get instance {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_instance);
-  }
+  final List<ImagingManifestInstance> instance;
 
   @override
   String toString() {
@@ -3582,8 +3379,8 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.uidElement, uidElement) ||
                 other.uidElement == uidElement) &&
-            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
-            const DeepCollectionEquality().equals(other._instance, _instance));
+            const DeepCollectionEquality().equals(other.endpoint, endpoint) &&
+            const DeepCollectionEquality().equals(other.instance, instance));
   }
 
   @JsonKey(ignore: true)
@@ -3592,8 +3389,8 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
       runtimeType,
       uid,
       uidElement,
-      const DeepCollectionEquality().hash(_endpoint),
-      const DeepCollectionEquality().hash(_instance));
+      const DeepCollectionEquality().hash(endpoint),
+      const DeepCollectionEquality().hash(instance));
 
   @JsonKey(ignore: true)
   @override
@@ -4565,15 +4362,15 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       uid: freezed == uid
@@ -4589,7 +4386,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : accession // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       availability: freezed == availability
@@ -4601,7 +4398,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : availabilityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       modalityList: freezed == modalityList
-          ? _value._modalityList
+          ? _value.modalityList
           : modalityList // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       patient: null == patient
@@ -4621,7 +4418,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : startedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       referrer: freezed == referrer
@@ -4629,11 +4426,11 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : referrer // ignore: cast_nullable_to_non_nullable
               as Reference?,
       interpreter: freezed == interpreter
-          ? _value._interpreter
+          ? _value.interpreter
           : interpreter // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       endpoint: freezed == endpoint
-          ? _value._endpoint
+          ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       numberOfSeries: freezed == numberOfSeries
@@ -4653,11 +4450,11 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : numberOfInstancesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       procedureReference: freezed == procedureReference
-          ? _value._procedureReference
+          ? _value.procedureReference
           : procedureReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       procedureCode: freezed == procedureCode
-          ? _value._procedureCode
+          ? _value.procedureCode
           : procedureCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       reason: freezed == reason
@@ -4673,7 +4470,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
           : descriptionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       series: freezed == series
-          ? _value._series
+          ? _value.series
           : series // ignore: cast_nullable_to_non_nullable
               as List<ImagingStudySeries>?,
     ));
@@ -4695,53 +4492,42 @@ class _$_ImagingStudy extends _ImagingStudy {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.uid,
       @JsonKey(name: '_uid')
           this.uidElement,
       this.accession,
-      final List<Identifier>? identifier,
+      this.identifier,
       this.availability,
       @JsonKey(name: '_availability')
           this.availabilityElement,
-      final List<Coding>? modalityList,
+      this.modalityList,
       required this.patient,
       this.context,
       this.started,
       @JsonKey(name: '_started')
           this.startedElement,
-      final List<Reference>? basedOn,
+      this.basedOn,
       this.referrer,
-      final List<Reference>? interpreter,
-      final List<Reference>? endpoint,
+      this.interpreter,
+      this.endpoint,
       this.numberOfSeries,
       @JsonKey(name: '_numberOfSeries')
           this.numberOfSeriesElement,
       this.numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
           this.numberOfInstancesElement,
-      final List<Reference>? procedureReference,
-      final List<CodeableConcept>? procedureCode,
+      this.procedureReference,
+      this.procedureCode,
       this.reason,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<ImagingStudySeries>? series})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _modalityList = modalityList,
-        _basedOn = basedOn,
-        _interpreter = interpreter,
-        _endpoint = endpoint,
-        _procedureReference = procedureReference,
-        _procedureCode = procedureCode,
-        _series = series,
-        super._();
+      this.series})
+      : super._();
 
   factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingStudyFromJson(json);
@@ -4765,34 +4551,13 @@ class _$_ImagingStudy extends _ImagingStudy {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Id? uid;
   @override
@@ -4800,29 +4565,15 @@ class _$_ImagingStudy extends _ImagingStudy {
   final Element? uidElement;
   @override
   final Identifier? accession;
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final ImagingStudyAvailability? availability;
   @override
   @JsonKey(name: '_availability')
   final Element? availabilityElement;
-  final List<Coding>? _modalityList;
   @override
-  List<Coding>? get modalityList {
-    final value = _modalityList;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Coding>? modalityList;
   @override
   final Reference patient;
   @override
@@ -4832,35 +4583,14 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   @JsonKey(name: '_started')
   final Element? startedElement;
-  final List<Reference>? _basedOn;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? basedOn;
   @override
   final Reference? referrer;
-  final List<Reference>? _interpreter;
   @override
-  List<Reference>? get interpreter {
-    final value = _interpreter;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _endpoint;
+  final List<Reference>? interpreter;
   @override
-  List<Reference>? get endpoint {
-    final value = _endpoint;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? endpoint;
   @override
   final Decimal? numberOfSeries;
   @override
@@ -4871,24 +4601,10 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   @JsonKey(name: '_numberOfInstances')
   final Element? numberOfInstancesElement;
-  final List<Reference>? _procedureReference;
   @override
-  List<Reference>? get procedureReference {
-    final value = _procedureReference;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _procedureCode;
+  final List<Reference>? procedureReference;
   @override
-  List<CodeableConcept>? get procedureCode {
-    final value = _procedureCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? procedureCode;
   @override
   final CodeableConcept? reason;
   @override
@@ -4896,14 +4612,8 @@ class _$_ImagingStudy extends _ImagingStudy {
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
-  final List<ImagingStudySeries>? _series;
   @override
-  List<ImagingStudySeries>? get series {
-    final value = _series;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ImagingStudySeries>? series;
 
   @override
   String toString() {
@@ -4928,36 +4638,35 @@ class _$_ImagingStudy extends _ImagingStudy {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.uid, uid) || other.uid == uid) &&
             (identical(other.uidElement, uidElement) ||
                 other.uidElement == uidElement) &&
             (identical(other.accession, accession) ||
                 other.accession == accession) &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.availability, availability) ||
                 other.availability == availability) &&
             (identical(other.availabilityElement, availabilityElement) ||
                 other.availabilityElement == availabilityElement) &&
             const DeepCollectionEquality()
-                .equals(other._modalityList, _modalityList) &&
+                .equals(other.modalityList, modalityList) &&
             (identical(other.patient, patient) || other.patient == patient) &&
             (identical(other.context, context) || other.context == context) &&
             (identical(other.started, started) || other.started == started) &&
             (identical(other.startedElement, startedElement) ||
                 other.startedElement == startedElement) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
             (identical(other.referrer, referrer) ||
                 other.referrer == referrer) &&
             const DeepCollectionEquality()
-                .equals(other._interpreter, _interpreter) &&
-            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
+                .equals(other.interpreter, interpreter) &&
+            const DeepCollectionEquality().equals(other.endpoint, endpoint) &&
             (identical(other.numberOfSeries, numberOfSeries) ||
                 other.numberOfSeries == numberOfSeries) &&
             (identical(other.numberOfSeriesElement, numberOfSeriesElement) ||
@@ -4968,15 +4677,15 @@ class _$_ImagingStudy extends _ImagingStudy {
                     other.numberOfInstancesElement, numberOfInstancesElement) ||
                 other.numberOfInstancesElement == numberOfInstancesElement) &&
             const DeepCollectionEquality()
-                .equals(other._procedureReference, _procedureReference) &&
+                .equals(other.procedureReference, procedureReference) &&
             const DeepCollectionEquality()
-                .equals(other._procedureCode, _procedureCode) &&
+                .equals(other.procedureCode, procedureCode) &&
             (identical(other.reason, reason) || other.reason == reason) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 other.descriptionElement == descriptionElement) &&
-            const DeepCollectionEquality().equals(other._series, _series));
+            const DeepCollectionEquality().equals(other.series, series));
   }
 
   @JsonKey(ignore: true)
@@ -4991,34 +4700,34 @@ class _$_ImagingStudy extends _ImagingStudy {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         uid,
         uidElement,
         accession,
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(identifier),
         availability,
         availabilityElement,
-        const DeepCollectionEquality().hash(_modalityList),
+        const DeepCollectionEquality().hash(modalityList),
         patient,
         context,
         started,
         startedElement,
-        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(basedOn),
         referrer,
-        const DeepCollectionEquality().hash(_interpreter),
-        const DeepCollectionEquality().hash(_endpoint),
+        const DeepCollectionEquality().hash(interpreter),
+        const DeepCollectionEquality().hash(endpoint),
         numberOfSeries,
         numberOfSeriesElement,
         numberOfInstances,
         numberOfInstancesElement,
-        const DeepCollectionEquality().hash(_procedureReference),
-        const DeepCollectionEquality().hash(_procedureCode),
+        const DeepCollectionEquality().hash(procedureReference),
+        const DeepCollectionEquality().hash(procedureCode),
         reason,
         description,
         descriptionElement,
-        const DeepCollectionEquality().hash(_series)
+        const DeepCollectionEquality().hash(series)
       ]);
 
   @JsonKey(ignore: true)
@@ -5589,7 +5298,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
           : availabilityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       endpoint: freezed == endpoint
-          ? _value._endpoint
+          ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       bodySite: freezed == bodySite
@@ -5609,11 +5318,11 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
           : startedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       performer: freezed == performer
-          ? _value._performer
+          ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       instance: freezed == instance
-          ? _value._instance
+          ? _value.instance
           : instance // ignore: cast_nullable_to_non_nullable
               as List<ImagingStudyInstance>?,
     ));
@@ -5635,17 +5344,14 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       @JsonKey(name: '_numberOfInstances') this.numberOfInstancesElement,
       this.availability,
       @JsonKey(name: '_availability') this.availabilityElement,
-      final List<Reference>? endpoint,
+      this.endpoint,
       this.bodySite,
       this.laterality,
       this.started,
       @JsonKey(name: '_started') this.startedElement,
-      final List<Reference>? performer,
-      final List<ImagingStudyInstance>? instance})
-      : _endpoint = endpoint,
-        _performer = performer,
-        _instance = instance,
-        super._();
+      this.performer,
+      this.instance})
+      : super._();
 
   factory _$_ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
       _$$_ImagingStudySeriesFromJson(json);
@@ -5677,15 +5383,8 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   @override
   @JsonKey(name: '_availability')
   final Element? availabilityElement;
-  final List<Reference>? _endpoint;
   @override
-  List<Reference>? get endpoint {
-    final value = _endpoint;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? endpoint;
   @override
   final Coding? bodySite;
   @override
@@ -5695,23 +5394,10 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
   @override
   @JsonKey(name: '_started')
   final Element? startedElement;
-  final List<Reference>? _performer;
   @override
-  List<Reference>? get performer {
-    final value = _performer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ImagingStudyInstance>? _instance;
+  final List<Reference>? performer;
   @override
-  List<ImagingStudyInstance>? get instance {
-    final value = _instance;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ImagingStudyInstance>? instance;
 
   @override
   String toString() {
@@ -5744,7 +5430,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
                 other.availability == availability) &&
             (identical(other.availabilityElement, availabilityElement) ||
                 other.availabilityElement == availabilityElement) &&
-            const DeepCollectionEquality().equals(other._endpoint, _endpoint) &&
+            const DeepCollectionEquality().equals(other.endpoint, endpoint) &&
             (identical(other.bodySite, bodySite) ||
                 other.bodySite == bodySite) &&
             (identical(other.laterality, laterality) ||
@@ -5752,9 +5438,8 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
             (identical(other.started, started) || other.started == started) &&
             (identical(other.startedElement, startedElement) ||
                 other.startedElement == startedElement) &&
-            const DeepCollectionEquality()
-                .equals(other._performer, _performer) &&
-            const DeepCollectionEquality().equals(other._instance, _instance));
+            const DeepCollectionEquality().equals(other.performer, performer) &&
+            const DeepCollectionEquality().equals(other.instance, instance));
   }
 
   @JsonKey(ignore: true)
@@ -5772,13 +5457,13 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       numberOfInstancesElement,
       availability,
       availabilityElement,
-      const DeepCollectionEquality().hash(_endpoint),
+      const DeepCollectionEquality().hash(endpoint),
       bodySite,
       laterality,
       started,
       startedElement,
-      const DeepCollectionEquality().hash(_performer),
-      const DeepCollectionEquality().hash(_instance));
+      const DeepCollectionEquality().hash(performer),
+      const DeepCollectionEquality().hash(instance));
 
   @JsonKey(ignore: true)
   @override
@@ -7270,23 +6955,23 @@ class __$$_ObservationCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       status: freezed == status
@@ -7298,7 +6983,7 @@ class __$$_ObservationCopyWithImpl<$Res>
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       category: freezed == category
-          ? _value._category
+          ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       code: null == code
@@ -7334,7 +7019,7 @@ class __$$_ObservationCopyWithImpl<$Res>
           : issuedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       performer: freezed == performer
-          ? _value._performer
+          ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       valueQuantity: freezed == valueQuantity
@@ -7430,15 +7115,15 @@ class __$$_ObservationCopyWithImpl<$Res>
           : device // ignore: cast_nullable_to_non_nullable
               as Reference?,
       referenceRange: freezed == referenceRange
-          ? _value._referenceRange
+          ? _value.referenceRange
           : referenceRange // ignore: cast_nullable_to_non_nullable
               as List<ObservationReferenceRange>?,
       related: freezed == related
-          ? _value._related
+          ? _value.related
           : related // ignore: cast_nullable_to_non_nullable
               as List<ObservationRelated>?,
       component: freezed == component
-          ? _value._component
+          ? _value.component
           : component // ignore: cast_nullable_to_non_nullable
               as List<ObservationComponent>?,
     ));
@@ -7460,16 +7145,16 @@ class _$_Observation extends _Observation {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Reference>? basedOn,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      this.basedOn,
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      final List<CodeableConcept>? category,
+      this.category,
       required this.code,
       this.subject,
       this.context,
@@ -7480,7 +7165,7 @@ class _$_Observation extends _Observation {
       this.issued,
       @JsonKey(name: '_issued')
           this.issuedElement,
-      final List<Reference>? performer,
+      this.performer,
       this.valueQuantity,
       this.valueCodeableConcept,
       this.valueString,
@@ -7509,20 +7194,10 @@ class _$_Observation extends _Observation {
       this.method,
       this.specimen,
       this.device,
-      final List<ObservationReferenceRange>? referenceRange,
-      final List<ObservationRelated>? related,
-      final List<ObservationComponent>? component})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _basedOn = basedOn,
-        _category = category,
-        _performer = performer,
-        _referenceRange = referenceRange,
-        _related = related,
-        _component = component,
-        super._();
+      this.referenceRange,
+      this.related,
+      this.component})
+      : super._();
 
   factory _$_Observation.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationFromJson(json);
@@ -7546,66 +7221,24 @@ class _$_Observation extends _Observation {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _basedOn;
+  final List<Identifier>? identifier;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? basedOn;
   @override
   final ObservationStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
-  final List<CodeableConcept>? _category;
   @override
-  List<CodeableConcept>? get category {
-    final value = _category;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? category;
   @override
   final CodeableConcept code;
   @override
@@ -7624,15 +7257,8 @@ class _$_Observation extends _Observation {
   @override
   @JsonKey(name: '_issued')
   final Element? issuedElement;
-  final List<Reference>? _performer;
   @override
-  List<Reference>? get performer {
-    final value = _performer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? performer;
   @override
   final Quantity? valueQuantity;
   @override
@@ -7684,32 +7310,12 @@ class _$_Observation extends _Observation {
   final Reference? specimen;
   @override
   final Reference? device;
-  final List<ObservationReferenceRange>? _referenceRange;
   @override
-  List<ObservationReferenceRange>? get referenceRange {
-    final value = _referenceRange;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ObservationRelated>? _related;
+  final List<ObservationReferenceRange>? referenceRange;
   @override
-  List<ObservationRelated>? get related {
-    final value = _related;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<ObservationComponent>? _component;
+  final List<ObservationRelated>? related;
   @override
-  List<ObservationComponent>? get component {
-    final value = _component;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ObservationComponent>? component;
 
   @override
   String toString() {
@@ -7734,34 +7340,31 @@ class _$_Observation extends _Observation {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
-            const DeepCollectionEquality().equals(other._category, _category) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.subject, subject) || other.subject == subject) &&
             (identical(other.context, context) || other.context == context) &&
             (identical(other.effectiveDateTime, effectiveDateTime) ||
                 other.effectiveDateTime == effectiveDateTime) &&
-            (identical(
-                    other.effectiveDateTimeElement, effectiveDateTimeElement) ||
+            (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
                 other.effectiveDateTimeElement == effectiveDateTimeElement) &&
             (identical(other.effectivePeriod, effectivePeriod) ||
                 other.effectivePeriod == effectivePeriod) &&
             (identical(other.issued, issued) || other.issued == issued) &&
             (identical(other.issuedElement, issuedElement) ||
                 other.issuedElement == issuedElement) &&
-            const DeepCollectionEquality()
-                .equals(other._performer, _performer) &&
+            const DeepCollectionEquality().equals(other.performer, performer) &&
             (identical(other.valueQuantity, valueQuantity) ||
                 other.valueQuantity == valueQuantity) &&
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
@@ -7802,11 +7405,13 @@ class _$_Observation extends _Observation {
             (identical(other.bodySite, bodySite) ||
                 other.bodySite == bodySite) &&
             (identical(other.method, method) || other.method == method) &&
-            (identical(other.specimen, specimen) || other.specimen == specimen) &&
+            (identical(other.specimen, specimen) ||
+                other.specimen == specimen) &&
             (identical(other.device, device) || other.device == device) &&
-            const DeepCollectionEquality().equals(other._referenceRange, _referenceRange) &&
-            const DeepCollectionEquality().equals(other._related, _related) &&
-            const DeepCollectionEquality().equals(other._component, _component));
+            const DeepCollectionEquality()
+                .equals(other.referenceRange, referenceRange) &&
+            const DeepCollectionEquality().equals(other.related, related) &&
+            const DeepCollectionEquality().equals(other.component, component));
   }
 
   @JsonKey(ignore: true)
@@ -7821,14 +7426,14 @@ class _$_Observation extends _Observation {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
-        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(basedOn),
         status,
         statusElement,
-        const DeepCollectionEquality().hash(_category),
+        const DeepCollectionEquality().hash(category),
         code,
         subject,
         context,
@@ -7837,7 +7442,7 @@ class _$_Observation extends _Observation {
         effectivePeriod,
         issued,
         issuedElement,
-        const DeepCollectionEquality().hash(_performer),
+        const DeepCollectionEquality().hash(performer),
         valueQuantity,
         valueCodeableConcept,
         valueString,
@@ -7861,9 +7466,9 @@ class _$_Observation extends _Observation {
         method,
         specimen,
         device,
-        const DeepCollectionEquality().hash(_referenceRange),
-        const DeepCollectionEquality().hash(_related),
-        const DeepCollectionEquality().hash(_component)
+        const DeepCollectionEquality().hash(referenceRange),
+        const DeepCollectionEquality().hash(related),
+        const DeepCollectionEquality().hash(component)
       ]);
 
   @JsonKey(ignore: true)
@@ -8294,7 +7899,7 @@ class __$$_ObservationReferenceRangeCopyWithImpl<$Res>
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       appliesTo: freezed == appliesTo
-          ? _value._appliesTo
+          ? _value.appliesTo
           : appliesTo // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
       age: freezed == age
@@ -8320,12 +7925,11 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
       {this.low,
       this.high,
       this.type,
-      final List<CodeableConcept>? appliesTo,
+      this.appliesTo,
       this.age,
       this.text,
       @JsonKey(name: '_text') this.textElement})
-      : _appliesTo = appliesTo,
-        super._();
+      : super._();
 
   factory _$_ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationReferenceRangeFromJson(json);
@@ -8336,15 +7940,8 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   final Quantity? high;
   @override
   final CodeableConcept? type;
-  final List<CodeableConcept>? _appliesTo;
   @override
-  List<CodeableConcept>? get appliesTo {
-    final value = _appliesTo;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<CodeableConcept>? appliesTo;
   @override
   final Range? age;
   @override
@@ -8366,8 +7963,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
             (identical(other.low, low) || other.low == low) &&
             (identical(other.high, high) || other.high == high) &&
             (identical(other.type, type) || other.type == type) &&
-            const DeepCollectionEquality()
-                .equals(other._appliesTo, _appliesTo) &&
+            const DeepCollectionEquality().equals(other.appliesTo, appliesTo) &&
             (identical(other.age, age) || other.age == age) &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.textElement, textElement) ||
@@ -8377,7 +7973,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, low, high, type,
-      const DeepCollectionEquality().hash(_appliesTo), age, text, textElement);
+      const DeepCollectionEquality().hash(appliesTo), age, text, textElement);
 
   @JsonKey(ignore: true)
   @override
@@ -9128,7 +8724,7 @@ class __$$_ObservationComponentCopyWithImpl<$Res>
           : interpretation // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       referenceRange: freezed == referenceRange
-          ? _value._referenceRange
+          ? _value.referenceRange
           : referenceRange // ignore: cast_nullable_to_non_nullable
               as List<ObservationReferenceRange>?,
     ));
@@ -9155,9 +8751,8 @@ class _$_ObservationComponent extends _ObservationComponent {
       this.valuePeriod,
       this.dataAbsentReason,
       this.interpretation,
-      final List<ObservationReferenceRange>? referenceRange})
-      : _referenceRange = referenceRange,
-        super._();
+      this.referenceRange})
+      : super._();
 
   factory _$_ObservationComponent.fromJson(Map<String, dynamic> json) =>
       _$$_ObservationComponentFromJson(json);
@@ -9197,14 +8792,8 @@ class _$_ObservationComponent extends _ObservationComponent {
   final CodeableConcept? dataAbsentReason;
   @override
   final CodeableConcept? interpretation;
-  final List<ObservationReferenceRange>? _referenceRange;
   @override
-  List<ObservationReferenceRange>? get referenceRange {
-    final value = _referenceRange;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ObservationReferenceRange>? referenceRange;
 
   @override
   String toString() {
@@ -9248,7 +8837,7 @@ class _$_ObservationComponent extends _ObservationComponent {
             (identical(other.interpretation, interpretation) ||
                 other.interpretation == interpretation) &&
             const DeepCollectionEquality()
-                .equals(other._referenceRange, _referenceRange));
+                .equals(other.referenceRange, referenceRange));
   }
 
   @JsonKey(ignore: true)
@@ -9271,7 +8860,7 @@ class _$_ObservationComponent extends _ObservationComponent {
       valuePeriod,
       dataAbsentReason,
       interpretation,
-      const DeepCollectionEquality().hash(_referenceRange));
+      const DeepCollectionEquality().hash(referenceRange));
 
   @JsonKey(ignore: true)
   @override
@@ -9874,15 +9463,15 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
@@ -9890,11 +9479,11 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
       basedOn: freezed == basedOn
-          ? _value._basedOn
+          ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       parent: freezed == parent
-          ? _value._parent
+          ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       questionnaire: freezed == questionnaire
@@ -9934,7 +9523,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseItem>?,
     ));
@@ -9956,13 +9545,13 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
+          this.extension_,
+      this.modifierExtension,
       this.identifier,
-      final List<Reference>? basedOn,
-      final List<Reference>? parent,
+      this.basedOn,
+      this.parent,
       this.questionnaire,
       this.status,
       @JsonKey(name: '_status')
@@ -9974,14 +9563,8 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
           this.authoredElement,
       this.author,
       this.source,
-      final List<QuestionnaireResponseItem>? item})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _basedOn = basedOn,
-        _parent = parent,
-        _item = item,
-        super._();
+      this.item})
+      : super._();
 
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireResponseFromJson(json);
@@ -10005,54 +9588,19 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? modifierExtension;
   @override
   final Identifier? identifier;
-  final List<Reference>? _basedOn;
   @override
-  List<Reference>? get basedOn {
-    final value = _basedOn;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _parent;
+  final List<Reference>? basedOn;
   @override
-  List<Reference>? get parent {
-    final value = _parent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? parent;
   @override
   final Reference? questionnaire;
   @override
@@ -10073,14 +9621,8 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   final Reference? author;
   @override
   final Reference? source;
-  final List<QuestionnaireResponseItem>? _item;
   @override
-  List<QuestionnaireResponseItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<QuestionnaireResponseItem>? item;
 
   @override
   String toString() {
@@ -10105,16 +9647,15 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
-            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
-            const DeepCollectionEquality().equals(other._parent, _parent) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.parent, parent) &&
             (identical(other.questionnaire, questionnaire) ||
                 other.questionnaire == questionnaire) &&
             (identical(other.status, status) || other.status == status) &&
@@ -10128,7 +9669,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
                 other.authoredElement == authoredElement) &&
             (identical(other.author, author) || other.author == author) &&
             (identical(other.source, source) || other.source == source) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -10143,12 +9684,12 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
         identifier,
-        const DeepCollectionEquality().hash(_basedOn),
-        const DeepCollectionEquality().hash(_parent),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(parent),
         questionnaire,
         status,
         statusElement,
@@ -10158,7 +9699,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         authoredElement,
         author,
         source,
-        const DeepCollectionEquality().hash(_item)
+        const DeepCollectionEquality().hash(item)
       ]);
 
   @JsonKey(ignore: true)
@@ -10520,11 +10061,11 @@ class __$$_QuestionnaireResponseItemCopyWithImpl<$Res>
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
       answer: freezed == answer
-          ? _value._answer
+          ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseAnswer>?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseItem>?,
     ));
@@ -10542,11 +10083,9 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
       this.text,
       @JsonKey(name: '_text') this.textElement,
       this.subject,
-      final List<QuestionnaireResponseAnswer>? answer,
-      final List<QuestionnaireResponseItem>? item})
-      : _answer = answer,
-        _item = item,
-        super._();
+      this.answer,
+      this.item})
+      : super._();
 
   factory _$_QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireResponseItemFromJson(json);
@@ -10568,23 +10107,10 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
   final Element? textElement;
   @override
   final Reference? subject;
-  final List<QuestionnaireResponseAnswer>? _answer;
   @override
-  List<QuestionnaireResponseAnswer>? get answer {
-    final value = _answer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<QuestionnaireResponseItem>? _item;
+  final List<QuestionnaireResponseAnswer>? answer;
   @override
-  List<QuestionnaireResponseItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<QuestionnaireResponseItem>? item;
 
   @override
   String toString() {
@@ -10607,8 +10133,8 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
             (identical(other.textElement, textElement) ||
                 other.textElement == textElement) &&
             (identical(other.subject, subject) || other.subject == subject) &&
-            const DeepCollectionEquality().equals(other._answer, _answer) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+            const DeepCollectionEquality().equals(other.answer, answer) &&
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -10622,8 +10148,8 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
       text,
       textElement,
       subject,
-      const DeepCollectionEquality().hash(_answer),
-      const DeepCollectionEquality().hash(_item));
+      const DeepCollectionEquality().hash(answer),
+      const DeepCollectionEquality().hash(item));
 
   @JsonKey(ignore: true)
   @override
@@ -11217,7 +10743,7 @@ class __$$_QuestionnaireResponseAnswerCopyWithImpl<$Res>
           : valueReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       item: freezed == item
-          ? _value._item
+          ? _value.item
           : item // ignore: cast_nullable_to_non_nullable
               as List<QuestionnaireResponseItem>?,
     ));
@@ -11248,9 +10774,8 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       this.valueCoding,
       this.valueQuantity,
       this.valueReference,
-      final List<QuestionnaireResponseItem>? item})
-      : _item = item,
-        super._();
+      this.item})
+      : super._();
 
   factory _$_QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireResponseAnswerFromJson(json);
@@ -11303,14 +10828,8 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
   final Quantity? valueQuantity;
   @override
   final Reference? valueReference;
-  final List<QuestionnaireResponseItem>? _item;
   @override
-  List<QuestionnaireResponseItem>? get item {
-    final value = _item;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<QuestionnaireResponseItem>? item;
 
   @override
   String toString() {
@@ -11362,7 +10881,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
                 other.valueQuantity == valueQuantity) &&
             (identical(other.valueReference, valueReference) ||
                 other.valueReference == valueReference) &&
-            const DeepCollectionEquality().equals(other._item, _item));
+            const DeepCollectionEquality().equals(other.item, item));
   }
 
   @JsonKey(ignore: true)
@@ -11389,7 +10908,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
         valueCoding,
         valueQuantity,
         valueReference,
-        const DeepCollectionEquality().hash(_item)
+        const DeepCollectionEquality().hash(item)
       ]);
 
   @JsonKey(ignore: true)
@@ -12097,19 +11616,19 @@ class __$$_SequenceCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       type: freezed == type
@@ -12153,7 +11672,7 @@ class __$$_SequenceCopyWithImpl<$Res>
           : referenceSeq // ignore: cast_nullable_to_non_nullable
               as SequenceReferenceSeq?,
       variant: freezed == variant
-          ? _value._variant
+          ? _value.variant
           : variant // ignore: cast_nullable_to_non_nullable
               as List<SequenceVariant>?,
       observedSeq: freezed == observedSeq
@@ -12165,7 +11684,7 @@ class __$$_SequenceCopyWithImpl<$Res>
           : observedSeqElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       quality: freezed == quality
-          ? _value._quality
+          ? _value.quality
           : quality // ignore: cast_nullable_to_non_nullable
               as List<SequenceQuality>?,
       readCoverage: freezed == readCoverage
@@ -12177,11 +11696,11 @@ class __$$_SequenceCopyWithImpl<$Res>
           : readCoverageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       repository: freezed == repository
-          ? _value._repository
+          ? _value.repository
           : repository // ignore: cast_nullable_to_non_nullable
               as List<SequenceRepository>?,
       pointer: freezed == pointer
-          ? _value._pointer
+          ? _value.pointer
           : pointer // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
     ));
@@ -12203,11 +11722,11 @@ class _$_Sequence extends _Sequence {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.type,
       @JsonKey(name: '_type')
           this.typeElement,
@@ -12220,25 +11739,17 @@ class _$_Sequence extends _Sequence {
       this.performer,
       this.quantity,
       this.referenceSeq,
-      final List<SequenceVariant>? variant,
+      this.variant,
       this.observedSeq,
       @JsonKey(name: '_observedSeq')
           this.observedSeqElement,
-      final List<SequenceQuality>? quality,
+      this.quality,
       this.readCoverage,
       @JsonKey(name: '_readCoverage')
           this.readCoverageElement,
-      final List<SequenceRepository>? repository,
-      final List<Reference>? pointer})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _variant = variant,
-        _quality = quality,
-        _repository = repository,
-        _pointer = pointer,
-        super._();
+      this.repository,
+      this.pointer})
+      : super._();
 
   factory _$_Sequence.fromJson(Map<String, dynamic> json) =>
       _$$_SequenceFromJson(json);
@@ -12262,43 +11773,15 @@ class _$_Sequence extends _Sequence {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final SequenceType? type;
   @override
@@ -12321,51 +11804,24 @@ class _$_Sequence extends _Sequence {
   final Quantity? quantity;
   @override
   final SequenceReferenceSeq? referenceSeq;
-  final List<SequenceVariant>? _variant;
   @override
-  List<SequenceVariant>? get variant {
-    final value = _variant;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<SequenceVariant>? variant;
   @override
   final String? observedSeq;
   @override
   @JsonKey(name: '_observedSeq')
   final Element? observedSeqElement;
-  final List<SequenceQuality>? _quality;
   @override
-  List<SequenceQuality>? get quality {
-    final value = _quality;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<SequenceQuality>? quality;
   @override
   final Decimal? readCoverage;
   @override
   @JsonKey(name: '_readCoverage')
   final Element? readCoverageElement;
-  final List<SequenceRepository>? _repository;
   @override
-  List<SequenceRepository>? get repository {
-    final value = _repository;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _pointer;
+  final List<SequenceRepository>? repository;
   @override
-  List<Reference>? get pointer {
-    final value = _pointer;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Reference>? pointer;
 
   @override
   String toString() {
@@ -12390,14 +11846,13 @@ class _$_Sequence extends _Sequence {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -12416,19 +11871,19 @@ class _$_Sequence extends _Sequence {
                 other.quantity == quantity) &&
             (identical(other.referenceSeq, referenceSeq) ||
                 other.referenceSeq == referenceSeq) &&
-            const DeepCollectionEquality().equals(other._variant, _variant) &&
+            const DeepCollectionEquality().equals(other.variant, variant) &&
             (identical(other.observedSeq, observedSeq) ||
                 other.observedSeq == observedSeq) &&
             (identical(other.observedSeqElement, observedSeqElement) ||
                 other.observedSeqElement == observedSeqElement) &&
-            const DeepCollectionEquality().equals(other._quality, _quality) &&
+            const DeepCollectionEquality().equals(other.quality, quality) &&
             (identical(other.readCoverage, readCoverage) ||
                 other.readCoverage == readCoverage) &&
             (identical(other.readCoverageElement, readCoverageElement) ||
                 other.readCoverageElement == readCoverageElement) &&
             const DeepCollectionEquality()
-                .equals(other._repository, _repository) &&
-            const DeepCollectionEquality().equals(other._pointer, _pointer));
+                .equals(other.repository, repository) &&
+            const DeepCollectionEquality().equals(other.pointer, pointer));
   }
 
   @JsonKey(ignore: true)
@@ -12443,10 +11898,10 @@ class _$_Sequence extends _Sequence {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         type,
         typeElement,
         coordinateSystem,
@@ -12457,14 +11912,14 @@ class _$_Sequence extends _Sequence {
         performer,
         quantity,
         referenceSeq,
-        const DeepCollectionEquality().hash(_variant),
+        const DeepCollectionEquality().hash(variant),
         observedSeq,
         observedSeqElement,
-        const DeepCollectionEquality().hash(_quality),
+        const DeepCollectionEquality().hash(quality),
         readCoverage,
         readCoverageElement,
-        const DeepCollectionEquality().hash(_repository),
-        const DeepCollectionEquality().hash(_pointer)
+        const DeepCollectionEquality().hash(repository),
+        const DeepCollectionEquality().hash(pointer)
       ]);
 
   @JsonKey(ignore: true)
@@ -15514,19 +14969,19 @@ class __$$_SpecimenCopyWithImpl<$Res>
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
       contained: freezed == contained
-          ? _value._contained
+          ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
+          ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       accessionIdentifier: freezed == accessionIdentifier
@@ -15558,11 +15013,11 @@ class __$$_SpecimenCopyWithImpl<$Res>
           : receivedTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       parent: freezed == parent
-          ? _value._parent
+          ? _value.parent
           : parent // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       request: freezed == request
-          ? _value._request
+          ? _value.request
           : request // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       collection: freezed == collection
@@ -15570,15 +15025,15 @@ class __$$_SpecimenCopyWithImpl<$Res>
           : collection // ignore: cast_nullable_to_non_nullable
               as SpecimenCollection?,
       processing: freezed == processing
-          ? _value._processing
+          ? _value.processing
           : processing // ignore: cast_nullable_to_non_nullable
               as List<SpecimenProcessing>?,
       container: freezed == container
-          ? _value._container
+          ? _value.container
           : container // ignore: cast_nullable_to_non_nullable
               as List<SpecimenContainer>?,
       note: freezed == note
-          ? _value._note
+          ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
     ));
@@ -15600,11 +15055,11 @@ class _$_Specimen extends _Specimen {
       @JsonKey(name: '_language')
           this.languageElement,
       this.text,
-      final List<Resource>? contained,
+      this.contained,
       @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
       this.accessionIdentifier,
       this.status,
       @JsonKey(name: '_status')
@@ -15614,22 +15069,13 @@ class _$_Specimen extends _Specimen {
       this.receivedTime,
       @JsonKey(name: '_receivedTime')
           this.receivedTimeElement,
-      final List<Reference>? parent,
-      final List<Reference>? request,
+      this.parent,
+      this.request,
       this.collection,
-      final List<SpecimenProcessing>? processing,
-      final List<SpecimenContainer>? container,
-      final List<Annotation>? note})
-      : _contained = contained,
-        _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        _identifier = identifier,
-        _parent = parent,
-        _request = request,
-        _processing = processing,
-        _container = container,
-        _note = note,
-        super._();
+      this.processing,
+      this.container,
+      this.note})
+      : super._();
 
   factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenFromJson(json);
@@ -15653,43 +15099,15 @@ class _$_Specimen extends _Specimen {
   final Element? languageElement;
   @override
   final Narrative? text;
-  final List<Resource>? _contained;
   @override
-  List<Resource>? get contained {
-    final value = _contained;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _extension_;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
+  final List<FhirExtension>? extension_;
   @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Identifier>? _identifier;
+  final List<FhirExtension>? modifierExtension;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final Identifier? accessionIdentifier;
   @override
@@ -15706,52 +15124,18 @@ class _$_Specimen extends _Specimen {
   @override
   @JsonKey(name: '_receivedTime')
   final Element? receivedTimeElement;
-  final List<Reference>? _parent;
   @override
-  List<Reference>? get parent {
-    final value = _parent;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Reference>? _request;
+  final List<Reference>? parent;
   @override
-  List<Reference>? get request {
-    final value = _request;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? request;
   @override
   final SpecimenCollection? collection;
-  final List<SpecimenProcessing>? _processing;
   @override
-  List<SpecimenProcessing>? get processing {
-    final value = _processing;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<SpecimenContainer>? _container;
+  final List<SpecimenProcessing>? processing;
   @override
-  List<SpecimenContainer>? get container {
-    final value = _container;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Annotation>? _note;
+  final List<SpecimenContainer>? container;
   @override
-  List<Annotation>? get note {
-    final value = _note;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<Annotation>? note;
 
   @override
   String toString() {
@@ -15776,14 +15160,13 @@ class _$_Specimen extends _Specimen {
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
-                .equals(other._contained, _contained) &&
+                .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.accessionIdentifier, accessionIdentifier) ||
                 other.accessionIdentifier == accessionIdentifier) &&
             (identical(other.status, status) || other.status == status) &&
@@ -15795,15 +15178,14 @@ class _$_Specimen extends _Specimen {
                 other.receivedTime == receivedTime) &&
             (identical(other.receivedTimeElement, receivedTimeElement) ||
                 other.receivedTimeElement == receivedTimeElement) &&
-            const DeepCollectionEquality().equals(other._parent, _parent) &&
-            const DeepCollectionEquality().equals(other._request, _request) &&
+            const DeepCollectionEquality().equals(other.parent, parent) &&
+            const DeepCollectionEquality().equals(other.request, request) &&
             (identical(other.collection, collection) ||
                 other.collection == collection) &&
             const DeepCollectionEquality()
-                .equals(other._processing, _processing) &&
-            const DeepCollectionEquality()
-                .equals(other._container, _container) &&
-            const DeepCollectionEquality().equals(other._note, _note));
+                .equals(other.processing, processing) &&
+            const DeepCollectionEquality().equals(other.container, container) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
 
   @JsonKey(ignore: true)
@@ -15818,10 +15200,10 @@ class _$_Specimen extends _Specimen {
         language,
         languageElement,
         text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
         accessionIdentifier,
         status,
         statusElement,
@@ -15829,12 +15211,12 @@ class _$_Specimen extends _Specimen {
         subject,
         receivedTime,
         receivedTimeElement,
-        const DeepCollectionEquality().hash(_parent),
-        const DeepCollectionEquality().hash(_request),
+        const DeepCollectionEquality().hash(parent),
+        const DeepCollectionEquality().hash(request),
         collection,
-        const DeepCollectionEquality().hash(_processing),
-        const DeepCollectionEquality().hash(_container),
-        const DeepCollectionEquality().hash(_note)
+        const DeepCollectionEquality().hash(processing),
+        const DeepCollectionEquality().hash(container),
+        const DeepCollectionEquality().hash(note)
       ]);
 
   @JsonKey(ignore: true)
@@ -16522,7 +15904,7 @@ class __$$_SpecimenProcessingCopyWithImpl<$Res>
           : procedure // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       additive: freezed == additive
-          ? _value._additive
+          ? _value.additive
           : additive // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       timeDateTime: freezed == timeDateTime
@@ -16548,12 +15930,11 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       {this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.procedure,
-      final List<Reference>? additive,
+      this.additive,
       this.timeDateTime,
       @JsonKey(name: '_timeDateTime') this.timeDateTimeElement,
       this.timePeriod})
-      : _additive = additive,
-        super._();
+      : super._();
 
   factory _$_SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenProcessingFromJson(json);
@@ -16565,15 +15946,8 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
   final Element? descriptionElement;
   @override
   final CodeableConcept? procedure;
-  final List<Reference>? _additive;
   @override
-  List<Reference>? get additive {
-    final value = _additive;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Reference>? additive;
   @override
   final FhirDateTime? timeDateTime;
   @override
@@ -16598,7 +15972,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
                 other.descriptionElement == descriptionElement) &&
             (identical(other.procedure, procedure) ||
                 other.procedure == procedure) &&
-            const DeepCollectionEquality().equals(other._additive, _additive) &&
+            const DeepCollectionEquality().equals(other.additive, additive) &&
             (identical(other.timeDateTime, timeDateTime) ||
                 other.timeDateTime == timeDateTime) &&
             (identical(other.timeDateTimeElement, timeDateTimeElement) ||
@@ -16614,7 +15988,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       description,
       descriptionElement,
       procedure,
-      const DeepCollectionEquality().hash(_additive),
+      const DeepCollectionEquality().hash(additive),
       timeDateTime,
       timeDateTimeElement,
       timePeriod);
@@ -16903,7 +16277,7 @@ class __$$_SpecimenContainerCopyWithImpl<$Res>
   }) {
     return _then(_$_SpecimenContainer(
       identifier: freezed == identifier
-          ? _value._identifier
+          ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
       description: freezed == description
@@ -16942,7 +16316,7 @@ class __$$_SpecimenContainerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SpecimenContainer extends _SpecimenContainer {
   _$_SpecimenContainer(
-      {final List<Identifier>? identifier,
+      {this.identifier,
       this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.type,
@@ -16950,21 +16324,13 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       this.specimenQuantity,
       this.additiveCodeableConcept,
       this.additiveReference})
-      : _identifier = identifier,
-        super._();
+      : super._();
 
   factory _$_SpecimenContainer.fromJson(Map<String, dynamic> json) =>
       _$$_SpecimenContainerFromJson(json);
 
-  final List<Identifier>? _identifier;
   @override
-  List<Identifier>? get identifier {
-    final value = _identifier;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<Identifier>? identifier;
   @override
   final String? description;
   @override
@@ -16992,7 +16358,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
         (other.runtimeType == runtimeType &&
             other is _$_SpecimenContainer &&
             const DeepCollectionEquality()
-                .equals(other._identifier, _identifier) &&
+                .equals(other.identifier, identifier) &&
             (identical(other.description, description) ||
                 other.description == description) &&
             (identical(other.descriptionElement, descriptionElement) ||
@@ -17013,7 +16379,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_identifier),
+      const DeepCollectionEquality().hash(identifier),
       description,
       descriptionElement,
       type,

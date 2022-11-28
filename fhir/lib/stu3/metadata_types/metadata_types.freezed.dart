@@ -133,7 +133,7 @@ class __$$_ContactDetailCopyWithImpl<$Res>
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       telecom: freezed == telecom
-          ? _value._telecom
+          ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
     ));
@@ -144,11 +144,8 @@ class __$$_ContactDetailCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ContactDetail extends _ContactDetail {
   _$_ContactDetail(
-      {this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      final List<ContactPoint>? telecom})
-      : _telecom = telecom,
-        super._();
+      {this.name, @JsonKey(name: '_name') this.nameElement, this.telecom})
+      : super._();
 
   factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ContactDetailFromJson(json);
@@ -158,14 +155,8 @@ class _$_ContactDetail extends _ContactDetail {
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
-  final List<ContactPoint>? _telecom;
   @override
-  List<ContactPoint>? get telecom {
-    final value = _telecom;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ContactPoint>? telecom;
 
   @override
   String toString() {
@@ -180,13 +171,13 @@ class _$_ContactDetail extends _ContactDetail {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
-            const DeepCollectionEquality().equals(other._telecom, _telecom));
+            const DeepCollectionEquality().equals(other.telecom, telecom));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, name, nameElement,
-      const DeepCollectionEquality().hash(_telecom));
+      const DeepCollectionEquality().hash(telecom));
 
   @JsonKey(ignore: true)
   @override
@@ -386,7 +377,7 @@ class __$$_ContributorCopyWithImpl<$Res>
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       contact: freezed == contact
-          ? _value._contact
+          ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
     ));
@@ -401,9 +392,8 @@ class _$_Contributor extends _Contributor {
       @JsonKey(name: '_type') this.typeElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
-      final List<ContactDetail>? contact})
-      : _contact = contact,
-        super._();
+      this.contact})
+      : super._();
 
   factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
       _$$_ContributorFromJson(json);
@@ -418,14 +408,8 @@ class _$_Contributor extends _Contributor {
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
-  final List<ContactDetail>? _contact;
   @override
-  List<ContactDetail>? get contact {
-    final value = _contact;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<ContactDetail>? contact;
 
   @override
   String toString() {
@@ -443,13 +427,13 @@ class _$_Contributor extends _Contributor {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
-            const DeepCollectionEquality().equals(other._contact, _contact));
+            const DeepCollectionEquality().equals(other.contact, contact));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, type, typeElement, name,
-      nameElement, const DeepCollectionEquality().hash(_contact));
+      nameElement, const DeepCollectionEquality().hash(contact));
 
   @JsonKey(ignore: true)
   @override
@@ -1373,27 +1357,27 @@ class __$$_DataRequirementCopyWithImpl<$Res>
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       profile: freezed == profile
-          ? _value._profile
+          ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       profileElement: freezed == profileElement
-          ? _value._profileElement
+          ? _value.profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       mustSupport: freezed == mustSupport
-          ? _value._mustSupport
+          ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       mustSupportElement: freezed == mustSupportElement
-          ? _value._mustSupportElement
+          ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       codeFilter: freezed == codeFilter
-          ? _value._codeFilter
+          ? _value.codeFilter
           : codeFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementCodeFilter>?,
       dateFilter: freezed == dateFilter
-          ? _value._dateFilter
+          ? _value.dateFilter
           : dateFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementDateFilter>?,
     ));
@@ -1406,19 +1390,13 @@ class _$_DataRequirement extends _DataRequirement {
   _$_DataRequirement(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
-      final List<String>? profile,
-      @JsonKey(name: '_profile') final List<Element?>? profileElement,
-      final List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') final List<Element?>? mustSupportElement,
-      final List<DataRequirementCodeFilter>? codeFilter,
-      final List<DataRequirementDateFilter>? dateFilter})
-      : _profile = profile,
-        _profileElement = profileElement,
-        _mustSupport = mustSupport,
-        _mustSupportElement = mustSupportElement,
-        _codeFilter = codeFilter,
-        _dateFilter = dateFilter,
-        super._();
+      this.profile,
+      @JsonKey(name: '_profile') this.profileElement,
+      this.mustSupport,
+      @JsonKey(name: '_mustSupport') this.mustSupportElement,
+      this.codeFilter,
+      this.dateFilter})
+      : super._();
 
   factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementFromJson(json);
@@ -1428,61 +1406,20 @@ class _$_DataRequirement extends _DataRequirement {
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
-  final List<String>? _profile;
   @override
-  List<String>? get profile {
-    final value = _profile;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _profileElement;
+  final List<String>? profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element?>? get profileElement {
-    final value = _profileElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<String>? _mustSupport;
+  final List<Element?>? profileElement;
   @override
-  List<String>? get mustSupport {
-    final value = _mustSupport;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _mustSupportElement;
+  final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement {
-    final value = _mustSupportElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirementCodeFilter>? _codeFilter;
+  final List<Element?>? mustSupportElement;
   @override
-  List<DataRequirementCodeFilter>? get codeFilter {
-    final value = _codeFilter;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<DataRequirementDateFilter>? _dateFilter;
+  final List<DataRequirementCodeFilter>? codeFilter;
   @override
-  List<DataRequirementDateFilter>? get dateFilter {
-    final value = _dateFilter;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<DataRequirementDateFilter>? dateFilter;
 
   @override
   String toString() {
@@ -1497,17 +1434,17 @@ class _$_DataRequirement extends _DataRequirement {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
-            const DeepCollectionEquality().equals(other._profile, _profile) &&
+            const DeepCollectionEquality().equals(other.profile, profile) &&
             const DeepCollectionEquality()
-                .equals(other._profileElement, _profileElement) &&
+                .equals(other.profileElement, profileElement) &&
             const DeepCollectionEquality()
-                .equals(other._mustSupport, _mustSupport) &&
+                .equals(other.mustSupport, mustSupport) &&
             const DeepCollectionEquality()
-                .equals(other._mustSupportElement, _mustSupportElement) &&
+                .equals(other.mustSupportElement, mustSupportElement) &&
             const DeepCollectionEquality()
-                .equals(other._codeFilter, _codeFilter) &&
+                .equals(other.codeFilter, codeFilter) &&
             const DeepCollectionEquality()
-                .equals(other._dateFilter, _dateFilter));
+                .equals(other.dateFilter, dateFilter));
   }
 
   @JsonKey(ignore: true)
@@ -1516,12 +1453,12 @@ class _$_DataRequirement extends _DataRequirement {
       runtimeType,
       type,
       typeElement,
-      const DeepCollectionEquality().hash(_profile),
-      const DeepCollectionEquality().hash(_profileElement),
-      const DeepCollectionEquality().hash(_mustSupport),
-      const DeepCollectionEquality().hash(_mustSupportElement),
-      const DeepCollectionEquality().hash(_codeFilter),
-      const DeepCollectionEquality().hash(_dateFilter));
+      const DeepCollectionEquality().hash(profile),
+      const DeepCollectionEquality().hash(profileElement),
+      const DeepCollectionEquality().hash(mustSupport),
+      const DeepCollectionEquality().hash(mustSupportElement),
+      const DeepCollectionEquality().hash(codeFilter),
+      const DeepCollectionEquality().hash(dateFilter));
 
   @JsonKey(ignore: true)
   @override
@@ -1800,19 +1737,19 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
       valueCode: freezed == valueCode
-          ? _value._valueCode
+          ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
       valueCodeElement: freezed == valueCodeElement
-          ? _value._valueCodeElement
+          ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
       valueCoding: freezed == valueCoding
-          ? _value._valueCoding
+          ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value._valueCodeableConcept
+          ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
     ));
@@ -1828,15 +1765,11 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       this.valueSetString,
       @JsonKey(name: '_valueSetString') this.valueSetStringElement,
       this.valueSetReference,
-      final List<Code>? valueCode,
-      @JsonKey(name: '_valueCode') final List<Element?>? valueCodeElement,
-      final List<Coding>? valueCoding,
-      final List<CodeableConcept>? valueCodeableConcept})
-      : _valueCode = valueCode,
-        _valueCodeElement = valueCodeElement,
-        _valueCoding = valueCoding,
-        _valueCodeableConcept = valueCodeableConcept,
-        super._();
+      this.valueCode,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueCoding,
+      this.valueCodeableConcept})
+      : super._();
 
   factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementCodeFilterFromJson(json);
@@ -1853,42 +1786,15 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   final Element? valueSetStringElement;
   @override
   final Reference? valueSetReference;
-  final List<Code>? _valueCode;
   @override
-  List<Code>? get valueCode {
-    final value = _valueCode;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Element?>? _valueCodeElement;
+  final List<Code>? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  List<Element?>? get valueCodeElement {
-    final value = _valueCodeElement;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<Coding>? _valueCoding;
+  final List<Element?>? valueCodeElement;
   @override
-  List<Coding>? get valueCoding {
-    final value = _valueCoding;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<CodeableConcept>? _valueCodeableConcept;
+  final List<Coding>? valueCoding;
   @override
-  List<CodeableConcept>? get valueCodeableConcept {
-    final value = _valueCodeableConcept;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final List<CodeableConcept>? valueCodeableConcept;
 
   @override
   String toString() {
@@ -1909,14 +1815,13 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
                 other.valueSetStringElement == valueSetStringElement) &&
             (identical(other.valueSetReference, valueSetReference) ||
                 other.valueSetReference == valueSetReference) &&
+            const DeepCollectionEquality().equals(other.valueCode, valueCode) &&
             const DeepCollectionEquality()
-                .equals(other._valueCode, _valueCode) &&
+                .equals(other.valueCodeElement, valueCodeElement) &&
             const DeepCollectionEquality()
-                .equals(other._valueCodeElement, _valueCodeElement) &&
+                .equals(other.valueCoding, valueCoding) &&
             const DeepCollectionEquality()
-                .equals(other._valueCoding, _valueCoding) &&
-            const DeepCollectionEquality()
-                .equals(other._valueCodeableConcept, _valueCodeableConcept));
+                .equals(other.valueCodeableConcept, valueCodeableConcept));
   }
 
   @JsonKey(ignore: true)
@@ -1928,10 +1833,10 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       valueSetString,
       valueSetStringElement,
       valueSetReference,
-      const DeepCollectionEquality().hash(_valueCode),
-      const DeepCollectionEquality().hash(_valueCodeElement),
-      const DeepCollectionEquality().hash(_valueCoding),
-      const DeepCollectionEquality().hash(_valueCodeableConcept));
+      const DeepCollectionEquality().hash(valueCode),
+      const DeepCollectionEquality().hash(valueCodeElement),
+      const DeepCollectionEquality().hash(valueCoding),
+      const DeepCollectionEquality().hash(valueCodeableConcept));
 
   @JsonKey(ignore: true)
   @override

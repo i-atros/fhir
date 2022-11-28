@@ -1079,7 +1079,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
       extension_: freezed == extension_
-          ? _value._extension_
+          ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
       url: null == url
@@ -1091,7 +1091,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       fhirComments: freezed == fhirComments
-          ? _value._fhirComments
+          ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
       valueBoolean: freezed == valueBoolean
@@ -1295,10 +1295,10 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
 class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') this.extension_,
       required this.url,
       @JsonKey(name: '_url') this.urlElement,
-      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') this.fhirComments,
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueInteger,
@@ -1347,40 +1347,24 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueTiming,
       this.valueReference,
       this.valueMeta})
-      : _extension_ = extension_,
-        _fhirComments = fhirComments,
-        super._();
+      : super._();
 
   factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$$_FhirExtensionFromJson(json);
 
   @override
   final Id? id;
-  final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<FhirExtension>? extension_;
   @override
   final FhirUri url;
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
-  final List<String>? _fhirComments;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments {
-    final value = _fhirComments;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
+  final List<String>? fhirComments;
   @override
   final Boolean? valueBoolean;
   @override
@@ -1506,12 +1490,12 @@ class _$_FhirExtension extends _FhirExtension {
             other is _$_FhirExtension &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
+                .equals(other.extension_, extension_) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
                 other.urlElement == urlElement) &&
             const DeepCollectionEquality()
-                .equals(other._fhirComments, _fhirComments) &&
+                .equals(other.fhirComments, fhirComments) &&
             (identical(other.valueBoolean, valueBoolean) ||
                 other.valueBoolean == valueBoolean) &&
             (identical(other.valueBooleanElement, valueBooleanElement) ||
@@ -1599,10 +1583,10 @@ class _$_FhirExtension extends _FhirExtension {
   int get hashCode => Object.hashAll([
         runtimeType,
         id,
-        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(extension_),
         url,
         urlElement,
-        const DeepCollectionEquality().hash(_fhirComments),
+        const DeepCollectionEquality().hash(fhirComments),
         valueBoolean,
         valueBooleanElement,
         valueInteger,
