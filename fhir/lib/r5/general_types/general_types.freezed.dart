@@ -6295,9 +6295,12 @@ mixin _$SampledData {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   Quantity get origin => throw _privateConstructorUsedError;
-  Decimal? get period => throw _privateConstructorUsedError;
-  @JsonKey(name: '_period')
-  Element? get periodElement => throw _privateConstructorUsedError;
+  Decimal get interval => throw _privateConstructorUsedError;
+  @JsonKey(name: '_interval')
+  Element? get intervalElement => throw _privateConstructorUsedError;
+  Code get intervalUnit => throw _privateConstructorUsedError;
+  @JsonKey(name: '_intervalUnit')
+  Element? get intervalUnitElement => throw _privateConstructorUsedError;
   Decimal? get factor => throw _privateConstructorUsedError;
   @JsonKey(name: '_factor')
   Element? get factorElement => throw _privateConstructorUsedError;
@@ -6307,9 +6310,9 @@ mixin _$SampledData {
   Decimal? get upperLimit => throw _privateConstructorUsedError;
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement => throw _privateConstructorUsedError;
-  PositiveInt? get dimensions => throw _privateConstructorUsedError;
+  PositiveInt get dimensions => throw _privateConstructorUsedError;
   @JsonKey(name: '_dimensions')
-  Element? get dimensionsElement => throw _privateConstructorUsedError;
+  Element? get dimensionsLimit => throw _privateConstructorUsedError;
   String? get data => throw _privateConstructorUsedError;
   @JsonKey(name: '_data')
   Element? get dataElement => throw _privateConstructorUsedError;
@@ -6330,25 +6333,28 @@ abstract class $SampledDataCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity origin,
-      Decimal? period,
-      @JsonKey(name: '_period') Element? periodElement,
+      Decimal interval,
+      @JsonKey(name: '_interval') Element? intervalElement,
+      Code intervalUnit,
+      @JsonKey(name: '_intervalUnit') Element? intervalUnitElement,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Decimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
-      @JsonKey(name: '_dimensions') Element? dimensionsElement,
+      PositiveInt dimensions,
+      @JsonKey(name: '_dimensions') Element? dimensionsLimit,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   $QuantityCopyWith<$Res> get origin;
-  $ElementCopyWith<$Res>? get periodElement;
+  $ElementCopyWith<$Res>? get intervalElement;
+  $ElementCopyWith<$Res>? get intervalUnitElement;
   $ElementCopyWith<$Res>? get factorElement;
   $ElementCopyWith<$Res>? get lowerLimitElement;
   $ElementCopyWith<$Res>? get upperLimitElement;
-  $ElementCopyWith<$Res>? get dimensionsElement;
+  $ElementCopyWith<$Res>? get dimensionsLimit;
   $ElementCopyWith<$Res>? get dataElement;
 }
 
@@ -6368,16 +6374,18 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? origin = null,
-    Object? period = freezed,
-    Object? periodElement = freezed,
+    Object? interval = null,
+    Object? intervalElement = freezed,
+    Object? intervalUnit = null,
+    Object? intervalUnitElement = freezed,
     Object? factor = freezed,
     Object? factorElement = freezed,
     Object? lowerLimit = freezed,
     Object? lowerLimitElement = freezed,
     Object? upperLimit = freezed,
     Object? upperLimitElement = freezed,
-    Object? dimensions = freezed,
-    Object? dimensionsElement = freezed,
+    Object? dimensions = null,
+    Object? dimensionsLimit = freezed,
     Object? data = freezed,
     Object? dataElement = freezed,
   }) {
@@ -6394,13 +6402,21 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
               as Quantity,
-      period: freezed == period
-          ? _value.period
-          : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      periodElement: freezed == periodElement
-          ? _value.periodElement
-          : periodElement // ignore: cast_nullable_to_non_nullable
+      interval: null == interval
+          ? _value.interval
+          : interval // ignore: cast_nullable_to_non_nullable
+              as Decimal,
+      intervalElement: freezed == intervalElement
+          ? _value.intervalElement
+          : intervalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      intervalUnit: null == intervalUnit
+          ? _value.intervalUnit
+          : intervalUnit // ignore: cast_nullable_to_non_nullable
+              as Code,
+      intervalUnitElement: freezed == intervalUnitElement
+          ? _value.intervalUnitElement
+          : intervalUnitElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       factor: freezed == factor
           ? _value.factor
@@ -6426,13 +6442,13 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
           ? _value.upperLimitElement
           : upperLimitElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      dimensions: freezed == dimensions
+      dimensions: null == dimensions
           ? _value.dimensions
           : dimensions // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
-      dimensionsElement: freezed == dimensionsElement
-          ? _value.dimensionsElement
-          : dimensionsElement // ignore: cast_nullable_to_non_nullable
+              as PositiveInt,
+      dimensionsLimit: freezed == dimensionsLimit
+          ? _value.dimensionsLimit
+          : dimensionsLimit // ignore: cast_nullable_to_non_nullable
               as Element?,
       data: freezed == data
           ? _value.data
@@ -6455,13 +6471,25 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get periodElement {
-    if (_value.periodElement == null) {
+  $ElementCopyWith<$Res>? get intervalElement {
+    if (_value.intervalElement == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.periodElement!, (value) {
-      return _then(_value.copyWith(periodElement: value) as $Val);
+    return $ElementCopyWith<$Res>(_value.intervalElement!, (value) {
+      return _then(_value.copyWith(intervalElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get intervalUnitElement {
+    if (_value.intervalUnitElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.intervalUnitElement!, (value) {
+      return _then(_value.copyWith(intervalUnitElement: value) as $Val);
     });
   }
 
@@ -6503,13 +6531,13 @@ class _$SampledDataCopyWithImpl<$Res, $Val extends SampledData>
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get dimensionsElement {
-    if (_value.dimensionsElement == null) {
+  $ElementCopyWith<$Res>? get dimensionsLimit {
+    if (_value.dimensionsLimit == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.dimensionsElement!, (value) {
-      return _then(_value.copyWith(dimensionsElement: value) as $Val);
+    return $ElementCopyWith<$Res>(_value.dimensionsLimit!, (value) {
+      return _then(_value.copyWith(dimensionsLimit: value) as $Val);
     });
   }
 
@@ -6538,23 +6566,27 @@ abstract class _$$_SampledDataCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       Quantity origin,
-      Decimal? period,
-      @JsonKey(name: '_period') Element? periodElement,
+      Decimal interval,
+      @JsonKey(name: '_interval') Element? intervalElement,
+      Code intervalUnit,
+      @JsonKey(name: '_intervalUnit') Element? intervalUnitElement,
       Decimal? factor,
       @JsonKey(name: '_factor') Element? factorElement,
       Decimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
       Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-      PositiveInt? dimensions,
-      @JsonKey(name: '_dimensions') Element? dimensionsElement,
+      PositiveInt dimensions,
+      @JsonKey(name: '_dimensions') Element? dimensionsLimit,
       String? data,
       @JsonKey(name: '_data') Element? dataElement});
 
   @override
   $QuantityCopyWith<$Res> get origin;
   @override
-  $ElementCopyWith<$Res>? get periodElement;
+  $ElementCopyWith<$Res>? get intervalElement;
+  @override
+  $ElementCopyWith<$Res>? get intervalUnitElement;
   @override
   $ElementCopyWith<$Res>? get factorElement;
   @override
@@ -6562,7 +6594,7 @@ abstract class _$$_SampledDataCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get upperLimitElement;
   @override
-  $ElementCopyWith<$Res>? get dimensionsElement;
+  $ElementCopyWith<$Res>? get dimensionsLimit;
   @override
   $ElementCopyWith<$Res>? get dataElement;
 }
@@ -6581,16 +6613,18 @@ class __$$_SampledDataCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? origin = null,
-    Object? period = freezed,
-    Object? periodElement = freezed,
+    Object? interval = null,
+    Object? intervalElement = freezed,
+    Object? intervalUnit = null,
+    Object? intervalUnitElement = freezed,
     Object? factor = freezed,
     Object? factorElement = freezed,
     Object? lowerLimit = freezed,
     Object? lowerLimitElement = freezed,
     Object? upperLimit = freezed,
     Object? upperLimitElement = freezed,
-    Object? dimensions = freezed,
-    Object? dimensionsElement = freezed,
+    Object? dimensions = null,
+    Object? dimensionsLimit = freezed,
     Object? data = freezed,
     Object? dataElement = freezed,
   }) {
@@ -6607,13 +6641,21 @@ class __$$_SampledDataCopyWithImpl<$Res>
           ? _value.origin
           : origin // ignore: cast_nullable_to_non_nullable
               as Quantity,
-      period: freezed == period
-          ? _value.period
-          : period // ignore: cast_nullable_to_non_nullable
-              as Decimal?,
-      periodElement: freezed == periodElement
-          ? _value.periodElement
-          : periodElement // ignore: cast_nullable_to_non_nullable
+      interval: null == interval
+          ? _value.interval
+          : interval // ignore: cast_nullable_to_non_nullable
+              as Decimal,
+      intervalElement: freezed == intervalElement
+          ? _value.intervalElement
+          : intervalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      intervalUnit: null == intervalUnit
+          ? _value.intervalUnit
+          : intervalUnit // ignore: cast_nullable_to_non_nullable
+              as Code,
+      intervalUnitElement: freezed == intervalUnitElement
+          ? _value.intervalUnitElement
+          : intervalUnitElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       factor: freezed == factor
           ? _value.factor
@@ -6639,13 +6681,13 @@ class __$$_SampledDataCopyWithImpl<$Res>
           ? _value.upperLimitElement
           : upperLimitElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      dimensions: freezed == dimensions
+      dimensions: null == dimensions
           ? _value.dimensions
           : dimensions // ignore: cast_nullable_to_non_nullable
-              as PositiveInt?,
-      dimensionsElement: freezed == dimensionsElement
-          ? _value.dimensionsElement
-          : dimensionsElement // ignore: cast_nullable_to_non_nullable
+              as PositiveInt,
+      dimensionsLimit: freezed == dimensionsLimit
+          ? _value.dimensionsLimit
+          : dimensionsLimit // ignore: cast_nullable_to_non_nullable
               as Element?,
       data: freezed == data
           ? _value.data
@@ -6666,16 +6708,18 @@ class _$_SampledData extends _SampledData {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       required this.origin,
-      this.period,
-      @JsonKey(name: '_period') this.periodElement,
+      required this.interval,
+      @JsonKey(name: '_interval') this.intervalElement,
+      required this.intervalUnit,
+      @JsonKey(name: '_intervalUnit') this.intervalUnitElement,
       this.factor,
       @JsonKey(name: '_factor') this.factorElement,
       this.lowerLimit,
       @JsonKey(name: '_lowerLimit') this.lowerLimitElement,
       this.upperLimit,
       @JsonKey(name: '_upperLimit') this.upperLimitElement,
-      this.dimensions,
-      @JsonKey(name: '_dimensions') this.dimensionsElement,
+      required this.dimensions,
+      @JsonKey(name: '_dimensions') this.dimensionsLimit,
       this.data,
       @JsonKey(name: '_data') this.dataElement})
       : super._();
@@ -6691,10 +6735,15 @@ class _$_SampledData extends _SampledData {
   @override
   final Quantity origin;
   @override
-  final Decimal? period;
+  final Decimal interval;
   @override
-  @JsonKey(name: '_period')
-  final Element? periodElement;
+  @JsonKey(name: '_interval')
+  final Element? intervalElement;
+  @override
+  final Code intervalUnit;
+  @override
+  @JsonKey(name: '_intervalUnit')
+  final Element? intervalUnitElement;
   @override
   final Decimal? factor;
   @override
@@ -6711,10 +6760,10 @@ class _$_SampledData extends _SampledData {
   @JsonKey(name: '_upperLimit')
   final Element? upperLimitElement;
   @override
-  final PositiveInt? dimensions;
+  final PositiveInt dimensions;
   @override
   @JsonKey(name: '_dimensions')
-  final Element? dimensionsElement;
+  final Element? dimensionsLimit;
   @override
   final String? data;
   @override
@@ -6723,7 +6772,7 @@ class _$_SampledData extends _SampledData {
 
   @override
   String toString() {
-    return 'SampledData(id: $id, extension_: $extension_, origin: $origin, period: $period, periodElement: $periodElement, factor: $factor, factorElement: $factorElement, lowerLimit: $lowerLimit, lowerLimitElement: $lowerLimitElement, upperLimit: $upperLimit, upperLimitElement: $upperLimitElement, dimensions: $dimensions, dimensionsElement: $dimensionsElement, data: $data, dataElement: $dataElement)';
+    return 'SampledData(id: $id, extension_: $extension_, origin: $origin, interval: $interval, intervalElement: $intervalElement, intervalUnit: $intervalUnit, intervalUnitElement: $intervalUnitElement, factor: $factor, factorElement: $factorElement, lowerLimit: $lowerLimit, lowerLimitElement: $lowerLimitElement, upperLimit: $upperLimit, upperLimitElement: $upperLimitElement, dimensions: $dimensions, dimensionsLimit: $dimensionsLimit, data: $data, dataElement: $dataElement)';
   }
 
   @override
@@ -6735,9 +6784,14 @@ class _$_SampledData extends _SampledData {
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             (identical(other.origin, origin) || other.origin == origin) &&
-            (identical(other.period, period) || other.period == period) &&
-            (identical(other.periodElement, periodElement) ||
-                other.periodElement == periodElement) &&
+            (identical(other.interval, interval) ||
+                other.interval == interval) &&
+            (identical(other.intervalElement, intervalElement) ||
+                other.intervalElement == intervalElement) &&
+            (identical(other.intervalUnit, intervalUnit) ||
+                other.intervalUnit == intervalUnit) &&
+            (identical(other.intervalUnitElement, intervalUnitElement) ||
+                other.intervalUnitElement == intervalUnitElement) &&
             (identical(other.factor, factor) || other.factor == factor) &&
             (identical(other.factorElement, factorElement) ||
                 other.factorElement == factorElement) &&
@@ -6751,8 +6805,8 @@ class _$_SampledData extends _SampledData {
                 other.upperLimitElement == upperLimitElement) &&
             (identical(other.dimensions, dimensions) ||
                 other.dimensions == dimensions) &&
-            (identical(other.dimensionsElement, dimensionsElement) ||
-                other.dimensionsElement == dimensionsElement) &&
+            (identical(other.dimensionsLimit, dimensionsLimit) ||
+                other.dimensionsLimit == dimensionsLimit) &&
             (identical(other.data, data) || other.data == data) &&
             (identical(other.dataElement, dataElement) ||
                 other.dataElement == dataElement));
@@ -6765,8 +6819,10 @@ class _$_SampledData extends _SampledData {
       id,
       const DeepCollectionEquality().hash(extension_),
       origin,
-      period,
-      periodElement,
+      interval,
+      intervalElement,
+      intervalUnit,
+      intervalUnitElement,
       factor,
       factorElement,
       lowerLimit,
@@ -6774,7 +6830,7 @@ class _$_SampledData extends _SampledData {
       upperLimit,
       upperLimitElement,
       dimensions,
-      dimensionsElement,
+      dimensionsLimit,
       data,
       dataElement);
 
@@ -6797,16 +6853,18 @@ abstract class _SampledData extends SampledData {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required final Quantity origin,
-      final Decimal? period,
-      @JsonKey(name: '_period') final Element? periodElement,
+      required final Decimal interval,
+      @JsonKey(name: '_interval') final Element? intervalElement,
+      required final Code intervalUnit,
+      @JsonKey(name: '_intervalUnit') final Element? intervalUnitElement,
       final Decimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
       final Decimal? lowerLimit,
       @JsonKey(name: '_lowerLimit') final Element? lowerLimitElement,
       final Decimal? upperLimit,
       @JsonKey(name: '_upperLimit') final Element? upperLimitElement,
-      final PositiveInt? dimensions,
-      @JsonKey(name: '_dimensions') final Element? dimensionsElement,
+      required final PositiveInt dimensions,
+      @JsonKey(name: '_dimensions') final Element? dimensionsLimit,
       final String? data,
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
   _SampledData._() : super._();
@@ -6822,10 +6880,15 @@ abstract class _SampledData extends SampledData {
   @override
   Quantity get origin;
   @override
-  Decimal? get period;
+  Decimal get interval;
   @override
-  @JsonKey(name: '_period')
-  Element? get periodElement;
+  @JsonKey(name: '_interval')
+  Element? get intervalElement;
+  @override
+  Code get intervalUnit;
+  @override
+  @JsonKey(name: '_intervalUnit')
+  Element? get intervalUnitElement;
   @override
   Decimal? get factor;
   @override
@@ -6842,10 +6905,10 @@ abstract class _SampledData extends SampledData {
   @JsonKey(name: '_upperLimit')
   Element? get upperLimitElement;
   @override
-  PositiveInt? get dimensions;
+  PositiveInt get dimensions;
   @override
   @JsonKey(name: '_dimensions')
-  Element? get dimensionsElement;
+  Element? get dimensionsLimit;
   @override
   String? get data;
   @override
@@ -6866,11 +6929,11 @@ mixin _$Signature {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<Coding> get type => throw _privateConstructorUsedError;
+  List<Coding>? get type => throw _privateConstructorUsedError;
   Instant? get when => throw _privateConstructorUsedError;
   @JsonKey(name: '_when')
   Element? get whenElement => throw _privateConstructorUsedError;
-  Reference get who => throw _privateConstructorUsedError;
+  Reference? get who => throw _privateConstructorUsedError;
   Reference? get onBehalfOf => throw _privateConstructorUsedError;
   Code? get targetFormat => throw _privateConstructorUsedError;
   @JsonKey(name: '_targetFormat')
@@ -6896,10 +6959,10 @@ abstract class $SignatureCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<Coding> type,
+      List<Coding>? type,
       Instant? when,
       @JsonKey(name: '_when') Element? whenElement,
-      Reference who,
+      Reference? who,
       Reference? onBehalfOf,
       Code? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -6909,7 +6972,7 @@ abstract class $SignatureCopyWith<$Res> {
       @JsonKey(name: '_data') Element? dataElement});
 
   $ElementCopyWith<$Res>? get whenElement;
-  $ReferenceCopyWith<$Res> get who;
+  $ReferenceCopyWith<$Res>? get who;
   $ReferenceCopyWith<$Res>? get onBehalfOf;
   $ElementCopyWith<$Res>? get targetFormatElement;
   $ElementCopyWith<$Res>? get sigFormatElement;
@@ -6931,10 +6994,10 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? type = null,
+    Object? type = freezed,
     Object? when = freezed,
     Object? whenElement = freezed,
-    Object? who = null,
+    Object? who = freezed,
     Object? onBehalfOf = freezed,
     Object? targetFormat = freezed,
     Object? targetFormatElement = freezed,
@@ -6952,10 +7015,10 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as List<Coding>,
+              as List<Coding>?,
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -6964,10 +7027,10 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      who: null == who
+      who: freezed == who
           ? _value.who
           : who // ignore: cast_nullable_to_non_nullable
-              as Reference,
+              as Reference?,
       onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
@@ -7013,8 +7076,12 @@ class _$SignatureCopyWithImpl<$Res, $Val extends Signature>
 
   @override
   @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res> get who {
-    return $ReferenceCopyWith<$Res>(_value.who, (value) {
+  $ReferenceCopyWith<$Res>? get who {
+    if (_value.who == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.who!, (value) {
       return _then(_value.copyWith(who: value) as $Val);
     });
   }
@@ -7078,10 +7145,10 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<Coding> type,
+      List<Coding>? type,
       Instant? when,
       @JsonKey(name: '_when') Element? whenElement,
-      Reference who,
+      Reference? who,
       Reference? onBehalfOf,
       Code? targetFormat,
       @JsonKey(name: '_targetFormat') Element? targetFormatElement,
@@ -7093,7 +7160,7 @@ abstract class _$$_SignatureCopyWith<$Res> implements $SignatureCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get whenElement;
   @override
-  $ReferenceCopyWith<$Res> get who;
+  $ReferenceCopyWith<$Res>? get who;
   @override
   $ReferenceCopyWith<$Res>? get onBehalfOf;
   @override
@@ -7117,10 +7184,10 @@ class __$$_SignatureCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? type = null,
+    Object? type = freezed,
     Object? when = freezed,
     Object? whenElement = freezed,
-    Object? who = null,
+    Object? who = freezed,
     Object? onBehalfOf = freezed,
     Object? targetFormat = freezed,
     Object? targetFormatElement = freezed,
@@ -7138,10 +7205,10 @@ class __$$_SignatureCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: null == type
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as List<Coding>,
+              as List<Coding>?,
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
@@ -7150,10 +7217,10 @@ class __$$_SignatureCopyWithImpl<$Res>
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      who: null == who
+      who: freezed == who
           ? _value.who
           : who // ignore: cast_nullable_to_non_nullable
-              as Reference,
+              as Reference?,
       onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
@@ -7192,10 +7259,10 @@ class _$_Signature extends _Signature {
   _$_Signature(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      required this.type,
+      this.type,
       this.when,
       @JsonKey(name: '_when') this.whenElement,
-      required this.who,
+      this.who,
       this.onBehalfOf,
       this.targetFormat,
       @JsonKey(name: '_targetFormat') this.targetFormatElement,
@@ -7214,14 +7281,14 @@ class _$_Signature extends _Signature {
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
   @override
-  final List<Coding> type;
+  final List<Coding>? type;
   @override
   final Instant? when;
   @override
   @JsonKey(name: '_when')
   final Element? whenElement;
   @override
-  final Reference who;
+  final Reference? who;
   @override
   final Reference? onBehalfOf;
   @override
@@ -7309,10 +7376,10 @@ abstract class _Signature extends Signature {
   factory _Signature(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      required final List<Coding> type,
+      final List<Coding>? type,
       final Instant? when,
       @JsonKey(name: '_when') final Element? whenElement,
-      required final Reference who,
+      final Reference? who,
       final Reference? onBehalfOf,
       final Code? targetFormat,
       @JsonKey(name: '_targetFormat') final Element? targetFormatElement,
@@ -7331,14 +7398,14 @@ abstract class _Signature extends Signature {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  List<Coding> get type;
+  List<Coding>? get type;
   @override
   Instant? get when;
   @override
   @JsonKey(name: '_when')
   Element? get whenElement;
   @override
-  Reference get who;
+  Reference? get who;
   @override
   Reference? get onBehalfOf;
   @override

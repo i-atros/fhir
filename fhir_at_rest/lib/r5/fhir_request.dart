@@ -900,7 +900,7 @@ class FhirRequest with _$FhirRequest {
   }
 
   Map<String, dynamic> convertToOldSchema(Map<String, dynamic> resource, R5ResourceType? resourceType) {
-    Map<String, dynamic> json = Map.from(resource);
+    final Map<String, dynamic> json = Map.from(resource);
 
     switch (resourceType) {
       case R5ResourceType.Appointment:
@@ -945,10 +945,20 @@ class FhirRequest with _$FhirRequest {
         }
         break;
       case R5ResourceType.MedicationRequest:
-        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        // TODO(lsp): This model needs to be adapted to the new schema and ensure here backwards compatibility
         break;
       case R5ResourceType.MedicationUsage:
-        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        // TODO(lsp): This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.Observation:
+        final component = json['component'] as List?;
+        if (component != null && component.isNotEmpty && component.first['valueSampledData'] != null) {
+          final valueSampledData = component.first['valueSampledData'];
+
+          valueSampledData['period'] = valueSampledData['interval'];
+
+          json['component'][0]['valueSampledData'] = valueSampledData;
+        }
         break;
       case R5ResourceType.ServiceRequest:
         if (json['code'] != null) {
@@ -1023,6 +1033,16 @@ class FhirRequest with _$FhirRequest {
         break;
       case R5ResourceType.MedicationUsage:
         // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.Observation:
+        final component = json['component'] as List?;
+        if (component != null && component.isNotEmpty && component.first['valueSampledData'] != null) {
+          final valueSampledData = component.first['valueSampledData'];
+
+          valueSampledData['interval'] = valueSampledData['period'];
+          valueSampledData['intervalUnit'] = jsonEncode(const Code.asConst('ms').toJson());
+          json['component'][0]['valueSampledData'] = valueSampledData;
+        }
         break;
       case R5ResourceType.ServiceRequest:
         if (json['code'] != null) {
