@@ -998,6 +998,14 @@ class FhirRequest with _$FhirRequest {
           json['insurer'] = json['payor'].first;
         }
 
+        if (json['status'] == null) {
+          json['status'] = 'active';
+        }
+
+        if(json['kind'] == null) {
+          json['kind'] = 'insurance';
+        }
+
         break;
       case R5ResourceType.DocumentReference:
         json['context'] = json['encounter'];
