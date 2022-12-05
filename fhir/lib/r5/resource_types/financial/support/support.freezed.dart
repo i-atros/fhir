@@ -37,7 +37,8 @@ mixin _$Coverage {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  Code get status => throw _privateConstructorUsedError;
+  Code get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -94,7 +95,8 @@ abstract class $CoverageCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      Code status,
+      Code kind,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -165,7 +167,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? status = freezed,
+    Object? status = null,
+    Object? kind = null,
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? policyHolder = freezed,
@@ -236,10 +239,14 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: freezed == status
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as Code,
+      kind: null == kind
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as Code,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -536,7 +543,8 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      Code status,
+      Code kind,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -621,7 +629,8 @@ class __$$_CoverageCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? status = freezed,
+    Object? status = null,
+    Object? kind = null,
     Object? statusElement = freezed,
     Object? type = freezed,
     Object? policyHolder = freezed,
@@ -692,10 +701,14 @@ class __$$_CoverageCopyWithImpl<$Res>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: freezed == status
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as Code,
+      kind: null == kind
+          ? _value.kind
+          : kind // ignore: cast_nullable_to_non_nullable
+              as Code,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -800,7 +813,8 @@ class _$_Coverage extends _Coverage {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      required this.status,
+      required this.kind,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
@@ -861,7 +875,9 @@ class _$_Coverage extends _Coverage {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  final Code status;
+  @override
+  final Code kind;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -911,7 +927,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, insurer: $insurer, dependent: $dependent, dependentElement: $dependentElement, relationship: $relationship, period: $period, class_: $class_, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, costToBeneficiary: $costToBeneficiary, subrogation: $subrogation, subrogationElement: $subrogationElement, contract: $contract)';
+    return 'Coverage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, kind: $kind, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, insurer: $insurer, dependent: $dependent, dependentElement: $dependentElement, relationship: $relationship, period: $period, class_: $class_, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, costToBeneficiary: $costToBeneficiary, subrogation: $subrogation, subrogationElement: $subrogationElement, contract: $contract)';
   }
 
   @override
@@ -940,6 +956,7 @@ class _$_Coverage extends _Coverage {
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
+            (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.statusElement, statusElement) ||
                 other.statusElement == statusElement) &&
             (identical(other.type, type) || other.type == type) &&
@@ -992,6 +1009,7 @@ class _$_Coverage extends _Coverage {
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         status,
+        kind,
         statusElement,
         type,
         policyHolder,
@@ -1046,7 +1064,8 @@ abstract class _Coverage extends Coverage {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final Code? status,
+      required final Code status,
+      required final Code kind,
       @JsonKey(name: '_status')
           final Element? statusElement,
       final CodeableConcept? type,
@@ -1106,7 +1125,9 @@ abstract class _Coverage extends Coverage {
   @override
   List<Identifier>? get identifier;
   @override
-  Code? get status;
+  Code get status;
+  @override
+  Code get kind;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
