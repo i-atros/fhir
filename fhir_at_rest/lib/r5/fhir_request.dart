@@ -909,7 +909,10 @@ class FhirRequest with _$FhirRequest {
         }
         break;
       case R5ResourceType.Coverage:
-        json['subscriberId'] = json['subscriberId']?.first;
+        if (json['subscriberId'] != null && json['subscriberId'].isNotEmpty) {
+          json['subscriberId'] = json['subscriberId'].first;
+        }
+
         if (json['class'] != null && json['class']['value'] != null) {
           json['class']['value'] = json['class']['value']['value'];
         }
