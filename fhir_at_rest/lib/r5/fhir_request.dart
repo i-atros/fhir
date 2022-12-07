@@ -901,7 +901,27 @@ class FhirRequest with _$FhirRequest {
       }
 
       if (json != null && !newSchema) {
-        json = convertToOldSchema(json, resource?.resourceType);
+        final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+
+        if (type == R5ResourceType.Bundle) {
+          if (json['entry'] != null && json['entry'].isNotEmpty) {
+            final entries = [];
+
+            for (var entry in json['entry']) {
+              final res = entry['resource'] as Map<String, dynamic>?;
+              if (res != null && res['resourceType'] != null) {
+                final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+                final res2 = convertToOldSchema(res, type);
+                entry['resource'] = res2;
+              }
+              entries.add(entry);
+            }
+
+            json['entry'] = entries;
+          }
+        } else {
+          json = convertToOldSchema(json, resource?.resourceType);
+        }
       }
 
       final result = await _makeRequest(
