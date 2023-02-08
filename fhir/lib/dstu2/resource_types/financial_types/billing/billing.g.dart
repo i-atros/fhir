@@ -7,7 +7,7 @@ part of 'billing.dart';
 // **************************************************************************
 
 _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Account) ??
           Dstu2ResourceType.Account,
@@ -48,7 +48,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
           unknownValue: AccountStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -79,7 +79,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
 
 Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -117,43 +117,6 @@ Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -261,7 +224,7 @@ const _$AccountStatusEnumMap = {
 };
 
 _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Claim) ??
           Dstu2ResourceType.Claim,
@@ -292,7 +255,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$ClaimTypeEnumMap, json['type'],
+      type: $enumDecode(_$ClaimTypeEnumMap, json['type'],
           unknownValue: ClaimType.unknown),
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
@@ -318,7 +281,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       organization: json['organization'] == null
           ? null
           : Reference.fromJson(json['organization'] as Map<String, dynamic>),
-      use: _$enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
+      use: $enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
           unknownValue: ClaimUse.unknown),
       useElement: json['_use'] == null
           ? null
@@ -383,7 +346,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
 
 Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -405,7 +368,7 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$ClaimTypeEnumMap[instance.type];
+  val['type'] = _$ClaimTypeEnumMap[instance.type]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('ruleset', instance.ruleset?.toJson());
@@ -905,7 +868,7 @@ Map<String, dynamic> _$$_ClaimMissingTeethToJson(
 
 _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
     _$_ClaimResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ClaimResponse) ??
           Dstu2ResourceType.ClaimResponse,
@@ -964,7 +927,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(
               json['requestOrganization'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$ClaimResponseOutcomeEnumMap, json['outcome'],
           unknownValue: ClaimResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -1033,7 +996,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_ClaimResponseToJson(_$_ClaimResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

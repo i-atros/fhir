@@ -7,7 +7,7 @@ part of 'support.dart';
 // **************************************************************************
 
 _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Coverage) ??
           Dstu2ResourceType.Coverage,
@@ -74,6 +74,9 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       subscriber: json['subscriber'] == null
           ? null
           : Reference.fromJson(json['subscriber'] as Map<String, dynamic>),
+      insurer: json['insurer'] == null
+          ? null
+          : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
       network: json['network'] == null
           ? null
           : Identifier.fromJson(json['network'] as Map<String, dynamic>),
@@ -87,7 +90,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
 
 Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -124,47 +127,11 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   writeNotNull('_dependent', instance.dependentElement?.toJson());
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('subscriber', instance.subscriber?.toJson());
+  writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('network', instance.network?.toJson());
   writeNotNull('_network', instance.networkElement?.toJson());
   writeNotNull('contract', instance.contract?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -268,7 +235,7 @@ const _$Dstu2ResourceTypeEnumMap = {
 _$_EligibilityRequest _$$_EligibilityRequestFromJson(
         Map<String, dynamic> json) =>
     _$_EligibilityRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EligibilityRequest) ??
           Dstu2ResourceType.EligibilityRequest,
@@ -328,7 +295,7 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
 Map<String, dynamic> _$$_EligibilityRequestToJson(
     _$_EligibilityRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -365,7 +332,7 @@ Map<String, dynamic> _$$_EligibilityRequestToJson(
 _$_EligibilityResponse _$$_EligibilityResponseFromJson(
         Map<String, dynamic> json) =>
     _$_EligibilityResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EligibilityResponse) ??
           Dstu2ResourceType.EligibilityResponse,
@@ -402,7 +369,7 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$EligibilityResponseOutcomeEnumMap, json['outcome'],
           unknownValue: EligibilityResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -439,7 +406,7 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
 Map<String, dynamic> _$$_EligibilityResponseToJson(
     _$_EligibilityResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -487,7 +454,7 @@ const _$EligibilityResponseOutcomeEnumMap = {
 
 _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
     _$_EnrollmentRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EnrollmentRequest) ??
           Dstu2ResourceType.EnrollmentRequest,
@@ -551,7 +518,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_EnrollmentRequestToJson(
     _$_EnrollmentRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -591,7 +558,7 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_EnrollmentResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EnrollmentResponse) ??
           Dstu2ResourceType.EnrollmentResponse,
@@ -628,7 +595,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
           unknownValue: EnrollmentResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -665,7 +632,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
 Map<String, dynamic> _$$_EnrollmentResponseToJson(
     _$_EnrollmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

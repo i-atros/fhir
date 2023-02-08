@@ -7,7 +7,7 @@ part of 'structure.dart';
 // **************************************************************************
 
 _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Media) ??
           Dstu2ResourceType.Media,
@@ -38,7 +38,7 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$MediaTypeEnumMap, json['type'],
+      type: $enumDecode(_$MediaTypeEnumMap, json['type'],
           unknownValue: MediaType.unknown),
       subtype: json['subtype'] == null
           ? null
@@ -84,7 +84,7 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
 
 Map<String, dynamic> _$$_MediaToJson(_$_Media instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -106,7 +106,7 @@ Map<String, dynamic> _$$_MediaToJson(_$_Media instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$MediaTypeEnumMap[instance.type];
+  val['type'] = _$MediaTypeEnumMap[instance.type]!;
   writeNotNull('subtype', instance.subtype?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
@@ -125,43 +125,6 @@ Map<String, dynamic> _$$_MediaToJson(_$_Media instance) {
   writeNotNull('_duration', instance.durationElement?.toJson());
   val['content'] = instance.content.toJson();
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -270,7 +233,7 @@ const _$MediaTypeEnumMap = {
 };
 
 _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Binary) ??
           Dstu2ResourceType.Binary,
@@ -328,7 +291,7 @@ Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -342,7 +305,7 @@ Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
 }
 
 _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Bundle) ??
           Dstu2ResourceType.Bundle,
@@ -361,7 +324,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      type: _$enumDecode(_$BundleTypeEnumMap, json['type'],
+      type: $enumDecode(_$BundleTypeEnumMap, json['type'],
           unknownValue: BundleType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -409,14 +372,14 @@ Map<String, dynamic> _$$_BundleToJson(_$_Bundle instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
   writeNotNull('_language', instance.languageElement?.toJson());
-  val['type'] = _$BundleTypeEnumMap[instance.type];
+  val['type'] = _$BundleTypeEnumMap[instance.type]!;
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('total', instance.total?.toJson());
   writeNotNull('_total', instance.totalElement?.toJson());
@@ -556,7 +519,7 @@ _$_BundleEntrySearch _$$_BundleEntrySearchFromJson(Map<String, dynamic> json) =>
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      mode: _$enumDecodeNullable(_$SearchModeEnumMap, json['mode'],
+      mode: $enumDecodeNullable(_$SearchModeEnumMap, json['mode'],
           unknownValue: SearchMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -610,7 +573,7 @@ _$_BundleEntryRequest _$$_BundleEntryRequestFromJson(
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      method: _$enumDecode(_$RequestMethodEnumMap, json['method'],
+      method: $enumDecode(_$RequestMethodEnumMap, json['method'],
           unknownValue: RequestMethod.unknown),
       methodElement: json['_method'] == null
           ? null
@@ -655,7 +618,7 @@ Map<String, dynamic> _$$_BundleEntryRequestToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['method'] = _$RequestMethodEnumMap[instance.method];
+  val['method'] = _$RequestMethodEnumMap[instance.method]!;
   writeNotNull('_method', instance.methodElement?.toJson());
   val['url'] = instance.url.toJson();
   writeNotNull('_url', instance.urlElement?.toJson());
@@ -740,7 +703,7 @@ Map<String, dynamic> _$$_BundleEntryResponseToJson(
 }
 
 _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Basic) ??
           Dstu2ResourceType.Basic,
@@ -789,7 +752,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
 
 Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

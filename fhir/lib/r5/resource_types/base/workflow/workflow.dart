@@ -36,7 +36,7 @@ class Appointment with Resource, _$Appointment {
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? cancelationReason,
     List<CodeableConcept>? serviceCategory,
-    List<CodeableConcept>? serviceType,
+    List<CodeableReference>? serviceType,
     List<CodeableConcept>? specialty,
     CodeableConcept? appointmentType,
     List<CodeableReference>? reason,

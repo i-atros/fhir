@@ -6,6 +6,234 @@ part of 'metadata_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_VirtualServiceDetail _$$_VirtualServiceDetailFromJson(
+        Map<String, dynamic> json) =>
+    _$_VirtualServiceDetail(
+      channelType: json['channelType'] == null
+          ? null
+          : Coding.fromJson(json['channelType'] as Map<String, dynamic>),
+      addressUrl: json['addressUrl'] == null
+          ? null
+          : FhirUri.fromJson(json['addressUrl']),
+      addressString: json['addressString'] as String?,
+      addressContactPoint: json['addressContactPoint'] == null
+          ? null
+          : ContactPoint.fromJson(
+              json['addressContactPoint'] as Map<String, dynamic>),
+      addressExtendedContactDetail: json['addressExtendedContactDetail'] == null
+          ? null
+          : ExtendedContactDetail.fromJson(
+              json['addressExtendedContactDetail'] as Map<String, dynamic>),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_VirtualServiceDetailToJson(
+    _$_VirtualServiceDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('channelType', instance.channelType?.toJson());
+  writeNotNull('addressUrl', instance.addressUrl?.toJson());
+  writeNotNull('addressString', instance.addressString);
+  writeNotNull('addressContactPoint', instance.addressContactPoint?.toJson());
+  writeNotNull('addressExtendedContactDetail',
+      instance.addressExtendedContactDetail?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_Availability _$$_AvailabilityFromJson(Map<String, dynamic> json) =>
+    _$_Availability(
+      availableTime: (json['availableTime'] as List<dynamic>?)
+          ?.map((e) =>
+              AvailabilityAvailableTime.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      notAvailableTime: (json['notAvailableTime'] as List<dynamic>?)
+          ?.map((e) =>
+              AvailabilityNotAvailableTime.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_AvailabilityToJson(_$_Availability instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'availableTime', instance.availableTime?.map((e) => e.toJson()).toList());
+  writeNotNull('notAvailableTime',
+      instance.notAvailableTime?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_AvailabilityAvailableTime _$$_AvailabilityAvailableTimeFromJson(
+        Map<String, dynamic> json) =>
+    _$_AvailabilityAvailableTime(
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
+      daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
+      allDayElement: json['_allDay'] == null
+          ? null
+          : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
+      availableStartTime: json['availableStartTime'] == null
+          ? null
+          : Time.fromJson(json['availableStartTime']),
+      availableStartTimeElement: json['_availableStartTime'] == null
+          ? null
+          : Element.fromJson(
+              json['_availableStartTime'] as Map<String, dynamic>),
+      availableEndTime: json['availableEndTime'] == null
+          ? null
+          : Time.fromJson(json['availableEndTime']),
+      availableEndTimeElement: json['_availableEndTime'] == null
+          ? null
+          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_AvailabilityAvailableTimeToJson(
+    _$_AvailabilityAvailableTime instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'daysOfWeek', instance.daysOfWeek?.map((e) => e.toJson()).toList());
+  writeNotNull('_daysOfWeek',
+      instance.daysOfWeekElement?.map((e) => e.toJson()).toList());
+  writeNotNull('allDay', instance.allDay?.toJson());
+  writeNotNull('_allDay', instance.allDayElement?.toJson());
+  writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
+  writeNotNull(
+      '_availableStartTime', instance.availableStartTimeElement?.toJson());
+  writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
+  writeNotNull('_availableEndTime', instance.availableEndTimeElement?.toJson());
+  return val;
+}
+
+_$_AvailabilityNotAvailableTime _$$_AvailabilityNotAvailableTimeFromJson(
+        Map<String, dynamic> json) =>
+    _$_AvailabilityNotAvailableTime(
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String?,
+      descriptionElement: json['_description'] == null
+          ? null
+          : Element.fromJson(json['_description'] as Map<String, dynamic>),
+      during: json['during'] == null
+          ? null
+          : Period.fromJson(json['during'] as Map<String, dynamic>),
+      duringElement: json['_during'] == null
+          ? null
+          : Element.fromJson(json['_during'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_AvailabilityNotAvailableTimeToJson(
+    _$_AvailabilityNotAvailableTime instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('description', instance.description);
+  writeNotNull('_description', instance.descriptionElement?.toJson());
+  writeNotNull('during', instance.during?.toJson());
+  writeNotNull('_during', instance.duringElement?.toJson());
+  return val;
+}
+
+_$_ExtendedContactDetail _$$_ExtendedContactDetailFromJson(
+        Map<String, dynamic> json) =>
+    _$_ExtendedContactDetail(
+      purpose: json['purpose'] == null
+          ? null
+          : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>),
+      name: (json['name'] as List<dynamic>?)
+          ?.map((e) => HumanName.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      telecom: (json['telecom'] as List<dynamic>?)
+          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      address: json['address'] == null
+          ? null
+          : Address.fromJson(json['address'] as Map<String, dynamic>),
+      organization: json['organization'] == null
+          ? null
+          : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_ExtendedContactDetailToJson(
+    _$_ExtendedContactDetail instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('purpose', instance.purpose?.toJson());
+  writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
+  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
+  writeNotNull('address', instance.address?.toJson());
+  writeNotNull('organization', instance.organization?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  return val;
+}
+
 _$_ContactDetail _$$_ContactDetailFromJson(Map<String, dynamic> json) =>
     _$_ContactDetail(
       id: json['id'] as String?,
@@ -45,7 +273,7 @@ _$_Contributor _$$_ContributorFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
           unknownValue: ContributorType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -77,43 +305,6 @@ Map<String, dynamic> _$$_ContributorToJson(_$_Contributor instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$ContributorTypeEnumMap = {
@@ -322,7 +513,7 @@ _$_DataRequirementSort _$$_DataRequirementSortFromJson(
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      direction: _$enumDecodeNullable(
+      direction: $enumDecodeNullable(
           _$DataRequirementSortDirectionEnumMap, json['direction'],
           unknownValue: DataRequirementSortDirection.unknown),
       directionElement: json['_direction'] == null
@@ -429,7 +620,7 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
           unknownValue: RelatedArtifactType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -504,7 +695,7 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
           unknownValue: TriggerDefinitionType.unknown),
       typeElement: json['_type'] == null
           ? null

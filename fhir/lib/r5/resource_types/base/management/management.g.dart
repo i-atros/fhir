@@ -7,7 +7,7 @@ part of 'management.dart';
 // **************************************************************************
 
 _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Encounter) ??
           R5ResourceType.Encounter,
@@ -41,7 +41,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$EncounterStatusEnumMap, json['status'],
           unknownValue: EncounterStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -116,7 +116,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
 
 Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -170,43 +170,6 @@ Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
   writeNotNull('serviceProvider', instance.serviceProvider?.toJson());
   writeNotNull('partOf', instance.partOf?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -381,7 +344,7 @@ _$_EncounterStatusHistory _$$_EncounterStatusHistoryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EncounterStatusHistoryStatusEnumMap, json['status'],
           unknownValue: EncounterStatusHistoryStatus.unknown),
       statusElement: json['_status'] == null
@@ -624,7 +587,7 @@ _$_EncounterLocation _$$_EncounterLocationFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       location: Reference.fromJson(json['location'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EncounterLocationStatusEnumMap, json['status'],
           unknownValue: EncounterLocationStatus.unknown),
       statusElement: json['_status'] == null
@@ -672,7 +635,7 @@ const _$EncounterLocationStatusEnumMap = {
 
 _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
     _$_EpisodeOfCare(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EpisodeOfCare) ??
           R5ResourceType.EpisodeOfCare,
@@ -706,7 +669,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status'],
           unknownValue: EpisodeOfCareStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -746,7 +709,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -809,7 +772,7 @@ _$_EpisodeOfCareStatusHistory _$$_EpisodeOfCareStatusHistoryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EpisodeOfCareStatusHistoryStatusEnumMap, json['status'],
           unknownValue: EpisodeOfCareStatusHistoryStatus.unknown),
       statusElement: json['_status'] == null
@@ -894,7 +857,7 @@ Map<String, dynamic> _$$_EpisodeOfCareDiagnosisToJson(
 }
 
 _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Flag) ??
           R5ResourceType.Flag,
@@ -928,7 +891,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$FlagStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$FlagStatusEnumMap, json['status'],
           unknownValue: FlagStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -951,7 +914,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
 
 Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -994,7 +957,7 @@ const _$FlagStatusEnumMap = {
 };
 
 _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Library) ??
           R5ResourceType.Library,
@@ -1044,7 +1007,7 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$LibraryStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$LibraryStatusEnumMap, json['status'],
           unknownValue: LibraryStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1152,7 +1115,7 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
 
 Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1239,7 +1202,7 @@ const _$LibraryStatusEnumMap = {
 };
 
 _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.List_) ??
           R5ResourceType.List_,
@@ -1318,7 +1281,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
 
 Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

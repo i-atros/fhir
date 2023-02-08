@@ -7,7 +7,7 @@ part of 'other.dart';
 // **************************************************************************
 
 _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Basic) ??
           R4ResourceType.Basic,
@@ -56,7 +56,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
 
 Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -86,43 +86,6 @@ Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('author', instance.author?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -278,7 +241,7 @@ const _$R4ResourceTypeEnumMap = {
 };
 
 _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Binary) ??
           R4ResourceType.Binary,
@@ -340,7 +303,7 @@ Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R4ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$R4ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -356,7 +319,7 @@ Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
 }
 
 _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Bundle) ??
           R4ResourceType.Bundle,
@@ -378,7 +341,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$BundleTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$BundleTypeEnumMap, json['type'],
           unknownValue: BundleType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -432,7 +395,7 @@ Map<String, dynamic> _$$_BundleToJson(_$_Bundle instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R4ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$R4ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -569,7 +532,7 @@ _$_BundleSearch _$$_BundleSearchFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: _$enumDecodeNullable(_$BundleSearchModeEnumMap, json['mode'],
+      mode: $enumDecodeNullable(_$BundleSearchModeEnumMap, json['mode'],
           unknownValue: BundleSearchMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -617,7 +580,7 @@ _$_BundleRequest _$$_BundleRequestFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      method: _$enumDecodeNullable(_$BundleRequestMethodEnumMap, json['method'],
+      method: $enumDecodeNullable(_$BundleRequestMethodEnumMap, json['method'],
           unknownValue: BundleRequestMethod.unknown),
       methodElement: json['_method'] == null
           ? null
@@ -745,7 +708,7 @@ Map<String, dynamic> _$$_BundleResponseToJson(_$_BundleResponse instance) {
 }
 
 _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Linkage) ??
           R4ResourceType.Linkage,
@@ -790,7 +753,7 @@ _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
 
 Map<String, dynamic> _$$_LinkageToJson(_$_Linkage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -828,7 +791,7 @@ _$_LinkageItem _$$_LinkageItemFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$LinkageItemTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$LinkageItemTypeEnumMap, json['type'],
           unknownValue: LinkageItemType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -865,7 +828,7 @@ const _$LinkageItemTypeEnumMap = {
 
 _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
     _$_MessageHeader(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MessageHeader) ??
           R4ResourceType.MessageHeader,
@@ -939,7 +902,7 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_MessageHeaderToJson(_$_MessageHeader instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1103,7 +1066,7 @@ _$_MessageHeaderResponse _$$_MessageHeaderResponseFromJson(
       identifierElement: json['_identifier'] == null
           ? null
           : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$MessageHeaderResponseCodeEnumMap, json['code'],
           unknownValue: MessageHeaderResponseCode.unknown),
       codeElement: json['_code'] == null
@@ -1146,7 +1109,7 @@ const _$MessageHeaderResponseCodeEnumMap = {
 
 _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
     _$_OperationOutcome(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.OperationOutcome) ??
           R4ResourceType.OperationOutcome,
@@ -1184,7 +1147,7 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_OperationOutcomeToJson(_$_OperationOutcome instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1220,13 +1183,13 @@ _$_OperationOutcomeIssue _$$_OperationOutcomeIssueFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      severity: _$enumDecodeNullable(
+      severity: $enumDecodeNullable(
           _$OperationOutcomeIssueSeverityEnumMap, json['severity'],
           unknownValue: OperationOutcomeIssueSeverity.unknown),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$OperationOutcomeIssueCodeEnumMap, json['code'],
           unknownValue: OperationOutcomeIssueCode.unknown),
       codeElement: json['_code'] == null
@@ -1331,7 +1294,7 @@ const _$OperationOutcomeIssueCodeEnumMap = {
 
 _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
     _$_Parameters(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Parameters) ??
           R4ResourceType.Parameters,
@@ -1383,7 +1346,7 @@ Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$R4ResourceTypeEnumMap[instance.resourceType];
+  val['resourceType'] = _$R4ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1725,7 +1688,7 @@ Map<String, dynamic> _$$_ParametersParameterToJson(
 
 _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
     _$_Subscription(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Subscription) ??
           R4ResourceType.Subscription,
@@ -1756,7 +1719,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$SubscriptionStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$SubscriptionStatusEnumMap, json['status'],
           unknownValue: SubscriptionStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1786,7 +1749,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_SubscriptionToJson(_$_Subscription instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1841,7 +1804,7 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$SubscriptionChannelTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$SubscriptionChannelTypeEnumMap, json['type'],
           unknownValue: SubscriptionChannelType.unknown),
       typeElement: json['_type'] == null
           ? null

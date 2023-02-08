@@ -7,7 +7,7 @@ part of 'support.dart';
 // **************************************************************************
 
 _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Coverage) ??
           R5ResourceType.Coverage,
@@ -41,7 +41,8 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: Code.fromJson(json['status']),
+      kind: Code.fromJson(json['kind']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -54,11 +55,14 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       subscriber: json['subscriber'] == null
           ? null
           : Reference.fromJson(json['subscriber'] as Map<String, dynamic>),
-      subscriberId: json['subscriberId'] == null
-          ? null
-          : Identifier.fromJson(json['subscriberId'] as Map<String, dynamic>),
+      subscriberId: (json['subscriberId'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
       beneficiary:
           Reference.fromJson(json['beneficiary'] as Map<String, dynamic>),
+      insurer: json['insurer'] == null
+          ? null
+          : Reference.fromJson(json['insurer'] as Map<String, dynamic>),
       dependent: json['dependent'] as String?,
       dependentElement: json['_dependent'] == null
           ? null
@@ -70,9 +74,6 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
-      payor: (json['payor'] as List<dynamic>)
-          .map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
       class_: (json['class'] as List<dynamic>?)
           ?.map((e) => CoverageClass.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -101,7 +102,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
 
 Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -125,18 +126,20 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  val['status'] = instance.status.toJson();
+  val['kind'] = instance.kind.toJson();
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('policyHolder', instance.policyHolder?.toJson());
   writeNotNull('subscriber', instance.subscriber?.toJson());
-  writeNotNull('subscriberId', instance.subscriberId?.toJson());
+  writeNotNull(
+      'subscriberId', instance.subscriberId?.map((e) => e.toJson()).toList());
   val['beneficiary'] = instance.beneficiary.toJson();
+  writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('dependent', instance.dependent);
   writeNotNull('_dependent', instance.dependentElement?.toJson());
   writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('period', instance.period?.toJson());
-  val['payor'] = instance.payor.map((e) => e.toJson()).toList();
   writeNotNull('class', instance.class_?.map((e) => e.toJson()).toList());
   writeNotNull('order', instance.order?.toJson());
   writeNotNull('_order', instance.orderElement?.toJson());
@@ -148,43 +151,6 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   writeNotNull('_subrogation', instance.subrogationElement?.toJson());
   writeNotNull('contract', instance.contract?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -349,7 +315,9 @@ _$_CoverageClass _$$_CoverageClassFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      value: json['value'] as String?,
+      value: json['value'] == null
+          ? null
+          : Identifier.fromJson(json['value'] as Map<String, dynamic>),
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
@@ -374,7 +342,7 @@ Map<String, dynamic> _$$_CoverageClassToJson(_$_CoverageClass instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();
-  writeNotNull('value', instance.value);
+  writeNotNull('value', instance.value?.toJson());
   writeNotNull('_value', instance.valueElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
@@ -466,7 +434,7 @@ Map<String, dynamic> _$$_CoverageExceptionToJson(
 _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CoverageEligibilityRequest) ??
           R5ResourceType.CoverageEligibilityRequest,
@@ -556,7 +524,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
 Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
     _$_CoverageEligibilityRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -827,7 +795,7 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestDiagnosisToJson(
 _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CoverageEligibilityResponse) ??
           R5ResourceType.CoverageEligibilityResponse,
@@ -891,7 +859,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
       request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome'],
           unknownValue: CoverageEligibilityResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -922,7 +890,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
 Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
     _$_CoverageEligibilityResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1247,7 +1215,7 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
 
 _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
     _$_EnrollmentRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EnrollmentRequest) ??
           R5ResourceType.EnrollmentRequest,
@@ -1308,7 +1276,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$$_EnrollmentRequestToJson(
     _$_EnrollmentRequest instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1346,7 +1314,7 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_EnrollmentResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EnrollmentResponse) ??
           R5ResourceType.EnrollmentResponse,
@@ -1387,7 +1355,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
           unknownValue: EnrollmentResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -1414,7 +1382,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
 Map<String, dynamic> _$$_EnrollmentResponseToJson(
     _$_EnrollmentResponse instance) {
   final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

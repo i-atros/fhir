@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'request_and_response.dart';
@@ -11,106 +12,11 @@ part of 'request_and_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Communication _$CommunicationFromJson(Map<String, dynamic> json) {
   return _Communication.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunicationTearOff {
-  const _$CommunicationTearOff();
-
-  _Communication call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-          Stu3ResourceType resourceType = Stu3ResourceType.Communication,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? definition,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? notDone,
-      @JsonKey(name: '_notDone')
-          Element? notDoneElement,
-      CodeableConcept? notDoneReason,
-      List<CodeableConcept>? category,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      List<Reference>? recipient,
-      List<Reference>? topic,
-      Reference? context,
-      String? sent,
-      @JsonKey(name: '_sent')
-          Element? sentElement,
-      String? received,
-      @JsonKey(name: '_received')
-          Element? receivedElement,
-      Reference? sender,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<CommunicationPayload>? payload,
-      List<Annotation>? note}) {
-    return _Communication(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      definition: definition,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      notDone: notDone,
-      notDoneElement: notDoneElement,
-      notDoneReason: notDoneReason,
-      category: category,
-      medium: medium,
-      subject: subject,
-      recipient: recipient,
-      topic: topic,
-      context: context,
-      sent: sent,
-      sentElement: sentElement,
-      received: received,
-      receivedElement: receivedElement,
-      sender: sender,
-      reasonCode: reasonCode,
-      reasonReference: reasonReference,
-      payload: payload,
-      note: note,
-    );
-  }
-
-  Communication fromJson(Map<String, Object> json) {
-    return Communication.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Communication = _$CommunicationTearOff();
 
 /// @nodoc
 mixin _$Communication {
@@ -169,7 +75,8 @@ mixin _$Communication {
 abstract class $CommunicationCopyWith<$Res> {
   factory $CommunicationCopyWith(
           Communication value, $Res Function(Communication) then) =
-      _$CommunicationCopyWithImpl<$Res>;
+      _$CommunicationCopyWithImpl<$Res, Communication>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
           Stu3ResourceType resourceType,
@@ -230,17 +137,19 @@ abstract class $CommunicationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationCopyWithImpl<$Res>
+class _$CommunicationCopyWithImpl<$Res, $Val extends Communication>
     implements $CommunicationCopyWith<$Res> {
   _$CommunicationCopyWithImpl(this._value, this._then);
 
-  final Communication _value;
   // ignore: unused_field
-  final $Res Function(Communication) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -277,289 +186,302 @@ class _$CommunicationCopyWithImpl<$Res>
     Object? note = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      partOf: partOf == freezed
+      partOf: freezed == partOf
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      notDone: notDone == freezed
+      notDone: freezed == notDone
           ? _value.notDone
           : notDone // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      notDoneElement: notDoneElement == freezed
+      notDoneElement: freezed == notDoneElement
           ? _value.notDoneElement
           : notDoneElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      notDoneReason: notDoneReason == freezed
+      notDoneReason: freezed == notDoneReason
           ? _value.notDoneReason
           : notDoneReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      medium: medium == freezed
+      medium: freezed == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      recipient: recipient == freezed
+      recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      topic: topic == freezed
+      topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      sent: sent == freezed
+      sent: freezed == sent
           ? _value.sent
           : sent // ignore: cast_nullable_to_non_nullable
               as String?,
-      sentElement: sentElement == freezed
+      sentElement: freezed == sentElement
           ? _value.sentElement
           : sentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      received: received == freezed
+      received: freezed == received
           ? _value.received
           : received // ignore: cast_nullable_to_non_nullable
               as String?,
-      receivedElement: receivedElement == freezed
+      receivedElement: freezed == receivedElement
           ? _value.receivedElement
           : receivedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      sender: sender == freezed
+      sender: freezed == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      reasonCode: reasonCode == freezed
+      reasonCode: freezed == reasonCode
           ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      payload: payload == freezed
+      payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as List<CommunicationPayload>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get notDoneElement {
     if (_value.notDoneElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.notDoneElement!, (value) {
-      return _then(_value.copyWith(notDoneElement: value));
+      return _then(_value.copyWith(notDoneElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get notDoneReason {
     if (_value.notDoneReason == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.notDoneReason!, (value) {
-      return _then(_value.copyWith(notDoneReason: value));
+      return _then(_value.copyWith(notDoneReason: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get context {
     if (_value.context == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.context!, (value) {
-      return _then(_value.copyWith(context: value));
+      return _then(_value.copyWith(context: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get sentElement {
     if (_value.sentElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.sentElement!, (value) {
-      return _then(_value.copyWith(sentElement: value));
+      return _then(_value.copyWith(sentElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get receivedElement {
     if (_value.receivedElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.receivedElement!, (value) {
-      return _then(_value.copyWith(receivedElement: value));
+      return _then(_value.copyWith(receivedElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get sender {
     if (_value.sender == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.sender!, (value) {
-      return _then(_value.copyWith(sender: value));
+      return _then(_value.copyWith(sender: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CommunicationCopyWith<$Res>
+abstract class _$$_CommunicationCopyWith<$Res>
     implements $CommunicationCopyWith<$Res> {
-  factory _$CommunicationCopyWith(
-          _Communication value, $Res Function(_Communication) then) =
-      __$CommunicationCopyWithImpl<$Res>;
+  factory _$$_CommunicationCopyWith(
+          _$_Communication value, $Res Function(_$_Communication) then) =
+      __$$_CommunicationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
           Stu3ResourceType resourceType,
@@ -632,19 +554,17 @@ abstract class _$CommunicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunicationCopyWithImpl<$Res>
-    extends _$CommunicationCopyWithImpl<$Res>
-    implements _$CommunicationCopyWith<$Res> {
-  __$CommunicationCopyWithImpl(
-      _Communication _value, $Res Function(_Communication) _then)
-      : super(_value, (v) => _then(v as _Communication));
+class __$$_CommunicationCopyWithImpl<$Res>
+    extends _$CommunicationCopyWithImpl<$Res, _$_Communication>
+    implements _$$_CommunicationCopyWith<$Res> {
+  __$$_CommunicationCopyWithImpl(
+      _$_Communication _value, $Res Function(_$_Communication) _then)
+      : super(_value, _then);
 
-  @override
-  _Communication get _value => super._value as _Communication;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -680,144 +600,144 @@ class __$CommunicationCopyWithImpl<$Res>
     Object? payload = freezed,
     Object? note = freezed,
   }) {
-    return _then(_Communication(
-      resourceType: resourceType == freezed
+    return _then(_$_Communication(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      partOf: partOf == freezed
+      partOf: freezed == partOf
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      notDone: notDone == freezed
+      notDone: freezed == notDone
           ? _value.notDone
           : notDone // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      notDoneElement: notDoneElement == freezed
+      notDoneElement: freezed == notDoneElement
           ? _value.notDoneElement
           : notDoneElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      notDoneReason: notDoneReason == freezed
+      notDoneReason: freezed == notDoneReason
           ? _value.notDoneReason
           : notDoneReason // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      medium: medium == freezed
+      medium: freezed == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      recipient: recipient == freezed
+      recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      topic: topic == freezed
+      topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      sent: sent == freezed
+      sent: freezed == sent
           ? _value.sent
           : sent // ignore: cast_nullable_to_non_nullable
               as String?,
-      sentElement: sentElement == freezed
+      sentElement: freezed == sentElement
           ? _value.sentElement
           : sentElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      received: received == freezed
+      received: freezed == received
           ? _value.received
           : received // ignore: cast_nullable_to_non_nullable
               as String?,
-      receivedElement: receivedElement == freezed
+      receivedElement: freezed == receivedElement
           ? _value.receivedElement
           : receivedElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      sender: sender == freezed
+      sender: freezed == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      reasonCode: reasonCode == freezed
+      reasonCode: freezed == reasonCode
           ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      payload: payload == freezed
+      payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as List<CommunicationPayload>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
@@ -964,182 +884,162 @@ class _$_Communication extends _Communication {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Communication &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Communication &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.definition, definition) ||
-                const DeepCollectionEquality()
-                    .equals(other.definition, definition)) &&
-            (identical(other.basedOn, basedOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.basedOn, basedOn)) &&
-            (identical(other.partOf, partOf) ||
-                const DeepCollectionEquality().equals(other.partOf, partOf)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality()
+                .equals(other.definition, definition) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.notDone, notDone) ||
-                const DeepCollectionEquality()
-                    .equals(other.notDone, notDone)) &&
+                other.statusElement == statusElement) &&
+            (identical(other.notDone, notDone) || other.notDone == notDone) &&
             (identical(other.notDoneElement, notDoneElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.notDoneElement, notDoneElement)) &&
+                other.notDoneElement == notDoneElement) &&
             (identical(other.notDoneReason, notDoneReason) ||
-                const DeepCollectionEquality()
-                    .equals(other.notDoneReason, notDoneReason)) &&
-            (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
-            (identical(other.medium, medium) ||
-                const DeepCollectionEquality().equals(other.medium, medium)) &&
-            (identical(other.subject, subject) ||
-                const DeepCollectionEquality()
-                    .equals(other.subject, subject)) &&
-            (identical(other.recipient, recipient) ||
-                const DeepCollectionEquality()
-                    .equals(other.recipient, recipient)) &&
-            (identical(other.topic, topic) ||
-                const DeepCollectionEquality().equals(other.topic, topic)) &&
-            (identical(other.context, context) || const DeepCollectionEquality().equals(other.context, context)) &&
-            (identical(other.sent, sent) || const DeepCollectionEquality().equals(other.sent, sent)) &&
-            (identical(other.sentElement, sentElement) || const DeepCollectionEquality().equals(other.sentElement, sentElement)) &&
-            (identical(other.received, received) || const DeepCollectionEquality().equals(other.received, received)) &&
-            (identical(other.receivedElement, receivedElement) || const DeepCollectionEquality().equals(other.receivedElement, receivedElement)) &&
-            (identical(other.sender, sender) || const DeepCollectionEquality().equals(other.sender, sender)) &&
-            (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
-            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
-            (identical(other.payload, payload) || const DeepCollectionEquality().equals(other.payload, payload)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)));
+                other.notDoneReason == notDoneReason) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality().equals(other.medium, medium) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            (identical(other.context, context) || other.context == context) &&
+            (identical(other.sent, sent) || other.sent == sent) &&
+            (identical(other.sentElement, sentElement) ||
+                other.sentElement == sentElement) &&
+            (identical(other.received, received) ||
+                other.received == received) &&
+            (identical(other.receivedElement, receivedElement) ||
+                other.receivedElement == receivedElement) &&
+            (identical(other.sender, sender) || other.sender == sender) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonCode, reasonCode) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality().equals(other.payload, payload) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(definition) ^
-      const DeepCollectionEquality().hash(basedOn) ^
-      const DeepCollectionEquality().hash(partOf) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(notDone) ^
-      const DeepCollectionEquality().hash(notDoneElement) ^
-      const DeepCollectionEquality().hash(notDoneReason) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(medium) ^
-      const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(recipient) ^
-      const DeepCollectionEquality().hash(topic) ^
-      const DeepCollectionEquality().hash(context) ^
-      const DeepCollectionEquality().hash(sent) ^
-      const DeepCollectionEquality().hash(sentElement) ^
-      const DeepCollectionEquality().hash(received) ^
-      const DeepCollectionEquality().hash(receivedElement) ^
-      const DeepCollectionEquality().hash(sender) ^
-      const DeepCollectionEquality().hash(reasonCode) ^
-      const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(payload) ^
-      const DeepCollectionEquality().hash(note);
 
   @JsonKey(ignore: true)
   @override
-  _$CommunicationCopyWith<_Communication> get copyWith =>
-      __$CommunicationCopyWithImpl<_Communication>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(definition),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(partOf),
+        status,
+        statusElement,
+        notDone,
+        notDoneElement,
+        notDoneReason,
+        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(medium),
+        subject,
+        const DeepCollectionEquality().hash(recipient),
+        const DeepCollectionEquality().hash(topic),
+        context,
+        sent,
+        sentElement,
+        received,
+        receivedElement,
+        sender,
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(payload),
+        const DeepCollectionEquality().hash(note)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommunicationCopyWith<_$_Communication> get copyWith =>
+      __$$_CommunicationCopyWithImpl<_$_Communication>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationToJson(this);
+    return _$$_CommunicationToJson(
+      this,
+    );
   }
 }
 
 abstract class _Communication extends Communication {
   factory _Communication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? definition,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      String? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? definition,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final String? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Boolean? notDone,
+          final Element? statusElement,
+      final Boolean? notDone,
       @JsonKey(name: '_notDone')
-          Element? notDoneElement,
-      CodeableConcept? notDoneReason,
-      List<CodeableConcept>? category,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      List<Reference>? recipient,
-      List<Reference>? topic,
-      Reference? context,
-      String? sent,
+          final Element? notDoneElement,
+      final CodeableConcept? notDoneReason,
+      final List<CodeableConcept>? category,
+      final List<CodeableConcept>? medium,
+      final Reference? subject,
+      final List<Reference>? recipient,
+      final List<Reference>? topic,
+      final Reference? context,
+      final String? sent,
       @JsonKey(name: '_sent')
-          Element? sentElement,
-      String? received,
+          final Element? sentElement,
+      final String? received,
       @JsonKey(name: '_received')
-          Element? receivedElement,
-      Reference? sender,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<CommunicationPayload>? payload,
-      List<Annotation>? note}) = _$_Communication;
+          final Element? receivedElement,
+      final Reference? sender,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<CommunicationPayload>? payload,
+      final List<Annotation>? note}) = _$_Communication;
   _Communication._() : super._();
 
   factory _Communication.fromJson(Map<String, dynamic> json) =
@@ -1147,117 +1047,91 @@ abstract class _Communication extends Communication {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get definition => throw _privateConstructorUsedError;
+  List<Reference>? get definition;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  List<Reference>? get partOf;
   @override
-  String? get status => throw _privateConstructorUsedError;
+  String? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Boolean? get notDone => throw _privateConstructorUsedError;
+  Boolean? get notDone;
   @override
   @JsonKey(name: '_notDone')
-  Element? get notDoneElement => throw _privateConstructorUsedError;
+  Element? get notDoneElement;
   @override
-  CodeableConcept? get notDoneReason => throw _privateConstructorUsedError;
+  CodeableConcept? get notDoneReason;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  List<CodeableConcept>? get medium => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get medium;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
-  List<Reference>? get recipient => throw _privateConstructorUsedError;
+  List<Reference>? get recipient;
   @override
-  List<Reference>? get topic => throw _privateConstructorUsedError;
+  List<Reference>? get topic;
   @override
-  Reference? get context => throw _privateConstructorUsedError;
+  Reference? get context;
   @override
-  String? get sent => throw _privateConstructorUsedError;
+  String? get sent;
   @override
   @JsonKey(name: '_sent')
-  Element? get sentElement => throw _privateConstructorUsedError;
+  Element? get sentElement;
   @override
-  String? get received => throw _privateConstructorUsedError;
+  String? get received;
   @override
   @JsonKey(name: '_received')
-  Element? get receivedElement => throw _privateConstructorUsedError;
+  Element? get receivedElement;
   @override
-  Reference? get sender => throw _privateConstructorUsedError;
+  Reference? get sender;
   @override
-  List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonCode;
   @override
-  List<Reference>? get reasonReference => throw _privateConstructorUsedError;
+  List<Reference>? get reasonReference;
   @override
-  List<CommunicationPayload>? get payload => throw _privateConstructorUsedError;
+  List<CommunicationPayload>? get payload;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$CommunicationCopyWith<_Communication> get copyWith =>
+  _$$_CommunicationCopyWith<_$_Communication> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CommunicationPayload _$CommunicationPayloadFromJson(Map<String, dynamic> json) {
   return _CommunicationPayload.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunicationPayloadTearOff {
-  const _$CommunicationPayloadTearOff();
-
-  _CommunicationPayload call(
-      {String? contentString,
-      @JsonKey(name: '_contentString') Element? contentStringElement,
-      Attachment? contentAttachment,
-      Reference? contentReference}) {
-    return _CommunicationPayload(
-      contentString: contentString,
-      contentStringElement: contentStringElement,
-      contentAttachment: contentAttachment,
-      contentReference: contentReference,
-    );
-  }
-
-  CommunicationPayload fromJson(Map<String, Object> json) {
-    return CommunicationPayload.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunicationPayload = _$CommunicationPayloadTearOff();
 
 /// @nodoc
 mixin _$CommunicationPayload {
@@ -1277,7 +1151,8 @@ mixin _$CommunicationPayload {
 abstract class $CommunicationPayloadCopyWith<$Res> {
   factory $CommunicationPayloadCopyWith(CommunicationPayload value,
           $Res Function(CommunicationPayload) then) =
-      _$CommunicationPayloadCopyWithImpl<$Res>;
+      _$CommunicationPayloadCopyWithImpl<$Res, CommunicationPayload>;
+  @useResult
   $Res call(
       {String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
@@ -1290,14 +1165,17 @@ abstract class $CommunicationPayloadCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationPayloadCopyWithImpl<$Res>
+class _$CommunicationPayloadCopyWithImpl<$Res,
+        $Val extends CommunicationPayload>
     implements $CommunicationPayloadCopyWith<$Res> {
   _$CommunicationPayloadCopyWithImpl(this._value, this._then);
 
-  final CommunicationPayload _value;
   // ignore: unused_field
-  final $Res Function(CommunicationPayload) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? contentString = freezed,
@@ -1306,66 +1184,70 @@ class _$CommunicationPayloadCopyWithImpl<$Res>
     Object? contentReference = freezed,
   }) {
     return _then(_value.copyWith(
-      contentString: contentString == freezed
+      contentString: freezed == contentString
           ? _value.contentString
           : contentString // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentStringElement: contentStringElement == freezed
+      contentStringElement: freezed == contentStringElement
           ? _value.contentStringElement
           : contentStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      contentAttachment: contentAttachment == freezed
+      contentAttachment: freezed == contentAttachment
           ? _value.contentAttachment
           : contentAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      contentReference: contentReference == freezed
+      contentReference: freezed == contentReference
           ? _value.contentReference
           : contentReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get contentStringElement {
     if (_value.contentStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.contentStringElement!, (value) {
-      return _then(_value.copyWith(contentStringElement: value));
+      return _then(_value.copyWith(contentStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get contentAttachment {
     if (_value.contentAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.contentAttachment!, (value) {
-      return _then(_value.copyWith(contentAttachment: value));
+      return _then(_value.copyWith(contentAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get contentReference {
     if (_value.contentReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.contentReference!, (value) {
-      return _then(_value.copyWith(contentReference: value));
+      return _then(_value.copyWith(contentReference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CommunicationPayloadCopyWith<$Res>
+abstract class _$$_CommunicationPayloadCopyWith<$Res>
     implements $CommunicationPayloadCopyWith<$Res> {
-  factory _$CommunicationPayloadCopyWith(_CommunicationPayload value,
-          $Res Function(_CommunicationPayload) then) =
-      __$CommunicationPayloadCopyWithImpl<$Res>;
+  factory _$$_CommunicationPayloadCopyWith(_$_CommunicationPayload value,
+          $Res Function(_$_CommunicationPayload) then) =
+      __$$_CommunicationPayloadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
@@ -1381,16 +1263,14 @@ abstract class _$CommunicationPayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunicationPayloadCopyWithImpl<$Res>
-    extends _$CommunicationPayloadCopyWithImpl<$Res>
-    implements _$CommunicationPayloadCopyWith<$Res> {
-  __$CommunicationPayloadCopyWithImpl(
-      _CommunicationPayload _value, $Res Function(_CommunicationPayload) _then)
-      : super(_value, (v) => _then(v as _CommunicationPayload));
+class __$$_CommunicationPayloadCopyWithImpl<$Res>
+    extends _$CommunicationPayloadCopyWithImpl<$Res, _$_CommunicationPayload>
+    implements _$$_CommunicationPayloadCopyWith<$Res> {
+  __$$_CommunicationPayloadCopyWithImpl(_$_CommunicationPayload _value,
+      $Res Function(_$_CommunicationPayload) _then)
+      : super(_value, _then);
 
-  @override
-  _CommunicationPayload get _value => super._value as _CommunicationPayload;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? contentString = freezed,
@@ -1398,20 +1278,20 @@ class __$CommunicationPayloadCopyWithImpl<$Res>
     Object? contentAttachment = freezed,
     Object? contentReference = freezed,
   }) {
-    return _then(_CommunicationPayload(
-      contentString: contentString == freezed
+    return _then(_$_CommunicationPayload(
+      contentString: freezed == contentString
           ? _value.contentString
           : contentString // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentStringElement: contentStringElement == freezed
+      contentStringElement: freezed == contentStringElement
           ? _value.contentStringElement
           : contentStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      contentAttachment: contentAttachment == freezed
+      contentAttachment: freezed == contentAttachment
           ? _value.contentAttachment
           : contentAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      contentReference: contentReference == freezed
+      contentReference: freezed == contentReference
           ? _value.contentReference
           : contentReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -1450,167 +1330,67 @@ class _$_CommunicationPayload extends _CommunicationPayload {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunicationPayload &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CommunicationPayload &&
             (identical(other.contentString, contentString) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentString, contentString)) &&
+                other.contentString == contentString) &&
             (identical(other.contentStringElement, contentStringElement) ||
-                const DeepCollectionEquality().equals(
-                    other.contentStringElement, contentStringElement)) &&
+                other.contentStringElement == contentStringElement) &&
             (identical(other.contentAttachment, contentAttachment) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentAttachment, contentAttachment)) &&
+                other.contentAttachment == contentAttachment) &&
             (identical(other.contentReference, contentReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentReference, contentReference)));
+                other.contentReference == contentReference));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(contentString) ^
-      const DeepCollectionEquality().hash(contentStringElement) ^
-      const DeepCollectionEquality().hash(contentAttachment) ^
-      const DeepCollectionEquality().hash(contentReference);
 
   @JsonKey(ignore: true)
   @override
-  _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith =>
-      __$CommunicationPayloadCopyWithImpl<_CommunicationPayload>(
+  int get hashCode => Object.hash(runtimeType, contentString,
+      contentStringElement, contentAttachment, contentReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommunicationPayloadCopyWith<_$_CommunicationPayload> get copyWith =>
+      __$$_CommunicationPayloadCopyWithImpl<_$_CommunicationPayload>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationPayloadToJson(this);
+    return _$$_CommunicationPayloadToJson(
+      this,
+    );
   }
 }
 
 abstract class _CommunicationPayload extends CommunicationPayload {
   factory _CommunicationPayload(
-      {String? contentString,
-      @JsonKey(name: '_contentString') Element? contentStringElement,
-      Attachment? contentAttachment,
-      Reference? contentReference}) = _$_CommunicationPayload;
+      {final String? contentString,
+      @JsonKey(name: '_contentString') final Element? contentStringElement,
+      final Attachment? contentAttachment,
+      final Reference? contentReference}) = _$_CommunicationPayload;
   _CommunicationPayload._() : super._();
 
   factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationPayload.fromJson;
 
   @override
-  String? get contentString => throw _privateConstructorUsedError;
+  String? get contentString;
   @override
   @JsonKey(name: '_contentString')
-  Element? get contentStringElement => throw _privateConstructorUsedError;
+  Element? get contentStringElement;
   @override
-  Attachment? get contentAttachment => throw _privateConstructorUsedError;
+  Attachment? get contentAttachment;
   @override
-  Reference? get contentReference => throw _privateConstructorUsedError;
+  Reference? get contentReference;
   @override
   @JsonKey(ignore: true)
-  _$CommunicationPayloadCopyWith<_CommunicationPayload> get copyWith =>
+  _$$_CommunicationPayloadCopyWith<_$_CommunicationPayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
   return _CommunicationRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunicationRequestTearOff {
-  const _$CommunicationRequestTearOff();
-
-  _CommunicationRequest call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-          Stu3ResourceType resourceType = Stu3ResourceType.CommunicationRequest,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? replaces,
-      Identifier? groupIdentifier,
-      String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? category,
-      String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      List<Reference>? recipient,
-      List<Reference>? topic,
-      Reference? context,
-      List<CommunicationRequestPayload>? payload,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      Reference? sender,
-      CommunicationRequestRequester? requester,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note}) {
-    return _CommunicationRequest(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      replaces: replaces,
-      groupIdentifier: groupIdentifier,
-      status: status,
-      statusElement: statusElement,
-      category: category,
-      priority: priority,
-      priorityElement: priorityElement,
-      medium: medium,
-      subject: subject,
-      recipient: recipient,
-      topic: topic,
-      context: context,
-      payload: payload,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      occurrencePeriod: occurrencePeriod,
-      authoredOn: authoredOn,
-      authoredOnElement: authoredOnElement,
-      sender: sender,
-      requester: requester,
-      reasonCode: reasonCode,
-      reasonReference: reasonReference,
-      note: note,
-    );
-  }
-
-  CommunicationRequest fromJson(Map<String, Object> json) {
-    return CommunicationRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunicationRequest = _$CommunicationRequestTearOff();
 
 /// @nodoc
 mixin _$CommunicationRequest {
@@ -1672,7 +1452,8 @@ mixin _$CommunicationRequest {
 abstract class $CommunicationRequestCopyWith<$Res> {
   factory $CommunicationRequestCopyWith(CommunicationRequest value,
           $Res Function(CommunicationRequest) then) =
-      _$CommunicationRequestCopyWithImpl<$Res>;
+      _$CommunicationRequestCopyWithImpl<$Res, CommunicationRequest>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
           Stu3ResourceType resourceType,
@@ -1736,17 +1517,20 @@ abstract class $CommunicationRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationRequestCopyWithImpl<$Res>
+class _$CommunicationRequestCopyWithImpl<$Res,
+        $Val extends CommunicationRequest>
     implements $CommunicationRequestCopyWith<$Res> {
   _$CommunicationRequestCopyWithImpl(this._value, this._then);
 
-  final CommunicationRequest _value;
   // ignore: unused_field
-  final $Res Function(CommunicationRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1784,297 +1568,311 @@ class _$CommunicationRequestCopyWithImpl<$Res>
     Object? note = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      replaces: replaces == freezed
+      replaces: freezed == replaces
           ? _value.replaces
           : replaces // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      groupIdentifier: groupIdentifier == freezed
+      groupIdentifier: freezed == groupIdentifier
           ? _value.groupIdentifier
           : groupIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      priority: priority == freezed
+      priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as String?,
-      priorityElement: priorityElement == freezed
+      priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      medium: medium == freezed
+      medium: freezed == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      recipient: recipient == freezed
+      recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      topic: topic == freezed
+      topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      payload: payload == freezed
+      payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as List<CommunicationRequestPayload>?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      authoredOn: authoredOn == freezed
+      authoredOn: freezed == authoredOn
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      authoredOnElement: authoredOnElement == freezed
+      authoredOnElement: freezed == authoredOnElement
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      sender: sender == freezed
+      sender: freezed == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requester: requester == freezed
+      requester: freezed == requester
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as CommunicationRequestRequester?,
-      reasonCode: reasonCode == freezed
+      reasonCode: freezed == reasonCode
           ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get groupIdentifier {
     if (_value.groupIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.groupIdentifier!, (value) {
-      return _then(_value.copyWith(groupIdentifier: value));
+      return _then(_value.copyWith(groupIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
-      return _then(_value.copyWith(priorityElement: value));
+      return _then(_value.copyWith(priorityElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.subject!, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get context {
     if (_value.context == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.context!, (value) {
-      return _then(_value.copyWith(context: value));
+      return _then(_value.copyWith(context: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement {
     if (_value.occurrenceDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement!, (value) {
-      return _then(_value.copyWith(occurrenceDateTimeElement: value));
+      return _then(_value.copyWith(occurrenceDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get occurrencePeriod {
     if (_value.occurrencePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.occurrencePeriod!, (value) {
-      return _then(_value.copyWith(occurrencePeriod: value));
+      return _then(_value.copyWith(occurrencePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get authoredOnElement {
     if (_value.authoredOnElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.authoredOnElement!, (value) {
-      return _then(_value.copyWith(authoredOnElement: value));
+      return _then(_value.copyWith(authoredOnElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get sender {
     if (_value.sender == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.sender!, (value) {
-      return _then(_value.copyWith(sender: value));
+      return _then(_value.copyWith(sender: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CommunicationRequestRequesterCopyWith<$Res>? get requester {
     if (_value.requester == null) {
       return null;
@@ -2082,18 +1880,19 @@ class _$CommunicationRequestCopyWithImpl<$Res>
 
     return $CommunicationRequestRequesterCopyWith<$Res>(_value.requester!,
         (value) {
-      return _then(_value.copyWith(requester: value));
+      return _then(_value.copyWith(requester: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CommunicationRequestCopyWith<$Res>
+abstract class _$$_CommunicationRequestCopyWith<$Res>
     implements $CommunicationRequestCopyWith<$Res> {
-  factory _$CommunicationRequestCopyWith(_CommunicationRequest value,
-          $Res Function(_CommunicationRequest) then) =
-      __$CommunicationRequestCopyWithImpl<$Res>;
+  factory _$$_CommunicationRequestCopyWith(_$_CommunicationRequest value,
+          $Res Function(_$_CommunicationRequest) then) =
+      __$$_CommunicationRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
           Stu3ResourceType resourceType,
@@ -2171,19 +1970,17 @@ abstract class _$CommunicationRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunicationRequestCopyWithImpl<$Res>
-    extends _$CommunicationRequestCopyWithImpl<$Res>
-    implements _$CommunicationRequestCopyWith<$Res> {
-  __$CommunicationRequestCopyWithImpl(
-      _CommunicationRequest _value, $Res Function(_CommunicationRequest) _then)
-      : super(_value, (v) => _then(v as _CommunicationRequest));
+class __$$_CommunicationRequestCopyWithImpl<$Res>
+    extends _$CommunicationRequestCopyWithImpl<$Res, _$_CommunicationRequest>
+    implements _$$_CommunicationRequestCopyWith<$Res> {
+  __$$_CommunicationRequestCopyWithImpl(_$_CommunicationRequest _value,
+      $Res Function(_$_CommunicationRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _CommunicationRequest get _value => super._value as _CommunicationRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2220,148 +2017,148 @@ class __$CommunicationRequestCopyWithImpl<$Res>
     Object? reasonReference = freezed,
     Object? note = freezed,
   }) {
-    return _then(_CommunicationRequest(
-      resourceType: resourceType == freezed
+    return _then(_$_CommunicationRequest(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      replaces: replaces == freezed
+      replaces: freezed == replaces
           ? _value.replaces
           : replaces // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      groupIdentifier: groupIdentifier == freezed
+      groupIdentifier: freezed == groupIdentifier
           ? _value.groupIdentifier
           : groupIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      priority: priority == freezed
+      priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as String?,
-      priorityElement: priorityElement == freezed
+      priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      medium: medium == freezed
+      medium: freezed == medium
           ? _value.medium
           : medium // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      subject: subject == freezed
+      subject: freezed == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      recipient: recipient == freezed
+      recipient: freezed == recipient
           ? _value.recipient
           : recipient // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      topic: topic == freezed
+      topic: freezed == topic
           ? _value.topic
           : topic // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      payload: payload == freezed
+      payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
               as List<CommunicationRequestPayload>?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      authoredOn: authoredOn == freezed
+      authoredOn: freezed == authoredOn
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      authoredOnElement: authoredOnElement == freezed
+      authoredOnElement: freezed == authoredOnElement
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      sender: sender == freezed
+      sender: freezed == sender
           ? _value.sender
           : sender // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      requester: requester == freezed
+      requester: freezed == requester
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as CommunicationRequestRequester?,
-      reasonCode: reasonCode == freezed
+      reasonCode: freezed == reasonCode
           ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
@@ -2511,186 +2308,170 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunicationRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CommunicationRequest &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.basedOn, basedOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.basedOn, basedOn)) &&
-            (identical(other.replaces, replaces) ||
-                const DeepCollectionEquality()
-                    .equals(other.replaces, replaces)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.replaces, replaces) &&
             (identical(other.groupIdentifier, groupIdentifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.groupIdentifier, groupIdentifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.groupIdentifier == groupIdentifier) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
+                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
             (identical(other.priority, priority) ||
-                const DeepCollectionEquality()
-                    .equals(other.priority, priority)) &&
+                other.priority == priority) &&
             (identical(other.priorityElement, priorityElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.priorityElement, priorityElement)) &&
-            (identical(other.medium, medium) ||
-                const DeepCollectionEquality().equals(other.medium, medium)) &&
-            (identical(other.subject, subject) ||
-                const DeepCollectionEquality()
-                    .equals(other.subject, subject)) &&
-            (identical(other.recipient, recipient) ||
-                const DeepCollectionEquality()
-                    .equals(other.recipient, recipient)) &&
-            (identical(other.topic, topic) ||
-                const DeepCollectionEquality().equals(other.topic, topic)) &&
-            (identical(other.context, context) ||
-                const DeepCollectionEquality().equals(other.context, context)) &&
-            (identical(other.payload, payload) || const DeepCollectionEquality().equals(other.payload, payload)) &&
-            (identical(other.occurrenceDateTime, occurrenceDateTime) || const DeepCollectionEquality().equals(other.occurrenceDateTime, occurrenceDateTime)) &&
-            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurrenceDateTimeElement, occurrenceDateTimeElement)) &&
-            (identical(other.occurrencePeriod, occurrencePeriod) || const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
-            (identical(other.authoredOn, authoredOn) || const DeepCollectionEquality().equals(other.authoredOn, authoredOn)) &&
-            (identical(other.authoredOnElement, authoredOnElement) || const DeepCollectionEquality().equals(other.authoredOnElement, authoredOnElement)) &&
-            (identical(other.sender, sender) || const DeepCollectionEquality().equals(other.sender, sender)) &&
-            (identical(other.requester, requester) || const DeepCollectionEquality().equals(other.requester, requester)) &&
-            (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
-            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)));
+                other.priorityElement == priorityElement) &&
+            const DeepCollectionEquality().equals(other.medium, medium) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            const DeepCollectionEquality().equals(other.recipient, recipient) &&
+            const DeepCollectionEquality().equals(other.topic, topic) &&
+            (identical(other.context, context) || other.context == context) &&
+            const DeepCollectionEquality().equals(other.payload, payload) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                other.occurrenceDateTime == occurrenceDateTime) &&
+            (identical(other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement) ||
+                other.occurrenceDateTimeElement == occurrenceDateTimeElement) &&
+            (identical(other.occurrencePeriod, occurrencePeriod) ||
+                other.occurrencePeriod == occurrencePeriod) &&
+            (identical(other.authoredOn, authoredOn) ||
+                other.authoredOn == authoredOn) &&
+            (identical(other.authoredOnElement, authoredOnElement) ||
+                other.authoredOnElement == authoredOnElement) &&
+            (identical(other.sender, sender) || other.sender == sender) &&
+            (identical(other.requester, requester) ||
+                other.requester == requester) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonCode, reasonCode) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(basedOn) ^
-      const DeepCollectionEquality().hash(replaces) ^
-      const DeepCollectionEquality().hash(groupIdentifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(priority) ^
-      const DeepCollectionEquality().hash(priorityElement) ^
-      const DeepCollectionEquality().hash(medium) ^
-      const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(recipient) ^
-      const DeepCollectionEquality().hash(topic) ^
-      const DeepCollectionEquality().hash(context) ^
-      const DeepCollectionEquality().hash(payload) ^
-      const DeepCollectionEquality().hash(occurrenceDateTime) ^
-      const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
-      const DeepCollectionEquality().hash(occurrencePeriod) ^
-      const DeepCollectionEquality().hash(authoredOn) ^
-      const DeepCollectionEquality().hash(authoredOnElement) ^
-      const DeepCollectionEquality().hash(sender) ^
-      const DeepCollectionEquality().hash(requester) ^
-      const DeepCollectionEquality().hash(reasonCode) ^
-      const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(note);
 
   @JsonKey(ignore: true)
   @override
-  _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith =>
-      __$CommunicationRequestCopyWithImpl<_CommunicationRequest>(
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(replaces),
+        groupIdentifier,
+        status,
+        statusElement,
+        const DeepCollectionEquality().hash(category),
+        priority,
+        priorityElement,
+        const DeepCollectionEquality().hash(medium),
+        subject,
+        const DeepCollectionEquality().hash(recipient),
+        const DeepCollectionEquality().hash(topic),
+        context,
+        const DeepCollectionEquality().hash(payload),
+        occurrenceDateTime,
+        occurrenceDateTimeElement,
+        occurrencePeriod,
+        authoredOn,
+        authoredOnElement,
+        sender,
+        requester,
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(note)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommunicationRequestCopyWith<_$_CommunicationRequest> get copyWith =>
+      __$$_CommunicationRequestCopyWithImpl<_$_CommunicationRequest>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestToJson(this);
+    return _$$_CommunicationRequestToJson(
+      this,
+    );
   }
 }
 
 abstract class _CommunicationRequest extends CommunicationRequest {
   factory _CommunicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? replaces,
-      Identifier? groupIdentifier,
-      String? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? replaces,
+      final Identifier? groupIdentifier,
+      final String? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      List<CodeableConcept>? category,
-      String? priority,
+          final Element? statusElement,
+      final List<CodeableConcept>? category,
+      final String? priority,
       @JsonKey(name: '_priority')
-          Element? priorityElement,
-      List<CodeableConcept>? medium,
-      Reference? subject,
-      List<Reference>? recipient,
-      List<Reference>? topic,
-      Reference? context,
-      List<CommunicationRequestPayload>? payload,
-      FhirDateTime? occurrenceDateTime,
+          final Element? priorityElement,
+      final List<CodeableConcept>? medium,
+      final Reference? subject,
+      final List<Reference>? recipient,
+      final List<Reference>? topic,
+      final Reference? context,
+      final List<CommunicationRequestPayload>? payload,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      String? authoredOn,
+          final Element? occurrenceDateTimeElement,
+      final Period? occurrencePeriod,
+      final String? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      Reference? sender,
-      CommunicationRequestRequester? requester,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note}) = _$_CommunicationRequest;
+          final Element? authoredOnElement,
+      final Reference? sender,
+      final CommunicationRequestRequester? requester,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<Annotation>? note}) = _$_CommunicationRequest;
   _CommunicationRequest._() : super._();
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
@@ -2698,90 +2479,87 @@ abstract class _CommunicationRequest extends CommunicationRequest {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get replaces => throw _privateConstructorUsedError;
+  List<Reference>? get replaces;
   @override
-  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+  Identifier? get groupIdentifier;
   @override
-  String? get status => throw _privateConstructorUsedError;
+  String? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get category;
   @override
-  String? get priority => throw _privateConstructorUsedError;
+  String? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  List<CodeableConcept>? get medium => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get medium;
   @override
-  Reference? get subject => throw _privateConstructorUsedError;
+  Reference? get subject;
   @override
-  List<Reference>? get recipient => throw _privateConstructorUsedError;
+  List<Reference>? get recipient;
   @override
-  List<Reference>? get topic => throw _privateConstructorUsedError;
+  List<Reference>? get topic;
   @override
-  Reference? get context => throw _privateConstructorUsedError;
+  Reference? get context;
   @override
-  List<CommunicationRequestPayload>? get payload =>
-      throw _privateConstructorUsedError;
+  List<CommunicationRequestPayload>? get payload;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  String? get authoredOn => throw _privateConstructorUsedError;
+  String? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  Element? get authoredOnElement;
   @override
-  Reference? get sender => throw _privateConstructorUsedError;
+  Reference? get sender;
   @override
-  CommunicationRequestRequester? get requester =>
-      throw _privateConstructorUsedError;
+  CommunicationRequestRequester? get requester;
   @override
-  List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonCode;
   @override
-  List<Reference>? get reasonReference => throw _privateConstructorUsedError;
+  List<Reference>? get reasonReference;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$CommunicationRequestCopyWith<_CommunicationRequest> get copyWith =>
+  _$$_CommunicationRequestCopyWith<_$_CommunicationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2789,31 +2567,6 @@ CommunicationRequestPayload _$CommunicationRequestPayloadFromJson(
     Map<String, dynamic> json) {
   return _CommunicationRequestPayload.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunicationRequestPayloadTearOff {
-  const _$CommunicationRequestPayloadTearOff();
-
-  _CommunicationRequestPayload call(
-      {String? contentString,
-      @JsonKey(name: '_contentString') Element? contentStringElement,
-      Attachment? contentAttachment,
-      Reference? contentReference}) {
-    return _CommunicationRequestPayload(
-      contentString: contentString,
-      contentStringElement: contentStringElement,
-      contentAttachment: contentAttachment,
-      contentReference: contentReference,
-    );
-  }
-
-  CommunicationRequestPayload fromJson(Map<String, Object> json) {
-    return CommunicationRequestPayload.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunicationRequestPayload = _$CommunicationRequestPayloadTearOff();
 
 /// @nodoc
 mixin _$CommunicationRequestPayload {
@@ -2834,7 +2587,9 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
   factory $CommunicationRequestPayloadCopyWith(
           CommunicationRequestPayload value,
           $Res Function(CommunicationRequestPayload) then) =
-      _$CommunicationRequestPayloadCopyWithImpl<$Res>;
+      _$CommunicationRequestPayloadCopyWithImpl<$Res,
+          CommunicationRequestPayload>;
+  @useResult
   $Res call(
       {String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
@@ -2847,14 +2602,17 @@ abstract class $CommunicationRequestPayloadCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationRequestPayloadCopyWithImpl<$Res>
+class _$CommunicationRequestPayloadCopyWithImpl<$Res,
+        $Val extends CommunicationRequestPayload>
     implements $CommunicationRequestPayloadCopyWith<$Res> {
   _$CommunicationRequestPayloadCopyWithImpl(this._value, this._then);
 
-  final CommunicationRequestPayload _value;
   // ignore: unused_field
-  final $Res Function(CommunicationRequestPayload) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? contentString = freezed,
@@ -2863,67 +2621,71 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res>
     Object? contentReference = freezed,
   }) {
     return _then(_value.copyWith(
-      contentString: contentString == freezed
+      contentString: freezed == contentString
           ? _value.contentString
           : contentString // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentStringElement: contentStringElement == freezed
+      contentStringElement: freezed == contentStringElement
           ? _value.contentStringElement
           : contentStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      contentAttachment: contentAttachment == freezed
+      contentAttachment: freezed == contentAttachment
           ? _value.contentAttachment
           : contentAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      contentReference: contentReference == freezed
+      contentReference: freezed == contentReference
           ? _value.contentReference
           : contentReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get contentStringElement {
     if (_value.contentStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.contentStringElement!, (value) {
-      return _then(_value.copyWith(contentStringElement: value));
+      return _then(_value.copyWith(contentStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get contentAttachment {
     if (_value.contentAttachment == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.contentAttachment!, (value) {
-      return _then(_value.copyWith(contentAttachment: value));
+      return _then(_value.copyWith(contentAttachment: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get contentReference {
     if (_value.contentReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.contentReference!, (value) {
-      return _then(_value.copyWith(contentReference: value));
+      return _then(_value.copyWith(contentReference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CommunicationRequestPayloadCopyWith<$Res>
+abstract class _$$_CommunicationRequestPayloadCopyWith<$Res>
     implements $CommunicationRequestPayloadCopyWith<$Res> {
-  factory _$CommunicationRequestPayloadCopyWith(
-          _CommunicationRequestPayload value,
-          $Res Function(_CommunicationRequestPayload) then) =
-      __$CommunicationRequestPayloadCopyWithImpl<$Res>;
+  factory _$$_CommunicationRequestPayloadCopyWith(
+          _$_CommunicationRequestPayload value,
+          $Res Function(_$_CommunicationRequestPayload) then) =
+      __$$_CommunicationRequestPayloadCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? contentString,
       @JsonKey(name: '_contentString') Element? contentStringElement,
@@ -2939,18 +2701,16 @@ abstract class _$CommunicationRequestPayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunicationRequestPayloadCopyWithImpl<$Res>
-    extends _$CommunicationRequestPayloadCopyWithImpl<$Res>
-    implements _$CommunicationRequestPayloadCopyWith<$Res> {
-  __$CommunicationRequestPayloadCopyWithImpl(
-      _CommunicationRequestPayload _value,
-      $Res Function(_CommunicationRequestPayload) _then)
-      : super(_value, (v) => _then(v as _CommunicationRequestPayload));
+class __$$_CommunicationRequestPayloadCopyWithImpl<$Res>
+    extends _$CommunicationRequestPayloadCopyWithImpl<$Res,
+        _$_CommunicationRequestPayload>
+    implements _$$_CommunicationRequestPayloadCopyWith<$Res> {
+  __$$_CommunicationRequestPayloadCopyWithImpl(
+      _$_CommunicationRequestPayload _value,
+      $Res Function(_$_CommunicationRequestPayload) _then)
+      : super(_value, _then);
 
-  @override
-  _CommunicationRequestPayload get _value =>
-      super._value as _CommunicationRequestPayload;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? contentString = freezed,
@@ -2958,20 +2718,20 @@ class __$CommunicationRequestPayloadCopyWithImpl<$Res>
     Object? contentAttachment = freezed,
     Object? contentReference = freezed,
   }) {
-    return _then(_CommunicationRequestPayload(
-      contentString: contentString == freezed
+    return _then(_$_CommunicationRequestPayload(
+      contentString: freezed == contentString
           ? _value.contentString
           : contentString // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentStringElement: contentStringElement == freezed
+      contentStringElement: freezed == contentStringElement
           ? _value.contentStringElement
           : contentStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      contentAttachment: contentAttachment == freezed
+      contentAttachment: freezed == contentAttachment
           ? _value.contentAttachment
           : contentAttachment // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      contentReference: contentReference == freezed
+      contentReference: freezed == contentReference
           ? _value.contentReference
           : contentReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -3010,65 +2770,62 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunicationRequestPayload &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CommunicationRequestPayload &&
             (identical(other.contentString, contentString) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentString, contentString)) &&
+                other.contentString == contentString) &&
             (identical(other.contentStringElement, contentStringElement) ||
-                const DeepCollectionEquality().equals(
-                    other.contentStringElement, contentStringElement)) &&
+                other.contentStringElement == contentStringElement) &&
             (identical(other.contentAttachment, contentAttachment) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentAttachment, contentAttachment)) &&
+                other.contentAttachment == contentAttachment) &&
             (identical(other.contentReference, contentReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.contentReference, contentReference)));
+                other.contentReference == contentReference));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(contentString) ^
-      const DeepCollectionEquality().hash(contentStringElement) ^
-      const DeepCollectionEquality().hash(contentAttachment) ^
-      const DeepCollectionEquality().hash(contentReference);
 
   @JsonKey(ignore: true)
   @override
-  _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
-      get copyWith => __$CommunicationRequestPayloadCopyWithImpl<
-          _CommunicationRequestPayload>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, contentString,
+      contentStringElement, contentAttachment, contentReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommunicationRequestPayloadCopyWith<_$_CommunicationRequestPayload>
+      get copyWith => __$$_CommunicationRequestPayloadCopyWithImpl<
+          _$_CommunicationRequestPayload>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestPayloadToJson(this);
+    return _$$_CommunicationRequestPayloadToJson(
+      this,
+    );
   }
 }
 
 abstract class _CommunicationRequestPayload
     extends CommunicationRequestPayload {
   factory _CommunicationRequestPayload(
-      {String? contentString,
-      @JsonKey(name: '_contentString') Element? contentStringElement,
-      Attachment? contentAttachment,
-      Reference? contentReference}) = _$_CommunicationRequestPayload;
+      {final String? contentString,
+      @JsonKey(name: '_contentString') final Element? contentStringElement,
+      final Attachment? contentAttachment,
+      final Reference? contentReference}) = _$_CommunicationRequestPayload;
   _CommunicationRequestPayload._() : super._();
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestPayload.fromJson;
 
   @override
-  String? get contentString => throw _privateConstructorUsedError;
+  String? get contentString;
   @override
   @JsonKey(name: '_contentString')
-  Element? get contentStringElement => throw _privateConstructorUsedError;
+  Element? get contentStringElement;
   @override
-  Attachment? get contentAttachment => throw _privateConstructorUsedError;
+  Attachment? get contentAttachment;
   @override
-  Reference? get contentReference => throw _privateConstructorUsedError;
+  Reference? get contentReference;
   @override
   @JsonKey(ignore: true)
-  _$CommunicationRequestPayloadCopyWith<_CommunicationRequestPayload>
+  _$$_CommunicationRequestPayloadCopyWith<_$_CommunicationRequestPayload>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3076,26 +2833,6 @@ CommunicationRequestRequester _$CommunicationRequestRequesterFromJson(
     Map<String, dynamic> json) {
   return _CommunicationRequestRequester.fromJson(json);
 }
-
-/// @nodoc
-class _$CommunicationRequestRequesterTearOff {
-  const _$CommunicationRequestRequesterTearOff();
-
-  _CommunicationRequestRequester call(
-      {required Reference agent, Reference? onBehalfOf}) {
-    return _CommunicationRequestRequester(
-      agent: agent,
-      onBehalfOf: onBehalfOf,
-    );
-  }
-
-  CommunicationRequestRequester fromJson(Map<String, Object> json) {
-    return CommunicationRequestRequester.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $CommunicationRequestRequester = _$CommunicationRequestRequesterTearOff();
 
 /// @nodoc
 mixin _$CommunicationRequestRequester {
@@ -3113,7 +2850,9 @@ abstract class $CommunicationRequestRequesterCopyWith<$Res> {
   factory $CommunicationRequestRequesterCopyWith(
           CommunicationRequestRequester value,
           $Res Function(CommunicationRequestRequester) then) =
-      _$CommunicationRequestRequesterCopyWithImpl<$Res>;
+      _$CommunicationRequestRequesterCopyWithImpl<$Res,
+          CommunicationRequestRequester>;
+  @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
 
   $ReferenceCopyWith<$Res> get agent;
@@ -3121,58 +2860,64 @@ abstract class $CommunicationRequestRequesterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CommunicationRequestRequesterCopyWithImpl<$Res>
+class _$CommunicationRequestRequesterCopyWithImpl<$Res,
+        $Val extends CommunicationRequestRequester>
     implements $CommunicationRequestRequesterCopyWith<$Res> {
   _$CommunicationRequestRequesterCopyWithImpl(this._value, this._then);
 
-  final CommunicationRequestRequester _value;
   // ignore: unused_field
-  final $Res Function(CommunicationRequestRequester) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? agent = freezed,
+    Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
     return _then(_value.copyWith(
-      agent: agent == freezed
+      agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as Reference,
-      onBehalfOf: onBehalfOf == freezed
+      onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get agent {
     return $ReferenceCopyWith<$Res>(_value.agent, (value) {
-      return _then(_value.copyWith(agent: value));
+      return _then(_value.copyWith(agent: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get onBehalfOf {
     if (_value.onBehalfOf == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.onBehalfOf!, (value) {
-      return _then(_value.copyWith(onBehalfOf: value));
+      return _then(_value.copyWith(onBehalfOf: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$CommunicationRequestRequesterCopyWith<$Res>
+abstract class _$$_CommunicationRequestRequesterCopyWith<$Res>
     implements $CommunicationRequestRequesterCopyWith<$Res> {
-  factory _$CommunicationRequestRequesterCopyWith(
-          _CommunicationRequestRequester value,
-          $Res Function(_CommunicationRequestRequester) then) =
-      __$CommunicationRequestRequesterCopyWithImpl<$Res>;
+  factory _$$_CommunicationRequestRequesterCopyWith(
+          _$_CommunicationRequestRequester value,
+          $Res Function(_$_CommunicationRequestRequester) then) =
+      __$$_CommunicationRequestRequesterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
 
   @override
@@ -3182,29 +2927,27 @@ abstract class _$CommunicationRequestRequesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$CommunicationRequestRequesterCopyWithImpl<$Res>
-    extends _$CommunicationRequestRequesterCopyWithImpl<$Res>
-    implements _$CommunicationRequestRequesterCopyWith<$Res> {
-  __$CommunicationRequestRequesterCopyWithImpl(
-      _CommunicationRequestRequester _value,
-      $Res Function(_CommunicationRequestRequester) _then)
-      : super(_value, (v) => _then(v as _CommunicationRequestRequester));
+class __$$_CommunicationRequestRequesterCopyWithImpl<$Res>
+    extends _$CommunicationRequestRequesterCopyWithImpl<$Res,
+        _$_CommunicationRequestRequester>
+    implements _$$_CommunicationRequestRequesterCopyWith<$Res> {
+  __$$_CommunicationRequestRequesterCopyWithImpl(
+      _$_CommunicationRequestRequester _value,
+      $Res Function(_$_CommunicationRequestRequester) _then)
+      : super(_value, _then);
 
-  @override
-  _CommunicationRequestRequester get _value =>
-      super._value as _CommunicationRequestRequester;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? agent = freezed,
+    Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
-    return _then(_CommunicationRequestRequester(
-      agent: agent == freezed
+    return _then(_$_CommunicationRequestRequester(
+      agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as Reference,
-      onBehalfOf: onBehalfOf == freezed
+      onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -3235,158 +2978,55 @@ class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _CommunicationRequestRequester &&
-            (identical(other.agent, agent) ||
-                const DeepCollectionEquality().equals(other.agent, agent)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_CommunicationRequestRequester &&
+            (identical(other.agent, agent) || other.agent == agent) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
-                const DeepCollectionEquality()
-                    .equals(other.onBehalfOf, onBehalfOf)));
+                other.onBehalfOf == onBehalfOf));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(agent) ^
-      const DeepCollectionEquality().hash(onBehalfOf);
 
   @JsonKey(ignore: true)
   @override
-  _$CommunicationRequestRequesterCopyWith<_CommunicationRequestRequester>
-      get copyWith => __$CommunicationRequestRequesterCopyWithImpl<
-          _CommunicationRequestRequester>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, agent, onBehalfOf);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CommunicationRequestRequesterCopyWith<_$_CommunicationRequestRequester>
+      get copyWith => __$$_CommunicationRequestRequesterCopyWithImpl<
+          _$_CommunicationRequestRequester>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestRequesterToJson(this);
+    return _$$_CommunicationRequestRequesterToJson(
+      this,
+    );
   }
 }
 
 abstract class _CommunicationRequestRequester
     extends CommunicationRequestRequester {
   factory _CommunicationRequestRequester(
-      {required Reference agent,
-      Reference? onBehalfOf}) = _$_CommunicationRequestRequester;
+      {required final Reference agent,
+      final Reference? onBehalfOf}) = _$_CommunicationRequestRequester;
   _CommunicationRequestRequester._() : super._();
 
   factory _CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_CommunicationRequestRequester.fromJson;
 
   @override
-  Reference get agent => throw _privateConstructorUsedError;
+  Reference get agent;
   @override
-  Reference? get onBehalfOf => throw _privateConstructorUsedError;
+  Reference? get onBehalfOf;
   @override
   @JsonKey(ignore: true)
-  _$CommunicationRequestRequesterCopyWith<_CommunicationRequestRequester>
+  _$$_CommunicationRequestRequesterCopyWith<_$_CommunicationRequestRequester>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 DeviceRequest _$DeviceRequestFromJson(Map<String, dynamic> json) {
   return _DeviceRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceRequestTearOff {
-  const _$DeviceRequestTearOff();
-
-  _DeviceRequest call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-          Stu3ResourceType resourceType = Stu3ResourceType.DeviceRequest,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? definition,
-      List<Reference>? basedOn,
-      List<Reference>? priorRequest,
-      Identifier? groupIdentifier,
-      String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required CodeableConcept intent,
-      String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      Reference? codeReference,
-      CodeableConcept? codeCodeableConcept,
-      required Reference subject,
-      Reference? context,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      DeviceRequestRequester? requester,
-      CodeableConcept? performerType,
-      Reference? performer,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Reference>? supportingInfo,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory}) {
-    return _DeviceRequest(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      definition: definition,
-      basedOn: basedOn,
-      priorRequest: priorRequest,
-      groupIdentifier: groupIdentifier,
-      status: status,
-      statusElement: statusElement,
-      intent: intent,
-      priority: priority,
-      priorityElement: priorityElement,
-      codeReference: codeReference,
-      codeCodeableConcept: codeCodeableConcept,
-      subject: subject,
-      context: context,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      occurrencePeriod: occurrencePeriod,
-      occurrenceTiming: occurrenceTiming,
-      authoredOn: authoredOn,
-      authoredOnElement: authoredOnElement,
-      requester: requester,
-      performerType: performerType,
-      performer: performer,
-      reasonCode: reasonCode,
-      reasonReference: reasonReference,
-      supportingInfo: supportingInfo,
-      note: note,
-      relevantHistory: relevantHistory,
-    );
-  }
-
-  DeviceRequest fromJson(Map<String, Object> json) {
-    return DeviceRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceRequest = _$DeviceRequestTearOff();
 
 /// @nodoc
 mixin _$DeviceRequest {
@@ -3450,7 +3090,8 @@ mixin _$DeviceRequest {
 abstract class $DeviceRequestCopyWith<$Res> {
   factory $DeviceRequestCopyWith(
           DeviceRequest value, $Res Function(DeviceRequest) then) =
-      _$DeviceRequestCopyWithImpl<$Res>;
+      _$DeviceRequestCopyWithImpl<$Res, DeviceRequest>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
           Stu3ResourceType resourceType,
@@ -3522,17 +3163,19 @@ abstract class $DeviceRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceRequestCopyWithImpl<$Res>
+class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
     implements $DeviceRequestCopyWith<$Res> {
   _$DeviceRequestCopyWithImpl(this._value, this._then);
 
-  final DeviceRequest _value;
   // ignore: unused_field
-  final $Res Function(DeviceRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3550,12 +3193,12 @@ class _$DeviceRequestCopyWithImpl<$Res>
     Object? groupIdentifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? intent = freezed,
+    Object? intent = null,
     Object? priority = freezed,
     Object? priorityElement = freezed,
     Object? codeReference = freezed,
     Object? codeCodeableConcept = freezed,
-    Object? subject = freezed,
+    Object? subject = null,
     Object? context = freezed,
     Object? occurrenceDateTime = freezed,
     Object? occurrenceDateTimeElement = freezed,
@@ -3573,374 +3216,394 @@ class _$DeviceRequestCopyWithImpl<$Res>
     Object? relevantHistory = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      priorRequest: priorRequest == freezed
+      priorRequest: freezed == priorRequest
           ? _value.priorRequest
           : priorRequest // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      groupIdentifier: groupIdentifier == freezed
+      groupIdentifier: freezed == groupIdentifier
           ? _value.groupIdentifier
           : groupIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      intent: intent == freezed
+      intent: null == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      priority: priority == freezed
+      priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as String?,
-      priorityElement: priorityElement == freezed
+      priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      codeReference: codeReference == freezed
+      codeReference: freezed == codeReference
           ? _value.codeReference
           : codeReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      codeCodeableConcept: codeCodeableConcept == freezed
+      codeCodeableConcept: freezed == codeCodeableConcept
           ? _value.codeCodeableConcept
           : codeCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      subject: subject == freezed
+      subject: null == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      occurrenceTiming: occurrenceTiming == freezed
+      occurrenceTiming: freezed == occurrenceTiming
           ? _value.occurrenceTiming
           : occurrenceTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      authoredOn: authoredOn == freezed
+      authoredOn: freezed == authoredOn
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      authoredOnElement: authoredOnElement == freezed
+      authoredOnElement: freezed == authoredOnElement
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requester: requester == freezed
+      requester: freezed == requester
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as DeviceRequestRequester?,
-      performerType: performerType == freezed
+      performerType: freezed == performerType
           ? _value.performerType
           : performerType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      performer: performer == freezed
+      performer: freezed == performer
           ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      reasonCode: reasonCode == freezed
+      reasonCode: freezed == reasonCode
           ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      supportingInfo: supportingInfo == freezed
+      supportingInfo: freezed == supportingInfo
           ? _value.supportingInfo
           : supportingInfo // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      relevantHistory: relevantHistory == freezed
+      relevantHistory: freezed == relevantHistory
           ? _value.relevantHistory
           : relevantHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get groupIdentifier {
     if (_value.groupIdentifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.groupIdentifier!, (value) {
-      return _then(_value.copyWith(groupIdentifier: value));
+      return _then(_value.copyWith(groupIdentifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get intent {
     return $CodeableConceptCopyWith<$Res>(_value.intent, (value) {
-      return _then(_value.copyWith(intent: value));
+      return _then(_value.copyWith(intent: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
-      return _then(_value.copyWith(priorityElement: value));
+      return _then(_value.copyWith(priorityElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get codeReference {
     if (_value.codeReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.codeReference!, (value) {
-      return _then(_value.copyWith(codeReference: value));
+      return _then(_value.copyWith(codeReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get codeCodeableConcept {
     if (_value.codeCodeableConcept == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.codeCodeableConcept!, (value) {
-      return _then(_value.copyWith(codeCodeableConcept: value));
+      return _then(_value.copyWith(codeCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get subject {
     return $ReferenceCopyWith<$Res>(_value.subject, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get context {
     if (_value.context == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.context!, (value) {
-      return _then(_value.copyWith(context: value));
+      return _then(_value.copyWith(context: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement {
     if (_value.occurrenceDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement!, (value) {
-      return _then(_value.copyWith(occurrenceDateTimeElement: value));
+      return _then(_value.copyWith(occurrenceDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get occurrencePeriod {
     if (_value.occurrencePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.occurrencePeriod!, (value) {
-      return _then(_value.copyWith(occurrencePeriod: value));
+      return _then(_value.copyWith(occurrencePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get occurrenceTiming {
     if (_value.occurrenceTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.occurrenceTiming!, (value) {
-      return _then(_value.copyWith(occurrenceTiming: value));
+      return _then(_value.copyWith(occurrenceTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get authoredOnElement {
     if (_value.authoredOnElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.authoredOnElement!, (value) {
-      return _then(_value.copyWith(authoredOnElement: value));
+      return _then(_value.copyWith(authoredOnElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DeviceRequestRequesterCopyWith<$Res>? get requester {
     if (_value.requester == null) {
       return null;
     }
 
     return $DeviceRequestRequesterCopyWith<$Res>(_value.requester!, (value) {
-      return _then(_value.copyWith(requester: value));
+      return _then(_value.copyWith(requester: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get performerType {
     if (_value.performerType == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.performerType!, (value) {
-      return _then(_value.copyWith(performerType: value));
+      return _then(_value.copyWith(performerType: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get performer {
     if (_value.performer == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.performer!, (value) {
-      return _then(_value.copyWith(performer: value));
+      return _then(_value.copyWith(performer: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceRequestCopyWith<$Res>
+abstract class _$$_DeviceRequestCopyWith<$Res>
     implements $DeviceRequestCopyWith<$Res> {
-  factory _$DeviceRequestCopyWith(
-          _DeviceRequest value, $Res Function(_DeviceRequest) then) =
-      __$DeviceRequestCopyWithImpl<$Res>;
+  factory _$$_DeviceRequestCopyWith(
+          _$_DeviceRequest value, $Res Function(_$_DeviceRequest) then) =
+      __$$_DeviceRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
           Stu3ResourceType resourceType,
@@ -4031,19 +3694,17 @@ abstract class _$DeviceRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceRequestCopyWithImpl<$Res>
-    extends _$DeviceRequestCopyWithImpl<$Res>
-    implements _$DeviceRequestCopyWith<$Res> {
-  __$DeviceRequestCopyWithImpl(
-      _DeviceRequest _value, $Res Function(_DeviceRequest) _then)
-      : super(_value, (v) => _then(v as _DeviceRequest));
+class __$$_DeviceRequestCopyWithImpl<$Res>
+    extends _$DeviceRequestCopyWithImpl<$Res, _$_DeviceRequest>
+    implements _$$_DeviceRequestCopyWith<$Res> {
+  __$$_DeviceRequestCopyWithImpl(
+      _$_DeviceRequest _value, $Res Function(_$_DeviceRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceRequest get _value => super._value as _DeviceRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4061,12 +3722,12 @@ class __$DeviceRequestCopyWithImpl<$Res>
     Object? groupIdentifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? intent = freezed,
+    Object? intent = null,
     Object? priority = freezed,
     Object? priorityElement = freezed,
     Object? codeReference = freezed,
     Object? codeCodeableConcept = freezed,
-    Object? subject = freezed,
+    Object? subject = null,
     Object? context = freezed,
     Object? occurrenceDateTime = freezed,
     Object? occurrenceDateTimeElement = freezed,
@@ -4083,160 +3744,160 @@ class __$DeviceRequestCopyWithImpl<$Res>
     Object? note = freezed,
     Object? relevantHistory = freezed,
   }) {
-    return _then(_DeviceRequest(
-      resourceType: resourceType == freezed
+    return _then(_$_DeviceRequest(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      definition: definition == freezed
+      definition: freezed == definition
           ? _value.definition
           : definition // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      priorRequest: priorRequest == freezed
+      priorRequest: freezed == priorRequest
           ? _value.priorRequest
           : priorRequest // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      groupIdentifier: groupIdentifier == freezed
+      groupIdentifier: freezed == groupIdentifier
           ? _value.groupIdentifier
           : groupIdentifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      intent: intent == freezed
+      intent: null == intent
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
-      priority: priority == freezed
+      priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as String?,
-      priorityElement: priorityElement == freezed
+      priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      codeReference: codeReference == freezed
+      codeReference: freezed == codeReference
           ? _value.codeReference
           : codeReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      codeCodeableConcept: codeCodeableConcept == freezed
+      codeCodeableConcept: freezed == codeCodeableConcept
           ? _value.codeCodeableConcept
           : codeCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      subject: subject == freezed
+      subject: null == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
-      context: context == freezed
+      context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      occurrenceTiming: occurrenceTiming == freezed
+      occurrenceTiming: freezed == occurrenceTiming
           ? _value.occurrenceTiming
           : occurrenceTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      authoredOn: authoredOn == freezed
+      authoredOn: freezed == authoredOn
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      authoredOnElement: authoredOnElement == freezed
+      authoredOnElement: freezed == authoredOnElement
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requester: requester == freezed
+      requester: freezed == requester
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as DeviceRequestRequester?,
-      performerType: performerType == freezed
+      performerType: freezed == performerType
           ? _value.performerType
           : performerType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      performer: performer == freezed
+      performer: freezed == performer
           ? _value.performer
           : performer // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      reasonCode: reasonCode == freezed
+      reasonCode: freezed == reasonCode
           ? _value.reasonCode
           : reasonCode // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      supportingInfo: supportingInfo == freezed
+      supportingInfo: freezed == supportingInfo
           ? _value.supportingInfo
           : supportingInfo // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-      relevantHistory: relevantHistory == freezed
+      relevantHistory: freezed == relevantHistory
           ? _value.relevantHistory
           : relevantHistory // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
@@ -4395,194 +4056,187 @@ class _$_DeviceRequest extends _DeviceRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceRequest &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.definition, definition) ||
-                const DeepCollectionEquality()
-                    .equals(other.definition, definition)) &&
-            (identical(other.basedOn, basedOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.basedOn, basedOn)) &&
-            (identical(other.priorRequest, priorRequest) ||
-                const DeepCollectionEquality()
-                    .equals(other.priorRequest, priorRequest)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality()
+                .equals(other.definition, definition) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality()
+                .equals(other.priorRequest, priorRequest) &&
             (identical(other.groupIdentifier, groupIdentifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.groupIdentifier, groupIdentifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.groupIdentifier == groupIdentifier) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.intent, intent) ||
-                const DeepCollectionEquality().equals(other.intent, intent)) &&
+                other.statusElement == statusElement) &&
+            (identical(other.intent, intent) || other.intent == intent) &&
             (identical(other.priority, priority) ||
-                const DeepCollectionEquality()
-                    .equals(other.priority, priority)) &&
+                other.priority == priority) &&
             (identical(other.priorityElement, priorityElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.priorityElement, priorityElement)) &&
+                other.priorityElement == priorityElement) &&
             (identical(other.codeReference, codeReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeReference, codeReference)) &&
+                other.codeReference == codeReference) &&
             (identical(other.codeCodeableConcept, codeCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeCodeableConcept, codeCodeableConcept)) &&
-            (identical(other.subject, subject) ||
-                const DeepCollectionEquality()
-                    .equals(other.subject, subject)) &&
-            (identical(other.context, context) || const DeepCollectionEquality().equals(other.context, context)) &&
-            (identical(other.occurrenceDateTime, occurrenceDateTime) || const DeepCollectionEquality().equals(other.occurrenceDateTime, occurrenceDateTime)) &&
-            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) || const DeepCollectionEquality().equals(other.occurrenceDateTimeElement, occurrenceDateTimeElement)) &&
-            (identical(other.occurrencePeriod, occurrencePeriod) || const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
-            (identical(other.occurrenceTiming, occurrenceTiming) || const DeepCollectionEquality().equals(other.occurrenceTiming, occurrenceTiming)) &&
-            (identical(other.authoredOn, authoredOn) || const DeepCollectionEquality().equals(other.authoredOn, authoredOn)) &&
-            (identical(other.authoredOnElement, authoredOnElement) || const DeepCollectionEquality().equals(other.authoredOnElement, authoredOnElement)) &&
-            (identical(other.requester, requester) || const DeepCollectionEquality().equals(other.requester, requester)) &&
-            (identical(other.performerType, performerType) || const DeepCollectionEquality().equals(other.performerType, performerType)) &&
-            (identical(other.performer, performer) || const DeepCollectionEquality().equals(other.performer, performer)) &&
-            (identical(other.reasonCode, reasonCode) || const DeepCollectionEquality().equals(other.reasonCode, reasonCode)) &&
-            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
-            (identical(other.supportingInfo, supportingInfo) || const DeepCollectionEquality().equals(other.supportingInfo, supportingInfo)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.relevantHistory, relevantHistory) || const DeepCollectionEquality().equals(other.relevantHistory, relevantHistory)));
+                other.codeCodeableConcept == codeCodeableConcept) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
+            (identical(other.context, context) || other.context == context) &&
+            (identical(other.occurrenceDateTime, occurrenceDateTime) ||
+                other.occurrenceDateTime == occurrenceDateTime) &&
+            (identical(other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement) ||
+                other.occurrenceDateTimeElement == occurrenceDateTimeElement) &&
+            (identical(other.occurrencePeriod, occurrencePeriod) ||
+                other.occurrencePeriod == occurrencePeriod) &&
+            (identical(other.occurrenceTiming, occurrenceTiming) ||
+                other.occurrenceTiming == occurrenceTiming) &&
+            (identical(other.authoredOn, authoredOn) ||
+                other.authoredOn == authoredOn) &&
+            (identical(other.authoredOnElement, authoredOnElement) ||
+                other.authoredOnElement == authoredOnElement) &&
+            (identical(other.requester, requester) ||
+                other.requester == requester) &&
+            (identical(other.performerType, performerType) ||
+                other.performerType == performerType) &&
+            (identical(other.performer, performer) ||
+                other.performer == performer) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonCode, reasonCode) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality()
+                .equals(other.supportingInfo, supportingInfo) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality()
+                .equals(other.relevantHistory, relevantHistory));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(definition) ^
-      const DeepCollectionEquality().hash(basedOn) ^
-      const DeepCollectionEquality().hash(priorRequest) ^
-      const DeepCollectionEquality().hash(groupIdentifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(intent) ^
-      const DeepCollectionEquality().hash(priority) ^
-      const DeepCollectionEquality().hash(priorityElement) ^
-      const DeepCollectionEquality().hash(codeReference) ^
-      const DeepCollectionEquality().hash(codeCodeableConcept) ^
-      const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(context) ^
-      const DeepCollectionEquality().hash(occurrenceDateTime) ^
-      const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
-      const DeepCollectionEquality().hash(occurrencePeriod) ^
-      const DeepCollectionEquality().hash(occurrenceTiming) ^
-      const DeepCollectionEquality().hash(authoredOn) ^
-      const DeepCollectionEquality().hash(authoredOnElement) ^
-      const DeepCollectionEquality().hash(requester) ^
-      const DeepCollectionEquality().hash(performerType) ^
-      const DeepCollectionEquality().hash(performer) ^
-      const DeepCollectionEquality().hash(reasonCode) ^
-      const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(supportingInfo) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(relevantHistory);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceRequestCopyWith<_DeviceRequest> get copyWith =>
-      __$DeviceRequestCopyWithImpl<_DeviceRequest>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(definition),
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(priorRequest),
+        groupIdentifier,
+        status,
+        statusElement,
+        intent,
+        priority,
+        priorityElement,
+        codeReference,
+        codeCodeableConcept,
+        subject,
+        context,
+        occurrenceDateTime,
+        occurrenceDateTimeElement,
+        occurrencePeriod,
+        occurrenceTiming,
+        authoredOn,
+        authoredOnElement,
+        requester,
+        performerType,
+        performer,
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(supportingInfo),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(relevantHistory)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceRequestCopyWith<_$_DeviceRequest> get copyWith =>
+      __$$_DeviceRequestCopyWithImpl<_$_DeviceRequest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceRequestToJson(this);
+    return _$$_DeviceRequestToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceRequest extends DeviceRequest {
   factory _DeviceRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Reference>? definition,
-      List<Reference>? basedOn,
-      List<Reference>? priorRequest,
-      Identifier? groupIdentifier,
-      String? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final List<Reference>? definition,
+      final List<Reference>? basedOn,
+      final List<Reference>? priorRequest,
+      final Identifier? groupIdentifier,
+      final String? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      required CodeableConcept intent,
-      String? priority,
+          final Element? statusElement,
+      required final CodeableConcept intent,
+      final String? priority,
       @JsonKey(name: '_priority')
-          Element? priorityElement,
-      Reference? codeReference,
-      CodeableConcept? codeCodeableConcept,
-      required Reference subject,
-      Reference? context,
-      FhirDateTime? occurrenceDateTime,
+          final Element? priorityElement,
+      final Reference? codeReference,
+      final CodeableConcept? codeCodeableConcept,
+      required final Reference subject,
+      final Reference? context,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      String? authoredOn,
+          final Element? occurrenceDateTimeElement,
+      final Period? occurrencePeriod,
+      final Timing? occurrenceTiming,
+      final String? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      DeviceRequestRequester? requester,
-      CodeableConcept? performerType,
-      Reference? performer,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Reference>? supportingInfo,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory}) = _$_DeviceRequest;
+          final Element? authoredOnElement,
+      final DeviceRequestRequester? requester,
+      final CodeableConcept? performerType,
+      final Reference? performer,
+      final List<CodeableConcept>? reasonCode,
+      final List<Reference>? reasonReference,
+      final List<Reference>? supportingInfo,
+      final List<Annotation>? note,
+      final List<Reference>? relevantHistory}) = _$_DeviceRequest;
   _DeviceRequest._() : super._();
 
   factory _DeviceRequest.fromJson(Map<String, dynamic> json) =
@@ -4590,95 +4244,93 @@ abstract class _DeviceRequest extends DeviceRequest {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  List<Reference>? get definition => throw _privateConstructorUsedError;
+  List<Reference>? get definition;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get priorRequest => throw _privateConstructorUsedError;
+  List<Reference>? get priorRequest;
   @override
-  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+  Identifier? get groupIdentifier;
   @override
-  String? get status => throw _privateConstructorUsedError;
+  String? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  CodeableConcept get intent => throw _privateConstructorUsedError;
+  CodeableConcept get intent;
   @override
-  String? get priority => throw _privateConstructorUsedError;
+  String? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  Reference? get codeReference => throw _privateConstructorUsedError;
+  Reference? get codeReference;
   @override
-  CodeableConcept? get codeCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get codeCodeableConcept;
   @override
-  Reference get subject => throw _privateConstructorUsedError;
+  Reference get subject;
   @override
-  Reference? get context => throw _privateConstructorUsedError;
+  Reference? get context;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  Timing? get occurrenceTiming => throw _privateConstructorUsedError;
+  Timing? get occurrenceTiming;
   @override
-  String? get authoredOn => throw _privateConstructorUsedError;
+  String? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  Element? get authoredOnElement;
   @override
-  DeviceRequestRequester? get requester => throw _privateConstructorUsedError;
+  DeviceRequestRequester? get requester;
   @override
-  CodeableConcept? get performerType => throw _privateConstructorUsedError;
+  CodeableConcept? get performerType;
   @override
-  Reference? get performer => throw _privateConstructorUsedError;
+  Reference? get performer;
   @override
-  List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonCode;
   @override
-  List<Reference>? get reasonReference => throw _privateConstructorUsedError;
+  List<Reference>? get reasonReference;
   @override
-  List<Reference>? get supportingInfo => throw _privateConstructorUsedError;
+  List<Reference>? get supportingInfo;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
-  List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
+  List<Reference>? get relevantHistory;
   @override
   @JsonKey(ignore: true)
-  _$DeviceRequestCopyWith<_DeviceRequest> get copyWith =>
+  _$$_DeviceRequestCopyWith<_$_DeviceRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4686,26 +4338,6 @@ DeviceRequestRequester _$DeviceRequestRequesterFromJson(
     Map<String, dynamic> json) {
   return _DeviceRequestRequester.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceRequestRequesterTearOff {
-  const _$DeviceRequestRequesterTearOff();
-
-  _DeviceRequestRequester call(
-      {required Reference agent, Reference? onBehalfOf}) {
-    return _DeviceRequestRequester(
-      agent: agent,
-      onBehalfOf: onBehalfOf,
-    );
-  }
-
-  DeviceRequestRequester fromJson(Map<String, Object> json) {
-    return DeviceRequestRequester.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceRequestRequester = _$DeviceRequestRequesterTearOff();
 
 /// @nodoc
 mixin _$DeviceRequestRequester {
@@ -4722,7 +4354,8 @@ mixin _$DeviceRequestRequester {
 abstract class $DeviceRequestRequesterCopyWith<$Res> {
   factory $DeviceRequestRequesterCopyWith(DeviceRequestRequester value,
           $Res Function(DeviceRequestRequester) then) =
-      _$DeviceRequestRequesterCopyWithImpl<$Res>;
+      _$DeviceRequestRequesterCopyWithImpl<$Res, DeviceRequestRequester>;
+  @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
 
   $ReferenceCopyWith<$Res> get agent;
@@ -4730,57 +4363,63 @@ abstract class $DeviceRequestRequesterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceRequestRequesterCopyWithImpl<$Res>
+class _$DeviceRequestRequesterCopyWithImpl<$Res,
+        $Val extends DeviceRequestRequester>
     implements $DeviceRequestRequesterCopyWith<$Res> {
   _$DeviceRequestRequesterCopyWithImpl(this._value, this._then);
 
-  final DeviceRequestRequester _value;
   // ignore: unused_field
-  final $Res Function(DeviceRequestRequester) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? agent = freezed,
+    Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
     return _then(_value.copyWith(
-      agent: agent == freezed
+      agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as Reference,
-      onBehalfOf: onBehalfOf == freezed
+      onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get agent {
     return $ReferenceCopyWith<$Res>(_value.agent, (value) {
-      return _then(_value.copyWith(agent: value));
+      return _then(_value.copyWith(agent: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get onBehalfOf {
     if (_value.onBehalfOf == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.onBehalfOf!, (value) {
-      return _then(_value.copyWith(onBehalfOf: value));
+      return _then(_value.copyWith(onBehalfOf: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceRequestRequesterCopyWith<$Res>
+abstract class _$$_DeviceRequestRequesterCopyWith<$Res>
     implements $DeviceRequestRequesterCopyWith<$Res> {
-  factory _$DeviceRequestRequesterCopyWith(_DeviceRequestRequester value,
-          $Res Function(_DeviceRequestRequester) then) =
-      __$DeviceRequestRequesterCopyWithImpl<$Res>;
+  factory _$$_DeviceRequestRequesterCopyWith(_$_DeviceRequestRequester value,
+          $Res Function(_$_DeviceRequestRequester) then) =
+      __$$_DeviceRequestRequesterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
 
   @override
@@ -4790,27 +4429,26 @@ abstract class _$DeviceRequestRequesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceRequestRequesterCopyWithImpl<$Res>
-    extends _$DeviceRequestRequesterCopyWithImpl<$Res>
-    implements _$DeviceRequestRequesterCopyWith<$Res> {
-  __$DeviceRequestRequesterCopyWithImpl(_DeviceRequestRequester _value,
-      $Res Function(_DeviceRequestRequester) _then)
-      : super(_value, (v) => _then(v as _DeviceRequestRequester));
+class __$$_DeviceRequestRequesterCopyWithImpl<$Res>
+    extends _$DeviceRequestRequesterCopyWithImpl<$Res,
+        _$_DeviceRequestRequester>
+    implements _$$_DeviceRequestRequesterCopyWith<$Res> {
+  __$$_DeviceRequestRequesterCopyWithImpl(_$_DeviceRequestRequester _value,
+      $Res Function(_$_DeviceRequestRequester) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceRequestRequester get _value => super._value as _DeviceRequestRequester;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? agent = freezed,
+    Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
-    return _then(_DeviceRequestRequester(
-      agent: agent == freezed
+    return _then(_$_DeviceRequestRequester(
+      agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as Reference,
-      onBehalfOf: onBehalfOf == freezed
+      onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -4839,132 +4477,54 @@ class _$_DeviceRequestRequester extends _DeviceRequestRequester {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceRequestRequester &&
-            (identical(other.agent, agent) ||
-                const DeepCollectionEquality().equals(other.agent, agent)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceRequestRequester &&
+            (identical(other.agent, agent) || other.agent == agent) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
-                const DeepCollectionEquality()
-                    .equals(other.onBehalfOf, onBehalfOf)));
+                other.onBehalfOf == onBehalfOf));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(agent) ^
-      const DeepCollectionEquality().hash(onBehalfOf);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceRequestRequesterCopyWith<_DeviceRequestRequester> get copyWith =>
-      __$DeviceRequestRequesterCopyWithImpl<_DeviceRequestRequester>(
+  int get hashCode => Object.hash(runtimeType, agent, onBehalfOf);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceRequestRequesterCopyWith<_$_DeviceRequestRequester> get copyWith =>
+      __$$_DeviceRequestRequesterCopyWithImpl<_$_DeviceRequestRequester>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceRequestRequesterToJson(this);
+    return _$$_DeviceRequestRequesterToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceRequestRequester extends DeviceRequestRequester {
   factory _DeviceRequestRequester(
-      {required Reference agent,
-      Reference? onBehalfOf}) = _$_DeviceRequestRequester;
+      {required final Reference agent,
+      final Reference? onBehalfOf}) = _$_DeviceRequestRequester;
   _DeviceRequestRequester._() : super._();
 
   factory _DeviceRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_DeviceRequestRequester.fromJson;
 
   @override
-  Reference get agent => throw _privateConstructorUsedError;
+  Reference get agent;
   @override
-  Reference? get onBehalfOf => throw _privateConstructorUsedError;
+  Reference? get onBehalfOf;
   @override
   @JsonKey(ignore: true)
-  _$DeviceRequestRequesterCopyWith<_DeviceRequestRequester> get copyWith =>
+  _$$_DeviceRequestRequesterCopyWith<_$_DeviceRequestRequester> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
   return _DeviceUseStatement.fromJson(json);
 }
-
-/// @nodoc
-class _$DeviceUseStatementTearOff {
-  const _$DeviceUseStatementTearOff();
-
-  _DeviceUseStatement call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-          Stu3ResourceType resourceType = Stu3ResourceType.DeviceUseStatement,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      DeviceUseStatementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required Reference subject,
-      Period? whenUsed,
-      Timing? timingTiming,
-      Period? timingPeriod,
-      FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
-      String? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          Element? recordedOnElement,
-      Reference? source,
-      required Reference device,
-      List<CodeableConcept>? indication,
-      CodeableConcept? bodySite,
-      List<Annotation>? note}) {
-    return _DeviceUseStatement(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      subject: subject,
-      whenUsed: whenUsed,
-      timingTiming: timingTiming,
-      timingPeriod: timingPeriod,
-      timingDateTime: timingDateTime,
-      timingDateTimeElement: timingDateTimeElement,
-      recordedOn: recordedOn,
-      recordedOnElement: recordedOnElement,
-      source: source,
-      device: device,
-      indication: indication,
-      bodySite: bodySite,
-      note: note,
-    );
-  }
-
-  DeviceUseStatement fromJson(Map<String, Object> json) {
-    return DeviceUseStatement.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DeviceUseStatement = _$DeviceUseStatementTearOff();
 
 /// @nodoc
 mixin _$DeviceUseStatement {
@@ -5014,7 +4574,8 @@ mixin _$DeviceUseStatement {
 abstract class $DeviceUseStatementCopyWith<$Res> {
   factory $DeviceUseStatementCopyWith(
           DeviceUseStatement value, $Res Function(DeviceUseStatement) then) =
-      _$DeviceUseStatementCopyWithImpl<$Res>;
+      _$DeviceUseStatementCopyWithImpl<$Res, DeviceUseStatement>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
           Stu3ResourceType resourceType,
@@ -5068,17 +4629,19 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceUseStatementCopyWithImpl<$Res>
+class _$DeviceUseStatementCopyWithImpl<$Res, $Val extends DeviceUseStatement>
     implements $DeviceUseStatementCopyWith<$Res> {
   _$DeviceUseStatementCopyWithImpl(this._value, this._then);
 
-  final DeviceUseStatement _value;
   // ignore: unused_field
-  final $Res Function(DeviceUseStatement) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5092,7 +4655,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? subject = freezed,
+    Object? subject = null,
     Object? whenUsed = freezed,
     Object? timingTiming = freezed,
     Object? timingPeriod = freezed,
@@ -5101,277 +4664,292 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     Object? recordedOn = freezed,
     Object? recordedOnElement = freezed,
     Object? source = freezed,
-    Object? device = freezed,
+    Object? device = null,
     Object? indication = freezed,
     Object? bodySite = freezed,
     Object? note = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as DeviceUseStatementStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      subject: subject == freezed
+      subject: null == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
-      whenUsed: whenUsed == freezed
+      whenUsed: freezed == whenUsed
           ? _value.whenUsed
           : whenUsed // ignore: cast_nullable_to_non_nullable
               as Period?,
-      timingTiming: timingTiming == freezed
+      timingTiming: freezed == timingTiming
           ? _value.timingTiming
           : timingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      timingPeriod: timingPeriod == freezed
+      timingPeriod: freezed == timingPeriod
           ? _value.timingPeriod
           : timingPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      timingDateTime: timingDateTime == freezed
+      timingDateTime: freezed == timingDateTime
           ? _value.timingDateTime
           : timingDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      timingDateTimeElement: timingDateTimeElement == freezed
+      timingDateTimeElement: freezed == timingDateTimeElement
           ? _value.timingDateTimeElement
           : timingDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      recordedOn: recordedOn == freezed
+      recordedOn: freezed == recordedOn
           ? _value.recordedOn
           : recordedOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      recordedOnElement: recordedOnElement == freezed
+      recordedOnElement: freezed == recordedOnElement
           ? _value.recordedOnElement
           : recordedOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      device: device == freezed
+      device: null == device
           ? _value.device
           : device // ignore: cast_nullable_to_non_nullable
               as Reference,
-      indication: indication == freezed
+      indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      bodySite: bodySite == freezed
+      bodySite: freezed == bodySite
           ? _value.bodySite
           : bodySite // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get subject {
     return $ReferenceCopyWith<$Res>(_value.subject, (value) {
-      return _then(_value.copyWith(subject: value));
+      return _then(_value.copyWith(subject: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get whenUsed {
     if (_value.whenUsed == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.whenUsed!, (value) {
-      return _then(_value.copyWith(whenUsed: value));
+      return _then(_value.copyWith(whenUsed: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get timingTiming {
     if (_value.timingTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.timingTiming!, (value) {
-      return _then(_value.copyWith(timingTiming: value));
+      return _then(_value.copyWith(timingTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get timingPeriod {
     if (_value.timingPeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.timingPeriod!, (value) {
-      return _then(_value.copyWith(timingPeriod: value));
+      return _then(_value.copyWith(timingPeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get timingDateTimeElement {
     if (_value.timingDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.timingDateTimeElement!, (value) {
-      return _then(_value.copyWith(timingDateTimeElement: value));
+      return _then(_value.copyWith(timingDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get recordedOnElement {
     if (_value.recordedOnElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.recordedOnElement!, (value) {
-      return _then(_value.copyWith(recordedOnElement: value));
+      return _then(_value.copyWith(recordedOnElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get source {
     if (_value.source == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.source!, (value) {
-      return _then(_value.copyWith(source: value));
+      return _then(_value.copyWith(source: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get device {
     return $ReferenceCopyWith<$Res>(_value.device, (value) {
-      return _then(_value.copyWith(device: value));
+      return _then(_value.copyWith(device: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get bodySite {
     if (_value.bodySite == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.bodySite!, (value) {
-      return _then(_value.copyWith(bodySite: value));
+      return _then(_value.copyWith(bodySite: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceUseStatementCopyWith<$Res>
+abstract class _$$_DeviceUseStatementCopyWith<$Res>
     implements $DeviceUseStatementCopyWith<$Res> {
-  factory _$DeviceUseStatementCopyWith(
-          _DeviceUseStatement value, $Res Function(_DeviceUseStatement) then) =
-      __$DeviceUseStatementCopyWithImpl<$Res>;
+  factory _$$_DeviceUseStatementCopyWith(_$_DeviceUseStatement value,
+          $Res Function(_$_DeviceUseStatement) then) =
+      __$$_DeviceUseStatementCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
           Stu3ResourceType resourceType,
@@ -5439,19 +5017,17 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DeviceUseStatementCopyWithImpl<$Res>
-    extends _$DeviceUseStatementCopyWithImpl<$Res>
-    implements _$DeviceUseStatementCopyWith<$Res> {
-  __$DeviceUseStatementCopyWithImpl(
-      _DeviceUseStatement _value, $Res Function(_DeviceUseStatement) _then)
-      : super(_value, (v) => _then(v as _DeviceUseStatement));
+class __$$_DeviceUseStatementCopyWithImpl<$Res>
+    extends _$DeviceUseStatementCopyWithImpl<$Res, _$_DeviceUseStatement>
+    implements _$$_DeviceUseStatementCopyWith<$Res> {
+  __$$_DeviceUseStatementCopyWithImpl(
+      _$_DeviceUseStatement _value, $Res Function(_$_DeviceUseStatement) _then)
+      : super(_value, _then);
 
-  @override
-  _DeviceUseStatement get _value => super._value as _DeviceUseStatement;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5465,7 +5041,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? status = freezed,
     Object? statusElement = freezed,
-    Object? subject = freezed,
+    Object? subject = null,
     Object? whenUsed = freezed,
     Object? timingTiming = freezed,
     Object? timingPeriod = freezed,
@@ -5474,117 +5050,117 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     Object? recordedOn = freezed,
     Object? recordedOnElement = freezed,
     Object? source = freezed,
-    Object? device = freezed,
+    Object? device = null,
     Object? indication = freezed,
     Object? bodySite = freezed,
     Object? note = freezed,
   }) {
-    return _then(_DeviceUseStatement(
-      resourceType: resourceType == freezed
+    return _then(_$_DeviceUseStatement(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as DeviceUseStatementStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      subject: subject == freezed
+      subject: null == subject
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference,
-      whenUsed: whenUsed == freezed
+      whenUsed: freezed == whenUsed
           ? _value.whenUsed
           : whenUsed // ignore: cast_nullable_to_non_nullable
               as Period?,
-      timingTiming: timingTiming == freezed
+      timingTiming: freezed == timingTiming
           ? _value.timingTiming
           : timingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      timingPeriod: timingPeriod == freezed
+      timingPeriod: freezed == timingPeriod
           ? _value.timingPeriod
           : timingPeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      timingDateTime: timingDateTime == freezed
+      timingDateTime: freezed == timingDateTime
           ? _value.timingDateTime
           : timingDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      timingDateTimeElement: timingDateTimeElement == freezed
+      timingDateTimeElement: freezed == timingDateTimeElement
           ? _value.timingDateTimeElement
           : timingDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      recordedOn: recordedOn == freezed
+      recordedOn: freezed == recordedOn
           ? _value.recordedOn
           : recordedOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      recordedOnElement: recordedOnElement == freezed
+      recordedOnElement: freezed == recordedOnElement
           ? _value.recordedOnElement
           : recordedOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      source: source == freezed
+      source: freezed == source
           ? _value.source
           : source // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      device: device == freezed
+      device: null == device
           ? _value.device
           : device // ignore: cast_nullable_to_non_nullable
               as Reference,
-      indication: indication == freezed
+      indication: freezed == indication
           ? _value.indication
           : indication // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-      bodySite: bodySite == freezed
+      bodySite: freezed == bodySite
           ? _value.bodySite
           : bodySite // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      note: note == freezed
+      note: freezed == note
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
               as List<Annotation>?,
@@ -5705,156 +5281,139 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceUseStatement &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DeviceUseStatement &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.subject, subject) ||
-                const DeepCollectionEquality()
-                    .equals(other.subject, subject)) &&
+                other.statusElement == statusElement) &&
+            (identical(other.subject, subject) || other.subject == subject) &&
             (identical(other.whenUsed, whenUsed) ||
-                const DeepCollectionEquality()
-                    .equals(other.whenUsed, whenUsed)) &&
+                other.whenUsed == whenUsed) &&
             (identical(other.timingTiming, timingTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingTiming, timingTiming)) &&
+                other.timingTiming == timingTiming) &&
             (identical(other.timingPeriod, timingPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingPeriod, timingPeriod)) &&
+                other.timingPeriod == timingPeriod) &&
             (identical(other.timingDateTime, timingDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.timingDateTime, timingDateTime)) &&
+                other.timingDateTime == timingDateTime) &&
             (identical(other.timingDateTimeElement, timingDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.timingDateTimeElement, timingDateTimeElement)) &&
+                other.timingDateTimeElement == timingDateTimeElement) &&
             (identical(other.recordedOn, recordedOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.recordedOn, recordedOn)) &&
+                other.recordedOn == recordedOn) &&
             (identical(other.recordedOnElement, recordedOnElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.recordedOnElement, recordedOnElement)) &&
-            (identical(other.source, source) ||
-                const DeepCollectionEquality().equals(other.source, source)) &&
-            (identical(other.device, device) ||
-                const DeepCollectionEquality().equals(other.device, device)) &&
-            (identical(other.indication, indication) || const DeepCollectionEquality().equals(other.indication, indication)) &&
-            (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)));
+                other.recordedOnElement == recordedOnElement) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.device, device) || other.device == device) &&
+            const DeepCollectionEquality()
+                .equals(other.indication, indication) &&
+            (identical(other.bodySite, bodySite) ||
+                other.bodySite == bodySite) &&
+            const DeepCollectionEquality().equals(other.note, note));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(subject) ^
-      const DeepCollectionEquality().hash(whenUsed) ^
-      const DeepCollectionEquality().hash(timingTiming) ^
-      const DeepCollectionEquality().hash(timingPeriod) ^
-      const DeepCollectionEquality().hash(timingDateTime) ^
-      const DeepCollectionEquality().hash(timingDateTimeElement) ^
-      const DeepCollectionEquality().hash(recordedOn) ^
-      const DeepCollectionEquality().hash(recordedOnElement) ^
-      const DeepCollectionEquality().hash(source) ^
-      const DeepCollectionEquality().hash(device) ^
-      const DeepCollectionEquality().hash(indication) ^
-      const DeepCollectionEquality().hash(bodySite) ^
-      const DeepCollectionEquality().hash(note);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
-      __$DeviceUseStatementCopyWithImpl<_DeviceUseStatement>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        status,
+        statusElement,
+        subject,
+        whenUsed,
+        timingTiming,
+        timingPeriod,
+        timingDateTime,
+        timingDateTimeElement,
+        recordedOn,
+        recordedOnElement,
+        source,
+        device,
+        const DeepCollectionEquality().hash(indication),
+        bodySite,
+        const DeepCollectionEquality().hash(note)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DeviceUseStatementCopyWith<_$_DeviceUseStatement> get copyWith =>
+      __$$_DeviceUseStatementCopyWithImpl<_$_DeviceUseStatement>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUseStatementToJson(this);
+    return _$$_DeviceUseStatementToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeviceUseStatement extends DeviceUseStatement {
   factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      DeviceUseStatementStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final DeviceUseStatementStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      required Reference subject,
-      Period? whenUsed,
-      Timing? timingTiming,
-      Period? timingPeriod,
-      FhirDateTime? timingDateTime,
+          final Element? statusElement,
+      required final Reference subject,
+      final Period? whenUsed,
+      final Timing? timingTiming,
+      final Period? timingPeriod,
+      final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
-      String? recordedOn,
+          final Element? timingDateTimeElement,
+      final String? recordedOn,
       @JsonKey(name: '_recordedOn')
-          Element? recordedOnElement,
-      Reference? source,
-      required Reference device,
-      List<CodeableConcept>? indication,
-      CodeableConcept? bodySite,
-      List<Annotation>? note}) = _$_DeviceUseStatement;
+          final Element? recordedOnElement,
+      final Reference? source,
+      required final Reference device,
+      final List<CodeableConcept>? indication,
+      final CodeableConcept? bodySite,
+      final List<Annotation>? note}) = _$_DeviceUseStatement;
   _DeviceUseStatement._() : super._();
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
@@ -5862,150 +5421,74 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  DeviceUseStatementStatus? get status => throw _privateConstructorUsedError;
+  DeviceUseStatementStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference get subject => throw _privateConstructorUsedError;
+  Reference get subject;
   @override
-  Period? get whenUsed => throw _privateConstructorUsedError;
+  Period? get whenUsed;
   @override
-  Timing? get timingTiming => throw _privateConstructorUsedError;
+  Timing? get timingTiming;
   @override
-  Period? get timingPeriod => throw _privateConstructorUsedError;
+  Period? get timingPeriod;
   @override
-  FhirDateTime? get timingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get timingDateTime;
   @override
   @JsonKey(name: '_timingDateTime')
-  Element? get timingDateTimeElement => throw _privateConstructorUsedError;
+  Element? get timingDateTimeElement;
   @override
-  String? get recordedOn => throw _privateConstructorUsedError;
+  String? get recordedOn;
   @override
   @JsonKey(name: '_recordedOn')
-  Element? get recordedOnElement => throw _privateConstructorUsedError;
+  Element? get recordedOnElement;
   @override
-  Reference? get source => throw _privateConstructorUsedError;
+  Reference? get source;
   @override
-  Reference get device => throw _privateConstructorUsedError;
+  Reference get device;
   @override
-  List<CodeableConcept>? get indication => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get indication;
   @override
-  CodeableConcept? get bodySite => throw _privateConstructorUsedError;
+  CodeableConcept? get bodySite;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
+  _$$_DeviceUseStatementCopyWith<_$_DeviceUseStatement> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) {
   return _SupplyDelivery.fromJson(json);
 }
-
-/// @nodoc
-class _$SupplyDeliveryTearOff {
-  const _$SupplyDeliveryTearOff();
-
-  _SupplyDelivery call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-          Stu3ResourceType resourceType = Stu3ResourceType.SupplyDelivery,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? patient,
-      CodeableConcept? type,
-      SupplyDeliverySuppliedItem? suppliedItem,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      Reference? supplier,
-      Reference? destination,
-      List<Reference>? receiver}) {
-    return _SupplyDelivery(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      basedOn: basedOn,
-      partOf: partOf,
-      status: status,
-      statusElement: statusElement,
-      patient: patient,
-      type: type,
-      suppliedItem: suppliedItem,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      occurrencePeriod: occurrencePeriod,
-      occurrenceTiming: occurrenceTiming,
-      supplier: supplier,
-      destination: destination,
-      receiver: receiver,
-    );
-  }
-
-  SupplyDelivery fromJson(Map<String, Object> json) {
-    return SupplyDelivery.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SupplyDelivery = _$SupplyDeliveryTearOff();
 
 /// @nodoc
 mixin _$SupplyDelivery {
@@ -6054,7 +5537,8 @@ mixin _$SupplyDelivery {
 abstract class $SupplyDeliveryCopyWith<$Res> {
   factory $SupplyDeliveryCopyWith(
           SupplyDelivery value, $Res Function(SupplyDelivery) then) =
-      _$SupplyDeliveryCopyWithImpl<$Res>;
+      _$SupplyDeliveryCopyWithImpl<$Res, SupplyDelivery>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
           Stu3ResourceType resourceType,
@@ -6106,17 +5590,19 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SupplyDeliveryCopyWithImpl<$Res>
+class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
     implements $SupplyDeliveryCopyWith<$Res> {
   _$SupplyDeliveryCopyWithImpl(this._value, this._then);
 
-  final SupplyDelivery _value;
   // ignore: unused_field
-  final $Res Function(SupplyDelivery) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6144,202 +5630,211 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
     Object? receiver = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      partOf: partOf == freezed
+      partOf: freezed == partOf
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as SupplyDeliveryStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patient: patient == freezed
+      patient: freezed == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      suppliedItem: suppliedItem == freezed
+      suppliedItem: freezed == suppliedItem
           ? _value.suppliedItem
           : suppliedItem // ignore: cast_nullable_to_non_nullable
               as SupplyDeliverySuppliedItem?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      occurrenceTiming: occurrenceTiming == freezed
+      occurrenceTiming: freezed == occurrenceTiming
           ? _value.occurrenceTiming
           : occurrenceTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      supplier: supplier == freezed
+      supplier: freezed == supplier
           ? _value.supplier
           : supplier // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      destination: destination == freezed
+      destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      receiver: receiver == freezed
+      receiver: freezed == receiver
           ? _value.receiver
           : receiver // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patient {
     if (_value.patient == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.patient!, (value) {
-      return _then(_value.copyWith(patient: value));
+      return _then(_value.copyWith(patient: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SupplyDeliverySuppliedItemCopyWith<$Res>? get suppliedItem {
     if (_value.suppliedItem == null) {
       return null;
@@ -6347,73 +5842,79 @@ class _$SupplyDeliveryCopyWithImpl<$Res>
 
     return $SupplyDeliverySuppliedItemCopyWith<$Res>(_value.suppliedItem!,
         (value) {
-      return _then(_value.copyWith(suppliedItem: value));
+      return _then(_value.copyWith(suppliedItem: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement {
     if (_value.occurrenceDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement!, (value) {
-      return _then(_value.copyWith(occurrenceDateTimeElement: value));
+      return _then(_value.copyWith(occurrenceDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get occurrencePeriod {
     if (_value.occurrencePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.occurrencePeriod!, (value) {
-      return _then(_value.copyWith(occurrencePeriod: value));
+      return _then(_value.copyWith(occurrencePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get occurrenceTiming {
     if (_value.occurrenceTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.occurrenceTiming!, (value) {
-      return _then(_value.copyWith(occurrenceTiming: value));
+      return _then(_value.copyWith(occurrenceTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get supplier {
     if (_value.supplier == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.supplier!, (value) {
-      return _then(_value.copyWith(supplier: value));
+      return _then(_value.copyWith(supplier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get destination {
     if (_value.destination == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.destination!, (value) {
-      return _then(_value.copyWith(destination: value));
+      return _then(_value.copyWith(destination: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SupplyDeliveryCopyWith<$Res>
+abstract class _$$_SupplyDeliveryCopyWith<$Res>
     implements $SupplyDeliveryCopyWith<$Res> {
-  factory _$SupplyDeliveryCopyWith(
-          _SupplyDelivery value, $Res Function(_SupplyDelivery) then) =
-      __$SupplyDeliveryCopyWithImpl<$Res>;
+  factory _$$_SupplyDeliveryCopyWith(
+          _$_SupplyDelivery value, $Res Function(_$_SupplyDelivery) then) =
+      __$$_SupplyDeliveryCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
           Stu3ResourceType resourceType,
@@ -6479,19 +5980,17 @@ abstract class _$SupplyDeliveryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SupplyDeliveryCopyWithImpl<$Res>
-    extends _$SupplyDeliveryCopyWithImpl<$Res>
-    implements _$SupplyDeliveryCopyWith<$Res> {
-  __$SupplyDeliveryCopyWithImpl(
-      _SupplyDelivery _value, $Res Function(_SupplyDelivery) _then)
-      : super(_value, (v) => _then(v as _SupplyDelivery));
+class __$$_SupplyDeliveryCopyWithImpl<$Res>
+    extends _$SupplyDeliveryCopyWithImpl<$Res, _$_SupplyDelivery>
+    implements _$$_SupplyDeliveryCopyWith<$Res> {
+  __$$_SupplyDeliveryCopyWithImpl(
+      _$_SupplyDelivery _value, $Res Function(_$_SupplyDelivery) _then)
+      : super(_value, _then);
 
-  @override
-  _SupplyDelivery get _value => super._value as _SupplyDelivery;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6518,108 +6017,108 @@ class __$SupplyDeliveryCopyWithImpl<$Res>
     Object? destination = freezed,
     Object? receiver = freezed,
   }) {
-    return _then(_SupplyDelivery(
-      resourceType: resourceType == freezed
+    return _then(_$_SupplyDelivery(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      basedOn: basedOn == freezed
+      basedOn: freezed == basedOn
           ? _value.basedOn
           : basedOn // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      partOf: partOf == freezed
+      partOf: freezed == partOf
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as SupplyDeliveryStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      patient: patient == freezed
+      patient: freezed == patient
           ? _value.patient
           : patient // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      suppliedItem: suppliedItem == freezed
+      suppliedItem: freezed == suppliedItem
           ? _value.suppliedItem
           : suppliedItem // ignore: cast_nullable_to_non_nullable
               as SupplyDeliverySuppliedItem?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      occurrenceTiming: occurrenceTiming == freezed
+      occurrenceTiming: freezed == occurrenceTiming
           ? _value.occurrenceTiming
           : occurrenceTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      supplier: supplier == freezed
+      supplier: freezed == supplier
           ? _value.supplier
           : supplier // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      destination: destination == freezed
+      destination: freezed == destination
           ? _value.destination
           : destination // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      receiver: receiver == freezed
+      receiver: freezed == receiver
           ? _value.receiver
           : receiver // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
@@ -6735,152 +6234,133 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SupplyDelivery &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SupplyDelivery &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.basedOn, basedOn) ||
-                const DeepCollectionEquality()
-                    .equals(other.basedOn, basedOn)) &&
-            (identical(other.partOf, partOf) ||
-                const DeepCollectionEquality().equals(other.partOf, partOf)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.identifier == identifier) &&
+            const DeepCollectionEquality().equals(other.basedOn, basedOn) &&
+            const DeepCollectionEquality().equals(other.partOf, partOf) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.statusElement == statusElement) &&
+            (identical(other.patient, patient) || other.patient == patient) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.suppliedItem, suppliedItem) ||
-                const DeepCollectionEquality()
-                    .equals(other.suppliedItem, suppliedItem)) &&
+                other.suppliedItem == suppliedItem) &&
             (identical(other.occurrenceDateTime, occurrenceDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
-            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.occurrenceDateTimeElement,
-                    occurrenceDateTimeElement)) &&
+                other.occurrenceDateTime == occurrenceDateTime) &&
+            (identical(other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement) ||
+                other.occurrenceDateTimeElement == occurrenceDateTimeElement) &&
             (identical(other.occurrencePeriod, occurrencePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrencePeriod, occurrencePeriod)) &&
+                other.occurrencePeriod == occurrencePeriod) &&
             (identical(other.occurrenceTiming, occurrenceTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrenceTiming, occurrenceTiming)) &&
+                other.occurrenceTiming == occurrenceTiming) &&
             (identical(other.supplier, supplier) ||
-                const DeepCollectionEquality().equals(other.supplier, supplier)) &&
-            (identical(other.destination, destination) || const DeepCollectionEquality().equals(other.destination, destination)) &&
-            (identical(other.receiver, receiver) || const DeepCollectionEquality().equals(other.receiver, receiver)));
+                other.supplier == supplier) &&
+            (identical(other.destination, destination) ||
+                other.destination == destination) &&
+            const DeepCollectionEquality().equals(other.receiver, receiver));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(basedOn) ^
-      const DeepCollectionEquality().hash(partOf) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(suppliedItem) ^
-      const DeepCollectionEquality().hash(occurrenceDateTime) ^
-      const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
-      const DeepCollectionEquality().hash(occurrencePeriod) ^
-      const DeepCollectionEquality().hash(occurrenceTiming) ^
-      const DeepCollectionEquality().hash(supplier) ^
-      const DeepCollectionEquality().hash(destination) ^
-      const DeepCollectionEquality().hash(receiver);
 
   @JsonKey(ignore: true)
   @override
-  _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
-      __$SupplyDeliveryCopyWithImpl<_SupplyDelivery>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        identifier,
+        const DeepCollectionEquality().hash(basedOn),
+        const DeepCollectionEquality().hash(partOf),
+        status,
+        statusElement,
+        patient,
+        type,
+        suppliedItem,
+        occurrenceDateTime,
+        occurrenceDateTimeElement,
+        occurrencePeriod,
+        occurrenceTiming,
+        supplier,
+        destination,
+        const DeepCollectionEquality().hash(receiver)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
+      __$$_SupplyDeliveryCopyWithImpl<_$_SupplyDelivery>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliveryToJson(this);
+    return _$$_SupplyDeliveryToJson(
+      this,
+    );
   }
 }
 
 abstract class _SupplyDelivery extends SupplyDelivery {
   factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      SupplyDeliveryStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final List<Reference>? basedOn,
+      final List<Reference>? partOf,
+      final SupplyDeliveryStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      Reference? patient,
-      CodeableConcept? type,
-      SupplyDeliverySuppliedItem? suppliedItem,
-      FhirDateTime? occurrenceDateTime,
+          final Element? statusElement,
+      final Reference? patient,
+      final CodeableConcept? type,
+      final SupplyDeliverySuppliedItem? suppliedItem,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      Reference? supplier,
-      Reference? destination,
-      List<Reference>? receiver}) = _$_SupplyDelivery;
+          final Element? occurrenceDateTimeElement,
+      final Period? occurrencePeriod,
+      final Timing? occurrenceTiming,
+      final Reference? supplier,
+      final Reference? destination,
+      final List<Reference>? receiver}) = _$_SupplyDelivery;
   _SupplyDelivery._() : super._();
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
@@ -6888,67 +6368,65 @@ abstract class _SupplyDelivery extends SupplyDelivery {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn;
   @override
-  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  List<Reference>? get partOf;
   @override
-  SupplyDeliveryStatus? get status => throw _privateConstructorUsedError;
+  SupplyDeliveryStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference? get patient => throw _privateConstructorUsedError;
+  Reference? get patient;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  SupplyDeliverySuppliedItem? get suppliedItem =>
-      throw _privateConstructorUsedError;
+  SupplyDeliverySuppliedItem? get suppliedItem;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  Timing? get occurrenceTiming => throw _privateConstructorUsedError;
+  Timing? get occurrenceTiming;
   @override
-  Reference? get supplier => throw _privateConstructorUsedError;
+  Reference? get supplier;
   @override
-  Reference? get destination => throw _privateConstructorUsedError;
+  Reference? get destination;
   @override
-  List<Reference>? get receiver => throw _privateConstructorUsedError;
+  List<Reference>? get receiver;
   @override
   @JsonKey(ignore: true)
-  _$SupplyDeliveryCopyWith<_SupplyDelivery> get copyWith =>
+  _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6956,29 +6434,6 @@ SupplyDeliverySuppliedItem _$SupplyDeliverySuppliedItemFromJson(
     Map<String, dynamic> json) {
   return _SupplyDeliverySuppliedItem.fromJson(json);
 }
-
-/// @nodoc
-class _$SupplyDeliverySuppliedItemTearOff {
-  const _$SupplyDeliverySuppliedItemTearOff();
-
-  _SupplyDeliverySuppliedItem call(
-      {Quantity? quantity,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference}) {
-    return _SupplyDeliverySuppliedItem(
-      quantity: quantity,
-      itemCodeableConcept: itemCodeableConcept,
-      itemReference: itemReference,
-    );
-  }
-
-  SupplyDeliverySuppliedItem fromJson(Map<String, Object> json) {
-    return SupplyDeliverySuppliedItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SupplyDeliverySuppliedItem = _$SupplyDeliverySuppliedItemTearOff();
 
 /// @nodoc
 mixin _$SupplyDeliverySuppliedItem {
@@ -6997,7 +6452,9 @@ mixin _$SupplyDeliverySuppliedItem {
 abstract class $SupplyDeliverySuppliedItemCopyWith<$Res> {
   factory $SupplyDeliverySuppliedItemCopyWith(SupplyDeliverySuppliedItem value,
           $Res Function(SupplyDeliverySuppliedItem) then) =
-      _$SupplyDeliverySuppliedItemCopyWithImpl<$Res>;
+      _$SupplyDeliverySuppliedItemCopyWithImpl<$Res,
+          SupplyDeliverySuppliedItem>;
+  @useResult
   $Res call(
       {Quantity? quantity,
       CodeableConcept? itemCodeableConcept,
@@ -7009,14 +6466,17 @@ abstract class $SupplyDeliverySuppliedItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
+class _$SupplyDeliverySuppliedItemCopyWithImpl<$Res,
+        $Val extends SupplyDeliverySuppliedItem>
     implements $SupplyDeliverySuppliedItemCopyWith<$Res> {
   _$SupplyDeliverySuppliedItemCopyWithImpl(this._value, this._then);
 
-  final SupplyDeliverySuppliedItem _value;
   // ignore: unused_field
-  final $Res Function(SupplyDeliverySuppliedItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? quantity = freezed,
@@ -7024,63 +6484,67 @@ class _$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
     Object? itemReference = freezed,
   }) {
     return _then(_value.copyWith(
-      quantity: quantity == freezed
+      quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      itemCodeableConcept: itemCodeableConcept == freezed
+      itemCodeableConcept: freezed == itemCodeableConcept
           ? _value.itemCodeableConcept
           : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      itemReference: itemReference == freezed
+      itemReference: freezed == itemReference
           ? _value.itemReference
           : itemReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get quantity {
     if (_value.quantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
-      return _then(_value.copyWith(quantity: value));
+      return _then(_value.copyWith(quantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept {
     if (_value.itemCodeableConcept == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept!, (value) {
-      return _then(_value.copyWith(itemCodeableConcept: value));
+      return _then(_value.copyWith(itemCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get itemReference {
     if (_value.itemReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.itemReference!, (value) {
-      return _then(_value.copyWith(itemReference: value));
+      return _then(_value.copyWith(itemReference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SupplyDeliverySuppliedItemCopyWith<$Res>
+abstract class _$$_SupplyDeliverySuppliedItemCopyWith<$Res>
     implements $SupplyDeliverySuppliedItemCopyWith<$Res> {
-  factory _$SupplyDeliverySuppliedItemCopyWith(
-          _SupplyDeliverySuppliedItem value,
-          $Res Function(_SupplyDeliverySuppliedItem) then) =
-      __$SupplyDeliverySuppliedItemCopyWithImpl<$Res>;
+  factory _$$_SupplyDeliverySuppliedItemCopyWith(
+          _$_SupplyDeliverySuppliedItem value,
+          $Res Function(_$_SupplyDeliverySuppliedItem) then) =
+      __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Quantity? quantity,
       CodeableConcept? itemCodeableConcept,
@@ -7095,33 +6559,32 @@ abstract class _$SupplyDeliverySuppliedItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
-    extends _$SupplyDeliverySuppliedItemCopyWithImpl<$Res>
-    implements _$SupplyDeliverySuppliedItemCopyWith<$Res> {
-  __$SupplyDeliverySuppliedItemCopyWithImpl(_SupplyDeliverySuppliedItem _value,
-      $Res Function(_SupplyDeliverySuppliedItem) _then)
-      : super(_value, (v) => _then(v as _SupplyDeliverySuppliedItem));
+class __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>
+    extends _$SupplyDeliverySuppliedItemCopyWithImpl<$Res,
+        _$_SupplyDeliverySuppliedItem>
+    implements _$$_SupplyDeliverySuppliedItemCopyWith<$Res> {
+  __$$_SupplyDeliverySuppliedItemCopyWithImpl(
+      _$_SupplyDeliverySuppliedItem _value,
+      $Res Function(_$_SupplyDeliverySuppliedItem) _then)
+      : super(_value, _then);
 
-  @override
-  _SupplyDeliverySuppliedItem get _value =>
-      super._value as _SupplyDeliverySuppliedItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? quantity = freezed,
     Object? itemCodeableConcept = freezed,
     Object? itemReference = freezed,
   }) {
-    return _then(_SupplyDeliverySuppliedItem(
-      quantity: quantity == freezed
+    return _then(_$_SupplyDeliverySuppliedItem(
+      quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      itemCodeableConcept: itemCodeableConcept == freezed
+      itemCodeableConcept: freezed == itemCodeableConcept
           ? _value.itemCodeableConcept
           : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      itemReference: itemReference == freezed
+      itemReference: freezed == itemReference
           ? _value.itemReference
           : itemReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -7154,148 +6617,61 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SupplyDeliverySuppliedItem &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SupplyDeliverySuppliedItem &&
             (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
+                other.quantity == quantity) &&
             (identical(other.itemCodeableConcept, itemCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
+                other.itemCodeableConcept == itemCodeableConcept) &&
             (identical(other.itemReference, itemReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemReference, itemReference)));
+                other.itemReference == itemReference));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(itemCodeableConcept) ^
-      const DeepCollectionEquality().hash(itemReference);
 
   @JsonKey(ignore: true)
   @override
-  _$SupplyDeliverySuppliedItemCopyWith<_SupplyDeliverySuppliedItem>
-      get copyWith => __$SupplyDeliverySuppliedItemCopyWithImpl<
-          _SupplyDeliverySuppliedItem>(this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, quantity, itemCodeableConcept, itemReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SupplyDeliverySuppliedItemCopyWith<_$_SupplyDeliverySuppliedItem>
+      get copyWith => __$$_SupplyDeliverySuppliedItemCopyWithImpl<
+          _$_SupplyDeliverySuppliedItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliverySuppliedItemToJson(this);
+    return _$$_SupplyDeliverySuppliedItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
   factory _SupplyDeliverySuppliedItem(
-      {Quantity? quantity,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference}) = _$_SupplyDeliverySuppliedItem;
+      {final Quantity? quantity,
+      final CodeableConcept? itemCodeableConcept,
+      final Reference? itemReference}) = _$_SupplyDeliverySuppliedItem;
   _SupplyDeliverySuppliedItem._() : super._();
 
   factory _SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =
       _$_SupplyDeliverySuppliedItem.fromJson;
 
   @override
-  Quantity? get quantity => throw _privateConstructorUsedError;
+  Quantity? get quantity;
   @override
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get itemCodeableConcept;
   @override
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  Reference? get itemReference;
   @override
   @JsonKey(ignore: true)
-  _$SupplyDeliverySuppliedItemCopyWith<_SupplyDeliverySuppliedItem>
+  _$$_SupplyDeliverySuppliedItemCopyWith<_$_SupplyDeliverySuppliedItem>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
   return _SupplyRequest.fromJson(json);
 }
-
-/// @nodoc
-class _$SupplyRequestTearOff {
-  const _$SupplyRequestTearOff();
-
-  _SupplyRequest call(
-      {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-          Stu3ResourceType resourceType = Stu3ResourceType.SupplyRequest,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? category,
-      String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
-      SupplyRequestOrderedItem? orderedItem,
-      FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      SupplyRequestRequester? requester,
-      List<Reference>? supplier,
-      CodeableConcept? reasonCodeableConcept,
-      Reference? reasonReference,
-      Reference? deliverFrom,
-      Reference? deliverTo}) {
-    return _SupplyRequest(
-      resourceType: resourceType,
-      id: id,
-      meta: meta,
-      implicitRules: implicitRules,
-      implicitRulesElement: implicitRulesElement,
-      language: language,
-      languageElement: languageElement,
-      text: text,
-      contained: contained,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      identifier: identifier,
-      status: status,
-      statusElement: statusElement,
-      category: category,
-      priority: priority,
-      priorityElement: priorityElement,
-      orderedItem: orderedItem,
-      occurrenceDateTime: occurrenceDateTime,
-      occurrenceDateTimeElement: occurrenceDateTimeElement,
-      occurrencePeriod: occurrencePeriod,
-      occurrenceTiming: occurrenceTiming,
-      authoredOn: authoredOn,
-      authoredOnElement: authoredOnElement,
-      requester: requester,
-      supplier: supplier,
-      reasonCodeableConcept: reasonCodeableConcept,
-      reasonReference: reasonReference,
-      deliverFrom: deliverFrom,
-      deliverTo: deliverTo,
-    );
-  }
-
-  SupplyRequest fromJson(Map<String, Object> json) {
-    return SupplyRequest.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SupplyRequest = _$SupplyRequestTearOff();
 
 /// @nodoc
 mixin _$SupplyRequest {
@@ -7351,7 +6727,8 @@ mixin _$SupplyRequest {
 abstract class $SupplyRequestCopyWith<$Res> {
   factory $SupplyRequestCopyWith(
           SupplyRequest value, $Res Function(SupplyRequest) then) =
-      _$SupplyRequestCopyWithImpl<$Res>;
+      _$SupplyRequestCopyWithImpl<$Res, SupplyRequest>;
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
           Stu3ResourceType resourceType,
@@ -7413,17 +6790,19 @@ abstract class $SupplyRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SupplyRequestCopyWithImpl<$Res>
+class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
     implements $SupplyRequestCopyWith<$Res> {
   _$SupplyRequestCopyWithImpl(this._value, this._then);
 
-  final SupplyRequest _value;
   // ignore: unused_field
-  final $Res Function(SupplyRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7455,218 +6834,227 @@ class _$SupplyRequestCopyWithImpl<$Res>
     Object? deliverTo = freezed,
   }) {
     return _then(_value.copyWith(
-      resourceType: resourceType == freezed
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as SupplyRequestStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      priority: priority == freezed
+      priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as String?,
-      priorityElement: priorityElement == freezed
+      priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      orderedItem: orderedItem == freezed
+      orderedItem: freezed == orderedItem
           ? _value.orderedItem
           : orderedItem // ignore: cast_nullable_to_non_nullable
               as SupplyRequestOrderedItem?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      occurrenceTiming: occurrenceTiming == freezed
+      occurrenceTiming: freezed == occurrenceTiming
           ? _value.occurrenceTiming
           : occurrenceTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      authoredOn: authoredOn == freezed
+      authoredOn: freezed == authoredOn
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      authoredOnElement: authoredOnElement == freezed
+      authoredOnElement: freezed == authoredOnElement
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requester: requester == freezed
+      requester: freezed == requester
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as SupplyRequestRequester?,
-      supplier: supplier == freezed
+      supplier: freezed == supplier
           ? _value.supplier
           : supplier // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      reasonCodeableConcept: reasonCodeableConcept == freezed
+      reasonCodeableConcept: freezed == reasonCodeableConcept
           ? _value.reasonCodeableConcept
           : reasonCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      deliverFrom: deliverFrom == freezed
+      deliverFrom: freezed == deliverFrom
           ? _value.deliverFrom
           : deliverFrom // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      deliverTo: deliverTo == freezed
+      deliverTo: freezed == deliverTo
           ? _value.deliverTo
           : deliverTo // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $MetaCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
-      return _then(_value.copyWith(implicitRulesElement: value));
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
-      return _then(_value.copyWith(languageElement: value));
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
 
     return $NarrativeCopyWith<$Res>(_value.text!, (value) {
-      return _then(_value.copyWith(text: value));
+      return _then(_value.copyWith(text: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
 
     return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
-      return _then(_value.copyWith(identifier: value));
+      return _then(_value.copyWith(identifier: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value));
+      return _then(_value.copyWith(statusElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get category {
     if (_value.category == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
-      return _then(_value.copyWith(category: value));
+      return _then(_value.copyWith(category: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get priorityElement {
     if (_value.priorityElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
-      return _then(_value.copyWith(priorityElement: value));
+      return _then(_value.copyWith(priorityElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SupplyRequestOrderedItemCopyWith<$Res>? get orderedItem {
     if (_value.orderedItem == null) {
       return null;
@@ -7674,66 +7062,72 @@ class _$SupplyRequestCopyWithImpl<$Res>
 
     return $SupplyRequestOrderedItemCopyWith<$Res>(_value.orderedItem!,
         (value) {
-      return _then(_value.copyWith(orderedItem: value));
+      return _then(_value.copyWith(orderedItem: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement {
     if (_value.occurrenceDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.occurrenceDateTimeElement!, (value) {
-      return _then(_value.copyWith(occurrenceDateTimeElement: value));
+      return _then(_value.copyWith(occurrenceDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get occurrencePeriod {
     if (_value.occurrencePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.occurrencePeriod!, (value) {
-      return _then(_value.copyWith(occurrencePeriod: value));
+      return _then(_value.copyWith(occurrencePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get occurrenceTiming {
     if (_value.occurrenceTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.occurrenceTiming!, (value) {
-      return _then(_value.copyWith(occurrenceTiming: value));
+      return _then(_value.copyWith(occurrenceTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get authoredOnElement {
     if (_value.authoredOnElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.authoredOnElement!, (value) {
-      return _then(_value.copyWith(authoredOnElement: value));
+      return _then(_value.copyWith(authoredOnElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SupplyRequestRequesterCopyWith<$Res>? get requester {
     if (_value.requester == null) {
       return null;
     }
 
     return $SupplyRequestRequesterCopyWith<$Res>(_value.requester!, (value) {
-      return _then(_value.copyWith(requester: value));
+      return _then(_value.copyWith(requester: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get reasonCodeableConcept {
     if (_value.reasonCodeableConcept == null) {
       return null;
@@ -7741,51 +7135,55 @@ class _$SupplyRequestCopyWithImpl<$Res>
 
     return $CodeableConceptCopyWith<$Res>(_value.reasonCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(reasonCodeableConcept: value));
+      return _then(_value.copyWith(reasonCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get reasonReference {
     if (_value.reasonReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.reasonReference!, (value) {
-      return _then(_value.copyWith(reasonReference: value));
+      return _then(_value.copyWith(reasonReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get deliverFrom {
     if (_value.deliverFrom == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.deliverFrom!, (value) {
-      return _then(_value.copyWith(deliverFrom: value));
+      return _then(_value.copyWith(deliverFrom: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get deliverTo {
     if (_value.deliverTo == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.deliverTo!, (value) {
-      return _then(_value.copyWith(deliverTo: value));
+      return _then(_value.copyWith(deliverTo: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SupplyRequestCopyWith<$Res>
+abstract class _$$_SupplyRequestCopyWith<$Res>
     implements $SupplyRequestCopyWith<$Res> {
-  factory _$SupplyRequestCopyWith(
-          _SupplyRequest value, $Res Function(_SupplyRequest) then) =
-      __$SupplyRequestCopyWithImpl<$Res>;
+  factory _$$_SupplyRequestCopyWith(
+          _$_SupplyRequest value, $Res Function(_$_SupplyRequest) then) =
+      __$$_SupplyRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
           Stu3ResourceType resourceType,
@@ -7865,19 +7263,17 @@ abstract class _$SupplyRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SupplyRequestCopyWithImpl<$Res>
-    extends _$SupplyRequestCopyWithImpl<$Res>
-    implements _$SupplyRequestCopyWith<$Res> {
-  __$SupplyRequestCopyWithImpl(
-      _SupplyRequest _value, $Res Function(_SupplyRequest) _then)
-      : super(_value, (v) => _then(v as _SupplyRequest));
+class __$$_SupplyRequestCopyWithImpl<$Res>
+    extends _$SupplyRequestCopyWithImpl<$Res, _$_SupplyRequest>
+    implements _$$_SupplyRequestCopyWith<$Res> {
+  __$$_SupplyRequestCopyWithImpl(
+      _$_SupplyRequest _value, $Res Function(_$_SupplyRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _SupplyRequest get _value => super._value as _SupplyRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? resourceType = freezed,
+    Object? resourceType = null,
     Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7908,124 +7304,124 @@ class __$SupplyRequestCopyWithImpl<$Res>
     Object? deliverFrom = freezed,
     Object? deliverTo = freezed,
   }) {
-    return _then(_SupplyRequest(
-      resourceType: resourceType == freezed
+    return _then(_$_SupplyRequest(
+      resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Meta?,
-      implicitRules: implicitRules == freezed
+      implicitRules: freezed == implicitRules
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
-      implicitRulesElement: implicitRulesElement == freezed
+      implicitRulesElement: freezed == implicitRulesElement
           ? _value.implicitRulesElement
           : implicitRulesElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      language: language == freezed
+      language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as Code?,
-      languageElement: languageElement == freezed
+      languageElement: freezed == languageElement
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      text: text == freezed
+      text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as Narrative?,
-      contained: contained == freezed
+      contained: freezed == contained
           ? _value.contained
           : contained // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      extension_: extension_ == freezed
+      extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
+      modifierExtension: freezed == modifierExtension
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      identifier: identifier == freezed
+      identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as Identifier?,
-      status: status == freezed
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as SupplyRequestStatus?,
-      statusElement: statusElement == freezed
+      statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      category: category == freezed
+      category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      priority: priority == freezed
+      priority: freezed == priority
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as String?,
-      priorityElement: priorityElement == freezed
+      priorityElement: freezed == priorityElement
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      orderedItem: orderedItem == freezed
+      orderedItem: freezed == orderedItem
           ? _value.orderedItem
           : orderedItem // ignore: cast_nullable_to_non_nullable
               as SupplyRequestOrderedItem?,
-      occurrenceDateTime: occurrenceDateTime == freezed
+      occurrenceDateTime: freezed == occurrenceDateTime
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      occurrenceDateTimeElement: occurrenceDateTimeElement == freezed
+      occurrenceDateTimeElement: freezed == occurrenceDateTimeElement
           ? _value.occurrenceDateTimeElement
           : occurrenceDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      occurrencePeriod: occurrencePeriod == freezed
+      occurrencePeriod: freezed == occurrencePeriod
           ? _value.occurrencePeriod
           : occurrencePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      occurrenceTiming: occurrenceTiming == freezed
+      occurrenceTiming: freezed == occurrenceTiming
           ? _value.occurrenceTiming
           : occurrenceTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      authoredOn: authoredOn == freezed
+      authoredOn: freezed == authoredOn
           ? _value.authoredOn
           : authoredOn // ignore: cast_nullable_to_non_nullable
               as String?,
-      authoredOnElement: authoredOnElement == freezed
+      authoredOnElement: freezed == authoredOnElement
           ? _value.authoredOnElement
           : authoredOnElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      requester: requester == freezed
+      requester: freezed == requester
           ? _value.requester
           : requester // ignore: cast_nullable_to_non_nullable
               as SupplyRequestRequester?,
-      supplier: supplier == freezed
+      supplier: freezed == supplier
           ? _value.supplier
           : supplier // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      reasonCodeableConcept: reasonCodeableConcept == freezed
+      reasonCodeableConcept: freezed == reasonCodeableConcept
           ? _value.reasonCodeableConcept
           : reasonCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      reasonReference: reasonReference == freezed
+      reasonReference: freezed == reasonReference
           ? _value.reasonReference
           : reasonReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      deliverFrom: deliverFrom == freezed
+      deliverFrom: freezed == deliverFrom
           ? _value.deliverFrom
           : deliverFrom // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      deliverTo: deliverTo == freezed
+      deliverTo: freezed == deliverTo
           ? _value.deliverTo
           : deliverTo // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -8157,166 +7553,155 @@ class _$_SupplyRequest extends _SupplyRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SupplyRequest &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SupplyRequest &&
             (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
+                other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
+                other.implicitRules == implicitRules) &&
             (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
+                other.language == language) &&
             (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
+                other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
+                other.identifier == identifier) &&
+            (identical(other.status, status) || other.status == status) &&
             (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
+                other.statusElement == statusElement) &&
             (identical(other.category, category) ||
-                const DeepCollectionEquality()
-                    .equals(other.category, category)) &&
+                other.category == category) &&
             (identical(other.priority, priority) ||
-                const DeepCollectionEquality()
-                    .equals(other.priority, priority)) &&
+                other.priority == priority) &&
             (identical(other.priorityElement, priorityElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.priorityElement, priorityElement)) &&
+                other.priorityElement == priorityElement) &&
             (identical(other.orderedItem, orderedItem) ||
-                const DeepCollectionEquality()
-                    .equals(other.orderedItem, orderedItem)) &&
+                other.orderedItem == orderedItem) &&
             (identical(other.occurrenceDateTime, occurrenceDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
-            (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.occurrenceDateTimeElement,
-                    occurrenceDateTimeElement)) &&
+                other.occurrenceDateTime == occurrenceDateTime) &&
+            (identical(other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement) ||
+                other.occurrenceDateTimeElement == occurrenceDateTimeElement) &&
             (identical(other.occurrencePeriod, occurrencePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrencePeriod, occurrencePeriod)) &&
+                other.occurrencePeriod == occurrencePeriod) &&
             (identical(other.occurrenceTiming, occurrenceTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.occurrenceTiming, occurrenceTiming)) &&
+                other.occurrenceTiming == occurrenceTiming) &&
             (identical(other.authoredOn, authoredOn) ||
-                const DeepCollectionEquality().equals(other.authoredOn, authoredOn)) &&
-            (identical(other.authoredOnElement, authoredOnElement) || const DeepCollectionEquality().equals(other.authoredOnElement, authoredOnElement)) &&
-            (identical(other.requester, requester) || const DeepCollectionEquality().equals(other.requester, requester)) &&
-            (identical(other.supplier, supplier) || const DeepCollectionEquality().equals(other.supplier, supplier)) &&
-            (identical(other.reasonCodeableConcept, reasonCodeableConcept) || const DeepCollectionEquality().equals(other.reasonCodeableConcept, reasonCodeableConcept)) &&
-            (identical(other.reasonReference, reasonReference) || const DeepCollectionEquality().equals(other.reasonReference, reasonReference)) &&
-            (identical(other.deliverFrom, deliverFrom) || const DeepCollectionEquality().equals(other.deliverFrom, deliverFrom)) &&
-            (identical(other.deliverTo, deliverTo) || const DeepCollectionEquality().equals(other.deliverTo, deliverTo)));
+                other.authoredOn == authoredOn) &&
+            (identical(other.authoredOnElement, authoredOnElement) ||
+                other.authoredOnElement == authoredOnElement) &&
+            (identical(other.requester, requester) ||
+                other.requester == requester) &&
+            const DeepCollectionEquality().equals(other.supplier, supplier) &&
+            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
+                other.reasonCodeableConcept == reasonCodeableConcept) &&
+            (identical(other.reasonReference, reasonReference) ||
+                other.reasonReference == reasonReference) &&
+            (identical(other.deliverFrom, deliverFrom) ||
+                other.deliverFrom == deliverFrom) &&
+            (identical(other.deliverTo, deliverTo) ||
+                other.deliverTo == deliverTo));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(category) ^
-      const DeepCollectionEquality().hash(priority) ^
-      const DeepCollectionEquality().hash(priorityElement) ^
-      const DeepCollectionEquality().hash(orderedItem) ^
-      const DeepCollectionEquality().hash(occurrenceDateTime) ^
-      const DeepCollectionEquality().hash(occurrenceDateTimeElement) ^
-      const DeepCollectionEquality().hash(occurrencePeriod) ^
-      const DeepCollectionEquality().hash(occurrenceTiming) ^
-      const DeepCollectionEquality().hash(authoredOn) ^
-      const DeepCollectionEquality().hash(authoredOnElement) ^
-      const DeepCollectionEquality().hash(requester) ^
-      const DeepCollectionEquality().hash(supplier) ^
-      const DeepCollectionEquality().hash(reasonCodeableConcept) ^
-      const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(deliverFrom) ^
-      const DeepCollectionEquality().hash(deliverTo);
 
   @JsonKey(ignore: true)
   @override
-  _$SupplyRequestCopyWith<_SupplyRequest> get copyWith =>
-      __$SupplyRequestCopyWithImpl<_SupplyRequest>(this, _$identity);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        id,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        text,
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        identifier,
+        status,
+        statusElement,
+        category,
+        priority,
+        priorityElement,
+        orderedItem,
+        occurrenceDateTime,
+        occurrenceDateTimeElement,
+        occurrencePeriod,
+        occurrenceTiming,
+        authoredOn,
+        authoredOnElement,
+        requester,
+        const DeepCollectionEquality().hash(supplier),
+        reasonCodeableConcept,
+        reasonReference,
+        deliverFrom,
+        deliverTo
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
+      __$$_SupplyRequestCopyWithImpl<_$_SupplyRequest>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestToJson(this);
+    return _$$_SupplyRequestToJson(
+      this,
+    );
   }
 }
 
 abstract class _SupplyRequest extends SupplyRequest {
   factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-          Stu3ResourceType resourceType,
-      Id? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+          final Stu3ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
-      Code? language,
+          final Element? implicitRulesElement,
+      final Code? language,
       @JsonKey(name: '_language')
-          Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+          final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      SupplyRequestStatus? status,
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Identifier? identifier,
+      final SupplyRequestStatus? status,
       @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept? category,
-      String? priority,
+          final Element? statusElement,
+      final CodeableConcept? category,
+      final String? priority,
       @JsonKey(name: '_priority')
-          Element? priorityElement,
-      SupplyRequestOrderedItem? orderedItem,
-      FhirDateTime? occurrenceDateTime,
+          final Element? priorityElement,
+      final SupplyRequestOrderedItem? orderedItem,
+      final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
-      Period? occurrencePeriod,
-      Timing? occurrenceTiming,
-      String? authoredOn,
+          final Element? occurrenceDateTimeElement,
+      final Period? occurrencePeriod,
+      final Timing? occurrenceTiming,
+      final String? authoredOn,
       @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
-      SupplyRequestRequester? requester,
-      List<Reference>? supplier,
-      CodeableConcept? reasonCodeableConcept,
-      Reference? reasonReference,
-      Reference? deliverFrom,
-      Reference? deliverTo}) = _$_SupplyRequest;
+          final Element? authoredOnElement,
+      final SupplyRequestRequester? requester,
+      final List<Reference>? supplier,
+      final CodeableConcept? reasonCodeableConcept,
+      final Reference? reasonReference,
+      final Reference? deliverFrom,
+      final Reference? deliverTo}) = _$_SupplyRequest;
   _SupplyRequest._() : super._();
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
@@ -8324,78 +7709,75 @@ abstract class _SupplyRequest extends SupplyRequest {
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-  Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  Stu3ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
-  SupplyRequestStatus? get status => throw _privateConstructorUsedError;
+  SupplyRequestStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  CodeableConcept? get category => throw _privateConstructorUsedError;
+  CodeableConcept? get category;
   @override
-  String? get priority => throw _privateConstructorUsedError;
+  String? get priority;
   @override
   @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  Element? get priorityElement;
   @override
-  SupplyRequestOrderedItem? get orderedItem =>
-      throw _privateConstructorUsedError;
+  SupplyRequestOrderedItem? get orderedItem;
   @override
-  FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get occurrenceDateTime;
   @override
   @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
+  Element? get occurrenceDateTimeElement;
   @override
-  Period? get occurrencePeriod => throw _privateConstructorUsedError;
+  Period? get occurrencePeriod;
   @override
-  Timing? get occurrenceTiming => throw _privateConstructorUsedError;
+  Timing? get occurrenceTiming;
   @override
-  String? get authoredOn => throw _privateConstructorUsedError;
+  String? get authoredOn;
   @override
   @JsonKey(name: '_authoredOn')
-  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  Element? get authoredOnElement;
   @override
-  SupplyRequestRequester? get requester => throw _privateConstructorUsedError;
+  SupplyRequestRequester? get requester;
   @override
-  List<Reference>? get supplier => throw _privateConstructorUsedError;
+  List<Reference>? get supplier;
   @override
-  CodeableConcept? get reasonCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get reasonCodeableConcept;
   @override
-  Reference? get reasonReference => throw _privateConstructorUsedError;
+  Reference? get reasonReference;
   @override
-  Reference? get deliverFrom => throw _privateConstructorUsedError;
+  Reference? get deliverFrom;
   @override
-  Reference? get deliverTo => throw _privateConstructorUsedError;
+  Reference? get deliverTo;
   @override
   @JsonKey(ignore: true)
-  _$SupplyRequestCopyWith<_SupplyRequest> get copyWith =>
+  _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8403,29 +7785,6 @@ SupplyRequestOrderedItem _$SupplyRequestOrderedItemFromJson(
     Map<String, dynamic> json) {
   return _SupplyRequestOrderedItem.fromJson(json);
 }
-
-/// @nodoc
-class _$SupplyRequestOrderedItemTearOff {
-  const _$SupplyRequestOrderedItemTearOff();
-
-  _SupplyRequestOrderedItem call(
-      {required Quantity quantity,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference}) {
-    return _SupplyRequestOrderedItem(
-      quantity: quantity,
-      itemCodeableConcept: itemCodeableConcept,
-      itemReference: itemReference,
-    );
-  }
-
-  SupplyRequestOrderedItem fromJson(Map<String, Object> json) {
-    return SupplyRequestOrderedItem.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SupplyRequestOrderedItem = _$SupplyRequestOrderedItemTearOff();
 
 /// @nodoc
 mixin _$SupplyRequestOrderedItem {
@@ -8444,7 +7803,8 @@ mixin _$SupplyRequestOrderedItem {
 abstract class $SupplyRequestOrderedItemCopyWith<$Res> {
   factory $SupplyRequestOrderedItemCopyWith(SupplyRequestOrderedItem value,
           $Res Function(SupplyRequestOrderedItem) then) =
-      _$SupplyRequestOrderedItemCopyWithImpl<$Res>;
+      _$SupplyRequestOrderedItemCopyWithImpl<$Res, SupplyRequestOrderedItem>;
+  @useResult
   $Res call(
       {Quantity quantity,
       CodeableConcept? itemCodeableConcept,
@@ -8456,73 +7816,81 @@ abstract class $SupplyRequestOrderedItemCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SupplyRequestOrderedItemCopyWithImpl<$Res>
+class _$SupplyRequestOrderedItemCopyWithImpl<$Res,
+        $Val extends SupplyRequestOrderedItem>
     implements $SupplyRequestOrderedItemCopyWith<$Res> {
   _$SupplyRequestOrderedItemCopyWithImpl(this._value, this._then);
 
-  final SupplyRequestOrderedItem _value;
   // ignore: unused_field
-  final $Res Function(SupplyRequestOrderedItem) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? quantity = freezed,
+    Object? quantity = null,
     Object? itemCodeableConcept = freezed,
     Object? itemReference = freezed,
   }) {
     return _then(_value.copyWith(
-      quantity: quantity == freezed
+      quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as Quantity,
-      itemCodeableConcept: itemCodeableConcept == freezed
+      itemCodeableConcept: freezed == itemCodeableConcept
           ? _value.itemCodeableConcept
           : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      itemReference: itemReference == freezed
+      itemReference: freezed == itemReference
           ? _value.itemReference
           : itemReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res> get quantity {
     return $QuantityCopyWith<$Res>(_value.quantity, (value) {
-      return _then(_value.copyWith(quantity: value));
+      return _then(_value.copyWith(quantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get itemCodeableConcept {
     if (_value.itemCodeableConcept == null) {
       return null;
     }
 
     return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept!, (value) {
-      return _then(_value.copyWith(itemCodeableConcept: value));
+      return _then(_value.copyWith(itemCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get itemReference {
     if (_value.itemReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.itemReference!, (value) {
-      return _then(_value.copyWith(itemReference: value));
+      return _then(_value.copyWith(itemReference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SupplyRequestOrderedItemCopyWith<$Res>
+abstract class _$$_SupplyRequestOrderedItemCopyWith<$Res>
     implements $SupplyRequestOrderedItemCopyWith<$Res> {
-  factory _$SupplyRequestOrderedItemCopyWith(_SupplyRequestOrderedItem value,
-          $Res Function(_SupplyRequestOrderedItem) then) =
-      __$SupplyRequestOrderedItemCopyWithImpl<$Res>;
+  factory _$$_SupplyRequestOrderedItemCopyWith(
+          _$_SupplyRequestOrderedItem value,
+          $Res Function(_$_SupplyRequestOrderedItem) then) =
+      __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Quantity quantity,
       CodeableConcept? itemCodeableConcept,
@@ -8537,33 +7905,31 @@ abstract class _$SupplyRequestOrderedItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SupplyRequestOrderedItemCopyWithImpl<$Res>
-    extends _$SupplyRequestOrderedItemCopyWithImpl<$Res>
-    implements _$SupplyRequestOrderedItemCopyWith<$Res> {
-  __$SupplyRequestOrderedItemCopyWithImpl(_SupplyRequestOrderedItem _value,
-      $Res Function(_SupplyRequestOrderedItem) _then)
-      : super(_value, (v) => _then(v as _SupplyRequestOrderedItem));
+class __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>
+    extends _$SupplyRequestOrderedItemCopyWithImpl<$Res,
+        _$_SupplyRequestOrderedItem>
+    implements _$$_SupplyRequestOrderedItemCopyWith<$Res> {
+  __$$_SupplyRequestOrderedItemCopyWithImpl(_$_SupplyRequestOrderedItem _value,
+      $Res Function(_$_SupplyRequestOrderedItem) _then)
+      : super(_value, _then);
 
-  @override
-  _SupplyRequestOrderedItem get _value =>
-      super._value as _SupplyRequestOrderedItem;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? quantity = freezed,
+    Object? quantity = null,
     Object? itemCodeableConcept = freezed,
     Object? itemReference = freezed,
   }) {
-    return _then(_SupplyRequestOrderedItem(
-      quantity: quantity == freezed
+    return _then(_$_SupplyRequestOrderedItem(
+      quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
               as Quantity,
-      itemCodeableConcept: itemCodeableConcept == freezed
+      itemCodeableConcept: freezed == itemCodeableConcept
           ? _value.itemCodeableConcept
           : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      itemReference: itemReference == freezed
+      itemReference: freezed == itemReference
           ? _value.itemReference
           : itemReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -8596,84 +7962,62 @@ class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SupplyRequestOrderedItem &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SupplyRequestOrderedItem &&
             (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
+                other.quantity == quantity) &&
             (identical(other.itemCodeableConcept, itemCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
+                other.itemCodeableConcept == itemCodeableConcept) &&
             (identical(other.itemReference, itemReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemReference, itemReference)));
+                other.itemReference == itemReference));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(itemCodeableConcept) ^
-      const DeepCollectionEquality().hash(itemReference);
 
   @JsonKey(ignore: true)
   @override
-  _$SupplyRequestOrderedItemCopyWith<_SupplyRequestOrderedItem> get copyWith =>
-      __$SupplyRequestOrderedItemCopyWithImpl<_SupplyRequestOrderedItem>(
-          this, _$identity);
+  int get hashCode =>
+      Object.hash(runtimeType, quantity, itemCodeableConcept, itemReference);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SupplyRequestOrderedItemCopyWith<_$_SupplyRequestOrderedItem>
+      get copyWith => __$$_SupplyRequestOrderedItemCopyWithImpl<
+          _$_SupplyRequestOrderedItem>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestOrderedItemToJson(this);
+    return _$$_SupplyRequestOrderedItemToJson(
+      this,
+    );
   }
 }
 
 abstract class _SupplyRequestOrderedItem extends SupplyRequestOrderedItem {
   factory _SupplyRequestOrderedItem(
-      {required Quantity quantity,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference}) = _$_SupplyRequestOrderedItem;
+      {required final Quantity quantity,
+      final CodeableConcept? itemCodeableConcept,
+      final Reference? itemReference}) = _$_SupplyRequestOrderedItem;
   _SupplyRequestOrderedItem._() : super._();
 
   factory _SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequestOrderedItem.fromJson;
 
   @override
-  Quantity get quantity => throw _privateConstructorUsedError;
+  Quantity get quantity;
   @override
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get itemCodeableConcept;
   @override
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  Reference? get itemReference;
   @override
   @JsonKey(ignore: true)
-  _$SupplyRequestOrderedItemCopyWith<_SupplyRequestOrderedItem> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_SupplyRequestOrderedItemCopyWith<_$_SupplyRequestOrderedItem>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SupplyRequestRequester _$SupplyRequestRequesterFromJson(
     Map<String, dynamic> json) {
   return _SupplyRequestRequester.fromJson(json);
 }
-
-/// @nodoc
-class _$SupplyRequestRequesterTearOff {
-  const _$SupplyRequestRequesterTearOff();
-
-  _SupplyRequestRequester call(
-      {required Reference agent, Reference? onBehalfOf}) {
-    return _SupplyRequestRequester(
-      agent: agent,
-      onBehalfOf: onBehalfOf,
-    );
-  }
-
-  SupplyRequestRequester fromJson(Map<String, Object> json) {
-    return SupplyRequestRequester.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $SupplyRequestRequester = _$SupplyRequestRequesterTearOff();
 
 /// @nodoc
 mixin _$SupplyRequestRequester {
@@ -8690,7 +8034,8 @@ mixin _$SupplyRequestRequester {
 abstract class $SupplyRequestRequesterCopyWith<$Res> {
   factory $SupplyRequestRequesterCopyWith(SupplyRequestRequester value,
           $Res Function(SupplyRequestRequester) then) =
-      _$SupplyRequestRequesterCopyWithImpl<$Res>;
+      _$SupplyRequestRequesterCopyWithImpl<$Res, SupplyRequestRequester>;
+  @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
 
   $ReferenceCopyWith<$Res> get agent;
@@ -8698,57 +8043,63 @@ abstract class $SupplyRequestRequesterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SupplyRequestRequesterCopyWithImpl<$Res>
+class _$SupplyRequestRequesterCopyWithImpl<$Res,
+        $Val extends SupplyRequestRequester>
     implements $SupplyRequestRequesterCopyWith<$Res> {
   _$SupplyRequestRequesterCopyWithImpl(this._value, this._then);
 
-  final SupplyRequestRequester _value;
   // ignore: unused_field
-  final $Res Function(SupplyRequestRequester) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? agent = freezed,
+    Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
     return _then(_value.copyWith(
-      agent: agent == freezed
+      agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as Reference,
-      onBehalfOf: onBehalfOf == freezed
+      onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get agent {
     return $ReferenceCopyWith<$Res>(_value.agent, (value) {
-      return _then(_value.copyWith(agent: value));
+      return _then(_value.copyWith(agent: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get onBehalfOf {
     if (_value.onBehalfOf == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.onBehalfOf!, (value) {
-      return _then(_value.copyWith(onBehalfOf: value));
+      return _then(_value.copyWith(onBehalfOf: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$SupplyRequestRequesterCopyWith<$Res>
+abstract class _$$_SupplyRequestRequesterCopyWith<$Res>
     implements $SupplyRequestRequesterCopyWith<$Res> {
-  factory _$SupplyRequestRequesterCopyWith(_SupplyRequestRequester value,
-          $Res Function(_SupplyRequestRequester) then) =
-      __$SupplyRequestRequesterCopyWithImpl<$Res>;
+  factory _$$_SupplyRequestRequesterCopyWith(_$_SupplyRequestRequester value,
+          $Res Function(_$_SupplyRequestRequester) then) =
+      __$$_SupplyRequestRequesterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
 
   @override
@@ -8758,27 +8109,26 @@ abstract class _$SupplyRequestRequesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$SupplyRequestRequesterCopyWithImpl<$Res>
-    extends _$SupplyRequestRequesterCopyWithImpl<$Res>
-    implements _$SupplyRequestRequesterCopyWith<$Res> {
-  __$SupplyRequestRequesterCopyWithImpl(_SupplyRequestRequester _value,
-      $Res Function(_SupplyRequestRequester) _then)
-      : super(_value, (v) => _then(v as _SupplyRequestRequester));
+class __$$_SupplyRequestRequesterCopyWithImpl<$Res>
+    extends _$SupplyRequestRequesterCopyWithImpl<$Res,
+        _$_SupplyRequestRequester>
+    implements _$$_SupplyRequestRequesterCopyWith<$Res> {
+  __$$_SupplyRequestRequesterCopyWithImpl(_$_SupplyRequestRequester _value,
+      $Res Function(_$_SupplyRequestRequester) _then)
+      : super(_value, _then);
 
-  @override
-  _SupplyRequestRequester get _value => super._value as _SupplyRequestRequester;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? agent = freezed,
+    Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
-    return _then(_SupplyRequestRequester(
-      agent: agent == freezed
+    return _then(_$_SupplyRequestRequester(
+      agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
               as Reference,
-      onBehalfOf: onBehalfOf == freezed
+      onBehalfOf: freezed == onBehalfOf
           ? _value.onBehalfOf
           : onBehalfOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -8807,47 +8157,47 @@ class _$_SupplyRequestRequester extends _SupplyRequestRequester {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SupplyRequestRequester &&
-            (identical(other.agent, agent) ||
-                const DeepCollectionEquality().equals(other.agent, agent)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_SupplyRequestRequester &&
+            (identical(other.agent, agent) || other.agent == agent) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
-                const DeepCollectionEquality()
-                    .equals(other.onBehalfOf, onBehalfOf)));
+                other.onBehalfOf == onBehalfOf));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(agent) ^
-      const DeepCollectionEquality().hash(onBehalfOf);
 
   @JsonKey(ignore: true)
   @override
-  _$SupplyRequestRequesterCopyWith<_SupplyRequestRequester> get copyWith =>
-      __$SupplyRequestRequesterCopyWithImpl<_SupplyRequestRequester>(
+  int get hashCode => Object.hash(runtimeType, agent, onBehalfOf);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SupplyRequestRequesterCopyWith<_$_SupplyRequestRequester> get copyWith =>
+      __$$_SupplyRequestRequesterCopyWithImpl<_$_SupplyRequestRequester>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestRequesterToJson(this);
+    return _$$_SupplyRequestRequesterToJson(
+      this,
+    );
   }
 }
 
 abstract class _SupplyRequestRequester extends SupplyRequestRequester {
   factory _SupplyRequestRequester(
-      {required Reference agent,
-      Reference? onBehalfOf}) = _$_SupplyRequestRequester;
+      {required final Reference agent,
+      final Reference? onBehalfOf}) = _$_SupplyRequestRequester;
   _SupplyRequestRequester._() : super._();
 
   factory _SupplyRequestRequester.fromJson(Map<String, dynamic> json) =
       _$_SupplyRequestRequester.fromJson;
 
   @override
-  Reference get agent => throw _privateConstructorUsedError;
+  Reference get agent;
   @override
-  Reference? get onBehalfOf => throw _privateConstructorUsedError;
+  Reference? get onBehalfOf;
   @override
   @JsonKey(ignore: true)
-  _$SupplyRequestRequesterCopyWith<_SupplyRequestRequester> get copyWith =>
+  _$$_SupplyRequestRequesterCopyWith<_$_SupplyRequestRequester> get copyWith =>
       throw _privateConstructorUsedError;
 }

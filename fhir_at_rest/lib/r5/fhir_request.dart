@@ -20,9 +20,35 @@ class FhirRequest with _$FhirRequest {
     String requestType, {
     Map<String, String>? headers,
     Resource? resource,
+    bool newSchema = true,
     String? formData,
   }) {
-    final json = resource?.toJson();
+    var json = resource?.toJson();
+
+    if (json != null && !newSchema) {
+      final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+
+      if (type == R5ResourceType.Bundle) {
+        if (json['entry'] != null && json['entry'].isNotEmpty) {
+          final entries = [];
+
+          for (var entry in json['entry']) {
+            final res = entry['resource'] as Map<String, dynamic>?;
+            if (res != null && res['resourceType'] != null) {
+              final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+              final res2 = convertToOldSchema(res, type);
+              entry['resource'] = res2;
+            }
+            entries.add(entry);
+          }
+
+          json['entry'] = entries;
+        }
+      } else {
+        json = convertToOldSchema(json, resource?.resourceType);
+      }
+    }
+
     return {
       'uri': uri.toString(),
       'fhirRequestType': requestType,
@@ -36,14 +62,13 @@ class FhirRequest with _$FhirRequest {
   /// TO JSON
   /// after creating a request with the above constructors, they can be called
   /// to get a map with useful data about the request
-  Map<String, dynamic> toJson(
-    Map<String, String> headers,
-  ) {
+  Map<String, dynamic> toJson(Map<String, String> headers, bool newSchema) {
     return map(
       read: (m) => _toJson(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         'Read',
+        newSchema: newSchema,
         headers: headers,
       ),
       vRead: (m) => _toJson(
@@ -51,6 +76,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Vread',
         headers: headers,
+        newSchema: newSchema,
       ),
       update: (m) => _toJson(
         RestfulRequest.put_,
@@ -64,6 +90,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Patch',
         headers: headers,
+        newSchema: newSchema,
         resource: m.resource,
       ),
       delete: (m) => _toJson(
@@ -71,12 +98,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Delete',
         headers: headers,
+        newSchema: newSchema,
       ),
       create: (m) => _toJson(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
         'Create',
         headers: headers,
+        newSchema: newSchema,
         resource: m.resource,
       ),
       search: (m) => _toJson(
@@ -84,6 +113,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: m.parameters),
         'Search',
         headers: headers,
+        newSchema: newSchema,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
       ),
       searchAll: (m) => _toJson(
@@ -91,12 +121,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         'Search All',
         headers: headers,
+        newSchema: newSchema,
       ),
       capabilities: (m) => _toJson(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         'Capabilities',
         headers: headers,
+        newSchema: newSchema,
       ),
       transaction: (m) {
         return _toJson(
@@ -105,6 +137,7 @@ class FhirRequest with _$FhirRequest {
           'Transaction',
           headers: headers,
           resource: m.bundle,
+          newSchema: newSchema,
         );
       },
       batch: (m) {
@@ -114,6 +147,7 @@ class FhirRequest with _$FhirRequest {
           'Batch',
           headers: headers,
           resource: m.bundle,
+          newSchema: newSchema,
         );
       },
       history: (m) {
@@ -132,6 +166,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           'History',
           headers: headers,
+          newSchema: newSchema,
         );
       },
       historyType: (m) {
@@ -150,6 +185,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           'History Type',
           headers: headers,
+          newSchema: newSchema,
         );
       },
       historyAll: (m) {
@@ -168,6 +204,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           'History all',
           headers: headers,
+          newSchema: newSchema,
         );
       },
       operation: (m) => _toJson(
@@ -175,6 +212,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         'Operation',
         headers: headers,
+        newSchema: newSchema,
         resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
         formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
       ),
@@ -192,6 +230,7 @@ class FhirRequest with _$FhirRequest {
                 []),
         'ReadBundlePage',
         headers: headers,
+        newSchema: newSchema,
       ),
     );
   }
@@ -599,15 +638,19 @@ class FhirRequest with _$FhirRequest {
   /// authorization or other headers can be passed in as well
   Future<Resource?> request({
     required Map<String, String> headers,
+    R5Version r5Version = R5Version.v5_0_0_snapshot,
   }) async {
+    final newSchema = r5Version == R5Version.v5_0_0_ballot;
+
     return await map(
-      read: (m) async => await _request(RestfulRequest.get_, uri(parameters: m.parameters), headers, 'Read'),
-      vRead: (m) async => await _request(RestfulRequest.get_, uri(parameters: m.parameters), headers, 'Vread'),
+      read: (m) async => await _request(RestfulRequest.get_, uri(parameters: m.parameters), headers, 'Read', newSchema),
+      vRead: (m) async => await _request(RestfulRequest.get_, uri(parameters: m.parameters), headers, 'Vread', newSchema),
       update: (m) async => await _request(
         RestfulRequest.put_,
         uri(parameters: m.parameters),
         headers,
         'Update',
+        newSchema,
         resource: m.resource,
       ),
       patch: (m) async => await _request(
@@ -615,6 +658,7 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Patch',
+        newSchema,
         resource: m.resource,
       ),
       delete: (m) async => await _request(
@@ -622,12 +666,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Delete',
+        newSchema,
       ),
       create: (m) async => await _request(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
         headers,
         'Create',
+        newSchema,
         resource: m.resource,
       ),
       search: (m) async => await _request(
@@ -635,6 +681,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: m.parameters),
         headers,
         'Search',
+        newSchema,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
       ),
       searchAll: (m) async => await _request(
@@ -642,12 +689,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Search All',
+        newSchema,
       ),
       capabilities: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         headers,
         'Capabilities',
+        newSchema,
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
@@ -669,6 +718,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Transaction',
+          newSchema,
           resource: m.bundle,
         );
       },
@@ -693,6 +743,7 @@ class FhirRequest with _$FhirRequest {
           uri(),
           headers,
           'Batch',
+          newSchema,
           resource: m.bundle,
         );
       },
@@ -712,6 +763,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History',
+          newSchema,
         );
       },
       historyType: (m) async {
@@ -730,6 +782,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History Type',
+          newSchema,
         );
       },
       historyAll: (m) async {
@@ -748,6 +801,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History all',
+          newSchema,
         );
       },
       operation: (m) async => await _request(
@@ -755,6 +809,7 @@ class FhirRequest with _$FhirRequest {
         m.usePost ? url : uri(parameters: parameters),
         headers,
         'Operation',
+        newSchema,
         resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
         formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
       ),
@@ -772,8 +827,31 @@ class FhirRequest with _$FhirRequest {
                 []),
         headers,
         'ReadBundlePage',
+        newSchema,
       ),
     );
+  }
+
+  static Future<R5Version?> checkVersion({
+    required Uri base,
+    Client? client,
+  }) async {
+    Response result;
+    client ??= Client();
+
+    if (globals.kTestMode) {
+      return null;
+    }
+
+    try {
+      result = await client.get(base);
+    } catch (e) {
+      return null;
+    }
+
+    final poweredBy = result.headers['x-powered-by'] ?? '';
+
+    return poweredBy.contains('FHIR 5.0.0-snapshot1/R5') ? R5Version.v5_0_0_snapshot : R5Version.v5_0_0_ballot;
   }
 
   /// _hxParameters
@@ -809,7 +887,8 @@ class FhirRequest with _$FhirRequest {
     RestfulRequest type,
     String uri,
     Map<String, String> headers,
-    String requestType, {
+    String requestType,
+    bool newSchema, {
     Resource? resource,
     String? formData,
   }) async {
@@ -821,14 +900,217 @@ class FhirRequest with _$FhirRequest {
         json = removeMeta(_json);
       }
 
-      final result = await _makeRequest(type: type, thisRequest: uri, client: client, headers: headers, resource: json);
+      if (json != null && !newSchema) {
+        final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+
+        if (type == R5ResourceType.Bundle) {
+          if (json['entry'] != null && json['entry'].isNotEmpty) {
+            final entries = [];
+
+            for (var entry in json['entry']) {
+              final res = entry['resource'] as Map<String, dynamic>?;
+              if (res != null && res['resourceType'] != null) {
+                final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+                final res2 = convertToOldSchema(res, type);
+                entry['resource'] = res2;
+              }
+              entries.add(entry);
+            }
+
+            json['entry'] = entries;
+          }
+        } else {
+          json = convertToOldSchema(json, resource?.resourceType);
+        }
+      }
+
+      final result = await _makeRequest(
+        type: type,
+        thisRequest: uri,
+        client: client,
+        headers: headers,
+        resource: json,
+        newSchema: newSchema,
+        resourceType: resource?.resourceType,
+      );
       return result;
     } catch (e) {
       return _operationOutcome('Failed to complete a $requestType request, ', diagnostics: 'Exception: $e');
     }
   }
 
-  Map<String, dynamic>? removeMeta(Map<String, dynamic> meh) {
+  Map<String, dynamic> convertToOldSchema(Map<String, dynamic> resource, R5ResourceType? resourceType) {
+    final Map<String, dynamic> json = Map.from(resource);
+
+    switch (resourceType) {
+      case R5ResourceType.Appointment:
+        if (json['serviceType'] != null) {
+          json['serviceType'] = json['serviceType'].map((e) => e['concept']).toList();
+        }
+        break;
+      case R5ResourceType.Coverage:
+        if (json['subscriberId'] != null && json['subscriberId'].isNotEmpty) {
+          json['subscriberId'] = json['subscriberId'].first;
+        }
+
+        if (json['class'] != null && json['class']['value'] != null) {
+          json['class']['value'] = json['class']['value']['value'];
+        }
+
+        json['payor'] = [json['insurer']];
+
+        break;
+      case R5ResourceType.DocumentReference:
+        json['encounter'] = json['context'];
+        if (json['event'] != null) {
+          json['event'] = json['event'].map((e) => e['concept']).toList();
+        }
+        break;
+      case R5ResourceType.Location:
+        json['physicalType'] = json['form'];
+
+        if (json['contact'] != null) {
+          json['telecom'] = json['contact'].map((e) => e['telecom']).toList();
+        }
+
+        if (json['hoursOfOperation'] != null) {
+          final availability = json['hoursOfOperation'].first;
+          final newBackboneItem = {};
+          newBackboneItem['daysOfWeek'] = availability['availableTime'].first['daysOfWeek'];
+          newBackboneItem['allDay'] = availability['availableTime'].first['allDay'];
+          newBackboneItem['openingTime'] = availability['availableTime'].first['availableStartTime'];
+          newBackboneItem['closingTime'] = availability['availableTime'].first['availableEndTime'];
+
+          json['hoursOfOperation'] = [newBackboneItem];
+          if (availability['notAvailableTime'] != null) {
+            json['availabilityExceptions'] = availability['notAvailableTime']['description'];
+          }
+        }
+        break;
+      case R5ResourceType.MedicationRequest:
+        // TODO(lsp): This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.MedicationUsage:
+        // TODO(lsp): This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.Observation:
+        final component = json['component'] as List?;
+        if (component != null && component.isNotEmpty && component.first['valueSampledData'] != null) {
+          final valueSampledData = component.first['valueSampledData'];
+
+          valueSampledData['period'] = valueSampledData['interval'];
+
+          json['component'][0]['valueSampledData'] = valueSampledData;
+        }
+        break;
+      case R5ResourceType.ServiceRequest:
+        if (json['code'] != null) {
+          json['code'] = json['code']['concept'];
+        }
+        break;
+      default:
+        break;
+    }
+
+    return json;
+  }
+
+  Map<String, dynamic> convertFromOldSchema(Map<String, dynamic> resource, R5ResourceType? resourceType) {
+    Map<String, dynamic> json = Map.from(resource);
+
+    switch (resourceType) {
+      case R5ResourceType.Appointment:
+        if (json['serviceType'] != null) {
+          json['serviceType'] = json['serviceType'].map((e) => {'concept': e}).toList();
+        }
+        break;
+      case R5ResourceType.Coverage:
+        if (json['subscriberId'] != null) {
+          json['subscriberId'] = [json['subscriberId']];
+        }
+
+        if (json['class'] != null) {
+          final newValue = {'value': json['class']['value']};
+          json['class']['value'] = newValue;
+        }
+
+        if (json['payor'] != null) {
+          json['insurer'] = json['payor'].first;
+        }
+
+        if (json['status'] == null) {
+          json['status'] = 'active';
+        }
+
+        if (json['kind'] == null) {
+          json['kind'] = 'insurance';
+        }
+
+        break;
+      case R5ResourceType.DocumentReference:
+        json['context'] = json['encounter'];
+
+        if (json['event'] != null) {
+          json['event'] = json['event'].map((e) => {'concept': e}).toList();
+        }
+        break;
+      case R5ResourceType.Location:
+        json['form'] = json['physicalType'];
+
+        if (json['telecom'] != null) {
+          json['contact'] = json['telecom'].map((e) => {'telecom': e}).toList();
+        }
+
+        if (json['hoursOfOperation'] != null) {
+          final backboneItem = json['hoursOfOperation'].first;
+
+          final availableTime = {
+            'daysOfWeek': backboneItem['daysOfWeek'],
+            'allDay': backboneItem['allDay'],
+            'availableStartTime': backboneItem['openingTime'],
+            'availableEndTime': backboneItem['closingTime'],
+          };
+
+          final notAvailableTime = {'description': json['availabilityExceptions']};
+
+          final availability = {
+            'availableTime': [availableTime],
+            'notAvailableTime': [notAvailableTime],
+          };
+
+          json['hoursOfOperation'] = [availability];
+        }
+        break;
+      case R5ResourceType.MedicationRequest:
+        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.MedicationUsage:
+        // This model needs to be adapted to the new schema and ensure here backwards compatibility
+        break;
+      case R5ResourceType.Observation:
+        final component = json['component'] as List?;
+        if (component != null && component.isNotEmpty && component.first['valueSampledData'] != null) {
+          final valueSampledData = component.first['valueSampledData'];
+
+          valueSampledData['interval'] = valueSampledData['period'];
+          valueSampledData['intervalUnit'] = jsonEncode(const Code.asConst('ms').toJson());
+          json['component'][0]['valueSampledData'] = valueSampledData;
+        }
+        break;
+      case R5ResourceType.ServiceRequest:
+        if (json['code'] != null) {
+          final newCode = {'concept': json['code']};
+          json['code'] = newCode;
+        }
+        break;
+      default:
+        break;
+    }
+
+    return json;
+  }
+
+  Map<String, dynamic>? removeMeta(Map<String, dynamic>? meh) {
     if (meh == null) {
       return null;
     }
@@ -960,9 +1242,11 @@ class FhirRequest with _$FhirRequest {
     required String thisRequest,
     required Map<String, String> headers,
     Map<String, dynamic>? resource,
+    bool newSchema = false,
     String? formData,
     Encoding? encoding,
     Client? client,
+    R5ResourceType? resourceType,
   }) async {
     Response result;
     client ??= Client();
@@ -1041,7 +1325,34 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
     }
-    return Resource.fromJson(json.decode(result.body));
+
+    var body = json.decode(result.body);
+
+    if (!newSchema && result.body.isNotEmpty) {
+      final type = ResourceUtils.resourceTypeFromStringMap[body['resourceType']];
+
+      if (type == R5ResourceType.Bundle) {
+        if (body['entry'] != null && body['entry'].isNotEmpty) {
+          final entries = [];
+
+          for (var entry in body['entry']) {
+            final res = entry['resource'] as Map<String, dynamic>?;
+            if (res != null && res['resourceType'] != null) {
+              final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+              final res2 = convertFromOldSchema(res, type);
+              entry['resource'] = res2;
+            }
+            entries.add(entry);
+          }
+
+          body['entry'] = entries;
+        }
+      } else {
+        body = convertFromOldSchema(body, type);
+      }
+    }
+
+    return Resource.fromJson(body);
   }
 
   OperationOutcomeIssueCode _getIssueCodeByStatusCode(int statusCode) {
@@ -1095,4 +1406,9 @@ class FhirRequest with _$FhirRequest {
           diagnostics: diagnostics,
         )
       ]);
+}
+
+enum R5Version {
+  v5_0_0_snapshot,
+  v5_0_0_ballot,
 }

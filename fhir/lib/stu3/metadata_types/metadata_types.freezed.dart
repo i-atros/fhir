@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'metadata_types.dart';
@@ -11,34 +12,11 @@ part of 'metadata_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 ContactDetail _$ContactDetailFromJson(Map<String, dynamic> json) {
   return _ContactDetail.fromJson(json);
 }
-
-/// @nodoc
-class _$ContactDetailTearOff {
-  const _$ContactDetailTearOff();
-
-  _ContactDetail call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint>? telecom}) {
-    return _ContactDetail(
-      name: name,
-      nameElement: nameElement,
-      telecom: telecom,
-    );
-  }
-
-  ContactDetail fromJson(Map<String, Object> json) {
-    return ContactDetail.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ContactDetail = _$ContactDetailTearOff();
 
 /// @nodoc
 mixin _$ContactDetail {
@@ -57,7 +35,8 @@ mixin _$ContactDetail {
 abstract class $ContactDetailCopyWith<$Res> {
   factory $ContactDetailCopyWith(
           ContactDetail value, $Res Function(ContactDetail) then) =
-      _$ContactDetailCopyWithImpl<$Res>;
+      _$ContactDetailCopyWithImpl<$Res, ContactDetail>;
+  @useResult
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -67,14 +46,16 @@ abstract class $ContactDetailCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ContactDetailCopyWithImpl<$Res>
+class _$ContactDetailCopyWithImpl<$Res, $Val extends ContactDetail>
     implements $ContactDetailCopyWith<$Res> {
   _$ContactDetailCopyWithImpl(this._value, this._then);
 
-  final ContactDetail _value;
   // ignore: unused_field
-  final $Res Function(ContactDetail) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
@@ -82,40 +63,42 @@ class _$ContactDetailCopyWithImpl<$Res>
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      telecom: telecom == freezed
+      telecom: freezed == telecom
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ContactDetailCopyWith<$Res>
+abstract class _$$_ContactDetailCopyWith<$Res>
     implements $ContactDetailCopyWith<$Res> {
-  factory _$ContactDetailCopyWith(
-          _ContactDetail value, $Res Function(_ContactDetail) then) =
-      __$ContactDetailCopyWithImpl<$Res>;
+  factory _$$_ContactDetailCopyWith(
+          _$_ContactDetail value, $Res Function(_$_ContactDetail) then) =
+      __$$_ContactDetailCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -126,32 +109,30 @@ abstract class _$ContactDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ContactDetailCopyWithImpl<$Res>
-    extends _$ContactDetailCopyWithImpl<$Res>
-    implements _$ContactDetailCopyWith<$Res> {
-  __$ContactDetailCopyWithImpl(
-      _ContactDetail _value, $Res Function(_ContactDetail) _then)
-      : super(_value, (v) => _then(v as _ContactDetail));
+class __$$_ContactDetailCopyWithImpl<$Res>
+    extends _$ContactDetailCopyWithImpl<$Res, _$_ContactDetail>
+    implements _$$_ContactDetailCopyWith<$Res> {
+  __$$_ContactDetailCopyWithImpl(
+      _$_ContactDetail _value, $Res Function(_$_ContactDetail) _then)
+      : super(_value, _then);
 
-  @override
-  _ContactDetail get _value => super._value as _ContactDetail;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_ContactDetail(
-      name: name == freezed
+    return _then(_$_ContactDetail(
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      telecom: telecom == freezed
+      telecom: freezed == telecom
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
               as List<ContactPoint>?,
@@ -185,87 +166,59 @@ class _$_ContactDetail extends _ContactDetail {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ContactDetail &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ContactDetail &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.telecom, telecom) ||
-                const DeepCollectionEquality().equals(other.telecom, telecom)));
+                other.nameElement == nameElement) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(telecom);
 
   @JsonKey(ignore: true)
   @override
-  _$ContactDetailCopyWith<_ContactDetail> get copyWith =>
-      __$ContactDetailCopyWithImpl<_ContactDetail>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, name, nameElement,
+      const DeepCollectionEquality().hash(telecom));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ContactDetailCopyWith<_$_ContactDetail> get copyWith =>
+      __$$_ContactDetailCopyWithImpl<_$_ContactDetail>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContactDetailToJson(this);
+    return _$$_ContactDetailToJson(
+      this,
+    );
   }
 }
 
 abstract class _ContactDetail extends ContactDetail {
   factory _ContactDetail(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      List<ContactPoint>? telecom}) = _$_ContactDetail;
+      {final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final List<ContactPoint>? telecom}) = _$_ContactDetail;
   _ContactDetail._() : super._();
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$ContactDetailCopyWith<_ContactDetail> get copyWith =>
+  _$$_ContactDetailCopyWith<_$_ContactDetail> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 Contributor _$ContributorFromJson(Map<String, dynamic> json) {
   return _Contributor.fromJson(json);
 }
-
-/// @nodoc
-class _$ContributorTearOff {
-  const _$ContributorTearOff();
-
-  _Contributor call(
-      {ContributorType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail>? contact}) {
-    return _Contributor(
-      type: type,
-      typeElement: typeElement,
-      name: name,
-      nameElement: nameElement,
-      contact: contact,
-    );
-  }
-
-  Contributor fromJson(Map<String, Object> json) {
-    return Contributor.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Contributor = _$ContributorTearOff();
 
 /// @nodoc
 mixin _$Contributor {
@@ -287,7 +240,8 @@ mixin _$Contributor {
 abstract class $ContributorCopyWith<$Res> {
   factory $ContributorCopyWith(
           Contributor value, $Res Function(Contributor) then) =
-      _$ContributorCopyWithImpl<$Res>;
+      _$ContributorCopyWithImpl<$Res, Contributor>;
+  @useResult
   $Res call(
       {ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -300,13 +254,16 @@ abstract class $ContributorCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
+class _$ContributorCopyWithImpl<$Res, $Val extends Contributor>
+    implements $ContributorCopyWith<$Res> {
   _$ContributorCopyWithImpl(this._value, this._then);
 
-  final Contributor _value;
   // ignore: unused_field
-  final $Res Function(Contributor) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -316,59 +273,62 @@ class _$ContributorCopyWithImpl<$Res> implements $ContributorCopyWith<$Res> {
     Object? contact = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ContributorType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ContributorCopyWith<$Res>
+abstract class _$$_ContributorCopyWith<$Res>
     implements $ContributorCopyWith<$Res> {
-  factory _$ContributorCopyWith(
-          _Contributor value, $Res Function(_Contributor) then) =
-      __$ContributorCopyWithImpl<$Res>;
+  factory _$$_ContributorCopyWith(
+          _$_Contributor value, $Res Function(_$_Contributor) then) =
+      __$$_ContributorCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -383,15 +343,14 @@ abstract class _$ContributorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
-    implements _$ContributorCopyWith<$Res> {
-  __$ContributorCopyWithImpl(
-      _Contributor _value, $Res Function(_Contributor) _then)
-      : super(_value, (v) => _then(v as _Contributor));
+class __$$_ContributorCopyWithImpl<$Res>
+    extends _$ContributorCopyWithImpl<$Res, _$_Contributor>
+    implements _$$_ContributorCopyWith<$Res> {
+  __$$_ContributorCopyWithImpl(
+      _$_Contributor _value, $Res Function(_$_Contributor) _then)
+      : super(_value, _then);
 
-  @override
-  _Contributor get _value => super._value as _Contributor;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -400,24 +359,24 @@ class __$ContributorCopyWithImpl<$Res> extends _$ContributorCopyWithImpl<$Res>
     Object? nameElement = freezed,
     Object? contact = freezed,
   }) {
-    return _then(_Contributor(
-      type: type == freezed
+    return _then(_$_Contributor(
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as ContributorType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      contact: contact == freezed
+      contact: freezed == contact
           ? _value.contact
           : contact // ignore: cast_nullable_to_non_nullable
               as List<ContactDetail>?,
@@ -460,111 +419,69 @@ class _$_Contributor extends _Contributor {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Contributor &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_Contributor &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+                other.typeElement == typeElement) &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.contact, contact) ||
-                const DeepCollectionEquality().equals(other.contact, contact)));
+                other.nameElement == nameElement) &&
+            const DeepCollectionEquality().equals(other.contact, contact));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(contact);
 
   @JsonKey(ignore: true)
   @override
-  _$ContributorCopyWith<_Contributor> get copyWith =>
-      __$ContributorCopyWithImpl<_Contributor>(this, _$identity);
+  int get hashCode => Object.hash(runtimeType, type, typeElement, name,
+      nameElement, const DeepCollectionEquality().hash(contact));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ContributorCopyWith<_$_Contributor> get copyWith =>
+      __$$_ContributorCopyWithImpl<_$_Contributor>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ContributorToJson(this);
+    return _$$_ContributorToJson(
+      this,
+    );
   }
 }
 
 abstract class _Contributor extends Contributor {
   factory _Contributor(
-      {ContributorType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      List<ContactDetail>? contact}) = _$_Contributor;
+      {final ContributorType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final List<ContactDetail>? contact}) = _$_Contributor;
   _Contributor._() : super._();
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
 
   @override
-  ContributorType? get type => throw _privateConstructorUsedError;
+  ContributorType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  List<ContactDetail>? get contact;
   @override
   @JsonKey(ignore: true)
-  _$ContributorCopyWith<_Contributor> get copyWith =>
+  _$$_ContributorCopyWith<_$_Contributor> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 RelatedArtifact _$RelatedArtifactFromJson(Map<String, dynamic> json) {
   return _RelatedArtifact.fromJson(json);
 }
-
-/// @nodoc
-class _$RelatedArtifactTearOff {
-  const _$RelatedArtifactTearOff();
-
-  _RelatedArtifact call(
-      {RelatedArtifactType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement,
-      String? citation,
-      @JsonKey(name: '_citation') Element? citationElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      Attachment? document,
-      Reference? resource}) {
-    return _RelatedArtifact(
-      type: type,
-      typeElement: typeElement,
-      display: display,
-      displayElement: displayElement,
-      citation: citation,
-      citationElement: citationElement,
-      url: url,
-      urlElement: urlElement,
-      document: document,
-      resource: resource,
-    );
-  }
-
-  RelatedArtifact fromJson(Map<String, Object> json) {
-    return RelatedArtifact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $RelatedArtifact = _$RelatedArtifactTearOff();
 
 /// @nodoc
 mixin _$RelatedArtifact {
@@ -593,7 +510,8 @@ mixin _$RelatedArtifact {
 abstract class $RelatedArtifactCopyWith<$Res> {
   factory $RelatedArtifactCopyWith(
           RelatedArtifact value, $Res Function(RelatedArtifact) then) =
-      _$RelatedArtifactCopyWithImpl<$Res>;
+      _$RelatedArtifactCopyWithImpl<$Res, RelatedArtifact>;
+  @useResult
   $Res call(
       {RelatedArtifactType? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -615,14 +533,16 @@ abstract class $RelatedArtifactCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RelatedArtifactCopyWithImpl<$Res>
+class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     implements $RelatedArtifactCopyWith<$Res> {
   _$RelatedArtifactCopyWithImpl(this._value, this._then);
 
-  final RelatedArtifact _value;
   // ignore: unused_field
-  final $Res Function(RelatedArtifact) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -637,123 +557,130 @@ class _$RelatedArtifactCopyWithImpl<$Res>
     Object? resource = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as RelatedArtifactType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      display: display == freezed
+      display: freezed == display
           ? _value.display
           : display // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayElement: displayElement == freezed
+      displayElement: freezed == displayElement
           ? _value.displayElement
           : displayElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      citation: citation == freezed
+      citation: freezed == citation
           ? _value.citation
           : citation // ignore: cast_nullable_to_non_nullable
               as String?,
-      citationElement: citationElement == freezed
+      citationElement: freezed == citationElement
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      document: document == freezed
+      document: freezed == document
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      resource: resource == freezed
+      resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get displayElement {
     if (_value.displayElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.displayElement!, (value) {
-      return _then(_value.copyWith(displayElement: value));
+      return _then(_value.copyWith(displayElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get citationElement {
     if (_value.citationElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.citationElement!, (value) {
-      return _then(_value.copyWith(citationElement: value));
+      return _then(_value.copyWith(citationElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
     if (_value.urlElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.urlElement!, (value) {
-      return _then(_value.copyWith(urlElement: value));
+      return _then(_value.copyWith(urlElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get document {
     if (_value.document == null) {
       return null;
     }
 
     return $AttachmentCopyWith<$Res>(_value.document!, (value) {
-      return _then(_value.copyWith(document: value));
+      return _then(_value.copyWith(document: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get resource {
     if (_value.resource == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.resource!, (value) {
-      return _then(_value.copyWith(resource: value));
+      return _then(_value.copyWith(resource: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$RelatedArtifactCopyWith<$Res>
+abstract class _$$_RelatedArtifactCopyWith<$Res>
     implements $RelatedArtifactCopyWith<$Res> {
-  factory _$RelatedArtifactCopyWith(
-          _RelatedArtifact value, $Res Function(_RelatedArtifact) then) =
-      __$RelatedArtifactCopyWithImpl<$Res>;
+  factory _$$_RelatedArtifactCopyWith(
+          _$_RelatedArtifact value, $Res Function(_$_RelatedArtifact) then) =
+      __$$_RelatedArtifactCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {RelatedArtifactType? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -781,16 +708,14 @@ abstract class _$RelatedArtifactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RelatedArtifactCopyWithImpl<$Res>
-    extends _$RelatedArtifactCopyWithImpl<$Res>
-    implements _$RelatedArtifactCopyWith<$Res> {
-  __$RelatedArtifactCopyWithImpl(
-      _RelatedArtifact _value, $Res Function(_RelatedArtifact) _then)
-      : super(_value, (v) => _then(v as _RelatedArtifact));
+class __$$_RelatedArtifactCopyWithImpl<$Res>
+    extends _$RelatedArtifactCopyWithImpl<$Res, _$_RelatedArtifact>
+    implements _$$_RelatedArtifactCopyWith<$Res> {
+  __$$_RelatedArtifactCopyWithImpl(
+      _$_RelatedArtifact _value, $Res Function(_$_RelatedArtifact) _then)
+      : super(_value, _then);
 
-  @override
-  _RelatedArtifact get _value => super._value as _RelatedArtifact;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -804,44 +729,44 @@ class __$RelatedArtifactCopyWithImpl<$Res>
     Object? document = freezed,
     Object? resource = freezed,
   }) {
-    return _then(_RelatedArtifact(
-      type: type == freezed
+    return _then(_$_RelatedArtifact(
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as RelatedArtifactType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      display: display == freezed
+      display: freezed == display
           ? _value.display
           : display // ignore: cast_nullable_to_non_nullable
               as String?,
-      displayElement: displayElement == freezed
+      displayElement: freezed == displayElement
           ? _value.displayElement
           : displayElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      citation: citation == freezed
+      citation: freezed == citation
           ? _value.citation
           : citation // ignore: cast_nullable_to_non_nullable
               as String?,
-      citationElement: citationElement == freezed
+      citationElement: freezed == citationElement
           ? _value.citationElement
           : citationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      urlElement: urlElement == freezed
+      urlElement: freezed == urlElement
           ? _value.urlElement
           : urlElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      document: document == freezed
+      document: freezed == document
           ? _value.document
           : document // ignore: cast_nullable_to_non_nullable
               as Attachment?,
-      resource: resource == freezed
+      resource: freezed == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -901,137 +826,106 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RelatedArtifact &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_RelatedArtifact &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.display, display) ||
-                const DeepCollectionEquality()
-                    .equals(other.display, display)) &&
+                other.typeElement == typeElement) &&
+            (identical(other.display, display) || other.display == display) &&
             (identical(other.displayElement, displayElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.displayElement, displayElement)) &&
+                other.displayElement == displayElement) &&
             (identical(other.citation, citation) ||
-                const DeepCollectionEquality()
-                    .equals(other.citation, citation)) &&
+                other.citation == citation) &&
             (identical(other.citationElement, citationElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.citationElement, citationElement)) &&
-            (identical(other.url, url) ||
-                const DeepCollectionEquality().equals(other.url, url)) &&
+                other.citationElement == citationElement) &&
+            (identical(other.url, url) || other.url == url) &&
             (identical(other.urlElement, urlElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.urlElement, urlElement)) &&
+                other.urlElement == urlElement) &&
             (identical(other.document, document) ||
-                const DeepCollectionEquality()
-                    .equals(other.document, document)) &&
+                other.document == document) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)));
+                other.resource == resource));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(display) ^
-      const DeepCollectionEquality().hash(displayElement) ^
-      const DeepCollectionEquality().hash(citation) ^
-      const DeepCollectionEquality().hash(citationElement) ^
-      const DeepCollectionEquality().hash(url) ^
-      const DeepCollectionEquality().hash(urlElement) ^
-      const DeepCollectionEquality().hash(document) ^
-      const DeepCollectionEquality().hash(resource);
 
   @JsonKey(ignore: true)
   @override
-  _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith =>
-      __$RelatedArtifactCopyWithImpl<_RelatedArtifact>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      typeElement,
+      display,
+      displayElement,
+      citation,
+      citationElement,
+      url,
+      urlElement,
+      document,
+      resource);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_RelatedArtifactCopyWith<_$_RelatedArtifact> get copyWith =>
+      __$$_RelatedArtifactCopyWithImpl<_$_RelatedArtifact>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelatedArtifactToJson(this);
+    return _$$_RelatedArtifactToJson(
+      this,
+    );
   }
 }
 
 abstract class _RelatedArtifact extends RelatedArtifact {
   factory _RelatedArtifact(
-      {RelatedArtifactType? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      String? display,
-      @JsonKey(name: '_display') Element? displayElement,
-      String? citation,
-      @JsonKey(name: '_citation') Element? citationElement,
-      String? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      Attachment? document,
-      Reference? resource}) = _$_RelatedArtifact;
+      {final RelatedArtifactType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final String? display,
+      @JsonKey(name: '_display') final Element? displayElement,
+      final String? citation,
+      @JsonKey(name: '_citation') final Element? citationElement,
+      final String? url,
+      @JsonKey(name: '_url') final Element? urlElement,
+      final Attachment? document,
+      final Reference? resource}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
       _$_RelatedArtifact.fromJson;
 
   @override
-  RelatedArtifactType? get type => throw _privateConstructorUsedError;
+  RelatedArtifactType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  String? get display => throw _privateConstructorUsedError;
+  String? get display;
   @override
   @JsonKey(name: '_display')
-  Element? get displayElement => throw _privateConstructorUsedError;
+  Element? get displayElement;
   @override
-  String? get citation => throw _privateConstructorUsedError;
+  String? get citation;
   @override
   @JsonKey(name: '_citation')
-  Element? get citationElement => throw _privateConstructorUsedError;
+  Element? get citationElement;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(name: '_url')
-  Element? get urlElement => throw _privateConstructorUsedError;
+  Element? get urlElement;
   @override
-  Attachment? get document => throw _privateConstructorUsedError;
+  Attachment? get document;
   @override
-  Reference? get resource => throw _privateConstructorUsedError;
+  Reference? get resource;
   @override
   @JsonKey(ignore: true)
-  _$RelatedArtifactCopyWith<_RelatedArtifact> get copyWith =>
+  _$$_RelatedArtifactCopyWith<_$_RelatedArtifact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 UsageContext _$UsageContextFromJson(Map<String, dynamic> json) {
   return _UsageContext.fromJson(json);
 }
-
-/// @nodoc
-class _$UsageContextTearOff {
-  const _$UsageContextTearOff();
-
-  _UsageContext call(
-      {required Coding code,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Range? valueRange}) {
-    return _UsageContext(
-      code: code,
-      valueCodeableConcept: valueCodeableConcept,
-      valueQuantity: valueQuantity,
-      valueRange: valueRange,
-    );
-  }
-
-  UsageContext fromJson(Map<String, Object> json) {
-    return UsageContext.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UsageContext = _$UsageContextTearOff();
 
 /// @nodoc
 mixin _$UsageContext {
@@ -1051,7 +945,8 @@ mixin _$UsageContext {
 abstract class $UsageContextCopyWith<$Res> {
   factory $UsageContextCopyWith(
           UsageContext value, $Res Function(UsageContext) then) =
-      _$UsageContextCopyWithImpl<$Res>;
+      _$UsageContextCopyWithImpl<$Res, UsageContext>;
+  @useResult
   $Res call(
       {Coding code,
       CodeableConcept? valueCodeableConcept,
@@ -1065,48 +960,53 @@ abstract class $UsageContextCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
+class _$UsageContextCopyWithImpl<$Res, $Val extends UsageContext>
+    implements $UsageContextCopyWith<$Res> {
   _$UsageContextCopyWithImpl(this._value, this._then);
 
-  final UsageContext _value;
   // ignore: unused_field
-  final $Res Function(UsageContext) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
+    Object? code = null,
     Object? valueCodeableConcept = freezed,
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
   }) {
     return _then(_value.copyWith(
-      code: code == freezed
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Coding,
-      valueCodeableConcept: valueCodeableConcept == freezed
+      valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      valueQuantity: valueQuantity == freezed
+      valueQuantity: freezed == valueQuantity
           ? _value.valueQuantity
           : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueRange: valueRange == freezed
+      valueRange: freezed == valueRange
           ? _value.valueRange
           : valueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get code {
     return $CodingCopyWith<$Res>(_value.code, (value) {
-      return _then(_value.copyWith(code: value));
+      return _then(_value.copyWith(code: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
     if (_value.valueCodeableConcept == null) {
       return null;
@@ -1114,40 +1014,43 @@ class _$UsageContextCopyWithImpl<$Res> implements $UsageContextCopyWith<$Res> {
 
     return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
         (value) {
-      return _then(_value.copyWith(valueCodeableConcept: value));
+      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
     }
 
     return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
-      return _then(_value.copyWith(valueQuantity: value));
+      return _then(_value.copyWith(valueQuantity: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get valueRange {
     if (_value.valueRange == null) {
       return null;
     }
 
     return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
-      return _then(_value.copyWith(valueRange: value));
+      return _then(_value.copyWith(valueRange: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$UsageContextCopyWith<$Res>
+abstract class _$$_UsageContextCopyWith<$Res>
     implements $UsageContextCopyWith<$Res> {
-  factory _$UsageContextCopyWith(
-          _UsageContext value, $Res Function(_UsageContext) then) =
-      __$UsageContextCopyWithImpl<$Res>;
+  factory _$$_UsageContextCopyWith(
+          _$_UsageContext value, $Res Function(_$_UsageContext) then) =
+      __$$_UsageContextCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Coding code,
       CodeableConcept? valueCodeableConcept,
@@ -1165,36 +1068,35 @@ abstract class _$UsageContextCopyWith<$Res>
 }
 
 /// @nodoc
-class __$UsageContextCopyWithImpl<$Res> extends _$UsageContextCopyWithImpl<$Res>
-    implements _$UsageContextCopyWith<$Res> {
-  __$UsageContextCopyWithImpl(
-      _UsageContext _value, $Res Function(_UsageContext) _then)
-      : super(_value, (v) => _then(v as _UsageContext));
+class __$$_UsageContextCopyWithImpl<$Res>
+    extends _$UsageContextCopyWithImpl<$Res, _$_UsageContext>
+    implements _$$_UsageContextCopyWith<$Res> {
+  __$$_UsageContextCopyWithImpl(
+      _$_UsageContext _value, $Res Function(_$_UsageContext) _then)
+      : super(_value, _then);
 
-  @override
-  _UsageContext get _value => super._value as _UsageContext;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? code = freezed,
+    Object? code = null,
     Object? valueCodeableConcept = freezed,
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
   }) {
-    return _then(_UsageContext(
-      code: code == freezed
+    return _then(_$_UsageContext(
+      code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
               as Coding,
-      valueCodeableConcept: valueCodeableConcept == freezed
+      valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      valueQuantity: valueQuantity == freezed
+      valueQuantity: freezed == valueQuantity
           ? _value.valueQuantity
           : valueQuantity // ignore: cast_nullable_to_non_nullable
               as Quantity?,
-      valueRange: valueRange == freezed
+      valueRange: freezed == valueRange
           ? _value.valueRange
           : valueRange // ignore: cast_nullable_to_non_nullable
               as Range?,
@@ -1232,101 +1134,64 @@ class _$_UsageContext extends _UsageContext {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UsageContext &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_UsageContext &&
+            (identical(other.code, code) || other.code == code) &&
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.valueCodeableConcept, valueCodeableConcept)) &&
+                other.valueCodeableConcept == valueCodeableConcept) &&
             (identical(other.valueQuantity, valueQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueQuantity, valueQuantity)) &&
+                other.valueQuantity == valueQuantity) &&
             (identical(other.valueRange, valueRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueRange, valueRange)));
+                other.valueRange == valueRange));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(valueCodeableConcept) ^
-      const DeepCollectionEquality().hash(valueQuantity) ^
-      const DeepCollectionEquality().hash(valueRange);
 
   @JsonKey(ignore: true)
   @override
-  _$UsageContextCopyWith<_UsageContext> get copyWith =>
-      __$UsageContextCopyWithImpl<_UsageContext>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType, code, valueCodeableConcept, valueQuantity, valueRange);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UsageContextCopyWith<_$_UsageContext> get copyWith =>
+      __$$_UsageContextCopyWithImpl<_$_UsageContext>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UsageContextToJson(this);
+    return _$$_UsageContextToJson(
+      this,
+    );
   }
 }
 
 abstract class _UsageContext extends UsageContext {
   factory _UsageContext(
-      {required Coding code,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Range? valueRange}) = _$_UsageContext;
+      {required final Coding code,
+      final CodeableConcept? valueCodeableConcept,
+      final Quantity? valueQuantity,
+      final Range? valueRange}) = _$_UsageContext;
   _UsageContext._() : super._();
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
       _$_UsageContext.fromJson;
 
   @override
-  Coding get code => throw _privateConstructorUsedError;
+  Coding get code;
   @override
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept;
   @override
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity;
   @override
-  Range? get valueRange => throw _privateConstructorUsedError;
+  Range? get valueRange;
   @override
   @JsonKey(ignore: true)
-  _$UsageContextCopyWith<_UsageContext> get copyWith =>
+  _$$_UsageContextCopyWith<_$_UsageContext> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 DataRequirement _$DataRequirementFromJson(Map<String, dynamic> json) {
   return _DataRequirement.fromJson(json);
 }
-
-/// @nodoc
-class _$DataRequirementTearOff {
-  const _$DataRequirementTearOff();
-
-  _DataRequirement call(
-      {String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      List<String>? profile,
-      @JsonKey(name: '_profile') List<Element?>? profileElement,
-      List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter>? codeFilter,
-      List<DataRequirementDateFilter>? dateFilter}) {
-    return _DataRequirement(
-      type: type,
-      typeElement: typeElement,
-      profile: profile,
-      profileElement: profileElement,
-      mustSupport: mustSupport,
-      mustSupportElement: mustSupportElement,
-      codeFilter: codeFilter,
-      dateFilter: dateFilter,
-    );
-  }
-
-  DataRequirement fromJson(Map<String, Object> json) {
-    return DataRequirement.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DataRequirement = _$DataRequirementTearOff();
 
 /// @nodoc
 mixin _$DataRequirement {
@@ -1354,7 +1219,8 @@ mixin _$DataRequirement {
 abstract class $DataRequirementCopyWith<$Res> {
   factory $DataRequirementCopyWith(
           DataRequirement value, $Res Function(DataRequirement) then) =
-      _$DataRequirementCopyWithImpl<$Res>;
+      _$DataRequirementCopyWithImpl<$Res, DataRequirement>;
+  @useResult
   $Res call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -1369,14 +1235,16 @@ abstract class $DataRequirementCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DataRequirementCopyWithImpl<$Res>
+class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
     implements $DataRequirementCopyWith<$Res> {
   _$DataRequirementCopyWithImpl(this._value, this._then);
 
-  final DataRequirement _value;
   // ignore: unused_field
-  final $Res Function(DataRequirement) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -1389,60 +1257,62 @@ class _$DataRequirementCopyWithImpl<$Res>
     Object? dateFilter = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      profileElement: profileElement == freezed
+      profileElement: freezed == profileElement
           ? _value.profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
-      mustSupport: mustSupport == freezed
+      mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mustSupportElement: mustSupportElement == freezed
+      mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
-      codeFilter: codeFilter == freezed
+      codeFilter: freezed == codeFilter
           ? _value.codeFilter
           : codeFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementCodeFilter>?,
-      dateFilter: dateFilter == freezed
+      dateFilter: freezed == dateFilter
           ? _value.dateFilter
           : dateFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementDateFilter>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DataRequirementCopyWith<$Res>
+abstract class _$$_DataRequirementCopyWith<$Res>
     implements $DataRequirementCopyWith<$Res> {
-  factory _$DataRequirementCopyWith(
-          _DataRequirement value, $Res Function(_DataRequirement) then) =
-      __$DataRequirementCopyWithImpl<$Res>;
+  factory _$$_DataRequirementCopyWith(
+          _$_DataRequirement value, $Res Function(_$_DataRequirement) then) =
+      __$$_DataRequirementCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -1458,16 +1328,14 @@ abstract class _$DataRequirementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DataRequirementCopyWithImpl<$Res>
-    extends _$DataRequirementCopyWithImpl<$Res>
-    implements _$DataRequirementCopyWith<$Res> {
-  __$DataRequirementCopyWithImpl(
-      _DataRequirement _value, $Res Function(_DataRequirement) _then)
-      : super(_value, (v) => _then(v as _DataRequirement));
+class __$$_DataRequirementCopyWithImpl<$Res>
+    extends _$DataRequirementCopyWithImpl<$Res, _$_DataRequirement>
+    implements _$$_DataRequirementCopyWith<$Res> {
+  __$$_DataRequirementCopyWithImpl(
+      _$_DataRequirement _value, $Res Function(_$_DataRequirement) _then)
+      : super(_value, _then);
 
-  @override
-  _DataRequirement get _value => super._value as _DataRequirement;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -1479,36 +1347,36 @@ class __$DataRequirementCopyWithImpl<$Res>
     Object? codeFilter = freezed,
     Object? dateFilter = freezed,
   }) {
-    return _then(_DataRequirement(
-      type: type == freezed
+    return _then(_$_DataRequirement(
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      profileElement: profileElement == freezed
+      profileElement: freezed == profileElement
           ? _value.profileElement
           : profileElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
-      mustSupport: mustSupport == freezed
+      mustSupport: freezed == mustSupport
           ? _value.mustSupport
           : mustSupport // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      mustSupportElement: mustSupportElement == freezed
+      mustSupportElement: freezed == mustSupportElement
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
-      codeFilter: codeFilter == freezed
+      codeFilter: freezed == codeFilter
           ? _value.codeFilter
           : codeFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementCodeFilter>?,
-      dateFilter: dateFilter == freezed
+      dateFilter: freezed == dateFilter
           ? _value.dateFilter
           : dateFilter // ignore: cast_nullable_to_non_nullable
               as List<DataRequirementDateFilter>?,
@@ -1561,94 +1429,88 @@ class _$_DataRequirement extends _DataRequirement {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DataRequirement &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DataRequirement &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
-            (identical(other.profileElement, profileElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.profileElement, profileElement)) &&
-            (identical(other.mustSupport, mustSupport) ||
-                const DeepCollectionEquality()
-                    .equals(other.mustSupport, mustSupport)) &&
-            (identical(other.mustSupportElement, mustSupportElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.mustSupportElement, mustSupportElement)) &&
-            (identical(other.codeFilter, codeFilter) ||
-                const DeepCollectionEquality()
-                    .equals(other.codeFilter, codeFilter)) &&
-            (identical(other.dateFilter, dateFilter) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateFilter, dateFilter)));
+                other.typeElement == typeElement) &&
+            const DeepCollectionEquality().equals(other.profile, profile) &&
+            const DeepCollectionEquality()
+                .equals(other.profileElement, profileElement) &&
+            const DeepCollectionEquality()
+                .equals(other.mustSupport, mustSupport) &&
+            const DeepCollectionEquality()
+                .equals(other.mustSupportElement, mustSupportElement) &&
+            const DeepCollectionEquality()
+                .equals(other.codeFilter, codeFilter) &&
+            const DeepCollectionEquality()
+                .equals(other.dateFilter, dateFilter));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(profileElement) ^
-      const DeepCollectionEquality().hash(mustSupport) ^
-      const DeepCollectionEquality().hash(mustSupportElement) ^
-      const DeepCollectionEquality().hash(codeFilter) ^
-      const DeepCollectionEquality().hash(dateFilter);
 
   @JsonKey(ignore: true)
   @override
-  _$DataRequirementCopyWith<_DataRequirement> get copyWith =>
-      __$DataRequirementCopyWithImpl<_DataRequirement>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      typeElement,
+      const DeepCollectionEquality().hash(profile),
+      const DeepCollectionEquality().hash(profileElement),
+      const DeepCollectionEquality().hash(mustSupport),
+      const DeepCollectionEquality().hash(mustSupportElement),
+      const DeepCollectionEquality().hash(codeFilter),
+      const DeepCollectionEquality().hash(dateFilter));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DataRequirementCopyWith<_$_DataRequirement> get copyWith =>
+      __$$_DataRequirementCopyWithImpl<_$_DataRequirement>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementToJson(this);
+    return _$$_DataRequirementToJson(
+      this,
+    );
   }
 }
 
 abstract class _DataRequirement extends DataRequirement {
   factory _DataRequirement(
-      {String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      List<String>? profile,
-      @JsonKey(name: '_profile') List<Element?>? profileElement,
-      List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
-      List<DataRequirementCodeFilter>? codeFilter,
-      List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
+      {final String? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final List<String>? profile,
+      @JsonKey(name: '_profile') final List<Element?>? profileElement,
+      final List<String>? mustSupport,
+      @JsonKey(name: '_mustSupport') final List<Element?>? mustSupportElement,
+      final List<DataRequirementCodeFilter>? codeFilter,
+      final List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
   _DataRequirement._() : super._();
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
 
   @override
-  String? get type => throw _privateConstructorUsedError;
+  String? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  List<String>? get profile => throw _privateConstructorUsedError;
+  List<String>? get profile;
   @override
   @JsonKey(name: '_profile')
-  List<Element?>? get profileElement => throw _privateConstructorUsedError;
+  List<Element?>? get profileElement;
   @override
-  List<String>? get mustSupport => throw _privateConstructorUsedError;
+  List<String>? get mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement => throw _privateConstructorUsedError;
+  List<Element?>? get mustSupportElement;
   @override
-  List<DataRequirementCodeFilter>? get codeFilter =>
-      throw _privateConstructorUsedError;
+  List<DataRequirementCodeFilter>? get codeFilter;
   @override
-  List<DataRequirementDateFilter>? get dateFilter =>
-      throw _privateConstructorUsedError;
+  List<DataRequirementDateFilter>? get dateFilter;
   @override
   @JsonKey(ignore: true)
-  _$DataRequirementCopyWith<_DataRequirement> get copyWith =>
+  _$$_DataRequirementCopyWith<_$_DataRequirement> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1656,41 +1518,6 @@ DataRequirementCodeFilter _$DataRequirementCodeFilterFromJson(
     Map<String, dynamic> json) {
   return _DataRequirementCodeFilter.fromJson(json);
 }
-
-/// @nodoc
-class _$DataRequirementCodeFilterTearOff {
-  const _$DataRequirementCodeFilterTearOff();
-
-  _DataRequirementCodeFilter call(
-      {String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      String? valueSetString,
-      @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
-      Reference? valueSetReference,
-      List<Code>? valueCode,
-      @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-      List<Coding>? valueCoding,
-      List<CodeableConcept>? valueCodeableConcept}) {
-    return _DataRequirementCodeFilter(
-      path: path,
-      pathElement: pathElement,
-      valueSetString: valueSetString,
-      valueSetStringElement: valueSetStringElement,
-      valueSetReference: valueSetReference,
-      valueCode: valueCode,
-      valueCodeElement: valueCodeElement,
-      valueCoding: valueCoding,
-      valueCodeableConcept: valueCodeableConcept,
-    );
-  }
-
-  DataRequirementCodeFilter fromJson(Map<String, Object> json) {
-    return DataRequirementCodeFilter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DataRequirementCodeFilter = _$DataRequirementCodeFilterTearOff();
 
 /// @nodoc
 mixin _$DataRequirementCodeFilter {
@@ -1718,7 +1545,8 @@ mixin _$DataRequirementCodeFilter {
 abstract class $DataRequirementCodeFilterCopyWith<$Res> {
   factory $DataRequirementCodeFilterCopyWith(DataRequirementCodeFilter value,
           $Res Function(DataRequirementCodeFilter) then) =
-      _$DataRequirementCodeFilterCopyWithImpl<$Res>;
+      _$DataRequirementCodeFilterCopyWithImpl<$Res, DataRequirementCodeFilter>;
+  @useResult
   $Res call(
       {String? path,
       @JsonKey(name: '_path') Element? pathElement,
@@ -1736,14 +1564,17 @@ abstract class $DataRequirementCodeFilterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DataRequirementCodeFilterCopyWithImpl<$Res>
+class _$DataRequirementCodeFilterCopyWithImpl<$Res,
+        $Val extends DataRequirementCodeFilter>
     implements $DataRequirementCodeFilterCopyWith<$Res> {
   _$DataRequirementCodeFilterCopyWithImpl(this._value, this._then);
 
-  final DataRequirementCodeFilter _value;
   // ignore: unused_field
-  final $Res Function(DataRequirementCodeFilter) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = freezed,
@@ -1757,86 +1588,91 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res>
     Object? valueCodeableConcept = freezed,
   }) {
     return _then(_value.copyWith(
-      path: path == freezed
+      path: freezed == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String?,
-      pathElement: pathElement == freezed
+      pathElement: freezed == pathElement
           ? _value.pathElement
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueSetString: valueSetString == freezed
+      valueSetString: freezed == valueSetString
           ? _value.valueSetString
           : valueSetString // ignore: cast_nullable_to_non_nullable
               as String?,
-      valueSetStringElement: valueSetStringElement == freezed
+      valueSetStringElement: freezed == valueSetStringElement
           ? _value.valueSetStringElement
           : valueSetStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueSetReference: valueSetReference == freezed
+      valueSetReference: freezed == valueSetReference
           ? _value.valueSetReference
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      valueCode: valueCode == freezed
+      valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      valueCodeElement: valueCodeElement == freezed
+      valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
-      valueCoding: valueCoding == freezed
+      valueCoding: freezed == valueCoding
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      valueCodeableConcept: valueCodeableConcept == freezed
+      valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
     if (_value.pathElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.pathElement!, (value) {
-      return _then(_value.copyWith(pathElement: value));
+      return _then(_value.copyWith(pathElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueSetStringElement {
     if (_value.valueSetStringElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.valueSetStringElement!, (value) {
-      return _then(_value.copyWith(valueSetStringElement: value));
+      return _then(_value.copyWith(valueSetStringElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueSetReference {
     if (_value.valueSetReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.valueSetReference!, (value) {
-      return _then(_value.copyWith(valueSetReference: value));
+      return _then(_value.copyWith(valueSetReference: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DataRequirementCodeFilterCopyWith<$Res>
+abstract class _$$_DataRequirementCodeFilterCopyWith<$Res>
     implements $DataRequirementCodeFilterCopyWith<$Res> {
-  factory _$DataRequirementCodeFilterCopyWith(_DataRequirementCodeFilter value,
-          $Res Function(_DataRequirementCodeFilter) then) =
-      __$DataRequirementCodeFilterCopyWithImpl<$Res>;
+  factory _$$_DataRequirementCodeFilterCopyWith(
+          _$_DataRequirementCodeFilter value,
+          $Res Function(_$_DataRequirementCodeFilter) then) =
+      __$$_DataRequirementCodeFilterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? path,
       @JsonKey(name: '_path') Element? pathElement,
@@ -1857,17 +1693,16 @@ abstract class _$DataRequirementCodeFilterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DataRequirementCodeFilterCopyWithImpl<$Res>
-    extends _$DataRequirementCodeFilterCopyWithImpl<$Res>
-    implements _$DataRequirementCodeFilterCopyWith<$Res> {
-  __$DataRequirementCodeFilterCopyWithImpl(_DataRequirementCodeFilter _value,
-      $Res Function(_DataRequirementCodeFilter) _then)
-      : super(_value, (v) => _then(v as _DataRequirementCodeFilter));
+class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
+    extends _$DataRequirementCodeFilterCopyWithImpl<$Res,
+        _$_DataRequirementCodeFilter>
+    implements _$$_DataRequirementCodeFilterCopyWith<$Res> {
+  __$$_DataRequirementCodeFilterCopyWithImpl(
+      _$_DataRequirementCodeFilter _value,
+      $Res Function(_$_DataRequirementCodeFilter) _then)
+      : super(_value, _then);
 
-  @override
-  _DataRequirementCodeFilter get _value =>
-      super._value as _DataRequirementCodeFilter;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = freezed,
@@ -1880,40 +1715,40 @@ class __$DataRequirementCodeFilterCopyWithImpl<$Res>
     Object? valueCoding = freezed,
     Object? valueCodeableConcept = freezed,
   }) {
-    return _then(_DataRequirementCodeFilter(
-      path: path == freezed
+    return _then(_$_DataRequirementCodeFilter(
+      path: freezed == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String?,
-      pathElement: pathElement == freezed
+      pathElement: freezed == pathElement
           ? _value.pathElement
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueSetString: valueSetString == freezed
+      valueSetString: freezed == valueSetString
           ? _value.valueSetString
           : valueSetString // ignore: cast_nullable_to_non_nullable
               as String?,
-      valueSetStringElement: valueSetStringElement == freezed
+      valueSetStringElement: freezed == valueSetStringElement
           ? _value.valueSetStringElement
           : valueSetStringElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueSetReference: valueSetReference == freezed
+      valueSetReference: freezed == valueSetReference
           ? _value.valueSetReference
           : valueSetReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      valueCode: valueCode == freezed
+      valueCode: freezed == valueCode
           ? _value.valueCode
           : valueCode // ignore: cast_nullable_to_non_nullable
               as List<Code>?,
-      valueCodeElement: valueCodeElement == freezed
+      valueCodeElement: freezed == valueCodeElement
           ? _value.valueCodeElement
           : valueCodeElement // ignore: cast_nullable_to_non_nullable
               as List<Element?>?,
-      valueCoding: valueCoding == freezed
+      valueCoding: freezed == valueCoding
           ? _value.valueCoding
           : valueCoding // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      valueCodeableConcept: valueCodeableConcept == freezed
+      valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
@@ -1969,103 +1804,96 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DataRequirementCodeFilter &&
-            (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DataRequirementCodeFilter &&
+            (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.pathElement, pathElement)) &&
+                other.pathElement == pathElement) &&
             (identical(other.valueSetString, valueSetString) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueSetString, valueSetString)) &&
+                other.valueSetString == valueSetString) &&
             (identical(other.valueSetStringElement, valueSetStringElement) ||
-                const DeepCollectionEquality().equals(
-                    other.valueSetStringElement, valueSetStringElement)) &&
+                other.valueSetStringElement == valueSetStringElement) &&
             (identical(other.valueSetReference, valueSetReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueSetReference, valueSetReference)) &&
-            (identical(other.valueCode, valueCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCode, valueCode)) &&
-            (identical(other.valueCodeElement, valueCodeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCodeElement, valueCodeElement)) &&
-            (identical(other.valueCoding, valueCoding) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCoding, valueCoding)) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueCodeableConcept, valueCodeableConcept)));
+                other.valueSetReference == valueSetReference) &&
+            const DeepCollectionEquality().equals(other.valueCode, valueCode) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeElement, valueCodeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCoding, valueCoding) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(pathElement) ^
-      const DeepCollectionEquality().hash(valueSetString) ^
-      const DeepCollectionEquality().hash(valueSetStringElement) ^
-      const DeepCollectionEquality().hash(valueSetReference) ^
-      const DeepCollectionEquality().hash(valueCode) ^
-      const DeepCollectionEquality().hash(valueCodeElement) ^
-      const DeepCollectionEquality().hash(valueCoding) ^
-      const DeepCollectionEquality().hash(valueCodeableConcept);
 
   @JsonKey(ignore: true)
   @override
-  _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter>
-      get copyWith =>
-          __$DataRequirementCodeFilterCopyWithImpl<_DataRequirementCodeFilter>(
-              this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      path,
+      pathElement,
+      valueSetString,
+      valueSetStringElement,
+      valueSetReference,
+      const DeepCollectionEquality().hash(valueCode),
+      const DeepCollectionEquality().hash(valueCodeElement),
+      const DeepCollectionEquality().hash(valueCoding),
+      const DeepCollectionEquality().hash(valueCodeableConcept));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DataRequirementCodeFilterCopyWith<_$_DataRequirementCodeFilter>
+      get copyWith => __$$_DataRequirementCodeFilterCopyWithImpl<
+          _$_DataRequirementCodeFilter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementCodeFilterToJson(this);
+    return _$$_DataRequirementCodeFilterToJson(
+      this,
+    );
   }
 }
 
 abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   factory _DataRequirementCodeFilter(
-          {String? path,
-          @JsonKey(name: '_path') Element? pathElement,
-          String? valueSetString,
-          @JsonKey(name: '_valueSetString') Element? valueSetStringElement,
-          Reference? valueSetReference,
-          List<Code>? valueCode,
-          @JsonKey(name: '_valueCode') List<Element?>? valueCodeElement,
-          List<Coding>? valueCoding,
-          List<CodeableConcept>? valueCodeableConcept}) =
-      _$_DataRequirementCodeFilter;
+      {final String? path,
+      @JsonKey(name: '_path') final Element? pathElement,
+      final String? valueSetString,
+      @JsonKey(name: '_valueSetString') final Element? valueSetStringElement,
+      final Reference? valueSetReference,
+      final List<Code>? valueCode,
+      @JsonKey(name: '_valueCode') final List<Element?>? valueCodeElement,
+      final List<Coding>? valueCoding,
+      final List<CodeableConcept>?
+          valueCodeableConcept}) = _$_DataRequirementCodeFilter;
   _DataRequirementCodeFilter._() : super._();
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
 
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  String? get valueSetString => throw _privateConstructorUsedError;
+  String? get valueSetString;
   @override
   @JsonKey(name: '_valueSetString')
-  Element? get valueSetStringElement => throw _privateConstructorUsedError;
+  Element? get valueSetStringElement;
   @override
-  Reference? get valueSetReference => throw _privateConstructorUsedError;
+  Reference? get valueSetReference;
   @override
-  List<Code>? get valueCode => throw _privateConstructorUsedError;
+  List<Code>? get valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  List<Element?>? get valueCodeElement => throw _privateConstructorUsedError;
+  List<Element?>? get valueCodeElement;
   @override
-  List<Coding>? get valueCoding => throw _privateConstructorUsedError;
+  List<Coding>? get valueCoding;
   @override
-  List<CodeableConcept>? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get valueCodeableConcept;
   @override
   @JsonKey(ignore: true)
-  _$DataRequirementCodeFilterCopyWith<_DataRequirementCodeFilter>
+  _$$_DataRequirementCodeFilterCopyWith<_$_DataRequirementCodeFilter>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2073,35 +1901,6 @@ DataRequirementDateFilter _$DataRequirementDateFilterFromJson(
     Map<String, dynamic> json) {
   return _DataRequirementDateFilter.fromJson(json);
 }
-
-/// @nodoc
-class _$DataRequirementDateFilterTearOff {
-  const _$DataRequirementDateFilterTearOff();
-
-  _DataRequirementDateFilter call(
-      {String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Period? valuePeriod,
-      FhirDuration? valueDuration}) {
-    return _DataRequirementDateFilter(
-      path: path,
-      pathElement: pathElement,
-      valueDateTime: valueDateTime,
-      valueDateTimeElement: valueDateTimeElement,
-      valuePeriod: valuePeriod,
-      valueDuration: valueDuration,
-    );
-  }
-
-  DataRequirementDateFilter fromJson(Map<String, Object> json) {
-    return DataRequirementDateFilter.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $DataRequirementDateFilter = _$DataRequirementDateFilterTearOff();
 
 /// @nodoc
 mixin _$DataRequirementDateFilter {
@@ -2124,7 +1923,8 @@ mixin _$DataRequirementDateFilter {
 abstract class $DataRequirementDateFilterCopyWith<$Res> {
   factory $DataRequirementDateFilterCopyWith(DataRequirementDateFilter value,
           $Res Function(DataRequirementDateFilter) then) =
-      _$DataRequirementDateFilterCopyWithImpl<$Res>;
+      _$DataRequirementDateFilterCopyWithImpl<$Res, DataRequirementDateFilter>;
+  @useResult
   $Res call(
       {String? path,
       @JsonKey(name: '_path') Element? pathElement,
@@ -2140,14 +1940,17 @@ abstract class $DataRequirementDateFilterCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DataRequirementDateFilterCopyWithImpl<$Res>
+class _$DataRequirementDateFilterCopyWithImpl<$Res,
+        $Val extends DataRequirementDateFilter>
     implements $DataRequirementDateFilterCopyWith<$Res> {
   _$DataRequirementDateFilterCopyWithImpl(this._value, this._then);
 
-  final DataRequirementDateFilter _value;
   // ignore: unused_field
-  final $Res Function(DataRequirementDateFilter) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = freezed,
@@ -2158,85 +1961,91 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res>
     Object? valueDuration = freezed,
   }) {
     return _then(_value.copyWith(
-      path: path == freezed
+      path: freezed == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String?,
-      pathElement: pathElement == freezed
+      pathElement: freezed == pathElement
           ? _value.pathElement
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueDateTime: valueDateTime == freezed
+      valueDateTime: freezed == valueDateTime
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      valueDateTimeElement: valueDateTimeElement == freezed
+      valueDateTimeElement: freezed == valueDateTimeElement
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valuePeriod: valuePeriod == freezed
+      valuePeriod: freezed == valuePeriod
           ? _value.valuePeriod
           : valuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      valueDuration: valueDuration == freezed
+      valueDuration: freezed == valueDuration
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
               as FhirDuration?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
     if (_value.pathElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.pathElement!, (value) {
-      return _then(_value.copyWith(pathElement: value));
+      return _then(_value.copyWith(pathElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueDateTimeElement {
     if (_value.valueDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
-      return _then(_value.copyWith(valueDateTimeElement: value));
+      return _then(_value.copyWith(valueDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get valuePeriod {
     if (_value.valuePeriod == null) {
       return null;
     }
 
     return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
-      return _then(_value.copyWith(valuePeriod: value));
+      return _then(_value.copyWith(valuePeriod: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $FhirDurationCopyWith<$Res>? get valueDuration {
     if (_value.valueDuration == null) {
       return null;
     }
 
     return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
-      return _then(_value.copyWith(valueDuration: value));
+      return _then(_value.copyWith(valueDuration: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$DataRequirementDateFilterCopyWith<$Res>
+abstract class _$$_DataRequirementDateFilterCopyWith<$Res>
     implements $DataRequirementDateFilterCopyWith<$Res> {
-  factory _$DataRequirementDateFilterCopyWith(_DataRequirementDateFilter value,
-          $Res Function(_DataRequirementDateFilter) then) =
-      __$DataRequirementDateFilterCopyWithImpl<$Res>;
+  factory _$$_DataRequirementDateFilterCopyWith(
+          _$_DataRequirementDateFilter value,
+          $Res Function(_$_DataRequirementDateFilter) then) =
+      __$$_DataRequirementDateFilterCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? path,
       @JsonKey(name: '_path') Element? pathElement,
@@ -2256,17 +2065,16 @@ abstract class _$DataRequirementDateFilterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$DataRequirementDateFilterCopyWithImpl<$Res>
-    extends _$DataRequirementDateFilterCopyWithImpl<$Res>
-    implements _$DataRequirementDateFilterCopyWith<$Res> {
-  __$DataRequirementDateFilterCopyWithImpl(_DataRequirementDateFilter _value,
-      $Res Function(_DataRequirementDateFilter) _then)
-      : super(_value, (v) => _then(v as _DataRequirementDateFilter));
+class __$$_DataRequirementDateFilterCopyWithImpl<$Res>
+    extends _$DataRequirementDateFilterCopyWithImpl<$Res,
+        _$_DataRequirementDateFilter>
+    implements _$$_DataRequirementDateFilterCopyWith<$Res> {
+  __$$_DataRequirementDateFilterCopyWithImpl(
+      _$_DataRequirementDateFilter _value,
+      $Res Function(_$_DataRequirementDateFilter) _then)
+      : super(_value, _then);
 
-  @override
-  _DataRequirementDateFilter get _value =>
-      super._value as _DataRequirementDateFilter;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? path = freezed,
@@ -2276,28 +2084,28 @@ class __$DataRequirementDateFilterCopyWithImpl<$Res>
     Object? valuePeriod = freezed,
     Object? valueDuration = freezed,
   }) {
-    return _then(_DataRequirementDateFilter(
-      path: path == freezed
+    return _then(_$_DataRequirementDateFilter(
+      path: freezed == path
           ? _value.path
           : path // ignore: cast_nullable_to_non_nullable
               as String?,
-      pathElement: pathElement == freezed
+      pathElement: freezed == pathElement
           ? _value.pathElement
           : pathElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valueDateTime: valueDateTime == freezed
+      valueDateTime: freezed == valueDateTime
           ? _value.valueDateTime
           : valueDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      valueDateTimeElement: valueDateTimeElement == freezed
+      valueDateTimeElement: freezed == valueDateTimeElement
           ? _value.valueDateTimeElement
           : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      valuePeriod: valuePeriod == freezed
+      valuePeriod: freezed == valuePeriod
           ? _value.valuePeriod
           : valuePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
-      valueDuration: valueDuration == freezed
+      valueDuration: freezed == valueDuration
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
               as FhirDuration?,
@@ -2343,128 +2151,77 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DataRequirementDateFilter &&
-            (identical(other.path, path) ||
-                const DeepCollectionEquality().equals(other.path, path)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_DataRequirementDateFilter &&
+            (identical(other.path, path) || other.path == path) &&
             (identical(other.pathElement, pathElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.pathElement, pathElement)) &&
+                other.pathElement == pathElement) &&
             (identical(other.valueDateTime, valueDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDateTime, valueDateTime)) &&
+                other.valueDateTime == valueDateTime) &&
             (identical(other.valueDateTimeElement, valueDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.valueDateTimeElement, valueDateTimeElement)) &&
+                other.valueDateTimeElement == valueDateTimeElement) &&
             (identical(other.valuePeriod, valuePeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.valuePeriod, valuePeriod)) &&
+                other.valuePeriod == valuePeriod) &&
             (identical(other.valueDuration, valueDuration) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueDuration, valueDuration)));
+                other.valueDuration == valueDuration));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(path) ^
-      const DeepCollectionEquality().hash(pathElement) ^
-      const DeepCollectionEquality().hash(valueDateTime) ^
-      const DeepCollectionEquality().hash(valueDateTimeElement) ^
-      const DeepCollectionEquality().hash(valuePeriod) ^
-      const DeepCollectionEquality().hash(valueDuration);
 
   @JsonKey(ignore: true)
   @override
-  _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter>
-      get copyWith =>
-          __$DataRequirementDateFilterCopyWithImpl<_DataRequirementDateFilter>(
-              this, _$identity);
+  int get hashCode => Object.hash(runtimeType, path, pathElement, valueDateTime,
+      valueDateTimeElement, valuePeriod, valueDuration);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_DataRequirementDateFilterCopyWith<_$_DataRequirementDateFilter>
+      get copyWith => __$$_DataRequirementDateFilterCopyWithImpl<
+          _$_DataRequirementDateFilter>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataRequirementDateFilterToJson(this);
+    return _$$_DataRequirementDateFilterToJson(
+      this,
+    );
   }
 }
 
 abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   factory _DataRequirementDateFilter(
-      {String? path,
-      @JsonKey(name: '_path') Element? pathElement,
-      FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-      Period? valuePeriod,
-      FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
+      {final String? path,
+      @JsonKey(name: '_path') final Element? pathElement,
+      final FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
+      final Period? valuePeriod,
+      final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
   _DataRequirementDateFilter._() : super._();
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
 
   @override
-  String? get path => throw _privateConstructorUsedError;
+  String? get path;
   @override
   @JsonKey(name: '_path')
-  Element? get pathElement => throw _privateConstructorUsedError;
+  Element? get pathElement;
   @override
-  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  Element? get valueDateTimeElement;
   @override
-  Period? get valuePeriod => throw _privateConstructorUsedError;
+  Period? get valuePeriod;
   @override
-  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration;
   @override
   @JsonKey(ignore: true)
-  _$DataRequirementDateFilterCopyWith<_DataRequirementDateFilter>
+  _$$_DataRequirementDateFilterCopyWith<_$_DataRequirementDateFilter>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 ParameterDefinition _$ParameterDefinitionFromJson(Map<String, dynamic> json) {
   return _ParameterDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$ParameterDefinitionTearOff {
-  const _$ParameterDefinitionTearOff();
-
-  _ParameterDefinition call(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? use,
-      @JsonKey(name: '_use') Element? useElement,
-      Decimal? min,
-      @JsonKey(name: '_min') Element? minElement,
-      String? max,
-      @JsonKey(name: '_max') Element? maxElement,
-      String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
-      String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Reference? profile}) {
-    return _ParameterDefinition(
-      name: name,
-      nameElement: nameElement,
-      use: use,
-      useElement: useElement,
-      min: min,
-      minElement: minElement,
-      max: max,
-      maxElement: maxElement,
-      documentation: documentation,
-      documentationElement: documentationElement,
-      type: type,
-      typeElement: typeElement,
-      profile: profile,
-    );
-  }
-
-  ParameterDefinition fromJson(Map<String, Object> json) {
-    return ParameterDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $ParameterDefinition = _$ParameterDefinitionTearOff();
 
 /// @nodoc
 mixin _$ParameterDefinition {
@@ -2498,7 +2255,8 @@ mixin _$ParameterDefinition {
 abstract class $ParameterDefinitionCopyWith<$Res> {
   factory $ParameterDefinitionCopyWith(
           ParameterDefinition value, $Res Function(ParameterDefinition) then) =
-      _$ParameterDefinitionCopyWithImpl<$Res>;
+      _$ParameterDefinitionCopyWithImpl<$Res, ParameterDefinition>;
+  @useResult
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -2524,14 +2282,16 @@ abstract class $ParameterDefinitionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ParameterDefinitionCopyWithImpl<$Res>
+class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     implements $ParameterDefinitionCopyWith<$Res> {
   _$ParameterDefinitionCopyWithImpl(this._value, this._then);
 
-  final ParameterDefinition _value;
   // ignore: unused_field
-  final $Res Function(ParameterDefinition) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
@@ -2549,146 +2309,154 @@ class _$ParameterDefinitionCopyWithImpl<$Res>
     Object? profile = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      use: use == freezed
+      use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
               as String?,
-      useElement: useElement == freezed
+      useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      min: min == freezed
+      min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      minElement: minElement == freezed
+      minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      max: max == freezed
+      max: freezed == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxElement: maxElement == freezed
+      maxElement: freezed == maxElement
           ? _value.maxElement
           : maxElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      documentationElement: documentationElement == freezed
+      documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value));
+      return _then(_value.copyWith(nameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get useElement {
     if (_value.useElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.useElement!, (value) {
-      return _then(_value.copyWith(useElement: value));
+      return _then(_value.copyWith(useElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minElement {
     if (_value.minElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.minElement!, (value) {
-      return _then(_value.copyWith(minElement: value));
+      return _then(_value.copyWith(minElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxElement {
     if (_value.maxElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.maxElement!, (value) {
-      return _then(_value.copyWith(maxElement: value));
+      return _then(_value.copyWith(maxElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get documentationElement {
     if (_value.documentationElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.documentationElement!, (value) {
-      return _then(_value.copyWith(documentationElement: value));
+      return _then(_value.copyWith(documentationElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get profile {
     if (_value.profile == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.profile!, (value) {
-      return _then(_value.copyWith(profile: value));
+      return _then(_value.copyWith(profile: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$ParameterDefinitionCopyWith<$Res>
+abstract class _$$_ParameterDefinitionCopyWith<$Res>
     implements $ParameterDefinitionCopyWith<$Res> {
-  factory _$ParameterDefinitionCopyWith(_ParameterDefinition value,
-          $Res Function(_ParameterDefinition) then) =
-      __$ParameterDefinitionCopyWithImpl<$Res>;
+  factory _$$_ParameterDefinitionCopyWith(_$_ParameterDefinition value,
+          $Res Function(_$_ParameterDefinition) then) =
+      __$$_ParameterDefinitionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -2721,16 +2489,14 @@ abstract class _$ParameterDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ParameterDefinitionCopyWithImpl<$Res>
-    extends _$ParameterDefinitionCopyWithImpl<$Res>
-    implements _$ParameterDefinitionCopyWith<$Res> {
-  __$ParameterDefinitionCopyWithImpl(
-      _ParameterDefinition _value, $Res Function(_ParameterDefinition) _then)
-      : super(_value, (v) => _then(v as _ParameterDefinition));
+class __$$_ParameterDefinitionCopyWithImpl<$Res>
+    extends _$ParameterDefinitionCopyWithImpl<$Res, _$_ParameterDefinition>
+    implements _$$_ParameterDefinitionCopyWith<$Res> {
+  __$$_ParameterDefinitionCopyWithImpl(_$_ParameterDefinition _value,
+      $Res Function(_$_ParameterDefinition) _then)
+      : super(_value, _then);
 
-  @override
-  _ParameterDefinition get _value => super._value as _ParameterDefinition;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? name = freezed,
@@ -2747,56 +2513,56 @@ class __$ParameterDefinitionCopyWithImpl<$Res>
     Object? typeElement = freezed,
     Object? profile = freezed,
   }) {
-    return _then(_ParameterDefinition(
-      name: name == freezed
+    return _then(_$_ParameterDefinition(
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      nameElement: nameElement == freezed
+      nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      use: use == freezed
+      use: freezed == use
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
               as String?,
-      useElement: useElement == freezed
+      useElement: freezed == useElement
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      min: min == freezed
+      min: freezed == min
           ? _value.min
           : min // ignore: cast_nullable_to_non_nullable
               as Decimal?,
-      minElement: minElement == freezed
+      minElement: freezed == minElement
           ? _value.minElement
           : minElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      max: max == freezed
+      max: freezed == max
           ? _value.max
           : max // ignore: cast_nullable_to_non_nullable
               as String?,
-      maxElement: maxElement == freezed
+      maxElement: freezed == maxElement
           ? _value.maxElement
           : maxElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      documentation: documentation == freezed
+      documentation: freezed == documentation
           ? _value.documentation
           : documentation // ignore: cast_nullable_to_non_nullable
               as String?,
-      documentationElement: documentationElement == freezed
+      documentationElement: freezed == documentationElement
           ? _value.documentationElement
           : documentationElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      profile: profile == freezed
+      profile: freezed == profile
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as Reference?,
@@ -2867,175 +2633,124 @@ class _$_ParameterDefinition extends _ParameterDefinition {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ParameterDefinition &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_ParameterDefinition &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.nameElement, nameElement)) &&
-            (identical(other.use, use) ||
-                const DeepCollectionEquality().equals(other.use, use)) &&
+                other.nameElement == nameElement) &&
+            (identical(other.use, use) || other.use == use) &&
             (identical(other.useElement, useElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.useElement, useElement)) &&
-            (identical(other.min, min) ||
-                const DeepCollectionEquality().equals(other.min, min)) &&
+                other.useElement == useElement) &&
+            (identical(other.min, min) || other.min == min) &&
             (identical(other.minElement, minElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.minElement, minElement)) &&
-            (identical(other.max, max) ||
-                const DeepCollectionEquality().equals(other.max, max)) &&
+                other.minElement == minElement) &&
+            (identical(other.max, max) || other.max == max) &&
             (identical(other.maxElement, maxElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxElement, maxElement)) &&
+                other.maxElement == maxElement) &&
             (identical(other.documentation, documentation) ||
-                const DeepCollectionEquality()
-                    .equals(other.documentation, documentation)) &&
+                other.documentation == documentation) &&
             (identical(other.documentationElement, documentationElement) ||
-                const DeepCollectionEquality().equals(
-                    other.documentationElement, documentationElement)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+                other.documentationElement == documentationElement) &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality().equals(other.profile, profile)));
+                other.typeElement == typeElement) &&
+            (identical(other.profile, profile) || other.profile == profile));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(nameElement) ^
-      const DeepCollectionEquality().hash(use) ^
-      const DeepCollectionEquality().hash(useElement) ^
-      const DeepCollectionEquality().hash(min) ^
-      const DeepCollectionEquality().hash(minElement) ^
-      const DeepCollectionEquality().hash(max) ^
-      const DeepCollectionEquality().hash(maxElement) ^
-      const DeepCollectionEquality().hash(documentation) ^
-      const DeepCollectionEquality().hash(documentationElement) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(profile);
 
   @JsonKey(ignore: true)
   @override
-  _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith =>
-      __$ParameterDefinitionCopyWithImpl<_ParameterDefinition>(
+  int get hashCode => Object.hash(
+      runtimeType,
+      name,
+      nameElement,
+      use,
+      useElement,
+      min,
+      minElement,
+      max,
+      maxElement,
+      documentation,
+      documentationElement,
+      type,
+      typeElement,
+      profile);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ParameterDefinitionCopyWith<_$_ParameterDefinition> get copyWith =>
+      __$$_ParameterDefinitionCopyWithImpl<_$_ParameterDefinition>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ParameterDefinitionToJson(this);
+    return _$$_ParameterDefinitionToJson(
+      this,
+    );
   }
 }
 
 abstract class _ParameterDefinition extends ParameterDefinition {
   factory _ParameterDefinition(
-      {String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? use,
-      @JsonKey(name: '_use') Element? useElement,
-      Decimal? min,
-      @JsonKey(name: '_min') Element? minElement,
-      String? max,
-      @JsonKey(name: '_max') Element? maxElement,
-      String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
-      String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Reference? profile}) = _$_ParameterDefinition;
+      {final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? use,
+      @JsonKey(name: '_use') final Element? useElement,
+      final Decimal? min,
+      @JsonKey(name: '_min') final Element? minElement,
+      final String? max,
+      @JsonKey(name: '_max') final Element? maxElement,
+      final String? documentation,
+      @JsonKey(name: '_documentation') final Element? documentationElement,
+      final String? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final Reference? profile}) = _$_ParameterDefinition;
   _ParameterDefinition._() : super._();
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
       _$_ParameterDefinition.fromJson;
 
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+  Element? get nameElement;
   @override
-  String? get use => throw _privateConstructorUsedError;
+  String? get use;
   @override
   @JsonKey(name: '_use')
-  Element? get useElement => throw _privateConstructorUsedError;
+  Element? get useElement;
   @override
-  Decimal? get min => throw _privateConstructorUsedError;
+  Decimal? get min;
   @override
   @JsonKey(name: '_min')
-  Element? get minElement => throw _privateConstructorUsedError;
+  Element? get minElement;
   @override
-  String? get max => throw _privateConstructorUsedError;
+  String? get max;
   @override
   @JsonKey(name: '_max')
-  Element? get maxElement => throw _privateConstructorUsedError;
+  Element? get maxElement;
   @override
-  String? get documentation => throw _privateConstructorUsedError;
+  String? get documentation;
   @override
   @JsonKey(name: '_documentation')
-  Element? get documentationElement => throw _privateConstructorUsedError;
+  Element? get documentationElement;
   @override
-  String? get type => throw _privateConstructorUsedError;
+  String? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  Reference? get profile => throw _privateConstructorUsedError;
+  Reference? get profile;
   @override
   @JsonKey(ignore: true)
-  _$ParameterDefinitionCopyWith<_ParameterDefinition> get copyWith =>
+  _$$_ParameterDefinitionCopyWith<_$_ParameterDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 TriggerDefinition _$TriggerDefinitionFromJson(Map<String, dynamic> json) {
   return _TriggerDefinition.fromJson(json);
 }
-
-/// @nodoc
-class _$TriggerDefinitionTearOff {
-  const _$TriggerDefinitionTearOff();
-
-  _TriggerDefinition call(
-      {TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      String? eventName,
-      @JsonKey(name: '_eventName')
-          Element? eventNameElement,
-      Timing? eventTimingTiming,
-      Reference? eventTimingReference,
-      Date? eventTimingDate,
-      @JsonKey(name: '_eventTimingDate')
-          Element? eventTimingDateElement,
-      FhirDateTime? eventTimingDateTime,
-      @JsonKey(name: '_eventTimingDateTime')
-          Element? eventTimingDateTimeElement,
-      DataRequirement? eventData}) {
-    return _TriggerDefinition(
-      type: type,
-      typeElement: typeElement,
-      eventName: eventName,
-      eventNameElement: eventNameElement,
-      eventTimingTiming: eventTimingTiming,
-      eventTimingReference: eventTimingReference,
-      eventTimingDate: eventTimingDate,
-      eventTimingDateElement: eventTimingDateElement,
-      eventTimingDateTime: eventTimingDateTime,
-      eventTimingDateTimeElement: eventTimingDateTimeElement,
-      eventData: eventData,
-    );
-  }
-
-  TriggerDefinition fromJson(Map<String, Object> json) {
-    return TriggerDefinition.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $TriggerDefinition = _$TriggerDefinitionTearOff();
 
 /// @nodoc
 mixin _$TriggerDefinition {
@@ -3065,7 +2780,8 @@ mixin _$TriggerDefinition {
 abstract class $TriggerDefinitionCopyWith<$Res> {
   factory $TriggerDefinitionCopyWith(
           TriggerDefinition value, $Res Function(TriggerDefinition) then) =
-      _$TriggerDefinitionCopyWithImpl<$Res>;
+      _$TriggerDefinitionCopyWithImpl<$Res, TriggerDefinition>;
+  @useResult
   $Res call(
       {TriggerDefinitionType? type,
       @JsonKey(name: '_type')
@@ -3093,14 +2809,16 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TriggerDefinitionCopyWithImpl<$Res>
+class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     implements $TriggerDefinitionCopyWith<$Res> {
   _$TriggerDefinitionCopyWithImpl(this._value, this._then);
 
-  final TriggerDefinition _value;
   // ignore: unused_field
-  final $Res Function(TriggerDefinition) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -3116,138 +2834,146 @@ class _$TriggerDefinitionCopyWithImpl<$Res>
     Object? eventData = freezed,
   }) {
     return _then(_value.copyWith(
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TriggerDefinitionType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventName: eventName == freezed
+      eventName: freezed == eventName
           ? _value.eventName
           : eventName // ignore: cast_nullable_to_non_nullable
               as String?,
-      eventNameElement: eventNameElement == freezed
+      eventNameElement: freezed == eventNameElement
           ? _value.eventNameElement
           : eventNameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventTimingTiming: eventTimingTiming == freezed
+      eventTimingTiming: freezed == eventTimingTiming
           ? _value.eventTimingTiming
           : eventTimingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      eventTimingReference: eventTimingReference == freezed
+      eventTimingReference: freezed == eventTimingReference
           ? _value.eventTimingReference
           : eventTimingReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      eventTimingDate: eventTimingDate == freezed
+      eventTimingDate: freezed == eventTimingDate
           ? _value.eventTimingDate
           : eventTimingDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      eventTimingDateElement: eventTimingDateElement == freezed
+      eventTimingDateElement: freezed == eventTimingDateElement
           ? _value.eventTimingDateElement
           : eventTimingDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventTimingDateTime: eventTimingDateTime == freezed
+      eventTimingDateTime: freezed == eventTimingDateTime
           ? _value.eventTimingDateTime
           : eventTimingDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      eventTimingDateTimeElement: eventTimingDateTimeElement == freezed
+      eventTimingDateTimeElement: freezed == eventTimingDateTimeElement
           ? _value.eventTimingDateTimeElement
           : eventTimingDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventData: eventData == freezed
+      eventData: freezed == eventData
           ? _value.eventData
           : eventData // ignore: cast_nullable_to_non_nullable
               as DataRequirement?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value));
+      return _then(_value.copyWith(typeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get eventNameElement {
     if (_value.eventNameElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.eventNameElement!, (value) {
-      return _then(_value.copyWith(eventNameElement: value));
+      return _then(_value.copyWith(eventNameElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get eventTimingTiming {
     if (_value.eventTimingTiming == null) {
       return null;
     }
 
     return $TimingCopyWith<$Res>(_value.eventTimingTiming!, (value) {
-      return _then(_value.copyWith(eventTimingTiming: value));
+      return _then(_value.copyWith(eventTimingTiming: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get eventTimingReference {
     if (_value.eventTimingReference == null) {
       return null;
     }
 
     return $ReferenceCopyWith<$Res>(_value.eventTimingReference!, (value) {
-      return _then(_value.copyWith(eventTimingReference: value));
+      return _then(_value.copyWith(eventTimingReference: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get eventTimingDateElement {
     if (_value.eventTimingDateElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.eventTimingDateElement!, (value) {
-      return _then(_value.copyWith(eventTimingDateElement: value));
+      return _then(_value.copyWith(eventTimingDateElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get eventTimingDateTimeElement {
     if (_value.eventTimingDateTimeElement == null) {
       return null;
     }
 
     return $ElementCopyWith<$Res>(_value.eventTimingDateTimeElement!, (value) {
-      return _then(_value.copyWith(eventTimingDateTimeElement: value));
+      return _then(_value.copyWith(eventTimingDateTimeElement: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $DataRequirementCopyWith<$Res>? get eventData {
     if (_value.eventData == null) {
       return null;
     }
 
     return $DataRequirementCopyWith<$Res>(_value.eventData!, (value) {
-      return _then(_value.copyWith(eventData: value));
+      return _then(_value.copyWith(eventData: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$TriggerDefinitionCopyWith<$Res>
+abstract class _$$_TriggerDefinitionCopyWith<$Res>
     implements $TriggerDefinitionCopyWith<$Res> {
-  factory _$TriggerDefinitionCopyWith(
-          _TriggerDefinition value, $Res Function(_TriggerDefinition) then) =
-      __$TriggerDefinitionCopyWithImpl<$Res>;
+  factory _$$_TriggerDefinitionCopyWith(_$_TriggerDefinition value,
+          $Res Function(_$_TriggerDefinition) then) =
+      __$$_TriggerDefinitionCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {TriggerDefinitionType? type,
       @JsonKey(name: '_type')
@@ -3282,16 +3008,14 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$TriggerDefinitionCopyWithImpl<$Res>
-    extends _$TriggerDefinitionCopyWithImpl<$Res>
-    implements _$TriggerDefinitionCopyWith<$Res> {
-  __$TriggerDefinitionCopyWithImpl(
-      _TriggerDefinition _value, $Res Function(_TriggerDefinition) _then)
-      : super(_value, (v) => _then(v as _TriggerDefinition));
+class __$$_TriggerDefinitionCopyWithImpl<$Res>
+    extends _$TriggerDefinitionCopyWithImpl<$Res, _$_TriggerDefinition>
+    implements _$$_TriggerDefinitionCopyWith<$Res> {
+  __$$_TriggerDefinitionCopyWithImpl(
+      _$_TriggerDefinition _value, $Res Function(_$_TriggerDefinition) _then)
+      : super(_value, _then);
 
-  @override
-  _TriggerDefinition get _value => super._value as _TriggerDefinition;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? type = freezed,
@@ -3306,48 +3030,48 @@ class __$TriggerDefinitionCopyWithImpl<$Res>
     Object? eventTimingDateTimeElement = freezed,
     Object? eventData = freezed,
   }) {
-    return _then(_TriggerDefinition(
-      type: type == freezed
+    return _then(_$_TriggerDefinition(
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as TriggerDefinitionType?,
-      typeElement: typeElement == freezed
+      typeElement: freezed == typeElement
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventName: eventName == freezed
+      eventName: freezed == eventName
           ? _value.eventName
           : eventName // ignore: cast_nullable_to_non_nullable
               as String?,
-      eventNameElement: eventNameElement == freezed
+      eventNameElement: freezed == eventNameElement
           ? _value.eventNameElement
           : eventNameElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventTimingTiming: eventTimingTiming == freezed
+      eventTimingTiming: freezed == eventTimingTiming
           ? _value.eventTimingTiming
           : eventTimingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      eventTimingReference: eventTimingReference == freezed
+      eventTimingReference: freezed == eventTimingReference
           ? _value.eventTimingReference
           : eventTimingReference // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      eventTimingDate: eventTimingDate == freezed
+      eventTimingDate: freezed == eventTimingDate
           ? _value.eventTimingDate
           : eventTimingDate // ignore: cast_nullable_to_non_nullable
               as Date?,
-      eventTimingDateElement: eventTimingDateElement == freezed
+      eventTimingDateElement: freezed == eventTimingDateElement
           ? _value.eventTimingDateElement
           : eventTimingDateElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventTimingDateTime: eventTimingDateTime == freezed
+      eventTimingDateTime: freezed == eventTimingDateTime
           ? _value.eventTimingDateTime
           : eventTimingDateTime // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      eventTimingDateTimeElement: eventTimingDateTimeElement == freezed
+      eventTimingDateTimeElement: freezed == eventTimingDateTimeElement
           ? _value.eventTimingDateTimeElement
           : eventTimingDateTimeElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      eventData: eventData == freezed
+      eventData: freezed == eventData
           ? _value.eventData
           : eventData // ignore: cast_nullable_to_non_nullable
               as DataRequirement?,
@@ -3410,119 +3134,114 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _TriggerDefinition &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_TriggerDefinition &&
+            (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeElement, typeElement)) &&
+                other.typeElement == typeElement) &&
             (identical(other.eventName, eventName) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventName, eventName)) &&
+                other.eventName == eventName) &&
             (identical(other.eventNameElement, eventNameElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventNameElement, eventNameElement)) &&
+                other.eventNameElement == eventNameElement) &&
             (identical(other.eventTimingTiming, eventTimingTiming) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventTimingTiming, eventTimingTiming)) &&
+                other.eventTimingTiming == eventTimingTiming) &&
             (identical(other.eventTimingReference, eventTimingReference) ||
-                const DeepCollectionEquality().equals(
-                    other.eventTimingReference, eventTimingReference)) &&
+                other.eventTimingReference == eventTimingReference) &&
             (identical(other.eventTimingDate, eventTimingDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventTimingDate, eventTimingDate)) &&
+                other.eventTimingDate == eventTimingDate) &&
             (identical(other.eventTimingDateElement, eventTimingDateElement) ||
-                const DeepCollectionEquality().equals(
-                    other.eventTimingDateElement, eventTimingDateElement)) &&
+                other.eventTimingDateElement == eventTimingDateElement) &&
             (identical(other.eventTimingDateTime, eventTimingDateTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventTimingDateTime, eventTimingDateTime)) &&
+                other.eventTimingDateTime == eventTimingDateTime) &&
             (identical(other.eventTimingDateTimeElement,
                     eventTimingDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.eventTimingDateTimeElement,
-                    eventTimingDateTimeElement)) &&
+                other.eventTimingDateTimeElement ==
+                    eventTimingDateTimeElement) &&
             (identical(other.eventData, eventData) ||
-                const DeepCollectionEquality()
-                    .equals(other.eventData, eventData)));
+                other.eventData == eventData));
   }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(typeElement) ^
-      const DeepCollectionEquality().hash(eventName) ^
-      const DeepCollectionEquality().hash(eventNameElement) ^
-      const DeepCollectionEquality().hash(eventTimingTiming) ^
-      const DeepCollectionEquality().hash(eventTimingReference) ^
-      const DeepCollectionEquality().hash(eventTimingDate) ^
-      const DeepCollectionEquality().hash(eventTimingDateElement) ^
-      const DeepCollectionEquality().hash(eventTimingDateTime) ^
-      const DeepCollectionEquality().hash(eventTimingDateTimeElement) ^
-      const DeepCollectionEquality().hash(eventData);
 
   @JsonKey(ignore: true)
   @override
-  _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith =>
-      __$TriggerDefinitionCopyWithImpl<_TriggerDefinition>(this, _$identity);
+  int get hashCode => Object.hash(
+      runtimeType,
+      type,
+      typeElement,
+      eventName,
+      eventNameElement,
+      eventTimingTiming,
+      eventTimingReference,
+      eventTimingDate,
+      eventTimingDateElement,
+      eventTimingDateTime,
+      eventTimingDateTimeElement,
+      eventData);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_TriggerDefinitionCopyWith<_$_TriggerDefinition> get copyWith =>
+      __$$_TriggerDefinitionCopyWithImpl<_$_TriggerDefinition>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TriggerDefinitionToJson(this);
+    return _$$_TriggerDefinitionToJson(
+      this,
+    );
   }
 }
 
 abstract class _TriggerDefinition extends TriggerDefinition {
   factory _TriggerDefinition(
-      {TriggerDefinitionType? type,
+      {final TriggerDefinitionType? type,
       @JsonKey(name: '_type')
-          Element? typeElement,
-      String? eventName,
+          final Element? typeElement,
+      final String? eventName,
       @JsonKey(name: '_eventName')
-          Element? eventNameElement,
-      Timing? eventTimingTiming,
-      Reference? eventTimingReference,
-      Date? eventTimingDate,
+          final Element? eventNameElement,
+      final Timing? eventTimingTiming,
+      final Reference? eventTimingReference,
+      final Date? eventTimingDate,
       @JsonKey(name: '_eventTimingDate')
-          Element? eventTimingDateElement,
-      FhirDateTime? eventTimingDateTime,
+          final Element? eventTimingDateElement,
+      final FhirDateTime? eventTimingDateTime,
       @JsonKey(name: '_eventTimingDateTime')
-          Element? eventTimingDateTimeElement,
-      DataRequirement? eventData}) = _$_TriggerDefinition;
+          final Element? eventTimingDateTimeElement,
+      final DataRequirement? eventData}) = _$_TriggerDefinition;
   _TriggerDefinition._() : super._();
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
       _$_TriggerDefinition.fromJson;
 
   @override
-  TriggerDefinitionType? get type => throw _privateConstructorUsedError;
+  TriggerDefinitionType? get type;
   @override
   @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
+  Element? get typeElement;
   @override
-  String? get eventName => throw _privateConstructorUsedError;
+  String? get eventName;
   @override
   @JsonKey(name: '_eventName')
-  Element? get eventNameElement => throw _privateConstructorUsedError;
+  Element? get eventNameElement;
   @override
-  Timing? get eventTimingTiming => throw _privateConstructorUsedError;
+  Timing? get eventTimingTiming;
   @override
-  Reference? get eventTimingReference => throw _privateConstructorUsedError;
+  Reference? get eventTimingReference;
   @override
-  Date? get eventTimingDate => throw _privateConstructorUsedError;
+  Date? get eventTimingDate;
   @override
   @JsonKey(name: '_eventTimingDate')
-  Element? get eventTimingDateElement => throw _privateConstructorUsedError;
+  Element? get eventTimingDateElement;
   @override
-  FhirDateTime? get eventTimingDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get eventTimingDateTime;
   @override
   @JsonKey(name: '_eventTimingDateTime')
-  Element? get eventTimingDateTimeElement => throw _privateConstructorUsedError;
+  Element? get eventTimingDateTimeElement;
   @override
-  DataRequirement? get eventData => throw _privateConstructorUsedError;
+  DataRequirement? get eventData;
   @override
   @JsonKey(ignore: true)
-  _$TriggerDefinitionCopyWith<_TriggerDefinition> get copyWith =>
+  _$$_TriggerDefinitionCopyWith<_$_TriggerDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }

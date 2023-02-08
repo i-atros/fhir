@@ -42,6 +42,7 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(name: '_dependent') Element? dependentElement,
     PositiveInt? sequence,
     Reference? subscriber,
+    Reference? insurer,
     Identifier? network,
     @JsonKey(name: '_network') Element? networkElement,
     List<Reference>? contract,

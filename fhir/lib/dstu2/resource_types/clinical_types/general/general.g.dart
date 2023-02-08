@@ -9,7 +9,7 @@ part of 'general.dart';
 _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
         Map<String, dynamic> json) =>
     _$_AllergyIntolerance(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.AllergyIntolerance) ??
           Dstu2ResourceType.AllergyIntolerance,
@@ -60,24 +60,24 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
           : Reference.fromJson(json['reporter'] as Map<String, dynamic>),
       substance:
           CodeableConcept.fromJson(json['substance'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$AllergyIntoleranceStatusEnumMap, json['status'],
           unknownValue: AllergyIntoleranceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      criticality: _$enumDecodeNullable(
+      criticality: $enumDecodeNullable(
           _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
           unknownValue: AllergyIntoleranceCriticality.unknown),
       criticalityElement: json['_criticality'] == null
           ? null
           : Element.fromJson(json['_criticality'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$AllergyIntoleranceTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$AllergyIntoleranceTypeEnumMap, json['type'],
           unknownValue: AllergyIntoleranceType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      category: _$enumDecodeNullable(
+      category: $enumDecodeNullable(
           _$AllergyIntoleranceCategoryEnumMap, json['category'],
           unknownValue: AllergyIntoleranceCategory.unknown),
       categoryElement: json['_category'] == null
@@ -101,7 +101,7 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
 Map<String, dynamic> _$$_AllergyIntoleranceToJson(
     _$_AllergyIntolerance instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -147,43 +147,6 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
   writeNotNull('note', instance.note?.toJson());
   writeNotNull('reaction', instance.reaction?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -333,7 +296,7 @@ _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
       substance: json['substance'] == null
           ? null
           : CodeableConcept.fromJson(json['substance'] as Map<String, dynamic>),
-      certainty: _$enumDecodeNullable(
+      certainty: $enumDecodeNullable(
           _$ReactionCertaintyEnumMap, json['certainty'],
           unknownValue: ReactionCertainty.unknown),
       certaintyElement: json['_certainty'] == null
@@ -351,8 +314,7 @@ _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
       onsetElement: json['_onset'] == null
           ? null
           : Element.fromJson(json['_onset'] as Map<String, dynamic>),
-      severity: _$enumDecodeNullable(
-          _$ReactionSeverityEnumMap, json['severity'],
+      severity: $enumDecodeNullable(_$ReactionSeverityEnumMap, json['severity'],
           unknownValue: ReactionSeverity.unknown),
       severityElement: json['_severity'] == null
           ? null
@@ -418,7 +380,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) {
     requiredKeys: const ['verificationStatus'],
   );
   return _$_Condition(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.Condition) ??
         Dstu2ResourceType.Condition,
@@ -468,10 +430,10 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) {
     category: json['category'] == null
         ? null
         : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-    clinicalStatus: _$enumDecodeNullable(
+    clinicalStatus: $enumDecodeNullable(
         _$ConditionClinicalStatusEnumMap, json['clinicalStatus'],
         unknownValue: ConditionClinicalStatus.unknown),
-    verificationStatus: _$enumDecode(
+    verificationStatus: $enumDecode(
         _$ConditionVerificationStatusEnumMap, json['verificationStatus'],
         unknownValue: ConditionVerificationStatus.unknown),
     severity: json['severity'] == null
@@ -533,7 +495,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -567,7 +529,7 @@ Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
   writeNotNull('clinicalStatus',
       _$ConditionClinicalStatusEnumMap[instance.clinicalStatus]);
   val['verificationStatus'] =
-      _$ConditionVerificationStatusEnumMap[instance.verificationStatus];
+      _$ConditionVerificationStatusEnumMap[instance.verificationStatus]!;
   writeNotNull('severity', instance.severity?.toJson());
   writeNotNull('onsetDateTime', instance.onsetDateTime?.toJson());
   writeNotNull('_onsetDateTime', instance.onsetDateTimeElement?.toJson());
@@ -692,7 +654,7 @@ Map<String, dynamic> _$$_ConditionEvidenceToJson(
 }
 
 _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Procedure) ??
           Dstu2ResourceType.Procedure,
@@ -727,7 +689,7 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ProcedureStatusEnumMap, json['status'],
+      status: $enumDecode(_$ProcedureStatusEnumMap, json['status'],
           unknownValue: ProcedureStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -799,7 +761,7 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
 
 Map<String, dynamic> _$$_ProcedureToJson(_$_Procedure instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -824,7 +786,7 @@ Map<String, dynamic> _$$_ProcedureToJson(_$_Procedure instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['subject'] = instance.subject.toJson();
-  val['status'] = _$ProcedureStatusEnumMap[instance.status];
+  val['status'] = _$ProcedureStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.toJson());
   val['code'] = instance.code.toJson();
@@ -946,7 +908,7 @@ Map<String, dynamic> _$$_ProcedureFocalDeviceToJson(
 _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
         Map<String, dynamic> json) =>
     _$_ClinicalImpression(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ClinicalImpression) ??
           Dstu2ResourceType.ClinicalImpression,
@@ -981,7 +943,7 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
       assessor: json['assessor'] == null
           ? null
           : Reference.fromJson(json['assessor'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ClinicalImpressionStatusEnumMap, json['status'],
+      status: $enumDecode(_$ClinicalImpressionStatusEnumMap, json['status'],
           unknownValue: ClinicalImpressionStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1045,7 +1007,7 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
 Map<String, dynamic> _$$_ClinicalImpressionToJson(
     _$_ClinicalImpression instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1069,7 +1031,7 @@ Map<String, dynamic> _$$_ClinicalImpressionToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['patient'] = instance.patient.toJson();
   writeNotNull('assessor', instance.assessor?.toJson());
-  val['status'] = _$ClinicalImpressionStatusEnumMap[instance.status];
+  val['status'] = _$ClinicalImpressionStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
@@ -1214,7 +1176,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
     requiredKeys: const ['status'],
   );
   return _$_FamilyMemberHistory(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.FamilyMemberHistory) ??
         Dstu2ResourceType.FamilyMemberHistory,
@@ -1252,7 +1214,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    status: _$enumDecode(_$FamilyMemberHistoryStatusEnumMap, json['status'],
+    status: $enumDecode(_$FamilyMemberHistoryStatusEnumMap, json['status'],
         unknownValue: FamilyMemberHistoryStatus.unknown),
     statusElement: json['_status'] == null
         ? null
@@ -1263,7 +1225,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
     relationship:
         CodeableConcept.fromJson(json['relationship'] as Map<String, dynamic>),
-    gender: _$enumDecodeNullable(
+    gender: $enumDecodeNullable(
         _$FamilyMemberHistoryGenderEnumMap, json['gender'],
         unknownValue: FamilyMemberHistoryGender.unknown),
     bornPeriod: json['bornPeriod'] == null
@@ -1322,7 +1284,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
 Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
     _$_FamilyMemberHistory instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1349,7 +1311,7 @@ Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
   val['patient'] = instance.patient.toJson();
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
-  val['status'] = _$FamilyMemberHistoryStatusEnumMap[instance.status];
+  val['status'] = _$FamilyMemberHistoryStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
@@ -1453,7 +1415,7 @@ Map<String, dynamic> _$$_FamilyMemberHistoryConditionToJson(
 
 _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
     _$_RiskAssessment(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.RiskAssessment) ??
           Dstu2ResourceType.RiskAssessment,
@@ -1518,7 +1480,7 @@ _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_RiskAssessmentToJson(_$_RiskAssessment instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -1632,7 +1594,7 @@ Map<String, dynamic> _$$_RiskAssessmentPredictionToJson(
 
 _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
     _$_DetectedIssue(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DetectedIssue) ??
           Dstu2ResourceType.DetectedIssue,
@@ -1669,7 +1631,7 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
       category: json['category'] == null
           ? null
           : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      severity: _$enumDecodeNullable(
+      severity: $enumDecodeNullable(
           _$DetectedIssueSeverityEnumMap, json['severity'],
           unknownValue: DetectedIssueSeverity.unknown),
       severityElement: json['_severity'] == null
@@ -1703,7 +1665,7 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
   final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
 
   void writeNotNull(String key, dynamic value) {

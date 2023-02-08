@@ -1545,7 +1545,7 @@ _$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      status: _$enumDecode(_$NarrativeStatusEnumMap, json['status'],
+      status: $enumDecode(_$NarrativeStatusEnumMap, json['status'],
           unknownValue: NarrativeStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1566,36 +1566,10 @@ Map<String, dynamic> _$$_NarrativeToJson(_$_Narrative instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
-  val['status'] = _$NarrativeStatusEnumMap[instance.status];
+  val['status'] = _$NarrativeStatusEnumMap[instance.status]!;
   writeNotNull('_status', instance.statusElement?.toJson());
   val['div'] = instance.div;
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
 }
 
 const _$NarrativeStatusEnumMap = {
@@ -1625,7 +1599,7 @@ _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
       orderedElement: json['_ordered'] == null
           ? null
           : Element.fromJson(json['_ordered'] as Map<String, dynamic>),
-      rules: _$enumDecode(_$SlicingRulesEnumMap, json['rules'],
+      rules: $enumDecode(_$SlicingRulesEnumMap, json['rules'],
           unknownValue: SlicingRules.unknown),
       rulesElement: json['_rules'] == null
           ? null
@@ -1650,7 +1624,7 @@ Map<String, dynamic> _$$_ElementDefinitionSlicingToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('ordered', instance.ordered?.toJson());
   writeNotNull('_ordered', instance.orderedElement?.toJson());
-  val['rules'] = _$SlicingRulesEnumMap[instance.rules];
+  val['rules'] = _$SlicingRulesEnumMap[instance.rules]!;
   writeNotNull('_rules', instance.rulesElement?.toJson());
   return val;
 }
@@ -1720,7 +1694,7 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       aggregation: (json['aggregation'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$TypeAggregationEnumMap, e))
+          ?.map((e) => $enumDecode(_$TypeAggregationEnumMap, e))
           .toList(),
       aggregationElement: json['_aggregation'] == null
           ? null
@@ -1747,7 +1721,7 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull('_code', instance.codeExtension?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull('aggregation',
-      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]).toList());
+      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]!).toList());
   writeNotNull('_aggregation', instance.aggregationElement?.toJson());
   writeNotNull('fhir_comments', instance.fhirElement);
   return val;
@@ -1797,7 +1771,7 @@ _$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
       requirementsElement: json['_requirements'] == null
           ? null
           : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
-      severity: _$enumDecode(_$ConstraintSeverityEnumMap, json['severity'],
+      severity: $enumDecode(_$ConstraintSeverityEnumMap, json['severity'],
           unknownValue: ConstraintSeverity.unknown),
       severityElement: json['_severity'] == null
           ? null
@@ -1829,7 +1803,7 @@ Map<String, dynamic> _$$_ElementDefinitionConstraintToJson(
   writeNotNull('_key', instance.keyElement?.toJson());
   writeNotNull('requirements', instance.requirements);
   writeNotNull('_requirements', instance.requirementsElement?.toJson());
-  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity];
+  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity]!;
   writeNotNull('_severity', instance.severityElement?.toJson());
   val['human'] = instance.human;
   writeNotNull('_human', instance.humanElement?.toJson());
@@ -1855,7 +1829,7 @@ _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    strength: _$enumDecode(
+    strength: $enumDecode(
         _$ElementDefinitionBindingStrengthEnumMap, json['strength'],
         unknownValue: ElementDefinitionBindingStrength.unknown),
     strengthElement: json['_strength'] == null
@@ -1888,7 +1862,7 @@ Map<String, dynamic> _$$_ElementDefinitionBindingToJson(
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   val['strength'] =
-      _$ElementDefinitionBindingStrengthEnumMap[instance.strength];
+      _$ElementDefinitionBindingStrengthEnumMap[instance.strength]!;
   writeNotNull('_strength', instance.strengthElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
