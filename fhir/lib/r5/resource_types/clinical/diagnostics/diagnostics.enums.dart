@@ -108,6 +108,17 @@ enum ObservationStatus {
   unknown,
 }
 
+extension ObservationStatusExtension on ObservationStatus {
+  String keyName() {
+    switch (this) {
+      case ObservationStatus.entered_in_error:
+        return 'entered-in-error';
+      default:
+        return name;
+    }
+  }
+}
+
 enum QuestionnaireResponseStatus {
   @JsonValue('in-progress')
   in_progress,
