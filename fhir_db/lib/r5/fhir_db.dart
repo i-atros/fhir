@@ -19,6 +19,7 @@ class FhirDb {
   static final FhirDb _db = FhirDb._();
 
   static void prepareForTesting() {
+    sqflite.databaseFactory = sqflite_common_ffi.databaseFactoryFfi;
     sqflite_common_ffi.sqfliteFfiInit();
     _db._dbFactory = getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
   }
