@@ -160,7 +160,9 @@ class ResourceDao {
               },
             );
 
+
             filters.add(customFilter);
+            filters.add(Filter.notEquals('status', ObservationStatus.entered_in_error.keyName()));
 
             final combinedFilter = Filter.and(filters);
             finder = Finder(
@@ -409,6 +411,7 @@ class ResourceDao {
 
       if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound.toString()));
       if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound.toString()));
+      if (filter.ignoreStatusForSearch != null) filters.add(Filter.notEquals('status', filter.ignoreStatusForSearch!.keyName()));
 
       final combinedFilter = Filter.and(filters);
       finder = Finder(
@@ -529,7 +532,7 @@ class ResourceDao {
 
       if (filter.lowerBound != null) filters.add(Filter.greaterThanOrEquals("effectiveDateTime", filter.lowerBound!.toString()));
       if (filter.upperBound != null) filters.add(Filter.lessThanOrEquals("effectiveDateTime", filter.upperBound!.toString()));
-      if (filter.ignoreStatus != null) filters.add(Filter.notEquals('status', filter.ignoreStatus!.name));
+      if (filter.ignoreStatusWhenDeleting != null) filters.add(Filter.notEquals('status', filter.ignoreStatusWhenDeleting!.keyName()));
 
       final combinedFilter = Filter.and(filters);
       finder = Finder(
