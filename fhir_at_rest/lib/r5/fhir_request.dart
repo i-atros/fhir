@@ -26,27 +26,30 @@ class FhirRequest with _$FhirRequest {
     var json = resource?.toJson();
 
     if (json != null && !newSchema) {
-      final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+      // Support old schema
+      // Keep for reference
 
-      if (type == R5ResourceType.Bundle) {
-        if (json['entry'] != null && json['entry'].isNotEmpty) {
-          final entries = [];
-
-          for (var entry in json['entry']) {
-            final res = entry['resource'] as Map<String, dynamic>?;
-            if (res != null && res['resourceType'] != null) {
-              final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
-              final res2 = convertToOldSchema(res, type);
-              entry['resource'] = res2;
-            }
-            entries.add(entry);
-          }
-
-          json['entry'] = entries;
-        }
-      } else {
-        json = convertToOldSchema(json, resource?.resourceType);
-      }
+      // final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+      //
+      // if (type == R5ResourceType.Bundle) {
+      //   if (json['entry'] != null && json['entry'].isNotEmpty) {
+      //     final entries = [];
+      //
+      //     for (var entry in json['entry']) {
+      //       final res = entry['resource'] as Map<String, dynamic>?;
+      //       if (res != null && res['resourceType'] != null) {
+      //         final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+      //         final res2 = convertToOldSchema(res, type);
+      //         entry['resource'] = res2;
+      //       }
+      //       entries.add(entry);
+      //     }
+      //
+      //     json['entry'] = entries;
+      //   }
+      // } else {
+      //   json = convertToOldSchema(json, resource?.resourceType);
+      // }
     }
 
     return {
@@ -638,9 +641,9 @@ class FhirRequest with _$FhirRequest {
   /// authorization or other headers can be passed in as well
   Future<Resource?> request({
     required Map<String, String> headers,
-    R5Version r5Version = R5Version.v5_0_0_snapshot,
+    R5Version r5Version = R5Version.v5_0_0,
   }) async {
-    final newSchema = r5Version == R5Version.v5_0_0_ballot;
+    final newSchema = r5Version == R5Version.v5_0_0;
 
     return await map(
       read: (m) async => await _request(RestfulRequest.get_, uri(parameters: m.parameters), headers, 'Read', newSchema),
@@ -836,22 +839,23 @@ class FhirRequest with _$FhirRequest {
     required Uri base,
     Client? client,
   }) async {
-    Response result;
-    client ??= Client();
+    // Keep for future reference
+    // Response result;
+    // client ??= Client();
+    //
+    // if (globals.kTestMode) {
+    //   return null;
+    // }
+    //
+    // try {
+    //   result = await client.get(base);
+    // } catch (e) {
+    //   return null;
+    // }
 
-    if (globals.kTestMode) {
-      return null;
-    }
-
-    try {
-      result = await client.get(base);
-    } catch (e) {
-      return null;
-    }
-
-    final poweredBy = result.headers['x-powered-by'] ?? '';
-
-    return poweredBy.contains('FHIR 5.0.0-snapshot1/R5') ? R5Version.v5_0_0_snapshot : R5Version.v5_0_0_ballot;
+    // final poweredBy = result.headers['x-powered-by'] ?? '';
+    // return poweredBy.contains('FHIR 5.0.0-snapshot1/R5') ? R5Version.v5_0_0_snapshot : R5Version.v5_0_0_ballot;
+    return R5Version.v5_0_0;
   }
 
   /// _hxParameters
@@ -901,27 +905,29 @@ class FhirRequest with _$FhirRequest {
       }
 
       if (json != null && !newSchema) {
-        final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+        // Support old schema, keep for reference
 
-        if (type == R5ResourceType.Bundle) {
-          if (json['entry'] != null && json['entry'].isNotEmpty) {
-            final entries = [];
-
-            for (var entry in json['entry']) {
-              final res = entry['resource'] as Map<String, dynamic>?;
-              if (res != null && res['resourceType'] != null) {
-                final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
-                final res2 = convertToOldSchema(res, type);
-                entry['resource'] = res2;
-              }
-              entries.add(entry);
-            }
-
-            json['entry'] = entries;
-          }
-        } else {
-          json = convertToOldSchema(json, resource?.resourceType);
-        }
+        // final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
+        //
+        // if (type == R5ResourceType.Bundle) {
+        //   if (json['entry'] != null && json['entry'].isNotEmpty) {
+        //     final entries = [];
+        //
+        //     for (var entry in json['entry']) {
+        //       final res = entry['resource'] as Map<String, dynamic>?;
+        //       if (res != null && res['resourceType'] != null) {
+        //         final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+        //         final res2 = convertToOldSchema(res, type);
+        //         entry['resource'] = res2;
+        //       }
+        //       entries.add(entry);
+        //     }
+        //
+        //     json['entry'] = entries;
+        //   }
+        // } else {
+        //   json = convertToOldSchema(json, resource?.resourceType);
+        // }
       }
 
       final result = await _makeRequest(
@@ -1329,27 +1335,30 @@ class FhirRequest with _$FhirRequest {
     var body = json.decode(result.body);
 
     if (!newSchema && result.body.isNotEmpty) {
-      final type = ResourceUtils.resourceTypeFromStringMap[body['resourceType']];
+      // Support old schema
+      // Keep for reference
 
-      if (type == R5ResourceType.Bundle) {
-        if (body['entry'] != null && body['entry'].isNotEmpty) {
-          final entries = [];
-
-          for (var entry in body['entry']) {
-            final res = entry['resource'] as Map<String, dynamic>?;
-            if (res != null && res['resourceType'] != null) {
-              final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
-              final res2 = convertFromOldSchema(res, type);
-              entry['resource'] = res2;
-            }
-            entries.add(entry);
-          }
-
-          body['entry'] = entries;
-        }
-      } else {
-        body = convertFromOldSchema(body, type);
-      }
+      // final type = ResourceUtils.resourceTypeFromStringMap[body['resourceType']];
+      //
+      // if (type == R5ResourceType.Bundle) {
+      //   if (body['entry'] != null && body['entry'].isNotEmpty) {
+      //     final entries = [];
+      //
+      //     for (var entry in body['entry']) {
+      //       final res = entry['resource'] as Map<String, dynamic>?;
+      //       if (res != null && res['resourceType'] != null) {
+      //         final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
+      //         final res2 = convertFromOldSchema(res, type);
+      //         entry['resource'] = res2;
+      //       }
+      //       entries.add(entry);
+      //     }
+      //
+      //     body['entry'] = entries;
+      //   }
+      // } else {
+      //   body = convertFromOldSchema(body, type);
+      // }
     }
 
     return Resource.fromJson(body);
@@ -1409,6 +1418,5 @@ class FhirRequest with _$FhirRequest {
 }
 
 enum R5Version {
-  v5_0_0_snapshot,
-  v5_0_0_ballot,
+  v5_0_0,
 }

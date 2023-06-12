@@ -145,7 +145,7 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: r5-ballot
+      ref: r5-v500
       resolved-ref: de788032e1dae43449788890daaeb2622a7bb873
       url: "https://github.com/i-atros/fhir.git"
     source: git
