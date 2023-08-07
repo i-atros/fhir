@@ -26,30 +26,9 @@ class FhirRequest with _$FhirRequest {
     var json = resource?.toJson();
 
     if (json != null && !newSchema) {
-      // Support old schema
-      // Keep for reference
-
-      // final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
-      //
-      // if (type == R5ResourceType.Bundle) {
-      //   if (json['entry'] != null && json['entry'].isNotEmpty) {
-      //     final entries = [];
-      //
-      //     for (var entry in json['entry']) {
-      //       final res = entry['resource'] as Map<String, dynamic>?;
-      //       if (res != null && res['resourceType'] != null) {
-      //         final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
-      //         final res2 = convertToOldSchema(res, type);
-      //         entry['resource'] = res2;
-      //       }
-      //       entries.add(entry);
-      //     }
-      //
-      //     json['entry'] = entries;
-      //   }
-      // } else {
-      //   json = convertToOldSchema(json, resource?.resourceType);
-      // }
+      // Here custom logic can be implemented if necessary.
+      // You can check here to see an example of how it was done:
+      // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
     }
 
     return {
@@ -839,22 +818,8 @@ class FhirRequest with _$FhirRequest {
     required Uri base,
     Client? client,
   }) async {
-    // Keep for future reference
-    // Response result;
-    // client ??= Client();
-    //
-    // if (globals.kTestMode) {
-    //   return null;
-    // }
-    //
-    // try {
-    //   result = await client.get(base);
-    // } catch (e) {
-    //   return null;
-    // }
-
-    // final poweredBy = result.headers['x-powered-by'] ?? '';
-    // return poweredBy.contains('FHIR 5.0.0-snapshot1/R5') ? R5Version.v5_0_0_snapshot : R5Version.v5_0_0_ballot;
+    // Can be used to extract the FHIR server version (e.g. from the `x-powered-by` header) and return it.
+    // More info here: https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
     return R5Version.v5_0_0;
   }
 
@@ -905,29 +870,10 @@ class FhirRequest with _$FhirRequest {
       }
 
       if (json != null && !newSchema) {
-        // Support old schema, keep for reference
+      // Here custom logic can be implemented if necessary.
+      // You can check here to see an example of how it was done:
+      // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
 
-        // final type = ResourceUtils.resourceTypeFromStringMap[json['resourceType']];
-        //
-        // if (type == R5ResourceType.Bundle) {
-        //   if (json['entry'] != null && json['entry'].isNotEmpty) {
-        //     final entries = [];
-        //
-        //     for (var entry in json['entry']) {
-        //       final res = entry['resource'] as Map<String, dynamic>?;
-        //       if (res != null && res['resourceType'] != null) {
-        //         final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
-        //         final res2 = convertToOldSchema(res, type);
-        //         entry['resource'] = res2;
-        //       }
-        //       entries.add(entry);
-        //     }
-        //
-        //     json['entry'] = entries;
-        //   }
-        // } else {
-        //   json = convertToOldSchema(json, resource?.resourceType);
-        // }
       }
 
       final result = await _makeRequest(
@@ -1336,29 +1282,8 @@ class FhirRequest with _$FhirRequest {
 
     if (!newSchema && result.body.isNotEmpty) {
       // Support old schema
-      // Keep for reference
-
-      // final type = ResourceUtils.resourceTypeFromStringMap[body['resourceType']];
-      //
-      // if (type == R5ResourceType.Bundle) {
-      //   if (body['entry'] != null && body['entry'].isNotEmpty) {
-      //     final entries = [];
-      //
-      //     for (var entry in body['entry']) {
-      //       final res = entry['resource'] as Map<String, dynamic>?;
-      //       if (res != null && res['resourceType'] != null) {
-      //         final type = ResourceUtils.resourceTypeFromStringMap[res['resourceType']];
-      //         final res2 = convertFromOldSchema(res, type);
-      //         entry['resource'] = res2;
-      //       }
-      //       entries.add(entry);
-      //     }
-      //
-      //     body['entry'] = entries;
-      //   }
-      // } else {
-      //   body = convertFromOldSchema(body, type);
-      // }
+      // You can check here to see an example of how it was done:
+      // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
     }
 
     return Resource.fromJson(body);
