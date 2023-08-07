@@ -14,7 +14,6 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: r5-v500
   flutter:
     sdk: flutter
   path: ^1.8.0
