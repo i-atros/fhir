@@ -5,7 +5,10 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.3
-  fhir: ^0.4.6
+  fhir:
+    git:
+      url: https://github.com/i-atros/fhir.git
+      path: fhir
   fhir_auth:
     path: ../../fhir_auth
   flutter:
