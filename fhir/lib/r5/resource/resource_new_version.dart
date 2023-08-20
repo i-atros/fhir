@@ -12,10 +12,15 @@ Meta _updateMetaVersion(Meta? oldMeta) {
       : oldMeta.versionId == null
           ? 1
           : int.parse(oldMeta.versionId.toString()) + 1;
-  return Meta(
-    lastUpdated: Instant(DateTime.now().toUtc()),
-    versionId: Id(version.toString()),
-  );
+
+  return oldMeta?.copyWith(
+        lastUpdated: Instant(DateTime.now().toUtc()),
+        versionId: Id(version.toString()),
+      ) ??
+      Meta(
+        lastUpdated: Instant(DateTime.now().toUtc()),
+        versionId: Id(version.toString()),
+      );
 }
 
 /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
