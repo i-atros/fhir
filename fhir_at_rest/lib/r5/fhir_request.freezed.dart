@@ -66,6 +66,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -253,6 +254,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -434,6 +436,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -922,6 +925,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -1113,6 +1117,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -1298,6 +1303,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -1780,6 +1786,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -1971,6 +1978,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -2156,6 +2164,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -2620,6 +2629,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -2811,6 +2821,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -2996,6 +3007,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -3263,6 +3275,7 @@ abstract class _$$_FhirPatchRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      List<String> patchOperations,
       Client? client});
 }
 
@@ -3285,6 +3298,7 @@ class __$$_FhirPatchRequestCopyWithImpl<$Res>
     Object? format = null,
     Object? elements = null,
     Object? parameters = null,
+    Object? patchOperations = null,
     Object? client = freezed,
   }) {
     return _then(_$_FhirPatchRequest(
@@ -3320,6 +3334,10 @@ class __$$_FhirPatchRequestCopyWithImpl<$Res>
           ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      patchOperations: null == patchOperations
+          ? _value._patchOperations
+          : patchOperations // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -3340,9 +3358,11 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       this.format = 'json',
       final List<String> elements = const <String>[],
       final List<String> parameters = const <String>[],
+      final List<String> patchOperations = const <String>[],
       this.client})
       : _elements = elements,
         _parameters = parameters,
+        _patchOperations = patchOperations,
         super._();
 
   @override
@@ -3376,12 +3396,20 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
     return EqualUnmodifiableListView(_parameters);
   }
 
+  final List<String> _patchOperations;
+  @override
+  @JsonKey()
+  List<String> get patchOperations {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_patchOperations);
+  }
+
   @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.patch(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.patch(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, patchOperations: $patchOperations, client: $client)';
   }
 
   @override
@@ -3398,6 +3426,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             const DeepCollectionEquality().equals(other._elements, _elements) &&
             const DeepCollectionEquality()
                 .equals(other._parameters, _parameters) &&
+            const DeepCollectionEquality()
+                .equals(other._patchOperations, _patchOperations) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -3412,6 +3442,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       format,
       const DeepCollectionEquality().hash(_elements),
       const DeepCollectionEquality().hash(_parameters),
+      const DeepCollectionEquality().hash(_patchOperations),
       client);
 
   @JsonKey(ignore: true)
@@ -3465,6 +3496,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -3607,8 +3639,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Client? client)
         readBundlePage,
   }) {
-    return patch(
-        base, type, id, pretty, summary, format, elements, parameters, client);
+    return patch(base, type, id, pretty, summary, format, elements, parameters,
+        patchOperations, client);
   }
 
   @override
@@ -3656,6 +3688,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -3792,8 +3825,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Client? client)?
         readBundlePage,
   }) {
-    return patch?.call(
-        base, type, id, pretty, summary, format, elements, parameters, client);
+    return patch?.call(base, type, id, pretty, summary, format, elements,
+        parameters, patchOperations, client);
   }
 
   @override
@@ -3841,6 +3874,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -3980,7 +4014,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   }) {
     if (patch != null) {
       return patch(base, type, id, pretty, summary, format, elements,
-          parameters, client);
+          parameters, patchOperations, client);
     }
     return orElse();
   }
@@ -4069,6 +4103,7 @@ abstract class _FhirPatchRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
+      final List<String> patchOperations,
       final Client? client}) = _$_FhirPatchRequest;
   _FhirPatchRequest._() : super._();
 
@@ -4085,6 +4120,7 @@ abstract class _FhirPatchRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  List<String> get patchOperations;
   @override
   Client? get client;
   @override
@@ -4313,6 +4349,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -4504,6 +4541,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -4689,6 +4727,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -5151,6 +5190,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -5342,6 +5382,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -5527,6 +5568,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -6011,6 +6053,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -6202,6 +6245,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -6387,6 +6431,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -6839,6 +6884,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -7030,6 +7076,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -7215,6 +7262,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -7674,6 +7722,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -7865,6 +7914,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -8050,6 +8100,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -8519,6 +8570,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -8710,6 +8762,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -8895,6 +8948,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -9363,6 +9417,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -9554,6 +9609,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -9739,6 +9795,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -10254,6 +10311,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -10445,6 +10503,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -10630,6 +10689,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -11144,6 +11204,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -11335,6 +11396,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -11520,6 +11582,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -12021,6 +12084,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -12212,6 +12276,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -12397,6 +12462,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -12929,6 +12995,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -13132,6 +13199,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -13329,6 +13397,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
@@ -13822,6 +13891,7 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)
         patch,
     required TResult Function(
@@ -14013,6 +14083,7 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult? Function(
@@ -14198,6 +14269,7 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            List<String> patchOperations,
             Client? client)?
         patch,
     TResult Function(
