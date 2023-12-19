@@ -73,7 +73,6 @@ class FhirRequest with _$FhirRequest {
         'Patch',
         headers: headers,
         newSchema: newSchema,
-        resource: m.resource,
       ),
       delete: (m) => _toJson(
         RestfulRequest.delete_,
@@ -300,7 +299,8 @@ class FhirRequest with _$FhirRequest {
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
     required Uri base,
-    required Resource resource,
+    required R5ResourceType type,
+    required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
@@ -641,7 +641,6 @@ class FhirRequest with _$FhirRequest {
         headers,
         'Patch',
         newSchema,
-        resource: m.resource,
       ),
       delete: (m) async => await _request(
         RestfulRequest.delete_,
@@ -1155,7 +1154,7 @@ class FhirRequest with _$FhirRequest {
       // UPDATE
       update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
       // PATCH
-      patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      patch: (f) => '${f.base}/${ResourceUtils.resourceTypeToStringMap[f.type]}/${f.id.toString()}',
       // DELETE
       delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
       // CREATE
@@ -1238,11 +1237,11 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.patch_:
           {
-            headers['Content-Type'] = 'application/fhir+json';
+            headers['Content-Type'] = 'application/json-patch+json';
             result = await client.patch(
               Uri.parse(thisRequest),
               headers: headers,
-              body: jsonEncode(resource),
+              body: jsonEncode(elements),
               encoding: encoding,
             );
             break;

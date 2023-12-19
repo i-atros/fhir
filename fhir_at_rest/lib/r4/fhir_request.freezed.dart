@@ -1,4 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'fhir_request.dart';
@@ -10,374 +12,7 @@ part of 'fhir_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$FhirRequestTearOff {
-  const _$FhirRequestTearOff();
-
-  _FhirReadRequest read(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirReadRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirVReadRequest vRead(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      required Id vid,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirVReadRequest(
-      base: base,
-      type: type,
-      id: id,
-      vid: vid,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirUpdateRequest update(
-      {required Uri base,
-      required Resource resource,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirUpdateRequest(
-      base: base,
-      resource: resource,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirPatchRequest patch(
-      {required Uri base,
-      required Resource resource,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirPatchRequest(
-      base: base,
-      resource: resource,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirDeleteRequest delete(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirDeleteRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirCreateRequest create(
-      {required Uri base,
-      required Resource resource,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirCreateRequest(
-      base: base,
-      resource: resource,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirSearchRequest search(
-      {required Uri base,
-      required R4ResourceType type,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      bool usePost = false,
-      RestfulRequest restfulRequest = RestfulRequest.get_,
-      Client? client}) {
-    return _FhirSearchRequest(
-      base: base,
-      type: type,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      usePost: usePost,
-      restfulRequest: restfulRequest,
-      client: client,
-    );
-  }
-
-  _FhirSearchAllRequest searchAll(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Client? client}) {
-    return _FhirSearchAllRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      client: client,
-    );
-  }
-
-  _FhirCapabilitiesRequest capabilities(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Mode mode = Mode.full,
-      Client? client}) {
-    return _FhirCapabilitiesRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      mode: mode,
-      client: client,
-    );
-  }
-
-  _FhirTransactionRequest transaction(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      required Bundle bundle,
-      Client? client}) {
-    return _FhirTransactionRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      bundle: bundle,
-      client: client,
-    );
-  }
-
-  _FhirBatchRequest batch(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      required Bundle bundle,
-      Client? client}) {
-    return _FhirBatchRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      bundle: bundle,
-      client: client,
-    );
-  }
-
-  _FhirHistoryRequest history(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      Client? client}) {
-    return _FhirHistoryRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      count: count,
-      since: since,
-      at: at,
-      reference: reference,
-      client: client,
-    );
-  }
-
-  _FhirHistoryTypeRequest historyType(
-      {required Uri base,
-      required R4ResourceType type,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      Client? client}) {
-    return _FhirHistoryTypeRequest(
-      base: base,
-      type: type,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      count: count,
-      since: since,
-      at: at,
-      reference: reference,
-      client: client,
-    );
-  }
-
-  _FhirHistoryAllRequest historyAll(
-      {required Uri base,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      Client? client}) {
-    return _FhirHistoryAllRequest(
-      base: base,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      count: count,
-      since: since,
-      at: at,
-      reference: reference,
-      client: client,
-    );
-  }
-
-  _FhirOperationRequest operation(
-      {required Uri base,
-      R4ResourceType? type,
-      Id? id,
-      bool pretty = false,
-      Summary summary = Summary.none,
-      String format = 'json',
-      List<String> elements = const <String>[],
-      List<String> parameters = const <String>[],
-      Map<String, dynamic> fhirParameter = const <String, dynamic>{},
-      required String operation,
-      bool usePost = false,
-      bool useFormData = false,
-      Client? client}) {
-    return _FhirOperationRequest(
-      base: base,
-      type: type,
-      id: id,
-      pretty: pretty,
-      summary: summary,
-      format: format,
-      elements: elements,
-      parameters: parameters,
-      fhirParameter: fhirParameter,
-      operation: operation,
-      usePost: usePost,
-      useFormData: useFormData,
-      client: client,
-    );
-  }
-}
-
-/// @nodoc
-const $FhirRequest = _$FhirRequestTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$FhirRequest {
@@ -388,7 +23,6 @@ mixin _$FhirRequest {
   List<String> get elements => throw _privateConstructorUsedError;
   List<String> get parameters => throw _privateConstructorUsedError;
   Client? get client => throw _privateConstructorUsedError;
-
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(
@@ -562,6 +196,176 @@ mixin _$FhirRequest {
             bool usePost,
             bool useFormData,
             Client? client)
+        operation,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
         operation,
   }) =>
       throw _privateConstructorUsedError;
@@ -756,6 +560,25 @@ mixin _$FhirRequest {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -785,7 +608,8 @@ mixin _$FhirRequest {
 abstract class $FhirRequestCopyWith<$Res> {
   factory $FhirRequestCopyWith(
           FhirRequest value, $Res Function(FhirRequest) then) =
-      _$FhirRequestCopyWithImpl<$Res>;
+      _$FhirRequestCopyWithImpl<$Res, FhirRequest>;
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -797,63 +621,67 @@ abstract class $FhirRequestCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
+class _$FhirRequestCopyWithImpl<$Res, $Val extends FhirRequest>
+    implements $FhirRequestCopyWith<$Res> {
   _$FhirRequestCopyWithImpl(this._value, this._then);
 
-  final FhirRequest _value;
   // ignore: unused_field
-  final $Res Function(FhirRequest) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
+      elements: null == elements
           ? _value.elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
+      parameters: null == parameters
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$FhirReadRequestCopyWith<$Res>
+abstract class _$$_FhirReadRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirReadRequestCopyWith(
-          _FhirReadRequest value, $Res Function(_FhirReadRequest) then) =
-      __$FhirReadRequestCopyWithImpl<$Res>;
+  factory _$$_FhirReadRequestCopyWith(
+          _$_FhirReadRequest value, $Res Function(_$_FhirReadRequest) then) =
+      __$$_FhirReadRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType type,
@@ -867,62 +695,60 @@ abstract class _$FhirReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirReadRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirReadRequestCopyWith<$Res> {
-  __$FhirReadRequestCopyWithImpl(
-      _FhirReadRequest _value, $Res Function(_FhirReadRequest) _then)
-      : super(_value, (v) => _then(v as _FhirReadRequest));
+class __$$_FhirReadRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirReadRequest>
+    implements _$$_FhirReadRequestCopyWith<$Res> {
+  __$$_FhirReadRequestCopyWithImpl(
+      _$_FhirReadRequest _value, $Res Function(_$_FhirReadRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirReadRequest get _value => super._value as _FhirReadRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirReadRequest(
-      base: base == freezed
+    return _then(_$_FhirReadRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -940,10 +766,12 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -951,21 +779,31 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   final R4ResourceType type;
   @override
   final Id id;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -977,47 +815,38 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirReadRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirReadRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
-      __$FhirReadRequestCopyWithImpl<_FhirReadRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
+      __$$_FhirReadRequestCopyWithImpl<_$_FhirReadRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1196,6 +1025,180 @@ class _$_FhirReadRequest extends _FhirReadRequest {
         operation,
   }) {
     return read(
+        base, type, id, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return read?.call(
         base, type, id, pretty, summary, format, elements, parameters, client);
   }
 
@@ -1401,6 +1404,28 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return read?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -1428,46 +1453,47 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 
 abstract class _FhirReadRequest extends FhirRequest {
   factory _FhirReadRequest(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirReadRequest;
+      {required final Uri base,
+      required final R4ResourceType type,
+      required final Id id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirReadRequest;
   _FhirReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
+  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirVReadRequestCopyWith<$Res>
+abstract class _$$_FhirVReadRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirVReadRequestCopyWith(
-          _FhirVReadRequest value, $Res Function(_FhirVReadRequest) then) =
-      __$FhirVReadRequestCopyWithImpl<$Res>;
+  factory _$$_FhirVReadRequestCopyWith(
+          _$_FhirVReadRequest value, $Res Function(_$_FhirVReadRequest) then) =
+      __$$_FhirVReadRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType type,
@@ -1482,67 +1508,65 @@ abstract class _$FhirVReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirVReadRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirVReadRequestCopyWith<$Res> {
-  __$FhirVReadRequestCopyWithImpl(
-      _FhirVReadRequest _value, $Res Function(_FhirVReadRequest) _then)
-      : super(_value, (v) => _then(v as _FhirVReadRequest));
+class __$$_FhirVReadRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirVReadRequest>
+    implements _$$_FhirVReadRequestCopyWith<$Res> {
+  __$$_FhirVReadRequestCopyWithImpl(
+      _$_FhirVReadRequest _value, $Res Function(_$_FhirVReadRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirVReadRequest get _value => super._value as _FhirVReadRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? vid = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? vid = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirVReadRequest(
-      base: base == freezed
+    return _then(_$_FhirVReadRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      vid: vid == freezed
+      vid: null == vid
           ? _value.vid
           : vid // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -1561,10 +1585,12 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -1574,21 +1600,31 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   final Id id;
   @override
   final Id vid;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -1600,50 +1636,40 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirVReadRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.vid, vid) ||
-                const DeepCollectionEquality().equals(other.vid, vid)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirVReadRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.vid, vid) || other.vid == vid) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(vid) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      vid,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
-      __$FhirVReadRequestCopyWithImpl<_FhirVReadRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
+      __$$_FhirVReadRequestCopyWithImpl<_$_FhirVReadRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1822,6 +1848,180 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
         operation,
   }) {
     return vRead(base, type, id, vid, pretty, summary, format, elements,
+        parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return vRead?.call(base, type, id, vid, pretty, summary, format, elements,
         parameters, client);
   }
 
@@ -2027,6 +2227,28 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return vRead?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -2054,48 +2276,49 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 
 abstract class _FhirVReadRequest extends FhirRequest {
   factory _FhirVReadRequest(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      required Id vid,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirVReadRequest;
+      {required final Uri base,
+      required final R4ResourceType type,
+      required final Id id,
+      required final Id vid,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirVReadRequest;
   _FhirVReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
-  Id get vid => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
+  Id get vid;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
+  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirUpdateRequestCopyWith<$Res>
+abstract class _$$_FhirUpdateRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirUpdateRequestCopyWith(
-          _FhirUpdateRequest value, $Res Function(_FhirUpdateRequest) then) =
-      __$FhirUpdateRequestCopyWithImpl<$Res>;
+  factory _$$_FhirUpdateRequestCopyWith(_$_FhirUpdateRequest value,
+          $Res Function(_$_FhirUpdateRequest) then) =
+      __$$_FhirUpdateRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Resource resource,
@@ -2108,57 +2331,55 @@ abstract class _$FhirUpdateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirUpdateRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirUpdateRequestCopyWith<$Res> {
-  __$FhirUpdateRequestCopyWithImpl(
-      _FhirUpdateRequest _value, $Res Function(_FhirUpdateRequest) _then)
-      : super(_value, (v) => _then(v as _FhirUpdateRequest));
+class __$$_FhirUpdateRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirUpdateRequest>
+    implements _$$_FhirUpdateRequestCopyWith<$Res> {
+  __$$_FhirUpdateRequestCopyWithImpl(
+      _$_FhirUpdateRequest _value, $Res Function(_$_FhirUpdateRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirUpdateRequest get _value => super._value as _FhirUpdateRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? resource = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? resource = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirUpdateRequest(
-      base: base == freezed
+    return _then(_$_FhirUpdateRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -2175,30 +2396,42 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -2210,45 +2443,38 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirUpdateRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirUpdateRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
-      __$FhirUpdateRequestCopyWithImpl<_FhirUpdateRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
+      __$$_FhirUpdateRequestCopyWithImpl<_$_FhirUpdateRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2427,6 +2653,180 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
         operation,
   }) {
     return update(
+        base, resource, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return update?.call(
         base, resource, pretty, summary, format, elements, parameters, client);
   }
 
@@ -2632,6 +3032,28 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return update?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -2659,44 +3081,45 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 
 abstract class _FhirUpdateRequest extends FhirRequest {
   factory _FhirUpdateRequest(
-      {required Uri base,
-      required Resource resource,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirUpdateRequest;
+      {required final Uri base,
+      required final Resource resource,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirUpdateRequest;
   _FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
+  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirPatchRequestCopyWith<$Res>
+abstract class _$$_FhirPatchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirPatchRequestCopyWith(
-          _FhirPatchRequest value, $Res Function(_FhirPatchRequest) then) =
-      __$FhirPatchRequestCopyWithImpl<$Res>;
+  factory _$$_FhirPatchRequestCopyWith(
+          _$_FhirPatchRequest value, $Res Function(_$_FhirPatchRequest) then) =
+      __$$_FhirPatchRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Resource resource,
@@ -2709,57 +3132,55 @@ abstract class _$FhirPatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirPatchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirPatchRequestCopyWith<$Res> {
-  __$FhirPatchRequestCopyWithImpl(
-      _FhirPatchRequest _value, $Res Function(_FhirPatchRequest) _then)
-      : super(_value, (v) => _then(v as _FhirPatchRequest));
+class __$$_FhirPatchRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirPatchRequest>
+    implements _$$_FhirPatchRequestCopyWith<$Res> {
+  __$$_FhirPatchRequestCopyWithImpl(
+      _$_FhirPatchRequest _value, $Res Function(_$_FhirPatchRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirPatchRequest get _value => super._value as _FhirPatchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? resource = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? resource = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirPatchRequest(
-      base: base == freezed
+    return _then(_$_FhirPatchRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -2776,30 +3197,42 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -2811,45 +3244,37 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirPatchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirPatchRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
-      __$FhirPatchRequestCopyWithImpl<_FhirPatchRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
+      __$$_FhirPatchRequestCopyWithImpl<_$_FhirPatchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3028,6 +3453,180 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
         operation,
   }) {
     return patch(
+        base, resource, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return patch?.call(
         base, resource, pretty, summary, format, elements, parameters, client);
   }
 
@@ -3233,6 +3832,28 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return patch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -3260,44 +3881,45 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 
 abstract class _FhirPatchRequest extends FhirRequest {
   factory _FhirPatchRequest(
-      {required Uri base,
-      required Resource resource,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirPatchRequest;
+      {required final Uri base,
+      required final Resource resource,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirPatchRequest;
   _FhirPatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
+  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirDeleteRequestCopyWith<$Res>
+abstract class _$$_FhirDeleteRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirDeleteRequestCopyWith(
-          _FhirDeleteRequest value, $Res Function(_FhirDeleteRequest) then) =
-      __$FhirDeleteRequestCopyWithImpl<$Res>;
+  factory _$$_FhirDeleteRequestCopyWith(_$_FhirDeleteRequest value,
+          $Res Function(_$_FhirDeleteRequest) then) =
+      __$$_FhirDeleteRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType type,
@@ -3311,62 +3933,60 @@ abstract class _$FhirDeleteRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirDeleteRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirDeleteRequestCopyWith<$Res> {
-  __$FhirDeleteRequestCopyWithImpl(
-      _FhirDeleteRequest _value, $Res Function(_FhirDeleteRequest) _then)
-      : super(_value, (v) => _then(v as _FhirDeleteRequest));
+class __$$_FhirDeleteRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirDeleteRequest>
+    implements _$$_FhirDeleteRequestCopyWith<$Res> {
+  __$$_FhirDeleteRequestCopyWithImpl(
+      _$_FhirDeleteRequest _value, $Res Function(_$_FhirDeleteRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirDeleteRequest get _value => super._value as _FhirDeleteRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirDeleteRequest(
-      base: base == freezed
+    return _then(_$_FhirDeleteRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -3384,10 +4004,12 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -3395,21 +4017,31 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   final R4ResourceType type;
   @override
   final Id id;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -3421,47 +4053,39 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirDeleteRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirDeleteRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
-      __$FhirDeleteRequestCopyWithImpl<_FhirDeleteRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
+      __$$_FhirDeleteRequestCopyWithImpl<_$_FhirDeleteRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3640,6 +4264,180 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
         operation,
   }) {
     return delete(
+        base, type, id, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return delete?.call(
         base, type, id, pretty, summary, format, elements, parameters, client);
   }
 
@@ -3845,6 +4643,28 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return delete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -3872,46 +4692,47 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 
 abstract class _FhirDeleteRequest extends FhirRequest {
   factory _FhirDeleteRequest(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirDeleteRequest;
+      {required final Uri base,
+      required final R4ResourceType type,
+      required final Id id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirDeleteRequest;
   _FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
+  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirCreateRequestCopyWith<$Res>
+abstract class _$$_FhirCreateRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirCreateRequestCopyWith(
-          _FhirCreateRequest value, $Res Function(_FhirCreateRequest) then) =
-      __$FhirCreateRequestCopyWithImpl<$Res>;
+  factory _$$_FhirCreateRequestCopyWith(_$_FhirCreateRequest value,
+          $Res Function(_$_FhirCreateRequest) then) =
+      __$$_FhirCreateRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       Resource resource,
@@ -3924,57 +4745,55 @@ abstract class _$FhirCreateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirCreateRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirCreateRequestCopyWith<$Res> {
-  __$FhirCreateRequestCopyWithImpl(
-      _FhirCreateRequest _value, $Res Function(_FhirCreateRequest) _then)
-      : super(_value, (v) => _then(v as _FhirCreateRequest));
+class __$$_FhirCreateRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirCreateRequest>
+    implements _$$_FhirCreateRequestCopyWith<$Res> {
+  __$$_FhirCreateRequestCopyWithImpl(
+      _$_FhirCreateRequest _value, $Res Function(_$_FhirCreateRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirCreateRequest get _value => super._value as _FhirCreateRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? resource = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? resource = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirCreateRequest(
-      base: base == freezed
+    return _then(_$_FhirCreateRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      resource: resource == freezed
+      resource: null == resource
           ? _value.resource
           : resource // ignore: cast_nullable_to_non_nullable
               as Resource,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -3991,30 +4810,42 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -4026,45 +4857,38 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirCreateRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirCreateRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
-      __$FhirCreateRequestCopyWithImpl<_FhirCreateRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
+      __$$_FhirCreateRequestCopyWithImpl<_$_FhirCreateRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4243,6 +5067,180 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
         operation,
   }) {
     return create(
+        base, resource, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return create?.call(
         base, resource, pretty, summary, format, elements, parameters, client);
   }
 
@@ -4448,6 +5446,28 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return create?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -4475,44 +5495,45 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 
 abstract class _FhirCreateRequest extends FhirRequest {
   factory _FhirCreateRequest(
-      {required Uri base,
-      required Resource resource,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirCreateRequest;
+      {required final Uri base,
+      required final Resource resource,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirCreateRequest;
   _FhirCreateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
+  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirSearchRequestCopyWith<$Res>
+abstract class _$$_FhirSearchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirSearchRequestCopyWith(
-          _FhirSearchRequest value, $Res Function(_FhirSearchRequest) then) =
-      __$FhirSearchRequestCopyWithImpl<$Res>;
+  factory _$$_FhirSearchRequestCopyWith(_$_FhirSearchRequest value,
+          $Res Function(_$_FhirSearchRequest) then) =
+      __$$_FhirSearchRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType type,
@@ -4527,67 +5548,65 @@ abstract class _$FhirSearchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirSearchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirSearchRequestCopyWith<$Res> {
-  __$FhirSearchRequestCopyWithImpl(
-      _FhirSearchRequest _value, $Res Function(_FhirSearchRequest) _then)
-      : super(_value, (v) => _then(v as _FhirSearchRequest));
+class __$$_FhirSearchRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirSearchRequest>
+    implements _$$_FhirSearchRequestCopyWith<$Res> {
+  __$$_FhirSearchRequestCopyWithImpl(
+      _$_FhirSearchRequest _value, $Res Function(_$_FhirSearchRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirSearchRequest get _value => super._value as _FhirSearchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? usePost = freezed,
-    Object? restfulRequest = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? usePost = null,
+    Object? restfulRequest = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirSearchRequest(
-      base: base == freezed
+    return _then(_$_FhirSearchRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      usePost: usePost == freezed
+      usePost: null == usePost
           ? _value.usePost
           : usePost // ignore: cast_nullable_to_non_nullable
               as bool,
-      restfulRequest: restfulRequest == freezed
+      restfulRequest: null == restfulRequest
           ? _value.restfulRequest
           : restfulRequest // ignore: cast_nullable_to_non_nullable
               as RestfulRequest,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -4604,37 +5623,49 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final R4ResourceType type;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
+  @JsonKey()
   final bool usePost;
-  @JsonKey(defaultValue: RestfulRequest.get_)
   @override
+  @JsonKey()
   final RestfulRequest restfulRequest;
   @override
   final Client? client;
@@ -4647,52 +5678,42 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirSearchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.usePost, usePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.usePost, usePost)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirSearchRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.restfulRequest, restfulRequest) ||
-                const DeepCollectionEquality()
-                    .equals(other.restfulRequest, restfulRequest)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.restfulRequest == restfulRequest) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(usePost) ^
-      const DeepCollectionEquality().hash(restfulRequest) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      usePost,
+      restfulRequest,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
-      __$FhirSearchRequestCopyWithImpl<_FhirSearchRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
+      __$$_FhirSearchRequestCopyWithImpl<_$_FhirSearchRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4872,6 +5893,180 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   }) {
     return search(base, type, pretty, summary, format, elements, parameters,
         usePost, restfulRequest, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return search?.call(base, type, pretty, summary, format, elements,
+        parameters, usePost, restfulRequest, client);
   }
 
   @override
@@ -5076,6 +6271,28 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return search?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -5103,48 +6320,49 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
 abstract class _FhirSearchRequest extends FhirRequest {
   factory _FhirSearchRequest(
-      {required Uri base,
-      required R4ResourceType type,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      bool usePost,
-      RestfulRequest restfulRequest,
-      Client? client}) = _$_FhirSearchRequest;
+      {required final Uri base,
+      required final R4ResourceType type,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final bool usePost,
+      final RestfulRequest restfulRequest,
+      final Client? client}) = _$_FhirSearchRequest;
   _FhirSearchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  bool get usePost;
+  RestfulRequest get restfulRequest;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
+  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirSearchAllRequestCopyWith<$Res>
+abstract class _$$_FhirSearchAllRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirSearchAllRequestCopyWith(_FhirSearchAllRequest value,
-          $Res Function(_FhirSearchAllRequest) then) =
-      __$FhirSearchAllRequestCopyWithImpl<$Res>;
+  factory _$$_FhirSearchAllRequestCopyWith(_$_FhirSearchAllRequest value,
+          $Res Function(_$_FhirSearchAllRequest) then) =
+      __$$_FhirSearchAllRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -5156,52 +6374,50 @@ abstract class _$FhirSearchAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirSearchAllRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirSearchAllRequestCopyWith<$Res> {
-  __$FhirSearchAllRequestCopyWithImpl(
-      _FhirSearchAllRequest _value, $Res Function(_FhirSearchAllRequest) _then)
-      : super(_value, (v) => _then(v as _FhirSearchAllRequest));
+class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirSearchAllRequest>
+    implements _$$_FhirSearchAllRequestCopyWith<$Res> {
+  __$$_FhirSearchAllRequestCopyWithImpl(_$_FhirSearchAllRequest _value,
+      $Res Function(_$_FhirSearchAllRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirSearchAllRequest get _value => super._value as _FhirSearchAllRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirSearchAllRequest(
-      base: base == freezed
+    return _then(_$_FhirSearchAllRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -5217,28 +6433,40 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Client? client;
 
@@ -5250,41 +6478,34 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirSearchAllRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirSearchAllRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
-      __$FhirSearchAllRequestCopyWithImpl<_FhirSearchAllRequest>(
+  @pragma('vm:prefer-inline')
+  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
+      __$$_FhirSearchAllRequestCopyWithImpl<_$_FhirSearchAllRequest>(
           this, _$identity);
 
   @override
@@ -5464,6 +6685,180 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
         operation,
   }) {
     return searchAll(
+        base, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return searchAll?.call(
         base, pretty, summary, format, elements, parameters, client);
   }
 
@@ -5669,6 +7064,28 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return searchAll?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -5696,42 +7113,43 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
 abstract class _FhirSearchAllRequest extends FhirRequest {
   factory _FhirSearchAllRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Client? client}) = _$_FhirSearchAllRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Client? client}) = _$_FhirSearchAllRequest;
   _FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
+  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
+abstract class _$$_FhirCapabilitiesRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirCapabilitiesRequestCopyWith(_FhirCapabilitiesRequest value,
-          $Res Function(_FhirCapabilitiesRequest) then) =
-      __$FhirCapabilitiesRequestCopyWithImpl<$Res>;
+  factory _$$_FhirCapabilitiesRequestCopyWith(_$_FhirCapabilitiesRequest value,
+          $Res Function(_$_FhirCapabilitiesRequest) then) =
+      __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -5744,58 +7162,55 @@ abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirCapabilitiesRequestCopyWith<$Res> {
-  __$FhirCapabilitiesRequestCopyWithImpl(_FhirCapabilitiesRequest _value,
-      $Res Function(_FhirCapabilitiesRequest) _then)
-      : super(_value, (v) => _then(v as _FhirCapabilitiesRequest));
+class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirCapabilitiesRequest>
+    implements _$$_FhirCapabilitiesRequestCopyWith<$Res> {
+  __$$_FhirCapabilitiesRequestCopyWithImpl(_$_FhirCapabilitiesRequest _value,
+      $Res Function(_$_FhirCapabilitiesRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirCapabilitiesRequest get _value =>
-      super._value as _FhirCapabilitiesRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? mode = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? mode = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirCapabilitiesRequest(
-      base: base == freezed
+    return _then(_$_FhirCapabilitiesRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      mode: mode == freezed
+      mode: null == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Mode,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -5811,31 +7226,43 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.mode = Mode.full,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
-  @JsonKey(defaultValue: Mode.full)
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
+  @JsonKey()
   final Mode mode;
   @override
   final Client? client;
@@ -5848,45 +7275,38 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirCapabilitiesRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.mode, mode) ||
-                const DeepCollectionEquality().equals(other.mode, mode)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirCapabilitiesRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      mode,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
-      __$FhirCapabilitiesRequestCopyWithImpl<_FhirCapabilitiesRequest>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
+      get copyWith =>
+          __$$_FhirCapabilitiesRequestCopyWithImpl<_$_FhirCapabilitiesRequest>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -6065,6 +7485,180 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
         operation,
   }) {
     return capabilities(
+        base, pretty, summary, format, elements, parameters, mode, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return capabilities?.call(
         base, pretty, summary, format, elements, parameters, mode, client);
   }
 
@@ -6270,6 +7864,28 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return capabilities?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -6297,44 +7913,45 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
 abstract class _FhirCapabilitiesRequest extends FhirRequest {
   factory _FhirCapabilitiesRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Mode mode,
-      Client? client}) = _$_FhirCapabilitiesRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Mode mode,
+      final Client? client}) = _$_FhirCapabilitiesRequest;
   _FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Mode get mode => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Mode get mode;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirTransactionRequestCopyWith<$Res>
+abstract class _$$_FhirTransactionRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirTransactionRequestCopyWith(_FhirTransactionRequest value,
-          $Res Function(_FhirTransactionRequest) then) =
-      __$FhirTransactionRequestCopyWithImpl<$Res>;
+  factory _$$_FhirTransactionRequestCopyWith(_$_FhirTransactionRequest value,
+          $Res Function(_$_FhirTransactionRequest) then) =
+      __$$_FhirTransactionRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -6349,57 +7966,55 @@ abstract class _$FhirTransactionRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirTransactionRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirTransactionRequestCopyWith<$Res> {
-  __$FhirTransactionRequestCopyWithImpl(_FhirTransactionRequest _value,
-      $Res Function(_FhirTransactionRequest) _then)
-      : super(_value, (v) => _then(v as _FhirTransactionRequest));
+class __$$_FhirTransactionRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirTransactionRequest>
+    implements _$$_FhirTransactionRequestCopyWith<$Res> {
+  __$$_FhirTransactionRequestCopyWithImpl(_$_FhirTransactionRequest _value,
+      $Res Function(_$_FhirTransactionRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirTransactionRequest get _value => super._value as _FhirTransactionRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? bundle = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? bundle = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirTransactionRequest(
-      base: base == freezed
+    return _then(_$_FhirTransactionRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      bundle: bundle == freezed
+      bundle: null == bundle
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -6407,6 +8022,7 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
     return $BundleCopyWith<$Res>(_value.bundle, (value) {
       return _then(_value.copyWith(bundle: value));
@@ -6422,29 +8038,41 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       required this.bundle,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Bundle bundle;
   @override
@@ -6458,44 +8086,36 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirTransactionRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.bundle, bundle) ||
-                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirTransactionRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(bundle) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      bundle,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
-      __$FhirTransactionRequestCopyWithImpl<_FhirTransactionRequest>(
+  @pragma('vm:prefer-inline')
+  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
+      __$$_FhirTransactionRequestCopyWithImpl<_$_FhirTransactionRequest>(
           this, _$identity);
 
   @override
@@ -6675,6 +8295,180 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
         operation,
   }) {
     return transaction(
+        base, pretty, summary, format, elements, parameters, bundle, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return transaction?.call(
         base, pretty, summary, format, elements, parameters, bundle, client);
   }
 
@@ -6880,6 +8674,28 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return transaction?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -6907,44 +8723,45 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
 abstract class _FhirTransactionRequest extends FhirRequest {
   factory _FhirTransactionRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      required Bundle bundle,
-      Client? client}) = _$_FhirTransactionRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      required final Bundle bundle,
+      final Client? client}) = _$_FhirTransactionRequest;
   _FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
+  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirBatchRequestCopyWith<$Res>
+abstract class _$$_FhirBatchRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirBatchRequestCopyWith(
-          _FhirBatchRequest value, $Res Function(_FhirBatchRequest) then) =
-      __$FhirBatchRequestCopyWithImpl<$Res>;
+  factory _$$_FhirBatchRequestCopyWith(
+          _$_FhirBatchRequest value, $Res Function(_$_FhirBatchRequest) then) =
+      __$$_FhirBatchRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -6959,57 +8776,55 @@ abstract class _$FhirBatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirBatchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirBatchRequestCopyWith<$Res> {
-  __$FhirBatchRequestCopyWithImpl(
-      _FhirBatchRequest _value, $Res Function(_FhirBatchRequest) _then)
-      : super(_value, (v) => _then(v as _FhirBatchRequest));
+class __$$_FhirBatchRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirBatchRequest>
+    implements _$$_FhirBatchRequestCopyWith<$Res> {
+  __$$_FhirBatchRequestCopyWithImpl(
+      _$_FhirBatchRequest _value, $Res Function(_$_FhirBatchRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirBatchRequest get _value => super._value as _FhirBatchRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? bundle = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? bundle = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirBatchRequest(
-      base: base == freezed
+    return _then(_$_FhirBatchRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      bundle: bundle == freezed
+      bundle: null == bundle
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -7017,6 +8832,7 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
     return $BundleCopyWith<$Res>(_value.bundle, (value) {
       return _then(_value.copyWith(bundle: value));
@@ -7032,29 +8848,41 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       required this.bundle,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final Bundle bundle;
   @override
@@ -7068,44 +8896,36 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirBatchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.bundle, bundle) ||
-                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirBatchRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(bundle) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      bundle,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
-      __$FhirBatchRequestCopyWithImpl<_FhirBatchRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
+      __$$_FhirBatchRequestCopyWithImpl<_$_FhirBatchRequest>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7284,6 +9104,180 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
         operation,
   }) {
     return batch(
+        base, pretty, summary, format, elements, parameters, bundle, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return batch?.call(
         base, pretty, summary, format, elements, parameters, bundle, client);
   }
 
@@ -7489,6 +9483,28 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return batch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -7516,44 +9532,45 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
 abstract class _FhirBatchRequest extends FhirRequest {
   factory _FhirBatchRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      required Bundle bundle,
-      Client? client}) = _$_FhirBatchRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      required final Bundle bundle,
+      final Client? client}) = _$_FhirBatchRequest;
   _FhirBatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
+  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirHistoryRequestCopyWith<$Res>
+abstract class _$$_FhirHistoryRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirHistoryRequestCopyWith(
-          _FhirHistoryRequest value, $Res Function(_FhirHistoryRequest) then) =
-      __$FhirHistoryRequestCopyWithImpl<$Res>;
+  factory _$$_FhirHistoryRequestCopyWith(_$_FhirHistoryRequest value,
+          $Res Function(_$_FhirHistoryRequest) then) =
+      __$$_FhirHistoryRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType type,
@@ -7571,82 +9588,80 @@ abstract class _$FhirHistoryRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirHistoryRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirHistoryRequestCopyWith<$Res> {
-  __$FhirHistoryRequestCopyWithImpl(
-      _FhirHistoryRequest _value, $Res Function(_FhirHistoryRequest) _then)
-      : super(_value, (v) => _then(v as _FhirHistoryRequest));
+class __$$_FhirHistoryRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirHistoryRequest>
+    implements _$$_FhirHistoryRequestCopyWith<$Res> {
+  __$$_FhirHistoryRequestCopyWithImpl(
+      _$_FhirHistoryRequest _value, $Res Function(_$_FhirHistoryRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirHistoryRequest get _value => super._value as _FhirHistoryRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? id = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? count = freezed,
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirHistoryRequest(
-      base: base == freezed
+    return _then(_$_FhirHistoryRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      count: count == freezed
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int?,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      at: at == freezed
+      at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -7664,14 +9679,16 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.count,
       this.since,
       this.at,
       this.reference,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
@@ -7679,21 +9696,31 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   final R4ResourceType type;
   @override
   final Id id;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final int? count;
   @override
@@ -7713,60 +9740,48 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirHistoryRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.reference == reference) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      count,
+      since,
+      at,
+      reference,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
-      __$FhirHistoryRequestCopyWithImpl<_FhirHistoryRequest>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
+      __$$_FhirHistoryRequestCopyWithImpl<_$_FhirHistoryRequest>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7945,6 +9960,180 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
         operation,
   }) {
     return history(base, type, id, pretty, summary, format, elements,
+        parameters, count, since, at, reference, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return history?.call(base, type, id, pretty, summary, format, elements,
         parameters, count, since, at, reference, client);
   }
 
@@ -8150,6 +10339,28 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return history?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -8177,54 +10388,55 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
 abstract class _FhirHistoryRequest extends FhirRequest {
   factory _FhirHistoryRequest(
-      {required Uri base,
-      required R4ResourceType type,
-      required Id id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      Client? client}) = _$_FhirHistoryRequest;
+      {required final Uri base,
+      required final R4ResourceType type,
+      required final Id id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final int? count,
+      final Instant? since,
+      final FhirDateTime? at,
+      final String? reference,
+      final Client? client}) = _$_FhirHistoryRequest;
   _FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
+  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
+abstract class _$$_FhirHistoryTypeRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirHistoryTypeRequestCopyWith(_FhirHistoryTypeRequest value,
-          $Res Function(_FhirHistoryTypeRequest) then) =
-      __$FhirHistoryTypeRequestCopyWithImpl<$Res>;
+  factory _$$_FhirHistoryTypeRequestCopyWith(_$_FhirHistoryTypeRequest value,
+          $Res Function(_$_FhirHistoryTypeRequest) then) =
+      __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType type,
@@ -8241,77 +10453,75 @@ abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirHistoryTypeRequestCopyWith<$Res> {
-  __$FhirHistoryTypeRequestCopyWithImpl(_FhirHistoryTypeRequest _value,
-      $Res Function(_FhirHistoryTypeRequest) _then)
-      : super(_value, (v) => _then(v as _FhirHistoryTypeRequest));
+class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirHistoryTypeRequest>
+    implements _$$_FhirHistoryTypeRequestCopyWith<$Res> {
+  __$$_FhirHistoryTypeRequestCopyWithImpl(_$_FhirHistoryTypeRequest _value,
+      $Res Function(_$_FhirHistoryTypeRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirHistoryTypeRequest get _value => super._value as _FhirHistoryTypeRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? type = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? type = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? count = freezed,
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirHistoryTypeRequest(
-      base: base == freezed
+    return _then(_$_FhirHistoryTypeRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      count: count == freezed
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int?,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      at: at == freezed
+      at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -8328,34 +10538,46 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.count,
       this.since,
       this.at,
       this.reference,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
   @override
   final R4ResourceType type;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final int? count;
   @override
@@ -8375,57 +10597,45 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryTypeRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirHistoryTypeRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.reference == reference) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      count,
+      since,
+      at,
+      reference,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
-      __$FhirHistoryTypeRequestCopyWithImpl<_FhirHistoryTypeRequest>(
+  @pragma('vm:prefer-inline')
+  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
+      __$$_FhirHistoryTypeRequestCopyWithImpl<_$_FhirHistoryTypeRequest>(
           this, _$identity);
 
   @override
@@ -8605,6 +10815,180 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
         operation,
   }) {
     return historyType(base, type, pretty, summary, format, elements,
+        parameters, count, since, at, reference, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return historyType?.call(base, type, pretty, summary, format, elements,
         parameters, count, since, at, reference, client);
   }
 
@@ -8810,6 +11194,28 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return historyType?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -8837,52 +11243,53 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
 abstract class _FhirHistoryTypeRequest extends FhirRequest {
   factory _FhirHistoryTypeRequest(
-      {required Uri base,
-      required R4ResourceType type,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      Client? client}) = _$_FhirHistoryTypeRequest;
+      {required final Uri base,
+      required final R4ResourceType type,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final int? count,
+      final Instant? since,
+      final FhirDateTime? at,
+      final String? reference,
+      final Client? client}) = _$_FhirHistoryTypeRequest;
   _FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
+  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirHistoryAllRequestCopyWith<$Res>
+abstract class _$$_FhirHistoryAllRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirHistoryAllRequestCopyWith(_FhirHistoryAllRequest value,
-          $Res Function(_FhirHistoryAllRequest) then) =
-      __$FhirHistoryAllRequestCopyWithImpl<$Res>;
+  factory _$$_FhirHistoryAllRequestCopyWith(_$_FhirHistoryAllRequest value,
+          $Res Function(_$_FhirHistoryAllRequest) then) =
+      __$$_FhirHistoryAllRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       bool pretty,
@@ -8898,72 +11305,70 @@ abstract class _$FhirHistoryAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirHistoryAllRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirHistoryAllRequestCopyWith<$Res> {
-  __$FhirHistoryAllRequestCopyWithImpl(_FhirHistoryAllRequest _value,
-      $Res Function(_FhirHistoryAllRequest) _then)
-      : super(_value, (v) => _then(v as _FhirHistoryAllRequest));
+class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirHistoryAllRequest>
+    implements _$$_FhirHistoryAllRequestCopyWith<$Res> {
+  __$$_FhirHistoryAllRequestCopyWithImpl(_$_FhirHistoryAllRequest _value,
+      $Res Function(_$_FhirHistoryAllRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirHistoryAllRequest get _value => super._value as _FhirHistoryAllRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
+    Object? base = null,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
     Object? count = freezed,
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
     Object? client = freezed,
   }) {
-    return _then(_FhirHistoryAllRequest(
-      base: base == freezed
+    return _then(_$_FhirHistoryAllRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      count: count == freezed
+      count: freezed == count
           ? _value.count
           : count // ignore: cast_nullable_to_non_nullable
               as int?,
-      since: since == freezed
+      since: freezed == since
           ? _value.since
           : since // ignore: cast_nullable_to_non_nullable
               as Instant?,
-      at: at == freezed
+      at: freezed == at
           ? _value.at
           : at // ignore: cast_nullable_to_non_nullable
               as FhirDateTime?,
-      reference: reference == freezed
+      reference: freezed == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -8979,32 +11384,44 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
       this.count,
       this.since,
       this.at,
       this.reference,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        super._();
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
   @override
   final int? count;
   @override
@@ -9024,54 +11441,43 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryAllRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirHistoryAllRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.reference == reference) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      count,
+      since,
+      at,
+      reference,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
-      __$FhirHistoryAllRequestCopyWithImpl<_FhirHistoryAllRequest>(
+  @pragma('vm:prefer-inline')
+  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
+      __$$_FhirHistoryAllRequestCopyWithImpl<_$_FhirHistoryAllRequest>(
           this, _$identity);
 
   @override
@@ -9251,6 +11657,180 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
         operation,
   }) {
     return historyAll(base, pretty, summary, format, elements, parameters,
+        count, since, at, reference, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return historyAll?.call(base, pretty, summary, format, elements, parameters,
         count, since, at, reference, client);
   }
 
@@ -9456,6 +12036,28 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return historyAll?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -9483,50 +12085,51 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
 abstract class _FhirHistoryAllRequest extends FhirRequest {
   factory _FhirHistoryAllRequest(
-      {required Uri base,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      int? count,
-      Instant? since,
-      FhirDateTime? at,
-      String? reference,
-      Client? client}) = _$_FhirHistoryAllRequest;
+      {required final Uri base,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final int? count,
+      final Instant? since,
+      final FhirDateTime? at,
+      final String? reference,
+      final Client? client}) = _$_FhirHistoryAllRequest;
   _FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
+  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$FhirOperationRequestCopyWith<$Res>
+abstract class _$$_FhirOperationRequestCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$FhirOperationRequestCopyWith(_FhirOperationRequest value,
-          $Res Function(_FhirOperationRequest) then) =
-      __$FhirOperationRequestCopyWithImpl<$Res>;
+  factory _$$_FhirOperationRequestCopyWith(_$_FhirOperationRequest value,
+          $Res Function(_$_FhirOperationRequest) then) =
+      __$$_FhirOperationRequestCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Uri base,
       R4ResourceType? type,
@@ -9544,82 +12147,80 @@ abstract class _$FhirOperationRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$FhirOperationRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res>
-    implements _$FhirOperationRequestCopyWith<$Res> {
-  __$FhirOperationRequestCopyWithImpl(
-      _FhirOperationRequest _value, $Res Function(_FhirOperationRequest) _then)
-      : super(_value, (v) => _then(v as _FhirOperationRequest));
+class __$$_FhirOperationRequestCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirOperationRequest>
+    implements _$$_FhirOperationRequestCopyWith<$Res> {
+  __$$_FhirOperationRequestCopyWithImpl(_$_FhirOperationRequest _value,
+      $Res Function(_$_FhirOperationRequest) _then)
+      : super(_value, _then);
 
-  @override
-  _FhirOperationRequest get _value => super._value as _FhirOperationRequest;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? base = freezed,
+    Object? base = null,
     Object? type = freezed,
     Object? id = freezed,
-    Object? pretty = freezed,
-    Object? summary = freezed,
-    Object? format = freezed,
-    Object? elements = freezed,
-    Object? parameters = freezed,
-    Object? fhirParameter = freezed,
-    Object? operation = freezed,
-    Object? usePost = freezed,
-    Object? useFormData = freezed,
+    Object? pretty = null,
+    Object? summary = null,
+    Object? format = null,
+    Object? elements = null,
+    Object? parameters = null,
+    Object? fhirParameter = null,
+    Object? operation = null,
+    Object? usePost = null,
+    Object? useFormData = null,
     Object? client = freezed,
   }) {
-    return _then(_FhirOperationRequest(
-      base: base == freezed
+    return _then(_$_FhirOperationRequest(
+      base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
               as Uri,
-      type: type == freezed
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as R4ResourceType?,
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as Id?,
-      pretty: pretty == freezed
+      pretty: null == pretty
           ? _value.pretty
           : pretty // ignore: cast_nullable_to_non_nullable
               as bool,
-      summary: summary == freezed
+      summary: null == summary
           ? _value.summary
           : summary // ignore: cast_nullable_to_non_nullable
               as Summary,
-      format: format == freezed
+      format: null == format
           ? _value.format
           : format // ignore: cast_nullable_to_non_nullable
               as String,
-      elements: elements == freezed
-          ? _value.elements
+      elements: null == elements
+          ? _value._elements
           : elements // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      parameters: parameters == freezed
-          ? _value.parameters
+      parameters: null == parameters
+          ? _value._parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirParameter: fhirParameter == freezed
-          ? _value.fhirParameter
+      fhirParameter: null == fhirParameter
+          ? _value._fhirParameter
           : fhirParameter // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>,
-      operation: operation == freezed
+      operation: null == operation
           ? _value.operation
           : operation // ignore: cast_nullable_to_non_nullable
               as String,
-      usePost: usePost == freezed
+      usePost: null == usePost
           ? _value.usePost
           : usePost // ignore: cast_nullable_to_non_nullable
               as bool,
-      useFormData: useFormData == freezed
+      useFormData: null == useFormData
           ? _value.useFormData
           : useFormData // ignore: cast_nullable_to_non_nullable
               as bool,
-      client: client == freezed
+      client: freezed == client
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
               as Client?,
@@ -9637,14 +12238,17 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
-      this.elements = const <String>[],
-      this.parameters = const <String>[],
-      this.fhirParameter = const <String, dynamic>{},
+      final List<String> elements = const <String>[],
+      final List<String> parameters = const <String>[],
+      final Map<String, dynamic> fhirParameter = const <String, dynamic>{},
       required this.operation,
       this.usePost = false,
       this.useFormData = false,
       this.client})
-      : super._();
+      : _elements = elements,
+        _parameters = parameters,
+        _fhirParameter = fhirParameter,
+        super._();
 
   @override
   final Uri base;
@@ -9652,31 +12256,46 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   final R4ResourceType? type;
   @override
   final Id? id;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
   @override
+  @JsonKey()
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
   @override
+  @JsonKey()
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  final List<String> _elements;
   @override
-  final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
+  List<String> get elements {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_elements);
+  }
+
+  final List<String> _parameters;
   @override
-  final List<String> parameters;
-  @JsonKey(defaultValue: const <String, dynamic>{})
+  @JsonKey()
+  List<String> get parameters {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_parameters);
+  }
+
+  final Map<String, dynamic> _fhirParameter;
   @override
-  final Map<String, dynamic> fhirParameter;
+  @JsonKey()
+  Map<String, dynamic> get fhirParameter {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_fhirParameter);
+  }
+
   @override
   final String operation;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool usePost;
-  @JsonKey(defaultValue: false)
   @override
+  @JsonKey()
   final bool useFormData;
   @override
   final Client? client;
@@ -9689,63 +12308,49 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirOperationRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirParameter, fhirParameter) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirParameter, fhirParameter)) &&
+        (other.runtimeType == runtimeType &&
+            other is _$_FhirOperationRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other._elements, _elements) &&
+            const DeepCollectionEquality()
+                .equals(other._parameters, _parameters) &&
+            const DeepCollectionEquality()
+                .equals(other._fhirParameter, _fhirParameter) &&
             (identical(other.operation, operation) ||
-                const DeepCollectionEquality()
-                    .equals(other.operation, operation)) &&
-            (identical(other.usePost, usePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.usePost, usePost)) &&
+                other.operation == operation) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.useFormData, useFormData) ||
-                const DeepCollectionEquality()
-                    .equals(other.useFormData, useFormData)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.useFormData == useFormData) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirParameter) ^
-      const DeepCollectionEquality().hash(operation) ^
-      const DeepCollectionEquality().hash(usePost) ^
-      const DeepCollectionEquality().hash(useFormData) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(_elements),
+      const DeepCollectionEquality().hash(_parameters),
+      const DeepCollectionEquality().hash(_fhirParameter),
+      operation,
+      usePost,
+      useFormData,
+      client);
 
   @JsonKey(ignore: true)
   @override
-  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
-      __$FhirOperationRequestCopyWithImpl<_FhirOperationRequest>(
+  @pragma('vm:prefer-inline')
+  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
+      __$$_FhirOperationRequestCopyWithImpl<_$_FhirOperationRequest>(
           this, _$identity);
 
   @override
@@ -9925,6 +12530,192 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
         operation,
   }) {
     return operation(
+        base,
+        type,
+        id,
+        pretty,
+        summary,
+        format,
+        elements,
+        parameters,
+        fhirParameter,
+        this.operation,
+        usePost,
+        useFormData,
+        client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult? Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult? Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult? Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult? Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult? Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) {
+    return operation?.call(
         base,
         type,
         id,
@@ -10154,6 +12945,28 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
   @override
   @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FhirReadRequest value)? read,
+    TResult? Function(_FhirVReadRequest value)? vRead,
+    TResult? Function(_FhirUpdateRequest value)? update,
+    TResult? Function(_FhirPatchRequest value)? patch,
+    TResult? Function(_FhirDeleteRequest value)? delete,
+    TResult? Function(_FhirCreateRequest value)? create,
+    TResult? Function(_FhirSearchRequest value)? search,
+    TResult? Function(_FhirSearchAllRequest value)? searchAll,
+    TResult? Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult? Function(_FhirTransactionRequest value)? transaction,
+    TResult? Function(_FhirBatchRequest value)? batch,
+    TResult? Function(_FhirHistoryRequest value)? history,
+    TResult? Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult? Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult? Function(_FhirOperationRequest value)? operation,
+  }) {
+    return operation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FhirReadRequest value)? read,
     TResult Function(_FhirVReadRequest value)? vRead,
@@ -10181,43 +12994,43 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
 abstract class _FhirOperationRequest extends FhirRequest {
   factory _FhirOperationRequest(
-      {required Uri base,
-      R4ResourceType? type,
-      Id? id,
-      bool pretty,
-      Summary summary,
-      String format,
-      List<String> elements,
-      List<String> parameters,
-      Map<String, dynamic> fhirParameter,
-      required String operation,
-      bool usePost,
-      bool useFormData,
-      Client? client}) = _$_FhirOperationRequest;
+      {required final Uri base,
+      final R4ResourceType? type,
+      final Id? id,
+      final bool pretty,
+      final Summary summary,
+      final String format,
+      final List<String> elements,
+      final List<String> parameters,
+      final Map<String, dynamic> fhirParameter,
+      required final String operation,
+      final bool usePost,
+      final bool useFormData,
+      final Client? client}) = _$_FhirOperationRequest;
   _FhirOperationRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType? get type => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType? get type;
+  Id? get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
-  String get operation => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  bool get useFormData => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Map<String, dynamic> get fhirParameter;
+  String get operation;
+  bool get usePost;
+  bool get useFormData;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
-  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
+  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
