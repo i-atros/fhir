@@ -644,9 +644,9 @@ class FhirRequest with _$FhirRequest {
     uri += _mode();
     uri += _format();
     uri += _pretty();
-    uri += _summary();
-    uri += _elements();
-    uri += _parameters(parameters);
+    uri += _encodeSummary();
+    uri += _encodeElements();
+    uri += _encodeParameters(parameters);
     return uri;
   }
 
@@ -657,14 +657,14 @@ class FhirRequest with _$FhirRequest {
     uri += _mode();
     uri += _format();
     uri += _pretty();
-    uri += _summary();
-    uri += _elements();
+    uri += _encodeSummary();
+    uri += _encodeElements();
     return uri;
   }
 
   /// Return a string from the formData
   String formData({List<String> parameters = const <String>[]}) {
-    return _parameters(parameters, join: false);
+    return _encodeParameters(parameters, join: false);
   }
 
   /// encodeParameters
@@ -687,17 +687,17 @@ class FhirRequest with _$FhirRequest {
       _encodeParam('_pretty=${pretty.toString()}', join: join);
 
   /// assigns if you want the summary
-  String _summary({bool join = true}) => summary != Summary.none
+  String _encodeSummary({bool join = true}) => summary != Summary.none
       ? _encodeParam('_summary=${enumToString(summary)}', join: join)
       : '';
 
   /// places any elements
-  String _elements({bool join = true}) => elements.isNotEmpty
+  String _encodeElements({bool join = true}) => elements.isNotEmpty
       ? _encodeParam('_elements=${elements.join(",")}', join: join)
       : '';
 
   /// places any parameters
-  String _parameters(List<String> parameters, {bool join = true}) {
+  String _encodeParameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
       return '';
     } else {

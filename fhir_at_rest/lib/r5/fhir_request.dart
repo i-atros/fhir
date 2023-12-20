@@ -11,212 +11,6 @@ part 'fhir_request.freezed.dart';
 
 @freezed
 class FhirRequest with _$FhirRequest {
-  FhirRequest._();
-
-  /// This method returns a map with usefull data about the request
-  Map<String, dynamic> _toJson(
-    RestfulRequest type,
-    String uri,
-    String requestType, {
-    Map<String, String>? headers,
-    Resource? resource,
-    bool newSchema = true,
-    String? formData,
-  }) {
-    var json = resource?.toJson();
-
-    if (json != null && !newSchema) {
-      // Here custom logic can be implemented if necessary.
-      // You can check here to see an example of how it was done:
-      // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
-    }
-
-    return {
-      'uri': uri.toString(),
-      'fhirRequestType': requestType,
-      'restfulRequestType': type,
-      if (headers != null) 'headers': headers,
-      if (resource != null) 'resource': json,
-      if (formData != null) 'formData': formData,
-    };
-  }
-
-  /// TO JSON
-  /// after creating a request with the above constructors, they can be called
-  /// to get a map with useful data about the request
-  Map<String, dynamic> toJson(Map<String, String> headers, bool newSchema) {
-    return map(
-      read: (m) => _toJson(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Read',
-        newSchema: newSchema,
-        headers: headers,
-      ),
-      vRead: (m) => _toJson(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Vread',
-        headers: headers,
-        newSchema: newSchema,
-      ),
-      update: (m) => _toJson(
-        RestfulRequest.put_,
-        uri(parameters: m.parameters),
-        'Update',
-        headers: headers,
-        resource: m.resource,
-      ),
-      patch: (m) => _toJson(
-        RestfulRequest.patch_,
-        uri(parameters: m.parameters),
-        'Patch',
-        headers: headers,
-        newSchema: newSchema,
-        resource: m.resource,
-      ),
-      delete: (m) => _toJson(
-        RestfulRequest.delete_,
-        uri(parameters: m.parameters),
-        'Delete',
-        headers: headers,
-        newSchema: newSchema,
-      ),
-      create: (m) => _toJson(
-        RestfulRequest.post_,
-        uri(parameters: m.parameters),
-        'Create',
-        headers: headers,
-        newSchema: newSchema,
-        resource: m.resource,
-      ),
-      search: (m) => _toJson(
-        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
-        m.usePost ? url : uri(parameters: m.parameters),
-        'Search',
-        headers: headers,
-        newSchema: newSchema,
-        formData: m.usePost ? m.formData(parameters: m.parameters) : null,
-      ),
-      searchAll: (m) => _toJson(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Search All',
-        headers: headers,
-        newSchema: newSchema,
-      ),
-      capabilities: (m) => _toJson(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Capabilities',
-        headers: headers,
-        newSchema: newSchema,
-      ),
-      transaction: (m) {
-        return _toJson(
-          RestfulRequest.post_,
-          uri(),
-          'Transaction',
-          headers: headers,
-          resource: m.bundle,
-          newSchema: newSchema,
-        );
-      },
-      batch: (m) {
-        return _toJson(
-          RestfulRequest.post_,
-          uri(),
-          'Batch',
-          headers: headers,
-          resource: m.bundle,
-          newSchema: newSchema,
-        );
-      },
-      history: (m) {
-        final List<String> parameterList = [];
-        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
-
-        if (hxList.isNotEmpty) {
-          parameterList.addAll(hxList);
-        }
-        if (parameters.isNotEmpty) {
-          parameterList.addAll(parameters);
-        }
-
-        return _toJson(
-          RestfulRequest.get_,
-          uri(parameters: parameterList),
-          'History',
-          headers: headers,
-          newSchema: newSchema,
-        );
-      },
-      historyType: (m) {
-        final List<String> parameterList = [];
-        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
-
-        if (hxList.isNotEmpty) {
-          parameterList.addAll(hxList);
-        }
-        if (parameters.isNotEmpty) {
-          parameterList.addAll(parameters);
-        }
-
-        return _toJson(
-          RestfulRequest.get_,
-          uri(parameters: parameterList),
-          'History Type',
-          headers: headers,
-          newSchema: newSchema,
-        );
-      },
-      historyAll: (m) {
-        final List<String> parameterList = [];
-        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
-
-        if (hxList.isNotEmpty) {
-          parameterList.addAll(hxList);
-        }
-        if (parameters.isNotEmpty) {
-          parameterList.addAll(parameters);
-        }
-
-        return _toJson(
-          RestfulRequest.get_,
-          uri(parameters: parameterList),
-          'History all',
-          headers: headers,
-          newSchema: newSchema,
-        );
-      },
-      operation: (m) => _toJson(
-        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
-        m.usePost ? url : uri(parameters: parameters),
-        'Operation',
-        headers: headers,
-        newSchema: newSchema,
-        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
-        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
-      ),
-      readBundlePage: (m) => _toJson(
-        RestfulRequest.get_,
-        uri(
-            parameters: m.bundle.link
-                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
-                    .url
-                    ?.value
-                    ?.queryParameters
-                    .entries
-                    .map<String>((e) => '${e.key}=${e.value}')
-                    .toList() ??
-                []),
-        'ReadBundlePage',
-        headers: headers,
-        newSchema: newSchema,
-      ),
-    );
-  }
-
   /// READ constructor
   /// [base] - the base URI for the FHIR server
   /// [type] - the type of resource you're looking for
@@ -297,15 +91,18 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [patchOperations] - the patch operations to be performed, each entry is a FHIR compliant patch operation
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
     required Uri base,
-    required Resource resource,
+    required R5ResourceType type,
+    required Id id,
     @Default(false) bool pretty,
     @Default(Summary.none) Summary summary,
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    @Default(<String>[]) List<String> patchOperations,
     Client? client,
   }) = _FhirPatchRequest;
 
@@ -614,6 +411,211 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirReadBundlePageRequest;
 
+  FhirRequest._();
+
+  /// This method returns a map with usefull data about the request
+  Map<String, dynamic> _toJson(
+    RestfulRequest type,
+    String uri,
+    String requestType, {
+    Map<String, String>? headers,
+    Resource? resource,
+    bool newSchema = true,
+    String? formData,
+  }) {
+    final json = resource?.toJson();
+
+    if (json != null && !newSchema) {
+      // Here custom logic can be implemented if necessary.
+      // You can check here to see an example of how it was done:
+      // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
+    }
+
+    return {
+      'uri': uri.toString(),
+      'fhirRequestType': requestType,
+      'restfulRequestType': type,
+      if (headers != null) 'headers': headers,
+      if (resource != null) 'resource': json,
+      if (formData != null) 'formData': formData,
+    };
+  }
+
+  /// TO JSON
+  /// after creating a request with the above constructors, they can be called
+  /// to get a map with useful data about the request
+  Map<String, dynamic> toJson(Map<String, String> headers, bool newSchema) {
+    return map(
+      read: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Read',
+        newSchema: newSchema,
+        headers: headers,
+      ),
+      vRead: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Vread',
+        headers: headers,
+        newSchema: newSchema,
+      ),
+      update: (m) => _toJson(
+        RestfulRequest.put_,
+        uri(parameters: m.parameters),
+        'Update',
+        headers: headers,
+        resource: m.resource,
+      ),
+      patch: (m) => _toJson(
+        RestfulRequest.patch_,
+        uri(parameters: m.parameters),
+        'Patch',
+        headers: headers,
+        newSchema: newSchema,
+      ),
+      delete: (m) => _toJson(
+        RestfulRequest.delete_,
+        uri(parameters: m.parameters),
+        'Delete',
+        headers: headers,
+        newSchema: newSchema,
+      ),
+      create: (m) => _toJson(
+        RestfulRequest.post_,
+        uri(parameters: m.parameters),
+        'Create',
+        headers: headers,
+        newSchema: newSchema,
+        resource: m.resource,
+      ),
+      search: (m) => _toJson(
+        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        m.usePost ? url : uri(parameters: m.parameters),
+        'Search',
+        headers: headers,
+        newSchema: newSchema,
+        formData: m.usePost ? m.formData(parameters: m.parameters) : null,
+      ),
+      searchAll: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Search All',
+        headers: headers,
+        newSchema: newSchema,
+      ),
+      capabilities: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(parameters: m.parameters),
+        'Capabilities',
+        headers: headers,
+        newSchema: newSchema,
+      ),
+      transaction: (m) {
+        return _toJson(
+          RestfulRequest.post_,
+          uri(),
+          'Transaction',
+          headers: headers,
+          resource: m.bundle,
+          newSchema: newSchema,
+        );
+      },
+      batch: (m) {
+        return _toJson(
+          RestfulRequest.post_,
+          uri(),
+          'Batch',
+          headers: headers,
+          resource: m.bundle,
+          newSchema: newSchema,
+        );
+      },
+      history: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History',
+          headers: headers,
+          newSchema: newSchema,
+        );
+      },
+      historyType: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History Type',
+          headers: headers,
+          newSchema: newSchema,
+        );
+      },
+      historyAll: (m) {
+        final List<String> parameterList = [];
+        final hxList = _hxParameters(m.count, m.since, m.at, m.reference);
+
+        if (hxList.isNotEmpty) {
+          parameterList.addAll(hxList);
+        }
+        if (parameters.isNotEmpty) {
+          parameterList.addAll(parameters);
+        }
+
+        return _toJson(
+          RestfulRequest.get_,
+          uri(parameters: parameterList),
+          'History all',
+          headers: headers,
+          newSchema: newSchema,
+        );
+      },
+      operation: (m) => _toJson(
+        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        m.usePost ? url : uri(parameters: parameters),
+        'Operation',
+        headers: headers,
+        newSchema: newSchema,
+        resource: m.usePost && m.useFormData ? null : Resource.fromJson(m.fhirParameter),
+        formData: m.usePost && m.useFormData ? m.formData(parameters: parameters) : null,
+      ),
+      readBundlePage: (m) => _toJson(
+        RestfulRequest.get_,
+        uri(
+            parameters: m.bundle.link
+                    ?.firstWhere((element) => element.relation == BundlePageEnumMap[m.page], orElse: null)
+                    .url
+                    ?.value
+                    ?.queryParameters
+                    .entries
+                    .map<String>((e) => '${e.key}=${e.value}')
+                    .toList() ??
+                []),
+        'ReadBundlePage',
+        headers: headers,
+        newSchema: newSchema,
+      ),
+    );
+  }
+
   /// REQUEST
   /// after creating a request with the above constructors, they can be called
   /// to interact with the server by using this method. If necessary,
@@ -641,7 +643,7 @@ class FhirRequest with _$FhirRequest {
         headers,
         'Patch',
         newSchema,
-        resource: m.resource,
+        patchOperations: m.patchOperations,
       ),
       delete: (m) async => await _request(
         RestfulRequest.delete_,
@@ -860,6 +862,7 @@ class FhirRequest with _$FhirRequest {
     bool newSchema, {
     Resource? resource,
     String? formData,
+    List<String>? patchOperations,
   }) async {
     try {
       final _json = resource?.toJson();
@@ -870,10 +873,9 @@ class FhirRequest with _$FhirRequest {
       }
 
       if (json != null && !newSchema) {
-      // Here custom logic can be implemented if necessary.
-      // You can check here to see an example of how it was done:
-      // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
-
+        // Here custom logic can be implemented if necessary.
+        // You can check here to see an example of how it was done:
+        // https://github.com/i-atros/fhir/commit/60b6bc137fcc5d49c42751e32c90db27bf9ff7b5
       }
 
       final result = await _makeRequest(
@@ -883,7 +885,9 @@ class FhirRequest with _$FhirRequest {
         headers: headers,
         resource: json,
         newSchema: newSchema,
+        formData: formData,
         resourceType: resource?.resourceType,
+        patchOperations: patchOperations,
       );
       return result;
     } catch (e) {
@@ -968,7 +972,7 @@ class FhirRequest with _$FhirRequest {
   }
 
   Map<String, dynamic> convertFromOldSchema(Map<String, dynamic> resource, R5ResourceType? resourceType) {
-    Map<String, dynamic> json = Map.from(resource);
+    final Map<String, dynamic> json = Map.from(resource);
 
     switch (resourceType) {
       case R5ResourceType.Appointment:
@@ -1067,7 +1071,7 @@ class FhirRequest with _$FhirRequest {
       return null;
     }
 
-    Map<String, dynamic> json = Map<String, dynamic>.from(meh);
+    final Map<String, dynamic> json = Map<String, dynamic>.from(meh);
 
     if (json.containsKey('meta')) {
       json.remove('meta');
@@ -1091,8 +1095,8 @@ class FhirRequest with _$FhirRequest {
     uri += _format();
     uri += _pretty();
     uri += _summary();
-    uri += _elements();
-    uri += _parameters(parameters);
+    uri += _makeElements();
+    uri += _makeParameters(parameters);
     return uri;
   }
 
@@ -1104,13 +1108,13 @@ class FhirRequest with _$FhirRequest {
     uri += _format();
     uri += _pretty();
     uri += _summary();
-    uri += _elements();
+    uri += _makeElements();
     return uri;
   }
 
   /// Return a string from the formData
   String formData({List<String> parameters = const <String>[]}) {
-    return _parameters(parameters, join: false);
+    return _makeParameters(parameters, join: false);
   }
 
   /// encodeParameters
@@ -1131,10 +1135,10 @@ class FhirRequest with _$FhirRequest {
   String _summary({bool join = true}) => summary != Summary.none ? _encodeParam('_summary=${enumToString(summary)}', join: join) : '';
 
   /// places any elements
-  String _elements({bool join = true}) => elements.isNotEmpty ? _encodeParam('_elements=${elements.join(",")}', join: join) : '';
+  String _makeElements({bool join = true}) => elements.isNotEmpty ? _encodeParam('_elements=${elements.join(",")}', join: join) : '';
 
   /// places any parameters
-  String _parameters(List<String> parameters, {bool join = true}) {
+  String _makeParameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
       return '';
     } else {
@@ -1155,7 +1159,7 @@ class FhirRequest with _$FhirRequest {
       // UPDATE
       update: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
       // PATCH
-      patch: (f) => '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+      patch: (f) => '${f.base}/${ResourceUtils.resourceTypeToStringMap[f.type]}/${f.id.toString()}',
       // DELETE
       delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
       // CREATE
@@ -1196,6 +1200,7 @@ class FhirRequest with _$FhirRequest {
     Map<String, dynamic>? resource,
     bool newSchema = false,
     String? formData,
+    List<String>? patchOperations,
     Encoding? encoding,
     Client? client,
     R5ResourceType? resourceType,
@@ -1238,11 +1243,11 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.patch_:
           {
-            headers['Content-Type'] = 'application/fhir+json';
+            headers['Content-Type'] = 'application/json-patch+json';
             result = await client.patch(
               Uri.parse(thisRequest),
               headers: headers,
-              body: jsonEncode(resource),
+              body: patchOperations.toString(),
               encoding: encoding,
             );
             break;
@@ -1278,7 +1283,7 @@ class FhirRequest with _$FhirRequest {
       ]);
     }
 
-    var body = json.decode(result.body);
+    final body = json.decode(result.body);
 
     if (!newSchema && result.body.isNotEmpty) {
       // Support old schema
