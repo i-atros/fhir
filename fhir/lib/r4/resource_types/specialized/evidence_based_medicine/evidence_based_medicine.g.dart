@@ -1477,9 +1477,8 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      library_:
+          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       population:
           Reference.fromJson(json['population'] as Map<String, dynamic>),
       exposure: json['exposure'] == null
@@ -1745,9 +1744,8 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      library_:
+          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       type: $enumDecodeNullable(
           _$ResearchElementDefinitionTypeEnumMap, json['type'],
           unknownValue: ResearchElementDefinitionType.unknown),

@@ -1065,9 +1065,8 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      timeOfDay: (json['timeOfDay'] as List<dynamic>?)
-          ?.map((e) => Time.fromJson(e))
-          .toList(),
+      timeOfDay:
+          (json['timeOfDay'] as List<dynamic>?)?.map(Time.fromJson).toList(),
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

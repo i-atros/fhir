@@ -107,9 +107,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
         ?.map((e) =>
             ImplementationGuideGlobal.fromJson(e as Map<String, dynamic>))
         .toList(),
-    binary: (json['binary'] as List<dynamic>?)
-        ?.map((e) => FhirUri.fromJson(e))
-        .toList(),
+    binary: (json['binary'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
     page:
         ImplementationGuidePage.fromJson(json['page'] as Map<String, dynamic>),
   );
@@ -455,9 +453,7 @@ _$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
       name: json['name'] as String,
       kind: $enumDecode(_$PageKindEnumMap, json['kind'],
           unknownValue: PageKind.unknown),
-      type: (json['type'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      type: (json['type'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       package:
           (json['package'] as List<dynamic>?)?.map((e) => e as String).toList(),
       format: json['format'] == null ? null : Code.fromJson(json['format']),
@@ -893,9 +889,7 @@ _$_TestScriptMetadataCapability _$$_TestScriptMetadataCapabilityFromJson(
       destinationElement: json['_destination'] == null
           ? null
           : Element.fromJson(json['_destination'] as Map<String, dynamic>),
-      link: (json['link'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      link: (json['link'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       linkElement: (json['_link'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

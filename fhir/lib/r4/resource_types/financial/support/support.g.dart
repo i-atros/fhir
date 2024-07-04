@@ -692,7 +692,7 @@ _$_CoverageEligibilityRequestItem _$$_CoverageEligibilityRequestItemFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       supportingInfoSequence: (json['supportingInfoSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       supportingInfoSequenceElement:
           (json['_supportingInfoSequence'] as List<dynamic>?)

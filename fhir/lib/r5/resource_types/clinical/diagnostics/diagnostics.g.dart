@@ -1315,45 +1315,35 @@ _$_MolecularSequenceRoc _$$_MolecularSequenceRocFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      score: (json['score'] as List<dynamic>?)
-          ?.map((e) => Integer.fromJson(e))
-          .toList(),
+      score: (json['score'] as List<dynamic>?)?.map(Integer.fromJson).toList(),
       scoreElement: (json['_score'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      numTP: (json['numTP'] as List<dynamic>?)
-          ?.map((e) => Integer.fromJson(e))
-          .toList(),
+      numTP: (json['numTP'] as List<dynamic>?)?.map(Integer.fromJson).toList(),
       numTPElement: (json['_numTP'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      numFP: (json['numFP'] as List<dynamic>?)
-          ?.map((e) => Integer.fromJson(e))
-          .toList(),
+      numFP: (json['numFP'] as List<dynamic>?)?.map(Integer.fromJson).toList(),
       numFPElement: (json['_numFP'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      numFN: (json['numFN'] as List<dynamic>?)
-          ?.map((e) => Integer.fromJson(e))
-          .toList(),
+      numFN: (json['numFN'] as List<dynamic>?)?.map(Integer.fromJson).toList(),
       numFNElement: (json['_numFN'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      precision: (json['precision'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
-          .toList(),
+      precision:
+          (json['precision'] as List<dynamic>?)?.map(Decimal.fromJson).toList(),
       precisionElement: (json['_precision'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       sensitivity: (json['sensitivity'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
+          ?.map(Decimal.fromJson)
           .toList(),
       sensitivityElement: (json['_sensitivity'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      fMeasure: (json['fMeasure'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
-          .toList(),
+      fMeasure:
+          (json['fMeasure'] as List<dynamic>?)?.map(Decimal.fromJson).toList(),
       fMeasureElement: (json['_fMeasure'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),

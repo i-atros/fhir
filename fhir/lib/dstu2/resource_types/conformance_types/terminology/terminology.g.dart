@@ -499,9 +499,8 @@ _$_ValueSetCompose _$$_ValueSetComposeFromJson(Map<String, dynamic> json) =>
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      import_: (json['import'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      import_:
+          (json['import'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       include: (json['include'] as List<dynamic>?)
           ?.map(
               (e) => ValueSetComposeInclude.fromJson(e as Map<String, dynamic>))

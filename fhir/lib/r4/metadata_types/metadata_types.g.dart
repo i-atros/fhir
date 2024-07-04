@@ -97,9 +97,8 @@ _$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      profile: (json['profile'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      profile:
+          (json['profile'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       subjectCodeableConcept: json['subjectCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(

@@ -151,9 +151,8 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      library_:
+          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       disclaimer: json['disclaimer'] == null
           ? null
           : Markdown.fromJson(json['disclaimer']),
@@ -198,7 +197,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           : CodeableConcept.fromJson(
               json['improvementNotation'] as Map<String, dynamic>),
       definition: (json['definition'] as List<dynamic>?)
-          ?.map((e) => Markdown.fromJson(e))
+          ?.map(Markdown.fromJson)
           .toList(),
       definitionElement: (json['_definition'] as List<dynamic>?)
           ?.map((e) =>
@@ -2002,9 +2001,8 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      origin: (json['origin'] as List<dynamic>?)
-          ?.map((e) => Integer.fromJson(e))
-          .toList(),
+      origin:
+          (json['origin'] as List<dynamic>?)?.map(Integer.fromJson).toList(),
       originElement: (json['_origin'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -2015,9 +2013,7 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
       destinationElement: json['_destination'] == null
           ? null
           : Element.fromJson(json['_destination'] as Map<String, dynamic>),
-      link: (json['link'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      link: (json['link'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       linkElement: (json['_link'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

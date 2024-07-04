@@ -475,9 +475,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
       priority: json['priority'] == null
           ? null
           : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
-      purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      purpose: (json['purpose'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -681,7 +679,7 @@ _$_CoverageEligibilityRequestItem _$$_CoverageEligibilityRequestItemFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       supportingInfoSequence: (json['supportingInfoSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       supportingInfoSequenceElement:
           (json['_supportingInfoSequence'] as List<dynamic>?)
@@ -833,9 +831,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      purpose: (json['purpose'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
