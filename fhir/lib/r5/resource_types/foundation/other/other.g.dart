@@ -2092,7 +2092,7 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
       derivedFrom: (json['derivedFrom'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(Canonical.fromJson)
           .toList(),
       status: $enumDecodeNullable(
           _$SubscriptionTopicStatusEnumMap, json['status'],
@@ -2251,7 +2251,7 @@ _$_SubscriptionTopicResourceTrigger
               ? null
               : Element.fromJson(json['_resourceType'] as Map<String, dynamic>),
           methodCriteria: (json['methodCriteria'] as List<dynamic>?)
-              ?.map((e) => Code.fromJson(e))
+              ?.map(Code.fromJson)
               .toList(),
           methodCriteriaElement: (json['_methodCriteria'] as List<dynamic>?)
               ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2385,7 +2385,7 @@ _$_SubscriptionTopicCanFilterBy _$$_SubscriptionTopicCanFilterByFromJson(
           ? null
           : Element.fromJson(json['_searchParamName'] as Map<String, dynamic>),
       searchModifier: (json['searchModifier'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(Code.fromJson)
           .toList(),
       searchModifierElement: (json['_searchModifier'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))

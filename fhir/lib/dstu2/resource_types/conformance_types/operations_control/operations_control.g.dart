@@ -559,7 +559,7 @@ _$_ConformanceRest _$$_ConformanceRestFromJson(Map<String, dynamic> json) =>
               ConformanceRestOperation.fromJson(e as Map<String, dynamic>))
           .toList(),
       compartment: (json['compartment'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map(FhirUri.fromJson)
           .toList(),
     );
 
@@ -1164,9 +1164,7 @@ _$_ConformanceResourceSearchParam _$$_ConformanceResourceSearchParamFromJson(
       type: $enumDecode(_$SearchParamTypeEnumMap, json['type'],
           unknownValue: SearchParamType.unknown),
       documentation: json['documentation'] as String?,
-      target: (json['target'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      target: (json['target'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       modifier: (json['modifier'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$SearchParamModifierEnumMap, e))
           .toList(),
@@ -1285,8 +1283,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
         ? null
         : Reference.fromJson(json['base'] as Map<String, dynamic>),
     system: Boolean.fromJson(json['system']),
-    type:
-        (json['type'] as List<dynamic>?)?.map((e) => Code.fromJson(e)).toList(),
+    type: (json['type'] as List<dynamic>?)?.map(Code.fromJson).toList(),
     instance: Boolean.fromJson(json['instance']),
     parameter: (json['parameter'] as List<dynamic>?)
         ?.map((e) =>
@@ -1567,9 +1564,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       xpathUsage: $enumDecodeNullable(
           _$SearchParameterXpathUsageEnumMap, json['xpathUsage'],
           unknownValue: SearchParameterXpathUsage.unknown),
-      target: (json['target'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      target: (json['target'] as List<dynamic>?)?.map(Code.fromJson).toList(),
     );
 
 Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {

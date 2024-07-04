@@ -1859,7 +1859,7 @@ _$_ImagingObjectSelectionInstanceFrames
               : FhirExtension.fromJson(
                   json['modifierExte'] as Map<String, dynamic>),
           frameNumbers: (json['frameNumbers'] as List<dynamic>)
-              .map((e) => UnsignedInt.fromJson(e))
+              .map(UnsignedInt.fromJson)
               .toList(),
           url: FhirUri.fromJson(json['url']),
         );

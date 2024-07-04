@@ -65,9 +65,8 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      subjectType: (json['subjectType'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      subjectType:
+          (json['subjectType'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -791,9 +790,8 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
       location: json['location'] == null
           ? null
           : Reference.fromJson(json['location'] as Map<String, dynamic>),
-      policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      policy:
+          (json['policy'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1142,9 +1140,8 @@ _$_AuditEventParticipant _$$_AuditEventParticipantFromJson(
       location: json['location'] == null
           ? null
           : Reference.fromJson(json['location'] as Map<String, dynamic>),
-      policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      policy:
+          (json['policy'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       media: json['media'] == null
           ? null
           : Coding.fromJson(json['media'] as Map<String, dynamic>),

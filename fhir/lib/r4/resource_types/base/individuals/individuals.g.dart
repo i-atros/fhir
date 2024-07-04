@@ -1190,9 +1190,8 @@ _$_PractitionerRoleAvailableTime _$$_PractitionerRoleAvailableTimeFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      daysOfWeek:
+          (json['daysOfWeek'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

@@ -1176,7 +1176,7 @@ _$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       event: (json['event'] as List<dynamic>?)
-          ?.map((e) => FhirDateTime.fromJson(e))
+          ?.map(FhirDateTime.fromJson)
           .toList(),
       eventElement: (json['_event'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1285,15 +1285,13 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
       periodUnitElement: json['_periodUnit'] == null
           ? null
           : Element.fromJson(json['_periodUnit'] as Map<String, dynamic>),
-      dayOfWeek: (json['dayOfWeek'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      dayOfWeek:
+          (json['dayOfWeek'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       dayOfWeekElement: (json['_dayOfWeek'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      timeOfDay: (json['timeOfDay'] as List<dynamic>?)
-          ?.map((e) => Time.fromJson(e))
-          .toList(),
+      timeOfDay:
+          (json['timeOfDay'] as List<dynamic>?)?.map(Time.fromJson).toList(),
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),

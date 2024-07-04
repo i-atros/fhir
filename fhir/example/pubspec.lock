@@ -5,84 +5,96 @@ packages:
     dependency: transitive
     description:
       name: charcode
-      url: "https://pub.dartlang.org"
+      sha256: "8e36feea6de5ea69f2199f29cf42a450a855738c498b57c0b980e2d3cca9c362"
+      url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
   collection:
     dependency: transitive
     description:
       name: collection
-      url: "https://pub.dartlang.org"
+      sha256: "6d4193120997ecfd09acf0e313f13dc122b119e5eca87ef57a7d065ec9183762"
+      url: "https://pub.dev"
     source: hosted
     version: "1.15.0"
   fhir:
     dependency: "direct main"
     description:
       name: fhir
-      url: "https://pub.dartlang.org"
+      sha256: "4a1dd40d7d054404479f91a51552773da3d5cf528580477a42abcf5569af5e4f"
+      url: "https://pub.dev"
     source: hosted
     version: "0.3.0-nullsafety.0"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
-      url: "https://pub.dartlang.org"
+      sha256: "27f7eb6b5da741cb9577ed0522ad260bb1586b880ccd181c425b680ddad1ca6a"
+      url: "https://pub.dev"
     source: hosted
     version: "0.3.0-nullsafety.0"
   freezed_annotation:
     dependency: transitive
     description:
       name: freezed_annotation
-      url: "https://pub.dartlang.org"
+      sha256: "3c992c6c5a965187592e7baa645e7a931d4c2e25da9a755c0337bc3da874589a"
+      url: "https://pub.dev"
     source: hosted
     version: "0.13.0-nullsafety.0"
   json_annotation:
     dependency: transitive
     description:
       name: json_annotation
-      url: "https://pub.dartlang.org"
+      sha256: "0aab0aad3dde662cdc02d3a6fa6c9f20687a91089900bd25c64f3badcc90bf21"
+      url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
   meta:
     dependency: transitive
     description:
       name: meta
-      url: "https://pub.dartlang.org"
+      sha256: "98a7492d10d7049ea129fd4e50f7cdd2d5008522b1dfa1148bbbc542b9dd21f7"
+      url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
   path:
     dependency: transitive
     description:
       name: path
-      url: "https://pub.dartlang.org"
+      sha256: "2ad4cddff7f5cc0e2d13069f2a3f7a73ca18f66abd6f5ecf215219cdb3638edb"
+      url: "https://pub.dev"
     source: hosted
     version: "1.8.0"
   source_span:
     dependency: transitive
     description:
       name: source_span
-      url: "https://pub.dartlang.org"
+      sha256: d5f89a9e52b36240a80282b3dc0667dd36e53459717bb17b8fb102d30496606a
+      url: "https://pub.dev"
     source: hosted
     version: "1.8.1"
   string_scanner:
     dependency: transitive
     description:
       name: string_scanner
-      url: "https://pub.dartlang.org"
+      sha256: dd11571b8a03f7cadcf91ec26a77e02bfbd6bbba2a512924d3116646b4198fc4
+      url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
   term_glyph:
     dependency: transitive
     description:
       name: term_glyph
-      url: "https://pub.dartlang.org"
+      sha256: a88162591b02c1f3a3db3af8ce1ea2b374bd75a7bb8d5e353bcfbdc79d719830
+      url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
   yaml:
     dependency: transitive
     description:
       name: yaml
-      url: "https://pub.dartlang.org"
+      sha256: "252eb4c4d54f384c9fee16795f3d7381b037c53261aa1772dc43b71133581e41"
+      url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
 sdks:

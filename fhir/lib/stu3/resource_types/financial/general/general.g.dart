@@ -1631,28 +1631,28 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       careTeamLinkId: (json['careTeamLinkId'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       careTeamLinkIdElement: (json['_careTeamLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       diagnosisLinkId: (json['diagnosisLinkId'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       diagnosisLinkIdElement: (json['_diagnosisLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       procedureLinkId: (json['procedureLinkId'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       procedureLinkIdElement: (json['_procedureLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       informationLinkId: (json['informationLinkId'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       informationLinkIdElement: (json['_informationLinkId'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1718,7 +1718,7 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
+          ?.map(Decimal.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -1873,7 +1873,7 @@ _$_ExplanationOfBenefitDetail _$$_ExplanationOfBenefitDetailFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
+          ?.map(Decimal.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -1966,7 +1966,7 @@ _$_ExplanationOfBenefitSubDetail _$$_ExplanationOfBenefitSubDetailFromJson(
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
+          ?.map(Decimal.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2015,9 +2015,8 @@ Map<String, dynamic> _$$_ExplanationOfBenefitSubDetailToJson(
 _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
         Map<String, dynamic> json) =>
     _$_ExplanationOfBenefitAddItem(
-      sequenceLinkId: (json['sequenceLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
-          .toList(),
+      sequenceLinkId:
+          (json['sequenceLinkId'] as List<dynamic>?)?.map(Id.fromJson).toList(),
       sequenceLinkIdElement: (json['_sequenceLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -2038,7 +2037,7 @@ _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
           ? null
           : Money.fromJson(json['fee'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
+          ?.map(Decimal.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>
@@ -2102,7 +2101,7 @@ _$_ExplanationOfBenefitDetail1 _$$_ExplanationOfBenefitDetail1FromJson(
           ? null
           : Money.fromJson(json['fee'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
+          ?.map(Decimal.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) =>

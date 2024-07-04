@@ -335,9 +335,8 @@ _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
       location: json['location'] == null
           ? null
           : Reference.fromJson(json['location'] as Map<String, dynamic>),
-      policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      policy:
+          (json['policy'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -806,7 +805,7 @@ _$_ConsentVerification _$$_ConsentVerificationFromJson(
           ? null
           : Reference.fromJson(json['verifiedWith'] as Map<String, dynamic>),
       verificationDate: (json['verificationDate'] as List<dynamic>?)
-          ?.map((e) => FhirDateTime.fromJson(e))
+          ?.map(FhirDateTime.fromJson)
           .toList(),
       verificationDateElement: (json['_verificationDate'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1053,7 +1052,7 @@ _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
       assertionDate: (json['assertionDate'] as List<dynamic>?)
-          ?.map((e) => FhirDateTime.fromJson(e))
+          ?.map(FhirDateTime.fromJson)
           .toList(),
       assertionDateElement: (json['_assertionDate'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1264,9 +1263,8 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
-      policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      policy:
+          (json['policy'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),

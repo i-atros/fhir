@@ -25,9 +25,8 @@ _$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
       lastUpdatedElement: json['_lastUpdated'] == null
           ? null
           : Element.fromJson(json['_lastUpdated'] as Map<String, dynamic>),
-      profile: (json['profile'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      profile:
+          (json['profile'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       security: (json['security'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -105,7 +104,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
       path: json['path'] as String,
       representation: (json['representation'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(Code.fromJson)
           .toList(),
       representationElement: json['_representation'] == null
           ? null
@@ -1106,9 +1105,8 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
       maxLengthElement: json['_maxLength'] == null
           ? null
           : Element.fromJson(json['_maxLength'] as Map<String, dynamic>),
-      condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
-          .toList(),
+      condition:
+          (json['condition'] as List<dynamic>?)?.map(Id.fromJson).toList(),
       conditionElement: json['_condition'] == null
           ? null
           : Element.fromJson(json['_condition'] as Map<String, dynamic>),
@@ -1690,9 +1688,8 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
       codeExtension: json['_code'] == null
           ? null
           : TypeCodeExtension.fromJson(json['_code'] as Map<String, dynamic>),
-      profile: (json['profile'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      profile:
+          (json['profile'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       aggregation: (json['aggregation'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$TypeAggregationEnumMap, e))
           .toList(),

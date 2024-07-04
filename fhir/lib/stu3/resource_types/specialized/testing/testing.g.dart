@@ -846,9 +846,8 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      origin: (json['origin'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
-          .toList(),
+      origin:
+          (json['origin'] as List<dynamic>?)?.map(Decimal.fromJson).toList(),
       originElement: (json['_origin'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

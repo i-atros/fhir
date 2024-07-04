@@ -66,7 +66,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(Code.fromJson)
           .toList(),
       payloadMimeTypeElement: (json['_payloadMimeType'] as List<dynamic>?)
           ?.map((e) =>
@@ -873,9 +873,8 @@ _$_LocationHoursOfOperation _$$_LocationHoursOfOperationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      daysOfWeek:
+          (json['daysOfWeek'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
