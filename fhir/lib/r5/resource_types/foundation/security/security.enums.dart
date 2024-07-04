@@ -51,13 +51,15 @@ enum AuditEventNetworkType {
   unknown,
 }
 
-enum ConsentStatus {
+enum ConsentState {
   @JsonValue('draft')
   draft,
   @JsonValue('active')
   active,
   @JsonValue('inactive')
   inactive,
+  @JsonValue('not-done')
+  not_done,
   @JsonValue('entered-in-error')
   entered_in_error,
   @JsonValue('unknown')
@@ -69,8 +71,6 @@ enum ConsentProvisionType {
   deny,
   @JsonValue('permit')
   permit,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum ConsentDataMeaning {
@@ -81,9 +81,7 @@ enum ConsentDataMeaning {
   @JsonValue('dependents')
   dependents,
   @JsonValue('authoredby')
-  authoredby,
-  @JsonValue('unknown')
-  unknown,
+  authored_by,
 }
 
 enum PermissionStatus {
