@@ -66,7 +66,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(Code.fromJson)
           .toList(),
       payloadMimeTypeElement: (json['_payloadMimeType'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))

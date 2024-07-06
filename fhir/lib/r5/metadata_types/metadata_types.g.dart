@@ -92,9 +92,8 @@ _$_AvailabilityAvailableTime _$$_AvailabilityAvailableTimeFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      daysOfWeek:
+          (json['daysOfWeek'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -325,9 +324,8 @@ _$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      profile: (json['profile'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      profile:
+          (json['profile'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       subjectCodeableConcept: json['subjectCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(
