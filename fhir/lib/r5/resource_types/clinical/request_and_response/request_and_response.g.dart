@@ -43,10 +43,10 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       instantiatesCanonical: (json['instantiatesCanonical'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map(FhirUri.fromJson)
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -642,10 +642,10 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       instantiatesCanonical: (json['instantiatesCanonical'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map(FhirUri.fromJson)
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))

@@ -12,7 +12,7 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: fix-dependencies
+      ref: fix_consent_r5
 
 dev_dependencies:
   test: ^1.16.8

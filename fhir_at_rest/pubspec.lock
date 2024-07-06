@@ -165,20 +165,19 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: fix-dependencies
-      resolved-ref: "71e99a771d2fdd175b64d8e6652b1e373c6ab613"
+      ref: fix_consent_r5
+      resolved-ref: "3b3f34e94fa4a57c2ec9be231e90891a31223b3e"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
   fhir_yaml:
     dependency: transitive
     description:
-      path: fhir_yaml
-      ref: HEAD
-      resolved-ref: c6ef63114c5904928ed20ab5fe6a7ef4d276db7b
-      url: "https://github.com/i-atros/fhir.git"
-    source: git
-    version: "0.5.0"
+      name: fhir_yaml
+      sha256: ad5c9f58efc9e1e0dae71d80069df694a046c98f54e9b9d57d5bc70e7ae69e0b
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.2"
   file:
     dependency: transitive
     description:

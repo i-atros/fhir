@@ -593,7 +593,7 @@ _$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
           ?.map((e) => e as String)
           .toList(),
       event: (json['event'] as List<dynamic>?)
-          ?.map(FhirDateTime.fromJson)
+          ?.map((e) => FhirDateTime.fromJson(e))
           .toList(),
       eventElement: json['_event'] == null
           ? null
