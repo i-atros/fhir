@@ -800,7 +800,9 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
       documentation: (json['documentation'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      goalId: (json['goalId'] as List<dynamic>?)?.map(Id.fromJson).toList(),
+      goalId: (json['goalId'] as List<dynamic>?)
+          ?.map((e) => Id.fromJson(e))
+          .toList(),
       goalIdElement: (json['_goalId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

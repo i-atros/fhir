@@ -109,8 +109,9 @@ _$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
       sourceElement: json['_source'] == null
           ? null
           : Element.fromJson(json['_source'] as Map<String, dynamic>),
-      profile:
-          (json['profile'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       security: (json['security'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1193,8 +1194,9 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
       maxLengthElement: json['_maxLength'] == null
           ? null
           : Element.fromJson(json['_maxLength'] as Map<String, dynamic>),
-      condition:
-          (json['condition'] as List<dynamic>?)?.map(Id.fromJson).toList(),
+      condition: (json['condition'] as List<dynamic>?)
+          ?.map((e) => Id.fromJson(e))
+          .toList(),
       conditionElement: (json['_condition'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1791,14 +1793,15 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      profile:
-          (json['profile'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       profileElement: (json['_profile'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       targetProfile: (json['targetProfile'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       aggregation: (json['aggregation'] as List<dynamic>?)
           ?.map(

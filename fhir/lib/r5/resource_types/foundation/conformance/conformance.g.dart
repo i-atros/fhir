@@ -111,10 +111,11 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
           ? null
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
       instantiates: (json['instantiates'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      imports:
-          (json['imports'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      imports: (json['imports'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       software: json['software'] == null
           ? null
           : CapabilityStatementSoftware.fromJson(
@@ -129,17 +130,20 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       fhirVersionElement: json['_fhirVersion'] == null
           ? null
           : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
-      format: (json['format'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      format: (json['format'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       formatElement: (json['_format'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      patchFormat:
-          (json['patchFormat'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      patchFormat: (json['patchFormat'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       patchFormatElement: (json['_patchFormat'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       implementationGuide: (json['implementationGuide'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       rest: (json['rest'] as List<dynamic>?)
           ?.map((e) =>
@@ -572,7 +576,7 @@ _$_CapabilityStatementRest _$$_CapabilityStatementRestFromJson(
               CapabilityStatementOperation.fromJson(e as Map<String, dynamic>))
           .toList(),
       compartment: (json['compartment'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
     );
 
@@ -679,7 +683,7 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
       profile:
           json['profile'] == null ? null : Canonical.fromJson(json['profile']),
       supportedProfile: (json['supportedProfile'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       documentation: json['documentation'] == null
           ? null
@@ -739,7 +743,7 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
           : Element.fromJson(
               json['_conditionalDelete'] as Map<String, dynamic>),
       referencePolicy: (json['referencePolicy'] as List<dynamic>?)
-          ?.map(Code.fromJson)
+          ?.map((e) => Code.fromJson(e))
           .toList(),
       referencePolicyElement: (json['_referencePolicy'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1386,10 +1390,11 @@ _$_CapabilityStatement2 _$$_CapabilityStatement2FromJson(
           ? null
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
       instantiates: (json['instantiates'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      imports:
-          (json['imports'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      imports: (json['imports'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       software: json['software'] == null
           ? null
           : CapabilityStatement2Software.fromJson(
@@ -1404,17 +1409,20 @@ _$_CapabilityStatement2 _$$_CapabilityStatement2FromJson(
       fhirVersionElement: json['_fhirVersion'] == null
           ? null
           : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
-      format: (json['format'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      format: (json['format'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       formatElement: (json['_format'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      patchFormat:
-          (json['patchFormat'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      patchFormat: (json['patchFormat'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       patchFormatElement: (json['_patchFormat'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       implementationGuide: (json['implementationGuide'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       rest: (json['rest'] as List<dynamic>?)
           ?.map((e) =>
@@ -1675,7 +1683,7 @@ _$_CapabilityStatement2Rest _$$_CapabilityStatement2RestFromJson(
               CapabilityStatement2Operation.fromJson(e as Map<String, dynamic>))
           .toList(),
       compartment: (json['compartment'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
     );
 
@@ -1770,7 +1778,7 @@ _$_CapabilityStatement2Resource _$$_CapabilityStatement2ResourceFromJson(
       profile:
           json['profile'] == null ? null : Canonical.fromJson(json['profile']),
       supportedProfile: (json['supportedProfile'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       documentation: json['documentation'] == null
           ? null
@@ -2406,7 +2414,7 @@ _$_ExampleScenario _$$_ExampleScenarioFromJson(Map<String, dynamic> json) =>
               (e) => ExampleScenarioProcess.fromJson(e as Map<String, dynamic>))
           .toList(),
       workflow: (json['workflow'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
     );
 
@@ -3437,8 +3445,9 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
       licenseElement: json['_license'] == null
           ? null
           : Element.fromJson(json['_license'] as Map<String, dynamic>),
-      fhirVersion:
-          (json['fhirVersion'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      fhirVersion: (json['fhirVersion'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -4086,8 +4095,9 @@ _$_ImplementationGuideResource _$$_ImplementationGuideResourceFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
-      fhirVersion:
-          (json['fhirVersion'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      fhirVersion: (json['fhirVersion'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -4579,11 +4589,12 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       replaces: (json['replaces'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       base: json['base'] == null ? null : Canonical.fromJson(json['base']),
-      parent:
-          (json['parent'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      parent: (json['parent'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       eventCoding: json['eventCoding'] == null
           ? null
           : Coding.fromJson(json['eventCoding'] as Map<String, dynamic>),
@@ -4612,8 +4623,9 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
           ?.map((e) => MessageDefinitionAllowedResponse.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      graph:
-          (json['graph'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      graph: (json['graph'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
     );
 
 Map<String, dynamic> _$$_MessageDefinitionToJson(
@@ -4922,8 +4934,9 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
           ? null
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
       base: json['base'] == null ? null : Canonical.fromJson(json['base']),
-      resource:
-          (json['resource'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      resource: (json['resource'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       resourceElement: (json['_resource'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -5086,7 +5099,7 @@ _$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       targetProfile: (json['targetProfile'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       searchType: $enumDecodeNullable(
           _$OperationDefinitionParameterSearchTypeEnumMap, json['searchType'],
@@ -5407,7 +5420,9 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      base: (json['base'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      base: (json['base'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       baseElement: (json['_base'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -5430,7 +5445,9 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       xpathUsageElement: json['_xpathUsage'] == null
           ? null
           : Element.fromJson(json['_xpathUsage'] as Map<String, dynamic>),
-      target: (json['target'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      target: (json['target'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       targetElement: (json['_target'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -5446,13 +5463,15 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       multipleAndElement: json['_multipleAnd'] == null
           ? null
           : Element.fromJson(json['_multipleAnd'] as Map<String, dynamic>),
-      comparator:
-          (json['comparator'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      comparator: (json['comparator'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       comparatorElement: (json['_comparator'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      modifier:
-          (json['modifier'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      modifier: (json['modifier'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       modifierElement: (json['_modifier'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -6183,8 +6202,9 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => StructureMapStructure.fromJson(e as Map<String, dynamic>))
           .toList(),
-      import:
-          (json['import'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      import: (json['import'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       group: (json['group'] as List<dynamic>)
           .map((e) => StructureMapGroup.fromJson(e as Map<String, dynamic>))
           .toList(),

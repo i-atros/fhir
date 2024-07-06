@@ -232,8 +232,9 @@ _$_DataRequirementCodeFilter _$$_DataRequirementCodeFilterFromJson(
           ? null
           : Reference.fromJson(
               json['valueSetReference'] as Map<String, dynamic>),
-      valueCode:
-          (json['valueCode'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      valueCode: (json['valueCode'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       valueCodeElement: (json['_valueCode'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))

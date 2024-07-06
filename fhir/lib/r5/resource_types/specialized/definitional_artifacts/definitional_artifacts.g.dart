@@ -160,8 +160,9 @@ _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
       usageElement: json['_usage'] == null
           ? null
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
-      library_:
-          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      library_: (json['library'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       kind: json['kind'] == null ? null : Code.fromJson(json['kind']),
       kindElement: json['_kind'] == null
           ? null
@@ -764,7 +765,7 @@ _$_ConditionDefinition _$$_ConditionDefinitionFromJson(
           ? null
           : Element.fromJson(json['_hasStage'] as Map<String, dynamic>),
       definition: (json['definition'] as List<dynamic>?)
-          ?.map(FhirUri.fromJson)
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       definitionElement: (json['_definition'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2164,10 +2165,10 @@ _$_ObservationDefinition _$$_ObservationDefinitionFromJson(
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
       derivedFromCanonical: (json['derivedFromCanonical'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       derivedFromUri: (json['derivedFromUri'] as List<dynamic>?)
-          ?.map(FhirUri.fromJson)
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       derivedFromUriElement: (json['_derivedFromUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2731,8 +2732,9 @@ _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
       usageElement: json['_usage'] == null
           ? null
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
-      library_:
-          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
+      library_: (json['library'] as List<dynamic>?)
+          ?.map((e) => Canonical.fromJson(e))
+          .toList(),
       goal: (json['goal'] as List<dynamic>?)
           ?.map((e) => PlanDefinitionGoal.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -3076,7 +3078,9 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
       documentation: (json['documentation'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      goalId: (json['goalId'] as List<dynamic>?)?.map(Id.fromJson).toList(),
+      goalId: (json['goalId'] as List<dynamic>?)
+          ?.map((e) => Id.fromJson(e))
+          .toList(),
       goalIdElement: (json['_goalId'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -3768,10 +3772,11 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
       derivedFrom: (json['derivedFrom'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      subjectType:
-          (json['subjectType'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      subjectType: (json['subjectType'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -4388,10 +4393,10 @@ _$_SpecimenDefinition _$$_SpecimenDefinitionFromJson(
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
       derivedFromCanonical: (json['derivedFromCanonical'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
       derivedFromUri: (json['derivedFromUri'] as List<dynamic>?)
-          ?.map(FhirUri.fromJson)
+          ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       derivedFromUriElement: (json['_derivedFromUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))

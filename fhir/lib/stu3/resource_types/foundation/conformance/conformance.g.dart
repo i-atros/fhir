@@ -101,7 +101,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
           ? null
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
       instantiates: (json['instantiates'] as List<dynamic>?)
-          ?.map(Instant.fromJson)
+          ?.map((e) => Instant.fromJson(e))
           .toList(),
       instantiatesElement: (json['_instantiates'] as List<dynamic>?)
           ?.map((e) =>
@@ -138,7 +138,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       implementationGuide: (json['implementationGuide'] as List<dynamic>?)
-          ?.map(Id.fromJson)
+          ?.map((e) => Id.fromJson(e))
           .toList(),
       implementationGuideElement:
           (json['_implementationGuide'] as List<dynamic>?)

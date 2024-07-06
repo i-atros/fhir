@@ -420,8 +420,9 @@ _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      operator_:
-          (json['operator'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      operator_: (json['operator'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       operatorElement: (json['_operator'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1809,8 +1810,9 @@ _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
       compositionalElement: json['_compositional'] == null
           ? null
           : Element.fromJson(json['_compositional'] as Map<String, dynamic>),
-      language:
-          (json['language'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      language: (json['language'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       languageElement: (json['_language'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1819,8 +1821,9 @@ _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
           ?.map((e) =>
               TerminologyCapabilitiesFilter.fromJson(e as Map<String, dynamic>))
           .toList(),
-      property:
-          (json['property'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      property: (json['property'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
       propertyElement: (json['_property'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1872,7 +1875,7 @@ _$_TerminologyCapabilitiesFilter _$$_TerminologyCapabilitiesFilterFromJson(
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      op: (json['op'] as List<dynamic>?)?.map(Code.fromJson).toList(),
+      op: (json['op'] as List<dynamic>?)?.map((e) => Code.fromJson(e)).toList(),
       opElement: (json['_op'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -2378,7 +2381,7 @@ _$_ValueSetInclude _$$_ValueSetIncludeFromJson(Map<String, dynamic> json) =>
           ?.map((e) => ValueSetFilter.fromJson(e as Map<String, dynamic>))
           .toList(),
       valueSet: (json['valueSet'] as List<dynamic>?)
-          ?.map(Canonical.fromJson)
+          ?.map((e) => Canonical.fromJson(e))
           .toList(),
     );
 

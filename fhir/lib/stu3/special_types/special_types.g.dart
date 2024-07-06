@@ -80,8 +80,9 @@ _$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
       lastUpdatedElement: json['_lastUpdated'] == null
           ? null
           : Element.fromJson(json['_lastUpdated'] as Map<String, dynamic>),
-      profile:
-          (json['profile'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) => FhirUri.fromJson(e))
+          .toList(),
       profileElement: (json['_profile'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
