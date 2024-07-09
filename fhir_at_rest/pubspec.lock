@@ -165,8 +165,8 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: fix_consent_r5
-      resolved-ref: "3b3f34e94fa4a57c2ec9be231e90891a31223b3e"
+      ref: HEAD
+      resolved-ref: c6ef63114c5904928ed20ab5fe6a7ef4d276db7b
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"

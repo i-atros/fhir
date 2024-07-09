@@ -16,7 +16,6 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: fix_consent_r5
   path: ^1.8.0
   path_provider: ^2.0.2
   sembast:
