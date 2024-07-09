@@ -628,34 +628,27 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$ConsentStatusEnumMap, json['status'],
-          unknownValue: ConsentStatus.unknown),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      scope: CodeableConcept.fromJson(json['scope'] as Map<String, dynamic>),
+      status: $enumDecode(_$ConsentStateEnumMap, json['status']),
       category: (json['category'] as List<dynamic>)
           .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      dateTime: json['dateTime'] == null
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      period: json['period'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateTime']),
-      dateTimeElement: json['_dateTime'] == null
-          ? null
-          : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
-      manager: (json['manager'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      controller: (json['controller'] as List<dynamic>?)
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      grantor: (json['grantor'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       grantee: (json['grantee'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      grantor: (json['grantor'] as List<dynamic>?)
+      manager: (json['manager'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      controller: (json['controller'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       sourceAttachment: (json['sourceAttachment'] as List<dynamic>?)
@@ -664,16 +657,20 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       sourceReference: (json['sourceReference'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      policy: (json['policy'] as List<dynamic>?)
-          ?.map((e) => ConsentPolicy.fromJson(e as Map<String, dynamic>))
+      regulatoryBasis: (json['regulatoryBasis'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      policyRule: json['policyRule'] == null
+      policyBasis: json['policyBasis'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['policyRule'] as Map<String, dynamic>),
+          : PolicyBasis.fromJson(json['policyBasis'] as Map<String, dynamic>),
+      policyText: json['policyText'] == null
+          ? null
+          : Reference.fromJson(json['policyText'] as Map<String, dynamic>),
       verification: (json['verification'] as List<dynamic>?)
           ?.map((e) => ConsentVerification.fromJson(e as Map<String, dynamic>))
           .toList(),
+      decision:
+          $enumDecodeNullable(_$ConsentProvisionTypeEnumMap, json['decision']),
       provision: json['provision'] == null
           ? null
           : ConsentProvision.fromJson(
@@ -706,79 +703,44 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ConsentStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  val['scope'] = instance.scope.toJson();
+  val['status'] = _$ConsentStateEnumMap[instance.status]!;
   val['category'] = instance.category.map((e) => e.toJson()).toList();
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('dateTime', instance.dateTime?.toJson());
-  writeNotNull('_dateTime', instance.dateTimeElement?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('period', instance.period?.toJson());
+  writeNotNull('grantor', instance.grantor?.map((e) => e.toJson()).toList());
+  writeNotNull('grantee', instance.grantee?.map((e) => e.toJson()).toList());
   writeNotNull('manager', instance.manager?.map((e) => e.toJson()).toList());
   writeNotNull(
       'controller', instance.controller?.map((e) => e.toJson()).toList());
-  writeNotNull('grantee', instance.grantee?.map((e) => e.toJson()).toList());
-  writeNotNull('grantor', instance.grantor?.map((e) => e.toJson()).toList());
   writeNotNull('sourceAttachment',
       instance.sourceAttachment?.map((e) => e.toJson()).toList());
   writeNotNull('sourceReference',
       instance.sourceReference?.map((e) => e.toJson()).toList());
-  writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
-  writeNotNull('policyRule', instance.policyRule?.toJson());
+  writeNotNull('regulatoryBasis',
+      instance.regulatoryBasis?.map((e) => e.toJson()).toList());
+  writeNotNull('policyBasis', instance.policyBasis?.toJson());
+  writeNotNull('policyText', instance.policyText?.toJson());
   writeNotNull(
       'verification', instance.verification?.map((e) => e.toJson()).toList());
+  writeNotNull('decision', _$ConsentProvisionTypeEnumMap[instance.decision]);
   writeNotNull('provision', instance.provision?.toJson());
   return val;
 }
 
-const _$ConsentStatusEnumMap = {
-  ConsentStatus.draft: 'draft',
-  ConsentStatus.active: 'active',
-  ConsentStatus.inactive: 'inactive',
-  ConsentStatus.entered_in_error: 'entered-in-error',
-  ConsentStatus.unknown: 'unknown',
+const _$ConsentStateEnumMap = {
+  ConsentState.draft: 'draft',
+  ConsentState.active: 'active',
+  ConsentState.inactive: 'inactive',
+  ConsentState.not_done: 'not-done',
+  ConsentState.entered_in_error: 'entered-in-error',
+  ConsentState.unknown: 'unknown',
 };
 
-_$_ConsentPolicy _$$_ConsentPolicyFromJson(Map<String, dynamic> json) =>
-    _$_ConsentPolicy(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      authority: json['authority'] == null
-          ? null
-          : FhirUri.fromJson(json['authority']),
-      authorityElement: json['_authority'] == null
-          ? null
-          : Element.fromJson(json['_authority'] as Map<String, dynamic>),
-      uri: json['uri'] == null ? null : FhirUri.fromJson(json['uri']),
-      uriElement: json['_uri'] == null
-          ? null
-          : Element.fromJson(json['_uri'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_ConsentPolicyToJson(_$_ConsentPolicy instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('authority', instance.authority?.toJson());
-  writeNotNull('_authority', instance.authorityElement?.toJson());
-  writeNotNull('uri', instance.uri?.toJson());
-  writeNotNull('_uri', instance.uriElement?.toJson());
-  return val;
-}
+const _$ConsentProvisionTypeEnumMap = {
+  ConsentProvisionType.deny: 'deny',
+  ConsentProvisionType.permit: 'permit',
+};
 
 _$_ConsentVerification _$$_ConsentVerificationFromJson(
         Map<String, dynamic> json) =>
@@ -787,14 +749,8 @@ _$_ConsentVerification _$$_ConsentVerificationFromJson(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
       verified:
           json['verified'] == null ? null : Boolean.fromJson(json['verified']),
-      verifiedElement: json['_verified'] == null
-          ? null
-          : Element.fromJson(json['_verified'] as Map<String, dynamic>),
       verificationType: json['verificationType'] == null
           ? null
           : CodeableConcept.fromJson(
@@ -826,10 +782,7 @@ Map<String, dynamic> _$$_ConsentVerificationToJson(
   writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('verified', instance.verified?.toJson());
-  writeNotNull('_verified', instance.verifiedElement?.toJson());
   writeNotNull('verificationType', instance.verificationType?.toJson());
   writeNotNull('verifiedBy', instance.verifiedBy?.toJson());
   writeNotNull('verifiedWith', instance.verifiedWith?.toJson());
@@ -849,11 +802,6 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(_$ConsentProvisionTypeEnumMap, json['type'],
-          unknownValue: ConsentProvisionType.unknown),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
@@ -869,7 +817,10 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       purpose: (json['purpose'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
-      class_: (json['class'] as List<dynamic>?)
+      documentType: (json['documentType'] as List<dynamic>?)
+          ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      resourceType: (json['resourceType'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       code: (json['code'] as List<dynamic>?)
@@ -903,15 +854,16 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', _$ConsentProvisionTypeEnumMap[instance.type]);
-  writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('actor', instance.actor?.map((e) => e.toJson()).toList());
   writeNotNull('action', instance.action?.map((e) => e.toJson()).toList());
   writeNotNull(
       'securityLabel', instance.securityLabel?.map((e) => e.toJson()).toList());
   writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
-  writeNotNull('class', instance.class_?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'documentType', instance.documentType?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'resourceType', instance.resourceType?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
   writeNotNull('dataPeriod', instance.dataPeriod?.toJson());
   writeNotNull('data', instance.data?.map((e) => e.toJson()).toList());
@@ -920,12 +872,6 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
       'provision', instance.provision?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$ConsentProvisionTypeEnumMap = {
-  ConsentProvisionType.deny: 'deny',
-  ConsentProvisionType.permit: 'permit',
-  ConsentProvisionType.unknown: 'unknown',
-};
 
 _$_ConsentActor _$$_ConsentActorFromJson(Map<String, dynamic> json) =>
     _$_ConsentActor(
@@ -972,11 +918,7 @@ _$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      meaning: $enumDecodeNullable(_$ConsentDataMeaningEnumMap, json['meaning'],
-          unknownValue: ConsentDataMeaning.unknown),
-      meaningElement: json['_meaning'] == null
-          ? null
-          : Element.fromJson(json['_meaning'] as Map<String, dynamic>),
+      meaning: $enumDecode(_$ConsentDataMeaningEnumMap, json['meaning']),
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
@@ -994,8 +936,7 @@ Map<String, dynamic> _$$_ConsentDataToJson(_$_ConsentData instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('meaning', _$ConsentDataMeaningEnumMap[instance.meaning]);
-  writeNotNull('_meaning', instance.meaningElement?.toJson());
+  val['meaning'] = _$ConsentDataMeaningEnumMap[instance.meaning]!;
   val['reference'] = instance.reference.toJson();
   return val;
 }
@@ -1004,8 +945,7 @@ const _$ConsentDataMeaningEnumMap = {
   ConsentDataMeaning.instance: 'instance',
   ConsentDataMeaning.related: 'related',
   ConsentDataMeaning.dependents: 'dependents',
-  ConsentDataMeaning.authoredby: 'authoredby',
-  ConsentDataMeaning.unknown: 'unknown',
+  ConsentDataMeaning.authored_by: 'authoredby',
 };
 
 _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
@@ -1131,6 +1071,33 @@ const _$PermissionStatusEnumMap = {
   PermissionStatus.rejected: 'rejected',
   PermissionStatus.unknown: 'unknown',
 };
+
+_$_PolicyBasis _$$_PolicyBasisFromJson(Map<String, dynamic> json) =>
+    _$_PolicyBasis(
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reference: json['reference'] == null
+          ? null
+          : Reference.fromJson(json['reference'] as Map<String, dynamic>),
+      url: json['url'] == null ? null : FhirUrl.fromJson(json['url']),
+    );
+
+Map<String, dynamic> _$$_PolicyBasisToJson(_$_PolicyBasis instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('reference', instance.reference?.toJson());
+  writeNotNull('url', instance.url?.toJson());
+  return val;
+}
 
 _$_PermissionProcessingActivity _$$_PermissionProcessingActivityFromJson(
         Map<String, dynamic> json) =>

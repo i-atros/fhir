@@ -7,13 +7,16 @@ environment:
   sdk: '>=2.13.0 <3.0.0'
 
 dependencies:
-  fhir_yaml: ^0.5.0
-  freezed_annotation: ^2.2.0
-  json_annotation: ^4.0.1
+  fhir_yaml:
+    git:
+      url: https://github.com/i-atros/fhir.git
+      path: fhir_yaml
+  freezed_annotation: 2.4.1
+  json_annotation: 4.7.0
   yaml: ^3.1.0
 
 dev_dependencies:
-  json_serializable: ^6.5.3
   build_runner: ^2.1.0
   freezed: ^2.2.0
+  json_serializable: ^6.5.3
   test: ^1.21.0

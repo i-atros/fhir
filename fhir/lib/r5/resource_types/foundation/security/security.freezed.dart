@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'security.dart';
 
@@ -3158,26 +3158,24 @@ mixin _$Consent {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-  ConsentStatus? get status => throw _privateConstructorUsedError;
-  @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
-  CodeableConcept get scope => throw _privateConstructorUsedError;
+  ConsentState get status => throw _privateConstructorUsedError;
   List<CodeableConcept> get category => throw _privateConstructorUsedError;
   Reference? get subject => throw _privateConstructorUsedError;
-  FhirDateTime? get dateTime => throw _privateConstructorUsedError;
-  @JsonKey(name: '_dateTime')
-  Element? get dateTimeElement => throw _privateConstructorUsedError;
+  Date? get date => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  List<Reference>? get grantor => throw _privateConstructorUsedError;
+  List<Reference>? get grantee => throw _privateConstructorUsedError;
   List<Reference>? get manager => throw _privateConstructorUsedError;
   List<Reference>? get controller => throw _privateConstructorUsedError;
-  List<Reference>? get grantee => throw _privateConstructorUsedError;
-  List<Reference>? get grantor => throw _privateConstructorUsedError;
   List<Attachment>? get sourceAttachment => throw _privateConstructorUsedError;
   List<Reference>? get sourceReference => throw _privateConstructorUsedError;
-  List<ConsentPolicy>? get policy => throw _privateConstructorUsedError;
-  CodeableConcept? get policyRule => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get regulatoryBasis =>
+      throw _privateConstructorUsedError;
+  PolicyBasis? get policyBasis => throw _privateConstructorUsedError;
+  Reference? get policyText => throw _privateConstructorUsedError;
   List<ConsentVerification>? get verification =>
       throw _privateConstructorUsedError;
+  ConsentProvisionType? get decision => throw _privateConstructorUsedError;
   ConsentProvision? get provision => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3207,36 +3205,32 @@ abstract class $ConsentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          ConsentStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept scope,
+      ConsentState status,
       List<CodeableConcept> category,
       Reference? subject,
-      FhirDateTime? dateTime,
-      @JsonKey(name: '_dateTime')
-          Element? dateTimeElement,
+      Date? date,
+      Period? period,
+      List<Reference>? grantor,
+      List<Reference>? grantee,
       List<Reference>? manager,
       List<Reference>? controller,
-      List<Reference>? grantee,
-      List<Reference>? grantor,
       List<Attachment>? sourceAttachment,
       List<Reference>? sourceReference,
-      List<ConsentPolicy>? policy,
-      CodeableConcept? policyRule,
+      List<CodeableConcept>? regulatoryBasis,
+      PolicyBasis? policyBasis,
+      Reference? policyText,
       List<ConsentVerification>? verification,
+      ConsentProvisionType? decision,
       ConsentProvision? provision});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
-  $ElementCopyWith<$Res>? get statusElement;
-  $CodeableConceptCopyWith<$Res> get scope;
   $ReferenceCopyWith<$Res>? get subject;
-  $ElementCopyWith<$Res>? get dateTimeElement;
-  $CodeableConceptCopyWith<$Res>? get policyRule;
+  $PeriodCopyWith<$Res>? get period;
+  $PolicyBasisCopyWith<$Res>? get policyBasis;
+  $ReferenceCopyWith<$Res>? get policyText;
   $ConsentProvisionCopyWith<$Res>? get provision;
 }
 
@@ -3265,22 +3259,22 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? status = freezed,
-    Object? statusElement = freezed,
-    Object? scope = null,
+    Object? status = null,
     Object? category = null,
     Object? subject = freezed,
-    Object? dateTime = freezed,
-    Object? dateTimeElement = freezed,
+    Object? date = freezed,
+    Object? period = freezed,
+    Object? grantor = freezed,
+    Object? grantee = freezed,
     Object? manager = freezed,
     Object? controller = freezed,
-    Object? grantee = freezed,
-    Object? grantor = freezed,
     Object? sourceAttachment = freezed,
     Object? sourceReference = freezed,
-    Object? policy = freezed,
-    Object? policyRule = freezed,
+    Object? regulatoryBasis = freezed,
+    Object? policyBasis = freezed,
+    Object? policyText = freezed,
     Object? verification = freezed,
+    Object? decision = freezed,
     Object? provision = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3332,18 +3326,10 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: freezed == status
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ConsentStatus?,
-      statusElement: freezed == statusElement
-          ? _value.statusElement
-          : statusElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      scope: null == scope
-          ? _value.scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as ConsentState,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -3352,14 +3338,22 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      dateTime: freezed == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      dateTimeElement: freezed == dateTimeElement
-          ? _value.dateTimeElement
-          : dateTimeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      grantor: freezed == grantor
+          ? _value.grantor
+          : grantor // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      grantee: freezed == grantee
+          ? _value.grantee
+          : grantee // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       manager: freezed == manager
           ? _value.manager
           : manager // ignore: cast_nullable_to_non_nullable
@@ -3367,14 +3361,6 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
       controller: freezed == controller
           ? _value.controller
           : controller // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      grantee: freezed == grantee
-          ? _value.grantee
-          : grantee // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      grantor: freezed == grantor
-          ? _value.grantor
-          : grantor // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       sourceAttachment: freezed == sourceAttachment
           ? _value.sourceAttachment
@@ -3384,18 +3370,26 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
           ? _value.sourceReference
           : sourceReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      policy: freezed == policy
-          ? _value.policy
-          : policy // ignore: cast_nullable_to_non_nullable
-              as List<ConsentPolicy>?,
-      policyRule: freezed == policyRule
-          ? _value.policyRule
-          : policyRule // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      regulatoryBasis: freezed == regulatoryBasis
+          ? _value.regulatoryBasis
+          : regulatoryBasis // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      policyBasis: freezed == policyBasis
+          ? _value.policyBasis
+          : policyBasis // ignore: cast_nullable_to_non_nullable
+              as PolicyBasis?,
+      policyText: freezed == policyText
+          ? _value.policyText
+          : policyText // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       verification: freezed == verification
           ? _value.verification
           : verification // ignore: cast_nullable_to_non_nullable
               as List<ConsentVerification>?,
+      decision: freezed == decision
+          ? _value.decision
+          : decision // ignore: cast_nullable_to_non_nullable
+              as ConsentProvisionType?,
       provision: freezed == provision
           ? _value.provision
           : provision // ignore: cast_nullable_to_non_nullable
@@ -3453,26 +3447,6 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get statusElement {
-    if (_value.statusElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
-      return _then(_value.copyWith(statusElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res> get scope {
-    return $CodeableConceptCopyWith<$Res>(_value.scope, (value) {
-      return _then(_value.copyWith(scope: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
     if (_value.subject == null) {
       return null;
@@ -3485,25 +3459,37 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get dateTimeElement {
-    if (_value.dateTimeElement == null) {
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.dateTimeElement!, (value) {
-      return _then(_value.copyWith(dateTimeElement: value) as $Val);
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get policyRule {
-    if (_value.policyRule == null) {
+  $PolicyBasisCopyWith<$Res>? get policyBasis {
+    if (_value.policyBasis == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.policyRule!, (value) {
-      return _then(_value.copyWith(policyRule: value) as $Val);
+    return $PolicyBasisCopyWith<$Res>(_value.policyBasis!, (value) {
+      return _then(_value.copyWith(policyBasis: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get policyText {
+    if (_value.policyText == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.policyText!, (value) {
+      return _then(_value.copyWith(policyText: value) as $Val);
     });
   }
 
@@ -3544,25 +3530,22 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          ConsentStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      CodeableConcept scope,
+      ConsentState status,
       List<CodeableConcept> category,
       Reference? subject,
-      FhirDateTime? dateTime,
-      @JsonKey(name: '_dateTime')
-          Element? dateTimeElement,
+      Date? date,
+      Period? period,
+      List<Reference>? grantor,
+      List<Reference>? grantee,
       List<Reference>? manager,
       List<Reference>? controller,
-      List<Reference>? grantee,
-      List<Reference>? grantor,
       List<Attachment>? sourceAttachment,
       List<Reference>? sourceReference,
-      List<ConsentPolicy>? policy,
-      CodeableConcept? policyRule,
+      List<CodeableConcept>? regulatoryBasis,
+      PolicyBasis? policyBasis,
+      Reference? policyText,
       List<ConsentVerification>? verification,
+      ConsentProvisionType? decision,
       ConsentProvision? provision});
 
   @override
@@ -3574,15 +3557,13 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res>? get statusElement;
-  @override
-  $CodeableConceptCopyWith<$Res> get scope;
-  @override
   $ReferenceCopyWith<$Res>? get subject;
   @override
-  $ElementCopyWith<$Res>? get dateTimeElement;
+  $PeriodCopyWith<$Res>? get period;
   @override
-  $CodeableConceptCopyWith<$Res>? get policyRule;
+  $PolicyBasisCopyWith<$Res>? get policyBasis;
+  @override
+  $ReferenceCopyWith<$Res>? get policyText;
   @override
   $ConsentProvisionCopyWith<$Res>? get provision;
 }
@@ -3609,22 +3590,22 @@ class __$$_ConsentCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? identifier = freezed,
-    Object? status = freezed,
-    Object? statusElement = freezed,
-    Object? scope = null,
+    Object? status = null,
     Object? category = null,
     Object? subject = freezed,
-    Object? dateTime = freezed,
-    Object? dateTimeElement = freezed,
+    Object? date = freezed,
+    Object? period = freezed,
+    Object? grantor = freezed,
+    Object? grantee = freezed,
     Object? manager = freezed,
     Object? controller = freezed,
-    Object? grantee = freezed,
-    Object? grantor = freezed,
     Object? sourceAttachment = freezed,
     Object? sourceReference = freezed,
-    Object? policy = freezed,
-    Object? policyRule = freezed,
+    Object? regulatoryBasis = freezed,
+    Object? policyBasis = freezed,
+    Object? policyText = freezed,
     Object? verification = freezed,
+    Object? decision = freezed,
     Object? provision = freezed,
   }) {
     return _then(_$_Consent(
@@ -3676,18 +3657,10 @@ class __$$_ConsentCopyWithImpl<$Res>
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
               as List<Identifier>?,
-      status: freezed == status
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ConsentStatus?,
-      statusElement: freezed == statusElement
-          ? _value.statusElement
-          : statusElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      scope: null == scope
-          ? _value.scope
-          : scope // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept,
+              as ConsentState,
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -3696,14 +3669,22 @@ class __$$_ConsentCopyWithImpl<$Res>
           ? _value.subject
           : subject // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      dateTime: freezed == dateTime
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
-      dateTimeElement: freezed == dateTimeElement
-          ? _value.dateTimeElement
-          : dateTimeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+      date: freezed == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      period: freezed == period
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      grantor: freezed == grantor
+          ? _value.grantor
+          : grantor // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      grantee: freezed == grantee
+          ? _value.grantee
+          : grantee // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
       manager: freezed == manager
           ? _value.manager
           : manager // ignore: cast_nullable_to_non_nullable
@@ -3711,14 +3692,6 @@ class __$$_ConsentCopyWithImpl<$Res>
       controller: freezed == controller
           ? _value.controller
           : controller // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      grantee: freezed == grantee
-          ? _value.grantee
-          : grantee // ignore: cast_nullable_to_non_nullable
-              as List<Reference>?,
-      grantor: freezed == grantor
-          ? _value.grantor
-          : grantor // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
       sourceAttachment: freezed == sourceAttachment
           ? _value.sourceAttachment
@@ -3728,18 +3701,26 @@ class __$$_ConsentCopyWithImpl<$Res>
           ? _value.sourceReference
           : sourceReference // ignore: cast_nullable_to_non_nullable
               as List<Reference>?,
-      policy: freezed == policy
-          ? _value.policy
-          : policy // ignore: cast_nullable_to_non_nullable
-              as List<ConsentPolicy>?,
-      policyRule: freezed == policyRule
-          ? _value.policyRule
-          : policyRule // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      regulatoryBasis: freezed == regulatoryBasis
+          ? _value.regulatoryBasis
+          : regulatoryBasis // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      policyBasis: freezed == policyBasis
+          ? _value.policyBasis
+          : policyBasis // ignore: cast_nullable_to_non_nullable
+              as PolicyBasis?,
+      policyText: freezed == policyText
+          ? _value.policyText
+          : policyText // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       verification: freezed == verification
           ? _value.verification
           : verification // ignore: cast_nullable_to_non_nullable
               as List<ConsentVerification>?,
+      decision: freezed == decision
+          ? _value.decision
+          : decision // ignore: cast_nullable_to_non_nullable
+              as ConsentProvisionType?,
       provision: freezed == provision
           ? _value.provision
           : provision // ignore: cast_nullable_to_non_nullable
@@ -3768,25 +3749,22 @@ class _$_Consent extends _Consent {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
-      required this.scope,
+      required this.status,
       required this.category,
       this.subject,
-      this.dateTime,
-      @JsonKey(name: '_dateTime')
-          this.dateTimeElement,
+      this.date,
+      this.period,
+      this.grantor,
+      this.grantee,
       this.manager,
       this.controller,
-      this.grantee,
-      this.grantor,
       this.sourceAttachment,
       this.sourceReference,
-      this.policy,
-      this.policyRule,
+      this.regulatoryBasis,
+      this.policyBasis,
+      this.policyText,
       this.verification,
+      this.decision,
       this.provision})
       : super._();
 
@@ -3822,46 +3800,43 @@ class _$_Consent extends _Consent {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-  final ConsentStatus? status;
-  @override
-  @JsonKey(name: '_status')
-  final Element? statusElement;
-  @override
-  final CodeableConcept scope;
+  final ConsentState status;
   @override
   final List<CodeableConcept> category;
   @override
   final Reference? subject;
   @override
-  final FhirDateTime? dateTime;
+  final Date? date;
   @override
-  @JsonKey(name: '_dateTime')
-  final Element? dateTimeElement;
+  final Period? period;
+  @override
+  final List<Reference>? grantor;
+  @override
+  final List<Reference>? grantee;
   @override
   final List<Reference>? manager;
   @override
   final List<Reference>? controller;
   @override
-  final List<Reference>? grantee;
-  @override
-  final List<Reference>? grantor;
-  @override
   final List<Attachment>? sourceAttachment;
   @override
   final List<Reference>? sourceReference;
   @override
-  final List<ConsentPolicy>? policy;
+  final List<CodeableConcept>? regulatoryBasis;
   @override
-  final CodeableConcept? policyRule;
+  final PolicyBasis? policyBasis;
+  @override
+  final Reference? policyText;
   @override
   final List<ConsentVerification>? verification;
+  @override
+  final ConsentProvisionType? decision;
   @override
   final ConsentProvision? provision;
 
   @override
   String toString() {
-    return 'Consent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, scope: $scope, category: $category, subject: $subject, dateTime: $dateTime, dateTimeElement: $dateTimeElement, manager: $manager, controller: $controller, grantee: $grantee, grantor: $grantor, sourceAttachment: $sourceAttachment, sourceReference: $sourceReference, policy: $policy, policyRule: $policyRule, verification: $verification, provision: $provision)';
+    return 'Consent(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, category: $category, subject: $subject, date: $date, period: $period, grantor: $grantor, grantee: $grantee, manager: $manager, controller: $controller, sourceAttachment: $sourceAttachment, sourceReference: $sourceReference, regulatoryBasis: $regulatoryBasis, policyBasis: $policyBasis, policyText: $policyText, verification: $verification, decision: $decision, provision: $provision)';
   }
 
   @override
@@ -3890,29 +3865,29 @@ class _$_Consent extends _Consent {
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
-            (identical(other.scope, scope) || other.scope == scope) &&
             const DeepCollectionEquality().equals(other.category, category) &&
             (identical(other.subject, subject) || other.subject == subject) &&
-            (identical(other.dateTime, dateTime) ||
-                other.dateTime == dateTime) &&
-            (identical(other.dateTimeElement, dateTimeElement) ||
-                other.dateTimeElement == dateTimeElement) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.period, period) || other.period == period) &&
+            const DeepCollectionEquality().equals(other.grantor, grantor) &&
+            const DeepCollectionEquality().equals(other.grantee, grantee) &&
             const DeepCollectionEquality().equals(other.manager, manager) &&
             const DeepCollectionEquality()
                 .equals(other.controller, controller) &&
-            const DeepCollectionEquality().equals(other.grantee, grantee) &&
-            const DeepCollectionEquality().equals(other.grantor, grantor) &&
             const DeepCollectionEquality()
                 .equals(other.sourceAttachment, sourceAttachment) &&
             const DeepCollectionEquality()
                 .equals(other.sourceReference, sourceReference) &&
-            const DeepCollectionEquality().equals(other.policy, policy) &&
-            (identical(other.policyRule, policyRule) ||
-                other.policyRule == policyRule) &&
+            const DeepCollectionEquality()
+                .equals(other.regulatoryBasis, regulatoryBasis) &&
+            (identical(other.policyBasis, policyBasis) ||
+                other.policyBasis == policyBasis) &&
+            (identical(other.policyText, policyText) ||
+                other.policyText == policyText) &&
             const DeepCollectionEquality()
                 .equals(other.verification, verification) &&
+            (identical(other.decision, decision) ||
+                other.decision == decision) &&
             (identical(other.provision, provision) ||
                 other.provision == provision));
   }
@@ -3934,21 +3909,21 @@ class _$_Consent extends _Consent {
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
         status,
-        statusElement,
-        scope,
         const DeepCollectionEquality().hash(category),
         subject,
-        dateTime,
-        dateTimeElement,
+        date,
+        period,
+        const DeepCollectionEquality().hash(grantor),
+        const DeepCollectionEquality().hash(grantee),
         const DeepCollectionEquality().hash(manager),
         const DeepCollectionEquality().hash(controller),
-        const DeepCollectionEquality().hash(grantee),
-        const DeepCollectionEquality().hash(grantor),
         const DeepCollectionEquality().hash(sourceAttachment),
         const DeepCollectionEquality().hash(sourceReference),
-        const DeepCollectionEquality().hash(policy),
-        policyRule,
+        const DeepCollectionEquality().hash(regulatoryBasis),
+        policyBasis,
+        policyText,
         const DeepCollectionEquality().hash(verification),
+        decision,
         provision
       ]);
 
@@ -3984,25 +3959,22 @@ abstract class _Consent extends Consent {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-          final ConsentStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      required final CodeableConcept scope,
+      required final ConsentState status,
       required final List<CodeableConcept> category,
       final Reference? subject,
-      final FhirDateTime? dateTime,
-      @JsonKey(name: '_dateTime')
-          final Element? dateTimeElement,
+      final Date? date,
+      final Period? period,
+      final List<Reference>? grantor,
+      final List<Reference>? grantee,
       final List<Reference>? manager,
       final List<Reference>? controller,
-      final List<Reference>? grantee,
-      final List<Reference>? grantor,
       final List<Attachment>? sourceAttachment,
       final List<Reference>? sourceReference,
-      final List<ConsentPolicy>? policy,
-      final CodeableConcept? policyRule,
+      final List<CodeableConcept>? regulatoryBasis,
+      final PolicyBasis? policyBasis,
+      final Reference? policyText,
       final List<ConsentVerification>? verification,
+      final ConsentProvisionType? decision,
       final ConsentProvision? provision}) = _$_Consent;
   _Consent._() : super._();
 
@@ -4037,362 +4009,42 @@ abstract class _Consent extends Consent {
   @override
   List<Identifier>? get identifier;
   @override
-  @JsonKey(unknownEnumValue: ConsentStatus.unknown)
-  ConsentStatus? get status;
-  @override
-  @JsonKey(name: '_status')
-  Element? get statusElement;
-  @override
-  CodeableConcept get scope;
+  ConsentState get status;
   @override
   List<CodeableConcept> get category;
   @override
   Reference? get subject;
   @override
-  FhirDateTime? get dateTime;
+  Date? get date;
   @override
-  @JsonKey(name: '_dateTime')
-  Element? get dateTimeElement;
+  Period? get period;
+  @override
+  List<Reference>? get grantor;
+  @override
+  List<Reference>? get grantee;
   @override
   List<Reference>? get manager;
   @override
   List<Reference>? get controller;
   @override
-  List<Reference>? get grantee;
-  @override
-  List<Reference>? get grantor;
-  @override
   List<Attachment>? get sourceAttachment;
   @override
   List<Reference>? get sourceReference;
   @override
-  List<ConsentPolicy>? get policy;
+  List<CodeableConcept>? get regulatoryBasis;
   @override
-  CodeableConcept? get policyRule;
+  PolicyBasis? get policyBasis;
+  @override
+  Reference? get policyText;
   @override
   List<ConsentVerification>? get verification;
+  @override
+  ConsentProvisionType? get decision;
   @override
   ConsentProvision? get provision;
   @override
   @JsonKey(ignore: true)
   _$$_ConsentCopyWith<_$_Consent> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-ConsentPolicy _$ConsentPolicyFromJson(Map<String, dynamic> json) {
-  return _ConsentPolicy.fromJson(json);
-}
-
-/// @nodoc
-mixin _$ConsentPolicy {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  FhirUri? get authority => throw _privateConstructorUsedError;
-  @JsonKey(name: '_authority')
-  Element? get authorityElement => throw _privateConstructorUsedError;
-  FhirUri? get uri => throw _privateConstructorUsedError;
-  @JsonKey(name: '_uri')
-  Element? get uriElement => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ConsentPolicyCopyWith<ConsentPolicy> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ConsentPolicyCopyWith<$Res> {
-  factory $ConsentPolicyCopyWith(
-          ConsentPolicy value, $Res Function(ConsentPolicy) then) =
-      _$ConsentPolicyCopyWithImpl<$Res, ConsentPolicy>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? authority,
-      @JsonKey(name: '_authority') Element? authorityElement,
-      FhirUri? uri,
-      @JsonKey(name: '_uri') Element? uriElement});
-
-  $ElementCopyWith<$Res>? get authorityElement;
-  $ElementCopyWith<$Res>? get uriElement;
-}
-
-/// @nodoc
-class _$ConsentPolicyCopyWithImpl<$Res, $Val extends ConsentPolicy>
-    implements $ConsentPolicyCopyWith<$Res> {
-  _$ConsentPolicyCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? authority = freezed,
-    Object? authorityElement = freezed,
-    Object? uri = freezed,
-    Object? uriElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      authority: freezed == authority
-          ? _value.authority
-          : authority // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      authorityElement: freezed == authorityElement
-          ? _value.authorityElement
-          : authorityElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      uriElement: freezed == uriElement
-          ? _value.uriElement
-          : uriElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get authorityElement {
-    if (_value.authorityElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.authorityElement!, (value) {
-      return _then(_value.copyWith(authorityElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get uriElement {
-    if (_value.uriElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.uriElement!, (value) {
-      return _then(_value.copyWith(uriElement: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_ConsentPolicyCopyWith<$Res>
-    implements $ConsentPolicyCopyWith<$Res> {
-  factory _$$_ConsentPolicyCopyWith(
-          _$_ConsentPolicy value, $Res Function(_$_ConsentPolicy) then) =
-      __$$_ConsentPolicyCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? authority,
-      @JsonKey(name: '_authority') Element? authorityElement,
-      FhirUri? uri,
-      @JsonKey(name: '_uri') Element? uriElement});
-
-  @override
-  $ElementCopyWith<$Res>? get authorityElement;
-  @override
-  $ElementCopyWith<$Res>? get uriElement;
-}
-
-/// @nodoc
-class __$$_ConsentPolicyCopyWithImpl<$Res>
-    extends _$ConsentPolicyCopyWithImpl<$Res, _$_ConsentPolicy>
-    implements _$$_ConsentPolicyCopyWith<$Res> {
-  __$$_ConsentPolicyCopyWithImpl(
-      _$_ConsentPolicy _value, $Res Function(_$_ConsentPolicy) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? authority = freezed,
-    Object? authorityElement = freezed,
-    Object? uri = freezed,
-    Object? uriElement = freezed,
-  }) {
-    return _then(_$_ConsentPolicy(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      authority: freezed == authority
-          ? _value.authority
-          : authority // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      authorityElement: freezed == authorityElement
-          ? _value.authorityElement
-          : authorityElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      uri: freezed == uri
-          ? _value.uri
-          : uri // ignore: cast_nullable_to_non_nullable
-              as FhirUri?,
-      uriElement: freezed == uriElement
-          ? _value.uriElement
-          : uriElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_ConsentPolicy extends _ConsentPolicy {
-  _$_ConsentPolicy(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.authority,
-      @JsonKey(name: '_authority') this.authorityElement,
-      this.uri,
-      @JsonKey(name: '_uri') this.uriElement})
-      : super._();
-
-  factory _$_ConsentPolicy.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentPolicyFromJson(json);
-
-  @override
-  final String? id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
-  @override
-  final List<FhirExtension>? modifierExtension;
-  @override
-  final FhirUri? authority;
-  @override
-  @JsonKey(name: '_authority')
-  final Element? authorityElement;
-  @override
-  final FhirUri? uri;
-  @override
-  @JsonKey(name: '_uri')
-  final Element? uriElement;
-
-  @override
-  String toString() {
-    return 'ConsentPolicy(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, authority: $authority, authorityElement: $authorityElement, uri: $uri, uriElement: $uriElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_ConsentPolicy &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
-            const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.authority, authority) ||
-                other.authority == authority) &&
-            (identical(other.authorityElement, authorityElement) ||
-                other.authorityElement == authorityElement) &&
-            (identical(other.uri, uri) || other.uri == uri) &&
-            (identical(other.uriElement, uriElement) ||
-                other.uriElement == uriElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      authority,
-      authorityElement,
-      uri,
-      uriElement);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_ConsentPolicyCopyWith<_$_ConsentPolicy> get copyWith =>
-      __$$_ConsentPolicyCopyWithImpl<_$_ConsentPolicy>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_ConsentPolicyToJson(
-      this,
-    );
-  }
-}
-
-abstract class _ConsentPolicy extends ConsentPolicy {
-  factory _ConsentPolicy(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? authority,
-      @JsonKey(name: '_authority') final Element? authorityElement,
-      final FhirUri? uri,
-      @JsonKey(name: '_uri') final Element? uriElement}) = _$_ConsentPolicy;
-  _ConsentPolicy._() : super._();
-
-  factory _ConsentPolicy.fromJson(Map<String, dynamic> json) =
-      _$_ConsentPolicy.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  FhirUri? get authority;
-  @override
-  @JsonKey(name: '_authority')
-  Element? get authorityElement;
-  @override
-  FhirUri? get uri;
-  @override
-  @JsonKey(name: '_uri')
-  Element? get uriElement;
-  @override
-  @JsonKey(ignore: true)
-  _$$_ConsentPolicyCopyWith<_$_ConsentPolicy> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4405,11 +4057,7 @@ mixin _$ConsentVerification {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
   Boolean? get verified => throw _privateConstructorUsedError;
-  @JsonKey(name: '_verified')
-  Element? get verifiedElement => throw _privateConstructorUsedError;
   CodeableConcept? get verificationType => throw _privateConstructorUsedError;
   Reference? get verifiedBy => throw _privateConstructorUsedError;
   Reference? get verifiedWith => throw _privateConstructorUsedError;
@@ -4435,10 +4083,7 @@ abstract class $ConsentVerificationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
       Boolean? verified,
-      @JsonKey(name: '_verified')
-          Element? verifiedElement,
       CodeableConcept? verificationType,
       Reference? verifiedBy,
       Reference? verifiedWith,
@@ -4446,7 +4091,6 @@ abstract class $ConsentVerificationCopyWith<$Res> {
       @JsonKey(name: '_verificationDate')
           List<Element>? verificationDateElement});
 
-  $ElementCopyWith<$Res>? get verifiedElement;
   $CodeableConceptCopyWith<$Res>? get verificationType;
   $ReferenceCopyWith<$Res>? get verifiedBy;
   $ReferenceCopyWith<$Res>? get verifiedWith;
@@ -4467,9 +4111,7 @@ class _$ConsentVerificationCopyWithImpl<$Res, $Val extends ConsentVerification>
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
     Object? verified = freezed,
-    Object? verifiedElement = freezed,
     Object? verificationType = freezed,
     Object? verifiedBy = freezed,
     Object? verifiedWith = freezed,
@@ -4485,18 +4127,10 @@ class _$ConsentVerificationCopyWithImpl<$Res, $Val extends ConsentVerification>
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
       verified: freezed == verified
           ? _value.verified
           : verified // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      verifiedElement: freezed == verifiedElement
-          ? _value.verifiedElement
-          : verifiedElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       verificationType: freezed == verificationType
           ? _value.verificationType
           : verificationType // ignore: cast_nullable_to_non_nullable
@@ -4518,18 +4152,6 @@ class _$ConsentVerificationCopyWithImpl<$Res, $Val extends ConsentVerification>
           : verificationDateElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get verifiedElement {
-    if (_value.verifiedElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.verifiedElement!, (value) {
-      return _then(_value.copyWith(verifiedElement: value) as $Val);
-    });
   }
 
   @override
@@ -4581,10 +4203,7 @@ abstract class _$$_ConsentVerificationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
       Boolean? verified,
-      @JsonKey(name: '_verified')
-          Element? verifiedElement,
       CodeableConcept? verificationType,
       Reference? verifiedBy,
       Reference? verifiedWith,
@@ -4592,8 +4211,6 @@ abstract class _$$_ConsentVerificationCopyWith<$Res>
       @JsonKey(name: '_verificationDate')
           List<Element>? verificationDateElement});
 
-  @override
-  $ElementCopyWith<$Res>? get verifiedElement;
   @override
   $CodeableConceptCopyWith<$Res>? get verificationType;
   @override
@@ -4615,9 +4232,7 @@ class __$$_ConsentVerificationCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
     Object? verified = freezed,
-    Object? verifiedElement = freezed,
     Object? verificationType = freezed,
     Object? verifiedBy = freezed,
     Object? verifiedWith = freezed,
@@ -4633,18 +4248,10 @@ class __$$_ConsentVerificationCopyWithImpl<$Res>
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
       verified: freezed == verified
           ? _value.verified
           : verified // ignore: cast_nullable_to_non_nullable
               as Boolean?,
-      verifiedElement: freezed == verifiedElement
-          ? _value.verifiedElement
-          : verifiedElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       verificationType: freezed == verificationType
           ? _value.verificationType
           : verificationType // ignore: cast_nullable_to_non_nullable
@@ -4675,9 +4282,7 @@ class _$_ConsentVerification extends _ConsentVerification {
   _$_ConsentVerification(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
       this.verified,
-      @JsonKey(name: '_verified') this.verifiedElement,
       this.verificationType,
       this.verifiedBy,
       this.verifiedWith,
@@ -4694,12 +4299,7 @@ class _$_ConsentVerification extends _ConsentVerification {
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension>? modifierExtension;
-  @override
   final Boolean? verified;
-  @override
-  @JsonKey(name: '_verified')
-  final Element? verifiedElement;
   @override
   final CodeableConcept? verificationType;
   @override
@@ -4714,7 +4314,7 @@ class _$_ConsentVerification extends _ConsentVerification {
 
   @override
   String toString() {
-    return 'ConsentVerification(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, verified: $verified, verifiedElement: $verifiedElement, verificationType: $verificationType, verifiedBy: $verifiedBy, verifiedWith: $verifiedWith, verificationDate: $verificationDate, verificationDateElement: $verificationDateElement)';
+    return 'ConsentVerification(id: $id, extension_: $extension_, verified: $verified, verificationType: $verificationType, verifiedBy: $verifiedBy, verifiedWith: $verifiedWith, verificationDate: $verificationDate, verificationDateElement: $verificationDateElement)';
   }
 
   @override
@@ -4725,12 +4325,8 @@ class _$_ConsentVerification extends _ConsentVerification {
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
-            const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.verified, verified) ||
                 other.verified == verified) &&
-            (identical(other.verifiedElement, verifiedElement) ||
-                other.verifiedElement == verifiedElement) &&
             (identical(other.verificationType, verificationType) ||
                 other.verificationType == verificationType) &&
             (identical(other.verifiedBy, verifiedBy) ||
@@ -4749,9 +4345,7 @@ class _$_ConsentVerification extends _ConsentVerification {
       runtimeType,
       id,
       const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
       verified,
-      verifiedElement,
       verificationType,
       verifiedBy,
       verifiedWith,
@@ -4778,10 +4372,7 @@ abstract class _ConsentVerification extends ConsentVerification {
           {final String? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
           final Boolean? verified,
-          @JsonKey(name: '_verified')
-              final Element? verifiedElement,
           final CodeableConcept? verificationType,
           final Reference? verifiedBy,
           final Reference? verifiedWith,
@@ -4800,12 +4391,7 @@ abstract class _ConsentVerification extends ConsentVerification {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension;
-  @override
   Boolean? get verified;
-  @override
-  @JsonKey(name: '_verified')
-  Element? get verifiedElement;
   @override
   CodeableConcept? get verificationType;
   @override
@@ -4834,17 +4420,13 @@ mixin _$ConsentProvision {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-  ConsentProvisionType? get type => throw _privateConstructorUsedError;
-  @JsonKey(name: '_type')
-  Element? get typeElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
   List<ConsentActor>? get actor => throw _privateConstructorUsedError;
   List<CodeableConcept>? get action => throw _privateConstructorUsedError;
   List<Coding>? get securityLabel => throw _privateConstructorUsedError;
   List<Coding>? get purpose => throw _privateConstructorUsedError;
-  @JsonKey(name: 'class')
-  List<Coding>? get class_ => throw _privateConstructorUsedError;
+  List<Coding>? get documentType => throw _privateConstructorUsedError;
+  List<Coding>? get resourceType => throw _privateConstructorUsedError;
   List<CodeableConcept>? get code => throw _privateConstructorUsedError;
   Period? get dataPeriod => throw _privateConstructorUsedError;
   List<ConsentData>? get data => throw _privateConstructorUsedError;
@@ -4865,27 +4447,21 @@ abstract class $ConsentProvisionCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-          ConsentProvisionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
       Period? period,
       List<ConsentActor>? actor,
       List<CodeableConcept>? action,
       List<Coding>? securityLabel,
       List<Coding>? purpose,
-      @JsonKey(name: 'class')
-          List<Coding>? class_,
+      List<Coding>? documentType,
+      List<Coding>? resourceType,
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
       Expression? expression,
       List<ConsentProvision>? provision});
 
-  $ElementCopyWith<$Res>? get typeElement;
   $PeriodCopyWith<$Res>? get period;
   $PeriodCopyWith<$Res>? get dataPeriod;
   $ExpressionCopyWith<$Res>? get expression;
@@ -4907,14 +4483,13 @@ class _$ConsentProvisionCopyWithImpl<$Res, $Val extends ConsentProvision>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? typeElement = freezed,
     Object? period = freezed,
     Object? actor = freezed,
     Object? action = freezed,
     Object? securityLabel = freezed,
     Object? purpose = freezed,
-    Object? class_ = freezed,
+    Object? documentType = freezed,
+    Object? resourceType = freezed,
     Object? code = freezed,
     Object? dataPeriod = freezed,
     Object? data = freezed,
@@ -4934,14 +4509,6 @@ class _$ConsentProvisionCopyWithImpl<$Res, $Val extends ConsentProvision>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ConsentProvisionType?,
-      typeElement: freezed == typeElement
-          ? _value.typeElement
-          : typeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
@@ -4962,9 +4529,13 @@ class _$ConsentProvisionCopyWithImpl<$Res, $Val extends ConsentProvision>
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      class_: freezed == class_
-          ? _value.class_
-          : class_ // ignore: cast_nullable_to_non_nullable
+      documentType: freezed == documentType
+          ? _value.documentType
+          : documentType // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
+      resourceType: freezed == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       code: freezed == code
           ? _value.code
@@ -4987,18 +4558,6 @@ class _$ConsentProvisionCopyWithImpl<$Res, $Val extends ConsentProvision>
           : provision // ignore: cast_nullable_to_non_nullable
               as List<ConsentProvision>?,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get typeElement {
-    if (_value.typeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
-      return _then(_value.copyWith(typeElement: value) as $Val);
-    });
   }
 
   @override
@@ -5048,28 +4607,21 @@ abstract class _$$_ConsentProvisionCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-          ConsentProvisionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
       Period? period,
       List<ConsentActor>? actor,
       List<CodeableConcept>? action,
       List<Coding>? securityLabel,
       List<Coding>? purpose,
-      @JsonKey(name: 'class')
-          List<Coding>? class_,
+      List<Coding>? documentType,
+      List<Coding>? resourceType,
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
       Expression? expression,
       List<ConsentProvision>? provision});
 
-  @override
-  $ElementCopyWith<$Res>? get typeElement;
   @override
   $PeriodCopyWith<$Res>? get period;
   @override
@@ -5092,14 +4644,13 @@ class __$$_ConsentProvisionCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? typeElement = freezed,
     Object? period = freezed,
     Object? actor = freezed,
     Object? action = freezed,
     Object? securityLabel = freezed,
     Object? purpose = freezed,
-    Object? class_ = freezed,
+    Object? documentType = freezed,
+    Object? resourceType = freezed,
     Object? code = freezed,
     Object? dataPeriod = freezed,
     Object? data = freezed,
@@ -5119,14 +4670,6 @@ class __$$_ConsentProvisionCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as ConsentProvisionType?,
-      typeElement: freezed == typeElement
-          ? _value.typeElement
-          : typeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       period: freezed == period
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
@@ -5147,9 +4690,13 @@ class __$$_ConsentProvisionCopyWithImpl<$Res>
           ? _value.purpose
           : purpose // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
-      class_: freezed == class_
-          ? _value.class_
-          : class_ // ignore: cast_nullable_to_non_nullable
+      documentType: freezed == documentType
+          ? _value.documentType
+          : documentType // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
+      resourceType: freezed == resourceType
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
               as List<Coding>?,
       code: freezed == code
           ? _value.code
@@ -5182,14 +4729,13 @@ class _$_ConsentProvision extends _ConsentProvision {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown) this.type,
-      @JsonKey(name: '_type') this.typeElement,
       this.period,
       this.actor,
       this.action,
       this.securityLabel,
       this.purpose,
-      @JsonKey(name: 'class') this.class_,
+      this.documentType,
+      this.resourceType,
       this.code,
       this.dataPeriod,
       this.data,
@@ -5208,12 +4754,6 @@ class _$_ConsentProvision extends _ConsentProvision {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-  final ConsentProvisionType? type;
-  @override
-  @JsonKey(name: '_type')
-  final Element? typeElement;
-  @override
   final Period? period;
   @override
   final List<ConsentActor>? actor;
@@ -5224,8 +4764,9 @@ class _$_ConsentProvision extends _ConsentProvision {
   @override
   final List<Coding>? purpose;
   @override
-  @JsonKey(name: 'class')
-  final List<Coding>? class_;
+  final List<Coding>? documentType;
+  @override
+  final List<Coding>? resourceType;
   @override
   final List<CodeableConcept>? code;
   @override
@@ -5239,7 +4780,7 @@ class _$_ConsentProvision extends _ConsentProvision {
 
   @override
   String toString() {
-    return 'ConsentProvision(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, typeElement: $typeElement, period: $period, actor: $actor, action: $action, securityLabel: $securityLabel, purpose: $purpose, class_: $class_, code: $code, dataPeriod: $dataPeriod, data: $data, expression: $expression, provision: $provision)';
+    return 'ConsentProvision(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, period: $period, actor: $actor, action: $action, securityLabel: $securityLabel, purpose: $purpose, documentType: $documentType, resourceType: $resourceType, code: $code, dataPeriod: $dataPeriod, data: $data, expression: $expression, provision: $provision)';
   }
 
   @override
@@ -5252,16 +4793,16 @@ class _$_ConsentProvision extends _ConsentProvision {
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.typeElement, typeElement) ||
-                other.typeElement == typeElement) &&
             (identical(other.period, period) || other.period == period) &&
             const DeepCollectionEquality().equals(other.actor, actor) &&
             const DeepCollectionEquality().equals(other.action, action) &&
             const DeepCollectionEquality()
                 .equals(other.securityLabel, securityLabel) &&
             const DeepCollectionEquality().equals(other.purpose, purpose) &&
-            const DeepCollectionEquality().equals(other.class_, class_) &&
+            const DeepCollectionEquality()
+                .equals(other.documentType, documentType) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
             const DeepCollectionEquality().equals(other.code, code) &&
             (identical(other.dataPeriod, dataPeriod) ||
                 other.dataPeriod == dataPeriod) &&
@@ -5278,14 +4819,13 @@ class _$_ConsentProvision extends _ConsentProvision {
       id,
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      type,
-      typeElement,
       period,
       const DeepCollectionEquality().hash(actor),
       const DeepCollectionEquality().hash(action),
       const DeepCollectionEquality().hash(securityLabel),
       const DeepCollectionEquality().hash(purpose),
-      const DeepCollectionEquality().hash(class_),
+      const DeepCollectionEquality().hash(documentType),
+      const DeepCollectionEquality().hash(resourceType),
       const DeepCollectionEquality().hash(code),
       dataPeriod,
       const DeepCollectionEquality().hash(data),
@@ -5309,20 +4849,15 @@ class _$_ConsentProvision extends _ConsentProvision {
 abstract class _ConsentProvision extends ConsentProvision {
   factory _ConsentProvision(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-          final ConsentProvisionType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
       final Period? period,
       final List<ConsentActor>? actor,
       final List<CodeableConcept>? action,
       final List<Coding>? securityLabel,
       final List<Coding>? purpose,
-      @JsonKey(name: 'class')
-          final List<Coding>? class_,
+      final List<Coding>? documentType,
+      final List<Coding>? resourceType,
       final List<CodeableConcept>? code,
       final Period? dataPeriod,
       final List<ConsentData>? data,
@@ -5341,12 +4876,6 @@ abstract class _ConsentProvision extends ConsentProvision {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
-  ConsentProvisionType? get type;
-  @override
-  @JsonKey(name: '_type')
-  Element? get typeElement;
-  @override
   Period? get period;
   @override
   List<ConsentActor>? get actor;
@@ -5357,8 +4886,9 @@ abstract class _ConsentProvision extends ConsentProvision {
   @override
   List<Coding>? get purpose;
   @override
-  @JsonKey(name: 'class')
-  List<Coding>? get class_;
+  List<Coding>? get documentType;
+  @override
+  List<Coding>? get resourceType;
   @override
   List<CodeableConcept>? get code;
   @override
@@ -5653,10 +5183,7 @@ mixin _$ConsentData {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-  ConsentDataMeaning? get meaning => throw _privateConstructorUsedError;
-  @JsonKey(name: '_meaning')
-  Element? get meaningElement => throw _privateConstructorUsedError;
+  ConsentDataMeaning get meaning => throw _privateConstructorUsedError;
   Reference get reference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5673,16 +5200,11 @@ abstract class $ConsentDataCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-          ConsentDataMeaning? meaning,
-      @JsonKey(name: '_meaning')
-          Element? meaningElement,
+      ConsentDataMeaning meaning,
       Reference reference});
 
-  $ElementCopyWith<$Res>? get meaningElement;
   $ReferenceCopyWith<$Res> get reference;
 }
 
@@ -5702,8 +5224,7 @@ class _$ConsentDataCopyWithImpl<$Res, $Val extends ConsentData>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? meaning = freezed,
-    Object? meaningElement = freezed,
+    Object? meaning = null,
     Object? reference = null,
   }) {
     return _then(_value.copyWith(
@@ -5719,31 +5240,15 @@ class _$ConsentDataCopyWithImpl<$Res, $Val extends ConsentData>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      meaning: freezed == meaning
+      meaning: null == meaning
           ? _value.meaning
           : meaning // ignore: cast_nullable_to_non_nullable
-              as ConsentDataMeaning?,
-      meaningElement: freezed == meaningElement
-          ? _value.meaningElement
-          : meaningElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as ConsentDataMeaning,
       reference: null == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as Reference,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get meaningElement {
-    if (_value.meaningElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.meaningElement!, (value) {
-      return _then(_value.copyWith(meaningElement: value) as $Val);
-    });
   }
 
   @override
@@ -5765,17 +5270,11 @@ abstract class _$$_ConsentDataCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-          ConsentDataMeaning? meaning,
-      @JsonKey(name: '_meaning')
-          Element? meaningElement,
+      ConsentDataMeaning meaning,
       Reference reference});
 
-  @override
-  $ElementCopyWith<$Res>? get meaningElement;
   @override
   $ReferenceCopyWith<$Res> get reference;
 }
@@ -5794,8 +5293,7 @@ class __$$_ConsentDataCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? meaning = freezed,
-    Object? meaningElement = freezed,
+    Object? meaning = null,
     Object? reference = null,
   }) {
     return _then(_$_ConsentData(
@@ -5811,14 +5309,10 @@ class __$$_ConsentDataCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      meaning: freezed == meaning
+      meaning: null == meaning
           ? _value.meaning
           : meaning // ignore: cast_nullable_to_non_nullable
-              as ConsentDataMeaning?,
-      meaningElement: freezed == meaningElement
-          ? _value.meaningElement
-          : meaningElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as ConsentDataMeaning,
       reference: null == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
@@ -5834,8 +5328,7 @@ class _$_ConsentData extends _ConsentData {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown) this.meaning,
-      @JsonKey(name: '_meaning') this.meaningElement,
+      required this.meaning,
       required this.reference})
       : super._();
 
@@ -5850,17 +5343,13 @@ class _$_ConsentData extends _ConsentData {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-  final ConsentDataMeaning? meaning;
-  @override
-  @JsonKey(name: '_meaning')
-  final Element? meaningElement;
+  final ConsentDataMeaning meaning;
   @override
   final Reference reference;
 
   @override
   String toString() {
-    return 'ConsentData(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, meaning: $meaning, meaningElement: $meaningElement, reference: $reference)';
+    return 'ConsentData(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, meaning: $meaning, reference: $reference)';
   }
 
   @override
@@ -5874,8 +5363,6 @@ class _$_ConsentData extends _ConsentData {
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
             (identical(other.meaning, meaning) || other.meaning == meaning) &&
-            (identical(other.meaningElement, meaningElement) ||
-                other.meaningElement == meaningElement) &&
             (identical(other.reference, reference) ||
                 other.reference == reference));
   }
@@ -5888,7 +5375,6 @@ class _$_ConsentData extends _ConsentData {
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
       meaning,
-      meaningElement,
       reference);
 
   @JsonKey(ignore: true)
@@ -5908,13 +5394,9 @@ class _$_ConsentData extends _ConsentData {
 abstract class _ConsentData extends ConsentData {
   factory _ConsentData(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-          final ConsentDataMeaning? meaning,
-      @JsonKey(name: '_meaning')
-          final Element? meaningElement,
+      required final ConsentDataMeaning meaning,
       required final Reference reference}) = _$_ConsentData;
   _ConsentData._() : super._();
 
@@ -5929,11 +5411,7 @@ abstract class _ConsentData extends ConsentData {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
-  ConsentDataMeaning? get meaning;
-  @override
-  @JsonKey(name: '_meaning')
-  Element? get meaningElement;
+  ConsentDataMeaning get meaning;
   @override
   Reference get reference;
   @override
@@ -6752,6 +6230,209 @@ abstract class _Permission extends Permission {
   @override
   @JsonKey(ignore: true)
   _$$_PermissionCopyWith<_$_Permission> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+PolicyBasis _$PolicyBasisFromJson(Map<String, dynamic> json) {
+  return _PolicyBasis.fromJson(json);
+}
+
+/// @nodoc
+mixin _$PolicyBasis {
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  Reference? get reference => throw _privateConstructorUsedError;
+  FhirUrl? get url => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PolicyBasisCopyWith<PolicyBasis> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PolicyBasisCopyWith<$Res> {
+  factory $PolicyBasisCopyWith(
+          PolicyBasis value, $Res Function(PolicyBasis) then) =
+      _$PolicyBasisCopyWithImpl<$Res, PolicyBasis>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Reference? reference,
+      FhirUrl? url});
+
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class _$PolicyBasisCopyWithImpl<$Res, $Val extends PolicyBasis>
+    implements $PolicyBasisCopyWith<$Res> {
+  _$PolicyBasisCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? extension_ = freezed,
+    Object? reference = freezed,
+    Object? url = freezed,
+  }) {
+    return _then(_value.copyWith(
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: freezed == reference
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ReferenceCopyWith<$Res>? get reference {
+    if (_value.reference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reference!, (value) {
+      return _then(_value.copyWith(reference: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_PolicyBasisCopyWith<$Res>
+    implements $PolicyBasisCopyWith<$Res> {
+  factory _$$_PolicyBasisCopyWith(
+          _$_PolicyBasis value, $Res Function(_$_PolicyBasis) then) =
+      __$$_PolicyBasisCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      Reference? reference,
+      FhirUrl? url});
+
+  @override
+  $ReferenceCopyWith<$Res>? get reference;
+}
+
+/// @nodoc
+class __$$_PolicyBasisCopyWithImpl<$Res>
+    extends _$PolicyBasisCopyWithImpl<$Res, _$_PolicyBasis>
+    implements _$$_PolicyBasisCopyWith<$Res> {
+  __$$_PolicyBasisCopyWithImpl(
+      _$_PolicyBasis _value, $Res Function(_$_PolicyBasis) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? extension_ = freezed,
+    Object? reference = freezed,
+    Object? url = freezed,
+  }) {
+    return _then(_$_PolicyBasis(
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      reference: freezed == reference
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_PolicyBasis extends _PolicyBasis {
+  _$_PolicyBasis(
+      {@JsonKey(name: 'extension') this.extension_, this.reference, this.url})
+      : super._();
+
+  factory _$_PolicyBasis.fromJson(Map<String, dynamic> json) =>
+      _$$_PolicyBasisFromJson(json);
+
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final Reference? reference;
+  @override
+  final FhirUrl? url;
+
+  @override
+  String toString() {
+    return 'PolicyBasis(extension_: $extension_, reference: $reference, url: $url)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_PolicyBasis &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.url, url) || other.url == url));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(extension_), reference, url);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_PolicyBasisCopyWith<_$_PolicyBasis> get copyWith =>
+      __$$_PolicyBasisCopyWithImpl<_$_PolicyBasis>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PolicyBasisToJson(
+      this,
+    );
+  }
+}
+
+abstract class _PolicyBasis extends PolicyBasis {
+  factory _PolicyBasis(
+      {@JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final Reference? reference,
+      final FhirUrl? url}) = _$_PolicyBasis;
+  _PolicyBasis._() : super._();
+
+  factory _PolicyBasis.fromJson(Map<String, dynamic> json) =
+      _$_PolicyBasis.fromJson;
+
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  Reference? get reference;
+  @override
+  FhirUrl? get url;
+  @override
+  @JsonKey(ignore: true)
+  _$$_PolicyBasisCopyWith<_$_PolicyBasis> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
