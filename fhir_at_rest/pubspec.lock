@@ -165,19 +165,20 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: HEAD
-      resolved-ref: c6ef63114c5904928ed20ab5fe6a7ef4d276db7b
+      ref: upgrade-dart-sdk
+      resolved-ref: "0ee761603168222dbb1f2f205aad9c5ba8704cea"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
   fhir_yaml:
     dependency: transitive
     description:
-      name: fhir_yaml
-      sha256: ad5c9f58efc9e1e0dae71d80069df694a046c98f54e9b9d57d5bc70e7ae69e0b
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.5.2"
+      path: fhir_yaml
+      ref: upgrade-dart-sdk
+      resolved-ref: "0ee761603168222dbb1f2f205aad9c5ba8704cea"
+      url: "https://github.com/i-atros/fhir.git"
+    source: git
+    version: "0.5.0"
   file:
     dependency: transitive
     description:
@@ -278,10 +279,10 @@ packages:
     dependency: transitive
     description:
       name: json_annotation
-      sha256: c33da08e136c3df0190bd5bbe51ae1df4a7d96e7954d1d7249fea2968a72d317
+      sha256: "3520fa844009431b5d4491a5a778603520cdc399ab3406332dcc50f93547258c"
       url: "https://pub.dev"
     source: hosted
-    version: "4.8.0"
+    version: "4.7.0"
   logging:
     dependency: transitive
     description:
