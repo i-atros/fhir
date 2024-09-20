@@ -20,43 +20,43 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      sha256: "4a1dd40d7d054404479f91a51552773da3d5cf528580477a42abcf5569af5e4f"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.0-nullsafety.0"
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.0"
   fhir_yaml:
     dependency: transitive
     description:
-      name: fhir_yaml
-      sha256: "27f7eb6b5da741cb9577ed0522ad260bb1586b880ccd181c425b680ddad1ca6a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.0-nullsafety.0"
+      path: fhir_yaml
+      ref: upgrade-dart-sdk
+      resolved-ref: "414979ddad0805d445428cc91fc4a5de40cd396b"
+      url: "https://github.com/i-atros/fhir.git"
+    source: git
+    version: "0.5.0"
   freezed_annotation:
     dependency: transitive
     description:
       name: freezed_annotation
-      sha256: "3c992c6c5a965187592e7baa645e7a931d4c2e25da9a755c0337bc3da874589a"
+      sha256: c3fd9336eb55a38cc1bbd79ab17573113a8deccd0ecbbf926cca3c62803b5c2d
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.0-nullsafety.0"
+    version: "2.4.1"
   json_annotation:
     dependency: transitive
     description:
       name: json_annotation
-      sha256: "0aab0aad3dde662cdc02d3a6fa6c9f20687a91089900bd25c64f3badcc90bf21"
+      sha256: "3520fa844009431b5d4491a5a778603520cdc399ab3406332dcc50f93547258c"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.0"
+    version: "4.7.0"
   meta:
     dependency: transitive
     description:
       name: meta
-      sha256: "98a7492d10d7049ea129fd4e50f7cdd2d5008522b1dfa1148bbbc542b9dd21f7"
+      sha256: e3641ec5d63ebf0d9b41bd43201a66e3fc79a65db5f61fc181f04cd27aab950c
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.0"
+    version: "1.16.0"
   path:
     dependency: transitive
     description:
@@ -93,9 +93,9 @@ packages:
     dependency: transitive
     description:
       name: yaml
-      sha256: "252eb4c4d54f384c9fee16795f3d7381b037c53261aa1772dc43b71133581e41"
+      sha256: "75769501ea3489fca56601ff33454fe45507ea3bfb014161abc3b43ae25989d5"
       url: "https://pub.dev"
     source: hosted
-    version: "3.0.0"
+    version: "3.1.2"
 sdks:
-  dart: ">=2.12.0-0.0.dev <3.0.0"
+  dart: ">=2.19.0 <3.0.0"
