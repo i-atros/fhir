@@ -6,7 +6,7 @@ part of 'billing.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
+_$ClaimImpl _$$ClaimImplFromJson(Map<String, dynamic> json) => _$ClaimImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Claim) ??
@@ -122,7 +122,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
           : Money.fromJson(json['total'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
+Map<String, dynamic> _$$ClaimImplToJson(_$ClaimImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -342,8 +342,8 @@ const _$ClaimUseEnumMap = {
   ClaimUse.unknown: 'unknown',
 };
 
-_$_ClaimRelated _$$_ClaimRelatedFromJson(Map<String, dynamic> json) =>
-    _$_ClaimRelated(
+_$ClaimRelatedImpl _$$ClaimRelatedImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimRelatedImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -363,7 +363,7 @@ _$_ClaimRelated _$$_ClaimRelatedFromJson(Map<String, dynamic> json) =>
           : Identifier.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimRelatedToJson(_$_ClaimRelated instance) {
+Map<String, dynamic> _$$ClaimRelatedImplToJson(_$ClaimRelatedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -383,8 +383,8 @@ Map<String, dynamic> _$$_ClaimRelatedToJson(_$_ClaimRelated instance) {
   return val;
 }
 
-_$_ClaimPayee _$$_ClaimPayeeFromJson(Map<String, dynamic> json) =>
-    _$_ClaimPayee(
+_$ClaimPayeeImpl _$$ClaimPayeeImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimPayeeImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -398,7 +398,7 @@ _$_ClaimPayee _$$_ClaimPayeeFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['party'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimPayeeToJson(_$_ClaimPayee instance) {
+Map<String, dynamic> _$$ClaimPayeeImplToJson(_$ClaimPayeeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -417,8 +417,8 @@ Map<String, dynamic> _$$_ClaimPayeeToJson(_$_ClaimPayee instance) {
   return val;
 }
 
-_$_ClaimCareTeam _$$_ClaimCareTeamFromJson(Map<String, dynamic> json) =>
-    _$_ClaimCareTeam(
+_$ClaimCareTeamImpl _$$ClaimCareTeamImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimCareTeamImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -448,7 +448,7 @@ _$_ClaimCareTeam _$$_ClaimCareTeamFromJson(Map<String, dynamic> json) =>
               json['qualification'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimCareTeamToJson(_$_ClaimCareTeam instance) {
+Map<String, dynamic> _$$ClaimCareTeamImplToJson(_$ClaimCareTeamImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -472,9 +472,9 @@ Map<String, dynamic> _$$_ClaimCareTeamToJson(_$_ClaimCareTeam instance) {
   return val;
 }
 
-_$_ClaimSupportingInfo _$$_ClaimSupportingInfoFromJson(
+_$ClaimSupportingInfoImpl _$$ClaimSupportingInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimSupportingInfo(
+    _$ClaimSupportingInfoImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -526,8 +526,8 @@ _$_ClaimSupportingInfo _$$_ClaimSupportingInfoFromJson(
           : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimSupportingInfoToJson(
-    _$_ClaimSupportingInfo instance) {
+Map<String, dynamic> _$$ClaimSupportingInfoImplToJson(
+    _$ClaimSupportingInfoImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -559,8 +559,8 @@ Map<String, dynamic> _$$_ClaimSupportingInfoToJson(
   return val;
 }
 
-_$_ClaimDiagnosis _$$_ClaimDiagnosisFromJson(Map<String, dynamic> json) =>
-    _$_ClaimDiagnosis(
+_$ClaimDiagnosisImpl _$$ClaimDiagnosisImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimDiagnosisImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -595,7 +595,8 @@ _$_ClaimDiagnosis _$$_ClaimDiagnosisFromJson(Map<String, dynamic> json) =>
               json['packageCode'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimDiagnosisToJson(_$_ClaimDiagnosis instance) {
+Map<String, dynamic> _$$ClaimDiagnosisImplToJson(
+    _$ClaimDiagnosisImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -620,8 +621,8 @@ Map<String, dynamic> _$$_ClaimDiagnosisToJson(_$_ClaimDiagnosis instance) {
   return val;
 }
 
-_$_ClaimProcedure _$$_ClaimProcedureFromJson(Map<String, dynamic> json) =>
-    _$_ClaimProcedure(
+_$ClaimProcedureImpl _$$ClaimProcedureImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimProcedureImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -655,7 +656,8 @@ _$_ClaimProcedure _$$_ClaimProcedureFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimProcedureToJson(_$_ClaimProcedure instance) {
+Map<String, dynamic> _$$ClaimProcedureImplToJson(
+    _$ClaimProcedureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -681,8 +683,8 @@ Map<String, dynamic> _$$_ClaimProcedureToJson(_$_ClaimProcedure instance) {
   return val;
 }
 
-_$_ClaimInsurance _$$_ClaimInsuranceFromJson(Map<String, dynamic> json) =>
-    _$_ClaimInsurance(
+_$ClaimInsuranceImpl _$$ClaimInsuranceImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimInsuranceImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -720,7 +722,8 @@ _$_ClaimInsurance _$$_ClaimInsuranceFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['claimResponse'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimInsuranceToJson(_$_ClaimInsurance instance) {
+Map<String, dynamic> _$$ClaimInsuranceImplToJson(
+    _$ClaimInsuranceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -750,8 +753,8 @@ Map<String, dynamic> _$$_ClaimInsuranceToJson(_$_ClaimInsurance instance) {
   return val;
 }
 
-_$_ClaimAccident _$$_ClaimAccidentFromJson(Map<String, dynamic> json) =>
-    _$_ClaimAccident(
+_$ClaimAccidentImpl _$$ClaimAccidentImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimAccidentImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -775,7 +778,7 @@ _$_ClaimAccident _$$_ClaimAccidentFromJson(Map<String, dynamic> json) =>
               json['locationReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimAccidentToJson(_$_ClaimAccident instance) {
+Map<String, dynamic> _$$ClaimAccidentImplToJson(_$ClaimAccidentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -797,7 +800,8 @@ Map<String, dynamic> _$$_ClaimAccidentToJson(_$_ClaimAccident instance) {
   return val;
 }
 
-_$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
+_$ClaimItemImpl _$$ClaimItemImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimItemImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -812,25 +816,25 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       careTeamSequence: (json['careTeamSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       careTeamSequenceElement: (json['_careTeamSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       diagnosisSequence: (json['diagnosisSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       diagnosisSequenceElement: (json['_diagnosisSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       procedureSequence: (json['procedureSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       procedureSequenceElement: (json['_procedureSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       informationSequence: (json['informationSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       informationSequenceElement:
           (json['_informationSequence'] as List<dynamic>?)
@@ -900,7 +904,7 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimItemToJson(_$_ClaimItem instance) {
+Map<String, dynamic> _$$ClaimItemImplToJson(_$ClaimItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -959,8 +963,8 @@ Map<String, dynamic> _$$_ClaimItemToJson(_$_ClaimItem instance) {
   return val;
 }
 
-_$_ClaimDetail _$$_ClaimDetailFromJson(Map<String, dynamic> json) =>
-    _$_ClaimDetail(
+_$ClaimDetailImpl _$$ClaimDetailImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimDetailImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1009,7 +1013,7 @@ _$_ClaimDetail _$$_ClaimDetailFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimDetailToJson(_$_ClaimDetail instance) {
+Map<String, dynamic> _$$ClaimDetailImplToJson(_$ClaimDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1042,8 +1046,8 @@ Map<String, dynamic> _$$_ClaimDetailToJson(_$_ClaimDetail instance) {
   return val;
 }
 
-_$_ClaimSubDetail _$$_ClaimSubDetailFromJson(Map<String, dynamic> json) =>
-    _$_ClaimSubDetail(
+_$ClaimSubDetailImpl _$$ClaimSubDetailImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimSubDetailImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1089,7 +1093,8 @@ _$_ClaimSubDetail _$$_ClaimSubDetailFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimSubDetailToJson(_$_ClaimSubDetail instance) {
+Map<String, dynamic> _$$ClaimSubDetailImplToJson(
+    _$ClaimSubDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1120,8 +1125,8 @@ Map<String, dynamic> _$$_ClaimSubDetailToJson(_$_ClaimSubDetail instance) {
   return val;
 }
 
-_$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
-    _$_ClaimResponse(
+_$ClaimResponseImpl _$$ClaimResponseImplFromJson(Map<String, dynamic> json) =>
+    _$ClaimResponseImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ClaimResponse) ??
@@ -1243,7 +1248,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseToJson(_$_ClaimResponse instance) {
+Map<String, dynamic> _$$ClaimResponseImplToJson(_$ClaimResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1308,8 +1313,9 @@ Map<String, dynamic> _$$_ClaimResponseToJson(_$_ClaimResponse instance) {
   return val;
 }
 
-_$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
-    _$_ClaimResponseItem(
+_$ClaimResponseItemImpl _$$ClaimResponseItemImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ClaimResponseItemImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1324,7 +1330,7 @@ _$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_itemSequence'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1338,8 +1344,8 @@ _$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseItemToJson(
-    _$_ClaimResponseItem instance) {
+Map<String, dynamic> _$$ClaimResponseItemImplToJson(
+    _$ClaimResponseItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1364,9 +1370,9 @@ Map<String, dynamic> _$$_ClaimResponseItemToJson(
   return val;
 }
 
-_$_ClaimResponseAdjudication _$$_ClaimResponseAdjudicationFromJson(
+_$ClaimResponseAdjudicationImpl _$$ClaimResponseAdjudicationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseAdjudication(
+    _$ClaimResponseAdjudicationImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1388,8 +1394,8 @@ _$_ClaimResponseAdjudication _$$_ClaimResponseAdjudicationFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimResponseAdjudicationToJson(
-    _$_ClaimResponseAdjudication instance) {
+Map<String, dynamic> _$$ClaimResponseAdjudicationImplToJson(
+    _$ClaimResponseAdjudicationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1411,9 +1417,9 @@ Map<String, dynamic> _$$_ClaimResponseAdjudicationToJson(
   return val;
 }
 
-_$_ClaimResponseDetail _$$_ClaimResponseDetailFromJson(
+_$ClaimResponseDetailImpl _$$ClaimResponseDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseDetail(
+    _$ClaimResponseDetailImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1428,7 +1434,7 @@ _$_ClaimResponseDetail _$$_ClaimResponseDetailFromJson(
           ? null
           : Element.fromJson(json['_detailSequence'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1443,8 +1449,8 @@ _$_ClaimResponseDetail _$$_ClaimResponseDetailFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseDetailToJson(
-    _$_ClaimResponseDetail instance) {
+Map<String, dynamic> _$$ClaimResponseDetailImplToJson(
+    _$ClaimResponseDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1470,9 +1476,9 @@ Map<String, dynamic> _$$_ClaimResponseDetailToJson(
   return val;
 }
 
-_$_ClaimResponseSubDetail _$$_ClaimResponseSubDetailFromJson(
+_$ClaimResponseSubDetailImpl _$$ClaimResponseSubDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseSubDetail(
+    _$ClaimResponseSubDetailImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1488,7 +1494,7 @@ _$_ClaimResponseSubDetail _$$_ClaimResponseSubDetailFromJson(
           : Element.fromJson(
               json['_subDetailSequence'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1499,8 +1505,8 @@ _$_ClaimResponseSubDetail _$$_ClaimResponseSubDetailFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseSubDetailToJson(
-    _$_ClaimResponseSubDetail instance) {
+Map<String, dynamic> _$$ClaimResponseSubDetailImplToJson(
+    _$ClaimResponseSubDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1526,9 +1532,9 @@ Map<String, dynamic> _$$_ClaimResponseSubDetailToJson(
   return val;
 }
 
-_$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
+_$ClaimResponseAddItemImpl _$$ClaimResponseAddItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseAddItem(
+    _$ClaimResponseAddItemImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1537,19 +1543,19 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       itemSequence: (json['itemSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       itemSequenceElement: (json['_itemSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       detailSequence: (json['detailSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       detailSequenceElement: (json['_detailSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       subdetailSequence: (json['subdetailSequence'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       subdetailSequenceElement: (json['_subdetailSequence'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1605,7 +1611,7 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1619,8 +1625,8 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseAddItemToJson(
-    _$_ClaimResponseAddItem instance) {
+Map<String, dynamic> _$$ClaimResponseAddItemImplToJson(
+    _$ClaimResponseAddItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1674,9 +1680,9 @@ Map<String, dynamic> _$$_ClaimResponseAddItemToJson(
   return val;
 }
 
-_$_ClaimResponseDetail1 _$$_ClaimResponseDetail1FromJson(
+_$ClaimResponseDetail1Impl _$$ClaimResponseDetail1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseDetail1(
+    _$ClaimResponseDetail1Impl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1703,7 +1709,7 @@ _$_ClaimResponseDetail1 _$$_ClaimResponseDetail1FromJson(
           ? null
           : Money.fromJson(json['net'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1718,8 +1724,8 @@ _$_ClaimResponseDetail1 _$$_ClaimResponseDetail1FromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseDetail1ToJson(
-    _$_ClaimResponseDetail1 instance) {
+Map<String, dynamic> _$$ClaimResponseDetail1ImplToJson(
+    _$ClaimResponseDetail1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1750,9 +1756,9 @@ Map<String, dynamic> _$$_ClaimResponseDetail1ToJson(
   return val;
 }
 
-_$_ClaimResponseSubDetail1 _$$_ClaimResponseSubDetail1FromJson(
+_$ClaimResponseSubDetail1Impl _$$ClaimResponseSubDetail1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseSubDetail1(
+    _$ClaimResponseSubDetail1Impl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1779,7 +1785,7 @@ _$_ClaimResponseSubDetail1 _$$_ClaimResponseSubDetail1FromJson(
           ? null
           : Money.fromJson(json['net'] as Map<String, dynamic>),
       noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map((e) => PositiveInt.fromJson(e))
+          ?.map(PositiveInt.fromJson)
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1790,8 +1796,8 @@ _$_ClaimResponseSubDetail1 _$$_ClaimResponseSubDetail1FromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClaimResponseSubDetail1ToJson(
-    _$_ClaimResponseSubDetail1 instance) {
+Map<String, dynamic> _$$ClaimResponseSubDetail1ImplToJson(
+    _$ClaimResponseSubDetail1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1820,9 +1826,9 @@ Map<String, dynamic> _$$_ClaimResponseSubDetail1ToJson(
   return val;
 }
 
-_$_ClaimResponseTotal _$$_ClaimResponseTotalFromJson(
+_$ClaimResponseTotalImpl _$$ClaimResponseTotalImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseTotal(
+    _$ClaimResponseTotalImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1835,8 +1841,8 @@ _$_ClaimResponseTotal _$$_ClaimResponseTotalFromJson(
       amount: Money.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimResponseTotalToJson(
-    _$_ClaimResponseTotal instance) {
+Map<String, dynamic> _$$ClaimResponseTotalImplToJson(
+    _$ClaimResponseTotalImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1855,9 +1861,9 @@ Map<String, dynamic> _$$_ClaimResponseTotalToJson(
   return val;
 }
 
-_$_ClaimResponsePayment _$$_ClaimResponsePaymentFromJson(
+_$ClaimResponsePaymentImpl _$$ClaimResponsePaymentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponsePayment(
+    _$ClaimResponsePaymentImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1883,8 +1889,8 @@ _$_ClaimResponsePayment _$$_ClaimResponsePaymentFromJson(
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimResponsePaymentToJson(
-    _$_ClaimResponsePayment instance) {
+Map<String, dynamic> _$$ClaimResponsePaymentImplToJson(
+    _$ClaimResponsePaymentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1908,9 +1914,9 @@ Map<String, dynamic> _$$_ClaimResponsePaymentToJson(
   return val;
 }
 
-_$_ClaimResponseProcessNote _$$_ClaimResponseProcessNoteFromJson(
+_$ClaimResponseProcessNoteImpl _$$ClaimResponseProcessNoteImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseProcessNote(
+    _$ClaimResponseProcessNoteImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1938,8 +1944,8 @@ _$_ClaimResponseProcessNote _$$_ClaimResponseProcessNoteFromJson(
           : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimResponseProcessNoteToJson(
-    _$_ClaimResponseProcessNote instance) {
+Map<String, dynamic> _$$ClaimResponseProcessNoteImplToJson(
+    _$ClaimResponseProcessNoteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1970,9 +1976,9 @@ const _$ClaimResponseProcessNoteTypeEnumMap = {
   ClaimResponseProcessNoteType.unknown: 'unknown',
 };
 
-_$_ClaimResponseInsurance _$$_ClaimResponseInsuranceFromJson(
+_$ClaimResponseInsuranceImpl _$$ClaimResponseInsuranceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseInsurance(
+    _$ClaimResponseInsuranceImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2001,8 +2007,8 @@ _$_ClaimResponseInsurance _$$_ClaimResponseInsuranceFromJson(
           : Reference.fromJson(json['claimResponse'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimResponseInsuranceToJson(
-    _$_ClaimResponseInsurance instance) {
+Map<String, dynamic> _$$ClaimResponseInsuranceImplToJson(
+    _$ClaimResponseInsuranceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2028,9 +2034,9 @@ Map<String, dynamic> _$$_ClaimResponseInsuranceToJson(
   return val;
 }
 
-_$_ClaimResponseError _$$_ClaimResponseErrorFromJson(
+_$ClaimResponseErrorImpl _$$ClaimResponseErrorImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClaimResponseError(
+    _$ClaimResponseErrorImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2060,8 +2066,8 @@ _$_ClaimResponseError _$$_ClaimResponseErrorFromJson(
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClaimResponseErrorToJson(
-    _$_ClaimResponseError instance) {
+Map<String, dynamic> _$$ClaimResponseErrorImplToJson(
+    _$ClaimResponseErrorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2086,7 +2092,8 @@ Map<String, dynamic> _$$_ClaimResponseErrorToJson(
   return val;
 }
 
-_$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
+_$InvoiceImpl _$$InvoiceImplFromJson(Map<String, dynamic> json) =>
+    _$InvoiceImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Invoice) ??
@@ -2176,7 +2183,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
           .toList(),
     );
 
-Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) {
+Map<String, dynamic> _$$InvoiceImplToJson(_$InvoiceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2235,9 +2242,9 @@ const _$InvoiceStatusEnumMap = {
   InvoiceStatus.unknown: 'unknown',
 };
 
-_$_InvoiceParticipant _$$_InvoiceParticipantFromJson(
+_$InvoiceParticipantImpl _$$InvoiceParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InvoiceParticipant(
+    _$InvoiceParticipantImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2251,8 +2258,8 @@ _$_InvoiceParticipant _$$_InvoiceParticipantFromJson(
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InvoiceParticipantToJson(
-    _$_InvoiceParticipant instance) {
+Map<String, dynamic> _$$InvoiceParticipantImplToJson(
+    _$InvoiceParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2271,8 +2278,9 @@ Map<String, dynamic> _$$_InvoiceParticipantToJson(
   return val;
 }
 
-_$_InvoiceLineItem _$$_InvoiceLineItemFromJson(Map<String, dynamic> json) =>
-    _$_InvoiceLineItem(
+_$InvoiceLineItemImpl _$$InvoiceLineItemImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InvoiceLineItemImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2300,7 +2308,8 @@ _$_InvoiceLineItem _$$_InvoiceLineItemFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_InvoiceLineItemToJson(_$_InvoiceLineItem instance) {
+Map<String, dynamic> _$$InvoiceLineItemImplToJson(
+    _$InvoiceLineItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2324,9 +2333,9 @@ Map<String, dynamic> _$$_InvoiceLineItemToJson(_$_InvoiceLineItem instance) {
   return val;
 }
 
-_$_InvoicePriceComponent _$$_InvoicePriceComponentFromJson(
+_$InvoicePriceComponentImpl _$$InvoicePriceComponentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InvoicePriceComponent(
+    _$InvoicePriceComponentImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2352,8 +2361,8 @@ _$_InvoicePriceComponent _$$_InvoicePriceComponentFromJson(
           : Money.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InvoicePriceComponentToJson(
-    _$_InvoicePriceComponent instance) {
+Map<String, dynamic> _$$InvoicePriceComponentImplToJson(
+    _$InvoicePriceComponentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

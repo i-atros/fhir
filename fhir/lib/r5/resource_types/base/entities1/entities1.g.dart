@@ -6,7 +6,8 @@ part of 'entities1.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
+_$EndpointImpl _$$EndpointImplFromJson(Map<String, dynamic> json) =>
+    _$EndpointImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Endpoint) ??
@@ -66,7 +67,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       payloadMimeType: (json['payloadMimeType'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
+          ?.map(Code.fromJson)
           .toList(),
       payloadMimeTypeElement: (json['_payloadMimeType'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -83,7 +84,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
+Map<String, dynamic> _$$EndpointImplToJson(_$EndpointImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -292,8 +293,9 @@ const _$EndpointStatusEnumMap = {
   EndpointStatus.unknown: 'unknown',
 };
 
-_$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
-    _$_HealthcareService(
+_$HealthcareServiceImpl _$$HealthcareServiceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$HealthcareServiceImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.HealthcareService) ??
@@ -414,8 +416,8 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceToJson(
-    _$_HealthcareService instance) {
+Map<String, dynamic> _$$HealthcareServiceImplToJson(
+    _$HealthcareServiceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -484,9 +486,9 @@ Map<String, dynamic> _$$_HealthcareServiceToJson(
   return val;
 }
 
-_$_HealthcareServiceEligibility _$$_HealthcareServiceEligibilityFromJson(
+_$HealthcareServiceEligibilityImpl _$$HealthcareServiceEligibilityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_HealthcareServiceEligibility(
+    _$HealthcareServiceEligibilityImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -504,8 +506,8 @@ _$_HealthcareServiceEligibility _$$_HealthcareServiceEligibilityFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceEligibilityToJson(
-    _$_HealthcareServiceEligibility instance) {
+Map<String, dynamic> _$$HealthcareServiceEligibilityImplToJson(
+    _$HealthcareServiceEligibilityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -525,44 +527,46 @@ Map<String, dynamic> _$$_HealthcareServiceEligibilityToJson(
   return val;
 }
 
-_$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
-        Map<String, dynamic> json) =>
-    _$_HealthcareServiceAvailableTime(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) =>
-              $enumDecode(_$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
-          .toList(),
-      daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
-      allDayElement: json['_allDay'] == null
-          ? null
-          : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
-      availableStartTime: json['availableStartTime'] == null
-          ? null
-          : Time.fromJson(json['availableStartTime']),
-      availableStartTimeElement: json['_availableStartTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_availableStartTime'] as Map<String, dynamic>),
-      availableEndTime: json['availableEndTime'] == null
-          ? null
-          : Time.fromJson(json['availableEndTime']),
-      availableEndTimeElement: json['_availableEndTime'] == null
-          ? null
-          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
-    );
+_$HealthcareServiceAvailableTimeImpl
+    _$$HealthcareServiceAvailableTimeImplFromJson(Map<String, dynamic> json) =>
+        _$HealthcareServiceAvailableTimeImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(
+                  _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
+              .toList(),
+          daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          allDay:
+              json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
+          allDayElement: json['_allDay'] == null
+              ? null
+              : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
+          availableStartTime: json['availableStartTime'] == null
+              ? null
+              : Time.fromJson(json['availableStartTime']),
+          availableStartTimeElement: json['_availableStartTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableStartTime'] as Map<String, dynamic>),
+          availableEndTime: json['availableEndTime'] == null
+              ? null
+              : Time.fromJson(json['availableEndTime']),
+          availableEndTimeElement: json['_availableEndTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableEndTime'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_HealthcareServiceAvailableTimeToJson(
-    _$_HealthcareServiceAvailableTime instance) {
+Map<String, dynamic> _$$HealthcareServiceAvailableTimeImplToJson(
+    _$HealthcareServiceAvailableTimeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -604,27 +608,27 @@ const _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap = {
   HealthcareServiceAvailableTimeDaysOfWeek.unknown: 'unknown',
 };
 
-_$_HealthcareServiceNotAvailable _$$_HealthcareServiceNotAvailableFromJson(
-        Map<String, dynamic> json) =>
-    _$_HealthcareServiceNotAvailable(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      during: json['during'] == null
-          ? null
-          : Period.fromJson(json['during'] as Map<String, dynamic>),
-    );
+_$HealthcareServiceNotAvailableImpl
+    _$$HealthcareServiceNotAvailableImplFromJson(Map<String, dynamic> json) =>
+        _$HealthcareServiceNotAvailableImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          during: json['during'] == null
+              ? null
+              : Period.fromJson(json['during'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
-    _$_HealthcareServiceNotAvailable instance) {
+Map<String, dynamic> _$$HealthcareServiceNotAvailableImplToJson(
+    _$HealthcareServiceNotAvailableImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -644,7 +648,8 @@ Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
   return val;
 }
 
-_$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
+_$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
+    _$LocationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Location) ??
@@ -739,7 +744,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
           .toList(),
     );
 
-Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
+Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -805,8 +810,9 @@ const _$LocationModeEnumMap = {
   LocationMode.unknown: 'unknown',
 };
 
-_$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
-    _$_LocationPosition(
+_$LocationPositionImpl _$$LocationPositionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$LocationPositionImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -832,7 +838,8 @@ _$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_altitude'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
+Map<String, dynamic> _$$LocationPositionImplToJson(
+    _$LocationPositionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -855,8 +862,8 @@ Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
   return val;
 }
 
-_$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
-    _$_Organization(
+_$OrganizationImpl _$$OrganizationImplFromJson(Map<String, dynamic> json) =>
+    _$OrganizationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Organization) ??
@@ -924,7 +931,7 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
+Map<String, dynamic> _$$OrganizationImplToJson(_$OrganizationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -966,9 +973,9 @@ Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   return val;
 }
 
-_$_OrganizationContact _$$_OrganizationContactFromJson(
+_$OrganizationContactImpl _$$OrganizationContactImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OrganizationContact(
+    _$OrganizationContactImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -990,8 +997,8 @@ _$_OrganizationContact _$$_OrganizationContactFromJson(
           : Address.fromJson(json['address'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OrganizationContactToJson(
-    _$_OrganizationContact instance) {
+Map<String, dynamic> _$$OrganizationContactImplToJson(
+    _$OrganizationContactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1012,9 +1019,9 @@ Map<String, dynamic> _$$_OrganizationContactToJson(
   return val;
 }
 
-_$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
+_$OrganizationAffiliationImpl _$$OrganizationAffiliationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OrganizationAffiliation(
+    _$OrganizationAffiliationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.OrganizationAffiliation) ??
@@ -1086,8 +1093,8 @@ _$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrganizationAffiliationToJson(
-    _$_OrganizationAffiliation instance) {
+Map<String, dynamic> _$$OrganizationAffiliationImplToJson(
+    _$OrganizationAffiliationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };

@@ -6,7 +6,7 @@ part of 'structure.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
+_$MediaImpl _$$MediaImplFromJson(Map<String, dynamic> json) => _$MediaImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Media) ??
@@ -82,7 +82,7 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
       content: Attachment.fromJson(json['content'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MediaToJson(_$_Media instance) {
+Map<String, dynamic> _$$MediaImplToJson(_$MediaImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -232,7 +232,7 @@ const _$MediaTypeEnumMap = {
   MediaType.unknown: 'unknown',
 };
 
-_$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
+_$BinaryImpl _$$BinaryImplFromJson(Map<String, dynamic> json) => _$BinaryImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Binary) ??
@@ -275,7 +275,7 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList();
 
-Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
+Map<String, dynamic> _$$BinaryImplToJson(_$BinaryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -304,7 +304,7 @@ Map<String, dynamic> _$$_BinaryToJson(_$_Binary instance) {
   return val;
 }
 
-_$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
+_$BundleImpl _$$BundleImplFromJson(Map<String, dynamic> json) => _$BundleImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Bundle) ??
@@ -356,7 +356,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList();
 
-Map<String, dynamic> _$$_BundleToJson(_$_Bundle instance) {
+Map<String, dynamic> _$$BundleImplToJson(_$BundleImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -402,8 +402,8 @@ const _$BundleTypeEnumMap = {
   BundleType.unknown: 'unknown',
 };
 
-_$_BundleLink _$$_BundleLinkFromJson(Map<String, dynamic> json) =>
-    _$_BundleLink(
+_$BundleLinkImpl _$$BundleLinkImplFromJson(Map<String, dynamic> json) =>
+    _$BundleLinkImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -424,7 +424,7 @@ _$_BundleLink _$$_BundleLinkFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BundleLinkToJson(_$_BundleLink instance) {
+Map<String, dynamic> _$$BundleLinkImplToJson(_$BundleLinkImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -446,8 +446,8 @@ Map<String, dynamic> _$$_BundleLinkToJson(_$_BundleLink instance) {
   return val;
 }
 
-_$_BundleEntry _$$_BundleEntryFromJson(Map<String, dynamic> json) =>
-    _$_BundleEntry(
+_$BundleEntryImpl _$$BundleEntryImplFromJson(Map<String, dynamic> json) =>
+    _$BundleEntryImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -482,7 +482,7 @@ _$_BundleEntry _$$_BundleEntryFromJson(Map<String, dynamic> json) =>
               json['response'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BundleEntryToJson(_$_BundleEntry instance) {
+Map<String, dynamic> _$$BundleEntryImplToJson(_$BundleEntryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -507,8 +507,9 @@ Map<String, dynamic> _$$_BundleEntryToJson(_$_BundleEntry instance) {
   return val;
 }
 
-_$_BundleEntrySearch _$$_BundleEntrySearchFromJson(Map<String, dynamic> json) =>
-    _$_BundleEntrySearch(
+_$BundleEntrySearchImpl _$$BundleEntrySearchImplFromJson(
+        Map<String, dynamic> json) =>
+    _$BundleEntrySearchImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -530,8 +531,8 @@ _$_BundleEntrySearch _$$_BundleEntrySearchFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_score'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BundleEntrySearchToJson(
-    _$_BundleEntrySearch instance) {
+Map<String, dynamic> _$$BundleEntrySearchImplToJson(
+    _$BundleEntrySearchImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -560,9 +561,9 @@ const _$SearchModeEnumMap = {
   SearchMode.unknown: 'unknown',
 };
 
-_$_BundleEntryRequest _$$_BundleEntryRequestFromJson(
+_$BundleEntryRequestImpl _$$BundleEntryRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_BundleEntryRequest(
+    _$BundleEntryRequestImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -602,8 +603,8 @@ _$_BundleEntryRequest _$$_BundleEntryRequestFromJson(
           : Element.fromJson(json['_ifNoneExist'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BundleEntryRequestToJson(
-    _$_BundleEntryRequest instance) {
+Map<String, dynamic> _$$BundleEntryRequestImplToJson(
+    _$BundleEntryRequestImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -641,9 +642,9 @@ const _$RequestMethodEnumMap = {
   RequestMethod.unknown: 'unknown',
 };
 
-_$_BundleEntryResponse _$$_BundleEntryResponseFromJson(
+_$BundleEntryResponseImpl _$$BundleEntryResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_BundleEntryResponse(
+    _$BundleEntryResponseImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -675,8 +676,8 @@ _$_BundleEntryResponse _$$_BundleEntryResponseFromJson(
           : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BundleEntryResponseToJson(
-    _$_BundleEntryResponse instance) {
+Map<String, dynamic> _$$BundleEntryResponseImplToJson(
+    _$BundleEntryResponseImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -702,7 +703,7 @@ Map<String, dynamic> _$$_BundleEntryResponseToJson(
   return val;
 }
 
-_$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
+_$BasicImpl _$$BasicImplFromJson(Map<String, dynamic> json) => _$BasicImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Basic) ??
@@ -750,7 +751,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BasicToJson(_$_Basic instance) {
+Map<String, dynamic> _$$BasicImplToJson(_$BasicImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

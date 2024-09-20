@@ -6,7 +6,8 @@ part of 'support.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
+_$CoverageImpl _$$CoverageImplFromJson(Map<String, dynamic> json) =>
+    _$CoverageImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Coverage) ??
@@ -88,7 +89,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
+Map<String, dynamic> _$$CoverageImplToJson(_$CoverageImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -232,9 +233,9 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_EligibilityRequest _$$_EligibilityRequestFromJson(
+_$EligibilityRequestImpl _$$EligibilityRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EligibilityRequest(
+    _$EligibilityRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EligibilityRequest) ??
@@ -292,8 +293,8 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
           : Reference.fromJson(json['organization'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EligibilityRequestToJson(
-    _$_EligibilityRequest instance) {
+Map<String, dynamic> _$$EligibilityRequestImplToJson(
+    _$EligibilityRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -329,9 +330,9 @@ Map<String, dynamic> _$$_EligibilityRequestToJson(
   return val;
 }
 
-_$_EligibilityResponse _$$_EligibilityResponseFromJson(
+_$EligibilityResponseImpl _$$EligibilityResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EligibilityResponse(
+    _$EligibilityResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EligibilityResponse) ??
@@ -403,8 +404,8 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
               json['requestOrganization'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EligibilityResponseToJson(
-    _$_EligibilityResponse instance) {
+Map<String, dynamic> _$$EligibilityResponseImplToJson(
+    _$EligibilityResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -452,8 +453,9 @@ const _$EligibilityResponseOutcomeEnumMap = {
   EligibilityResponseOutcome.unknown: 'unknown',
 };
 
-_$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
-    _$_EnrollmentRequest(
+_$EnrollmentRequestImpl _$$EnrollmentRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EnrollmentRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EnrollmentRequest) ??
@@ -515,8 +517,8 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
           Coding.fromJson(json['relationship'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EnrollmentRequestToJson(
-    _$_EnrollmentRequest instance) {
+Map<String, dynamic> _$$EnrollmentRequestImplToJson(
+    _$EnrollmentRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -555,9 +557,9 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
   return val;
 }
 
-_$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
+_$EnrollmentResponseImpl _$$EnrollmentResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EnrollmentResponse(
+    _$EnrollmentResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EnrollmentResponse) ??
@@ -629,8 +631,8 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
               json['requestOrganization'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EnrollmentResponseToJson(
-    _$_EnrollmentResponse instance) {
+Map<String, dynamic> _$$EnrollmentResponseImplToJson(
+    _$EnrollmentResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

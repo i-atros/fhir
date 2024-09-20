@@ -12,7 +12,7 @@ part of 'content.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
   return _StructureDefinition.fromJson(json);
@@ -111,71 +111,55 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      StructureDefinitionStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<StructureDefinitionContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? requirements,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<Coding>? code,
       Id? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          StructureDefinitionKind kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      StructureDefinitionKind kind,
+      @JsonKey(name: '_kind') Element? kindElement,
       Code? constrainedType,
-      @JsonKey(name: 'abstract')
-          Boolean abstract_,
-      @JsonKey(name: '_abstract')
-          Element? abstractElement,
+      @JsonKey(name: 'abstract') Boolean abstract_,
+      @JsonKey(name: '_abstract') Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          StructureDefinitionContextType? contextType,
+      StructureDefinitionContextType? contextType,
       List<String>? context,
       FhirUri? base,
       StructureDefinitionSnapshot? snapshot,
@@ -697,80 +681,64 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
 }
 
 /// @nodoc
-abstract class _$$_StructureDefinitionCopyWith<$Res>
+abstract class _$$StructureDefinitionImplCopyWith<$Res>
     implements $StructureDefinitionCopyWith<$Res> {
-  factory _$$_StructureDefinitionCopyWith(_$_StructureDefinition value,
-          $Res Function(_$_StructureDefinition) then) =
-      __$$_StructureDefinitionCopyWithImpl<$Res>;
+  factory _$$StructureDefinitionImplCopyWith(_$StructureDefinitionImpl value,
+          $Res Function(_$StructureDefinitionImpl) then) =
+      __$$StructureDefinitionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      StructureDefinitionStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<StructureDefinitionContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? requirements,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<Coding>? code,
       Id? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          StructureDefinitionKind kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      StructureDefinitionKind kind,
+      @JsonKey(name: '_kind') Element? kindElement,
       Code? constrainedType,
-      @JsonKey(name: 'abstract')
-          Boolean abstract_,
-      @JsonKey(name: '_abstract')
-          Element? abstractElement,
+      @JsonKey(name: 'abstract') Boolean abstract_,
+      @JsonKey(name: '_abstract') Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          StructureDefinitionContextType? contextType,
+      StructureDefinitionContextType? contextType,
       List<String>? context,
       FhirUri? base,
       StructureDefinitionSnapshot? snapshot,
@@ -817,11 +785,11 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StructureDefinitionCopyWithImpl<$Res>
-    extends _$StructureDefinitionCopyWithImpl<$Res, _$_StructureDefinition>
-    implements _$$_StructureDefinitionCopyWith<$Res> {
-  __$$_StructureDefinitionCopyWithImpl(_$_StructureDefinition _value,
-      $Res Function(_$_StructureDefinition) _then)
+class __$$StructureDefinitionImplCopyWithImpl<$Res>
+    extends _$StructureDefinitionCopyWithImpl<$Res, _$StructureDefinitionImpl>
+    implements _$$StructureDefinitionImplCopyWith<$Res> {
+  __$$StructureDefinitionImplCopyWithImpl(_$StructureDefinitionImpl _value,
+      $Res Function(_$StructureDefinitionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -877,7 +845,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
     Object? snapshot = freezed,
     Object? differential = freezed,
   }) {
-    return _then(_$_StructureDefinition(
+    return _then(_$StructureDefinitionImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1080,82 +1048,66 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StructureDefinition extends _StructureDefinition {
-  _$_StructureDefinition(
+class _$StructureDefinitionImpl extends _StructureDefinition {
+  _$StructureDefinitionImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          this.resourceType = Dstu2ResourceType.StructureDefinition,
+      this.resourceType = Dstu2ResourceType.StructureDefinition,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       required this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.display,
-      @JsonKey(name: '_display')
-          this.displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_display') this.displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.requirements,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.code,
       this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       this.mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          required this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
+      required this.kind,
+      @JsonKey(name: '_kind') this.kindElement,
       this.constrainedType,
-      @JsonKey(name: 'abstract')
-          required this.abstract_,
-      @JsonKey(name: '_abstract')
-          this.abstractElement,
+      @JsonKey(name: 'abstract') required this.abstract_,
+      @JsonKey(name: '_abstract') this.abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          this.contextType,
+      this.contextType,
       this.context,
       this.base,
       this.snapshot,
       this.differential})
       : super._();
 
-  factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
-      _$$_StructureDefinitionFromJson(json);
+  factory _$StructureDefinitionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StructureDefinitionImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -1283,10 +1235,10 @@ class _$_StructureDefinition extends _StructureDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StructureDefinition &&
+            other is _$StructureDefinitionImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -1429,13 +1381,13 @@ class _$_StructureDefinition extends _StructureDefinition {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StructureDefinitionCopyWith<_$_StructureDefinition> get copyWith =>
-      __$$_StructureDefinitionCopyWithImpl<_$_StructureDefinition>(
+  _$$StructureDefinitionImplCopyWith<_$StructureDefinitionImpl> get copyWith =>
+      __$$StructureDefinitionImplCopyWithImpl<_$StructureDefinitionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionToJson(
+    return _$$StructureDefinitionImplToJson(
       this,
     );
   }
@@ -1444,79 +1396,64 @@ class _$_StructureDefinition extends _StructureDefinition {
 abstract class _StructureDefinition extends StructureDefinition {
   factory _StructureDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          final Dstu2ResourceType resourceType,
+      final Dstu2ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       required final String name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? display,
-      @JsonKey(name: '_display')
-          final Element? displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          required final StructureDefinitionStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_display') final Element? displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      required final StructureDefinitionStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<StructureDefinitionContact>? contact,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<CodeableConcept>? useContext,
       final String? requirements,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final List<Coding>? code,
       final Id? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
       final List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          required final StructureDefinitionKind kind,
-      @JsonKey(name: '_kind')
-          final Element? kindElement,
+      required final StructureDefinitionKind kind,
+      @JsonKey(name: '_kind') final Element? kindElement,
       final Code? constrainedType,
-      @JsonKey(name: 'abstract')
-          required final Boolean abstract_,
-      @JsonKey(name: '_abstract')
-          final Element? abstractElement,
+      @JsonKey(name: 'abstract') required final Boolean abstract_,
+      @JsonKey(name: '_abstract') final Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          final StructureDefinitionContextType? contextType,
+      final StructureDefinitionContextType? contextType,
       final List<String>? context,
       final FhirUri? base,
       final StructureDefinitionSnapshot? snapshot,
-      final StructureDefinitionDifferential? differential}) = _$_StructureDefinition;
+      final StructureDefinitionDifferential?
+          differential}) = _$StructureDefinitionImpl;
   _StructureDefinition._() : super._();
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinition.fromJson;
+      _$StructureDefinitionImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -1639,7 +1576,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   StructureDefinitionDifferential? get differential;
   @override
   @JsonKey(ignore: true)
-  _$$_StructureDefinitionCopyWith<_$_StructureDefinition> get copyWith =>
+  _$$StructureDefinitionImplCopyWith<_$StructureDefinitionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1725,12 +1662,12 @@ class _$StructureDefinitionContactCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_StructureDefinitionContactCopyWith<$Res>
+abstract class _$$StructureDefinitionContactImplCopyWith<$Res>
     implements $StructureDefinitionContactCopyWith<$Res> {
-  factory _$$_StructureDefinitionContactCopyWith(
-          _$_StructureDefinitionContact value,
-          $Res Function(_$_StructureDefinitionContact) then) =
-      __$$_StructureDefinitionContactCopyWithImpl<$Res>;
+  factory _$$StructureDefinitionContactImplCopyWith(
+          _$StructureDefinitionContactImpl value,
+          $Res Function(_$StructureDefinitionContactImpl) then) =
+      __$$StructureDefinitionContactImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1742,13 +1679,13 @@ abstract class _$$_StructureDefinitionContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StructureDefinitionContactCopyWithImpl<$Res>
+class __$$StructureDefinitionContactImplCopyWithImpl<$Res>
     extends _$StructureDefinitionContactCopyWithImpl<$Res,
-        _$_StructureDefinitionContact>
-    implements _$$_StructureDefinitionContactCopyWith<$Res> {
-  __$$_StructureDefinitionContactCopyWithImpl(
-      _$_StructureDefinitionContact _value,
-      $Res Function(_$_StructureDefinitionContact) _then)
+        _$StructureDefinitionContactImpl>
+    implements _$$StructureDefinitionContactImplCopyWith<$Res> {
+  __$$StructureDefinitionContactImplCopyWithImpl(
+      _$StructureDefinitionContactImpl _value,
+      $Res Function(_$StructureDefinitionContactImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1760,7 +1697,7 @@ class __$$_StructureDefinitionContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_$_StructureDefinitionContact(
+    return _then(_$StructureDefinitionContactImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1787,8 +1724,8 @@ class __$$_StructureDefinitionContactCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StructureDefinitionContact extends _StructureDefinitionContact {
-  _$_StructureDefinitionContact(
+class _$StructureDefinitionContactImpl extends _StructureDefinitionContact {
+  _$StructureDefinitionContactImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1796,8 +1733,9 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
       this.telecom})
       : super._();
 
-  factory _$_StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
-      _$$_StructureDefinitionContactFromJson(json);
+  factory _$StructureDefinitionContactImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$StructureDefinitionContactImplFromJson(json);
 
   @override
   final Id? id;
@@ -1817,10 +1755,10 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StructureDefinitionContact &&
+            other is _$StructureDefinitionContactImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1843,13 +1781,13 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StructureDefinitionContactCopyWith<_$_StructureDefinitionContact>
-      get copyWith => __$$_StructureDefinitionContactCopyWithImpl<
-          _$_StructureDefinitionContact>(this, _$identity);
+  _$$StructureDefinitionContactImplCopyWith<_$StructureDefinitionContactImpl>
+      get copyWith => __$$StructureDefinitionContactImplCopyWithImpl<
+          _$StructureDefinitionContactImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionContactToJson(
+    return _$$StructureDefinitionContactImplToJson(
       this,
     );
   }
@@ -1861,11 +1799,11 @@ abstract class _StructureDefinitionContact extends StructureDefinitionContact {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
-      final List<ContactPoint>? telecom}) = _$_StructureDefinitionContact;
+      final List<ContactPoint>? telecom}) = _$StructureDefinitionContactImpl;
   _StructureDefinitionContact._() : super._();
 
   factory _StructureDefinitionContact.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionContact.fromJson;
+      _$StructureDefinitionContactImpl.fromJson;
 
   @override
   Id? get id;
@@ -1880,7 +1818,7 @@ abstract class _StructureDefinitionContact extends StructureDefinitionContact {
   List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$$_StructureDefinitionContactCopyWith<_$_StructureDefinitionContact>
+  _$$StructureDefinitionContactImplCopyWith<_$StructureDefinitionContactImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2073,12 +2011,12 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_StructureDefinitionMappingCopyWith<$Res>
+abstract class _$$StructureDefinitionMappingImplCopyWith<$Res>
     implements $StructureDefinitionMappingCopyWith<$Res> {
-  factory _$$_StructureDefinitionMappingCopyWith(
-          _$_StructureDefinitionMapping value,
-          $Res Function(_$_StructureDefinitionMapping) then) =
-      __$$_StructureDefinitionMappingCopyWithImpl<$Res>;
+  factory _$$StructureDefinitionMappingImplCopyWith(
+          _$StructureDefinitionMappingImpl value,
+          $Res Function(_$StructureDefinitionMappingImpl) then) =
+      __$$StructureDefinitionMappingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2106,13 +2044,13 @@ abstract class _$$_StructureDefinitionMappingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
+class __$$StructureDefinitionMappingImplCopyWithImpl<$Res>
     extends _$StructureDefinitionMappingCopyWithImpl<$Res,
-        _$_StructureDefinitionMapping>
-    implements _$$_StructureDefinitionMappingCopyWith<$Res> {
-  __$$_StructureDefinitionMappingCopyWithImpl(
-      _$_StructureDefinitionMapping _value,
-      $Res Function(_$_StructureDefinitionMapping) _then)
+        _$StructureDefinitionMappingImpl>
+    implements _$$StructureDefinitionMappingImplCopyWith<$Res> {
+  __$$StructureDefinitionMappingImplCopyWithImpl(
+      _$StructureDefinitionMappingImpl _value,
+      $Res Function(_$StructureDefinitionMappingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2131,7 +2069,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
     Object? comments = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_$_StructureDefinitionMapping(
+    return _then(_$StructureDefinitionMappingImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2186,8 +2124,8 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
-  _$_StructureDefinitionMapping(
+class _$StructureDefinitionMappingImpl extends _StructureDefinitionMapping {
+  _$StructureDefinitionMappingImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2202,8 +2140,9 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       @JsonKey(name: '_comments') this.commentElement})
       : super._();
 
-  factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$$_StructureDefinitionMappingFromJson(json);
+  factory _$StructureDefinitionMappingImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$StructureDefinitionMappingImplFromJson(json);
 
   @override
   final Id? id;
@@ -2242,10 +2181,10 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StructureDefinitionMapping &&
+            other is _$StructureDefinitionMappingImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2289,13 +2228,13 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StructureDefinitionMappingCopyWith<_$_StructureDefinitionMapping>
-      get copyWith => __$$_StructureDefinitionMappingCopyWithImpl<
-          _$_StructureDefinitionMapping>(this, _$identity);
+  _$$StructureDefinitionMappingImplCopyWith<_$StructureDefinitionMappingImpl>
+      get copyWith => __$$StructureDefinitionMappingImplCopyWithImpl<
+          _$StructureDefinitionMappingImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionMappingToJson(
+    return _$$StructureDefinitionMappingImplToJson(
       this,
     );
   }
@@ -2315,11 +2254,11 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           @JsonKey(name: '_name') final Element? nameElement,
           final String? comments,
           @JsonKey(name: '_comments') final Element? commentElement}) =
-      _$_StructureDefinitionMapping;
+      _$StructureDefinitionMappingImpl;
   _StructureDefinitionMapping._() : super._();
 
   factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionMapping.fromJson;
+      _$StructureDefinitionMappingImpl.fromJson;
 
   @override
   Id? get id;
@@ -2353,7 +2292,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   Element? get commentElement;
   @override
   @JsonKey(ignore: true)
-  _$$_StructureDefinitionMappingCopyWith<_$_StructureDefinitionMapping>
+  _$$StructureDefinitionMappingImplCopyWith<_$StructureDefinitionMappingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2433,12 +2372,12 @@ class _$StructureDefinitionSnapshotCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_StructureDefinitionSnapshotCopyWith<$Res>
+abstract class _$$StructureDefinitionSnapshotImplCopyWith<$Res>
     implements $StructureDefinitionSnapshotCopyWith<$Res> {
-  factory _$$_StructureDefinitionSnapshotCopyWith(
-          _$_StructureDefinitionSnapshot value,
-          $Res Function(_$_StructureDefinitionSnapshot) then) =
-      __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>;
+  factory _$$StructureDefinitionSnapshotImplCopyWith(
+          _$StructureDefinitionSnapshotImpl value,
+          $Res Function(_$StructureDefinitionSnapshotImpl) then) =
+      __$$StructureDefinitionSnapshotImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2449,13 +2388,13 @@ abstract class _$$_StructureDefinitionSnapshotCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>
+class __$$StructureDefinitionSnapshotImplCopyWithImpl<$Res>
     extends _$StructureDefinitionSnapshotCopyWithImpl<$Res,
-        _$_StructureDefinitionSnapshot>
-    implements _$$_StructureDefinitionSnapshotCopyWith<$Res> {
-  __$$_StructureDefinitionSnapshotCopyWithImpl(
-      _$_StructureDefinitionSnapshot _value,
-      $Res Function(_$_StructureDefinitionSnapshot) _then)
+        _$StructureDefinitionSnapshotImpl>
+    implements _$$StructureDefinitionSnapshotImplCopyWith<$Res> {
+  __$$StructureDefinitionSnapshotImplCopyWithImpl(
+      _$StructureDefinitionSnapshotImpl _value,
+      $Res Function(_$StructureDefinitionSnapshotImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2466,7 +2405,7 @@ class __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? element = null,
   }) {
-    return _then(_$_StructureDefinitionSnapshot(
+    return _then(_$StructureDefinitionSnapshotImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2489,16 +2428,17 @@ class __$$_StructureDefinitionSnapshotCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
-  _$_StructureDefinitionSnapshot(
+class _$StructureDefinitionSnapshotImpl extends _StructureDefinitionSnapshot {
+  _$StructureDefinitionSnapshotImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.element})
       : super._();
 
-  factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
-      _$$_StructureDefinitionSnapshotFromJson(json);
+  factory _$StructureDefinitionSnapshotImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$StructureDefinitionSnapshotImplFromJson(json);
 
   @override
   final Id? id;
@@ -2516,10 +2456,10 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StructureDefinitionSnapshot &&
+            other is _$StructureDefinitionSnapshotImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2540,13 +2480,13 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StructureDefinitionSnapshotCopyWith<_$_StructureDefinitionSnapshot>
-      get copyWith => __$$_StructureDefinitionSnapshotCopyWithImpl<
-          _$_StructureDefinitionSnapshot>(this, _$identity);
+  _$$StructureDefinitionSnapshotImplCopyWith<_$StructureDefinitionSnapshotImpl>
+      get copyWith => __$$StructureDefinitionSnapshotImplCopyWithImpl<
+          _$StructureDefinitionSnapshotImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionSnapshotToJson(
+    return _$$StructureDefinitionSnapshotImplToJson(
       this,
     );
   }
@@ -2559,11 +2499,11 @@ abstract class _StructureDefinitionSnapshot
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final List<ElementDefinition> element}) =
-      _$_StructureDefinitionSnapshot;
+      _$StructureDefinitionSnapshotImpl;
   _StructureDefinitionSnapshot._() : super._();
 
   factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionSnapshot.fromJson;
+      _$StructureDefinitionSnapshotImpl.fromJson;
 
   @override
   Id? get id;
@@ -2576,7 +2516,7 @@ abstract class _StructureDefinitionSnapshot
   List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
-  _$$_StructureDefinitionSnapshotCopyWith<_$_StructureDefinitionSnapshot>
+  _$$StructureDefinitionSnapshotImplCopyWith<_$StructureDefinitionSnapshotImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2656,12 +2596,12 @@ class _$StructureDefinitionDifferentialCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_StructureDefinitionDifferentialCopyWith<$Res>
+abstract class _$$StructureDefinitionDifferentialImplCopyWith<$Res>
     implements $StructureDefinitionDifferentialCopyWith<$Res> {
-  factory _$$_StructureDefinitionDifferentialCopyWith(
-          _$_StructureDefinitionDifferential value,
-          $Res Function(_$_StructureDefinitionDifferential) then) =
-      __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>;
+  factory _$$StructureDefinitionDifferentialImplCopyWith(
+          _$StructureDefinitionDifferentialImpl value,
+          $Res Function(_$StructureDefinitionDifferentialImpl) then) =
+      __$$StructureDefinitionDifferentialImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2672,13 +2612,13 @@ abstract class _$$_StructureDefinitionDifferentialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>
+class __$$StructureDefinitionDifferentialImplCopyWithImpl<$Res>
     extends _$StructureDefinitionDifferentialCopyWithImpl<$Res,
-        _$_StructureDefinitionDifferential>
-    implements _$$_StructureDefinitionDifferentialCopyWith<$Res> {
-  __$$_StructureDefinitionDifferentialCopyWithImpl(
-      _$_StructureDefinitionDifferential _value,
-      $Res Function(_$_StructureDefinitionDifferential) _then)
+        _$StructureDefinitionDifferentialImpl>
+    implements _$$StructureDefinitionDifferentialImplCopyWith<$Res> {
+  __$$StructureDefinitionDifferentialImplCopyWithImpl(
+      _$StructureDefinitionDifferentialImpl _value,
+      $Res Function(_$StructureDefinitionDifferentialImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2689,7 +2629,7 @@ class __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? element = null,
   }) {
-    return _then(_$_StructureDefinitionDifferential(
+    return _then(_$StructureDefinitionDifferentialImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2712,18 +2652,18 @@ class __$$_StructureDefinitionDifferentialCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StructureDefinitionDifferential
+class _$StructureDefinitionDifferentialImpl
     extends _StructureDefinitionDifferential {
-  _$_StructureDefinitionDifferential(
+  _$StructureDefinitionDifferentialImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.element})
       : super._();
 
-  factory _$_StructureDefinitionDifferential.fromJson(
+  factory _$StructureDefinitionDifferentialImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_StructureDefinitionDifferentialFromJson(json);
+      _$$StructureDefinitionDifferentialImplFromJson(json);
 
   @override
   final Id? id;
@@ -2741,10 +2681,10 @@ class _$_StructureDefinitionDifferential
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StructureDefinitionDifferential &&
+            other is _$StructureDefinitionDifferentialImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2765,14 +2705,14 @@ class _$_StructureDefinitionDifferential
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StructureDefinitionDifferentialCopyWith<
-          _$_StructureDefinitionDifferential>
-      get copyWith => __$$_StructureDefinitionDifferentialCopyWithImpl<
-          _$_StructureDefinitionDifferential>(this, _$identity);
+  _$$StructureDefinitionDifferentialImplCopyWith<
+          _$StructureDefinitionDifferentialImpl>
+      get copyWith => __$$StructureDefinitionDifferentialImplCopyWithImpl<
+          _$StructureDefinitionDifferentialImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StructureDefinitionDifferentialToJson(
+    return _$$StructureDefinitionDifferentialImplToJson(
       this,
     );
   }
@@ -2785,11 +2725,11 @@ abstract class _StructureDefinitionDifferential
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final List<ElementDefinition> element}) =
-      _$_StructureDefinitionDifferential;
+      _$StructureDefinitionDifferentialImpl;
   _StructureDefinitionDifferential._() : super._();
 
   factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionDifferential.fromJson;
+      _$StructureDefinitionDifferentialImpl.fromJson;
 
   @override
   Id? get id;
@@ -2802,8 +2742,8 @@ abstract class _StructureDefinitionDifferential
   List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
-  _$$_StructureDefinitionDifferentialCopyWith<
-          _$_StructureDefinitionDifferential>
+  _$$StructureDefinitionDifferentialImplCopyWith<
+          _$StructureDefinitionDifferentialImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2856,22 +2796,21 @@ abstract class $DataElementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
       List<Identifier>? identifier,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      DataElementStatus status,
       Boolean? experimental,
       String? publisher,
       List<DataElementContact>? contact,
@@ -2879,7 +2818,7 @@ abstract class $DataElementCopyWith<$Res> {
       List<CodeableConcept>? useContext,
       String? copyright,
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          DataElementStringency? stringency,
+      DataElementStringency? stringency,
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
@@ -3046,31 +2985,30 @@ class _$DataElementCopyWithImpl<$Res, $Val extends DataElement>
 }
 
 /// @nodoc
-abstract class _$$_DataElementCopyWith<$Res>
+abstract class _$$DataElementImplCopyWith<$Res>
     implements $DataElementCopyWith<$Res> {
-  factory _$$_DataElementCopyWith(
-          _$_DataElement value, $Res Function(_$_DataElement) then) =
-      __$$_DataElementCopyWithImpl<$Res>;
+  factory _$$DataElementImplCopyWith(
+          _$DataElementImpl value, $Res Function(_$DataElementImpl) then) =
+      __$$DataElementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
       List<Identifier>? identifier,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      DataElementStatus status,
       Boolean? experimental,
       String? publisher,
       List<DataElementContact>? contact,
@@ -3078,7 +3016,7 @@ abstract class _$$_DataElementCopyWith<$Res>
       List<CodeableConcept>? useContext,
       String? copyright,
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          DataElementStringency? stringency,
+      DataElementStringency? stringency,
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
@@ -3089,11 +3027,11 @@ abstract class _$$_DataElementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DataElementCopyWithImpl<$Res>
-    extends _$DataElementCopyWithImpl<$Res, _$_DataElement>
-    implements _$$_DataElementCopyWith<$Res> {
-  __$$_DataElementCopyWithImpl(
-      _$_DataElement _value, $Res Function(_$_DataElement) _then)
+class __$$DataElementImplCopyWithImpl<$Res>
+    extends _$DataElementCopyWithImpl<$Res, _$DataElementImpl>
+    implements _$$DataElementImplCopyWith<$Res> {
+  __$$DataElementImplCopyWithImpl(
+      _$DataElementImpl _value, $Res Function(_$DataElementImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3123,7 +3061,7 @@ class __$$_DataElementCopyWithImpl<$Res>
     Object? mapping = freezed,
     Object? element = null,
   }) {
-    return _then(_$_DataElement(
+    return _then(_$DataElementImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3222,39 +3160,37 @@ class __$$_DataElementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DataElement extends _DataElement {
-  _$_DataElement(
+class _$DataElementImpl extends _DataElement {
+  _$DataElementImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          this.resourceType = Dstu2ResourceType.DataElement,
+      this.resourceType = Dstu2ResourceType.DataElement,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
       this.identifier,
       this.version,
       this.name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          required this.status,
+      required this.status,
       this.experimental,
       this.publisher,
       this.contact,
       this.date,
       this.useContext,
       this.copyright,
-      @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          this.stringency,
+      @JsonKey(unknownEnumValue: DataElementStringency.unknown) this.stringency,
       this.mapping,
       required this.element})
       : super._();
 
-  factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
-      _$$_DataElementFromJson(json);
+  factory _$DataElementImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DataElementImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -3313,10 +3249,10 @@ class _$_DataElement extends _DataElement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DataElement &&
+            other is _$DataElementImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -3385,12 +3321,12 @@ class _$_DataElement extends _DataElement {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DataElementCopyWith<_$_DataElement> get copyWith =>
-      __$$_DataElementCopyWithImpl<_$_DataElement>(this, _$identity);
+  _$$DataElementImplCopyWith<_$DataElementImpl> get copyWith =>
+      __$$DataElementImplCopyWithImpl<_$DataElementImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataElementToJson(
+    return _$$DataElementImplToJson(
       this,
     );
   }
@@ -3399,22 +3335,21 @@ class _$_DataElement extends _DataElement {
 abstract class _DataElement extends DataElement {
   factory _DataElement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          final Dstu2ResourceType resourceType,
+      final Dstu2ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       final Code? language,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
       final List<Identifier>? identifier,
       final String? version,
       final String? name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          required final DataElementStatus status,
+      required final DataElementStatus status,
       final Boolean? experimental,
       final String? publisher,
       final List<DataElementContact>? contact,
@@ -3422,13 +3357,13 @@ abstract class _DataElement extends DataElement {
       final List<CodeableConcept>? useContext,
       final String? copyright,
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          final DataElementStringency? stringency,
+      final DataElementStringency? stringency,
       final List<DataElementMapping>? mapping,
-      required final List<ElementDefinition> element}) = _$_DataElement;
+      required final List<ElementDefinition> element}) = _$DataElementImpl;
   _DataElement._() : super._();
 
   factory _DataElement.fromJson(Map<String, dynamic> json) =
-      _$_DataElement.fromJson;
+      _$DataElementImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -3482,7 +3417,7 @@ abstract class _DataElement extends DataElement {
   List<ElementDefinition> get element;
   @override
   @JsonKey(ignore: true)
-  _$$_DataElementCopyWith<_$_DataElement> get copyWith =>
+  _$$DataElementImplCopyWith<_$DataElementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3565,11 +3500,11 @@ class _$DataElementContactCopyWithImpl<$Res, $Val extends DataElementContact>
 }
 
 /// @nodoc
-abstract class _$$_DataElementContactCopyWith<$Res>
+abstract class _$$DataElementContactImplCopyWith<$Res>
     implements $DataElementContactCopyWith<$Res> {
-  factory _$$_DataElementContactCopyWith(_$_DataElementContact value,
-          $Res Function(_$_DataElementContact) then) =
-      __$$_DataElementContactCopyWithImpl<$Res>;
+  factory _$$DataElementContactImplCopyWith(_$DataElementContactImpl value,
+          $Res Function(_$DataElementContactImpl) then) =
+      __$$DataElementContactImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3581,11 +3516,11 @@ abstract class _$$_DataElementContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DataElementContactCopyWithImpl<$Res>
-    extends _$DataElementContactCopyWithImpl<$Res, _$_DataElementContact>
-    implements _$$_DataElementContactCopyWith<$Res> {
-  __$$_DataElementContactCopyWithImpl(
-      _$_DataElementContact _value, $Res Function(_$_DataElementContact) _then)
+class __$$DataElementContactImplCopyWithImpl<$Res>
+    extends _$DataElementContactCopyWithImpl<$Res, _$DataElementContactImpl>
+    implements _$$DataElementContactImplCopyWith<$Res> {
+  __$$DataElementContactImplCopyWithImpl(_$DataElementContactImpl _value,
+      $Res Function(_$DataElementContactImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3597,7 +3532,7 @@ class __$$_DataElementContactCopyWithImpl<$Res>
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
-    return _then(_$_DataElementContact(
+    return _then(_$DataElementContactImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3624,8 +3559,8 @@ class __$$_DataElementContactCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DataElementContact extends _DataElementContact {
-  _$_DataElementContact(
+class _$DataElementContactImpl extends _DataElementContact {
+  _$DataElementContactImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3633,8 +3568,8 @@ class _$_DataElementContact extends _DataElementContact {
       this.telecom})
       : super._();
 
-  factory _$_DataElementContact.fromJson(Map<String, dynamic> json) =>
-      _$$_DataElementContactFromJson(json);
+  factory _$DataElementContactImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DataElementContactImplFromJson(json);
 
   @override
   final Id? id;
@@ -3654,10 +3589,10 @@ class _$_DataElementContact extends _DataElementContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DataElementContact &&
+            other is _$DataElementContactImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3680,13 +3615,13 @@ class _$_DataElementContact extends _DataElementContact {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DataElementContactCopyWith<_$_DataElementContact> get copyWith =>
-      __$$_DataElementContactCopyWithImpl<_$_DataElementContact>(
+  _$$DataElementContactImplCopyWith<_$DataElementContactImpl> get copyWith =>
+      __$$DataElementContactImplCopyWithImpl<_$DataElementContactImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataElementContactToJson(
+    return _$$DataElementContactImplToJson(
       this,
     );
   }
@@ -3698,11 +3633,11 @@ abstract class _DataElementContact extends DataElementContact {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
-      final List<ContactPoint>? telecom}) = _$_DataElementContact;
+      final List<ContactPoint>? telecom}) = _$DataElementContactImpl;
   _DataElementContact._() : super._();
 
   factory _DataElementContact.fromJson(Map<String, dynamic> json) =
-      _$_DataElementContact.fromJson;
+      _$DataElementContactImpl.fromJson;
 
   @override
   Id? get id;
@@ -3717,7 +3652,7 @@ abstract class _DataElementContact extends DataElementContact {
   List<ContactPoint>? get telecom;
   @override
   @JsonKey(ignore: true)
-  _$$_DataElementContactCopyWith<_$_DataElementContact> get copyWith =>
+  _$$DataElementContactImplCopyWith<_$DataElementContactImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3907,11 +3842,11 @@ class _$DataElementMappingCopyWithImpl<$Res, $Val extends DataElementMapping>
 }
 
 /// @nodoc
-abstract class _$$_DataElementMappingCopyWith<$Res>
+abstract class _$$DataElementMappingImplCopyWith<$Res>
     implements $DataElementMappingCopyWith<$Res> {
-  factory _$$_DataElementMappingCopyWith(_$_DataElementMapping value,
-          $Res Function(_$_DataElementMapping) then) =
-      __$$_DataElementMappingCopyWithImpl<$Res>;
+  factory _$$DataElementMappingImplCopyWith(_$DataElementMappingImpl value,
+          $Res Function(_$DataElementMappingImpl) then) =
+      __$$DataElementMappingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3939,11 +3874,11 @@ abstract class _$$_DataElementMappingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DataElementMappingCopyWithImpl<$Res>
-    extends _$DataElementMappingCopyWithImpl<$Res, _$_DataElementMapping>
-    implements _$$_DataElementMappingCopyWith<$Res> {
-  __$$_DataElementMappingCopyWithImpl(
-      _$_DataElementMapping _value, $Res Function(_$_DataElementMapping) _then)
+class __$$DataElementMappingImplCopyWithImpl<$Res>
+    extends _$DataElementMappingCopyWithImpl<$Res, _$DataElementMappingImpl>
+    implements _$$DataElementMappingImplCopyWith<$Res> {
+  __$$DataElementMappingImplCopyWithImpl(_$DataElementMappingImpl _value,
+      $Res Function(_$DataElementMappingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3962,7 +3897,7 @@ class __$$_DataElementMappingCopyWithImpl<$Res>
     Object? comments = freezed,
     Object? commentElement = freezed,
   }) {
-    return _then(_$_DataElementMapping(
+    return _then(_$DataElementMappingImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4017,8 +3952,8 @@ class __$$_DataElementMappingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DataElementMapping extends _DataElementMapping {
-  _$_DataElementMapping(
+class _$DataElementMappingImpl extends _DataElementMapping {
+  _$DataElementMappingImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4033,8 +3968,8 @@ class _$_DataElementMapping extends _DataElementMapping {
       @JsonKey(name: '_comment') this.commentElement})
       : super._();
 
-  factory _$_DataElementMapping.fromJson(Map<String, dynamic> json) =>
-      _$$_DataElementMappingFromJson(json);
+  factory _$DataElementMappingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DataElementMappingImplFromJson(json);
 
   @override
   final Id? id;
@@ -4073,10 +4008,10 @@ class _$_DataElementMapping extends _DataElementMapping {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DataElementMapping &&
+            other is _$DataElementMappingImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4120,13 +4055,13 @@ class _$_DataElementMapping extends _DataElementMapping {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DataElementMappingCopyWith<_$_DataElementMapping> get copyWith =>
-      __$$_DataElementMappingCopyWithImpl<_$_DataElementMapping>(
+  _$$DataElementMappingImplCopyWith<_$DataElementMappingImpl> get copyWith =>
+      __$$DataElementMappingImplCopyWithImpl<_$DataElementMappingImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DataElementMappingToJson(
+    return _$$DataElementMappingImplToJson(
       this,
     );
   }
@@ -4146,11 +4081,11 @@ abstract class _DataElementMapping extends DataElementMapping {
           @JsonKey(name: '_name') final Element? nameElement,
           final String? comments,
           @JsonKey(name: '_comment') final Element? commentElement}) =
-      _$_DataElementMapping;
+      _$DataElementMappingImpl;
   _DataElementMapping._() : super._();
 
   factory _DataElementMapping.fromJson(Map<String, dynamic> json) =
-      _$_DataElementMapping.fromJson;
+      _$DataElementMappingImpl.fromJson;
 
   @override
   Id? get id;
@@ -4184,6 +4119,6 @@ abstract class _DataElementMapping extends DataElementMapping {
   Element? get commentElement;
   @override
   @JsonKey(ignore: true)
-  _$$_DataElementMappingCopyWith<_$_DataElementMapping> get copyWith =>
+  _$$DataElementMappingImplCopyWith<_$DataElementMappingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,7 +6,7 @@ part of 'entities.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
+_$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Device) ??
@@ -103,7 +103,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
+Map<String, dynamic> _$$DeviceImplToJson(_$DeviceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -283,7 +283,8 @@ const _$DeviceStatusEnumMap = {
   DeviceStatus.unknown: 'unknown',
 };
 
-_$_DeviceUdi _$$_DeviceUdiFromJson(Map<String, dynamic> json) => _$_DeviceUdi(
+_$DeviceUdiImpl _$$DeviceUdiImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceUdiImpl(
       deviceIdentifier: json['deviceIdentifier'] as String?,
       deviceIdentifierElement: json['_deviceIdentifier'] == null
           ? null
@@ -315,7 +316,7 @@ _$_DeviceUdi _$$_DeviceUdiFromJson(Map<String, dynamic> json) => _$_DeviceUdi(
           : Element.fromJson(json['_entryType'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceUdiToJson(_$_DeviceUdi instance) {
+Map<String, dynamic> _$$DeviceUdiImplToJson(_$DeviceUdiImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -350,8 +351,9 @@ const _$DeviceUdiEntryTypeEnumMap = {
   DeviceUdiEntryType.unknown: 'unknown',
 };
 
-_$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
-    _$_DeviceComponent(
+_$DeviceComponentImpl _$$DeviceComponentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeviceComponentImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DeviceComponent) ??
@@ -421,7 +423,8 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
               json['languageCode'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceComponentToJson(_$_DeviceComponent instance) {
+Map<String, dynamic> _$$DeviceComponentImplToJson(
+    _$DeviceComponentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -481,10 +484,10 @@ const _$DeviceComponentMeasurementPrincipleEnumMap = {
   DeviceComponentMeasurementPrinciple.unknown: 'unknown',
 };
 
-_$_DeviceComponentProductionSpecification
-    _$$_DeviceComponentProductionSpecificationFromJson(
+_$DeviceComponentProductionSpecificationImpl
+    _$$DeviceComponentProductionSpecificationImplFromJson(
             Map<String, dynamic> json) =>
-        _$_DeviceComponentProductionSpecification(
+        _$DeviceComponentProductionSpecificationImpl(
           specType: json['specType'] == null
               ? null
               : CodeableConcept.fromJson(
@@ -500,8 +503,8 @@ _$_DeviceComponentProductionSpecification
                   json['_productionSpec'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
-    _$_DeviceComponentProductionSpecification instance) {
+Map<String, dynamic> _$$DeviceComponentProductionSpecificationImplToJson(
+    _$DeviceComponentProductionSpecificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -517,8 +520,8 @@ Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
   return val;
 }
 
-_$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
-    _$_DeviceMetric(
+_$DeviceMetricImpl _$$DeviceMetricImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceMetricImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DeviceMetric) ??
@@ -586,7 +589,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
+Map<String, dynamic> _$$DeviceMetricImplToJson(_$DeviceMetricImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -657,9 +660,9 @@ const _$DeviceMetricCategoryEnumMap = {
   DeviceMetricCategory.unknown: 'unknown',
 };
 
-_$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
+_$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceMetricCalibration(
+    _$DeviceMetricCalibrationImpl(
       type: $enumDecodeNullable(
           _$DeviceMetricCalibrationTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
@@ -676,8 +679,8 @@ _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceMetricCalibrationToJson(
-    _$_DeviceMetricCalibration instance) {
+Map<String, dynamic> _$$DeviceMetricCalibrationImplToJson(
+    _$DeviceMetricCalibrationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -711,7 +714,8 @@ const _$DeviceMetricCalibrationStateEnumMap = {
   DeviceMetricCalibrationState.unknown: 'unknown',
 };
 
-_$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
+_$EndpointImpl _$$EndpointImplFromJson(Map<String, dynamic> json) =>
+    _$EndpointImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Endpoint) ??
@@ -788,7 +792,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
+Map<String, dynamic> _$$EndpointImplToJson(_$EndpointImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -844,8 +848,9 @@ const _$EndpointStatusEnumMap = {
   EndpointStatus.unknown: 'unknown',
 };
 
-_$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
-    _$_HealthcareService(
+_$HealthcareServiceImpl _$$HealthcareServiceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$HealthcareServiceImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.HealthcareService) ??
@@ -969,8 +974,8 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceToJson(
-    _$_HealthcareService instance) {
+Map<String, dynamic> _$$HealthcareServiceImplToJson(
+    _$HealthcareServiceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1040,38 +1045,41 @@ Map<String, dynamic> _$$_HealthcareServiceToJson(
   return val;
 }
 
-_$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
-        Map<String, dynamic> json) =>
-    _$_HealthcareServiceAvailableTime(
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) =>
-              $enumDecode(_$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
-          .toList(),
-      daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
-      allDayElement: json['_allDay'] == null
-          ? null
-          : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
-      availableStartTime: json['availableStartTime'] == null
-          ? null
-          : Time.fromJson(json['availableStartTime']),
-      availableStartTimeElement: json['_availableStartTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_availableStartTime'] as Map<String, dynamic>),
-      availableEndTime: json['availableEndTime'] == null
-          ? null
-          : Time.fromJson(json['availableEndTime']),
-      availableEndTimeElement: json['_availableEndTime'] == null
-          ? null
-          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
-    );
+_$HealthcareServiceAvailableTimeImpl
+    _$$HealthcareServiceAvailableTimeImplFromJson(Map<String, dynamic> json) =>
+        _$HealthcareServiceAvailableTimeImpl(
+          daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(
+                  _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
+              .toList(),
+          daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => e == null
+                  ? null
+                  : Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          allDay:
+              json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
+          allDayElement: json['_allDay'] == null
+              ? null
+              : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
+          availableStartTime: json['availableStartTime'] == null
+              ? null
+              : Time.fromJson(json['availableStartTime']),
+          availableStartTimeElement: json['_availableStartTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableStartTime'] as Map<String, dynamic>),
+          availableEndTime: json['availableEndTime'] == null
+              ? null
+              : Time.fromJson(json['availableEndTime']),
+          availableEndTimeElement: json['_availableEndTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableEndTime'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_HealthcareServiceAvailableTimeToJson(
-    _$_HealthcareServiceAvailableTime instance) {
+Map<String, dynamic> _$$HealthcareServiceAvailableTimeImplToJson(
+    _$HealthcareServiceAvailableTimeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1108,20 +1116,20 @@ const _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap = {
   HealthcareServiceAvailableTimeDaysOfWeek.unknown: 'unknown',
 };
 
-_$_HealthcareServiceNotAvailable _$$_HealthcareServiceNotAvailableFromJson(
-        Map<String, dynamic> json) =>
-    _$_HealthcareServiceNotAvailable(
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      during: json['during'] == null
-          ? null
-          : Period.fromJson(json['during'] as Map<String, dynamic>),
-    );
+_$HealthcareServiceNotAvailableImpl
+    _$$HealthcareServiceNotAvailableImplFromJson(Map<String, dynamic> json) =>
+        _$HealthcareServiceNotAvailableImpl(
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          during: json['during'] == null
+              ? null
+              : Period.fromJson(json['during'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
-    _$_HealthcareServiceNotAvailable instance) {
+Map<String, dynamic> _$$HealthcareServiceNotAvailableImplToJson(
+    _$HealthcareServiceNotAvailableImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1136,7 +1144,8 @@ Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
   return val;
 }
 
-_$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
+_$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
+    _$LocationImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Location) ??
@@ -1224,7 +1233,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
           .toList(),
     );
 
-Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
+Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1286,8 +1295,9 @@ const _$LocationModeEnumMap = {
   LocationMode.unknown: 'unknown',
 };
 
-_$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
-    _$_LocationPosition(
+_$LocationPositionImpl _$$LocationPositionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$LocationPositionImpl(
       longitude: json['longitude'] == null
           ? null
           : Decimal.fromJson(json['longitude']),
@@ -1306,7 +1316,8 @@ _$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_altitude'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
+Map<String, dynamic> _$$LocationPositionImplToJson(
+    _$LocationPositionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1324,8 +1335,8 @@ Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
   return val;
 }
 
-_$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
-    _$_Organization(
+_$OrganizationImpl _$$OrganizationImplFromJson(Map<String, dynamic> json) =>
+    _$OrganizationImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Organization) ??
@@ -1394,7 +1405,7 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
+Map<String, dynamic> _$$OrganizationImplToJson(_$OrganizationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1436,9 +1447,9 @@ Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   return val;
 }
 
-_$_OrganizationContact _$$_OrganizationContactFromJson(
+_$OrganizationContactImpl _$$OrganizationContactImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OrganizationContact(
+    _$OrganizationContactImpl(
       purpose: json['purpose'] == null
           ? null
           : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>),
@@ -1453,8 +1464,8 @@ _$_OrganizationContact _$$_OrganizationContactFromJson(
           : Address.fromJson(json['address'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OrganizationContactToJson(
-    _$_OrganizationContact instance) {
+Map<String, dynamic> _$$OrganizationContactImplToJson(
+    _$OrganizationContactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1470,7 +1481,8 @@ Map<String, dynamic> _$$_OrganizationContactToJson(
   return val;
 }
 
-_$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
+_$SubstanceImpl _$$SubstanceImplFromJson(Map<String, dynamic> json) =>
+    _$SubstanceImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Substance) ??
@@ -1525,7 +1537,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SubstanceToJson(_$_Substance instance) {
+Map<String, dynamic> _$$SubstanceImplToJson(_$SubstanceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1570,8 +1582,9 @@ const _$SubstanceStatusEnumMap = {
   SubstanceStatus.unknown: 'unknown',
 };
 
-_$_SubstanceInstance _$$_SubstanceInstanceFromJson(Map<String, dynamic> json) =>
-    _$_SubstanceInstance(
+_$SubstanceInstanceImpl _$$SubstanceInstanceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SubstanceInstanceImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -1584,8 +1597,8 @@ _$_SubstanceInstance _$$_SubstanceInstanceFromJson(Map<String, dynamic> json) =>
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SubstanceInstanceToJson(
-    _$_SubstanceInstance instance) {
+Map<String, dynamic> _$$SubstanceInstanceImplToJson(
+    _$SubstanceInstanceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1601,9 +1614,9 @@ Map<String, dynamic> _$$_SubstanceInstanceToJson(
   return val;
 }
 
-_$_SubstanceIngredient _$$_SubstanceIngredientFromJson(
+_$SubstanceIngredientImpl _$$SubstanceIngredientImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SubstanceIngredient(
+    _$SubstanceIngredientImpl(
       quantity: json['quantity'] == null
           ? null
           : Ratio.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -1617,8 +1630,8 @@ _$_SubstanceIngredient _$$_SubstanceIngredientFromJson(
               json['substanceReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SubstanceIngredientToJson(
-    _$_SubstanceIngredient instance) {
+Map<String, dynamic> _$$SubstanceIngredientImplToJson(
+    _$SubstanceIngredientImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

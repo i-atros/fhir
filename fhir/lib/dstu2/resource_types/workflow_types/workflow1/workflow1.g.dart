@@ -6,7 +6,7 @@ part of 'workflow1.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
+_$OrderImpl _$$OrderImplFromJson(Map<String, dynamic> json) => _$OrderImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Order) ??
@@ -60,7 +60,7 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrderToJson(_$_Order instance) {
+Map<String, dynamic> _$$OrderImplToJson(_$OrderImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -194,7 +194,8 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_OrderWhen _$$_OrderWhenFromJson(Map<String, dynamic> json) => _$_OrderWhen(
+_$OrderWhenImpl _$$OrderWhenImplFromJson(Map<String, dynamic> json) =>
+    _$OrderWhenImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -213,7 +214,7 @@ _$_OrderWhen _$$_OrderWhenFromJson(Map<String, dynamic> json) => _$_OrderWhen(
           : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OrderWhenToJson(_$_OrderWhen instance) {
+Map<String, dynamic> _$$OrderWhenImplToJson(_$OrderWhenImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -233,8 +234,8 @@ Map<String, dynamic> _$$_OrderWhenToJson(_$_OrderWhen instance) {
   return val;
 }
 
-_$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
-    _$_OrderResponse(
+_$OrderResponseImpl _$$OrderResponseImplFromJson(Map<String, dynamic> json) =>
+    _$OrderResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.OrderResponse) ??
@@ -280,7 +281,7 @@ _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrderResponseToJson(_$_OrderResponse instance) {
+Map<String, dynamic> _$$OrderResponseImplToJson(_$OrderResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -328,9 +329,9 @@ const _$OrderResponseOrderStatusEnumMap = {
   OrderResponseOrderStatus.unknown: 'unknown',
 };
 
-_$_CommunicationRequest _$$_CommunicationRequestFromJson(
+_$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationRequest(
+    _$CommunicationRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CommunicationRequest) ??
@@ -416,8 +417,8 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunicationRequestToJson(
-    _$_CommunicationRequest instance) {
+Map<String, dynamic> _$$CommunicationRequestImplToJson(
+    _$CommunicationRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -477,9 +478,9 @@ const _$CommunicationRequestStatusEnumMap = {
   CommunicationRequestStatus.unknown: 'unknown',
 };
 
-_$_CommunicationRequestPayload _$$_CommunicationRequestPayloadFromJson(
+_$CommunicationRequestPayloadImpl _$$CommunicationRequestPayloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationRequestPayload(
+    _$CommunicationRequestPayloadImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -501,8 +502,8 @@ _$_CommunicationRequestPayload _$$_CommunicationRequestPayloadFromJson(
               json['contentReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
-    _$_CommunicationRequestPayload instance) {
+Map<String, dynamic> _$$CommunicationRequestPayloadImplToJson(
+    _$CommunicationRequestPayloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -523,8 +524,9 @@ Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
   return val;
 }
 
-_$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
-    _$_DeviceUseRequest(
+_$DeviceUseRequestImpl _$$DeviceUseRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeviceUseRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceUseRequest) ??
@@ -608,7 +610,8 @@ _$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceUseRequestToJson(_$_DeviceUseRequest instance) {
+Map<String, dynamic> _$$DeviceUseRequestImplToJson(
+    _$DeviceUseRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -680,9 +683,9 @@ const _$DeviceUseRequestPriorityEnumMap = {
   DeviceUseRequestPriority.unknown: 'unknown',
 };
 
-_$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
+_$DeviceUseStatementImpl _$$DeviceUseStatementImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceUseStatement(
+    _$DeviceUseStatementImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceUseStatement) ??
@@ -755,8 +758,8 @@ _$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceUseStatementToJson(
-    _$_DeviceUseStatement instance) {
+Map<String, dynamic> _$$DeviceUseStatementImplToJson(
+    _$DeviceUseStatementImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

@@ -6,8 +6,8 @@ part of 'workflow2.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
-    _$_ProcessRequest(
+_$ProcessRequestImpl _$$ProcessRequestImplFromJson(Map<String, dynamic> json) =>
+    _$ProcessRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ProcessRequest) ??
@@ -77,7 +77,8 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProcessRequestToJson(_$_ProcessRequest instance) {
+Map<String, dynamic> _$$ProcessRequestImplToJson(
+    _$ProcessRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -225,9 +226,9 @@ const _$ProcessRequestActionEnumMap = {
   ProcessRequestAction.unknown: 'unknown',
 };
 
-_$_ProcessRequestItem _$$_ProcessRequestItemFromJson(
+_$ProcessRequestItemImpl _$$ProcessRequestItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProcessRequestItem(
+    _$ProcessRequestItemImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -238,8 +239,8 @@ _$_ProcessRequestItem _$$_ProcessRequestItemFromJson(
       sequenceLinkId: Integer.fromJson(json['sequenceLinkId']),
     );
 
-Map<String, dynamic> _$$_ProcessRequestItemToJson(
-    _$_ProcessRequestItem instance) {
+Map<String, dynamic> _$$ProcessRequestItemImplToJson(
+    _$ProcessRequestItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -257,8 +258,9 @@ Map<String, dynamic> _$$_ProcessRequestItemToJson(
   return val;
 }
 
-_$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
-    _$_ProcessResponse(
+_$ProcessResponseImpl _$$ProcessResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProcessResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ProcessResponse) ??
@@ -324,7 +326,8 @@ _$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProcessResponseToJson(_$_ProcessResponse instance) {
+Map<String, dynamic> _$$ProcessResponseImplToJson(
+    _$ProcessResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -363,9 +366,9 @@ Map<String, dynamic> _$$_ProcessResponseToJson(_$_ProcessResponse instance) {
   return val;
 }
 
-_$_ProcessResponseNotes _$$_ProcessResponseNotesFromJson(
+_$ProcessResponseNotesImpl _$$ProcessResponseNotesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProcessResponseNotes(
+    _$ProcessResponseNotesImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -379,8 +382,8 @@ _$_ProcessResponseNotes _$$_ProcessResponseNotesFromJson(
       text: json['text'] as String?,
     );
 
-Map<String, dynamic> _$$_ProcessResponseNotesToJson(
-    _$_ProcessResponseNotes instance) {
+Map<String, dynamic> _$$ProcessResponseNotesImplToJson(
+    _$ProcessResponseNotesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -399,8 +402,8 @@ Map<String, dynamic> _$$_ProcessResponseNotesToJson(
   return val;
 }
 
-_$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
-    _$_SupplyRequest(
+_$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
+    _$SupplyRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.SupplyRequest) ??
@@ -468,7 +471,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
           : SupplyRequestWhen.fromJson(json['when'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
+Map<String, dynamic> _$$SupplyRequestImplToJson(_$SupplyRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -516,8 +519,9 @@ const _$SupplyRequestStatusEnumMap = {
   SupplyRequestStatus.unknown: 'unknown',
 };
 
-_$_SupplyRequestWhen _$$_SupplyRequestWhenFromJson(Map<String, dynamic> json) =>
-    _$_SupplyRequestWhen(
+_$SupplyRequestWhenImpl _$$SupplyRequestWhenImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SupplyRequestWhenImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -533,8 +537,8 @@ _$_SupplyRequestWhen _$$_SupplyRequestWhenFromJson(Map<String, dynamic> json) =>
           : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestWhenToJson(
-    _$_SupplyRequestWhen instance) {
+Map<String, dynamic> _$$SupplyRequestWhenImplToJson(
+    _$SupplyRequestWhenImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -553,8 +557,8 @@ Map<String, dynamic> _$$_SupplyRequestWhenToJson(
   return val;
 }
 
-_$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
-    _$_SupplyDelivery(
+_$SupplyDeliveryImpl _$$SupplyDeliveryImplFromJson(Map<String, dynamic> json) =>
+    _$SupplyDeliveryImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.SupplyDelivery) ??
@@ -621,7 +625,8 @@ _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
+Map<String, dynamic> _$$SupplyDeliveryImplToJson(
+    _$SupplyDeliveryImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

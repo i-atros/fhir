@@ -6,8 +6,8 @@ part of 'draft_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Population _$$_PopulationFromJson(Map<String, dynamic> json) =>
-    _$_Population(
+_$PopulationImpl _$$PopulationImplFromJson(Map<String, dynamic> json) =>
+    _$PopulationImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -34,7 +34,7 @@ _$_Population _$$_PopulationFromJson(Map<String, dynamic> json) =>
               json['physiologicalCondition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PopulationToJson(_$_Population instance) {
+Map<String, dynamic> _$$PopulationImplToJson(_$PopulationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -57,8 +57,9 @@ Map<String, dynamic> _$$_PopulationToJson(_$_Population instance) {
   return val;
 }
 
-_$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
-    _$_ProductShelfLife(
+_$ProductShelfLifeImpl _$$ProductShelfLifeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProductShelfLifeImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -77,7 +78,8 @@ _$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
               .toList(),
     );
 
-Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
+Map<String, dynamic> _$$ProductShelfLifeImplToJson(
+    _$ProductShelfLifeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -99,9 +101,9 @@ Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
   return val;
 }
 
-_$_ProdCharacteristic _$$_ProdCharacteristicFromJson(
+_$ProdCharacteristicImpl _$$ProdCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProdCharacteristic(
+    _$ProdCharacteristicImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -151,8 +153,8 @@ _$_ProdCharacteristic _$$_ProdCharacteristicFromJson(
           : CodeableConcept.fromJson(json['scoring'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProdCharacteristicToJson(
-    _$_ProdCharacteristic instance) {
+Map<String, dynamic> _$$ProdCharacteristicImplToJson(
+    _$ProdCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -185,8 +187,9 @@ Map<String, dynamic> _$$_ProdCharacteristicToJson(
   return val;
 }
 
-_$_MarketingStatus _$$_MarketingStatusFromJson(Map<String, dynamic> json) =>
-    _$_MarketingStatus(
+_$MarketingStatusImpl _$$MarketingStatusImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MarketingStatusImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -210,7 +213,8 @@ _$_MarketingStatus _$$_MarketingStatusFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MarketingStatusToJson(_$_MarketingStatus instance) {
+Map<String, dynamic> _$$MarketingStatusImplToJson(
+    _$MarketingStatusImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -233,8 +237,9 @@ Map<String, dynamic> _$$_MarketingStatusToJson(_$_MarketingStatus instance) {
   return val;
 }
 
-_$_SubstanceAmount _$$_SubstanceAmountFromJson(Map<String, dynamic> json) =>
-    _$_SubstanceAmount(
+_$SubstanceAmountImpl _$$SubstanceAmountImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SubstanceAmountImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -266,7 +271,8 @@ _$_SubstanceAmount _$$_SubstanceAmountFromJson(Map<String, dynamic> json) =>
               json['referenceRange'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
+Map<String, dynamic> _$$SubstanceAmountImplToJson(
+    _$SubstanceAmountImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -291,26 +297,26 @@ Map<String, dynamic> _$$_SubstanceAmountToJson(_$_SubstanceAmount instance) {
   return val;
 }
 
-_$_SubstanceAmountReferenceRange _$$_SubstanceAmountReferenceRangeFromJson(
-        Map<String, dynamic> json) =>
-    _$_SubstanceAmountReferenceRange(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      lowLimit: json['lowLimit'] == null
-          ? null
-          : Quantity.fromJson(json['lowLimit'] as Map<String, dynamic>),
-      highLimit: json['highLimit'] == null
-          ? null
-          : Quantity.fromJson(json['highLimit'] as Map<String, dynamic>),
-    );
+_$SubstanceAmountReferenceRangeImpl
+    _$$SubstanceAmountReferenceRangeImplFromJson(Map<String, dynamic> json) =>
+        _$SubstanceAmountReferenceRangeImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          lowLimit: json['lowLimit'] == null
+              ? null
+              : Quantity.fromJson(json['lowLimit'] as Map<String, dynamic>),
+          highLimit: json['highLimit'] == null
+              ? null
+              : Quantity.fromJson(json['highLimit'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_SubstanceAmountReferenceRangeToJson(
-    _$_SubstanceAmountReferenceRange instance) {
+Map<String, dynamic> _$$SubstanceAmountReferenceRangeImplToJson(
+    _$SubstanceAmountReferenceRangeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

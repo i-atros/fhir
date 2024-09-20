@@ -6,9 +6,9 @@ part of 'evidence_based_medicine.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EffectEvidenceSynthesis _$$_EffectEvidenceSynthesisFromJson(
+_$EffectEvidenceSynthesisImpl _$$EffectEvidenceSynthesisImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EffectEvidenceSynthesis(
+    _$EffectEvidenceSynthesisImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EffectEvidenceSynthesis) ??
@@ -161,8 +161,8 @@ _$_EffectEvidenceSynthesis _$$_EffectEvidenceSynthesisFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisToJson(
-    _$_EffectEvidenceSynthesis instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisImplToJson(
+    _$EffectEvidenceSynthesisImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -400,9 +400,10 @@ const _$EffectEvidenceSynthesisStatusEnumMap = {
   EffectEvidenceSynthesisStatus.unknown: 'unknown',
 };
 
-_$_EffectEvidenceSynthesisSampleSize
-    _$$_EffectEvidenceSynthesisSampleSizeFromJson(Map<String, dynamic> json) =>
-        _$_EffectEvidenceSynthesisSampleSize(
+_$EffectEvidenceSynthesisSampleSizeImpl
+    _$$EffectEvidenceSynthesisSampleSizeImplFromJson(
+            Map<String, dynamic> json) =>
+        _$EffectEvidenceSynthesisSampleSizeImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -430,8 +431,8 @@ _$_EffectEvidenceSynthesisSampleSize
                   json['_numberOfParticipants'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisSampleSizeToJson(
-    _$_EffectEvidenceSynthesisSampleSize instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisSampleSizeImplToJson(
+    _$EffectEvidenceSynthesisSampleSizeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -455,10 +456,10 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisSampleSizeToJson(
   return val;
 }
 
-_$_EffectEvidenceSynthesisResultsByExposure
-    _$$_EffectEvidenceSynthesisResultsByExposureFromJson(
+_$EffectEvidenceSynthesisResultsByExposureImpl
+    _$$EffectEvidenceSynthesisResultsByExposureImplFromJson(
             Map<String, dynamic> json) =>
-        _$_EffectEvidenceSynthesisResultsByExposure(
+        _$EffectEvidenceSynthesisResultsByExposureImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -488,8 +489,8 @@ _$_EffectEvidenceSynthesisResultsByExposure
               json['riskEvidenceSynthesis'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisResultsByExposureToJson(
-    _$_EffectEvidenceSynthesisResultsByExposure instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisResultsByExposureImplToJson(
+    _$EffectEvidenceSynthesisResultsByExposureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -522,10 +523,10 @@ const _$EffectEvidenceSynthesisResultsByExposureExposureStateEnumMap = {
   EffectEvidenceSynthesisResultsByExposureExposureState.unknown: 'unknown',
 };
 
-_$_EffectEvidenceSynthesisEffectEstimate
-    _$$_EffectEvidenceSynthesisEffectEstimateFromJson(
+_$EffectEvidenceSynthesisEffectEstimateImpl
+    _$$EffectEvidenceSynthesisEffectEstimateImplFromJson(
             Map<String, dynamic> json) =>
-        _$_EffectEvidenceSynthesisEffectEstimate(
+        _$EffectEvidenceSynthesisEffectEstimateImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -558,8 +559,8 @@ _$_EffectEvidenceSynthesisEffectEstimate
               .toList(),
         );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisEffectEstimateToJson(
-    _$_EffectEvidenceSynthesisEffectEstimate instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisEffectEstimateImplToJson(
+    _$EffectEvidenceSynthesisEffectEstimateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -585,10 +586,10 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisEffectEstimateToJson(
   return val;
 }
 
-_$_EffectEvidenceSynthesisPrecisionEstimate
-    _$$_EffectEvidenceSynthesisPrecisionEstimateFromJson(
+_$EffectEvidenceSynthesisPrecisionEstimateImpl
+    _$$EffectEvidenceSynthesisPrecisionEstimateImplFromJson(
             Map<String, dynamic> json) =>
-        _$_EffectEvidenceSynthesisPrecisionEstimate(
+        _$EffectEvidenceSynthesisPrecisionEstimateImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -613,8 +614,8 @@ _$_EffectEvidenceSynthesisPrecisionEstimate
               : Element.fromJson(json['_to'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisPrecisionEstimateToJson(
-    _$_EffectEvidenceSynthesisPrecisionEstimate instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisPrecisionEstimateImplToJson(
+    _$EffectEvidenceSynthesisPrecisionEstimateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -638,9 +639,10 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisPrecisionEstimateToJson(
   return val;
 }
 
-_$_EffectEvidenceSynthesisCertainty
-    _$$_EffectEvidenceSynthesisCertaintyFromJson(Map<String, dynamic> json) =>
-        _$_EffectEvidenceSynthesisCertainty(
+_$EffectEvidenceSynthesisCertaintyImpl
+    _$$EffectEvidenceSynthesisCertaintyImplFromJson(
+            Map<String, dynamic> json) =>
+        _$EffectEvidenceSynthesisCertaintyImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -662,8 +664,8 @@ _$_EffectEvidenceSynthesisCertainty
                   .toList(),
         );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisCertaintyToJson(
-    _$_EffectEvidenceSynthesisCertainty instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisCertaintyImplToJson(
+    _$EffectEvidenceSynthesisCertaintyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -684,10 +686,10 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisCertaintyToJson(
   return val;
 }
 
-_$_EffectEvidenceSynthesisCertaintySubcomponent
-    _$$_EffectEvidenceSynthesisCertaintySubcomponentFromJson(
+_$EffectEvidenceSynthesisCertaintySubcomponentImpl
+    _$$EffectEvidenceSynthesisCertaintySubcomponentImplFromJson(
             Map<String, dynamic> json) =>
-        _$_EffectEvidenceSynthesisCertaintySubcomponent(
+        _$EffectEvidenceSynthesisCertaintySubcomponentImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -706,8 +708,8 @@ _$_EffectEvidenceSynthesisCertaintySubcomponent
               .toList(),
         );
 
-Map<String, dynamic> _$$_EffectEvidenceSynthesisCertaintySubcomponentToJson(
-    _$_EffectEvidenceSynthesisCertaintySubcomponent instance) {
+Map<String, dynamic> _$$EffectEvidenceSynthesisCertaintySubcomponentImplToJson(
+    _$EffectEvidenceSynthesisCertaintySubcomponentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -727,7 +729,8 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisCertaintySubcomponentToJson(
   return val;
 }
 
-_$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
+_$EvidenceImpl _$$EvidenceImplFromJson(Map<String, dynamic> json) =>
+    _$EvidenceImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Evidence) ??
@@ -866,7 +869,7 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
+Map<String, dynamic> _$$EvidenceImplToJson(_$EvidenceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -946,8 +949,9 @@ const _$EvidenceStatusEnumMap = {
   EvidenceStatus.unknown: 'unknown',
 };
 
-_$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
-    _$_EvidenceVariable(
+_$EvidenceVariableImpl _$$EvidenceVariableImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EvidenceVariableImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EvidenceVariable) ??
@@ -1088,7 +1092,8 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
+Map<String, dynamic> _$$EvidenceVariableImplToJson(
+    _$EvidenceVariableImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1175,90 +1180,94 @@ const _$EvidenceVariableTypeEnumMap = {
   EvidenceVariableType.unknown: 'unknown',
 };
 
-_$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
-        Map<String, dynamic> json) =>
-    _$_EvidenceVariableCharacteristic(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      definitionReference: json['definitionReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['definitionReference'] as Map<String, dynamic>),
-      definitionCanonical: json['definitionCanonical'] == null
-          ? null
-          : Canonical.fromJson(json['definitionCanonical']),
-      definitionCanonicalElement: json['_definitionCanonical'] == null
-          ? null
-          : Element.fromJson(
-              json['_definitionCanonical'] as Map<String, dynamic>),
-      definitionCodeableConcept: json['definitionCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['definitionCodeableConcept'] as Map<String, dynamic>),
-      definitionExpression: json['definitionExpression'] == null
-          ? null
-          : Expression.fromJson(
-              json['definitionExpression'] as Map<String, dynamic>),
-      definitionDataRequirement: json['definitionDataRequirement'] == null
-          ? null
-          : DataRequirement.fromJson(
-              json['definitionDataRequirement'] as Map<String, dynamic>),
-      definitionTriggerDefinition: json['definitionTriggerDefinition'] == null
-          ? null
-          : TriggerDefinition.fromJson(
-              json['definitionTriggerDefinition'] as Map<String, dynamic>),
-      usageContext: (json['usageContext'] as List<dynamic>?)
-          ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      exclude:
-          json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
-      excludeElement: json['_exclude'] == null
-          ? null
-          : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
-      participantEffectiveDateTime: json['participantEffectiveDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['participantEffectiveDateTime']),
-      participantEffectiveDateTimeElement:
-          json['_participantEffectiveDateTime'] == null
+_$EvidenceVariableCharacteristicImpl
+    _$$EvidenceVariableCharacteristicImplFromJson(Map<String, dynamic> json) =>
+        _$EvidenceVariableCharacteristicImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
               ? null
-              : Element.fromJson(json['_participantEffectiveDateTime']
-                  as Map<String, dynamic>),
-      participantEffectivePeriod: json['participantEffectivePeriod'] == null
-          ? null
-          : Period.fromJson(
-              json['participantEffectivePeriod'] as Map<String, dynamic>),
-      participantEffectiveDuration: json['participantEffectiveDuration'] == null
-          ? null
-          : FhirDuration.fromJson(
-              json['participantEffectiveDuration'] as Map<String, dynamic>),
-      participantEffectiveTiming: json['participantEffectiveTiming'] == null
-          ? null
-          : Timing.fromJson(
-              json['participantEffectiveTiming'] as Map<String, dynamic>),
-      timeFromStart: json['timeFromStart'] == null
-          ? null
-          : FhirDuration.fromJson(
-              json['timeFromStart'] as Map<String, dynamic>),
-      groupMeasure: $enumDecodeNullable(
-          _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
-          json['groupMeasure'],
-          unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
-      groupMeasureElement: json['_groupMeasure'] == null
-          ? null
-          : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
-    );
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          definitionReference: json['definitionReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['definitionReference'] as Map<String, dynamic>),
+          definitionCanonical: json['definitionCanonical'] == null
+              ? null
+              : Canonical.fromJson(json['definitionCanonical']),
+          definitionCanonicalElement: json['_definitionCanonical'] == null
+              ? null
+              : Element.fromJson(
+                  json['_definitionCanonical'] as Map<String, dynamic>),
+          definitionCodeableConcept: json['definitionCodeableConcept'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['definitionCodeableConcept'] as Map<String, dynamic>),
+          definitionExpression: json['definitionExpression'] == null
+              ? null
+              : Expression.fromJson(
+                  json['definitionExpression'] as Map<String, dynamic>),
+          definitionDataRequirement: json['definitionDataRequirement'] == null
+              ? null
+              : DataRequirement.fromJson(
+                  json['definitionDataRequirement'] as Map<String, dynamic>),
+          definitionTriggerDefinition: json['definitionTriggerDefinition'] ==
+                  null
+              ? null
+              : TriggerDefinition.fromJson(
+                  json['definitionTriggerDefinition'] as Map<String, dynamic>),
+          usageContext: (json['usageContext'] as List<dynamic>?)
+              ?.map((e) => UsageContext.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          exclude: json['exclude'] == null
+              ? null
+              : Boolean.fromJson(json['exclude']),
+          excludeElement: json['_exclude'] == null
+              ? null
+              : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
+          participantEffectiveDateTime:
+              json['participantEffectiveDateTime'] == null
+                  ? null
+                  : FhirDateTime.fromJson(json['participantEffectiveDateTime']),
+          participantEffectiveDateTimeElement:
+              json['_participantEffectiveDateTime'] == null
+                  ? null
+                  : Element.fromJson(json['_participantEffectiveDateTime']
+                      as Map<String, dynamic>),
+          participantEffectivePeriod: json['participantEffectivePeriod'] == null
+              ? null
+              : Period.fromJson(
+                  json['participantEffectivePeriod'] as Map<String, dynamic>),
+          participantEffectiveDuration: json['participantEffectiveDuration'] ==
+                  null
+              ? null
+              : FhirDuration.fromJson(
+                  json['participantEffectiveDuration'] as Map<String, dynamic>),
+          participantEffectiveTiming: json['participantEffectiveTiming'] == null
+              ? null
+              : Timing.fromJson(
+                  json['participantEffectiveTiming'] as Map<String, dynamic>),
+          timeFromStart: json['timeFromStart'] == null
+              ? null
+              : FhirDuration.fromJson(
+                  json['timeFromStart'] as Map<String, dynamic>),
+          groupMeasure: $enumDecodeNullable(
+              _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
+              json['groupMeasure'],
+              unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
+          groupMeasureElement: json['_groupMeasure'] == null
+              ? null
+              : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_EvidenceVariableCharacteristicToJson(
-    _$_EvidenceVariableCharacteristic instance) {
+Map<String, dynamic> _$$EvidenceVariableCharacteristicImplToJson(
+    _$EvidenceVariableCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1319,9 +1328,9 @@ const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
   EvidenceVariableCharacteristicGroupMeasure.unknown: 'unknown',
 };
 
-_$_ResearchDefinition _$$_ResearchDefinitionFromJson(
+_$ResearchDefinitionImpl _$$ResearchDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchDefinition(
+    _$ResearchDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchDefinition) ??
@@ -1477,9 +1486,8 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      library_:
+          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       population:
           Reference.fromJson(json['population'] as Map<String, dynamic>),
       exposure: json['exposure'] == null
@@ -1494,8 +1502,8 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
           : Reference.fromJson(json['outcome'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchDefinitionToJson(
-    _$_ResearchDefinition instance) {
+Map<String, dynamic> _$$ResearchDefinitionImplToJson(
+    _$ResearchDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1587,9 +1595,9 @@ const _$ResearchDefinitionStatusEnumMap = {
   ResearchDefinitionStatus.unknown: 'unknown',
 };
 
-_$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
+_$ResearchElementDefinitionImpl _$$ResearchElementDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchElementDefinition(
+    _$ResearchElementDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchElementDefinition) ??
@@ -1745,9 +1753,8 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      library_: (json['library'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
-          .toList(),
+      library_:
+          (json['library'] as List<dynamic>?)?.map(Canonical.fromJson).toList(),
       type: $enumDecodeNullable(
           _$ResearchElementDefinitionTypeEnumMap, json['type'],
           unknownValue: ResearchElementDefinitionType.unknown),
@@ -1766,8 +1773,8 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResearchElementDefinitionToJson(
-    _$_ResearchElementDefinition instance) {
+Map<String, dynamic> _$$ResearchElementDefinitionImplToJson(
+    _$ResearchElementDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1877,10 +1884,10 @@ const _$ResearchElementDefinitionVariableTypeEnumMap = {
   ResearchElementDefinitionVariableType.unknown: 'unknown',
 };
 
-_$_ResearchElementDefinitionCharacteristic
-    _$$_ResearchElementDefinitionCharacteristicFromJson(
+_$ResearchElementDefinitionCharacteristicImpl
+    _$$ResearchElementDefinitionCharacteristicImplFromJson(
             Map<String, dynamic> json) =>
-        _$_ResearchElementDefinitionCharacteristic(
+        _$ResearchElementDefinitionCharacteristicImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2010,8 +2017,8 @@ _$_ResearchElementDefinitionCharacteristic
                       as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_ResearchElementDefinitionCharacteristicToJson(
-    _$_ResearchElementDefinitionCharacteristic instance) {
+Map<String, dynamic> _$$ResearchElementDefinitionCharacteristicImplToJson(
+    _$ResearchElementDefinitionCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2118,9 +2125,9 @@ const _$ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureE
       .unknown: 'unknown',
 };
 
-_$_RiskEvidenceSynthesis _$$_RiskEvidenceSynthesisFromJson(
+_$RiskEvidenceSynthesisImpl _$$RiskEvidenceSynthesisImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RiskEvidenceSynthesis(
+    _$RiskEvidenceSynthesisImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RiskEvidenceSynthesis) ??
@@ -2269,8 +2276,8 @@ _$_RiskEvidenceSynthesis _$$_RiskEvidenceSynthesisFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_RiskEvidenceSynthesisToJson(
-    _$_RiskEvidenceSynthesis instance) {
+Map<String, dynamic> _$$RiskEvidenceSynthesisImplToJson(
+    _$RiskEvidenceSynthesisImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2351,37 +2358,38 @@ const _$RiskEvidenceSynthesisStatusEnumMap = {
   RiskEvidenceSynthesisStatus.unknown: 'unknown',
 };
 
-_$_RiskEvidenceSynthesisSampleSize _$$_RiskEvidenceSynthesisSampleSizeFromJson(
-        Map<String, dynamic> json) =>
-    _$_RiskEvidenceSynthesisSampleSize(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      numberOfStudies: json['numberOfStudies'] == null
-          ? null
-          : Integer.fromJson(json['numberOfStudies']),
-      numberOfStudiesElement: json['_numberOfStudies'] == null
-          ? null
-          : Element.fromJson(json['_numberOfStudies'] as Map<String, dynamic>),
-      numberOfParticipants: json['numberOfParticipants'] == null
-          ? null
-          : Integer.fromJson(json['numberOfParticipants']),
-      numberOfParticipantsElement: json['_numberOfParticipants'] == null
-          ? null
-          : Element.fromJson(
-              json['_numberOfParticipants'] as Map<String, dynamic>),
-    );
+_$RiskEvidenceSynthesisSampleSizeImpl
+    _$$RiskEvidenceSynthesisSampleSizeImplFromJson(Map<String, dynamic> json) =>
+        _$RiskEvidenceSynthesisSampleSizeImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          numberOfStudies: json['numberOfStudies'] == null
+              ? null
+              : Integer.fromJson(json['numberOfStudies']),
+          numberOfStudiesElement: json['_numberOfStudies'] == null
+              ? null
+              : Element.fromJson(
+                  json['_numberOfStudies'] as Map<String, dynamic>),
+          numberOfParticipants: json['numberOfParticipants'] == null
+              ? null
+              : Integer.fromJson(json['numberOfParticipants']),
+          numberOfParticipantsElement: json['_numberOfParticipants'] == null
+              ? null
+              : Element.fromJson(
+                  json['_numberOfParticipants'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_RiskEvidenceSynthesisSampleSizeToJson(
-    _$_RiskEvidenceSynthesisSampleSize instance) {
+Map<String, dynamic> _$$RiskEvidenceSynthesisSampleSizeImplToJson(
+    _$RiskEvidenceSynthesisSampleSizeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2405,9 +2413,10 @@ Map<String, dynamic> _$$_RiskEvidenceSynthesisSampleSizeToJson(
   return val;
 }
 
-_$_RiskEvidenceSynthesisRiskEstimate
-    _$$_RiskEvidenceSynthesisRiskEstimateFromJson(Map<String, dynamic> json) =>
-        _$_RiskEvidenceSynthesisRiskEstimate(
+_$RiskEvidenceSynthesisRiskEstimateImpl
+    _$$RiskEvidenceSynthesisRiskEstimateImplFromJson(
+            Map<String, dynamic> json) =>
+        _$RiskEvidenceSynthesisRiskEstimateImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2450,8 +2459,8 @@ _$_RiskEvidenceSynthesisRiskEstimate
               .toList(),
         );
 
-Map<String, dynamic> _$$_RiskEvidenceSynthesisRiskEstimateToJson(
-    _$_RiskEvidenceSynthesisRiskEstimate instance) {
+Map<String, dynamic> _$$RiskEvidenceSynthesisRiskEstimateImplToJson(
+    _$RiskEvidenceSynthesisRiskEstimateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2480,10 +2489,10 @@ Map<String, dynamic> _$$_RiskEvidenceSynthesisRiskEstimateToJson(
   return val;
 }
 
-_$_RiskEvidenceSynthesisPrecisionEstimate
-    _$$_RiskEvidenceSynthesisPrecisionEstimateFromJson(
+_$RiskEvidenceSynthesisPrecisionEstimateImpl
+    _$$RiskEvidenceSynthesisPrecisionEstimateImplFromJson(
             Map<String, dynamic> json) =>
-        _$_RiskEvidenceSynthesisPrecisionEstimate(
+        _$RiskEvidenceSynthesisPrecisionEstimateImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2508,8 +2517,8 @@ _$_RiskEvidenceSynthesisPrecisionEstimate
               : Element.fromJson(json['_to'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_RiskEvidenceSynthesisPrecisionEstimateToJson(
-    _$_RiskEvidenceSynthesisPrecisionEstimate instance) {
+Map<String, dynamic> _$$RiskEvidenceSynthesisPrecisionEstimateImplToJson(
+    _$RiskEvidenceSynthesisPrecisionEstimateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2533,30 +2542,31 @@ Map<String, dynamic> _$$_RiskEvidenceSynthesisPrecisionEstimateToJson(
   return val;
 }
 
-_$_RiskEvidenceSynthesisCertainty _$$_RiskEvidenceSynthesisCertaintyFromJson(
-        Map<String, dynamic> json) =>
-    _$_RiskEvidenceSynthesisCertainty(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      rating: (json['rating'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      certaintySubcomponent: (json['certaintySubcomponent'] as List<dynamic>?)
-          ?.map((e) => RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-    );
+_$RiskEvidenceSynthesisCertaintyImpl
+    _$$RiskEvidenceSynthesisCertaintyImplFromJson(Map<String, dynamic> json) =>
+        _$RiskEvidenceSynthesisCertaintyImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          rating: (json['rating'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          note: (json['note'] as List<dynamic>?)
+              ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          certaintySubcomponent: (json['certaintySubcomponent']
+                  as List<dynamic>?)
+              ?.map((e) => RiskEvidenceSynthesisCertaintySubcomponent.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_RiskEvidenceSynthesisCertaintyToJson(
-    _$_RiskEvidenceSynthesisCertainty instance) {
+Map<String, dynamic> _$$RiskEvidenceSynthesisCertaintyImplToJson(
+    _$RiskEvidenceSynthesisCertaintyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2577,10 +2587,10 @@ Map<String, dynamic> _$$_RiskEvidenceSynthesisCertaintyToJson(
   return val;
 }
 
-_$_RiskEvidenceSynthesisCertaintySubcomponent
-    _$$_RiskEvidenceSynthesisCertaintySubcomponentFromJson(
+_$RiskEvidenceSynthesisCertaintySubcomponentImpl
+    _$$RiskEvidenceSynthesisCertaintySubcomponentImplFromJson(
             Map<String, dynamic> json) =>
-        _$_RiskEvidenceSynthesisCertaintySubcomponent(
+        _$RiskEvidenceSynthesisCertaintySubcomponentImpl(
           id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2599,8 +2609,8 @@ _$_RiskEvidenceSynthesisCertaintySubcomponent
               .toList(),
         );
 
-Map<String, dynamic> _$$_RiskEvidenceSynthesisCertaintySubcomponentToJson(
-    _$_RiskEvidenceSynthesisCertaintySubcomponent instance) {
+Map<String, dynamic> _$$RiskEvidenceSynthesisCertaintySubcomponentImplToJson(
+    _$RiskEvidenceSynthesisCertaintySubcomponentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

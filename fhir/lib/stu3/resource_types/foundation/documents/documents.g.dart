@@ -6,8 +6,8 @@ part of 'documents.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
-    _$_Composition(
+_$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
+    _$CompositionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Composition) ??
@@ -88,7 +88,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
+Map<String, dynamic> _$$CompositionImplToJson(_$CompositionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -263,9 +263,9 @@ const _$CompositionStatusEnumMap = {
   CompositionStatus.unknown: 'unknown',
 };
 
-_$_CompositionAttester _$$_CompositionAttesterFromJson(
+_$CompositionAttesterImpl _$$CompositionAttesterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositionAttester(
+    _$CompositionAttesterImpl(
       mode: (json['mode'] as List<dynamic>?)
           ?.map((e) => $enumDecode(_$CompositionAttesterModeEnumMap, e))
           .toList(),
@@ -282,8 +282,8 @@ _$_CompositionAttester _$$_CompositionAttesterFromJson(
           : Reference.fromJson(json['party'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CompositionAttesterToJson(
-    _$_CompositionAttester instance) {
+Map<String, dynamic> _$$CompositionAttesterImplToJson(
+    _$CompositionAttesterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -309,9 +309,9 @@ const _$CompositionAttesterModeEnumMap = {
   CompositionAttesterMode.unknown: 'unknown',
 };
 
-_$_CompositionRelatesTo _$$_CompositionRelatesToFromJson(
+_$CompositionRelatesToImpl _$$CompositionRelatesToImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositionRelatesTo(
+    _$CompositionRelatesToImpl(
       code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -325,8 +325,8 @@ _$_CompositionRelatesTo _$$_CompositionRelatesToFromJson(
           : Reference.fromJson(json['targetReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CompositionRelatesToToJson(
-    _$_CompositionRelatesTo instance) {
+Map<String, dynamic> _$$CompositionRelatesToImplToJson(
+    _$CompositionRelatesToImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -342,8 +342,9 @@ Map<String, dynamic> _$$_CompositionRelatesToToJson(
   return val;
 }
 
-_$_CompositionEvent _$$_CompositionEventFromJson(Map<String, dynamic> json) =>
-    _$_CompositionEvent(
+_$CompositionEventImpl _$$CompositionEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CompositionEventImpl(
       code: (json['code'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -355,7 +356,8 @@ _$_CompositionEvent _$$_CompositionEventFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompositionEventToJson(_$_CompositionEvent instance) {
+Map<String, dynamic> _$$CompositionEventImplToJson(
+    _$CompositionEventImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -370,9 +372,9 @@ Map<String, dynamic> _$$_CompositionEventToJson(_$_CompositionEvent instance) {
   return val;
 }
 
-_$_CompositionSection _$$_CompositionSectionFromJson(
+_$CompositionSectionImpl _$$CompositionSectionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositionSection(
+    _$CompositionSectionImpl(
       title: json['title'] as String?,
       titleElement: json['_title'] == null
           ? null
@@ -402,8 +404,8 @@ _$_CompositionSection _$$_CompositionSectionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompositionSectionToJson(
-    _$_CompositionSection instance) {
+Map<String, dynamic> _$$CompositionSectionImplToJson(
+    _$CompositionSectionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -425,8 +427,9 @@ Map<String, dynamic> _$$_CompositionSectionToJson(
   return val;
 }
 
-_$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
-    _$_DocumentManifest(
+_$DocumentManifestImpl _$$DocumentManifestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DocumentManifestImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentManifest) ??
@@ -504,7 +507,8 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
+Map<String, dynamic> _$$DocumentManifestImplToJson(
+    _$DocumentManifestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -556,9 +560,9 @@ const _$DocumentManifestStatusEnumMap = {
   DocumentManifestStatus.unknown: 'unknown',
 };
 
-_$_DocumentManifestContent _$$_DocumentManifestContentFromJson(
+_$DocumentManifestContentImpl _$$DocumentManifestContentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentManifestContent(
+    _$DocumentManifestContentImpl(
       pAttachment: json['pAttachment'] == null
           ? null
           : Attachment.fromJson(json['pAttachment'] as Map<String, dynamic>),
@@ -567,8 +571,8 @@ _$_DocumentManifestContent _$$_DocumentManifestContentFromJson(
           : Reference.fromJson(json['pReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentManifestContentToJson(
-    _$_DocumentManifestContent instance) {
+Map<String, dynamic> _$$DocumentManifestContentImplToJson(
+    _$DocumentManifestContentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -582,9 +586,9 @@ Map<String, dynamic> _$$_DocumentManifestContentToJson(
   return val;
 }
 
-_$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
+_$DocumentManifestRelatedImpl _$$DocumentManifestRelatedImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentManifestRelated(
+    _$DocumentManifestRelatedImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -593,8 +597,8 @@ _$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
           : Reference.fromJson(json['ref'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentManifestRelatedToJson(
-    _$_DocumentManifestRelated instance) {
+Map<String, dynamic> _$$DocumentManifestRelatedImplToJson(
+    _$DocumentManifestRelatedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -608,8 +612,9 @@ Map<String, dynamic> _$$_DocumentManifestRelatedToJson(
   return val;
 }
 
-_$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
-    _$_DocumentReference(
+_$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DocumentReferenceImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentReference) ??
@@ -702,8 +707,8 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               json['context'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceToJson(
-    _$_DocumentReference instance) {
+Map<String, dynamic> _$$DocumentReferenceImplToJson(
+    _$DocumentReferenceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -762,9 +767,9 @@ const _$DocumentReferenceStatusEnumMap = {
   DocumentReferenceStatus.unknown: 'unknown',
 };
 
-_$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
+_$DocumentReferenceRelatesToImpl _$$DocumentReferenceRelatesToImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceRelatesTo(
+    _$DocumentReferenceRelatesToImpl(
       code: $enumDecodeNullable(
           _$DocumentReferenceRelatesToCodeEnumMap, json['code']),
       codeElement: json['_code'] == null
@@ -773,8 +778,8 @@ _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceRelatesToToJson(
-    _$_DocumentReferenceRelatesTo instance) {
+Map<String, dynamic> _$$DocumentReferenceRelatesToImplToJson(
+    _$DocumentReferenceRelatesToImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -797,9 +802,9 @@ const _$DocumentReferenceRelatesToCodeEnumMap = {
   DocumentReferenceRelatesToCode.unknown: 'unknown',
 };
 
-_$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
+_$DocumentReferenceContentImpl _$$DocumentReferenceContentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceContent(
+    _$DocumentReferenceContentImpl(
       attachment:
           Attachment.fromJson(json['attachment'] as Map<String, dynamic>),
       format: json['format'] == null
@@ -807,8 +812,8 @@ _$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
           : Coding.fromJson(json['format'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceContentToJson(
-    _$_DocumentReferenceContent instance) {
+Map<String, dynamic> _$$DocumentReferenceContentImplToJson(
+    _$DocumentReferenceContentImpl instance) {
   final val = <String, dynamic>{
     'attachment': instance.attachment.toJson(),
   };
@@ -823,9 +828,9 @@ Map<String, dynamic> _$$_DocumentReferenceContentToJson(
   return val;
 }
 
-_$_DocumentReferenceContext _$$_DocumentReferenceContextFromJson(
+_$DocumentReferenceContextImpl _$$DocumentReferenceContextImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceContext(
+    _$DocumentReferenceContextImpl(
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
@@ -853,8 +858,8 @@ _$_DocumentReferenceContext _$$_DocumentReferenceContextFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceContextToJson(
-    _$_DocumentReferenceContext instance) {
+Map<String, dynamic> _$$DocumentReferenceContextImplToJson(
+    _$DocumentReferenceContextImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -873,9 +878,9 @@ Map<String, dynamic> _$$_DocumentReferenceContextToJson(
   return val;
 }
 
-_$_DocumentReferenceRelated _$$_DocumentReferenceRelatedFromJson(
+_$DocumentReferenceRelatedImpl _$$DocumentReferenceRelatedImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceRelated(
+    _$DocumentReferenceRelatedImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -884,8 +889,8 @@ _$_DocumentReferenceRelated _$$_DocumentReferenceRelatedFromJson(
           : Reference.fromJson(json['ref'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceRelatedToJson(
-    _$_DocumentReferenceRelated instance) {
+Map<String, dynamic> _$$DocumentReferenceRelatedImplToJson(
+    _$DocumentReferenceRelatedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -12,7 +12,7 @@ part of 'element.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Element _$ElementFromJson(Map<String, dynamic> json) {
   return _Element.fromJson(json);
@@ -77,10 +77,10 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
 }
 
 /// @nodoc
-abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
-  factory _$$_ElementCopyWith(
-          _$_Element value, $Res Function(_$_Element) then) =
-      __$$_ElementCopyWithImpl<$Res>;
+abstract class _$$ElementImplCopyWith<$Res> implements $ElementCopyWith<$Res> {
+  factory _$$ElementImplCopyWith(
+          _$ElementImpl value, $Res Function(_$ElementImpl) then) =
+      __$$ElementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -90,10 +90,11 @@ abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ElementCopyWithImpl<$Res>
-    extends _$ElementCopyWithImpl<$Res, _$_Element>
-    implements _$$_ElementCopyWith<$Res> {
-  __$$_ElementCopyWithImpl(_$_Element _value, $Res Function(_$_Element) _then)
+class __$$ElementImplCopyWithImpl<$Res>
+    extends _$ElementCopyWithImpl<$Res, _$ElementImpl>
+    implements _$$ElementImplCopyWith<$Res> {
+  __$$ElementImplCopyWithImpl(
+      _$ElementImpl _value, $Res Function(_$ElementImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -103,7 +104,7 @@ class __$$_ElementCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
   }) {
-    return _then(_$_Element(
+    return _then(_$ElementImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -122,15 +123,15 @@ class __$$_ElementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Element extends _Element {
-  _$_Element(
+class _$ElementImpl extends _Element {
+  _$ElementImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       @JsonKey(name: 'fhir_comments') this.fhirComments})
       : super._();
 
-  factory _$_Element.fromJson(Map<String, dynamic> json) =>
-      _$$_ElementFromJson(json);
+  factory _$ElementImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ElementImplFromJson(json);
 
   @override
   final Id? id;
@@ -147,10 +148,10 @@ class _$_Element extends _Element {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Element &&
+            other is _$ElementImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -169,12 +170,12 @@ class _$_Element extends _Element {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ElementCopyWith<_$_Element> get copyWith =>
-      __$$_ElementCopyWithImpl<_$_Element>(this, _$identity);
+  _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>
+      __$$ElementImplCopyWithImpl<_$ElementImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ElementToJson(
+    return _$$ElementImplToJson(
       this,
     );
   }
@@ -185,10 +186,10 @@ abstract class _Element extends Element {
           {final Id? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments}) =
-      _$_Element;
+      _$ElementImpl;
   _Element._() : super._();
 
-  factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
+  factory _Element.fromJson(Map<String, dynamic> json) = _$ElementImpl.fromJson;
 
   @override
   Id? get id;
@@ -200,6 +201,6 @@ abstract class _Element extends Element {
   List<String>? get fhirComments;
   @override
   @JsonKey(ignore: true)
-  _$$_ElementCopyWith<_$_Element> get copyWith =>
+  _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

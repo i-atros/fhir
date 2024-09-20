@@ -6,8 +6,8 @@ part of 'payment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
-    _$_PaymentNotice(
+_$PaymentNoticeImpl _$$PaymentNoticeImplFromJson(Map<String, dynamic> json) =>
+    _$PaymentNoticeImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PaymentNotice) ??
@@ -76,7 +76,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
               json['paymentStatus'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
+Map<String, dynamic> _$$PaymentNoticeImplToJson(_$PaymentNoticeImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -237,9 +237,9 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
+_$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliation(
+    _$PaymentReconciliationImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PaymentReconciliation) ??
@@ -321,8 +321,8 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationToJson(
-    _$_PaymentReconciliation instance) {
+Map<String, dynamic> _$$PaymentReconciliationImplToJson(
+    _$PaymentReconciliationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -368,9 +368,9 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
   return val;
 }
 
-_$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
+_$PaymentReconciliationDetailImpl _$$PaymentReconciliationDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliationDetail(
+    _$PaymentReconciliationDetailImpl(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       request: json['request'] == null
           ? null
@@ -393,8 +393,8 @@ _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
           : Money.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
-    _$_PaymentReconciliationDetail instance) {
+Map<String, dynamic> _$$PaymentReconciliationDetailImplToJson(
+    _$PaymentReconciliationDetailImpl instance) {
   final val = <String, dynamic>{
     'type': instance.type.toJson(),
   };
@@ -415,9 +415,10 @@ Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
   return val;
 }
 
-_$_PaymentReconciliationProcessNote
-    _$$_PaymentReconciliationProcessNoteFromJson(Map<String, dynamic> json) =>
-        _$_PaymentReconciliationProcessNote(
+_$PaymentReconciliationProcessNoteImpl
+    _$$PaymentReconciliationProcessNoteImplFromJson(
+            Map<String, dynamic> json) =>
+        _$PaymentReconciliationProcessNoteImpl(
           type: json['type'] == null
               ? null
               : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -427,8 +428,8 @@ _$_PaymentReconciliationProcessNote
               : Element.fromJson(json['_text'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_PaymentReconciliationProcessNoteToJson(
-    _$_PaymentReconciliationProcessNote instance) {
+Map<String, dynamic> _$$PaymentReconciliationProcessNoteImplToJson(
+    _$PaymentReconciliationProcessNoteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

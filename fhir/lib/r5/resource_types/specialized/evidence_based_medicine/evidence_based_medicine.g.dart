@@ -6,7 +6,8 @@ part of 'evidence_based_medicine.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
+_$EvidenceImpl _$$EvidenceImplFromJson(Map<String, dynamic> json) =>
+    _$EvidenceImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Evidence) ??
@@ -175,7 +176,7 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
+Map<String, dynamic> _$$EvidenceImplToJson(_$EvidenceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -418,9 +419,9 @@ const _$EvidenceStatusEnumMap = {
   EvidenceStatus.unknown: 'unknown',
 };
 
-_$_EvidenceVariableDefinition _$$_EvidenceVariableDefinitionFromJson(
+_$EvidenceVariableDefinitionImpl _$$EvidenceVariableDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EvidenceVariableDefinition(
+    _$EvidenceVariableDefinitionImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -451,8 +452,8 @@ _$_EvidenceVariableDefinition _$$_EvidenceVariableDefinitionFromJson(
               json['directnessMatch'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EvidenceVariableDefinitionToJson(
-    _$_EvidenceVariableDefinition instance) {
+Map<String, dynamic> _$$EvidenceVariableDefinitionImplToJson(
+    _$EvidenceVariableDefinitionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -476,8 +477,9 @@ Map<String, dynamic> _$$_EvidenceVariableDefinitionToJson(
   return val;
 }
 
-_$_EvidenceCertainty _$$_EvidenceCertaintyFromJson(Map<String, dynamic> json) =>
-    _$_EvidenceCertainty(
+_$EvidenceCertaintyImpl _$$EvidenceCertaintyImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EvidenceCertaintyImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -507,8 +509,8 @@ _$_EvidenceCertainty _$$_EvidenceCertaintyFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_EvidenceCertaintyToJson(
-    _$_EvidenceCertainty instance) {
+Map<String, dynamic> _$$EvidenceCertaintyImplToJson(
+    _$EvidenceCertaintyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -534,8 +536,9 @@ Map<String, dynamic> _$$_EvidenceCertaintyToJson(
   return val;
 }
 
-_$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
-    _$_EvidenceVariable(
+_$EvidenceVariableImpl _$$EvidenceVariableImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EvidenceVariableImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EvidenceVariable) ??
@@ -705,7 +708,8 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
+Map<String, dynamic> _$$EvidenceVariableImplToJson(
+    _$EvidenceVariableImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -813,65 +817,67 @@ const _$EvidenceVariableHandlingEnumMap = {
   EvidenceVariableHandling.unknown: 'unknown',
 };
 
-_$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
-        Map<String, dynamic> json) =>
-    _$_EvidenceVariableCharacteristic(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      definitionReference: json['definitionReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['definitionReference'] as Map<String, dynamic>),
-      definitionCanonical: json['definitionCanonical'] == null
-          ? null
-          : Canonical.fromJson(json['definitionCanonical']),
-      definitionCanonicalElement: json['_definitionCanonical'] == null
-          ? null
-          : Element.fromJson(
-              json['_definitionCanonical'] as Map<String, dynamic>),
-      definitionCodeableConcept: json['definitionCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['definitionCodeableConcept'] as Map<String, dynamic>),
-      definitionExpression: json['definitionExpression'] == null
-          ? null
-          : Expression.fromJson(
-              json['definitionExpression'] as Map<String, dynamic>),
-      method: json['method'] == null
-          ? null
-          : CodeableConcept.fromJson(json['method'] as Map<String, dynamic>),
-      device: json['device'] == null
-          ? null
-          : Reference.fromJson(json['device'] as Map<String, dynamic>),
-      exclude:
-          json['exclude'] == null ? null : Boolean.fromJson(json['exclude']),
-      excludeElement: json['_exclude'] == null
-          ? null
-          : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
-      timeFromStart: json['timeFromStart'] == null
-          ? null
-          : EvidenceVariableTimeFromStart.fromJson(
-              json['timeFromStart'] as Map<String, dynamic>),
-      groupMeasure: $enumDecodeNullable(
-          _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
-          json['groupMeasure'],
-          unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
-      groupMeasureElement: json['_groupMeasure'] == null
-          ? null
-          : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
-    );
+_$EvidenceVariableCharacteristicImpl
+    _$$EvidenceVariableCharacteristicImplFromJson(Map<String, dynamic> json) =>
+        _$EvidenceVariableCharacteristicImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          definitionReference: json['definitionReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['definitionReference'] as Map<String, dynamic>),
+          definitionCanonical: json['definitionCanonical'] == null
+              ? null
+              : Canonical.fromJson(json['definitionCanonical']),
+          definitionCanonicalElement: json['_definitionCanonical'] == null
+              ? null
+              : Element.fromJson(
+                  json['_definitionCanonical'] as Map<String, dynamic>),
+          definitionCodeableConcept: json['definitionCodeableConcept'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['definitionCodeableConcept'] as Map<String, dynamic>),
+          definitionExpression: json['definitionExpression'] == null
+              ? null
+              : Expression.fromJson(
+                  json['definitionExpression'] as Map<String, dynamic>),
+          method: json['method'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['method'] as Map<String, dynamic>),
+          device: json['device'] == null
+              ? null
+              : Reference.fromJson(json['device'] as Map<String, dynamic>),
+          exclude: json['exclude'] == null
+              ? null
+              : Boolean.fromJson(json['exclude']),
+          excludeElement: json['_exclude'] == null
+              ? null
+              : Element.fromJson(json['_exclude'] as Map<String, dynamic>),
+          timeFromStart: json['timeFromStart'] == null
+              ? null
+              : EvidenceVariableTimeFromStart.fromJson(
+                  json['timeFromStart'] as Map<String, dynamic>),
+          groupMeasure: $enumDecodeNullable(
+              _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
+              json['groupMeasure'],
+              unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
+          groupMeasureElement: json['_groupMeasure'] == null
+              ? null
+              : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_EvidenceVariableCharacteristicToJson(
-    _$_EvidenceVariableCharacteristic instance) {
+Map<String, dynamic> _$$EvidenceVariableCharacteristicImplToJson(
+    _$EvidenceVariableCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -918,33 +924,33 @@ const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
   EvidenceVariableCharacteristicGroupMeasure.unknown: 'unknown',
 };
 
-_$_EvidenceVariableTimeFromStart _$$_EvidenceVariableTimeFromStartFromJson(
-        Map<String, dynamic> json) =>
-    _$_EvidenceVariableTimeFromStart(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      quantity: json['quantity'] == null
-          ? null
-          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-      range: json['range'] == null
-          ? null
-          : Range.fromJson(json['range'] as Map<String, dynamic>),
-      note: (json['note'] as List<dynamic>?)
-          ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$EvidenceVariableTimeFromStartImpl
+    _$$EvidenceVariableTimeFromStartImplFromJson(Map<String, dynamic> json) =>
+        _$EvidenceVariableTimeFromStartImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          quantity: json['quantity'] == null
+              ? null
+              : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+          range: json['range'] == null
+              ? null
+              : Range.fromJson(json['range'] as Map<String, dynamic>),
+          note: (json['note'] as List<dynamic>?)
+              ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_EvidenceVariableTimeFromStartToJson(
-    _$_EvidenceVariableTimeFromStart instance) {
+Map<String, dynamic> _$$EvidenceVariableTimeFromStartImplToJson(
+    _$EvidenceVariableTimeFromStartImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -966,9 +972,9 @@ Map<String, dynamic> _$$_EvidenceVariableTimeFromStartToJson(
   return val;
 }
 
-_$_EvidenceVariableCategory _$$_EvidenceVariableCategoryFromJson(
+_$EvidenceVariableCategoryImpl _$$EvidenceVariableCategoryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EvidenceVariableCategory(
+    _$EvidenceVariableCategoryImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -992,8 +998,8 @@ _$_EvidenceVariableCategory _$$_EvidenceVariableCategoryFromJson(
           : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EvidenceVariableCategoryToJson(
-    _$_EvidenceVariableCategory instance) {
+Map<String, dynamic> _$$EvidenceVariableCategoryImplToJson(
+    _$EvidenceVariableCategoryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

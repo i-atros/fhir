@@ -6,8 +6,8 @@ part of 'summary.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
-    _$_AdverseEvent(
+_$AdverseEventImpl _$$AdverseEventImplFromJson(Map<String, dynamic> json) =>
+    _$AdverseEventImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.AdverseEvent) ??
@@ -132,7 +132,7 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AdverseEventToJson(_$_AdverseEvent instance) {
+Map<String, dynamic> _$$AdverseEventImplToJson(_$AdverseEventImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -355,9 +355,9 @@ const _$AdverseEventActualityEnumMap = {
   AdverseEventActuality.unknown: 'unknown',
 };
 
-_$_AdverseEventParticipant _$$_AdverseEventParticipantFromJson(
+_$AdverseEventParticipantImpl _$$AdverseEventParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdverseEventParticipant(
+    _$AdverseEventParticipantImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -371,8 +371,8 @@ _$_AdverseEventParticipant _$$_AdverseEventParticipantFromJson(
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdverseEventParticipantToJson(
-    _$_AdverseEventParticipant instance) {
+Map<String, dynamic> _$$AdverseEventParticipantImplToJson(
+    _$AdverseEventParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -391,9 +391,9 @@ Map<String, dynamic> _$$_AdverseEventParticipantToJson(
   return val;
 }
 
-_$_AdverseEventSuspectEntity _$$_AdverseEventSuspectEntityFromJson(
+_$AdverseEventSuspectEntityImpl _$$AdverseEventSuspectEntityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdverseEventSuspectEntity(
+    _$AdverseEventSuspectEntityImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -415,8 +415,8 @@ _$_AdverseEventSuspectEntity _$$_AdverseEventSuspectEntityFromJson(
               json['causality'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdverseEventSuspectEntityToJson(
-    _$_AdverseEventSuspectEntity instance) {
+Map<String, dynamic> _$$AdverseEventSuspectEntityImplToJson(
+    _$AdverseEventSuspectEntityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -437,9 +437,9 @@ Map<String, dynamic> _$$_AdverseEventSuspectEntityToJson(
   return val;
 }
 
-_$_AdverseEventCausality _$$_AdverseEventCausalityFromJson(
+_$AdverseEventCausalityImpl _$$AdverseEventCausalityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdverseEventCausality(
+    _$AdverseEventCausalityImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -460,8 +460,8 @@ _$_AdverseEventCausality _$$_AdverseEventCausalityFromJson(
           : Reference.fromJson(json['author'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdverseEventCausalityToJson(
-    _$_AdverseEventCausality instance) {
+Map<String, dynamic> _$$AdverseEventCausalityImplToJson(
+    _$AdverseEventCausalityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -481,27 +481,28 @@ Map<String, dynamic> _$$_AdverseEventCausalityToJson(
   return val;
 }
 
-_$_AdverseEventContributingFactor _$$_AdverseEventContributingFactorFromJson(
-        Map<String, dynamic> json) =>
-    _$_AdverseEventContributingFactor(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      itemReference: json['itemReference'] == null
-          ? null
-          : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
-      itemCodeableConcept: json['itemCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['itemCodeableConcept'] as Map<String, dynamic>),
-    );
+_$AdverseEventContributingFactorImpl
+    _$$AdverseEventContributingFactorImplFromJson(Map<String, dynamic> json) =>
+        _$AdverseEventContributingFactorImpl(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          itemReference: json['itemReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['itemReference'] as Map<String, dynamic>),
+          itemCodeableConcept: json['itemCodeableConcept'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['itemCodeableConcept'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_AdverseEventContributingFactorToJson(
-    _$_AdverseEventContributingFactor instance) {
+Map<String, dynamic> _$$AdverseEventContributingFactorImplToJson(
+    _$AdverseEventContributingFactorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -520,9 +521,9 @@ Map<String, dynamic> _$$_AdverseEventContributingFactorToJson(
   return val;
 }
 
-_$_AdverseEventPreventiveAction _$$_AdverseEventPreventiveActionFromJson(
+_$AdverseEventPreventiveActionImpl _$$AdverseEventPreventiveActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdverseEventPreventiveAction(
+    _$AdverseEventPreventiveActionImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -539,8 +540,8 @@ _$_AdverseEventPreventiveAction _$$_AdverseEventPreventiveActionFromJson(
               json['itemCodeableConcept'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdverseEventPreventiveActionToJson(
-    _$_AdverseEventPreventiveAction instance) {
+Map<String, dynamic> _$$AdverseEventPreventiveActionImplToJson(
+    _$AdverseEventPreventiveActionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -559,9 +560,9 @@ Map<String, dynamic> _$$_AdverseEventPreventiveActionToJson(
   return val;
 }
 
-_$_AdverseEventMitigatingAction _$$_AdverseEventMitigatingActionFromJson(
+_$AdverseEventMitigatingActionImpl _$$AdverseEventMitigatingActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdverseEventMitigatingAction(
+    _$AdverseEventMitigatingActionImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -578,8 +579,8 @@ _$_AdverseEventMitigatingAction _$$_AdverseEventMitigatingActionFromJson(
               json['itemCodeableConcept'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdverseEventMitigatingActionToJson(
-    _$_AdverseEventMitigatingAction instance) {
+Map<String, dynamic> _$$AdverseEventMitigatingActionImplToJson(
+    _$AdverseEventMitigatingActionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -598,9 +599,9 @@ Map<String, dynamic> _$$_AdverseEventMitigatingActionToJson(
   return val;
 }
 
-_$_AdverseEventSupportingInfo _$$_AdverseEventSupportingInfoFromJson(
+_$AdverseEventSupportingInfoImpl _$$AdverseEventSupportingInfoImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AdverseEventSupportingInfo(
+    _$AdverseEventSupportingInfoImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -617,8 +618,8 @@ _$_AdverseEventSupportingInfo _$$_AdverseEventSupportingInfoFromJson(
               json['itemCodeableConcept'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AdverseEventSupportingInfoToJson(
-    _$_AdverseEventSupportingInfo instance) {
+Map<String, dynamic> _$$AdverseEventSupportingInfoImplToJson(
+    _$AdverseEventSupportingInfoImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -637,9 +638,9 @@ Map<String, dynamic> _$$_AdverseEventSupportingInfoToJson(
   return val;
 }
 
-_$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
+_$AllergyIntoleranceImpl _$$AllergyIntoleranceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AllergyIntolerance(
+    _$AllergyIntoleranceImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.AllergyIntolerance) ??
@@ -687,9 +688,8 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      category: (json['category'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
+      category:
+          (json['category'] as List<dynamic>?)?.map(Code.fromJson).toList(),
       categoryElement: (json['_category'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -752,8 +752,8 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_AllergyIntoleranceToJson(
-    _$_AllergyIntolerance instance) {
+Map<String, dynamic> _$$AllergyIntoleranceImplToJson(
+    _$AllergyIntoleranceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -823,9 +823,9 @@ const _$AllergyIntoleranceCriticalityEnumMap = {
   AllergyIntoleranceCriticality.unknown: 'unknown',
 };
 
-_$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
+_$AllergyIntoleranceReactionImpl _$$AllergyIntoleranceReactionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AllergyIntoleranceReaction(
+    _$AllergyIntoleranceReactionImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -863,8 +863,8 @@ _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_AllergyIntoleranceReactionToJson(
-    _$_AllergyIntoleranceReaction instance) {
+Map<String, dynamic> _$$AllergyIntoleranceReactionImplToJson(
+    _$AllergyIntoleranceReactionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -899,9 +899,9 @@ const _$AllergyIntoleranceReactionSeverityEnumMap = {
   AllergyIntoleranceReactionSeverity.unknown: 'unknown',
 };
 
-_$_ClinicalImpression _$$_ClinicalImpressionFromJson(
+_$ClinicalImpressionImpl _$$ClinicalImpressionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClinicalImpression(
+    _$ClinicalImpressionImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ClinicalImpression) ??
@@ -975,9 +975,8 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
       problem: (json['problem'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      protocol: (json['protocol'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
-          .toList(),
+      protocol:
+          (json['protocol'] as List<dynamic>?)?.map(FhirUri.fromJson).toList(),
       protocolElement: (json['_protocol'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1004,8 +1003,8 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ClinicalImpressionToJson(
-    _$_ClinicalImpression instance) {
+Map<String, dynamic> _$$ClinicalImpressionImplToJson(
+    _$ClinicalImpressionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1063,9 +1062,9 @@ Map<String, dynamic> _$$_ClinicalImpressionToJson(
   return val;
 }
 
-_$_ClinicalImpressionFinding _$$_ClinicalImpressionFindingFromJson(
+_$ClinicalImpressionFindingImpl _$$ClinicalImpressionFindingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ClinicalImpressionFinding(
+    _$ClinicalImpressionFindingImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1082,8 +1081,8 @@ _$_ClinicalImpressionFinding _$$_ClinicalImpressionFindingFromJson(
           : Element.fromJson(json['_basis'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ClinicalImpressionFindingToJson(
-    _$_ClinicalImpressionFinding instance) {
+Map<String, dynamic> _$$ClinicalImpressionFindingImplToJson(
+    _$ClinicalImpressionFindingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1103,7 +1102,8 @@ Map<String, dynamic> _$$_ClinicalImpressionFindingToJson(
   return val;
 }
 
-_$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
+_$ConditionImpl _$$ConditionImplFromJson(Map<String, dynamic> json) =>
+    _$ConditionImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Condition) ??
@@ -1222,7 +1222,7 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
+Map<String, dynamic> _$$ConditionImplToJson(_$ConditionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1281,8 +1281,8 @@ Map<String, dynamic> _$$_ConditionToJson(_$_Condition instance) {
   return val;
 }
 
-_$_ConditionStage _$$_ConditionStageFromJson(Map<String, dynamic> json) =>
-    _$_ConditionStage(
+_$ConditionStageImpl _$$ConditionStageImplFromJson(Map<String, dynamic> json) =>
+    _$ConditionStageImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1301,7 +1301,8 @@ _$_ConditionStage _$$_ConditionStageFromJson(Map<String, dynamic> json) =>
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConditionStageToJson(_$_ConditionStage instance) {
+Map<String, dynamic> _$$ConditionStageImplToJson(
+    _$ConditionStageImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1322,8 +1323,9 @@ Map<String, dynamic> _$$_ConditionStageToJson(_$_ConditionStage instance) {
   return val;
 }
 
-_$_ConditionEvidence _$$_ConditionEvidenceFromJson(Map<String, dynamic> json) =>
-    _$_ConditionEvidence(
+_$ConditionEvidenceImpl _$$ConditionEvidenceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ConditionEvidenceImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1339,8 +1341,8 @@ _$_ConditionEvidence _$$_ConditionEvidenceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConditionEvidenceToJson(
-    _$_ConditionEvidence instance) {
+Map<String, dynamic> _$$ConditionEvidenceImplToJson(
+    _$ConditionEvidenceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1359,8 +1361,8 @@ Map<String, dynamic> _$$_ConditionEvidenceToJson(
   return val;
 }
 
-_$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
-    _$_DetectedIssue(
+_$DetectedIssueImpl _$$DetectedIssueImplFromJson(Map<String, dynamic> json) =>
+    _$DetectedIssueImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DetectedIssue) ??
@@ -1447,7 +1449,7 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
+Map<String, dynamic> _$$DetectedIssueImplToJson(_$DetectedIssueImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1503,9 +1505,9 @@ const _$DetectedIssueSeverityEnumMap = {
   DetectedIssueSeverity.unknown: 'unknown',
 };
 
-_$_DetectedIssueEvidence _$$_DetectedIssueEvidenceFromJson(
+_$DetectedIssueEvidenceImpl _$$DetectedIssueEvidenceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DetectedIssueEvidence(
+    _$DetectedIssueEvidenceImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1521,8 +1523,8 @@ _$_DetectedIssueEvidence _$$_DetectedIssueEvidenceFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DetectedIssueEvidenceToJson(
-    _$_DetectedIssueEvidence instance) {
+Map<String, dynamic> _$$DetectedIssueEvidenceImplToJson(
+    _$DetectedIssueEvidenceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1541,9 +1543,9 @@ Map<String, dynamic> _$$_DetectedIssueEvidenceToJson(
   return val;
 }
 
-_$_DetectedIssueMitigation _$$_DetectedIssueMitigationFromJson(
+_$DetectedIssueMitigationImpl _$$DetectedIssueMitigationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DetectedIssueMitigation(
+    _$DetectedIssueMitigationImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1561,8 +1563,8 @@ _$_DetectedIssueMitigation _$$_DetectedIssueMitigationFromJson(
           : Reference.fromJson(json['author'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DetectedIssueMitigationToJson(
-    _$_DetectedIssueMitigation instance) {
+Map<String, dynamic> _$$DetectedIssueMitigationImplToJson(
+    _$DetectedIssueMitigationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1583,9 +1585,9 @@ Map<String, dynamic> _$$_DetectedIssueMitigationToJson(
   return val;
 }
 
-_$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
+_$FamilyMemberHistoryImpl _$$FamilyMemberHistoryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_FamilyMemberHistory(
+    _$FamilyMemberHistoryImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.FamilyMemberHistory) ??
@@ -1621,10 +1623,10 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       instantiatesCanonical: (json['instantiatesCanonical'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(Canonical.fromJson)
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map(FhirUri.fromJson)
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1719,8 +1721,8 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
-    _$_FamilyMemberHistory instance) {
+Map<String, dynamic> _$$FamilyMemberHistoryImplToJson(
+    _$FamilyMemberHistoryImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1798,9 +1800,9 @@ const _$FamilyMemberHistoryStatusEnumMap = {
   FamilyMemberHistoryStatus.unknown: 'unknown',
 };
 
-_$_FamilyMemberHistoryCondition _$$_FamilyMemberHistoryConditionFromJson(
+_$FamilyMemberHistoryConditionImpl _$$FamilyMemberHistoryConditionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_FamilyMemberHistoryCondition(
+    _$FamilyMemberHistoryConditionImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1837,8 +1839,8 @@ _$_FamilyMemberHistoryCondition _$$_FamilyMemberHistoryConditionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_FamilyMemberHistoryConditionToJson(
-    _$_FamilyMemberHistoryCondition instance) {
+Map<String, dynamic> _$$FamilyMemberHistoryConditionImplToJson(
+    _$FamilyMemberHistoryConditionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1866,9 +1868,9 @@ Map<String, dynamic> _$$_FamilyMemberHistoryConditionToJson(
   return val;
 }
 
-_$_FamilyMemberHistoryProcedure _$$_FamilyMemberHistoryProcedureFromJson(
+_$FamilyMemberHistoryProcedureImpl _$$FamilyMemberHistoryProcedureImplFromJson(
         Map<String, dynamic> json) =>
-    _$_FamilyMemberHistoryProcedure(
+    _$FamilyMemberHistoryProcedureImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1912,8 +1914,8 @@ _$_FamilyMemberHistoryProcedure _$$_FamilyMemberHistoryProcedureFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_FamilyMemberHistoryProcedureToJson(
-    _$_FamilyMemberHistoryProcedure instance) {
+Map<String, dynamic> _$$FamilyMemberHistoryProcedureImplToJson(
+    _$FamilyMemberHistoryProcedureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1944,7 +1946,8 @@ Map<String, dynamic> _$$_FamilyMemberHistoryProcedureToJson(
   return val;
 }
 
-_$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
+_$ProcedureImpl _$$ProcedureImplFromJson(Map<String, dynamic> json) =>
+    _$ProcedureImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Procedure) ??
@@ -1980,10 +1983,10 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       instantiatesCanonical: (json['instantiatesCanonical'] as List<dynamic>?)
-          ?.map((e) => Canonical.fromJson(e))
+          ?.map(Canonical.fromJson)
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map(FhirUri.fromJson)
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2095,7 +2098,7 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProcedureToJson(_$_Procedure instance) {
+Map<String, dynamic> _$$ProcedureImplToJson(_$ProcedureImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2172,9 +2175,9 @@ Map<String, dynamic> _$$_ProcedureToJson(_$_Procedure instance) {
   return val;
 }
 
-_$_ProcedurePerformer _$$_ProcedurePerformerFromJson(
+_$ProcedurePerformerImpl _$$ProcedurePerformerImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProcedurePerformer(
+    _$ProcedurePerformerImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2191,8 +2194,8 @@ _$_ProcedurePerformer _$$_ProcedurePerformerFromJson(
           : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProcedurePerformerToJson(
-    _$_ProcedurePerformer instance) {
+Map<String, dynamic> _$$ProcedurePerformerImplToJson(
+    _$ProcedurePerformerImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2212,9 +2215,9 @@ Map<String, dynamic> _$$_ProcedurePerformerToJson(
   return val;
 }
 
-_$_ProcedureFocalDevice _$$_ProcedureFocalDeviceFromJson(
+_$ProcedureFocalDeviceImpl _$$ProcedureFocalDeviceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProcedureFocalDevice(
+    _$ProcedureFocalDeviceImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2229,8 +2232,8 @@ _$_ProcedureFocalDevice _$$_ProcedureFocalDeviceFromJson(
           Reference.fromJson(json['manipulated'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProcedureFocalDeviceToJson(
-    _$_ProcedureFocalDevice instance) {
+Map<String, dynamic> _$$ProcedureFocalDeviceImplToJson(
+    _$ProcedureFocalDeviceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

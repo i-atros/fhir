@@ -6,8 +6,8 @@ part of 'terminology.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
-    _$_CodeSystem(
+_$CodeSystemImpl _$$CodeSystemImplFromJson(Map<String, dynamic> json) =>
+    _$CodeSystemImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CodeSystem) ??
@@ -143,7 +143,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CodeSystemToJson(_$_CodeSystem instance) {
+Map<String, dynamic> _$$CodeSystemImplToJson(_$CodeSystemImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -359,8 +359,9 @@ const _$CodeSystemContentEnumMap = {
   CodeSystemContent.unknown: 'unknown',
 };
 
-_$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
-    _$_CodeSystemFilter(
+_$CodeSystemFilterImpl _$$CodeSystemFilterImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CodeSystemFilterImpl(
       code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -382,7 +383,8 @@ _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
+Map<String, dynamic> _$$CodeSystemFilterImplToJson(
+    _$CodeSystemFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -403,9 +405,9 @@ Map<String, dynamic> _$$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
   return val;
 }
 
-_$_CodeSystemProperty _$$_CodeSystemPropertyFromJson(
+_$CodeSystemPropertyImpl _$$CodeSystemPropertyImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CodeSystemProperty(
+    _$CodeSystemPropertyImpl(
       code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -424,8 +426,8 @@ _$_CodeSystemProperty _$$_CodeSystemPropertyFromJson(
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodeSystemPropertyToJson(
-    _$_CodeSystemProperty instance) {
+Map<String, dynamic> _$$CodeSystemPropertyImplToJson(
+    _$CodeSystemPropertyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -455,8 +457,9 @@ const _$CodeSystemPropertyTypeEnumMap = {
   CodeSystemPropertyType.unknown: 'unknown',
 };
 
-_$_CodeSystemConcept _$$_CodeSystemConceptFromJson(Map<String, dynamic> json) =>
-    _$_CodeSystemConcept(
+_$CodeSystemConceptImpl _$$CodeSystemConceptImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CodeSystemConceptImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -484,8 +487,8 @@ _$_CodeSystemConcept _$$_CodeSystemConceptFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CodeSystemConceptToJson(
-    _$_CodeSystemConcept instance) {
+Map<String, dynamic> _$$CodeSystemConceptImplToJson(
+    _$CodeSystemConceptImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -509,9 +512,9 @@ Map<String, dynamic> _$$_CodeSystemConceptToJson(
   return val;
 }
 
-_$_CodeSystemDesignation _$$_CodeSystemDesignationFromJson(
+_$CodeSystemDesignationImpl _$$CodeSystemDesignationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CodeSystemDesignation(
+    _$CodeSystemDesignationImpl(
       language: json['language'] as String?,
       languageElement: json['_language'] == null
           ? null
@@ -525,8 +528,8 @@ _$_CodeSystemDesignation _$$_CodeSystemDesignationFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodeSystemDesignationToJson(
-    _$_CodeSystemDesignation instance) {
+Map<String, dynamic> _$$CodeSystemDesignationImplToJson(
+    _$CodeSystemDesignationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -543,9 +546,9 @@ Map<String, dynamic> _$$_CodeSystemDesignationToJson(
   return val;
 }
 
-_$_CodeSystemProperty1 _$$_CodeSystemProperty1FromJson(
+_$CodeSystemProperty1Impl _$$CodeSystemProperty1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CodeSystemProperty1(
+    _$CodeSystemProperty1Impl(
       code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -582,8 +585,8 @@ _$_CodeSystemProperty1 _$$_CodeSystemProperty1FromJson(
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodeSystemProperty1ToJson(
-    _$_CodeSystemProperty1 instance) {
+Map<String, dynamic> _$$CodeSystemProperty1ImplToJson(
+    _$CodeSystemProperty1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -608,8 +611,8 @@ Map<String, dynamic> _$$_CodeSystemProperty1ToJson(
   return val;
 }
 
-_$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
-    _$_ConceptMap(
+_$ConceptMapImpl _$$ConceptMapImplFromJson(Map<String, dynamic> json) =>
+    _$ConceptMapImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ConceptMap) ??
@@ -718,7 +721,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
+Map<String, dynamic> _$$ConceptMapImplToJson(_$ConceptMapImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -787,8 +790,9 @@ const _$ConceptMapStatusEnumMap = {
   ConceptMapStatus.unknown: 'unknown',
 };
 
-_$_ConceptMapGroup _$$_ConceptMapGroupFromJson(Map<String, dynamic> json) =>
-    _$_ConceptMapGroup(
+_$ConceptMapGroupImpl _$$ConceptMapGroupImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ConceptMapGroupImpl(
       source: json['source'] as String?,
       sourceElement: json['_source'] == null
           ? null
@@ -814,7 +818,8 @@ _$_ConceptMapGroup _$$_ConceptMapGroupFromJson(Map<String, dynamic> json) =>
               json['unmapped'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConceptMapGroupToJson(_$_ConceptMapGroup instance) {
+Map<String, dynamic> _$$ConceptMapGroupImplToJson(
+    _$ConceptMapGroupImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -836,8 +841,9 @@ Map<String, dynamic> _$$_ConceptMapGroupToJson(_$_ConceptMapGroup instance) {
   return val;
 }
 
-_$_ConceptMapElement _$$_ConceptMapElementFromJson(Map<String, dynamic> json) =>
-    _$_ConceptMapElement(
+_$ConceptMapElementImpl _$$ConceptMapElementImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ConceptMapElementImpl(
       code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -851,8 +857,8 @@ _$_ConceptMapElement _$$_ConceptMapElementFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConceptMapElementToJson(
-    _$_ConceptMapElement instance) {
+Map<String, dynamic> _$$ConceptMapElementImplToJson(
+    _$ConceptMapElementImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -869,8 +875,9 @@ Map<String, dynamic> _$$_ConceptMapElementToJson(
   return val;
 }
 
-_$_ConceptMapTarget _$$_ConceptMapTargetFromJson(Map<String, dynamic> json) =>
-    _$_ConceptMapTarget(
+_$ConceptMapTargetImpl _$$ConceptMapTargetImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ConceptMapTargetImpl(
       code: json['code'] == null ? null : Code.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -896,7 +903,8 @@ _$_ConceptMapTarget _$$_ConceptMapTargetFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConceptMapTargetToJson(_$_ConceptMapTarget instance) {
+Map<String, dynamic> _$$ConceptMapTargetImplToJson(
+    _$ConceptMapTargetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -934,9 +942,9 @@ const _$ConceptMapTargetEquivalenceEnumMap = {
   ConceptMapTargetEquivalence.unknown: 'unknown',
 };
 
-_$_ConceptMapDependsOn _$$_ConceptMapDependsOnFromJson(
+_$ConceptMapDependsOnImpl _$$ConceptMapDependsOnImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ConceptMapDependsOn(
+    _$ConceptMapDependsOnImpl(
       property: json['property'] as String?,
       propertyElement: json['_property'] == null
           ? null
@@ -955,8 +963,8 @@ _$_ConceptMapDependsOn _$$_ConceptMapDependsOnFromJson(
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConceptMapDependsOnToJson(
-    _$_ConceptMapDependsOn instance) {
+Map<String, dynamic> _$$ConceptMapDependsOnImplToJson(
+    _$ConceptMapDependsOnImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -976,9 +984,9 @@ Map<String, dynamic> _$$_ConceptMapDependsOnToJson(
   return val;
 }
 
-_$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
+_$ConceptMapUnmappedImpl _$$ConceptMapUnmappedImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ConceptMapUnmapped(
+    _$ConceptMapUnmappedImpl(
       mode: $enumDecodeNullable(_$ConceptMapUnmappedModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
@@ -997,8 +1005,8 @@ _$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConceptMapUnmappedToJson(
-    _$_ConceptMapUnmapped instance) {
+Map<String, dynamic> _$$ConceptMapUnmappedImplToJson(
+    _$ConceptMapUnmappedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1025,8 +1033,9 @@ const _$ConceptMapUnmappedModeEnumMap = {
   ConceptMapUnmappedMode.unknown: 'unknown',
 };
 
-_$_ExpansionProfile _$$_ExpansionProfileFromJson(Map<String, dynamic> json) =>
-    _$_ExpansionProfile(
+_$ExpansionProfileImpl _$$ExpansionProfileImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ExpansionProfileImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ExpansionProfile) ??
@@ -1168,7 +1177,8 @@ _$_ExpansionProfile _$$_ExpansionProfileFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_limitedExpansion'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileToJson(_$_ExpansionProfile instance) {
+Map<String, dynamic> _$$ExpansionProfileImplToJson(
+    _$ExpansionProfileImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1248,9 +1258,9 @@ const _$ExpansionProfileStatusEnumMap = {
   ExpansionProfileStatus.unknown: 'unknown',
 };
 
-_$_ExpansionProfileFixedVersion _$$_ExpansionProfileFixedVersionFromJson(
+_$ExpansionProfileFixedVersionImpl _$$ExpansionProfileFixedVersionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExpansionProfileFixedVersion(
+    _$ExpansionProfileFixedVersionImpl(
       system: json['system'] as String?,
       systemElement: json['_system'] == null
           ? null
@@ -1266,8 +1276,8 @@ _$_ExpansionProfileFixedVersion _$$_ExpansionProfileFixedVersionFromJson(
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileFixedVersionToJson(
-    _$_ExpansionProfileFixedVersion instance) {
+Map<String, dynamic> _$$ExpansionProfileFixedVersionImplToJson(
+    _$ExpansionProfileFixedVersionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1293,21 +1303,21 @@ const _$ExpansionProfileFixedVersionModeEnumMap = {
   ExpansionProfileFixedVersionMode.unknown: 'unknown',
 };
 
-_$_ExpansionProfileExcludedSystem _$$_ExpansionProfileExcludedSystemFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExpansionProfileExcludedSystem(
-      system: json['system'] as String?,
-      systemElement: json['_system'] == null
-          ? null
-          : Element.fromJson(json['_system'] as Map<String, dynamic>),
-      version: json['version'] as String?,
-      versionElement: json['_version'] == null
-          ? null
-          : Element.fromJson(json['_version'] as Map<String, dynamic>),
-    );
+_$ExpansionProfileExcludedSystemImpl
+    _$$ExpansionProfileExcludedSystemImplFromJson(Map<String, dynamic> json) =>
+        _$ExpansionProfileExcludedSystemImpl(
+          system: json['system'] as String?,
+          systemElement: json['_system'] == null
+              ? null
+              : Element.fromJson(json['_system'] as Map<String, dynamic>),
+          version: json['version'] as String?,
+          versionElement: json['_version'] == null
+              ? null
+              : Element.fromJson(json['_version'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ExpansionProfileExcludedSystemToJson(
-    _$_ExpansionProfileExcludedSystem instance) {
+Map<String, dynamic> _$$ExpansionProfileExcludedSystemImplToJson(
+    _$ExpansionProfileExcludedSystemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1323,9 +1333,9 @@ Map<String, dynamic> _$$_ExpansionProfileExcludedSystemToJson(
   return val;
 }
 
-_$_ExpansionProfileDesignation _$$_ExpansionProfileDesignationFromJson(
+_$ExpansionProfileDesignationImpl _$$ExpansionProfileDesignationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExpansionProfileDesignation(
+    _$ExpansionProfileDesignationImpl(
       include: json['include'] == null
           ? null
           : ExpansionProfileInclude.fromJson(
@@ -1336,8 +1346,8 @@ _$_ExpansionProfileDesignation _$$_ExpansionProfileDesignationFromJson(
               json['exclude'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileDesignationToJson(
-    _$_ExpansionProfileDesignation instance) {
+Map<String, dynamic> _$$ExpansionProfileDesignationImplToJson(
+    _$ExpansionProfileDesignationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1351,17 +1361,17 @@ Map<String, dynamic> _$$_ExpansionProfileDesignationToJson(
   return val;
 }
 
-_$_ExpansionProfileInclude _$$_ExpansionProfileIncludeFromJson(
+_$ExpansionProfileIncludeImpl _$$ExpansionProfileIncludeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExpansionProfileInclude(
+    _$ExpansionProfileIncludeImpl(
       designation: (json['designation'] as List<dynamic>?)
           ?.map((e) =>
               ExpansionProfileDesignation1.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileIncludeToJson(
-    _$_ExpansionProfileInclude instance) {
+Map<String, dynamic> _$$ExpansionProfileIncludeImplToJson(
+    _$ExpansionProfileIncludeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1375,9 +1385,9 @@ Map<String, dynamic> _$$_ExpansionProfileIncludeToJson(
   return val;
 }
 
-_$_ExpansionProfileDesignation1 _$$_ExpansionProfileDesignation1FromJson(
+_$ExpansionProfileDesignation1Impl _$$ExpansionProfileDesignation1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExpansionProfileDesignation1(
+    _$ExpansionProfileDesignation1Impl(
       language: json['language'] as String?,
       languageElement: json['_language'] == null
           ? null
@@ -1387,8 +1397,8 @@ _$_ExpansionProfileDesignation1 _$$_ExpansionProfileDesignation1FromJson(
           : Coding.fromJson(json['use'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileDesignation1ToJson(
-    _$_ExpansionProfileDesignation1 instance) {
+Map<String, dynamic> _$$ExpansionProfileDesignation1ImplToJson(
+    _$ExpansionProfileDesignation1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1403,17 +1413,17 @@ Map<String, dynamic> _$$_ExpansionProfileDesignation1ToJson(
   return val;
 }
 
-_$_ExpansionProfileExclude _$$_ExpansionProfileExcludeFromJson(
+_$ExpansionProfileExcludeImpl _$$ExpansionProfileExcludeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExpansionProfileExclude(
+    _$ExpansionProfileExcludeImpl(
       designation: (json['designation'] as List<dynamic>?)
           ?.map((e) =>
               ExpansionProfileDesignation2.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileExcludeToJson(
-    _$_ExpansionProfileExclude instance) {
+Map<String, dynamic> _$$ExpansionProfileExcludeImplToJson(
+    _$ExpansionProfileExcludeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1427,9 +1437,9 @@ Map<String, dynamic> _$$_ExpansionProfileExcludeToJson(
   return val;
 }
 
-_$_ExpansionProfileDesignation2 _$$_ExpansionProfileDesignation2FromJson(
+_$ExpansionProfileDesignation2Impl _$$ExpansionProfileDesignation2ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExpansionProfileDesignation2(
+    _$ExpansionProfileDesignation2Impl(
       language: json['language'] as String?,
       languageElement: json['_language'] == null
           ? null
@@ -1439,8 +1449,8 @@ _$_ExpansionProfileDesignation2 _$$_ExpansionProfileDesignation2FromJson(
           : Coding.fromJson(json['use'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpansionProfileDesignation2ToJson(
-    _$_ExpansionProfileDesignation2 instance) {
+Map<String, dynamic> _$$ExpansionProfileDesignation2ImplToJson(
+    _$ExpansionProfileDesignation2Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1455,8 +1465,8 @@ Map<String, dynamic> _$$_ExpansionProfileDesignation2ToJson(
   return val;
 }
 
-_$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
-    _$_NamingSystem(
+_$NamingSystemImpl _$$NamingSystemImplFromJson(Map<String, dynamic> json) =>
+    _$NamingSystemImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.NamingSystem) ??
@@ -1540,7 +1550,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['replacedBy'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
+Map<String, dynamic> _$$NamingSystemImplToJson(_$NamingSystemImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1605,9 +1615,9 @@ const _$NamingSystemKindEnumMap = {
   NamingSystemKind.unknown: 'unknown',
 };
 
-_$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
+_$NamingSystemUniqueIdImpl _$$NamingSystemUniqueIdImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NamingSystemUniqueId(
+    _$NamingSystemUniqueIdImpl(
       type:
           $enumDecodeNullable(_$NamingSystemUniqueIdTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
@@ -1632,8 +1642,8 @@ _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NamingSystemUniqueIdToJson(
-    _$_NamingSystemUniqueId instance) {
+Map<String, dynamic> _$$NamingSystemUniqueIdImplToJson(
+    _$NamingSystemUniqueIdImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1662,7 +1672,8 @@ const _$NamingSystemUniqueIdTypeEnumMap = {
   NamingSystemUniqueIdType.unknown: 'unknown',
 };
 
-_$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
+_$ValueSetImpl _$$ValueSetImplFromJson(Map<String, dynamic> json) =>
+    _$ValueSetImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ValueSet) ??
@@ -1773,7 +1784,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
               json['expansion'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
+Map<String, dynamic> _$$ValueSetImplToJson(_$ValueSetImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1842,8 +1853,9 @@ const _$ValueSetStatusEnumMap = {
   ValueSetStatus.unknown: 'unknown',
 };
 
-_$_ValueSetCompose _$$_ValueSetComposeFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetCompose(
+_$ValueSetComposeImpl _$$ValueSetComposeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValueSetComposeImpl(
       lockedDate:
           json['lockedDate'] == null ? null : Date.fromJson(json['lockedDate']),
       lockedDateElement: json['_lockedDate'] == null
@@ -1862,7 +1874,8 @@ _$_ValueSetCompose _$$_ValueSetComposeFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
+Map<String, dynamic> _$$ValueSetComposeImplToJson(
+    _$ValueSetComposeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1880,8 +1893,9 @@ Map<String, dynamic> _$$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
   return val;
 }
 
-_$_ValueSetInclude _$$_ValueSetIncludeFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetInclude(
+_$ValueSetIncludeImpl _$$ValueSetIncludeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValueSetIncludeImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1908,7 +1922,8 @@ _$_ValueSetInclude _$$_ValueSetIncludeFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
+Map<String, dynamic> _$$ValueSetIncludeImplToJson(
+    _$ValueSetIncludeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1931,8 +1946,9 @@ Map<String, dynamic> _$$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
   return val;
 }
 
-_$_ValueSetConcept _$$_ValueSetConceptFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetConcept(
+_$ValueSetConceptImpl _$$ValueSetConceptImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValueSetConceptImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1949,7 +1965,8 @@ _$_ValueSetConcept _$$_ValueSetConceptFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
+Map<String, dynamic> _$$ValueSetConceptImplToJson(
+    _$ValueSetConceptImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1969,9 +1986,9 @@ Map<String, dynamic> _$$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
   return val;
 }
 
-_$_ValueSetDesignation _$$_ValueSetDesignationFromJson(
+_$ValueSetDesignationImpl _$$ValueSetDesignationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ValueSetDesignation(
+    _$ValueSetDesignationImpl(
       language: json['language'] as String?,
       languageElement: json['_language'] == null
           ? null
@@ -1985,8 +2002,8 @@ _$_ValueSetDesignation _$$_ValueSetDesignationFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ValueSetDesignationToJson(
-    _$_ValueSetDesignation instance) {
+Map<String, dynamic> _$$ValueSetDesignationImplToJson(
+    _$ValueSetDesignationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2003,8 +2020,8 @@ Map<String, dynamic> _$$_ValueSetDesignationToJson(
   return val;
 }
 
-_$_ValueSetFilter _$$_ValueSetFilterFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetFilter(
+_$ValueSetFilterImpl _$$ValueSetFilterImplFromJson(Map<String, dynamic> json) =>
+    _$ValueSetFilterImpl(
       property: json['property'] as String?,
       propertyElement: json['_property'] == null
           ? null
@@ -2019,7 +2036,8 @@ _$_ValueSetFilter _$$_ValueSetFilterFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ValueSetFilterToJson(_$_ValueSetFilter instance) {
+Map<String, dynamic> _$$ValueSetFilterImplToJson(
+    _$ValueSetFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2050,8 +2068,9 @@ const _$ValueSetFilterOpEnumMap = {
   ValueSetFilterOp.unknown: 'unknown',
 };
 
-_$_ValueSetExpansion _$$_ValueSetExpansionFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetExpansion(
+_$ValueSetExpansionImpl _$$ValueSetExpansionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValueSetExpansionImpl(
       identifier: json['identifier'] as String?,
       identifierElement: json['_identifier'] == null
           ? null
@@ -2078,8 +2097,8 @@ _$_ValueSetExpansion _$$_ValueSetExpansionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ValueSetExpansionToJson(
-    _$_ValueSetExpansion instance) {
+Map<String, dynamic> _$$ValueSetExpansionImplToJson(
+    _$ValueSetExpansionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2102,8 +2121,9 @@ Map<String, dynamic> _$$_ValueSetExpansionToJson(
   return val;
 }
 
-_$_ValueSetParameter _$$_ValueSetParameterFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetParameter(
+_$ValueSetParameterImpl _$$ValueSetParameterImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValueSetParameterImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -2141,8 +2161,8 @@ _$_ValueSetParameter _$$_ValueSetParameterFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ValueSetParameterToJson(
-    _$_ValueSetParameter instance) {
+Map<String, dynamic> _$$ValueSetParameterImplToJson(
+    _$ValueSetParameterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2168,8 +2188,9 @@ Map<String, dynamic> _$$_ValueSetParameterToJson(
   return val;
 }
 
-_$_ValueSetContains _$$_ValueSetContainsFromJson(Map<String, dynamic> json) =>
-    _$_ValueSetContains(
+_$ValueSetContainsImpl _$$ValueSetContainsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ValueSetContainsImpl(
       system: json['system'] as String?,
       systemElement: json['_system'] == null
           ? null
@@ -2204,7 +2225,8 @@ _$_ValueSetContains _$$_ValueSetContainsFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ValueSetContainsToJson(_$_ValueSetContains instance) {
+Map<String, dynamic> _$$ValueSetContainsImplToJson(
+    _$ValueSetContainsImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

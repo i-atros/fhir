@@ -6,8 +6,8 @@ part of 'public_health_and_research.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
-    _$_ResearchStudy(
+_$ResearchStudyImpl _$$ResearchStudyImplFromJson(Map<String, dynamic> json) =>
+    _$ResearchStudyImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ResearchStudy) ??
@@ -177,7 +177,7 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
+Map<String, dynamic> _$$ResearchStudyImplToJson(_$ResearchStudyImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -432,9 +432,9 @@ const _$ResearchStudyStatusEnumMap = {
   ResearchStudyStatus.unknown: 'unknown',
 };
 
-_$_ResearchStudyLabel _$$_ResearchStudyLabelFromJson(
+_$ResearchStudyLabelImpl _$$ResearchStudyLabelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyLabel(
+    _$ResearchStudyLabelImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -451,8 +451,8 @@ _$_ResearchStudyLabel _$$_ResearchStudyLabelFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyLabelToJson(
-    _$_ResearchStudyLabel instance) {
+Map<String, dynamic> _$$ResearchStudyLabelImplToJson(
+    _$ResearchStudyLabelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -472,9 +472,9 @@ Map<String, dynamic> _$$_ResearchStudyLabelToJson(
   return val;
 }
 
-_$_ResearchStudyFocus _$$_ResearchStudyFocusFromJson(
+_$ResearchStudyFocusImpl _$$ResearchStudyFocusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyFocus(
+    _$ResearchStudyFocusImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -495,8 +495,8 @@ _$_ResearchStudyFocus _$$_ResearchStudyFocusFromJson(
           : Element.fromJson(json['_factor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyFocusToJson(
-    _$_ResearchStudyFocus instance) {
+Map<String, dynamic> _$$ResearchStudyFocusImplToJson(
+    _$ResearchStudyFocusImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -518,9 +518,9 @@ Map<String, dynamic> _$$_ResearchStudyFocusToJson(
   return val;
 }
 
-_$_ResearchStudyClassification _$$_ResearchStudyClassificationFromJson(
+_$ResearchStudyClassificationImpl _$$ResearchStudyClassificationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyClassification(
+    _$ResearchStudyClassificationImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -536,8 +536,8 @@ _$_ResearchStudyClassification _$$_ResearchStudyClassificationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResearchStudyClassificationToJson(
-    _$_ResearchStudyClassification instance) {
+Map<String, dynamic> _$$ResearchStudyClassificationImplToJson(
+    _$ResearchStudyClassificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -557,9 +557,9 @@ Map<String, dynamic> _$$_ResearchStudyClassificationToJson(
   return val;
 }
 
-_$_ResearchStudyAssociatedParty _$$_ResearchStudyAssociatedPartyFromJson(
+_$ResearchStudyAssociatedPartyImpl _$$ResearchStudyAssociatedPartyImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyAssociatedParty(
+    _$ResearchStudyAssociatedPartyImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -580,8 +580,8 @@ _$_ResearchStudyAssociatedParty _$$_ResearchStudyAssociatedPartyFromJson(
           : Reference.fromJson(json['party'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyAssociatedPartyToJson(
-    _$_ResearchStudyAssociatedParty instance) {
+Map<String, dynamic> _$$ResearchStudyAssociatedPartyImplToJson(
+    _$ResearchStudyAssociatedPartyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -604,9 +604,9 @@ Map<String, dynamic> _$$_ResearchStudyAssociatedPartyToJson(
   return val;
 }
 
-_$_ResearchStudyStatusDate _$$_ResearchStudyStatusDateFromJson(
+_$ResearchStudyStatusDateImpl _$$ResearchStudyStatusDateImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyStatusDate(
+    _$ResearchStudyStatusDateImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -623,8 +623,8 @@ _$_ResearchStudyStatusDate _$$_ResearchStudyStatusDateFromJson(
       period: Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyStatusDateToJson(
-    _$_ResearchStudyStatusDate instance) {
+Map<String, dynamic> _$$ResearchStudyStatusDateImplToJson(
+    _$ResearchStudyStatusDateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -645,9 +645,9 @@ Map<String, dynamic> _$$_ResearchStudyStatusDateToJson(
   return val;
 }
 
-_$_ResearchStudyRecruitment _$$_ResearchStudyRecruitmentFromJson(
+_$ResearchStudyRecruitmentImpl _$$ResearchStudyRecruitmentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyRecruitment(
+    _$ResearchStudyRecruitmentImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -675,8 +675,8 @@ _$_ResearchStudyRecruitment _$$_ResearchStudyRecruitmentFromJson(
           : Reference.fromJson(json['actualGroup'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyRecruitmentToJson(
-    _$_ResearchStudyRecruitment instance) {
+Map<String, dynamic> _$$ResearchStudyRecruitmentImplToJson(
+    _$ResearchStudyRecruitmentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -699,9 +699,9 @@ Map<String, dynamic> _$$_ResearchStudyRecruitmentToJson(
   return val;
 }
 
-_$_ResearchStudyComparisonGroup _$$_ResearchStudyComparisonGroupFromJson(
+_$ResearchStudyComparisonGroupImpl _$$ResearchStudyComparisonGroupImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyComparisonGroup(
+    _$ResearchStudyComparisonGroupImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -740,8 +740,8 @@ _$_ResearchStudyComparisonGroup _$$_ResearchStudyComparisonGroupFromJson(
           : Reference.fromJson(json['observedGroup'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyComparisonGroupToJson(
-    _$_ResearchStudyComparisonGroup instance) {
+Map<String, dynamic> _$$ResearchStudyComparisonGroupImplToJson(
+    _$ResearchStudyComparisonGroupImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -769,9 +769,9 @@ Map<String, dynamic> _$$_ResearchStudyComparisonGroupToJson(
   return val;
 }
 
-_$_ResearchStudyObjective _$$_ResearchStudyObjectiveFromJson(
+_$ResearchStudyObjectiveImpl _$$ResearchStudyObjectiveImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyObjective(
+    _$ResearchStudyObjectiveImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -794,8 +794,8 @@ _$_ResearchStudyObjective _$$_ResearchStudyObjectiveFromJson(
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyObjectiveToJson(
-    _$_ResearchStudyObjective instance) {
+Map<String, dynamic> _$$ResearchStudyObjectiveImplToJson(
+    _$ResearchStudyObjectiveImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -817,9 +817,9 @@ Map<String, dynamic> _$$_ResearchStudyObjectiveToJson(
   return val;
 }
 
-_$_ResearchStudyOutcomeMeasure _$$_ResearchStudyOutcomeMeasureFromJson(
+_$ResearchStudyOutcomeMeasureImpl _$$ResearchStudyOutcomeMeasureImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyOutcomeMeasure(
+    _$ResearchStudyOutcomeMeasureImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -845,8 +845,8 @@ _$_ResearchStudyOutcomeMeasure _$$_ResearchStudyOutcomeMeasureFromJson(
           : Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyOutcomeMeasureToJson(
-    _$_ResearchStudyOutcomeMeasure instance) {
+Map<String, dynamic> _$$ResearchStudyOutcomeMeasureImplToJson(
+    _$ResearchStudyOutcomeMeasureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -869,9 +869,9 @@ Map<String, dynamic> _$$_ResearchStudyOutcomeMeasureToJson(
   return val;
 }
 
-_$_ResearchStudyWebLocation _$$_ResearchStudyWebLocationFromJson(
+_$ResearchStudyWebLocationImpl _$$ResearchStudyWebLocationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyWebLocation(
+    _$ResearchStudyWebLocationImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -888,8 +888,8 @@ _$_ResearchStudyWebLocation _$$_ResearchStudyWebLocationFromJson(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyWebLocationToJson(
-    _$_ResearchStudyWebLocation instance) {
+Map<String, dynamic> _$$ResearchStudyWebLocationImplToJson(
+    _$ResearchStudyWebLocationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -909,8 +909,9 @@ Map<String, dynamic> _$$_ResearchStudyWebLocationToJson(
   return val;
 }
 
-_$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
-    _$_ResearchSubject(
+_$ResearchSubjectImpl _$$ResearchSubjectImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ResearchSubjectImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ResearchSubject) ??
@@ -973,7 +974,8 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['consent'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
+Map<String, dynamic> _$$ResearchSubjectImplToJson(
+    _$ResearchSubjectImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1020,9 +1022,9 @@ const _$ResearchSubjectStatusEnumMap = {
   ResearchSubjectStatus.unknown: 'unknown',
 };
 
-_$_ResearchSubjectProgress _$$_ResearchSubjectProgressFromJson(
+_$ResearchSubjectProgressImpl _$$ResearchSubjectProgressImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchSubjectProgress(
+    _$ResearchSubjectProgressImpl(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1057,8 +1059,8 @@ _$_ResearchSubjectProgress _$$_ResearchSubjectProgressFromJson(
           : Element.fromJson(json['_endDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchSubjectProgressToJson(
-    _$_ResearchSubjectProgress instance) {
+Map<String, dynamic> _$$ResearchSubjectProgressImplToJson(
+    _$ResearchSubjectProgressImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -6,8 +6,8 @@ part of 'groups.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
-    _$_Organization(
+_$OrganizationImpl _$$OrganizationImplFromJson(Map<String, dynamic> json) =>
+    _$OrganizationImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Organization) ??
@@ -67,7 +67,7 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
+Map<String, dynamic> _$$OrganizationImplToJson(_$OrganizationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -203,9 +203,9 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_OrganizationContact _$$_OrganizationContactFromJson(
+_$OrganizationContactImpl _$$OrganizationContactImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OrganizationContact(
+    _$OrganizationContactImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -230,8 +230,8 @@ _$_OrganizationContact _$$_OrganizationContactFromJson(
           : Address.fromJson(json['address'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OrganizationContactToJson(
-    _$_OrganizationContact instance) {
+Map<String, dynamic> _$$OrganizationContactImplToJson(
+    _$OrganizationContactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -253,8 +253,9 @@ Map<String, dynamic> _$$_OrganizationContactToJson(
   return val;
 }
 
-_$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
-    _$_HealthcareService(
+_$HealthcareServiceImpl _$$HealthcareServiceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$HealthcareServiceImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.HealthcareService) ??
@@ -359,8 +360,8 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
               json['_availabilityExceptions'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceToJson(
-    _$_HealthcareService instance) {
+Map<String, dynamic> _$$HealthcareServiceImplToJson(
+    _$HealthcareServiceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -423,9 +424,9 @@ Map<String, dynamic> _$$_HealthcareServiceToJson(
   return val;
 }
 
-_$_HealthcareServiceServiceType _$$_HealthcareServiceServiceTypeFromJson(
+_$HealthcareServiceServiceTypeImpl _$$HealthcareServiceServiceTypeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_HealthcareServiceServiceType(
+    _$HealthcareServiceServiceTypeImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -439,8 +440,8 @@ _$_HealthcareServiceServiceType _$$_HealthcareServiceServiceTypeFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceServiceTypeToJson(
-    _$_HealthcareServiceServiceType instance) {
+Map<String, dynamic> _$$HealthcareServiceServiceTypeImplToJson(
+    _$HealthcareServiceServiceTypeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -460,43 +461,45 @@ Map<String, dynamic> _$$_HealthcareServiceServiceTypeToJson(
   return val;
 }
 
-_$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
-        Map<String, dynamic> json) =>
-    _$_HealthcareServiceAvailableTime(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => $enumDecode(_$AvailableTimeDaysOfWeekEnumMap, e))
-          .toList(),
-      daysOfWeekElement: json['_daysOfWeek'] == null
-          ? null
-          : Element.fromJson(json['_daysOfWeek'] as Map<String, dynamic>),
-      allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
-      allDayElement: json['_allDay'] == null
-          ? null
-          : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
-      availableStartTime: json['availableStartTime'] == null
-          ? null
-          : Time.fromJson(json['availableStartTime']),
-      availableStartTimeElement: json['_availableStartTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_availableStartTime'] as Map<String, dynamic>),
-      availableEndTime: json['availableEndTime'] == null
-          ? null
-          : Time.fromJson(json['availableEndTime']),
-      availableEndTimeElement: json['_availableEndTime'] == null
-          ? null
-          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
-    );
+_$HealthcareServiceAvailableTimeImpl
+    _$$HealthcareServiceAvailableTimeImplFromJson(Map<String, dynamic> json) =>
+        _$HealthcareServiceAvailableTimeImpl(
+          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => $enumDecode(_$AvailableTimeDaysOfWeekEnumMap, e))
+              .toList(),
+          daysOfWeekElement: json['_daysOfWeek'] == null
+              ? null
+              : Element.fromJson(json['_daysOfWeek'] as Map<String, dynamic>),
+          allDay:
+              json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
+          allDayElement: json['_allDay'] == null
+              ? null
+              : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
+          availableStartTime: json['availableStartTime'] == null
+              ? null
+              : Time.fromJson(json['availableStartTime']),
+          availableStartTimeElement: json['_availableStartTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableStartTime'] as Map<String, dynamic>),
+          availableEndTime: json['availableEndTime'] == null
+              ? null
+              : Time.fromJson(json['availableEndTime']),
+          availableEndTimeElement: json['_availableEndTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableEndTime'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_HealthcareServiceAvailableTimeToJson(
-    _$_HealthcareServiceAvailableTime instance) {
+Map<String, dynamic> _$$HealthcareServiceAvailableTimeImplToJson(
+    _$HealthcareServiceAvailableTimeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -537,27 +540,27 @@ const _$AvailableTimeDaysOfWeekEnumMap = {
   AvailableTimeDaysOfWeek.unknown: 'unknown',
 };
 
-_$_HealthcareServiceNotAvailable _$$_HealthcareServiceNotAvailableFromJson(
-        Map<String, dynamic> json) =>
-    _$_HealthcareServiceNotAvailable(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      during: json['during'] == null
-          ? null
-          : Period.fromJson(json['during'] as Map<String, dynamic>),
-    );
+_$HealthcareServiceNotAvailableImpl
+    _$$HealthcareServiceNotAvailableImplFromJson(Map<String, dynamic> json) =>
+        _$HealthcareServiceNotAvailableImpl(
+          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          description: json['description'] as String,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          during: json['during'] == null
+              ? null
+              : Period.fromJson(json['during'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
-    _$_HealthcareServiceNotAvailable instance) {
+Map<String, dynamic> _$$HealthcareServiceNotAvailableImplToJson(
+    _$HealthcareServiceNotAvailableImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -577,7 +580,7 @@ Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
   return val;
 }
 
-_$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
+_$GroupImpl _$$GroupImplFromJson(Map<String, dynamic> json) => _$GroupImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Group) ??
@@ -642,7 +645,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
+Map<String, dynamic> _$$GroupImplToJson(_$GroupImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -693,9 +696,9 @@ const _$GroupTypeEnumMap = {
   GroupType.unknown: 'unknown',
 };
 
-_$_GroupCharacteristic _$$_GroupCharacteristicFromJson(
+_$GroupCharacteristicImpl _$$GroupCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GroupCharacteristic(
+    _$GroupCharacteristicImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -726,8 +729,8 @@ _$_GroupCharacteristic _$$_GroupCharacteristicFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GroupCharacteristicToJson(
-    _$_GroupCharacteristic instance) {
+Map<String, dynamic> _$$GroupCharacteristicImplToJson(
+    _$GroupCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -752,8 +755,8 @@ Map<String, dynamic> _$$_GroupCharacteristicToJson(
   return val;
 }
 
-_$_GroupMember _$$_GroupMemberFromJson(Map<String, dynamic> json) =>
-    _$_GroupMember(
+_$GroupMemberImpl _$$GroupMemberImplFromJson(Map<String, dynamic> json) =>
+    _$GroupMemberImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -772,7 +775,7 @@ _$_GroupMember _$$_GroupMemberFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_inactive'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GroupMemberToJson(_$_GroupMember instance) {
+Map<String, dynamic> _$$GroupMemberImplToJson(_$GroupMemberImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

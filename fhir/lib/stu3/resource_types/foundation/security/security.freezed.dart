@@ -12,7 +12,7 @@ part of 'security.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
   return _AuditEvent.fromJson(json);
@@ -70,34 +70,27 @@ abstract class $AuditEventCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
       AuditEventAction? action,
-      @JsonKey(name: '_action')
-          Element? actionElement,
+      @JsonKey(name: '_action') Element? actionElement,
       String? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       AuditEventOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? outcomeDesc,
-      @JsonKey(name: '_outcomeDesc')
-          Element? outcomeDescElement,
+      @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
       List<CodeableConcept>? purposeOfEvent,
       List<AuditEventAgent> agent,
       AuditEventSource source,
@@ -372,43 +365,36 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventCopyWith<$Res>
+abstract class _$$AuditEventImplCopyWith<$Res>
     implements $AuditEventCopyWith<$Res> {
-  factory _$$_AuditEventCopyWith(
-          _$_AuditEvent value, $Res Function(_$_AuditEvent) then) =
-      __$$_AuditEventCopyWithImpl<$Res>;
+  factory _$$AuditEventImplCopyWith(
+          _$AuditEventImpl value, $Res Function(_$AuditEventImpl) then) =
+      __$$AuditEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding type,
       List<Coding>? subtype,
       AuditEventAction? action,
-      @JsonKey(name: '_action')
-          Element? actionElement,
+      @JsonKey(name: '_action') Element? actionElement,
       String? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       AuditEventOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? outcomeDesc,
-      @JsonKey(name: '_outcomeDesc')
-          Element? outcomeDescElement,
+      @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
       List<CodeableConcept>? purposeOfEvent,
       List<AuditEventAgent> agent,
       AuditEventSource source,
@@ -437,11 +423,11 @@ abstract class _$$_AuditEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventCopyWithImpl<$Res>
-    extends _$AuditEventCopyWithImpl<$Res, _$_AuditEvent>
-    implements _$$_AuditEventCopyWith<$Res> {
-  __$$_AuditEventCopyWithImpl(
-      _$_AuditEvent _value, $Res Function(_$_AuditEvent) _then)
+class __$$AuditEventImplCopyWithImpl<$Res>
+    extends _$AuditEventCopyWithImpl<$Res, _$AuditEventImpl>
+    implements _$$AuditEventImplCopyWith<$Res> {
+  __$$AuditEventImplCopyWithImpl(
+      _$AuditEventImpl _value, $Res Function(_$AuditEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -473,7 +459,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
     Object? source = null,
     Object? entity = freezed,
   }) {
-    return _then(_$_AuditEvent(
+    return _then(_$AuditEventImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -580,45 +566,38 @@ class __$$_AuditEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEvent extends _AuditEvent {
-  _$_AuditEvent(
+class _$AuditEventImpl extends _AuditEvent {
+  _$AuditEventImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-          this.resourceType = Stu3ResourceType.AuditEvent,
+      this.resourceType = Stu3ResourceType.AuditEvent,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.type,
       this.subtype,
       this.action,
-      @JsonKey(name: '_action')
-          this.actionElement,
+      @JsonKey(name: '_action') this.actionElement,
       this.recorded,
-      @JsonKey(name: '_recorded')
-          this.recordedElement,
+      @JsonKey(name: '_recorded') this.recordedElement,
       this.outcome,
-      @JsonKey(name: '_outcome')
-          this.outcomeElement,
+      @JsonKey(name: '_outcome') this.outcomeElement,
       this.outcomeDesc,
-      @JsonKey(name: '_outcomeDesc')
-          this.outcomeDescElement,
+      @JsonKey(name: '_outcomeDesc') this.outcomeDescElement,
       this.purposeOfEvent,
       required this.agent,
       required this.source,
       this.entity})
       : super._();
 
-  factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventFromJson(json);
+  factory _$AuditEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
@@ -685,10 +664,10 @@ class _$_AuditEvent extends _AuditEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEvent &&
+            other is _$AuditEventImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -764,12 +743,12 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventCopyWith<_$_AuditEvent> get copyWith =>
-      __$$_AuditEventCopyWithImpl<_$_AuditEvent>(this, _$identity);
+  _$$AuditEventImplCopyWith<_$AuditEventImpl> get copyWith =>
+      __$$AuditEventImplCopyWithImpl<_$AuditEventImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventToJson(
+    return _$$AuditEventImplToJson(
       this,
     );
   }
@@ -778,42 +757,35 @@ class _$_AuditEvent extends _AuditEvent {
 abstract class _AuditEvent extends AuditEvent {
   factory _AuditEvent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Coding type,
       final List<Coding>? subtype,
       final AuditEventAction? action,
-      @JsonKey(name: '_action')
-          final Element? actionElement,
+      @JsonKey(name: '_action') final Element? actionElement,
       final String? recorded,
-      @JsonKey(name: '_recorded')
-          final Element? recordedElement,
+      @JsonKey(name: '_recorded') final Element? recordedElement,
       final AuditEventOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          final Element? outcomeElement,
+      @JsonKey(name: '_outcome') final Element? outcomeElement,
       final String? outcomeDesc,
-      @JsonKey(name: '_outcomeDesc')
-          final Element? outcomeDescElement,
+      @JsonKey(name: '_outcomeDesc') final Element? outcomeDescElement,
       final List<CodeableConcept>? purposeOfEvent,
       required final List<AuditEventAgent> agent,
       required final AuditEventSource source,
-      final List<AuditEventEntity>? entity}) = _$_AuditEvent;
+      final List<AuditEventEntity>? entity}) = _$AuditEventImpl;
   _AuditEvent._() : super._();
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
-      _$_AuditEvent.fromJson;
+      _$AuditEventImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
@@ -875,7 +847,7 @@ abstract class _AuditEvent extends AuditEvent {
   List<AuditEventEntity>? get entity;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventCopyWith<_$_AuditEvent> get copyWith =>
+  _$$AuditEventImplCopyWith<_$AuditEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1135,11 +1107,11 @@ class _$AuditEventAgentCopyWithImpl<$Res, $Val extends AuditEventAgent>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventAgentCopyWith<$Res>
+abstract class _$$AuditEventAgentImplCopyWith<$Res>
     implements $AuditEventAgentCopyWith<$Res> {
-  factory _$$_AuditEventAgentCopyWith(
-          _$_AuditEventAgent value, $Res Function(_$_AuditEventAgent) then) =
-      __$$_AuditEventAgentCopyWithImpl<$Res>;
+  factory _$$AuditEventAgentImplCopyWith(_$AuditEventAgentImpl value,
+          $Res Function(_$AuditEventAgentImpl) then) =
+      __$$AuditEventAgentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1178,11 +1150,11 @@ abstract class _$$_AuditEventAgentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventAgentCopyWithImpl<$Res>
-    extends _$AuditEventAgentCopyWithImpl<$Res, _$_AuditEventAgent>
-    implements _$$_AuditEventAgentCopyWith<$Res> {
-  __$$_AuditEventAgentCopyWithImpl(
-      _$_AuditEventAgent _value, $Res Function(_$_AuditEventAgent) _then)
+class __$$AuditEventAgentImplCopyWithImpl<$Res>
+    extends _$AuditEventAgentCopyWithImpl<$Res, _$AuditEventAgentImpl>
+    implements _$$AuditEventAgentImplCopyWith<$Res> {
+  __$$AuditEventAgentImplCopyWithImpl(
+      _$AuditEventAgentImpl _value, $Res Function(_$AuditEventAgentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1204,7 +1176,7 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
     Object? network = freezed,
     Object? purposeOfUse = freezed,
   }) {
-    return _then(_$_AuditEventAgent(
+    return _then(_$AuditEventAgentImpl(
       role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
@@ -1271,8 +1243,8 @@ class __$$_AuditEventAgentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventAgent extends _AuditEventAgent {
-  _$_AuditEventAgent(
+class _$AuditEventAgentImpl extends _AuditEventAgent {
+  _$AuditEventAgentImpl(
       {this.role,
       this.reference,
       this.userId,
@@ -1290,8 +1262,8 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       this.purposeOfUse})
       : super._();
 
-  factory _$_AuditEventAgent.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventAgentFromJson(json);
+  factory _$AuditEventAgentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventAgentImplFromJson(json);
 
   @override
   final List<CodeableConcept>? role;
@@ -1334,10 +1306,10 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventAgent &&
+            other is _$AuditEventAgentImpl &&
             const DeepCollectionEquality().equals(other.role, role) &&
             (identical(other.reference, reference) ||
                 other.reference == reference) &&
@@ -1386,12 +1358,13 @@ class _$_AuditEventAgent extends _AuditEventAgent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventAgentCopyWith<_$_AuditEventAgent> get copyWith =>
-      __$$_AuditEventAgentCopyWithImpl<_$_AuditEventAgent>(this, _$identity);
+  _$$AuditEventAgentImplCopyWith<_$AuditEventAgentImpl> get copyWith =>
+      __$$AuditEventAgentImplCopyWithImpl<_$AuditEventAgentImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventAgentToJson(
+    return _$$AuditEventAgentImplToJson(
       this,
     );
   }
@@ -1413,11 +1386,11 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       @JsonKey(name: '_policy') final List<Element?>? policyElement,
       final Coding? media,
       final AuditEventNetwork? network,
-      final List<CodeableConcept>? purposeOfUse}) = _$_AuditEventAgent;
+      final List<CodeableConcept>? purposeOfUse}) = _$AuditEventAgentImpl;
   _AuditEventAgent._() : super._();
 
   factory _AuditEventAgent.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventAgent.fromJson;
+      _$AuditEventAgentImpl.fromJson;
 
   @override
   List<CodeableConcept>? get role;
@@ -1455,7 +1428,7 @@ abstract class _AuditEventAgent extends AuditEventAgent {
   List<CodeableConcept>? get purposeOfUse;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventAgentCopyWith<_$_AuditEventAgent> get copyWith =>
+  _$$AuditEventAgentImplCopyWith<_$AuditEventAgentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1558,11 +1531,11 @@ class _$AuditEventNetworkCopyWithImpl<$Res, $Val extends AuditEventNetwork>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventNetworkCopyWith<$Res>
+abstract class _$$AuditEventNetworkImplCopyWith<$Res>
     implements $AuditEventNetworkCopyWith<$Res> {
-  factory _$$_AuditEventNetworkCopyWith(_$_AuditEventNetwork value,
-          $Res Function(_$_AuditEventNetwork) then) =
-      __$$_AuditEventNetworkCopyWithImpl<$Res>;
+  factory _$$AuditEventNetworkImplCopyWith(_$AuditEventNetworkImpl value,
+          $Res Function(_$AuditEventNetworkImpl) then) =
+      __$$AuditEventNetworkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1578,11 +1551,11 @@ abstract class _$$_AuditEventNetworkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventNetworkCopyWithImpl<$Res>
-    extends _$AuditEventNetworkCopyWithImpl<$Res, _$_AuditEventNetwork>
-    implements _$$_AuditEventNetworkCopyWith<$Res> {
-  __$$_AuditEventNetworkCopyWithImpl(
-      _$_AuditEventNetwork _value, $Res Function(_$_AuditEventNetwork) _then)
+class __$$AuditEventNetworkImplCopyWithImpl<$Res>
+    extends _$AuditEventNetworkCopyWithImpl<$Res, _$AuditEventNetworkImpl>
+    implements _$$AuditEventNetworkImplCopyWith<$Res> {
+  __$$AuditEventNetworkImplCopyWithImpl(_$AuditEventNetworkImpl _value,
+      $Res Function(_$AuditEventNetworkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1593,7 +1566,7 @@ class __$$_AuditEventNetworkCopyWithImpl<$Res>
     Object? type = freezed,
     Object? typeElement = freezed,
   }) {
-    return _then(_$_AuditEventNetwork(
+    return _then(_$AuditEventNetworkImpl(
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -1616,16 +1589,16 @@ class __$$_AuditEventNetworkCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventNetwork extends _AuditEventNetwork {
-  _$_AuditEventNetwork(
+class _$AuditEventNetworkImpl extends _AuditEventNetwork {
+  _$AuditEventNetworkImpl(
       {this.address,
       @JsonKey(name: '_address') this.addressElement,
       this.type,
       @JsonKey(name: '_type') this.typeElement})
       : super._();
 
-  factory _$_AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventNetworkFromJson(json);
+  factory _$AuditEventNetworkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventNetworkImplFromJson(json);
 
   @override
   final String? address;
@@ -1644,10 +1617,10 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventNetwork &&
+            other is _$AuditEventNetworkImpl &&
             (identical(other.address, address) || other.address == address) &&
             (identical(other.addressElement, addressElement) ||
                 other.addressElement == addressElement) &&
@@ -1664,13 +1637,13 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventNetworkCopyWith<_$_AuditEventNetwork> get copyWith =>
-      __$$_AuditEventNetworkCopyWithImpl<_$_AuditEventNetwork>(
+  _$$AuditEventNetworkImplCopyWith<_$AuditEventNetworkImpl> get copyWith =>
+      __$$AuditEventNetworkImplCopyWithImpl<_$AuditEventNetworkImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventNetworkToJson(
+    return _$$AuditEventNetworkImplToJson(
       this,
     );
   }
@@ -1682,11 +1655,11 @@ abstract class _AuditEventNetwork extends AuditEventNetwork {
           @JsonKey(name: '_address') final Element? addressElement,
           final AuditEventNetworkType? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
-      _$_AuditEventNetwork;
+      _$AuditEventNetworkImpl;
   _AuditEventNetwork._() : super._();
 
   factory _AuditEventNetwork.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventNetwork.fromJson;
+      _$AuditEventNetworkImpl.fromJson;
 
   @override
   String? get address;
@@ -1700,7 +1673,7 @@ abstract class _AuditEventNetwork extends AuditEventNetwork {
   Element? get typeElement;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventNetworkCopyWith<_$_AuditEventNetwork> get copyWith =>
+  _$$AuditEventNetworkImplCopyWith<_$AuditEventNetworkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1798,11 +1771,11 @@ class _$AuditEventSourceCopyWithImpl<$Res, $Val extends AuditEventSource>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventSourceCopyWith<$Res>
+abstract class _$$AuditEventSourceImplCopyWith<$Res>
     implements $AuditEventSourceCopyWith<$Res> {
-  factory _$$_AuditEventSourceCopyWith(
-          _$_AuditEventSource value, $Res Function(_$_AuditEventSource) then) =
-      __$$_AuditEventSourceCopyWithImpl<$Res>;
+  factory _$$AuditEventSourceImplCopyWith(_$AuditEventSourceImpl value,
+          $Res Function(_$AuditEventSourceImpl) then) =
+      __$$AuditEventSourceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1818,11 +1791,11 @@ abstract class _$$_AuditEventSourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventSourceCopyWithImpl<$Res>
-    extends _$AuditEventSourceCopyWithImpl<$Res, _$_AuditEventSource>
-    implements _$$_AuditEventSourceCopyWith<$Res> {
-  __$$_AuditEventSourceCopyWithImpl(
-      _$_AuditEventSource _value, $Res Function(_$_AuditEventSource) _then)
+class __$$AuditEventSourceImplCopyWithImpl<$Res>
+    extends _$AuditEventSourceCopyWithImpl<$Res, _$AuditEventSourceImpl>
+    implements _$$AuditEventSourceImplCopyWith<$Res> {
+  __$$AuditEventSourceImplCopyWithImpl(_$AuditEventSourceImpl _value,
+      $Res Function(_$AuditEventSourceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1833,7 +1806,7 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
     Object? identifier = null,
     Object? type = freezed,
   }) {
-    return _then(_$_AuditEventSource(
+    return _then(_$AuditEventSourceImpl(
       site: freezed == site
           ? _value.site
           : site // ignore: cast_nullable_to_non_nullable
@@ -1856,16 +1829,16 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventSource extends _AuditEventSource {
-  _$_AuditEventSource(
+class _$AuditEventSourceImpl extends _AuditEventSource {
+  _$AuditEventSourceImpl(
       {this.site,
       @JsonKey(name: '_site') this.siteElement,
       required this.identifier,
       this.type})
       : super._();
 
-  factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventSourceFromJson(json);
+  factory _$AuditEventSourceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventSourceImplFromJson(json);
 
   @override
   final String? site;
@@ -1883,10 +1856,10 @@ class _$_AuditEventSource extends _AuditEventSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventSource &&
+            other is _$AuditEventSourceImpl &&
             (identical(other.site, site) || other.site == site) &&
             (identical(other.siteElement, siteElement) ||
                 other.siteElement == siteElement) &&
@@ -1903,12 +1876,13 @@ class _$_AuditEventSource extends _AuditEventSource {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventSourceCopyWith<_$_AuditEventSource> get copyWith =>
-      __$$_AuditEventSourceCopyWithImpl<_$_AuditEventSource>(this, _$identity);
+  _$$AuditEventSourceImplCopyWith<_$AuditEventSourceImpl> get copyWith =>
+      __$$AuditEventSourceImplCopyWithImpl<_$AuditEventSourceImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventSourceToJson(
+    return _$$AuditEventSourceImplToJson(
       this,
     );
   }
@@ -1919,11 +1893,11 @@ abstract class _AuditEventSource extends AuditEventSource {
       {final String? site,
       @JsonKey(name: '_site') final Element? siteElement,
       required final Identifier identifier,
-      final List<Coding>? type}) = _$_AuditEventSource;
+      final List<Coding>? type}) = _$AuditEventSourceImpl;
   _AuditEventSource._() : super._();
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventSource.fromJson;
+      _$AuditEventSourceImpl.fromJson;
 
   @override
   String? get site;
@@ -1936,7 +1910,7 @@ abstract class _AuditEventSource extends AuditEventSource {
   List<Coding>? get type;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventSourceCopyWith<_$_AuditEventSource> get copyWith =>
+  _$$AuditEventSourceImplCopyWith<_$AuditEventSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2181,11 +2155,11 @@ class _$AuditEventEntityCopyWithImpl<$Res, $Val extends AuditEventEntity>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventEntityCopyWith<$Res>
+abstract class _$$AuditEventEntityImplCopyWith<$Res>
     implements $AuditEventEntityCopyWith<$Res> {
-  factory _$$_AuditEventEntityCopyWith(
-          _$_AuditEventEntity value, $Res Function(_$_AuditEventEntity) then) =
-      __$$_AuditEventEntityCopyWithImpl<$Res>;
+  factory _$$AuditEventEntityImplCopyWith(_$AuditEventEntityImpl value,
+          $Res Function(_$AuditEventEntityImpl) then) =
+      __$$AuditEventEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2222,11 +2196,11 @@ abstract class _$$_AuditEventEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventEntityCopyWithImpl<$Res>
-    extends _$AuditEventEntityCopyWithImpl<$Res, _$_AuditEventEntity>
-    implements _$$_AuditEventEntityCopyWith<$Res> {
-  __$$_AuditEventEntityCopyWithImpl(
-      _$_AuditEventEntity _value, $Res Function(_$_AuditEventEntity) _then)
+class __$$AuditEventEntityImplCopyWithImpl<$Res>
+    extends _$AuditEventEntityCopyWithImpl<$Res, _$AuditEventEntityImpl>
+    implements _$$AuditEventEntityImplCopyWith<$Res> {
+  __$$AuditEventEntityImplCopyWithImpl(_$AuditEventEntityImpl _value,
+      $Res Function(_$AuditEventEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2246,7 +2220,7 @@ class __$$_AuditEventEntityCopyWithImpl<$Res>
     Object? queryElement = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$_AuditEventEntity(
+    return _then(_$AuditEventEntityImpl(
       identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
@@ -2305,8 +2279,8 @@ class __$$_AuditEventEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventEntity extends _AuditEventEntity {
-  _$_AuditEventEntity(
+class _$AuditEventEntityImpl extends _AuditEventEntity {
+  _$AuditEventEntityImpl(
       {this.identifier,
       this.reference,
       this.type,
@@ -2322,8 +2296,8 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       this.detail})
       : super._();
 
-  factory _$_AuditEventEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventEntityFromJson(json);
+  factory _$AuditEventEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventEntityImplFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -2361,10 +2335,10 @@ class _$_AuditEventEntity extends _AuditEventEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventEntity &&
+            other is _$AuditEventEntityImpl &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.reference, reference) ||
@@ -2409,12 +2383,13 @@ class _$_AuditEventEntity extends _AuditEventEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventEntityCopyWith<_$_AuditEventEntity> get copyWith =>
-      __$$_AuditEventEntityCopyWithImpl<_$_AuditEventEntity>(this, _$identity);
+  _$$AuditEventEntityImplCopyWith<_$AuditEventEntityImpl> get copyWith =>
+      __$$AuditEventEntityImplCopyWithImpl<_$AuditEventEntityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventEntityToJson(
+    return _$$AuditEventEntityImplToJson(
       this,
     );
   }
@@ -2434,11 +2409,11 @@ abstract class _AuditEventEntity extends AuditEventEntity {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final String? query,
       @JsonKey(name: '_query') final Element? queryElement,
-      final List<AuditEventDetail>? detail}) = _$_AuditEventEntity;
+      final List<AuditEventDetail>? detail}) = _$AuditEventEntityImpl;
   _AuditEventEntity._() : super._();
 
   factory _AuditEventEntity.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventEntity.fromJson;
+      _$AuditEventEntityImpl.fromJson;
 
   @override
   Identifier? get identifier;
@@ -2471,7 +2446,7 @@ abstract class _AuditEventEntity extends AuditEventEntity {
   List<AuditEventDetail>? get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventEntityCopyWith<_$_AuditEventEntity> get copyWith =>
+  _$$AuditEventEntityImplCopyWith<_$AuditEventEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2574,11 +2549,11 @@ class _$AuditEventDetailCopyWithImpl<$Res, $Val extends AuditEventDetail>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventDetailCopyWith<$Res>
+abstract class _$$AuditEventDetailImplCopyWith<$Res>
     implements $AuditEventDetailCopyWith<$Res> {
-  factory _$$_AuditEventDetailCopyWith(
-          _$_AuditEventDetail value, $Res Function(_$_AuditEventDetail) then) =
-      __$$_AuditEventDetailCopyWithImpl<$Res>;
+  factory _$$AuditEventDetailImplCopyWith(_$AuditEventDetailImpl value,
+          $Res Function(_$AuditEventDetailImpl) then) =
+      __$$AuditEventDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2594,11 +2569,11 @@ abstract class _$$_AuditEventDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventDetailCopyWithImpl<$Res>
-    extends _$AuditEventDetailCopyWithImpl<$Res, _$_AuditEventDetail>
-    implements _$$_AuditEventDetailCopyWith<$Res> {
-  __$$_AuditEventDetailCopyWithImpl(
-      _$_AuditEventDetail _value, $Res Function(_$_AuditEventDetail) _then)
+class __$$AuditEventDetailImplCopyWithImpl<$Res>
+    extends _$AuditEventDetailCopyWithImpl<$Res, _$AuditEventDetailImpl>
+    implements _$$AuditEventDetailImplCopyWith<$Res> {
+  __$$AuditEventDetailImplCopyWithImpl(_$AuditEventDetailImpl _value,
+      $Res Function(_$AuditEventDetailImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2609,7 +2584,7 @@ class __$$_AuditEventDetailCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_$_AuditEventDetail(
+    return _then(_$AuditEventDetailImpl(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -2632,16 +2607,16 @@ class __$$_AuditEventDetailCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventDetail extends _AuditEventDetail {
-  _$_AuditEventDetail(
+class _$AuditEventDetailImpl extends _AuditEventDetail {
+  _$AuditEventDetailImpl(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.value,
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_AuditEventDetail.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventDetailFromJson(json);
+  factory _$AuditEventDetailImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventDetailImplFromJson(json);
 
   @override
   final String? type;
@@ -2660,10 +2635,10 @@ class _$_AuditEventDetail extends _AuditEventDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventDetail &&
+            other is _$AuditEventDetailImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -2680,12 +2655,13 @@ class _$_AuditEventDetail extends _AuditEventDetail {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventDetailCopyWith<_$_AuditEventDetail> get copyWith =>
-      __$$_AuditEventDetailCopyWithImpl<_$_AuditEventDetail>(this, _$identity);
+  _$$AuditEventDetailImplCopyWith<_$AuditEventDetailImpl> get copyWith =>
+      __$$AuditEventDetailImplCopyWithImpl<_$AuditEventDetailImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventDetailToJson(
+    return _$$AuditEventDetailImplToJson(
       this,
     );
   }
@@ -2697,11 +2673,11 @@ abstract class _AuditEventDetail extends AuditEventDetail {
           @JsonKey(name: '_type') final Element? typeElement,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
-      _$_AuditEventDetail;
+      _$AuditEventDetailImpl;
   _AuditEventDetail._() : super._();
 
   factory _AuditEventDetail.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventDetail.fromJson;
+      _$AuditEventDetailImpl.fromJson;
 
   @override
   String? get type;
@@ -2715,7 +2691,7 @@ abstract class _AuditEventDetail extends AuditEventDetail {
   Element? get valueElement;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventDetailCopyWith<_$_AuditEventDetail> get copyWith =>
+  _$$AuditEventDetailImplCopyWith<_$AuditEventDetailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2780,30 +2756,25 @@ abstract class $ConsentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       ConsentStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       Reference patient,
       Period? period,
       FhirDateTime? dateTime,
-      @JsonKey(name: '_dateTime')
-          Element? dateTimeElement,
+      @JsonKey(name: '_dateTime') Element? dateTimeElement,
       List<Reference>? consentingParty,
       List<ConsentActor>? actor,
       List<CodeableConcept>? action,
@@ -2813,8 +2784,7 @@ abstract class $ConsentCopyWith<$Res> {
       Reference? sourceReference,
       List<ConsentPolicy>? policy,
       String? policyRule,
-      @JsonKey(name: '_policyRule')
-          Element? policyRuleElement,
+      @JsonKey(name: '_policyRule') Element? policyRuleElement,
       List<Coding>? securityLabel,
       List<Coding>? purpose,
       Period? dataPeriod,
@@ -3191,38 +3161,33 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
 }
 
 /// @nodoc
-abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
-  factory _$$_ConsentCopyWith(
-          _$_Consent value, $Res Function(_$_Consent) then) =
-      __$$_ConsentCopyWithImpl<$Res>;
+abstract class _$$ConsentImplCopyWith<$Res> implements $ConsentCopyWith<$Res> {
+  factory _$$ConsentImplCopyWith(
+          _$ConsentImpl value, $Res Function(_$ConsentImpl) then) =
+      __$$ConsentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       ConsentStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       Reference patient,
       Period? period,
       FhirDateTime? dateTime,
-      @JsonKey(name: '_dateTime')
-          Element? dateTimeElement,
+      @JsonKey(name: '_dateTime') Element? dateTimeElement,
       List<Reference>? consentingParty,
       List<ConsentActor>? actor,
       List<CodeableConcept>? action,
@@ -3232,8 +3197,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       Reference? sourceReference,
       List<ConsentPolicy>? policy,
       String? policyRule,
-      @JsonKey(name: '_policyRule')
-          Element? policyRuleElement,
+      @JsonKey(name: '_policyRule') Element? policyRuleElement,
       List<Coding>? securityLabel,
       List<Coding>? purpose,
       Period? dataPeriod,
@@ -3271,10 +3235,11 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ConsentCopyWithImpl<$Res>
-    extends _$ConsentCopyWithImpl<$Res, _$_Consent>
-    implements _$$_ConsentCopyWith<$Res> {
-  __$$_ConsentCopyWithImpl(_$_Consent _value, $Res Function(_$_Consent) _then)
+class __$$ConsentImplCopyWithImpl<$Res>
+    extends _$ConsentCopyWithImpl<$Res, _$ConsentImpl>
+    implements _$$ConsentImplCopyWith<$Res> {
+  __$$ConsentImplCopyWithImpl(
+      _$ConsentImpl _value, $Res Function(_$ConsentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3315,7 +3280,7 @@ class __$$_ConsentCopyWithImpl<$Res>
     Object? data = freezed,
     Object? except = freezed,
   }) {
-    return _then(_$_Consent(
+    return _then(_$ConsentImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3458,33 +3423,28 @@ class __$$_ConsentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Consent extends _Consent {
-  _$_Consent(
+class _$ConsentImpl extends _Consent {
+  _$ConsentImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
-          this.resourceType = Stu3ResourceType.Consent,
+      this.resourceType = Stu3ResourceType.Consent,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.category,
       required this.patient,
       this.period,
       this.dateTime,
-      @JsonKey(name: '_dateTime')
-          this.dateTimeElement,
+      @JsonKey(name: '_dateTime') this.dateTimeElement,
       this.consentingParty,
       this.actor,
       this.action,
@@ -3494,8 +3454,7 @@ class _$_Consent extends _Consent {
       this.sourceReference,
       this.policy,
       this.policyRule,
-      @JsonKey(name: '_policyRule')
-          this.policyRuleElement,
+      @JsonKey(name: '_policyRule') this.policyRuleElement,
       this.securityLabel,
       this.purpose,
       this.dataPeriod,
@@ -3503,8 +3462,8 @@ class _$_Consent extends _Consent {
       this.except})
       : super._();
 
-  factory _$_Consent.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentFromJson(json);
+  factory _$ConsentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
@@ -3588,10 +3547,10 @@ class _$_Consent extends _Consent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Consent &&
+            other is _$ConsentImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -3691,12 +3650,12 @@ class _$_Consent extends _Consent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentCopyWith<_$_Consent> get copyWith =>
-      __$$_ConsentCopyWithImpl<_$_Consent>(this, _$identity);
+  _$$ConsentImplCopyWith<_$ConsentImpl> get copyWith =>
+      __$$ConsentImplCopyWithImpl<_$ConsentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentToJson(
+    return _$$ConsentImplToJson(
       this,
     );
   }
@@ -3705,30 +3664,25 @@ class _$_Consent extends _Consent {
 abstract class _Consent extends Consent {
   factory _Consent(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final ConsentStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       required final Reference patient,
       final Period? period,
       final FhirDateTime? dateTime,
-      @JsonKey(name: '_dateTime')
-          final Element? dateTimeElement,
+      @JsonKey(name: '_dateTime') final Element? dateTimeElement,
       final List<Reference>? consentingParty,
       final List<ConsentActor>? actor,
       final List<CodeableConcept>? action,
@@ -3738,16 +3692,15 @@ abstract class _Consent extends Consent {
       final Reference? sourceReference,
       final List<ConsentPolicy>? policy,
       final String? policyRule,
-      @JsonKey(name: '_policyRule')
-          final Element? policyRuleElement,
+      @JsonKey(name: '_policyRule') final Element? policyRuleElement,
       final List<Coding>? securityLabel,
       final List<Coding>? purpose,
       final Period? dataPeriod,
       final List<ConsentData>? data,
-      final List<ConsentExcept>? except}) = _$_Consent;
+      final List<ConsentExcept>? except}) = _$ConsentImpl;
   _Consent._() : super._();
 
-  factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
+  factory _Consent.fromJson(Map<String, dynamic> json) = _$ConsentImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
@@ -3826,7 +3779,7 @@ abstract class _Consent extends Consent {
   List<ConsentExcept>? get except;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentCopyWith<_$_Consent> get copyWith =>
+  _$$ConsentImplCopyWith<_$ConsentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3903,11 +3856,11 @@ class _$ConsentActorCopyWithImpl<$Res, $Val extends ConsentActor>
 }
 
 /// @nodoc
-abstract class _$$_ConsentActorCopyWith<$Res>
+abstract class _$$ConsentActorImplCopyWith<$Res>
     implements $ConsentActorCopyWith<$Res> {
-  factory _$$_ConsentActorCopyWith(
-          _$_ConsentActor value, $Res Function(_$_ConsentActor) then) =
-      __$$_ConsentActorCopyWithImpl<$Res>;
+  factory _$$ConsentActorImplCopyWith(
+          _$ConsentActorImpl value, $Res Function(_$ConsentActorImpl) then) =
+      __$$ConsentActorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CodeableConcept role, Reference reference});
@@ -3919,11 +3872,11 @@ abstract class _$$_ConsentActorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConsentActorCopyWithImpl<$Res>
-    extends _$ConsentActorCopyWithImpl<$Res, _$_ConsentActor>
-    implements _$$_ConsentActorCopyWith<$Res> {
-  __$$_ConsentActorCopyWithImpl(
-      _$_ConsentActor _value, $Res Function(_$_ConsentActor) _then)
+class __$$ConsentActorImplCopyWithImpl<$Res>
+    extends _$ConsentActorCopyWithImpl<$Res, _$ConsentActorImpl>
+    implements _$$ConsentActorImplCopyWith<$Res> {
+  __$$ConsentActorImplCopyWithImpl(
+      _$ConsentActorImpl _value, $Res Function(_$ConsentActorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3932,7 +3885,7 @@ class __$$_ConsentActorCopyWithImpl<$Res>
     Object? role = null,
     Object? reference = null,
   }) {
-    return _then(_$_ConsentActor(
+    return _then(_$ConsentActorImpl(
       role: null == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
@@ -3947,11 +3900,11 @@ class __$$_ConsentActorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConsentActor extends _ConsentActor {
-  _$_ConsentActor({required this.role, required this.reference}) : super._();
+class _$ConsentActorImpl extends _ConsentActor {
+  _$ConsentActorImpl({required this.role, required this.reference}) : super._();
 
-  factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentActorFromJson(json);
+  factory _$ConsentActorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentActorImplFromJson(json);
 
   @override
   final CodeableConcept role;
@@ -3964,10 +3917,10 @@ class _$_ConsentActor extends _ConsentActor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConsentActor &&
+            other is _$ConsentActorImpl &&
             (identical(other.role, role) || other.role == role) &&
             (identical(other.reference, reference) ||
                 other.reference == reference));
@@ -3980,12 +3933,12 @@ class _$_ConsentActor extends _ConsentActor {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentActorCopyWith<_$_ConsentActor> get copyWith =>
-      __$$_ConsentActorCopyWithImpl<_$_ConsentActor>(this, _$identity);
+  _$$ConsentActorImplCopyWith<_$ConsentActorImpl> get copyWith =>
+      __$$ConsentActorImplCopyWithImpl<_$ConsentActorImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentActorToJson(
+    return _$$ConsentActorImplToJson(
       this,
     );
   }
@@ -3994,11 +3947,11 @@ class _$_ConsentActor extends _ConsentActor {
 abstract class _ConsentActor extends ConsentActor {
   factory _ConsentActor(
       {required final CodeableConcept role,
-      required final Reference reference}) = _$_ConsentActor;
+      required final Reference reference}) = _$ConsentActorImpl;
   _ConsentActor._() : super._();
 
   factory _ConsentActor.fromJson(Map<String, dynamic> json) =
-      _$_ConsentActor.fromJson;
+      _$ConsentActorImpl.fromJson;
 
   @override
   CodeableConcept get role;
@@ -4006,7 +3959,7 @@ abstract class _ConsentActor extends ConsentActor {
   Reference get reference;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentActorCopyWith<_$_ConsentActor> get copyWith =>
+  _$$ConsentActorImplCopyWith<_$ConsentActorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4109,11 +4062,11 @@ class _$ConsentPolicyCopyWithImpl<$Res, $Val extends ConsentPolicy>
 }
 
 /// @nodoc
-abstract class _$$_ConsentPolicyCopyWith<$Res>
+abstract class _$$ConsentPolicyImplCopyWith<$Res>
     implements $ConsentPolicyCopyWith<$Res> {
-  factory _$$_ConsentPolicyCopyWith(
-          _$_ConsentPolicy value, $Res Function(_$_ConsentPolicy) then) =
-      __$$_ConsentPolicyCopyWithImpl<$Res>;
+  factory _$$ConsentPolicyImplCopyWith(
+          _$ConsentPolicyImpl value, $Res Function(_$ConsentPolicyImpl) then) =
+      __$$ConsentPolicyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4129,11 +4082,11 @@ abstract class _$$_ConsentPolicyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConsentPolicyCopyWithImpl<$Res>
-    extends _$ConsentPolicyCopyWithImpl<$Res, _$_ConsentPolicy>
-    implements _$$_ConsentPolicyCopyWith<$Res> {
-  __$$_ConsentPolicyCopyWithImpl(
-      _$_ConsentPolicy _value, $Res Function(_$_ConsentPolicy) _then)
+class __$$ConsentPolicyImplCopyWithImpl<$Res>
+    extends _$ConsentPolicyCopyWithImpl<$Res, _$ConsentPolicyImpl>
+    implements _$$ConsentPolicyImplCopyWith<$Res> {
+  __$$ConsentPolicyImplCopyWithImpl(
+      _$ConsentPolicyImpl _value, $Res Function(_$ConsentPolicyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4144,7 +4097,7 @@ class __$$_ConsentPolicyCopyWithImpl<$Res>
     Object? uri = freezed,
     Object? uriElement = freezed,
   }) {
-    return _then(_$_ConsentPolicy(
+    return _then(_$ConsentPolicyImpl(
       authority: freezed == authority
           ? _value.authority
           : authority // ignore: cast_nullable_to_non_nullable
@@ -4167,16 +4120,16 @@ class __$$_ConsentPolicyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConsentPolicy extends _ConsentPolicy {
-  _$_ConsentPolicy(
+class _$ConsentPolicyImpl extends _ConsentPolicy {
+  _$ConsentPolicyImpl(
       {this.authority,
       @JsonKey(name: '_authority') this.authorityElement,
       this.uri,
       @JsonKey(name: '_uri') this.uriElement})
       : super._();
 
-  factory _$_ConsentPolicy.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentPolicyFromJson(json);
+  factory _$ConsentPolicyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentPolicyImplFromJson(json);
 
   @override
   final String? authority;
@@ -4195,10 +4148,10 @@ class _$_ConsentPolicy extends _ConsentPolicy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConsentPolicy &&
+            other is _$ConsentPolicyImpl &&
             (identical(other.authority, authority) ||
                 other.authority == authority) &&
             (identical(other.authorityElement, authorityElement) ||
@@ -4216,12 +4169,12 @@ class _$_ConsentPolicy extends _ConsentPolicy {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentPolicyCopyWith<_$_ConsentPolicy> get copyWith =>
-      __$$_ConsentPolicyCopyWithImpl<_$_ConsentPolicy>(this, _$identity);
+  _$$ConsentPolicyImplCopyWith<_$ConsentPolicyImpl> get copyWith =>
+      __$$ConsentPolicyImplCopyWithImpl<_$ConsentPolicyImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentPolicyToJson(
+    return _$$ConsentPolicyImplToJson(
       this,
     );
   }
@@ -4232,11 +4185,11 @@ abstract class _ConsentPolicy extends ConsentPolicy {
       {final String? authority,
       @JsonKey(name: '_authority') final Element? authorityElement,
       final String? uri,
-      @JsonKey(name: '_uri') final Element? uriElement}) = _$_ConsentPolicy;
+      @JsonKey(name: '_uri') final Element? uriElement}) = _$ConsentPolicyImpl;
   _ConsentPolicy._() : super._();
 
   factory _ConsentPolicy.fromJson(Map<String, dynamic> json) =
-      _$_ConsentPolicy.fromJson;
+      _$ConsentPolicyImpl.fromJson;
 
   @override
   String? get authority;
@@ -4250,7 +4203,7 @@ abstract class _ConsentPolicy extends ConsentPolicy {
   Element? get uriElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentPolicyCopyWith<_$_ConsentPolicy> get copyWith =>
+  _$$ConsentPolicyImplCopyWith<_$ConsentPolicyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4341,11 +4294,11 @@ class _$ConsentDataCopyWithImpl<$Res, $Val extends ConsentData>
 }
 
 /// @nodoc
-abstract class _$$_ConsentDataCopyWith<$Res>
+abstract class _$$ConsentDataImplCopyWith<$Res>
     implements $ConsentDataCopyWith<$Res> {
-  factory _$$_ConsentDataCopyWith(
-          _$_ConsentData value, $Res Function(_$_ConsentData) then) =
-      __$$_ConsentDataCopyWithImpl<$Res>;
+  factory _$$ConsentDataImplCopyWith(
+          _$ConsentDataImpl value, $Res Function(_$ConsentDataImpl) then) =
+      __$$ConsentDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4360,11 +4313,11 @@ abstract class _$$_ConsentDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConsentDataCopyWithImpl<$Res>
-    extends _$ConsentDataCopyWithImpl<$Res, _$_ConsentData>
-    implements _$$_ConsentDataCopyWith<$Res> {
-  __$$_ConsentDataCopyWithImpl(
-      _$_ConsentData _value, $Res Function(_$_ConsentData) _then)
+class __$$ConsentDataImplCopyWithImpl<$Res>
+    extends _$ConsentDataCopyWithImpl<$Res, _$ConsentDataImpl>
+    implements _$$ConsentDataImplCopyWith<$Res> {
+  __$$ConsentDataImplCopyWithImpl(
+      _$ConsentDataImpl _value, $Res Function(_$ConsentDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4374,7 +4327,7 @@ class __$$_ConsentDataCopyWithImpl<$Res>
     Object? meaningElement = freezed,
     Object? reference = null,
   }) {
-    return _then(_$_ConsentData(
+    return _then(_$ConsentDataImpl(
       meaning: freezed == meaning
           ? _value.meaning
           : meaning // ignore: cast_nullable_to_non_nullable
@@ -4393,15 +4346,15 @@ class __$$_ConsentDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConsentData extends _ConsentData {
-  _$_ConsentData(
+class _$ConsentDataImpl extends _ConsentData {
+  _$ConsentDataImpl(
       {this.meaning,
       @JsonKey(name: '_meaning') this.meaningElement,
       required this.reference})
       : super._();
 
-  factory _$_ConsentData.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentDataFromJson(json);
+  factory _$ConsentDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentDataImplFromJson(json);
 
   @override
   final ConsentDataMeaning? meaning;
@@ -4417,10 +4370,10 @@ class _$_ConsentData extends _ConsentData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConsentData &&
+            other is _$ConsentDataImpl &&
             (identical(other.meaning, meaning) || other.meaning == meaning) &&
             (identical(other.meaningElement, meaningElement) ||
                 other.meaningElement == meaningElement) &&
@@ -4436,12 +4389,12 @@ class _$_ConsentData extends _ConsentData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentDataCopyWith<_$_ConsentData> get copyWith =>
-      __$$_ConsentDataCopyWithImpl<_$_ConsentData>(this, _$identity);
+  _$$ConsentDataImplCopyWith<_$ConsentDataImpl> get copyWith =>
+      __$$ConsentDataImplCopyWithImpl<_$ConsentDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentDataToJson(
+    return _$$ConsentDataImplToJson(
       this,
     );
   }
@@ -4451,11 +4404,11 @@ abstract class _ConsentData extends ConsentData {
   factory _ConsentData(
       {final ConsentDataMeaning? meaning,
       @JsonKey(name: '_meaning') final Element? meaningElement,
-      required final Reference reference}) = _$_ConsentData;
+      required final Reference reference}) = _$ConsentDataImpl;
   _ConsentData._() : super._();
 
   factory _ConsentData.fromJson(Map<String, dynamic> json) =
-      _$_ConsentData.fromJson;
+      _$ConsentDataImpl.fromJson;
 
   @override
   ConsentDataMeaning? get meaning;
@@ -4466,7 +4419,7 @@ abstract class _ConsentData extends ConsentData {
   Reference get reference;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentDataCopyWith<_$_ConsentData> get copyWith =>
+  _$$ConsentDataImplCopyWith<_$ConsentDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4631,11 +4584,11 @@ class _$ConsentExceptCopyWithImpl<$Res, $Val extends ConsentExcept>
 }
 
 /// @nodoc
-abstract class _$$_ConsentExceptCopyWith<$Res>
+abstract class _$$ConsentExceptImplCopyWith<$Res>
     implements $ConsentExceptCopyWith<$Res> {
-  factory _$$_ConsentExceptCopyWith(
-          _$_ConsentExcept value, $Res Function(_$_ConsentExcept) then) =
-      __$$_ConsentExceptCopyWithImpl<$Res>;
+  factory _$$ConsentExceptImplCopyWith(
+          _$ConsentExceptImpl value, $Res Function(_$ConsentExceptImpl) then) =
+      __$$ConsentExceptImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4660,11 +4613,11 @@ abstract class _$$_ConsentExceptCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConsentExceptCopyWithImpl<$Res>
-    extends _$ConsentExceptCopyWithImpl<$Res, _$_ConsentExcept>
-    implements _$$_ConsentExceptCopyWith<$Res> {
-  __$$_ConsentExceptCopyWithImpl(
-      _$_ConsentExcept _value, $Res Function(_$_ConsentExcept) _then)
+class __$$ConsentExceptImplCopyWithImpl<$Res>
+    extends _$ConsentExceptCopyWithImpl<$Res, _$ConsentExceptImpl>
+    implements _$$ConsentExceptImplCopyWith<$Res> {
+  __$$ConsentExceptImplCopyWithImpl(
+      _$ConsentExceptImpl _value, $Res Function(_$ConsentExceptImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4682,7 +4635,7 @@ class __$$_ConsentExceptCopyWithImpl<$Res>
     Object? dataPeriod = freezed,
     Object? data = freezed,
   }) {
-    return _then(_$_ConsentExcept(
+    return _then(_$ConsentExceptImpl(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -4733,8 +4686,8 @@ class __$$_ConsentExceptCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConsentExcept extends _ConsentExcept {
-  _$_ConsentExcept(
+class _$ConsentExceptImpl extends _ConsentExcept {
+  _$ConsentExceptImpl(
       {this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.period,
@@ -4748,8 +4701,8 @@ class _$_ConsentExcept extends _ConsentExcept {
       this.data})
       : super._();
 
-  factory _$_ConsentExcept.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentExceptFromJson(json);
+  factory _$ConsentExceptImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentExceptImplFromJson(json);
 
   @override
   final ConsentExceptType? type;
@@ -4782,10 +4735,10 @@ class _$_ConsentExcept extends _ConsentExcept {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConsentExcept &&
+            other is _$ConsentExceptImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.typeElement, typeElement) ||
                 other.typeElement == typeElement) &&
@@ -4821,12 +4774,12 @@ class _$_ConsentExcept extends _ConsentExcept {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentExceptCopyWith<_$_ConsentExcept> get copyWith =>
-      __$$_ConsentExceptCopyWithImpl<_$_ConsentExcept>(this, _$identity);
+  _$$ConsentExceptImplCopyWith<_$ConsentExceptImpl> get copyWith =>
+      __$$ConsentExceptImplCopyWithImpl<_$ConsentExceptImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentExceptToJson(
+    return _$$ConsentExceptImplToJson(
       this,
     );
   }
@@ -4844,11 +4797,11 @@ abstract class _ConsentExcept extends ConsentExcept {
       @JsonKey(name: 'class') final List<Coding>? class_,
       final List<Coding>? code,
       final Period? dataPeriod,
-      final List<ConsentData1>? data}) = _$_ConsentExcept;
+      final List<ConsentData1>? data}) = _$ConsentExceptImpl;
   _ConsentExcept._() : super._();
 
   factory _ConsentExcept.fromJson(Map<String, dynamic> json) =
-      _$_ConsentExcept.fromJson;
+      _$ConsentExceptImpl.fromJson;
 
   @override
   ConsentExceptType? get type;
@@ -4876,7 +4829,7 @@ abstract class _ConsentExcept extends ConsentExcept {
   List<ConsentData1>? get data;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentExceptCopyWith<_$_ConsentExcept> get copyWith =>
+  _$$ConsentExceptImplCopyWith<_$ConsentExceptImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4953,11 +4906,11 @@ class _$ConsentActor1CopyWithImpl<$Res, $Val extends ConsentActor1>
 }
 
 /// @nodoc
-abstract class _$$_ConsentActor1CopyWith<$Res>
+abstract class _$$ConsentActor1ImplCopyWith<$Res>
     implements $ConsentActor1CopyWith<$Res> {
-  factory _$$_ConsentActor1CopyWith(
-          _$_ConsentActor1 value, $Res Function(_$_ConsentActor1) then) =
-      __$$_ConsentActor1CopyWithImpl<$Res>;
+  factory _$$ConsentActor1ImplCopyWith(
+          _$ConsentActor1Impl value, $Res Function(_$ConsentActor1Impl) then) =
+      __$$ConsentActor1ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CodeableConcept role, Reference reference});
@@ -4969,11 +4922,11 @@ abstract class _$$_ConsentActor1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConsentActor1CopyWithImpl<$Res>
-    extends _$ConsentActor1CopyWithImpl<$Res, _$_ConsentActor1>
-    implements _$$_ConsentActor1CopyWith<$Res> {
-  __$$_ConsentActor1CopyWithImpl(
-      _$_ConsentActor1 _value, $Res Function(_$_ConsentActor1) _then)
+class __$$ConsentActor1ImplCopyWithImpl<$Res>
+    extends _$ConsentActor1CopyWithImpl<$Res, _$ConsentActor1Impl>
+    implements _$$ConsentActor1ImplCopyWith<$Res> {
+  __$$ConsentActor1ImplCopyWithImpl(
+      _$ConsentActor1Impl _value, $Res Function(_$ConsentActor1Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4982,7 +4935,7 @@ class __$$_ConsentActor1CopyWithImpl<$Res>
     Object? role = null,
     Object? reference = null,
   }) {
-    return _then(_$_ConsentActor1(
+    return _then(_$ConsentActor1Impl(
       role: null == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
@@ -4997,11 +4950,12 @@ class __$$_ConsentActor1CopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConsentActor1 extends _ConsentActor1 {
-  _$_ConsentActor1({required this.role, required this.reference}) : super._();
+class _$ConsentActor1Impl extends _ConsentActor1 {
+  _$ConsentActor1Impl({required this.role, required this.reference})
+      : super._();
 
-  factory _$_ConsentActor1.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentActor1FromJson(json);
+  factory _$ConsentActor1Impl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentActor1ImplFromJson(json);
 
   @override
   final CodeableConcept role;
@@ -5014,10 +4968,10 @@ class _$_ConsentActor1 extends _ConsentActor1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConsentActor1 &&
+            other is _$ConsentActor1Impl &&
             (identical(other.role, role) || other.role == role) &&
             (identical(other.reference, reference) ||
                 other.reference == reference));
@@ -5030,12 +4984,12 @@ class _$_ConsentActor1 extends _ConsentActor1 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentActor1CopyWith<_$_ConsentActor1> get copyWith =>
-      __$$_ConsentActor1CopyWithImpl<_$_ConsentActor1>(this, _$identity);
+  _$$ConsentActor1ImplCopyWith<_$ConsentActor1Impl> get copyWith =>
+      __$$ConsentActor1ImplCopyWithImpl<_$ConsentActor1Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentActor1ToJson(
+    return _$$ConsentActor1ImplToJson(
       this,
     );
   }
@@ -5044,11 +4998,11 @@ class _$_ConsentActor1 extends _ConsentActor1 {
 abstract class _ConsentActor1 extends ConsentActor1 {
   factory _ConsentActor1(
       {required final CodeableConcept role,
-      required final Reference reference}) = _$_ConsentActor1;
+      required final Reference reference}) = _$ConsentActor1Impl;
   _ConsentActor1._() : super._();
 
   factory _ConsentActor1.fromJson(Map<String, dynamic> json) =
-      _$_ConsentActor1.fromJson;
+      _$ConsentActor1Impl.fromJson;
 
   @override
   CodeableConcept get role;
@@ -5056,7 +5010,7 @@ abstract class _ConsentActor1 extends ConsentActor1 {
   Reference get reference;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentActor1CopyWith<_$_ConsentActor1> get copyWith =>
+  _$$ConsentActor1ImplCopyWith<_$ConsentActor1Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5147,11 +5101,11 @@ class _$ConsentData1CopyWithImpl<$Res, $Val extends ConsentData1>
 }
 
 /// @nodoc
-abstract class _$$_ConsentData1CopyWith<$Res>
+abstract class _$$ConsentData1ImplCopyWith<$Res>
     implements $ConsentData1CopyWith<$Res> {
-  factory _$$_ConsentData1CopyWith(
-          _$_ConsentData1 value, $Res Function(_$_ConsentData1) then) =
-      __$$_ConsentData1CopyWithImpl<$Res>;
+  factory _$$ConsentData1ImplCopyWith(
+          _$ConsentData1Impl value, $Res Function(_$ConsentData1Impl) then) =
+      __$$ConsentData1ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5166,11 +5120,11 @@ abstract class _$$_ConsentData1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConsentData1CopyWithImpl<$Res>
-    extends _$ConsentData1CopyWithImpl<$Res, _$_ConsentData1>
-    implements _$$_ConsentData1CopyWith<$Res> {
-  __$$_ConsentData1CopyWithImpl(
-      _$_ConsentData1 _value, $Res Function(_$_ConsentData1) _then)
+class __$$ConsentData1ImplCopyWithImpl<$Res>
+    extends _$ConsentData1CopyWithImpl<$Res, _$ConsentData1Impl>
+    implements _$$ConsentData1ImplCopyWith<$Res> {
+  __$$ConsentData1ImplCopyWithImpl(
+      _$ConsentData1Impl _value, $Res Function(_$ConsentData1Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5180,7 +5134,7 @@ class __$$_ConsentData1CopyWithImpl<$Res>
     Object? meaningElement = freezed,
     Object? reference = null,
   }) {
-    return _then(_$_ConsentData1(
+    return _then(_$ConsentData1Impl(
       meaning: freezed == meaning
           ? _value.meaning
           : meaning // ignore: cast_nullable_to_non_nullable
@@ -5199,15 +5153,15 @@ class __$$_ConsentData1CopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConsentData1 extends _ConsentData1 {
-  _$_ConsentData1(
+class _$ConsentData1Impl extends _ConsentData1 {
+  _$ConsentData1Impl(
       {this.meaning,
       @JsonKey(name: '_meaning') this.meaningElement,
       required this.reference})
       : super._();
 
-  factory _$_ConsentData1.fromJson(Map<String, dynamic> json) =>
-      _$$_ConsentData1FromJson(json);
+  factory _$ConsentData1Impl.fromJson(Map<String, dynamic> json) =>
+      _$$ConsentData1ImplFromJson(json);
 
   @override
   final ConsentData1Meaning? meaning;
@@ -5223,10 +5177,10 @@ class _$_ConsentData1 extends _ConsentData1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConsentData1 &&
+            other is _$ConsentData1Impl &&
             (identical(other.meaning, meaning) || other.meaning == meaning) &&
             (identical(other.meaningElement, meaningElement) ||
                 other.meaningElement == meaningElement) &&
@@ -5242,12 +5196,12 @@ class _$_ConsentData1 extends _ConsentData1 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConsentData1CopyWith<_$_ConsentData1> get copyWith =>
-      __$$_ConsentData1CopyWithImpl<_$_ConsentData1>(this, _$identity);
+  _$$ConsentData1ImplCopyWith<_$ConsentData1Impl> get copyWith =>
+      __$$ConsentData1ImplCopyWithImpl<_$ConsentData1Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConsentData1ToJson(
+    return _$$ConsentData1ImplToJson(
       this,
     );
   }
@@ -5257,11 +5211,11 @@ abstract class _ConsentData1 extends ConsentData1 {
   factory _ConsentData1(
       {final ConsentData1Meaning? meaning,
       @JsonKey(name: '_meaning') final Element? meaningElement,
-      required final Reference reference}) = _$_ConsentData1;
+      required final Reference reference}) = _$ConsentData1Impl;
   _ConsentData1._() : super._();
 
   factory _ConsentData1.fromJson(Map<String, dynamic> json) =
-      _$_ConsentData1.fromJson;
+      _$ConsentData1Impl.fromJson;
 
   @override
   ConsentData1Meaning? get meaning;
@@ -5272,7 +5226,7 @@ abstract class _ConsentData1 extends ConsentData1 {
   Reference get reference;
   @override
   @JsonKey(ignore: true)
-  _$$_ConsentData1CopyWith<_$_ConsentData1> get copyWith =>
+  _$$ConsentData1ImplCopyWith<_$ConsentData1Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5327,28 +5281,23 @@ abstract class $ProvenanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? period,
       String? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       List<String>? policy,
-      @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       Reference? location,
       List<Coding>? reason,
       Coding? activity,
@@ -5597,37 +5546,32 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceCopyWith<$Res>
+abstract class _$$ProvenanceImplCopyWith<$Res>
     implements $ProvenanceCopyWith<$Res> {
-  factory _$$_ProvenanceCopyWith(
-          _$_Provenance value, $Res Function(_$_Provenance) then) =
-      __$$_ProvenanceCopyWithImpl<$Res>;
+  factory _$$ProvenanceImplCopyWith(
+          _$ProvenanceImpl value, $Res Function(_$ProvenanceImpl) then) =
+      __$$ProvenanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? period,
       String? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       List<String>? policy,
-      @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       Reference? location,
       List<Coding>? reason,
       Coding? activity,
@@ -5654,11 +5598,11 @@ abstract class _$$_ProvenanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceCopyWithImpl<$Res>
-    extends _$ProvenanceCopyWithImpl<$Res, _$_Provenance>
-    implements _$$_ProvenanceCopyWith<$Res> {
-  __$$_ProvenanceCopyWithImpl(
-      _$_Provenance _value, $Res Function(_$_Provenance) _then)
+class __$$ProvenanceImplCopyWithImpl<$Res>
+    extends _$ProvenanceCopyWithImpl<$Res, _$ProvenanceImpl>
+    implements _$$ProvenanceImplCopyWith<$Res> {
+  __$$ProvenanceImplCopyWithImpl(
+      _$ProvenanceImpl _value, $Res Function(_$ProvenanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5688,7 +5632,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
     Object? entity = freezed,
     Object? signature = freezed,
   }) {
-    return _then(_$_Provenance(
+    return _then(_$ProvenanceImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5787,31 +5731,26 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Provenance extends _Provenance {
-  _$_Provenance(
+class _$ProvenanceImpl extends _Provenance {
+  _$ProvenanceImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
-          this.resourceType = Stu3ResourceType.Provenance,
+      this.resourceType = Stu3ResourceType.Provenance,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.target,
       this.period,
       this.recorded,
-      @JsonKey(name: '_recorded')
-          this.recordedElement,
+      @JsonKey(name: '_recorded') this.recordedElement,
       this.policy,
-      @JsonKey(name: '_policy')
-          this.policyElement,
+      @JsonKey(name: '_policy') this.policyElement,
       this.location,
       this.reason,
       this.activity,
@@ -5820,8 +5759,8 @@ class _$_Provenance extends _Provenance {
       this.signature})
       : super._();
 
-  factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceFromJson(json);
+  factory _$ProvenanceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProvenanceImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
@@ -5882,10 +5821,10 @@ class _$_Provenance extends _Provenance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Provenance &&
+            other is _$ProvenanceImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -5955,12 +5894,12 @@ class _$_Provenance extends _Provenance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceCopyWith<_$_Provenance> get copyWith =>
-      __$$_ProvenanceCopyWithImpl<_$_Provenance>(this, _$identity);
+  _$$ProvenanceImplCopyWith<_$ProvenanceImpl> get copyWith =>
+      __$$ProvenanceImplCopyWithImpl<_$ProvenanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceToJson(
+    return _$$ProvenanceImplToJson(
       this,
     );
   }
@@ -5969,38 +5908,33 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   factory _Provenance(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<Reference> target,
       final Period? period,
       final String? recorded,
-      @JsonKey(name: '_recorded')
-          final Element? recordedElement,
+      @JsonKey(name: '_recorded') final Element? recordedElement,
       final List<String>? policy,
-      @JsonKey(name: '_policy')
-          final List<Element?>? policyElement,
+      @JsonKey(name: '_policy') final List<Element?>? policyElement,
       final Reference? location,
       final List<Coding>? reason,
       final Coding? activity,
       required final List<ProvenanceAgent> agent,
       final List<ProvenanceEntity>? entity,
-      final List<Signature>? signature}) = _$_Provenance;
+      final List<Signature>? signature}) = _$ProvenanceImpl;
   _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
-      _$_Provenance.fromJson;
+      _$ProvenanceImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
@@ -6056,7 +5990,7 @@ abstract class _Provenance extends Provenance {
   List<Signature>? get signature;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceCopyWith<_$_Provenance> get copyWith =>
+  _$$ProvenanceImplCopyWith<_$ProvenanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6226,11 +6160,11 @@ class _$ProvenanceAgentCopyWithImpl<$Res, $Val extends ProvenanceAgent>
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceAgentCopyWith<$Res>
+abstract class _$$ProvenanceAgentImplCopyWith<$Res>
     implements $ProvenanceAgentCopyWith<$Res> {
-  factory _$$_ProvenanceAgentCopyWith(
-          _$_ProvenanceAgent value, $Res Function(_$_ProvenanceAgent) then) =
-      __$$_ProvenanceAgentCopyWithImpl<$Res>;
+  factory _$$ProvenanceAgentImplCopyWith(_$ProvenanceAgentImpl value,
+          $Res Function(_$ProvenanceAgentImpl) then) =
+      __$$ProvenanceAgentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6256,11 +6190,11 @@ abstract class _$$_ProvenanceAgentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceAgentCopyWithImpl<$Res>
-    extends _$ProvenanceAgentCopyWithImpl<$Res, _$_ProvenanceAgent>
-    implements _$$_ProvenanceAgentCopyWith<$Res> {
-  __$$_ProvenanceAgentCopyWithImpl(
-      _$_ProvenanceAgent _value, $Res Function(_$_ProvenanceAgent) _then)
+class __$$ProvenanceAgentImplCopyWithImpl<$Res>
+    extends _$ProvenanceAgentCopyWithImpl<$Res, _$ProvenanceAgentImpl>
+    implements _$$ProvenanceAgentImplCopyWith<$Res> {
+  __$$ProvenanceAgentImplCopyWithImpl(
+      _$ProvenanceAgentImpl _value, $Res Function(_$ProvenanceAgentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6275,7 +6209,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
     Object? onBehalfOfReference = freezed,
     Object? relatedAgentType = freezed,
   }) {
-    return _then(_$_ProvenanceAgent(
+    return _then(_$ProvenanceAgentImpl(
       role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
@@ -6314,8 +6248,8 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProvenanceAgent extends _ProvenanceAgent {
-  _$_ProvenanceAgent(
+class _$ProvenanceAgentImpl extends _ProvenanceAgent {
+  _$ProvenanceAgentImpl(
       {this.role,
       this.whoUri,
       @JsonKey(name: '_whoUri') this.whoUriElement,
@@ -6326,8 +6260,8 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       this.relatedAgentType})
       : super._();
 
-  factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceAgentFromJson(json);
+  factory _$ProvenanceAgentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProvenanceAgentImplFromJson(json);
 
   @override
   final List<CodeableConcept>? role;
@@ -6354,10 +6288,10 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProvenanceAgent &&
+            other is _$ProvenanceAgentImpl &&
             const DeepCollectionEquality().equals(other.role, role) &&
             (identical(other.whoUri, whoUri) || other.whoUri == whoUri) &&
             (identical(other.whoUriElement, whoUriElement) ||
@@ -6390,12 +6324,13 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceAgentCopyWith<_$_ProvenanceAgent> get copyWith =>
-      __$$_ProvenanceAgentCopyWithImpl<_$_ProvenanceAgent>(this, _$identity);
+  _$$ProvenanceAgentImplCopyWith<_$ProvenanceAgentImpl> get copyWith =>
+      __$$ProvenanceAgentImplCopyWithImpl<_$ProvenanceAgentImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceAgentToJson(
+    return _$$ProvenanceAgentImplToJson(
       this,
     );
   }
@@ -6410,11 +6345,11 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
       final String? onBehalfOfUri,
       @JsonKey(name: '_onBehalfOfUri') final Element? onBehalfOfUriElement,
       final Reference? onBehalfOfReference,
-      final CodeableConcept? relatedAgentType}) = _$_ProvenanceAgent;
+      final CodeableConcept? relatedAgentType}) = _$ProvenanceAgentImpl;
   _ProvenanceAgent._() : super._();
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceAgent.fromJson;
+      _$ProvenanceAgentImpl.fromJson;
 
   @override
   List<CodeableConcept>? get role;
@@ -6436,7 +6371,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
   CodeableConcept? get relatedAgentType;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceAgentCopyWith<_$_ProvenanceAgent> get copyWith =>
+  _$$ProvenanceAgentImplCopyWith<_$ProvenanceAgentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6586,11 +6521,11 @@ class _$ProvenanceEntityCopyWithImpl<$Res, $Val extends ProvenanceEntity>
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceEntityCopyWith<$Res>
+abstract class _$$ProvenanceEntityImplCopyWith<$Res>
     implements $ProvenanceEntityCopyWith<$Res> {
-  factory _$$_ProvenanceEntityCopyWith(
-          _$_ProvenanceEntity value, $Res Function(_$_ProvenanceEntity) then) =
-      __$$_ProvenanceEntityCopyWithImpl<$Res>;
+  factory _$$ProvenanceEntityImplCopyWith(_$ProvenanceEntityImpl value,
+          $Res Function(_$ProvenanceEntityImpl) then) =
+      __$$ProvenanceEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6613,11 +6548,11 @@ abstract class _$$_ProvenanceEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceEntityCopyWithImpl<$Res>
-    extends _$ProvenanceEntityCopyWithImpl<$Res, _$_ProvenanceEntity>
-    implements _$$_ProvenanceEntityCopyWith<$Res> {
-  __$$_ProvenanceEntityCopyWithImpl(
-      _$_ProvenanceEntity _value, $Res Function(_$_ProvenanceEntity) _then)
+class __$$ProvenanceEntityImplCopyWithImpl<$Res>
+    extends _$ProvenanceEntityCopyWithImpl<$Res, _$ProvenanceEntityImpl>
+    implements _$$ProvenanceEntityImplCopyWith<$Res> {
+  __$$ProvenanceEntityImplCopyWithImpl(_$ProvenanceEntityImpl _value,
+      $Res Function(_$ProvenanceEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6631,7 +6566,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
     Object? whatIdentifier = freezed,
     Object? agent = freezed,
   }) {
-    return _then(_$_ProvenanceEntity(
+    return _then(_$ProvenanceEntityImpl(
       role: freezed == role
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
@@ -6666,8 +6601,8 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProvenanceEntity extends _ProvenanceEntity {
-  _$_ProvenanceEntity(
+class _$ProvenanceEntityImpl extends _ProvenanceEntity {
+  _$ProvenanceEntityImpl(
       {this.role,
       @JsonKey(name: '_role') this.roleElement,
       this.whatUri,
@@ -6677,8 +6612,8 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       this.agent})
       : super._();
 
-  factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceEntityFromJson(json);
+  factory _$ProvenanceEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProvenanceEntityImplFromJson(json);
 
   @override
   final ProvenanceEntityRole? role;
@@ -6703,10 +6638,10 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProvenanceEntity &&
+            other is _$ProvenanceEntityImpl &&
             (identical(other.role, role) || other.role == role) &&
             (identical(other.roleElement, roleElement) ||
                 other.roleElement == roleElement) &&
@@ -6735,12 +6670,13 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceEntityCopyWith<_$_ProvenanceEntity> get copyWith =>
-      __$$_ProvenanceEntityCopyWithImpl<_$_ProvenanceEntity>(this, _$identity);
+  _$$ProvenanceEntityImplCopyWith<_$ProvenanceEntityImpl> get copyWith =>
+      __$$ProvenanceEntityImplCopyWithImpl<_$ProvenanceEntityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceEntityToJson(
+    return _$$ProvenanceEntityImplToJson(
       this,
     );
   }
@@ -6754,11 +6690,11 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
       @JsonKey(name: '_whatUri') final Element? whatUriElement,
       final Reference? whatReference,
       final Identifier? whatIdentifier,
-      final List<ProvenanceAgent>? agent}) = _$_ProvenanceEntity;
+      final List<ProvenanceAgent>? agent}) = _$ProvenanceEntityImpl;
   _ProvenanceEntity._() : super._();
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceEntity.fromJson;
+      _$ProvenanceEntityImpl.fromJson;
 
   @override
   ProvenanceEntityRole? get role;
@@ -6778,6 +6714,6 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   List<ProvenanceAgent>? get agent;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceEntityCopyWith<_$_ProvenanceEntity> get copyWith =>
+  _$$ProvenanceEntityImplCopyWith<_$ProvenanceEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
