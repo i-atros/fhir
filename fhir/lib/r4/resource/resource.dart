@@ -25,7 +25,7 @@ part 'resource_types_enum.dart';
 /// class also has it's own fromJson() function as well. The fromJson function
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
-abstract mixin class Resource {
+mixin class Resource {
   Id? id;
   R4ResourceType? resourceType;
   Meta? meta;

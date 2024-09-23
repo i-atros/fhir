@@ -17,7 +17,7 @@ part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
 @JsonSerializable()
-abstract mixin class Resource {
+mixin class Resource {
   Id? id;
   R5ResourceType? resourceType;
   Meta? meta;
