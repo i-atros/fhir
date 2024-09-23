@@ -118,7 +118,7 @@ packages:
     description:
       path: fhir
       ref: upgrade-dart-sdk
-      resolved-ref: bf82bd9f2de29cb7888ccdbf5d28939a97cba57b
+      resolved-ref: 9c7528ae08a398b4e50925538d1250829deb0437
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
