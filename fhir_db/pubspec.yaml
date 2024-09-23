@@ -31,3 +31,6 @@ dependencies:
       ref: upgrade-dart-sdk
   sqflite: ^2.0.0+3
   sqflite_common_ffi: ^2.0.0+1
+
+dev_dependencies:
+  test: ^1.21.0
