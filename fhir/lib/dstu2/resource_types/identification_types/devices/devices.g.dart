@@ -90,55 +90,59 @@ _$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$DeviceImplToJson(_$DeviceImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['type'] = instance.type.toJson();
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$DeviceStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('manufacturer', instance.manufacturer);
-  writeNotNull('_manufacturer', instance.manufacturerElement?.toJson());
-  writeNotNull('model', instance.model);
-  writeNotNull('version', instance.version);
-  writeNotNull('manufactureDate', instance.manufactureDate?.toJson());
-  writeNotNull('_manufactureDate', instance.manufactureDateElement?.toJson());
-  writeNotNull('expiry', instance.expiry?.toJson());
-  writeNotNull('udi', instance.udi);
-  writeNotNull('_udi', instance.udiElement?.toJson());
-  writeNotNull('lotNumber', instance.lotNumber);
-  writeNotNull('_lotNumber', instance.lotNumberElement?.toJson());
-  writeNotNull('owner', instance.owner?.toJson());
-  writeNotNull('location', instance.location?.toJson());
-  writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('url', instance.url?.toJson());
-  writeNotNull('_url', instance.urlElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$DeviceImplToJson(_$DeviceImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      'type': instance.type.toJson(),
+      if (instance.note?.map((e) => e.toJson()).toList() case final value?)
+        'note': value,
+      if (_$DeviceStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.manufacturer case final value?) 'manufacturer': value,
+      if (instance.manufacturerElement?.toJson() case final value?)
+        '_manufacturer': value,
+      if (instance.model case final value?) 'model': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.manufactureDate?.toJson() case final value?)
+        'manufactureDate': value,
+      if (instance.manufactureDateElement?.toJson() case final value?)
+        '_manufactureDate': value,
+      if (instance.expiry?.toJson() case final value?) 'expiry': value,
+      if (instance.udi case final value?) 'udi': value,
+      if (instance.udiElement?.toJson() case final value?) '_udi': value,
+      if (instance.lotNumber case final value?) 'lotNumber': value,
+      if (instance.lotNumberElement?.toJson() case final value?)
+        '_lotNumber': value,
+      if (instance.owner?.toJson() case final value?) 'owner': value,
+      if (instance.location?.toJson() case final value?) 'location': value,
+      if (instance.patient?.toJson() case final value?) 'patient': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.url?.toJson() case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+    };
 
 const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Account: 'Account',
@@ -309,46 +313,44 @@ _$DeviceComponentImpl _$$DeviceComponentImplFromJson(
     );
 
 Map<String, dynamic> _$$DeviceComponentImplToJson(
-    _$DeviceComponentImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('_id', instance.idElement?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = instance.type.toJson();
-  val['identifier'] = instance.identifier.toJson();
-  val['lastSystemChange'] = instance.lastSystemChange.toJson();
-  writeNotNull('source', instance.source?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
-  writeNotNull('operationalStatus',
-      instance.operationalStatus?.map((e) => e.toJson()).toList());
-  writeNotNull('parameterGroup', instance.parameterGroup?.toJson());
-  writeNotNull(
-      'measurementPrinciple',
-      _$DeviceComponentMeasurementPrincipleEnumMap[
-          instance.measurementPrinciple]);
-  writeNotNull('productionSpecification',
-      instance.productionSpecification?.map((e) => e.toJson()).toList());
-  writeNotNull('languageCode', instance.languageCode?.toJson());
-  return val;
-}
+        _$DeviceComponentImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.idElement?.toJson() case final value?) '_id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      'type': instance.type.toJson(),
+      'identifier': instance.identifier.toJson(),
+      'lastSystemChange': instance.lastSystemChange.toJson(),
+      if (instance.source?.toJson() case final value?) 'source': value,
+      if (instance.parent?.toJson() case final value?) 'parent': value,
+      if (instance.operationalStatus?.map((e) => e.toJson()).toList()
+          case final value?)
+        'operationalStatus': value,
+      if (instance.parameterGroup?.toJson() case final value?)
+        'parameterGroup': value,
+      if (_$DeviceComponentMeasurementPrincipleEnumMap[
+              instance.measurementPrinciple]
+          case final value?)
+        'measurementPrinciple': value,
+      if (instance.productionSpecification?.map((e) => e.toJson()).toList()
+          case final value?)
+        'productionSpecification': value,
+      if (instance.languageCode?.toJson() case final value?)
+        'languageCode': value,
+    };
 
 const _$DeviceComponentMeasurementPrincipleEnumMap = {
   DeviceComponentMeasurementPrinciple.other: 'other',
@@ -388,25 +390,20 @@ _$DeviceComponentProductionSpecificationImpl
         );
 
 Map<String, dynamic> _$$DeviceComponentProductionSpecificationImplToJson(
-    _$DeviceComponentProductionSpecificationImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('specType', instance.specType?.toJson());
-  writeNotNull('componentId', instance.componentId?.toJson());
-  writeNotNull('productionSpec', instance.productionSpec);
-  return val;
-}
+        _$DeviceComponentProductionSpecificationImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.specType?.toJson() case final value?) 'specType': value,
+      if (instance.componentId?.toJson() case final value?)
+        'componentId': value,
+      if (instance.productionSpec case final value?) 'productionSpec': value,
+    };
 
 _$DeviceMetricImpl _$$DeviceMetricImplFromJson(Map<String, dynamic> json) =>
     _$DeviceMetricImpl(
@@ -479,48 +476,49 @@ _$DeviceMetricImpl _$$DeviceMetricImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$DeviceMetricImplToJson(_$DeviceMetricImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = instance.type.toJson();
-  val['identifier'] = instance.identifier.toJson();
-  writeNotNull('unit', instance.unit?.toJson());
-  writeNotNull('source', instance.source?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
-  writeNotNull('operationalStatus',
-      _$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]);
-  writeNotNull(
-      '_operationalStatus', instance.operationalStatusElement?.toJson());
-  writeNotNull('color', _$DeviceMetricColorEnumMap[instance.color]);
-  writeNotNull('_color', instance.colorElement?.toJson());
-  val['category'] = _$DeviceMetricCategoryEnumMap[instance.category]!;
-  writeNotNull('_category', instance.categoryElement?.toJson());
-  writeNotNull('measurementPeriod', instance.measurementPeriod?.toJson());
-  writeNotNull(
-      'calibration', instance.calibration?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$DeviceMetricImplToJson(_$DeviceMetricImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      'type': instance.type.toJson(),
+      'identifier': instance.identifier.toJson(),
+      if (instance.unit?.toJson() case final value?) 'unit': value,
+      if (instance.source?.toJson() case final value?) 'source': value,
+      if (instance.parent?.toJson() case final value?) 'parent': value,
+      if (_$DeviceMetricOperationalStatusEnumMap[instance.operationalStatus]
+          case final value?)
+        'operationalStatus': value,
+      if (instance.operationalStatusElement?.toJson() case final value?)
+        '_operationalStatus': value,
+      if (_$DeviceMetricColorEnumMap[instance.color] case final value?)
+        'color': value,
+      if (instance.colorElement?.toJson() case final value?) '_color': value,
+      'category': _$DeviceMetricCategoryEnumMap[instance.category]!,
+      if (instance.categoryElement?.toJson() case final value?)
+        '_category': value,
+      if (instance.measurementPeriod?.toJson() case final value?)
+        'measurementPeriod': value,
+      if (instance.calibration?.map((e) => e.toJson()).toList()
+          case final value?)
+        'calibration': value,
+    };
 
 const _$DeviceMetricOperationalStatusEnumMap = {
   DeviceMetricOperationalStatus.on_: 'on',
@@ -576,28 +574,24 @@ _$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
     );
 
 Map<String, dynamic> _$$DeviceMetricCalibrationImplToJson(
-    _$DeviceMetricCalibrationImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', _$CalibrationTypeEnumMap[instance.type]);
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('state', _$CalibrationStateEnumMap[instance.state]);
-  writeNotNull('_state', instance.stateElement?.toJson());
-  writeNotNull('time', instance.time?.toJson());
-  writeNotNull('_time', instance.timeElement?.toJson());
-  return val;
-}
+        _$DeviceMetricCalibrationImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (_$CalibrationTypeEnumMap[instance.type] case final value?)
+        'type': value,
+      if (instance.typeElement?.toJson() case final value?) '_type': value,
+      if (_$CalibrationStateEnumMap[instance.state] case final value?)
+        'state': value,
+      if (instance.stateElement?.toJson() case final value?) '_state': value,
+      if (instance.time?.toJson() case final value?) 'time': value,
+      if (instance.timeElement?.toJson() case final value?) '_time': value,
+    };
 
 const _$CalibrationTypeEnumMap = {
   CalibrationType.unspecified: 'unspecified',

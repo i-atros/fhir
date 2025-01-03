@@ -34,28 +34,23 @@ _$PopulationImpl _$$PopulationImplFromJson(Map<String, dynamic> json) =>
               json['physiologicalCondition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$PopulationImplToJson(_$PopulationImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('ageRange', instance.ageRange?.toJson());
-  writeNotNull('ageCodeableConcept', instance.ageCodeableConcept?.toJson());
-  writeNotNull('gender', instance.gender?.toJson());
-  writeNotNull('race', instance.race?.toJson());
-  writeNotNull(
-      'physiologicalCondition', instance.physiologicalCondition?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$PopulationImplToJson(_$PopulationImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.ageRange?.toJson() case final value?) 'ageRange': value,
+      if (instance.ageCodeableConcept?.toJson() case final value?)
+        'ageCodeableConcept': value,
+      if (instance.gender?.toJson() case final value?) 'gender': value,
+      if (instance.race?.toJson() case final value?) 'race': value,
+      if (instance.physiologicalCondition?.toJson() case final value?)
+        'physiologicalCondition': value,
+    };
 
 _$ProductShelfLifeImpl _$$ProductShelfLifeImplFromJson(
         Map<String, dynamic> json) =>
@@ -79,27 +74,22 @@ _$ProductShelfLifeImpl _$$ProductShelfLifeImplFromJson(
     );
 
 Map<String, dynamic> _$$ProductShelfLifeImplToJson(
-    _$ProductShelfLifeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  val['type'] = instance.type.toJson();
-  val['period'] = instance.period.toJson();
-  writeNotNull('specialPrecautionsForStorage',
-      instance.specialPrecautionsForStorage?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ProductShelfLifeImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      'type': instance.type.toJson(),
+      'period': instance.period.toJson(),
+      if (instance.specialPrecautionsForStorage?.map((e) => e.toJson()).toList()
+          case final value?)
+        'specialPrecautionsForStorage': value,
+    };
 
 _$ProdCharacteristicImpl _$$ProdCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
@@ -154,38 +144,37 @@ _$ProdCharacteristicImpl _$$ProdCharacteristicImplFromJson(
     );
 
 Map<String, dynamic> _$$ProdCharacteristicImplToJson(
-    _$ProdCharacteristicImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('height', instance.height?.toJson());
-  writeNotNull('width', instance.width?.toJson());
-  writeNotNull('depth', instance.depth?.toJson());
-  writeNotNull('weight', instance.weight?.toJson());
-  writeNotNull('nominalVolume', instance.nominalVolume?.toJson());
-  writeNotNull('externalDiameter', instance.externalDiameter?.toJson());
-  writeNotNull('shape', instance.shape);
-  writeNotNull('_shape', instance.shapeElement?.toJson());
-  writeNotNull('color', instance.color);
-  writeNotNull(
-      '_color', instance.colorElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('imprint', instance.imprint);
-  writeNotNull(
-      '_imprint', instance.imprintElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('image', instance.image?.map((e) => e.toJson()).toList());
-  writeNotNull('scoring', instance.scoring?.toJson());
-  return val;
-}
+        _$ProdCharacteristicImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.height?.toJson() case final value?) 'height': value,
+      if (instance.width?.toJson() case final value?) 'width': value,
+      if (instance.depth?.toJson() case final value?) 'depth': value,
+      if (instance.weight?.toJson() case final value?) 'weight': value,
+      if (instance.nominalVolume?.toJson() case final value?)
+        'nominalVolume': value,
+      if (instance.externalDiameter?.toJson() case final value?)
+        'externalDiameter': value,
+      if (instance.shape case final value?) 'shape': value,
+      if (instance.shapeElement?.toJson() case final value?) '_shape': value,
+      if (instance.color case final value?) 'color': value,
+      if (instance.colorElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_color': value,
+      if (instance.imprint case final value?) 'imprint': value,
+      if (instance.imprintElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_imprint': value,
+      if (instance.image?.map((e) => e.toJson()).toList() case final value?)
+        'image': value,
+      if (instance.scoring?.toJson() case final value?) 'scoring': value,
+    };
 
 _$MarketingStatusImpl _$$MarketingStatusImplFromJson(
         Map<String, dynamic> json) =>
@@ -214,28 +203,25 @@ _$MarketingStatusImpl _$$MarketingStatusImplFromJson(
     );
 
 Map<String, dynamic> _$$MarketingStatusImplToJson(
-    _$MarketingStatusImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['country'] = instance.country.toJson();
-  writeNotNull('jurisdiction', instance.jurisdiction?.toJson());
-  val['status'] = instance.status.toJson();
-  val['dateRange'] = instance.dateRange.toJson();
-  writeNotNull('restoreDate', instance.restoreDate?.toJson());
-  writeNotNull('_restoreDate', instance.restoreDateElement?.toJson());
-  return val;
-}
+        _$MarketingStatusImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      'country': instance.country.toJson(),
+      if (instance.jurisdiction?.toJson() case final value?)
+        'jurisdiction': value,
+      'status': instance.status.toJson(),
+      'dateRange': instance.dateRange.toJson(),
+      if (instance.restoreDate?.toJson() case final value?)
+        'restoreDate': value,
+      if (instance.restoreDateElement?.toJson() case final value?)
+        '_restoreDate': value,
+    };
 
 _$SubstanceAmountImpl _$$SubstanceAmountImplFromJson(
         Map<String, dynamic> json) =>
@@ -272,30 +258,29 @@ _$SubstanceAmountImpl _$$SubstanceAmountImplFromJson(
     );
 
 Map<String, dynamic> _$$SubstanceAmountImplToJson(
-    _$SubstanceAmountImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('amountQuantity', instance.amountQuantity?.toJson());
-  writeNotNull('amountRange', instance.amountRange?.toJson());
-  writeNotNull('amountString', instance.amountString);
-  writeNotNull('_amountString', instance.amountStringElement?.toJson());
-  writeNotNull('amountType', instance.amountType?.toJson());
-  writeNotNull('amountText', instance.amountText);
-  writeNotNull('_amountText', instance.amountTextElement?.toJson());
-  writeNotNull('referenceRange', instance.referenceRange?.toJson());
-  return val;
-}
+        _$SubstanceAmountImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.amountQuantity?.toJson() case final value?)
+        'amountQuantity': value,
+      if (instance.amountRange?.toJson() case final value?)
+        'amountRange': value,
+      if (instance.amountString case final value?) 'amountString': value,
+      if (instance.amountStringElement?.toJson() case final value?)
+        '_amountString': value,
+      if (instance.amountType?.toJson() case final value?) 'amountType': value,
+      if (instance.amountText case final value?) 'amountText': value,
+      if (instance.amountTextElement?.toJson() case final value?)
+        '_amountText': value,
+      if (instance.referenceRange?.toJson() case final value?)
+        'referenceRange': value,
+    };
 
 _$SubstanceAmountReferenceRangeImpl
     _$$SubstanceAmountReferenceRangeImplFromJson(Map<String, dynamic> json) =>
@@ -316,21 +301,15 @@ _$SubstanceAmountReferenceRangeImpl
         );
 
 Map<String, dynamic> _$$SubstanceAmountReferenceRangeImplToJson(
-    _$SubstanceAmountReferenceRangeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('lowLimit', instance.lowLimit?.toJson());
-  writeNotNull('highLimit', instance.highLimit?.toJson());
-  return val;
-}
+        _$SubstanceAmountReferenceRangeImpl instance) =>
+    <String, dynamic>{
+      if (instance.id case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.lowLimit?.toJson() case final value?) 'lowLimit': value,
+      if (instance.highLimit?.toJson() case final value?) 'highLimit': value,
+    };

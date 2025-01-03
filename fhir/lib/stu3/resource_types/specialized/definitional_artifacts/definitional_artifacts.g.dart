@@ -186,94 +186,121 @@ _$ActivityDefinitionImpl _$$ActivityDefinitionImplFromJson(
     );
 
 Map<String, dynamic> _$$ActivityDefinitionImplToJson(
-    _$ActivityDefinitionImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('version', instance.version);
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$ActivityDefinitionStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('publisher', instance.publisher);
-  writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('purpose', instance.purpose);
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
-  writeNotNull('usage', instance.usage);
-  writeNotNull('_usage', instance.usageElement?.toJson());
-  writeNotNull('approvalDate', instance.approvalDate?.toJson());
-  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
-  writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
-  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
-  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull(
-      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
-  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'contributor', instance.contributor?.map((e) => e.toJson()).toList());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('copyright', instance.copyright);
-  writeNotNull('_copyright', instance.copyrightElement?.toJson());
-  writeNotNull('relatedArtifact',
-      instance.relatedArtifact?.map((e) => e.toJson()).toList());
-  writeNotNull('library', instance.library_?.map((e) => e.toJson()).toList());
-  writeNotNull('kind', instance.kind);
-  writeNotNull('_kind', instance.kindElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('timingTiming', instance.timingTiming?.toJson());
-  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
-  writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
-  writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
-  writeNotNull('timingRange', instance.timingRange?.toJson());
-  writeNotNull('location', instance.location?.toJson());
-  writeNotNull(
-      'participant', instance.participant?.map((e) => e.toJson()).toList());
-  writeNotNull('productReference', instance.productReference?.toJson());
-  writeNotNull(
-      'productCodeableConcept', instance.productCodeableConcept?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('dosage', instance.dosage?.map((e) => e.toJson()).toList());
-  writeNotNull('bodySite', instance.bodySite?.map((e) => e.toJson()).toList());
-  writeNotNull('transform', instance.transform?.toJson());
-  writeNotNull(
-      'dynamicValue', instance.dynamicValue?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ActivityDefinitionImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.versionElement?.toJson() case final value?)
+        '_version': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (_$ActivityDefinitionStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.experimental?.toJson() case final value?)
+        'experimental': value,
+      if (instance.experimentalElement?.toJson() case final value?)
+        '_experimental': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.publisher case final value?) 'publisher': value,
+      if (instance.publisherElement?.toJson() case final value?)
+        '_publisher': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.purpose case final value?) 'purpose': value,
+      if (instance.purposeElement?.toJson() case final value?)
+        '_purpose': value,
+      if (instance.usage case final value?) 'usage': value,
+      if (instance.usageElement?.toJson() case final value?) '_usage': value,
+      if (instance.approvalDate?.toJson() case final value?)
+        'approvalDate': value,
+      if (instance.approvalDateElement?.toJson() case final value?)
+        '_approvalDate': value,
+      if (instance.lastReviewDate?.toJson() case final value?)
+        'lastReviewDate': value,
+      if (instance.lastReviewDateElement?.toJson() case final value?)
+        '_lastReviewDate': value,
+      if (instance.effectivePeriod?.toJson() case final value?)
+        'effectivePeriod': value,
+      if (instance.useContext?.map((e) => e.toJson()).toList()
+          case final value?)
+        'useContext': value,
+      if (instance.jurisdiction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'jurisdiction': value,
+      if (instance.topic?.map((e) => e.toJson()).toList() case final value?)
+        'topic': value,
+      if (instance.contributor?.map((e) => e.toJson()).toList()
+          case final value?)
+        'contributor': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.copyright case final value?) 'copyright': value,
+      if (instance.copyrightElement?.toJson() case final value?)
+        '_copyright': value,
+      if (instance.relatedArtifact?.map((e) => e.toJson()).toList()
+          case final value?)
+        'relatedArtifact': value,
+      if (instance.library_?.map((e) => e.toJson()).toList() case final value?)
+        'library': value,
+      if (instance.kind case final value?) 'kind': value,
+      if (instance.kindElement?.toJson() case final value?) '_kind': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.timingTiming?.toJson() case final value?)
+        'timingTiming': value,
+      if (instance.timingDateTime?.toJson() case final value?)
+        'timingDateTime': value,
+      if (instance.timingDateTimeElement?.toJson() case final value?)
+        '_timingDateTime': value,
+      if (instance.timingPeriod?.toJson() case final value?)
+        'timingPeriod': value,
+      if (instance.timingRange?.toJson() case final value?)
+        'timingRange': value,
+      if (instance.location?.toJson() case final value?) 'location': value,
+      if (instance.participant?.map((e) => e.toJson()).toList()
+          case final value?)
+        'participant': value,
+      if (instance.productReference?.toJson() case final value?)
+        'productReference': value,
+      if (instance.productCodeableConcept?.toJson() case final value?)
+        'productCodeableConcept': value,
+      if (instance.quantity?.toJson() case final value?) 'quantity': value,
+      if (instance.dosage?.map((e) => e.toJson()).toList() case final value?)
+        'dosage': value,
+      if (instance.bodySite?.map((e) => e.toJson()).toList() case final value?)
+        'bodySite': value,
+      if (instance.transform?.toJson() case final value?) 'transform': value,
+      if (instance.dynamicValue?.map((e) => e.toJson()).toList()
+          case final value?)
+        'dynamicValue': value,
+    };
 
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',
@@ -415,20 +442,12 @@ _$ActivityDefinitionParticipantImpl
         );
 
 Map<String, dynamic> _$$ActivityDefinitionParticipantImplToJson(
-    _$ActivityDefinitionParticipantImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', instance.type);
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('role', instance.role?.toJson());
-  return val;
-}
+        _$ActivityDefinitionParticipantImpl instance) =>
+    <String, dynamic>{
+      if (instance.type case final value?) 'type': value,
+      if (instance.typeElement?.toJson() case final value?) '_type': value,
+      if (instance.role?.toJson() case final value?) 'role': value,
+    };
 
 _$ActivityDefinitionDynamicValueImpl
     _$$ActivityDefinitionDynamicValueImplFromJson(Map<String, dynamic> json) =>
@@ -452,25 +471,20 @@ _$ActivityDefinitionDynamicValueImpl
         );
 
 Map<String, dynamic> _$$ActivityDefinitionDynamicValueImplToJson(
-    _$ActivityDefinitionDynamicValueImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('path', instance.path);
-  writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('language', instance.language);
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('expression', instance.expression);
-  writeNotNull('_expression', instance.expressionElement?.toJson());
-  return val;
-}
+        _$ActivityDefinitionDynamicValueImpl instance) =>
+    <String, dynamic>{
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.path case final value?) 'path': value,
+      if (instance.pathElement?.toJson() case final value?) '_path': value,
+      if (instance.language case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.expression case final value?) 'expression': value,
+      if (instance.expressionElement?.toJson() case final value?)
+        '_expression': value,
+    };
 
 _$PlanDefinitionImpl _$$PlanDefinitionImplFromJson(Map<String, dynamic> json) =>
     _$PlanDefinitionImpl(
@@ -607,77 +621,96 @@ _$PlanDefinitionImpl _$$PlanDefinitionImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$PlanDefinitionImplToJson(
-    _$PlanDefinitionImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('version', instance.version);
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('status', _$PlanDefinitionStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('publisher', instance.publisher);
-  writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('purpose', instance.purpose);
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
-  writeNotNull('usage', instance.usage);
-  writeNotNull('_usage', instance.usageElement?.toJson());
-  writeNotNull('approvalDate', instance.approvalDate?.toJson());
-  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
-  writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
-  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
-  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull(
-      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
-  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'contributor', instance.contributor?.map((e) => e.toJson()).toList());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('copyright', instance.copyright);
-  writeNotNull('_copyright', instance.copyrightElement?.toJson());
-  writeNotNull('relatedArtifact',
-      instance.relatedArtifact?.map((e) => e.toJson()).toList());
-  writeNotNull('library', instance.library_?.map((e) => e.toJson()).toList());
-  writeNotNull('goal', instance.goal?.map((e) => e.toJson()).toList());
-  writeNotNull('action', instance.action?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$PlanDefinitionImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.versionElement?.toJson() case final value?)
+        '_version': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (_$PlanDefinitionStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.experimental?.toJson() case final value?)
+        'experimental': value,
+      if (instance.experimentalElement?.toJson() case final value?)
+        '_experimental': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.publisher case final value?) 'publisher': value,
+      if (instance.publisherElement?.toJson() case final value?)
+        '_publisher': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.purpose case final value?) 'purpose': value,
+      if (instance.purposeElement?.toJson() case final value?)
+        '_purpose': value,
+      if (instance.usage case final value?) 'usage': value,
+      if (instance.usageElement?.toJson() case final value?) '_usage': value,
+      if (instance.approvalDate?.toJson() case final value?)
+        'approvalDate': value,
+      if (instance.approvalDateElement?.toJson() case final value?)
+        '_approvalDate': value,
+      if (instance.lastReviewDate?.toJson() case final value?)
+        'lastReviewDate': value,
+      if (instance.lastReviewDateElement?.toJson() case final value?)
+        '_lastReviewDate': value,
+      if (instance.effectivePeriod?.toJson() case final value?)
+        'effectivePeriod': value,
+      if (instance.useContext?.map((e) => e.toJson()).toList()
+          case final value?)
+        'useContext': value,
+      if (instance.jurisdiction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'jurisdiction': value,
+      if (instance.topic?.map((e) => e.toJson()).toList() case final value?)
+        'topic': value,
+      if (instance.contributor?.map((e) => e.toJson()).toList()
+          case final value?)
+        'contributor': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.copyright case final value?) 'copyright': value,
+      if (instance.copyrightElement?.toJson() case final value?)
+        '_copyright': value,
+      if (instance.relatedArtifact?.map((e) => e.toJson()).toList()
+          case final value?)
+        'relatedArtifact': value,
+      if (instance.library_?.map((e) => e.toJson()).toList() case final value?)
+        'library': value,
+      if (instance.goal?.map((e) => e.toJson()).toList() case final value?)
+        'goal': value,
+      if (instance.action?.map((e) => e.toJson()).toList() case final value?)
+        'action': value,
+    };
 
 const _$PlanDefinitionStatusEnumMap = {
   PlanDefinitionStatus.draft: 'draft',
@@ -712,26 +745,20 @@ _$PlanDefinitionGoalImpl _$$PlanDefinitionGoalImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionGoalImplToJson(
-    _$PlanDefinitionGoalImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('category', instance.category?.toJson());
-  val['description'] = instance.description.toJson();
-  writeNotNull('priority', instance.priority?.toJson());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull(
-      'addresses', instance.addresses?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'documentation', instance.documentation?.map((e) => e.toJson()).toList());
-  writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$PlanDefinitionGoalImpl instance) =>
+    <String, dynamic>{
+      if (instance.category?.toJson() case final value?) 'category': value,
+      'description': instance.description.toJson(),
+      if (instance.priority?.toJson() case final value?) 'priority': value,
+      if (instance.start?.toJson() case final value?) 'start': value,
+      if (instance.addresses?.map((e) => e.toJson()).toList() case final value?)
+        'addresses': value,
+      if (instance.documentation?.map((e) => e.toJson()).toList()
+          case final value?)
+        'documentation': value,
+      if (instance.target?.map((e) => e.toJson()).toList() case final value?)
+        'target': value,
+    };
 
 _$PlanDefinitionTargetImpl _$$PlanDefinitionTargetImplFromJson(
         Map<String, dynamic> json) =>
@@ -755,23 +782,17 @@ _$PlanDefinitionTargetImpl _$$PlanDefinitionTargetImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionTargetImplToJson(
-    _$PlanDefinitionTargetImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('measure', instance.measure?.toJson());
-  writeNotNull('detailQuantity', instance.detailQuantity?.toJson());
-  writeNotNull('detailRange', instance.detailRange?.toJson());
-  writeNotNull(
-      'detailCodeableConcept', instance.detailCodeableConcept?.toJson());
-  writeNotNull('due', instance.due?.toJson());
-  return val;
-}
+        _$PlanDefinitionTargetImpl instance) =>
+    <String, dynamic>{
+      if (instance.measure?.toJson() case final value?) 'measure': value,
+      if (instance.detailQuantity?.toJson() case final value?)
+        'detailQuantity': value,
+      if (instance.detailRange?.toJson() case final value?)
+        'detailRange': value,
+      if (instance.detailCodeableConcept?.toJson() case final value?)
+        'detailCodeableConcept': value,
+      if (instance.due?.toJson() case final value?) 'due': value,
+    };
 
 _$PlanDefinitionActionImpl _$$PlanDefinitionActionImplFromJson(
         Map<String, dynamic> json) =>
@@ -897,75 +918,96 @@ _$PlanDefinitionActionImpl _$$PlanDefinitionActionImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionActionImplToJson(
-    _$PlanDefinitionActionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('label', instance.label);
-  writeNotNull('_label', instance.labelElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('textEquivalent', instance.textEquivalent);
-  writeNotNull('_textEquivalent', instance.textEquivalentElement?.toJson());
-  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
-  writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'documentation', instance.documentation?.map((e) => e.toJson()).toList());
-  writeNotNull('goalId', instance.goalId?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_goalId', instance.goalIdElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('triggerDefinition',
-      instance.triggerDefinition?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'condition', instance.condition?.map((e) => e.toJson()).toList());
-  writeNotNull('input', instance.input?.map((e) => e.toJson()).toList());
-  writeNotNull('output', instance.output?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'relatedAction', instance.relatedAction?.map((e) => e.toJson()).toList());
-  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
-  writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
-  writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
-  writeNotNull('timingDuration', instance.timingDuration?.toJson());
-  writeNotNull('timingRange', instance.timingRange?.toJson());
-  writeNotNull('timingTiming', instance.timingTiming?.toJson());
-  writeNotNull(
-      'participant', instance.participant?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('groupingBehavior',
-      _$PlanDefinitionActionGroupingBehaviorEnumMap[instance.groupingBehavior]);
-  writeNotNull('_groupingBehavior', instance.groupingBehaviorElement?.toJson());
-  writeNotNull(
-      'selectionBehavior',
-      _$PlanDefinitionActionSelectionBehaviorEnumMap[
-          instance.selectionBehavior]);
-  writeNotNull(
-      '_selectionBehavior', instance.selectionBehaviorElement?.toJson());
-  writeNotNull('requiredBehavior',
-      _$PlanDefinitionActionRequiredBehaviorEnumMap[instance.requiredBehavior]);
-  writeNotNull('_requiredBehavior', instance.requiredBehaviorElement?.toJson());
-  writeNotNull('precheckBehavior',
-      _$PlanDefinitionActionPrecheckBehaviorEnumMap[instance.precheckBehavior]);
-  writeNotNull('_precheckBehavior', instance.precheckBehaviorElement?.toJson());
-  writeNotNull(
-      'cardinalityBehavior',
-      _$PlanDefinitionActionCardinalityBehaviorEnumMap[
-          instance.cardinalityBehavior]);
-  writeNotNull(
-      '_cardinalityBehavior', instance.cardinalityBehaviorElement?.toJson());
-  writeNotNull('definition', instance.definition?.toJson());
-  writeNotNull('transform', instance.transform?.toJson());
-  writeNotNull(
-      'dynamicValue', instance.dynamicValue?.map((e) => e.toJson()).toList());
-  writeNotNull('action', instance.action?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$PlanDefinitionActionImpl instance) =>
+    <String, dynamic>{
+      if (instance.label case final value?) 'label': value,
+      if (instance.labelElement?.toJson() case final value?) '_label': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.textEquivalent case final value?) 'textEquivalent': value,
+      if (instance.textEquivalentElement?.toJson() case final value?)
+        '_textEquivalent': value,
+      if (instance.code?.map((e) => e.toJson()).toList() case final value?)
+        'code': value,
+      if (instance.reason?.map((e) => e.toJson()).toList() case final value?)
+        'reason': value,
+      if (instance.documentation?.map((e) => e.toJson()).toList()
+          case final value?)
+        'documentation': value,
+      if (instance.goalId?.map((e) => e.toJson()).toList() case final value?)
+        'goalId': value,
+      if (instance.goalIdElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_goalId': value,
+      if (instance.triggerDefinition?.map((e) => e.toJson()).toList()
+          case final value?)
+        'triggerDefinition': value,
+      if (instance.condition?.map((e) => e.toJson()).toList() case final value?)
+        'condition': value,
+      if (instance.input?.map((e) => e.toJson()).toList() case final value?)
+        'input': value,
+      if (instance.output?.map((e) => e.toJson()).toList() case final value?)
+        'output': value,
+      if (instance.relatedAction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'relatedAction': value,
+      if (instance.timingDateTime?.toJson() case final value?)
+        'timingDateTime': value,
+      if (instance.timingDateTimeElement?.toJson() case final value?)
+        '_timingDateTime': value,
+      if (instance.timingPeriod?.toJson() case final value?)
+        'timingPeriod': value,
+      if (instance.timingDuration?.toJson() case final value?)
+        'timingDuration': value,
+      if (instance.timingRange?.toJson() case final value?)
+        'timingRange': value,
+      if (instance.timingTiming?.toJson() case final value?)
+        'timingTiming': value,
+      if (instance.participant?.map((e) => e.toJson()).toList()
+          case final value?)
+        'participant': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (_$PlanDefinitionActionGroupingBehaviorEnumMap[
+              instance.groupingBehavior]
+          case final value?)
+        'groupingBehavior': value,
+      if (instance.groupingBehaviorElement?.toJson() case final value?)
+        '_groupingBehavior': value,
+      if (_$PlanDefinitionActionSelectionBehaviorEnumMap[
+              instance.selectionBehavior]
+          case final value?)
+        'selectionBehavior': value,
+      if (instance.selectionBehaviorElement?.toJson() case final value?)
+        '_selectionBehavior': value,
+      if (_$PlanDefinitionActionRequiredBehaviorEnumMap[
+              instance.requiredBehavior]
+          case final value?)
+        'requiredBehavior': value,
+      if (instance.requiredBehaviorElement?.toJson() case final value?)
+        '_requiredBehavior': value,
+      if (_$PlanDefinitionActionPrecheckBehaviorEnumMap[
+              instance.precheckBehavior]
+          case final value?)
+        'precheckBehavior': value,
+      if (instance.precheckBehaviorElement?.toJson() case final value?)
+        '_precheckBehavior': value,
+      if (_$PlanDefinitionActionCardinalityBehaviorEnumMap[
+              instance.cardinalityBehavior]
+          case final value?)
+        'cardinalityBehavior': value,
+      if (instance.cardinalityBehaviorElement?.toJson() case final value?)
+        '_cardinalityBehavior': value,
+      if (instance.definition?.toJson() case final value?) 'definition': value,
+      if (instance.transform?.toJson() case final value?) 'transform': value,
+      if (instance.dynamicValue?.map((e) => e.toJson()).toList()
+          case final value?)
+        'dynamicValue': value,
+      if (instance.action?.map((e) => e.toJson()).toList() case final value?)
+        'action': value,
+    };
 
 const _$PlanDefinitionActionGroupingBehaviorEnumMap = {
   PlanDefinitionActionGroupingBehavior.visual_group: 'visual-group',
@@ -1027,25 +1069,21 @@ _$PlanDefinitionConditionImpl _$$PlanDefinitionConditionImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionConditionImplToJson(
-    _$PlanDefinitionConditionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('kind', _$PlanDefinitionConditionKindEnumMap[instance.kind]);
-  writeNotNull('_kind', instance.kindElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('language', instance.language);
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('expression', instance.expression);
-  writeNotNull('_expression', instance.expressionElement?.toJson());
-  return val;
-}
+        _$PlanDefinitionConditionImpl instance) =>
+    <String, dynamic>{
+      if (_$PlanDefinitionConditionKindEnumMap[instance.kind] case final value?)
+        'kind': value,
+      if (instance.kindElement?.toJson() case final value?) '_kind': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.language case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.expression case final value?) 'expression': value,
+      if (instance.expressionElement?.toJson() case final value?)
+        '_expression': value,
+    };
 
 const _$PlanDefinitionConditionKindEnumMap = {
   PlanDefinitionConditionKind.applicability: 'applicability',
@@ -1077,24 +1115,22 @@ _$PlanDefinitionRelatedActionImpl _$$PlanDefinitionRelatedActionImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionRelatedActionImplToJson(
-    _$PlanDefinitionRelatedActionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('actionId', instance.actionId?.toJson());
-  writeNotNull('_actionId', instance.actionIdElement?.toJson());
-  writeNotNull('relationship',
-      _$PlanDefinitionRelatedActionRelationshipEnumMap[instance.relationship]);
-  writeNotNull('_relationship', instance.relationshipElement?.toJson());
-  writeNotNull('offsetDuration', instance.offsetDuration?.toJson());
-  writeNotNull('offsetRange', instance.offsetRange?.toJson());
-  return val;
-}
+        _$PlanDefinitionRelatedActionImpl instance) =>
+    <String, dynamic>{
+      if (instance.actionId?.toJson() case final value?) 'actionId': value,
+      if (instance.actionIdElement?.toJson() case final value?)
+        '_actionId': value,
+      if (_$PlanDefinitionRelatedActionRelationshipEnumMap[
+              instance.relationship]
+          case final value?)
+        'relationship': value,
+      if (instance.relationshipElement?.toJson() case final value?)
+        '_relationship': value,
+      if (instance.offsetDuration?.toJson() case final value?)
+        'offsetDuration': value,
+      if (instance.offsetRange?.toJson() case final value?)
+        'offsetRange': value,
+    };
 
 const _$PlanDefinitionRelatedActionRelationshipEnumMap = {
   PlanDefinitionRelatedActionRelationship.before_start: 'before-start',
@@ -1125,20 +1161,14 @@ _$PlanDefinitionParticipantImpl _$$PlanDefinitionParticipantImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionParticipantImplToJson(
-    _$PlanDefinitionParticipantImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', _$PlanDefinitionParticipantTypeEnumMap[instance.type]);
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('role', instance.role?.toJson());
-  return val;
-}
+        _$PlanDefinitionParticipantImpl instance) =>
+    <String, dynamic>{
+      if (_$PlanDefinitionParticipantTypeEnumMap[instance.type]
+          case final value?)
+        'type': value,
+      if (instance.typeElement?.toJson() case final value?) '_type': value,
+      if (instance.role?.toJson() case final value?) 'role': value,
+    };
 
 const _$PlanDefinitionParticipantTypeEnumMap = {
   PlanDefinitionParticipantType.patient: 'patient',
@@ -1169,25 +1199,20 @@ _$PlanDefinitionDynamicValueImpl _$$PlanDefinitionDynamicValueImplFromJson(
     );
 
 Map<String, dynamic> _$$PlanDefinitionDynamicValueImplToJson(
-    _$PlanDefinitionDynamicValueImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('path', instance.path);
-  writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('language', instance.language);
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('expression', instance.expression);
-  writeNotNull('_expression', instance.expressionElement?.toJson());
-  return val;
-}
+        _$PlanDefinitionDynamicValueImpl instance) =>
+    <String, dynamic>{
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.path case final value?) 'path': value,
+      if (instance.pathElement?.toJson() case final value?) '_path': value,
+      if (instance.language case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.expression case final value?) 'expression': value,
+      if (instance.expressionElement?.toJson() case final value?)
+        '_expression': value,
+    };
 
 _$QuestionnaireImpl _$$QuestionnaireImplFromJson(Map<String, dynamic> json) =>
     _$QuestionnaireImpl(
@@ -1310,71 +1335,87 @@ _$QuestionnaireImpl _$$QuestionnaireImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$QuestionnaireImplToJson(_$QuestionnaireImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('version', instance.version);
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$QuestionnaireStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('publisher', instance.publisher);
-  writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('purpose', instance.purpose);
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
-  writeNotNull('approvalDate', instance.approvalDate?.toJson());
-  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
-  writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
-  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
-  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull(
-      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('copyright', instance.copyright);
-  writeNotNull('_copyright', instance.copyrightElement?.toJson());
-  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
-  writeNotNull('subjectType', instance.subjectType);
-  writeNotNull('_subjectType',
-      instance.subjectTypeElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$QuestionnaireImplToJson(_$QuestionnaireImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.versionElement?.toJson() case final value?)
+        '_version': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (_$QuestionnaireStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.experimental?.toJson() case final value?)
+        'experimental': value,
+      if (instance.experimentalElement?.toJson() case final value?)
+        '_experimental': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.publisher case final value?) 'publisher': value,
+      if (instance.publisherElement?.toJson() case final value?)
+        '_publisher': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.purpose case final value?) 'purpose': value,
+      if (instance.purposeElement?.toJson() case final value?)
+        '_purpose': value,
+      if (instance.approvalDate?.toJson() case final value?)
+        'approvalDate': value,
+      if (instance.approvalDateElement?.toJson() case final value?)
+        '_approvalDate': value,
+      if (instance.lastReviewDate?.toJson() case final value?)
+        'lastReviewDate': value,
+      if (instance.lastReviewDateElement?.toJson() case final value?)
+        '_lastReviewDate': value,
+      if (instance.effectivePeriod?.toJson() case final value?)
+        'effectivePeriod': value,
+      if (instance.useContext?.map((e) => e.toJson()).toList()
+          case final value?)
+        'useContext': value,
+      if (instance.jurisdiction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'jurisdiction': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.copyright case final value?) 'copyright': value,
+      if (instance.copyrightElement?.toJson() case final value?)
+        '_copyright': value,
+      if (instance.code?.map((e) => e.toJson()).toList() case final value?)
+        'code': value,
+      if (instance.subjectType case final value?) 'subjectType': value,
+      if (instance.subjectTypeElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_subjectType': value,
+      if (instance.item?.map((e) => e.toJson()).toList() case final value?)
+        'item': value,
+    };
 
 const _$QuestionnaireStatusEnumMap = {
   QuestionnaireStatus.draft: 'draft',
@@ -1507,63 +1548,84 @@ _$QuestionnaireItemImpl _$$QuestionnaireItemImplFromJson(
     );
 
 Map<String, dynamic> _$$QuestionnaireItemImplToJson(
-    _$QuestionnaireItemImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('linkId', instance.linkId);
-  writeNotNull('_linkId', instance.linkIdElement?.toJson());
-  writeNotNull('definition', instance.definition);
-  writeNotNull('_definition', instance.definitionElement?.toJson());
-  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('prefix', instance.prefix);
-  writeNotNull('_prefix', instance.prefixElement?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('type', _$QuestionnaireItemTypeEnumMap[instance.type]);
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull(
-      'enableWhen', instance.enableWhen?.map((e) => e.toJson()).toList());
-  writeNotNull('required', instance.required_?.toJson());
-  writeNotNull('_required', instance.requiredElement?.toJson());
-  writeNotNull('repeats', instance.repeats?.toJson());
-  writeNotNull('_repeats', instance.repeatsElement?.toJson());
-  writeNotNull('readOnly', instance.readOnly?.toJson());
-  writeNotNull('_readOnly', instance.readOnlyElement?.toJson());
-  writeNotNull('maxLength', instance.maxLength?.toJson());
-  writeNotNull('_maxLength', instance.maxLengthElement?.toJson());
-  writeNotNull('options', instance.options?.toJson());
-  writeNotNull('option', instance.option?.map((e) => e.toJson()).toList());
-  writeNotNull('initialBoolean', instance.initialBoolean?.toJson());
-  writeNotNull('_initialBoolean', instance.initialBooleanElement?.toJson());
-  writeNotNull('initialDecimal', instance.initialDecimal?.toJson());
-  writeNotNull('_initialDecimal', instance.initialDecimalElement?.toJson());
-  writeNotNull('initialInteger', instance.initialInteger?.toJson());
-  writeNotNull('_initialInteger', instance.initialIntegerElement?.toJson());
-  writeNotNull('initialDate', instance.initialDate?.toJson());
-  writeNotNull('_initialDate', instance.initialDateElement?.toJson());
-  writeNotNull('initialDateTime', instance.initialDateTime?.toJson());
-  writeNotNull('_initialDateTime', instance.initialDateTimeElement?.toJson());
-  writeNotNull('initialTime', instance.initialTime?.toJson());
-  writeNotNull('_initialTime', instance.initialTimeElement?.toJson());
-  writeNotNull('initialString', instance.initialString);
-  writeNotNull('_initialString', instance.initialStringElement?.toJson());
-  writeNotNull('initialUri', instance.initialUri);
-  writeNotNull('_initialUri', instance.initialUriElement?.toJson());
-  writeNotNull('initialAttachment', instance.initialAttachment?.toJson());
-  writeNotNull('initialCoding', instance.initialCoding?.toJson());
-  writeNotNull('initialQuantity', instance.initialQuantity?.toJson());
-  writeNotNull('initialReference', instance.initialReference?.toJson());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$QuestionnaireItemImpl instance) =>
+    <String, dynamic>{
+      if (instance.linkId case final value?) 'linkId': value,
+      if (instance.linkIdElement?.toJson() case final value?) '_linkId': value,
+      if (instance.definition case final value?) 'definition': value,
+      if (instance.definitionElement?.toJson() case final value?)
+        '_definition': value,
+      if (instance.code?.map((e) => e.toJson()).toList() case final value?)
+        'code': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.prefix case final value?) 'prefix': value,
+      if (instance.prefixElement?.toJson() case final value?) '_prefix': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+      if (_$QuestionnaireItemTypeEnumMap[instance.type] case final value?)
+        'type': value,
+      if (instance.typeElement?.toJson() case final value?) '_type': value,
+      if (instance.enableWhen?.map((e) => e.toJson()).toList()
+          case final value?)
+        'enableWhen': value,
+      if (instance.required_?.toJson() case final value?) 'required': value,
+      if (instance.requiredElement?.toJson() case final value?)
+        '_required': value,
+      if (instance.repeats?.toJson() case final value?) 'repeats': value,
+      if (instance.repeatsElement?.toJson() case final value?)
+        '_repeats': value,
+      if (instance.readOnly?.toJson() case final value?) 'readOnly': value,
+      if (instance.readOnlyElement?.toJson() case final value?)
+        '_readOnly': value,
+      if (instance.maxLength?.toJson() case final value?) 'maxLength': value,
+      if (instance.maxLengthElement?.toJson() case final value?)
+        '_maxLength': value,
+      if (instance.options?.toJson() case final value?) 'options': value,
+      if (instance.option?.map((e) => e.toJson()).toList() case final value?)
+        'option': value,
+      if (instance.initialBoolean?.toJson() case final value?)
+        'initialBoolean': value,
+      if (instance.initialBooleanElement?.toJson() case final value?)
+        '_initialBoolean': value,
+      if (instance.initialDecimal?.toJson() case final value?)
+        'initialDecimal': value,
+      if (instance.initialDecimalElement?.toJson() case final value?)
+        '_initialDecimal': value,
+      if (instance.initialInteger?.toJson() case final value?)
+        'initialInteger': value,
+      if (instance.initialIntegerElement?.toJson() case final value?)
+        '_initialInteger': value,
+      if (instance.initialDate?.toJson() case final value?)
+        'initialDate': value,
+      if (instance.initialDateElement?.toJson() case final value?)
+        '_initialDate': value,
+      if (instance.initialDateTime?.toJson() case final value?)
+        'initialDateTime': value,
+      if (instance.initialDateTimeElement?.toJson() case final value?)
+        '_initialDateTime': value,
+      if (instance.initialTime?.toJson() case final value?)
+        'initialTime': value,
+      if (instance.initialTimeElement?.toJson() case final value?)
+        '_initialTime': value,
+      if (instance.initialString case final value?) 'initialString': value,
+      if (instance.initialStringElement?.toJson() case final value?)
+        '_initialString': value,
+      if (instance.initialUri case final value?) 'initialUri': value,
+      if (instance.initialUriElement?.toJson() case final value?)
+        '_initialUri': value,
+      if (instance.initialAttachment?.toJson() case final value?)
+        'initialAttachment': value,
+      if (instance.initialCoding?.toJson() case final value?)
+        'initialCoding': value,
+      if (instance.initialQuantity?.toJson() case final value?)
+        'initialQuantity': value,
+      if (instance.initialReference?.toJson() case final value?)
+        'initialReference': value,
+      if (instance.item?.map((e) => e.toJson()).toList() case final value?)
+        'item': value,
+    };
 
 const _$QuestionnaireItemTypeEnumMap = {
   QuestionnaireItemType.group: 'group',
@@ -1656,41 +1718,51 @@ _$QuestionnaireEnableWhenImpl _$$QuestionnaireEnableWhenImplFromJson(
     );
 
 Map<String, dynamic> _$$QuestionnaireEnableWhenImplToJson(
-    _$QuestionnaireEnableWhenImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('question', instance.question);
-  writeNotNull('_question', instance.questionElement?.toJson());
-  writeNotNull('hasAnswer', instance.hasAnswer?.toJson());
-  writeNotNull('_hasAnswer', instance.hasAnswerElement?.toJson());
-  writeNotNull('answerBoolean', instance.answerBoolean?.toJson());
-  writeNotNull('_answerBoolean', instance.answerBooleanElement?.toJson());
-  writeNotNull('answerDecimal', instance.answerDecimal?.toJson());
-  writeNotNull('_answerDecimal', instance.answerDecimalElement?.toJson());
-  writeNotNull('answerInteger', instance.answerInteger?.toJson());
-  writeNotNull('_answerInteger', instance.answerIntegerElement?.toJson());
-  writeNotNull('answerDate', instance.answerDate?.toJson());
-  writeNotNull('_answerDate', instance.answerDateElement?.toJson());
-  writeNotNull('answerDateTime', instance.answerDateTime?.toJson());
-  writeNotNull('_answerDateTime', instance.answerDateTimeElement?.toJson());
-  writeNotNull('answerTime', instance.answerTime?.toJson());
-  writeNotNull('_answerTime', instance.answerTimeElement?.toJson());
-  writeNotNull('answerString', instance.answerString);
-  writeNotNull('_answerString', instance.answerStringElement?.toJson());
-  writeNotNull('answerUri', instance.answerUri);
-  writeNotNull('_answerUri', instance.answerUriElement?.toJson());
-  writeNotNull('answerAttachment', instance.answerAttachment?.toJson());
-  writeNotNull('answerCoding', instance.answerCoding?.toJson());
-  writeNotNull('answerQuantity', instance.answerQuantity?.toJson());
-  writeNotNull('answerReference', instance.answerReference?.toJson());
-  return val;
-}
+        _$QuestionnaireEnableWhenImpl instance) =>
+    <String, dynamic>{
+      if (instance.question case final value?) 'question': value,
+      if (instance.questionElement?.toJson() case final value?)
+        '_question': value,
+      if (instance.hasAnswer?.toJson() case final value?) 'hasAnswer': value,
+      if (instance.hasAnswerElement?.toJson() case final value?)
+        '_hasAnswer': value,
+      if (instance.answerBoolean?.toJson() case final value?)
+        'answerBoolean': value,
+      if (instance.answerBooleanElement?.toJson() case final value?)
+        '_answerBoolean': value,
+      if (instance.answerDecimal?.toJson() case final value?)
+        'answerDecimal': value,
+      if (instance.answerDecimalElement?.toJson() case final value?)
+        '_answerDecimal': value,
+      if (instance.answerInteger?.toJson() case final value?)
+        'answerInteger': value,
+      if (instance.answerIntegerElement?.toJson() case final value?)
+        '_answerInteger': value,
+      if (instance.answerDate?.toJson() case final value?) 'answerDate': value,
+      if (instance.answerDateElement?.toJson() case final value?)
+        '_answerDate': value,
+      if (instance.answerDateTime?.toJson() case final value?)
+        'answerDateTime': value,
+      if (instance.answerDateTimeElement?.toJson() case final value?)
+        '_answerDateTime': value,
+      if (instance.answerTime?.toJson() case final value?) 'answerTime': value,
+      if (instance.answerTimeElement?.toJson() case final value?)
+        '_answerTime': value,
+      if (instance.answerString case final value?) 'answerString': value,
+      if (instance.answerStringElement?.toJson() case final value?)
+        '_answerString': value,
+      if (instance.answerUri case final value?) 'answerUri': value,
+      if (instance.answerUriElement?.toJson() case final value?)
+        '_answerUri': value,
+      if (instance.answerAttachment?.toJson() case final value?)
+        'answerAttachment': value,
+      if (instance.answerCoding?.toJson() case final value?)
+        'answerCoding': value,
+      if (instance.answerQuantity?.toJson() case final value?)
+        'answerQuantity': value,
+      if (instance.answerReference?.toJson() case final value?)
+        'answerReference': value,
+    };
 
 _$QuestionnaireOptionImpl _$$QuestionnaireOptionImplFromJson(
         Map<String, dynamic> json) =>
@@ -1721,26 +1793,24 @@ _$QuestionnaireOptionImpl _$$QuestionnaireOptionImplFromJson(
     );
 
 Map<String, dynamic> _$$QuestionnaireOptionImplToJson(
-    _$QuestionnaireOptionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('valueInteger', instance.valueInteger?.toJson());
-  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
-  writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
-  writeNotNull('valueCoding', instance.valueCoding?.toJson());
-  return val;
-}
+        _$QuestionnaireOptionImpl instance) =>
+    <String, dynamic>{
+      if (instance.valueInteger?.toJson() case final value?)
+        'valueInteger': value,
+      if (instance.valueIntegerElement?.toJson() case final value?)
+        '_valueInteger': value,
+      if (instance.valueDate?.toJson() case final value?) 'valueDate': value,
+      if (instance.valueDateElement?.toJson() case final value?)
+        '_valueDate': value,
+      if (instance.valueTime?.toJson() case final value?) 'valueTime': value,
+      if (instance.valueTimeElement?.toJson() case final value?)
+        '_valueTime': value,
+      if (instance.valueString case final value?) 'valueString': value,
+      if (instance.valueStringElement?.toJson() case final value?)
+        '_valueString': value,
+      if (instance.valueCoding?.toJson() case final value?)
+        'valueCoding': value,
+    };
 
 _$ServiceDefinitionImpl _$$ServiceDefinitionImplFromJson(
         Map<String, dynamic> json) =>
@@ -1876,77 +1946,96 @@ _$ServiceDefinitionImpl _$$ServiceDefinitionImplFromJson(
     );
 
 Map<String, dynamic> _$$ServiceDefinitionImplToJson(
-    _$ServiceDefinitionImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('version', instance.version);
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$ServiceDefinitionStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('publisher', instance.publisher);
-  writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('purpose', instance.purpose);
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
-  writeNotNull('usage', instance.usage);
-  writeNotNull('_usage', instance.usageElement?.toJson());
-  writeNotNull('approvalDate', instance.approvalDate?.toJson());
-  writeNotNull('_approvalDate', instance.approvalDateElement?.toJson());
-  writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
-  writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
-  writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull(
-      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
-  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'contributor', instance.contributor?.map((e) => e.toJson()).toList());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('copyright', instance.copyright);
-  writeNotNull('_copyright', instance.copyrightElement?.toJson());
-  writeNotNull('relatedArtifact',
-      instance.relatedArtifact?.map((e) => e.toJson()).toList());
-  writeNotNull('trigger', instance.trigger?.map((e) => e.toJson()).toList());
-  writeNotNull('dataRequirement',
-      instance.dataRequirement?.map((e) => e.toJson()).toList());
-  writeNotNull('operationDefinition', instance.operationDefinition?.toJson());
-  return val;
-}
+        _$ServiceDefinitionImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.versionElement?.toJson() case final value?)
+        '_version': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (_$ServiceDefinitionStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.experimental?.toJson() case final value?)
+        'experimental': value,
+      if (instance.experimentalElement?.toJson() case final value?)
+        '_experimental': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.publisher case final value?) 'publisher': value,
+      if (instance.publisherElement?.toJson() case final value?)
+        '_publisher': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.purpose case final value?) 'purpose': value,
+      if (instance.purposeElement?.toJson() case final value?)
+        '_purpose': value,
+      if (instance.usage case final value?) 'usage': value,
+      if (instance.usageElement?.toJson() case final value?) '_usage': value,
+      if (instance.approvalDate?.toJson() case final value?)
+        'approvalDate': value,
+      if (instance.approvalDateElement?.toJson() case final value?)
+        '_approvalDate': value,
+      if (instance.lastReviewDate?.toJson() case final value?)
+        'lastReviewDate': value,
+      if (instance.lastReviewDateElement?.toJson() case final value?)
+        '_lastReviewDate': value,
+      if (instance.effectivePeriod?.toJson() case final value?)
+        'effectivePeriod': value,
+      if (instance.useContext?.map((e) => e.toJson()).toList()
+          case final value?)
+        'useContext': value,
+      if (instance.jurisdiction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'jurisdiction': value,
+      if (instance.topic?.map((e) => e.toJson()).toList() case final value?)
+        'topic': value,
+      if (instance.contributor?.map((e) => e.toJson()).toList()
+          case final value?)
+        'contributor': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.copyright case final value?) 'copyright': value,
+      if (instance.copyrightElement?.toJson() case final value?)
+        '_copyright': value,
+      if (instance.relatedArtifact?.map((e) => e.toJson()).toList()
+          case final value?)
+        'relatedArtifact': value,
+      if (instance.trigger?.map((e) => e.toJson()).toList() case final value?)
+        'trigger': value,
+      if (instance.dataRequirement?.map((e) => e.toJson()).toList()
+          case final value?)
+        'dataRequirement': value,
+      if (instance.operationDefinition?.toJson() case final value?)
+        'operationDefinition': value,
+    };
 
 const _$ServiceDefinitionStatusEnumMap = {
   ServiceDefinitionStatus.draft: 'draft',

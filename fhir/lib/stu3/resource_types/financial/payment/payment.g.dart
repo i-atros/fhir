@@ -76,46 +76,47 @@ _$PaymentNoticeImpl _$$PaymentNoticeImplFromJson(Map<String, dynamic> json) =>
               json['paymentStatus'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$PaymentNoticeImplToJson(_$PaymentNoticeImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull('response', instance.response?.toJson());
-  writeNotNull('statusDate', instance.statusDate?.toJson());
-  writeNotNull('_statusDate', instance.statusDateElement?.toJson());
-  writeNotNull('created', instance.created);
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('target', instance.target?.toJson());
-  writeNotNull('provider', instance.provider?.toJson());
-  writeNotNull('organization', instance.organization?.toJson());
-  writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$PaymentNoticeImplToJson(_$PaymentNoticeImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.status case final value?) 'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.request?.toJson() case final value?) 'request': value,
+      if (instance.response?.toJson() case final value?) 'response': value,
+      if (instance.statusDate?.toJson() case final value?) 'statusDate': value,
+      if (instance.statusDateElement?.toJson() case final value?)
+        '_statusDate': value,
+      if (instance.created case final value?) 'created': value,
+      if (instance.createdElement?.toJson() case final value?)
+        '_created': value,
+      if (instance.target?.toJson() case final value?) 'target': value,
+      if (instance.provider?.toJson() case final value?) 'provider': value,
+      if (instance.organization?.toJson() case final value?)
+        'organization': value,
+      if (instance.paymentStatus?.toJson() case final value?)
+        'paymentStatus': value,
+    };
 
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',
@@ -322,51 +323,55 @@ _$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
     );
 
 Map<String, dynamic> _$$PaymentReconciliationImplToJson(
-    _$PaymentReconciliationImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('created', instance.created);
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('organization', instance.organization?.toJson());
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
-  writeNotNull('disposition', instance.disposition);
-  writeNotNull('_disposition', instance.dispositionElement?.toJson());
-  writeNotNull('requestProvider', instance.requestProvider?.toJson());
-  writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
-  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
-  writeNotNull('form', instance.form?.toJson());
-  writeNotNull('total', instance.total?.toJson());
-  writeNotNull(
-      'processNote', instance.processNote?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$PaymentReconciliationImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.status case final value?) 'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.created case final value?) 'created': value,
+      if (instance.createdElement?.toJson() case final value?)
+        '_created': value,
+      if (instance.organization?.toJson() case final value?)
+        'organization': value,
+      if (instance.request?.toJson() case final value?) 'request': value,
+      if (instance.outcome?.toJson() case final value?) 'outcome': value,
+      if (instance.disposition case final value?) 'disposition': value,
+      if (instance.dispositionElement?.toJson() case final value?)
+        '_disposition': value,
+      if (instance.requestProvider?.toJson() case final value?)
+        'requestProvider': value,
+      if (instance.requestOrganization?.toJson() case final value?)
+        'requestOrganization': value,
+      if (instance.detail?.map((e) => e.toJson()).toList() case final value?)
+        'detail': value,
+      if (instance.form?.toJson() case final value?) 'form': value,
+      if (instance.total?.toJson() case final value?) 'total': value,
+      if (instance.processNote?.map((e) => e.toJson()).toList()
+          case final value?)
+        'processNote': value,
+    };
 
 _$PaymentReconciliationDetailImpl _$$PaymentReconciliationDetailImplFromJson(
         Map<String, dynamic> json) =>
@@ -394,26 +399,17 @@ _$PaymentReconciliationDetailImpl _$$PaymentReconciliationDetailImplFromJson(
     );
 
 Map<String, dynamic> _$$PaymentReconciliationDetailImplToJson(
-    _$PaymentReconciliationDetailImpl instance) {
-  final val = <String, dynamic>{
-    'type': instance.type.toJson(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull('response', instance.response?.toJson());
-  writeNotNull('submitter', instance.submitter?.toJson());
-  writeNotNull('payee', instance.payee?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('amount', instance.amount?.toJson());
-  return val;
-}
+        _$PaymentReconciliationDetailImpl instance) =>
+    <String, dynamic>{
+      'type': instance.type.toJson(),
+      if (instance.request?.toJson() case final value?) 'request': value,
+      if (instance.response?.toJson() case final value?) 'response': value,
+      if (instance.submitter?.toJson() case final value?) 'submitter': value,
+      if (instance.payee?.toJson() case final value?) 'payee': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.amount?.toJson() case final value?) 'amount': value,
+    };
 
 _$PaymentReconciliationProcessNoteImpl
     _$$PaymentReconciliationProcessNoteImplFromJson(
@@ -429,17 +425,9 @@ _$PaymentReconciliationProcessNoteImpl
         );
 
 Map<String, dynamic> _$$PaymentReconciliationProcessNoteImplToJson(
-    _$PaymentReconciliationProcessNoteImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  return val;
-}
+        _$PaymentReconciliationProcessNoteImpl instance) =>
+    <String, dynamic>{
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+    };

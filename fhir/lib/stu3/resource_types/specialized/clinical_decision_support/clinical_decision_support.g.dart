@@ -96,54 +96,58 @@ _$GuidanceResponseImpl _$$GuidanceResponseImplFromJson(
     );
 
 Map<String, dynamic> _$$GuidanceResponseImplToJson(
-    _$GuidanceResponseImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('requestId', instance.requestId?.toJson());
-  writeNotNull('_requestId', instance.requestIdElement?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  val['module'] = instance.module.toJson();
-  writeNotNull('status', _$GuidanceResponseStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('context', instance.context?.toJson());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
-  writeNotNull(
-      '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
-  writeNotNull('performer', instance.performer?.toJson());
-  writeNotNull(
-      'reasonCodeableConcept', instance.reasonCodeableConcept?.toJson());
-  writeNotNull('reasonReference', instance.reasonReference?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('evaluationMessage',
-      instance.evaluationMessage?.map((e) => e.toJson()).toList());
-  writeNotNull('outputParameters', instance.outputParameters?.toJson());
-  writeNotNull('result', instance.result?.toJson());
-  writeNotNull('dataRequirement',
-      instance.dataRequirement?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$GuidanceResponseImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.requestId?.toJson() case final value?) 'requestId': value,
+      if (instance.requestIdElement?.toJson() case final value?)
+        '_requestId': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      'module': instance.module.toJson(),
+      if (_$GuidanceResponseStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.subject?.toJson() case final value?) 'subject': value,
+      if (instance.context?.toJson() case final value?) 'context': value,
+      if (instance.occurrenceDateTime?.toJson() case final value?)
+        'occurrenceDateTime': value,
+      if (instance.occurrenceDateTimeElement?.toJson() case final value?)
+        '_occurrenceDateTime': value,
+      if (instance.performer?.toJson() case final value?) 'performer': value,
+      if (instance.reasonCodeableConcept?.toJson() case final value?)
+        'reasonCodeableConcept': value,
+      if (instance.reasonReference?.toJson() case final value?)
+        'reasonReference': value,
+      if (instance.note?.map((e) => e.toJson()).toList() case final value?)
+        'note': value,
+      if (instance.evaluationMessage?.map((e) => e.toJson()).toList()
+          case final value?)
+        'evaluationMessage': value,
+      if (instance.outputParameters?.toJson() case final value?)
+        'outputParameters': value,
+      if (instance.result?.toJson() case final value?) 'result': value,
+      if (instance.dataRequirement?.map((e) => e.toJson()).toList()
+          case final value?)
+        'dataRequirement': value,
+    };
 
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',

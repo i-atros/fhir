@@ -35,28 +35,27 @@ _$MetaImpl _$$MetaImplFromJson(Map<String, dynamic> json) => _$MetaImpl(
           .toList(),
     );
 
-Map<String, dynamic> _$$MetaImplToJson(_$MetaImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('versionId', instance.versionId?.toJson());
-  writeNotNull('_versionId', instance.versionIdElement?.toJson());
-  writeNotNull('lastUpdated', instance.lastUpdated?.toJson());
-  writeNotNull('_lastUpdated', instance.lastUpdatedElement?.toJson());
-  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
-  writeNotNull('security', instance.security?.map((e) => e.toJson()).toList());
-  writeNotNull('tag', instance.tag?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$MetaImplToJson(_$MetaImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.fhirComments case final value?) 'fhir_comments': value,
+      if (instance.versionId?.toJson() case final value?) 'versionId': value,
+      if (instance.versionIdElement?.toJson() case final value?)
+        '_versionId': value,
+      if (instance.lastUpdated?.toJson() case final value?)
+        'lastUpdated': value,
+      if (instance.lastUpdatedElement?.toJson() case final value?)
+        '_lastUpdated': value,
+      if (instance.profile?.map((e) => e.toJson()).toList() case final value?)
+        'profile': value,
+      if (instance.security?.map((e) => e.toJson()).toList() case final value?)
+        'security': value,
+      if (instance.tag?.map((e) => e.toJson()).toList() case final value?)
+        'tag': value,
+    };
 
 _$ReferenceImpl _$$ReferenceImplFromJson(Map<String, dynamic> json) =>
     _$ReferenceImpl(
@@ -77,25 +76,20 @@ _$ReferenceImpl _$$ReferenceImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ReferenceImplToJson(_$ReferenceImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('reference', instance.reference);
-  writeNotNull('_reference', instance.referenceElement?.toJson());
-  writeNotNull('display', instance.display);
-  writeNotNull('_display', instance.displayElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ReferenceImplToJson(_$ReferenceImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.fhirComments case final value?) 'fhir_comments': value,
+      if (instance.reference case final value?) 'reference': value,
+      if (instance.referenceElement?.toJson() case final value?)
+        '_reference': value,
+      if (instance.display case final value?) 'display': value,
+      if (instance.displayElement?.toJson() case final value?)
+        '_display': value,
+    };
 
 _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
         Map<String, dynamic> json) =>
@@ -1145,397 +1139,637 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
     );
 
 Map<String, dynamic> _$$ElementDefinitionImplToJson(
-    _$ElementDefinitionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  val['path'] = instance.path;
-  writeNotNull('representation',
-      instance.representation?.map((e) => e.toJson()).toList());
-  writeNotNull('_representation', instance.representationElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('label', instance.label);
-  writeNotNull('_label', instance.labelElement?.toJson());
-  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
-  writeNotNull('slicing', instance.slicing?.toJson());
-  writeNotNull('short', instance.short);
-  writeNotNull('_short', instance.shortElement?.toJson());
-  writeNotNull('definition', instance.definition?.toJson());
-  writeNotNull('_definition', instance.definitionElement?.toJson());
-  writeNotNull('comments', instance.comments?.toJson());
-  writeNotNull('_comments', instance.commentElement?.toJson());
-  writeNotNull('requirements', instance.requirements?.toJson());
-  writeNotNull('_requirements', instance.requirementsElement?.toJson());
-  writeNotNull('alias', instance.alias);
-  writeNotNull('_alias', instance.aliasElement?.toJson());
-  writeNotNull('min', instance.min?.toJson());
-  writeNotNull('_min', instance.minElement?.toJson());
-  writeNotNull('max', instance.max);
-  writeNotNull('_max', instance.maxElement?.toJson());
-  writeNotNull('base', instance.base?.toJson());
-  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('nameReference', instance.nameReference);
-  writeNotNull('defaultValueBoolean', instance.defaultValueBoolean?.toJson());
-  writeNotNull(
-      '_defaultValueBoolean', instance.defaultValueBooleanElement?.toJson());
-  writeNotNull('defaultValueInteger', instance.defaultValueInteger?.toJson());
-  writeNotNull(
-      '_defaultValueInteger', instance.defaultValueIntegerElement?.toJson());
-  writeNotNull('defaultValueDecimal', instance.defaultValueDecimal?.toJson());
-  writeNotNull(
-      '_defaultValueDecimal', instance.defaultValueDecimalElement?.toJson());
-  writeNotNull(
-      'defaultValueBase64Binary', instance.defaultValueBase64Binary?.toJson());
-  writeNotNull('_defaultValueBase64Binary',
-      instance.defaultValueBase64BinaryElement?.toJson());
-  writeNotNull('defaultValueInstant', instance.defaultValueInstant?.toJson());
-  writeNotNull(
-      '_defaultValueInstant', instance.defaultValueInstantElement?.toJson());
-  writeNotNull('defaultValueString', instance.defaultValueString);
-  writeNotNull(
-      '_defaultValueString', instance.defaultValueStringElement?.toJson());
-  writeNotNull('defaultValueUri', instance.defaultValueUri?.toJson());
-  writeNotNull('_defaultValueUri', instance.defaultValueUriElement?.toJson());
-  writeNotNull('defaultValueDate', instance.defaultValueDate?.toJson());
-  writeNotNull('_defaultValueDate', instance.defaultValueDateElement?.toJson());
-  writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
-  writeNotNull(
-      '_defaultValueDateTime', instance.defaultValueDateTimeElement?.toJson());
-  writeNotNull('defaultValueTime', instance.defaultValueTime?.toJson());
-  writeNotNull('_defaultValueTime', instance.defaultValueTimeElement?.toJson());
-  writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
-  writeNotNull('_defaultValueCode', instance.defaultValueCodeElement?.toJson());
-  writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());
-  writeNotNull('_defaultValueOid', instance.defaultValueOidElement?.toJson());
-  writeNotNull('defaultValueId', instance.defaultValueId?.toJson());
-  writeNotNull('_defaultValueId', instance.defaultValueIdElement?.toJson());
-  writeNotNull(
-      'defaultValueUnsignedInt', instance.defaultValueUnsignedInt?.toJson());
-  writeNotNull('_defaultValueUnsignedInt',
-      instance.defaultValueUnsignedIntElement?.toJson());
-  writeNotNull(
-      'defaultValuePositiveInt', instance.defaultValuePositiveInt?.toJson());
-  writeNotNull('_defaultValuePositiveInt',
-      instance.defaultValuePositiveIntElement?.toJson());
-  writeNotNull('defaultValueMarkdown', instance.defaultValueMarkdown?.toJson());
-  writeNotNull(
-      '_defaultValueMarkDown', instance.defaultValueMarkDownElement?.toJson());
-  writeNotNull(
-      'defaultValueAnnotation', instance.defaultValueAnnotation?.toJson());
-  writeNotNull(
-      'defaultValueAttachment', instance.defaultValueAttachment?.toJson());
-  writeNotNull(
-      'defaultValueIdentifier', instance.defaultValueIdentifier?.toJson());
-  writeNotNull('defaultValueCodeableConcept',
-      instance.defaultValueCodeableConcept?.toJson());
-  writeNotNull('defaultValueCoding', instance.defaultValueCoding?.toJson());
-  writeNotNull('defaultValueQuantity', instance.defaultValueQuantity?.toJson());
-  writeNotNull('defaultValueRange', instance.defaultValueRange?.toJson());
-  writeNotNull('defaultValuePeriod', instance.defaultValuePeriod?.toJson());
-  writeNotNull('defaultValueRatio', instance.defaultValueRatio?.toJson());
-  writeNotNull(
-      'defaultValueSampledData', instance.defaultValueSampledData?.toJson());
-  writeNotNull(
-      'defaultValueSignature', instance.defaultValueSignature?.toJson());
-  writeNotNull(
-      'defaultValueHumanName', instance.defaultValueHumanName?.toJson());
-  writeNotNull('defaultValueAddress', instance.defaultValueAddress?.toJson());
-  writeNotNull(
-      'defaultValueContactPoint', instance.defaultValueContactPoint?.toJson());
-  writeNotNull('defaultValueTiming', instance.defaultValueTiming?.toJson());
-  writeNotNull(
-      'defaultValueReference', instance.defaultValueReference?.toJson());
-  writeNotNull('defaultValueMeta', instance.defaultValueMeta?.toJson());
-  writeNotNull('meaningWhenMissing', instance.meaningWhenMissing?.toJson());
-  writeNotNull(
-      '_meaningWhenMissing', instance.meaningWhenMissingElement?.toJson());
-  writeNotNull('fixedBoolean', instance.fixedBoolean?.toJson());
-  writeNotNull('_fixedBoolean', instance.fixedBooleanElement?.toJson());
-  writeNotNull('fixedInteger', instance.fixedInteger?.toJson());
-  writeNotNull('_fixedInteger', instance.fixedIntegerElement?.toJson());
-  writeNotNull('fixedDecimal', instance.fixedDecimal?.toJson());
-  writeNotNull('_fixedDecimal', instance.fixedDecimalElement?.toJson());
-  writeNotNull('fixedBase64Binary', instance.fixedBase64Binary?.toJson());
-  writeNotNull(
-      '_fixedBase64Binary', instance.fixedBase64BinaryElement?.toJson());
-  writeNotNull('fixedInstant', instance.fixedInstant?.toJson());
-  writeNotNull('_fixedInstant', instance.fixedInstantElement?.toJson());
-  writeNotNull('fixedString', instance.fixedString);
-  writeNotNull('_fixedString', instance.fixedStringElement?.toJson());
-  writeNotNull('fixedUri', instance.fixedUri?.toJson());
-  writeNotNull('_fixedUri', instance.fixedUriElement?.toJson());
-  writeNotNull('fixedDate', instance.fixedDate?.toJson());
-  writeNotNull('_fixedDate', instance.fixedDateElement?.toJson());
-  writeNotNull('fixedDateTime', instance.fixedDateTime?.toJson());
-  writeNotNull('_fixedDateTime', instance.fixedDateTimeElement?.toJson());
-  writeNotNull('fixedCode', instance.fixedCode?.toJson());
-  writeNotNull('_fixedCode', instance.fixedCodeElement?.toJson());
-  writeNotNull('fixedOid', instance.fixedOid?.toJson());
-  writeNotNull('_fixedOid', instance.fixedOidElement?.toJson());
-  writeNotNull('fixedId', instance.fixedId?.toJson());
-  writeNotNull('_fixedId', instance.fixedIdElement?.toJson());
-  writeNotNull('fixedUnsignedInt', instance.fixedUnsignedInt?.toJson());
-  writeNotNull('_fixedUnsignedInt', instance.fixedUnsignedIntElement?.toJson());
-  writeNotNull('fixedPositiveInt', instance.fixedPositiveInt?.toJson());
-  writeNotNull('_fixedPositiveInt', instance.fixedPositiveIntElement?.toJson());
-  writeNotNull('fixedMarkdown', instance.fixedMarkdown?.toJson());
-  writeNotNull('_fixedMarkdown', instance.fixedMarkdownElement?.toJson());
-  writeNotNull('fixedAnnotation', instance.fixedAnnotation?.toJson());
-  writeNotNull('fixedAttachment', instance.fixedAttachment?.toJson());
-  writeNotNull('fixedIdentifier', instance.fixedIdentifier?.toJson());
-  writeNotNull('fixedCodeableConcept', instance.fixedCodeableConcept?.toJson());
-  writeNotNull('fixedCoding', instance.fixedCoding?.toJson());
-  writeNotNull('fixedQuantity', instance.fixedQuantity?.toJson());
-  writeNotNull('fixedRange', instance.fixedRange?.toJson());
-  writeNotNull('fixedPeriod', instance.fixedPeriod?.toJson());
-  writeNotNull('fixedRatio', instance.fixedRatio?.toJson());
-  writeNotNull('fixedSampledData', instance.fixedSampledData?.toJson());
-  writeNotNull('fixedSignature', instance.fixedSignature?.toJson());
-  writeNotNull('fixedHumanName', instance.fixedHumanName?.toJson());
-  writeNotNull('fixedAddress', instance.fixedAddress?.toJson());
-  writeNotNull('fixedContactPoint', instance.fixedContactPoint?.toJson());
-  writeNotNull('fixedTiming', instance.fixedTiming?.toJson());
-  writeNotNull('fixedReference', instance.fixedReference?.toJson());
-  writeNotNull('fixedMeta', instance.fixedMeta?.toJson());
-  writeNotNull('patternBoolean', instance.patternBoolean?.toJson());
-  writeNotNull('_patternBoolean', instance.patternBooleanElement?.toJson());
-  writeNotNull('patternInteger', instance.patternInteger?.toJson());
-  writeNotNull('_patternInteger', instance.patternIntegerElement?.toJson());
-  writeNotNull('patternDecimal', instance.patternDecimal?.toJson());
-  writeNotNull('_patternDecimal', instance.patternDecimalElement?.toJson());
-  writeNotNull('patternBase64Binary', instance.patternBase64Binary?.toJson());
-  writeNotNull(
-      '_patternBase64Binary', instance.patternBase64BinaryElement?.toJson());
-  writeNotNull('patternInstant', instance.patternInstant?.toJson());
-  writeNotNull('_patternInstant', instance.patternInstantElement?.toJson());
-  writeNotNull('patternString', instance.patternString);
-  writeNotNull('_patternString', instance.patternStringElement?.toJson());
-  writeNotNull('patternUri', instance.patternUri?.toJson());
-  writeNotNull('_patternUri', instance.patternUriElement?.toJson());
-  writeNotNull('patternDate', instance.patternDate?.toJson());
-  writeNotNull('_patternDate', instance.patternDateElement?.toJson());
-  writeNotNull('patternDateTime', instance.patternDateTime?.toJson());
-  writeNotNull('_patternDateTime', instance.patternDateTimeElement?.toJson());
-  writeNotNull('patternTime', instance.patternTime?.toJson());
-  writeNotNull('_patternTime', instance.patternTimeElement?.toJson());
-  writeNotNull('patternCode', instance.patternCode?.toJson());
-  writeNotNull('_patternCode', instance.patternCodeElement?.toJson());
-  writeNotNull('patternOid', instance.patternOid?.toJson());
-  writeNotNull('_patternOid', instance.patternOidElement?.toJson());
-  writeNotNull('patternId', instance.patternId?.toJson());
-  writeNotNull('_patternId', instance.patternIdElement?.toJson());
-  writeNotNull('patternUnsignedInt', instance.patternUnsignedInt?.toJson());
-  writeNotNull(
-      '_patternUnsignedInt', instance.patternUnsignedIntElement?.toJson());
-  writeNotNull('patternPositiveInt', instance.patternPositiveInt?.toJson());
-  writeNotNull(
-      '_patternPositiveInt', instance.patternPositiveIntElement?.toJson());
-  writeNotNull('patternMarkdown', instance.patternMarkdown?.toJson());
-  writeNotNull('_patternMarkdown', instance.patternMarkdownElement?.toJson());
-  writeNotNull('patternAnnotation', instance.patternAnnotation?.toJson());
-  writeNotNull('patternAttachment', instance.patternAttachment?.toJson());
-  writeNotNull('patternIdentifier', instance.patternIdentifier?.toJson());
-  writeNotNull(
-      'patternCodeableConcept', instance.patternCodeableConcept?.toJson());
-  writeNotNull('patternCoding', instance.patternCoding?.toJson());
-  writeNotNull('patternQuantity', instance.patternQuantity?.toJson());
-  writeNotNull('patternRange', instance.patternRange?.toJson());
-  writeNotNull('patternPeriod', instance.patternPeriod?.toJson());
-  writeNotNull('patternRatio', instance.patternRatio?.toJson());
-  writeNotNull('patternSampledData', instance.patternSampledData?.toJson());
-  writeNotNull('patternSignature', instance.patternSignature?.toJson());
-  writeNotNull('patternHumanName', instance.patternHumanName?.toJson());
-  writeNotNull('patternAddress', instance.patternAddress?.toJson());
-  writeNotNull('patternContactPoint', instance.patternContactPoint?.toJson());
-  writeNotNull('patternTiming', instance.patternTiming?.toJson());
-  writeNotNull('patternReference', instance.patternReference?.toJson());
-  writeNotNull('patternMeta', instance.patternMeta?.toJson());
-  writeNotNull('exampleBoolean', instance.exampleBoolean?.toJson());
-  writeNotNull('_exampleBoolean', instance.exampleBooleanElement?.toJson());
-  writeNotNull('exampleInteger', instance.exampleInteger?.toJson());
-  writeNotNull('_exampleInteger', instance.exampleIntegerElement?.toJson());
-  writeNotNull('exampleDecimal', instance.exampleDecimal?.toJson());
-  writeNotNull('_exampleDecimal', instance.exampleDecimalElement?.toJson());
-  writeNotNull('exampleBase64Binary', instance.exampleBase64Binary?.toJson());
-  writeNotNull(
-      '_exampleBase64Binary', instance.exampleBase64BinaryElement?.toJson());
-  writeNotNull('exampleInstant', instance.exampleInstant?.toJson());
-  writeNotNull('_exampleInstant', instance.exampleInstantElement?.toJson());
-  writeNotNull('exampleString', instance.exampleString);
-  writeNotNull('_exampleString', instance.exampleStringElement?.toJson());
-  writeNotNull('exampleUri', instance.exampleUri?.toJson());
-  writeNotNull('_exampleUri', instance.exampleUriElement?.toJson());
-  writeNotNull('exampleDate', instance.exampleDate?.toJson());
-  writeNotNull('_exampleDate', instance.exampleDateElement?.toJson());
-  writeNotNull('exampleDateTime', instance.exampleDateTime?.toJson());
-  writeNotNull('_exampleDateTime', instance.exampleDateTimeElement?.toJson());
-  writeNotNull('exampleTime', instance.exampleTime?.toJson());
-  writeNotNull('_exampleTime', instance.exampleTimeElement?.toJson());
-  writeNotNull('exampleCode', instance.exampleCode?.toJson());
-  writeNotNull('_exampleCode', instance.exampleCodeElement?.toJson());
-  writeNotNull('exampleOid', instance.exampleOid?.toJson());
-  writeNotNull('_exampleOid', instance.exampleOidElement?.toJson());
-  writeNotNull('exampleId', instance.exampleId?.toJson());
-  writeNotNull('_exampleId', instance.exampleIdElement?.toJson());
-  writeNotNull('exampleUnsignedInt', instance.exampleUnsignedInt?.toJson());
-  writeNotNull(
-      '_exampleUnsignedInt', instance.exampleUnsignedIntElement?.toJson());
-  writeNotNull('examplePositiveInt', instance.examplePositiveInt?.toJson());
-  writeNotNull(
-      '_examplePositiveInt', instance.examplePositiveIntElement?.toJson());
-  writeNotNull('exampleMarkdown', instance.exampleMarkdown?.toJson());
-  writeNotNull('_exampleMarkdown', instance.exampleMarkdownElement?.toJson());
-  writeNotNull('exampleAnnotation', instance.exampleAnnotation?.toJson());
-  writeNotNull('exampleAttachment', instance.exampleAttachment?.toJson());
-  writeNotNull('exampleIdentifier', instance.exampleIdentifier?.toJson());
-  writeNotNull(
-      'exampleCodeableConcept', instance.exampleCodeableConcept?.toJson());
-  writeNotNull('exampleCoding', instance.exampleCoding?.toJson());
-  writeNotNull('exampleQuantity', instance.exampleQuantity?.toJson());
-  writeNotNull('exampleRange', instance.exampleRange?.toJson());
-  writeNotNull('examplePeriod', instance.examplePeriod?.toJson());
-  writeNotNull('exampleRatio', instance.exampleRatio?.toJson());
-  writeNotNull('exampleSampleData', instance.exampleSampleData?.toJson());
-  writeNotNull('exampleSignature', instance.exampleSignature?.toJson());
-  writeNotNull('exampleHumanName', instance.exampleHumanName?.toJson());
-  writeNotNull('exampleAddress', instance.exampleAddress?.toJson());
-  writeNotNull('exampleContactPoint', instance.exampleContactPoint?.toJson());
-  writeNotNull('exampleTiming', instance.exampleTiming?.toJson());
-  writeNotNull('exampleReference', instance.exampleReference?.toJson());
-  writeNotNull('exampleMeta', instance.exampleMeta?.toJson());
-  writeNotNull('minValueBoolean', instance.minValueBoolean?.toJson());
-  writeNotNull('_minValueBoolean', instance.minValueBooleanElement?.toJson());
-  writeNotNull('minValueInteger', instance.minValueInteger?.toJson());
-  writeNotNull('_minValueInteger', instance.minValueIntegerElement?.toJson());
-  writeNotNull('minValueDecimal', instance.minValueDecimal?.toJson());
-  writeNotNull('_minValueDecimal', instance.minValueDecimalElement?.toJson());
-  writeNotNull('minValueBase64Binary', instance.minValueBase64Binary?.toJson());
-  writeNotNull(
-      '_minValueBase64Binary', instance.minValueBase64BinaryElement?.toJson());
-  writeNotNull('minValueInstant', instance.minValueInstant?.toJson());
-  writeNotNull('_minValueInstant', instance.minValueInstantElement?.toJson());
-  writeNotNull('minValueString', instance.minValueString);
-  writeNotNull('_minValueString', instance.minValueStringElement?.toJson());
-  writeNotNull('minValueUri', instance.minValueUri?.toJson());
-  writeNotNull('_minValueUri', instance.minValueUriElement?.toJson());
-  writeNotNull('minValueDate', instance.minValueDate?.toJson());
-  writeNotNull('_minValueDate', instance.minValueDateElement?.toJson());
-  writeNotNull(
-      'minValueDateTime', instance.minValueDateTime?.toIso8601String());
-  writeNotNull('_minValueDateTime', instance.minValueDateTimeElement?.toJson());
-  writeNotNull('minValueTime', instance.minValueTime?.toJson());
-  writeNotNull('_minValueTime', instance.minValueTimeElement?.toJson());
-  writeNotNull('minValueCode', instance.minValueCode?.toJson());
-  writeNotNull('_minValueCode', instance.minValueCodeElement?.toJson());
-  writeNotNull('minValueOid', instance.minValueOid?.toJson());
-  writeNotNull('_minValueOid', instance.minValueOidElement?.toJson());
-  writeNotNull('minValueId', instance.minValueId?.toJson());
-  writeNotNull('_minValueId', instance.minValueIdElement?.toJson());
-  writeNotNull('minValueUnsignedInt', instance.minValueUnsignedInt?.toJson());
-  writeNotNull(
-      '_minValueUnsignedInt', instance.minValueUnsignedIntElement?.toJson());
-  writeNotNull('minValuePositiveInt', instance.minValuePositiveInt?.toJson());
-  writeNotNull(
-      '_minValuePositiveInt', instance.minValuePositiveIntElement?.toJson());
-  writeNotNull('minValueMarkdown', instance.minValueMarkdown?.toJson());
-  writeNotNull('_minValueMarkdown', instance.minValueMarkdownElement?.toJson());
-  writeNotNull('minValueAnnotation', instance.minValueAnnotation?.toJson());
-  writeNotNull('minValueAttachment', instance.minValueAttachment?.toJson());
-  writeNotNull('minValueIdentifier', instance.minValueIdentifier?.toJson());
-  writeNotNull(
-      'minValueCodeableConcept', instance.minValueCodeableConcept?.toJson());
-  writeNotNull('minValueCoding', instance.minValueCoding?.toJson());
-  writeNotNull('minValueQuantity', instance.minValueQuantity?.toJson());
-  writeNotNull('minValueRange', instance.minValueRange?.toJson());
-  writeNotNull('minValuePeriod', instance.minValuePeriod?.toJson());
-  writeNotNull('minValueRatio', instance.minValueRatio?.toJson());
-  writeNotNull('minValueSampledData', instance.minValueSampledData?.toJson());
-  writeNotNull('minValueSignature', instance.minValueSignature?.toJson());
-  writeNotNull('minValueHumanName', instance.minValueHumanName?.toJson());
-  writeNotNull('minValueAddress', instance.minValueAddress?.toJson());
-  writeNotNull('minValueContactPoint', instance.minValueContactPoint?.toJson());
-  writeNotNull('minValueTiming', instance.minValueTiming?.toJson());
-  writeNotNull('minValueReference', instance.minValueReference?.toJson());
-  writeNotNull('minValueMeta', instance.minValueMeta?.toJson());
-  writeNotNull('maxValueBoolean', instance.maxValueBoolean?.toJson());
-  writeNotNull('_maxValueBoolean', instance.maxValueBooleanElement?.toJson());
-  writeNotNull('maxValueInteger', instance.maxValueInteger?.toJson());
-  writeNotNull('_maxValueInteger', instance.maxValueIntegerElement?.toJson());
-  writeNotNull('maxValueDecimal', instance.maxValueDecimal?.toJson());
-  writeNotNull('_maxValueDecimal', instance.maxValueDecimalElement?.toJson());
-  writeNotNull('maxValueBase64Binary', instance.maxValueBase64Binary?.toJson());
-  writeNotNull(
-      '_maxValueBase64Binary', instance.maxValueBase64BinaryElement?.toJson());
-  writeNotNull('maxValueInstant', instance.maxValueInstant?.toJson());
-  writeNotNull('_maxValueInstant', instance.maxValueInstantElement?.toJson());
-  writeNotNull('maxValueString', instance.maxValueString);
-  writeNotNull('_maxValueString', instance.maxValueStringElement?.toJson());
-  writeNotNull('maxValueUri', instance.maxValueUri?.toJson());
-  writeNotNull('_maxValueUri', instance.maxValueUriElement?.toJson());
-  writeNotNull('maxValueDate', instance.maxValueDate?.toJson());
-  writeNotNull('_maxValueDate', instance.maxValueDateElement?.toJson());
-  writeNotNull(
-      'maxValueDateTime', instance.maxValueDateTime?.toIso8601String());
-  writeNotNull('_maxValueDateTime', instance.maxValueDateTimeElement?.toJson());
-  writeNotNull('maxValueTime', instance.maxValueTime?.toJson());
-  writeNotNull('_maxValueTime', instance.maxValueTimeElement?.toJson());
-  writeNotNull('maxValueCode', instance.maxValueCode?.toJson());
-  writeNotNull('_maxValueCode', instance.maxValueCodeElement?.toJson());
-  writeNotNull('maxValueOid', instance.maxValueOid?.toJson());
-  writeNotNull('_maxValueOid', instance.maxValueOidElement?.toJson());
-  writeNotNull('maxValueId', instance.maxValueId?.toJson());
-  writeNotNull('_maxValueId', instance.maxValueIdElement?.toJson());
-  writeNotNull('maxValueUnsignedInt', instance.maxValueUnsignedInt?.toJson());
-  writeNotNull(
-      '_maxValueUnsignedInt', instance.maxValueUnsignedIntElement?.toJson());
-  writeNotNull('maxValuePositiveInt', instance.maxValuePositiveInt?.toJson());
-  writeNotNull(
-      '_maxValuePositiveInt', instance.maxValuePositiveIntElement?.toJson());
-  writeNotNull('maxValueMarkdown', instance.maxValueMarkdown?.toJson());
-  writeNotNull('_maxValueMarkdown', instance.maxValueMarkdownElement?.toJson());
-  writeNotNull('maxValueAnnotation', instance.maxValueAnnotation?.toJson());
-  writeNotNull('maxValueAttachment', instance.maxValueAttachment?.toJson());
-  writeNotNull('maxValueIdentifier', instance.maxValueIdentifier?.toJson());
-  writeNotNull(
-      'maxValueCodeableConcept', instance.maxValueCodeableConcept?.toJson());
-  writeNotNull('maxValueCoding', instance.maxValueCoding?.toJson());
-  writeNotNull('maxValueQuantity', instance.maxValueQuantity?.toJson());
-  writeNotNull('maxValueRange', instance.maxValueRange?.toJson());
-  writeNotNull('maxValuePeriod', instance.maxValuePeriod?.toJson());
-  writeNotNull('maxValueRatio', instance.maxValueRatio?.toJson());
-  writeNotNull('maxValueSampledData', instance.maxValueSampledData?.toJson());
-  writeNotNull('maxValueSignature', instance.maxValueSignature?.toJson());
-  writeNotNull('maxValueHumanName', instance.maxValueHumanName?.toJson());
-  writeNotNull('maxValueAddress', instance.maxValueAddress?.toJson());
-  writeNotNull('maxValueContactPoint', instance.maxValueContactPoint?.toJson());
-  writeNotNull('maxValueTiming', instance.maxValueTiming?.toJson());
-  writeNotNull('maxValueReference', instance.maxValueReference?.toJson());
-  writeNotNull('maxValueMeta', instance.maxValueMeta?.toJson());
-  writeNotNull('maxLength', instance.maxLength?.toJson());
-  writeNotNull('_maxLength', instance.maxLengthElement?.toJson());
-  writeNotNull(
-      'condition', instance.condition?.map((e) => e.toJson()).toList());
-  writeNotNull('_condition', instance.conditionElement?.toJson());
-  writeNotNull(
-      'constraint', instance.constraint?.map((e) => e.toJson()).toList());
-  writeNotNull('mustSupport', instance.mustSupport?.toJson());
-  writeNotNull('_mustSupport', instance.mustSupportElement?.toJson());
-  writeNotNull('isModifier', instance.isModifier?.toJson());
-  writeNotNull('_isModifier', instance.isModifierElement?.toJson());
-  writeNotNull('isSummary', instance.isSummary?.toJson());
-  writeNotNull('_isSummary', instance.isSummaryElement?.toJson());
-  writeNotNull('binding', instance.binding?.toJson());
-  writeNotNull('mapping', instance.mapping?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ElementDefinitionImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      'path': instance.path,
+      if (instance.representation?.map((e) => e.toJson()).toList()
+          case final value?)
+        'representation': value,
+      if (instance.representationElement?.toJson() case final value?)
+        '_representation': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.label case final value?) 'label': value,
+      if (instance.labelElement?.toJson() case final value?) '_label': value,
+      if (instance.code?.map((e) => e.toJson()).toList() case final value?)
+        'code': value,
+      if (instance.slicing?.toJson() case final value?) 'slicing': value,
+      if (instance.short case final value?) 'short': value,
+      if (instance.shortElement?.toJson() case final value?) '_short': value,
+      if (instance.definition?.toJson() case final value?) 'definition': value,
+      if (instance.definitionElement?.toJson() case final value?)
+        '_definition': value,
+      if (instance.comments?.toJson() case final value?) 'comments': value,
+      if (instance.commentElement?.toJson() case final value?)
+        '_comments': value,
+      if (instance.requirements?.toJson() case final value?)
+        'requirements': value,
+      if (instance.requirementsElement?.toJson() case final value?)
+        '_requirements': value,
+      if (instance.alias case final value?) 'alias': value,
+      if (instance.aliasElement?.toJson() case final value?) '_alias': value,
+      if (instance.min?.toJson() case final value?) 'min': value,
+      if (instance.minElement?.toJson() case final value?) '_min': value,
+      if (instance.max case final value?) 'max': value,
+      if (instance.maxElement?.toJson() case final value?) '_max': value,
+      if (instance.base?.toJson() case final value?) 'base': value,
+      if (instance.type?.map((e) => e.toJson()).toList() case final value?)
+        'type': value,
+      if (instance.nameReference case final value?) 'nameReference': value,
+      if (instance.defaultValueBoolean?.toJson() case final value?)
+        'defaultValueBoolean': value,
+      if (instance.defaultValueBooleanElement?.toJson() case final value?)
+        '_defaultValueBoolean': value,
+      if (instance.defaultValueInteger?.toJson() case final value?)
+        'defaultValueInteger': value,
+      if (instance.defaultValueIntegerElement?.toJson() case final value?)
+        '_defaultValueInteger': value,
+      if (instance.defaultValueDecimal?.toJson() case final value?)
+        'defaultValueDecimal': value,
+      if (instance.defaultValueDecimalElement?.toJson() case final value?)
+        '_defaultValueDecimal': value,
+      if (instance.defaultValueBase64Binary?.toJson() case final value?)
+        'defaultValueBase64Binary': value,
+      if (instance.defaultValueBase64BinaryElement?.toJson() case final value?)
+        '_defaultValueBase64Binary': value,
+      if (instance.defaultValueInstant?.toJson() case final value?)
+        'defaultValueInstant': value,
+      if (instance.defaultValueInstantElement?.toJson() case final value?)
+        '_defaultValueInstant': value,
+      if (instance.defaultValueString case final value?)
+        'defaultValueString': value,
+      if (instance.defaultValueStringElement?.toJson() case final value?)
+        '_defaultValueString': value,
+      if (instance.defaultValueUri?.toJson() case final value?)
+        'defaultValueUri': value,
+      if (instance.defaultValueUriElement?.toJson() case final value?)
+        '_defaultValueUri': value,
+      if (instance.defaultValueDate?.toJson() case final value?)
+        'defaultValueDate': value,
+      if (instance.defaultValueDateElement?.toJson() case final value?)
+        '_defaultValueDate': value,
+      if (instance.defaultValueDateTime?.toJson() case final value?)
+        'defaultValueDateTime': value,
+      if (instance.defaultValueDateTimeElement?.toJson() case final value?)
+        '_defaultValueDateTime': value,
+      if (instance.defaultValueTime?.toJson() case final value?)
+        'defaultValueTime': value,
+      if (instance.defaultValueTimeElement?.toJson() case final value?)
+        '_defaultValueTime': value,
+      if (instance.defaultValueCode?.toJson() case final value?)
+        'defaultValueCode': value,
+      if (instance.defaultValueCodeElement?.toJson() case final value?)
+        '_defaultValueCode': value,
+      if (instance.defaultValueOid?.toJson() case final value?)
+        'defaultValueOid': value,
+      if (instance.defaultValueOidElement?.toJson() case final value?)
+        '_defaultValueOid': value,
+      if (instance.defaultValueId?.toJson() case final value?)
+        'defaultValueId': value,
+      if (instance.defaultValueIdElement?.toJson() case final value?)
+        '_defaultValueId': value,
+      if (instance.defaultValueUnsignedInt?.toJson() case final value?)
+        'defaultValueUnsignedInt': value,
+      if (instance.defaultValueUnsignedIntElement?.toJson() case final value?)
+        '_defaultValueUnsignedInt': value,
+      if (instance.defaultValuePositiveInt?.toJson() case final value?)
+        'defaultValuePositiveInt': value,
+      if (instance.defaultValuePositiveIntElement?.toJson() case final value?)
+        '_defaultValuePositiveInt': value,
+      if (instance.defaultValueMarkdown?.toJson() case final value?)
+        'defaultValueMarkdown': value,
+      if (instance.defaultValueMarkDownElement?.toJson() case final value?)
+        '_defaultValueMarkDown': value,
+      if (instance.defaultValueAnnotation?.toJson() case final value?)
+        'defaultValueAnnotation': value,
+      if (instance.defaultValueAttachment?.toJson() case final value?)
+        'defaultValueAttachment': value,
+      if (instance.defaultValueIdentifier?.toJson() case final value?)
+        'defaultValueIdentifier': value,
+      if (instance.defaultValueCodeableConcept?.toJson() case final value?)
+        'defaultValueCodeableConcept': value,
+      if (instance.defaultValueCoding?.toJson() case final value?)
+        'defaultValueCoding': value,
+      if (instance.defaultValueQuantity?.toJson() case final value?)
+        'defaultValueQuantity': value,
+      if (instance.defaultValueRange?.toJson() case final value?)
+        'defaultValueRange': value,
+      if (instance.defaultValuePeriod?.toJson() case final value?)
+        'defaultValuePeriod': value,
+      if (instance.defaultValueRatio?.toJson() case final value?)
+        'defaultValueRatio': value,
+      if (instance.defaultValueSampledData?.toJson() case final value?)
+        'defaultValueSampledData': value,
+      if (instance.defaultValueSignature?.toJson() case final value?)
+        'defaultValueSignature': value,
+      if (instance.defaultValueHumanName?.toJson() case final value?)
+        'defaultValueHumanName': value,
+      if (instance.defaultValueAddress?.toJson() case final value?)
+        'defaultValueAddress': value,
+      if (instance.defaultValueContactPoint?.toJson() case final value?)
+        'defaultValueContactPoint': value,
+      if (instance.defaultValueTiming?.toJson() case final value?)
+        'defaultValueTiming': value,
+      if (instance.defaultValueReference?.toJson() case final value?)
+        'defaultValueReference': value,
+      if (instance.defaultValueMeta?.toJson() case final value?)
+        'defaultValueMeta': value,
+      if (instance.meaningWhenMissing?.toJson() case final value?)
+        'meaningWhenMissing': value,
+      if (instance.meaningWhenMissingElement?.toJson() case final value?)
+        '_meaningWhenMissing': value,
+      if (instance.fixedBoolean?.toJson() case final value?)
+        'fixedBoolean': value,
+      if (instance.fixedBooleanElement?.toJson() case final value?)
+        '_fixedBoolean': value,
+      if (instance.fixedInteger?.toJson() case final value?)
+        'fixedInteger': value,
+      if (instance.fixedIntegerElement?.toJson() case final value?)
+        '_fixedInteger': value,
+      if (instance.fixedDecimal?.toJson() case final value?)
+        'fixedDecimal': value,
+      if (instance.fixedDecimalElement?.toJson() case final value?)
+        '_fixedDecimal': value,
+      if (instance.fixedBase64Binary?.toJson() case final value?)
+        'fixedBase64Binary': value,
+      if (instance.fixedBase64BinaryElement?.toJson() case final value?)
+        '_fixedBase64Binary': value,
+      if (instance.fixedInstant?.toJson() case final value?)
+        'fixedInstant': value,
+      if (instance.fixedInstantElement?.toJson() case final value?)
+        '_fixedInstant': value,
+      if (instance.fixedString case final value?) 'fixedString': value,
+      if (instance.fixedStringElement?.toJson() case final value?)
+        '_fixedString': value,
+      if (instance.fixedUri?.toJson() case final value?) 'fixedUri': value,
+      if (instance.fixedUriElement?.toJson() case final value?)
+        '_fixedUri': value,
+      if (instance.fixedDate?.toJson() case final value?) 'fixedDate': value,
+      if (instance.fixedDateElement?.toJson() case final value?)
+        '_fixedDate': value,
+      if (instance.fixedDateTime?.toJson() case final value?)
+        'fixedDateTime': value,
+      if (instance.fixedDateTimeElement?.toJson() case final value?)
+        '_fixedDateTime': value,
+      if (instance.fixedCode?.toJson() case final value?) 'fixedCode': value,
+      if (instance.fixedCodeElement?.toJson() case final value?)
+        '_fixedCode': value,
+      if (instance.fixedOid?.toJson() case final value?) 'fixedOid': value,
+      if (instance.fixedOidElement?.toJson() case final value?)
+        '_fixedOid': value,
+      if (instance.fixedId?.toJson() case final value?) 'fixedId': value,
+      if (instance.fixedIdElement?.toJson() case final value?)
+        '_fixedId': value,
+      if (instance.fixedUnsignedInt?.toJson() case final value?)
+        'fixedUnsignedInt': value,
+      if (instance.fixedUnsignedIntElement?.toJson() case final value?)
+        '_fixedUnsignedInt': value,
+      if (instance.fixedPositiveInt?.toJson() case final value?)
+        'fixedPositiveInt': value,
+      if (instance.fixedPositiveIntElement?.toJson() case final value?)
+        '_fixedPositiveInt': value,
+      if (instance.fixedMarkdown?.toJson() case final value?)
+        'fixedMarkdown': value,
+      if (instance.fixedMarkdownElement?.toJson() case final value?)
+        '_fixedMarkdown': value,
+      if (instance.fixedAnnotation?.toJson() case final value?)
+        'fixedAnnotation': value,
+      if (instance.fixedAttachment?.toJson() case final value?)
+        'fixedAttachment': value,
+      if (instance.fixedIdentifier?.toJson() case final value?)
+        'fixedIdentifier': value,
+      if (instance.fixedCodeableConcept?.toJson() case final value?)
+        'fixedCodeableConcept': value,
+      if (instance.fixedCoding?.toJson() case final value?)
+        'fixedCoding': value,
+      if (instance.fixedQuantity?.toJson() case final value?)
+        'fixedQuantity': value,
+      if (instance.fixedRange?.toJson() case final value?) 'fixedRange': value,
+      if (instance.fixedPeriod?.toJson() case final value?)
+        'fixedPeriod': value,
+      if (instance.fixedRatio?.toJson() case final value?) 'fixedRatio': value,
+      if (instance.fixedSampledData?.toJson() case final value?)
+        'fixedSampledData': value,
+      if (instance.fixedSignature?.toJson() case final value?)
+        'fixedSignature': value,
+      if (instance.fixedHumanName?.toJson() case final value?)
+        'fixedHumanName': value,
+      if (instance.fixedAddress?.toJson() case final value?)
+        'fixedAddress': value,
+      if (instance.fixedContactPoint?.toJson() case final value?)
+        'fixedContactPoint': value,
+      if (instance.fixedTiming?.toJson() case final value?)
+        'fixedTiming': value,
+      if (instance.fixedReference?.toJson() case final value?)
+        'fixedReference': value,
+      if (instance.fixedMeta?.toJson() case final value?) 'fixedMeta': value,
+      if (instance.patternBoolean?.toJson() case final value?)
+        'patternBoolean': value,
+      if (instance.patternBooleanElement?.toJson() case final value?)
+        '_patternBoolean': value,
+      if (instance.patternInteger?.toJson() case final value?)
+        'patternInteger': value,
+      if (instance.patternIntegerElement?.toJson() case final value?)
+        '_patternInteger': value,
+      if (instance.patternDecimal?.toJson() case final value?)
+        'patternDecimal': value,
+      if (instance.patternDecimalElement?.toJson() case final value?)
+        '_patternDecimal': value,
+      if (instance.patternBase64Binary?.toJson() case final value?)
+        'patternBase64Binary': value,
+      if (instance.patternBase64BinaryElement?.toJson() case final value?)
+        '_patternBase64Binary': value,
+      if (instance.patternInstant?.toJson() case final value?)
+        'patternInstant': value,
+      if (instance.patternInstantElement?.toJson() case final value?)
+        '_patternInstant': value,
+      if (instance.patternString case final value?) 'patternString': value,
+      if (instance.patternStringElement?.toJson() case final value?)
+        '_patternString': value,
+      if (instance.patternUri?.toJson() case final value?) 'patternUri': value,
+      if (instance.patternUriElement?.toJson() case final value?)
+        '_patternUri': value,
+      if (instance.patternDate?.toJson() case final value?)
+        'patternDate': value,
+      if (instance.patternDateElement?.toJson() case final value?)
+        '_patternDate': value,
+      if (instance.patternDateTime?.toJson() case final value?)
+        'patternDateTime': value,
+      if (instance.patternDateTimeElement?.toJson() case final value?)
+        '_patternDateTime': value,
+      if (instance.patternTime?.toJson() case final value?)
+        'patternTime': value,
+      if (instance.patternTimeElement?.toJson() case final value?)
+        '_patternTime': value,
+      if (instance.patternCode?.toJson() case final value?)
+        'patternCode': value,
+      if (instance.patternCodeElement?.toJson() case final value?)
+        '_patternCode': value,
+      if (instance.patternOid?.toJson() case final value?) 'patternOid': value,
+      if (instance.patternOidElement?.toJson() case final value?)
+        '_patternOid': value,
+      if (instance.patternId?.toJson() case final value?) 'patternId': value,
+      if (instance.patternIdElement?.toJson() case final value?)
+        '_patternId': value,
+      if (instance.patternUnsignedInt?.toJson() case final value?)
+        'patternUnsignedInt': value,
+      if (instance.patternUnsignedIntElement?.toJson() case final value?)
+        '_patternUnsignedInt': value,
+      if (instance.patternPositiveInt?.toJson() case final value?)
+        'patternPositiveInt': value,
+      if (instance.patternPositiveIntElement?.toJson() case final value?)
+        '_patternPositiveInt': value,
+      if (instance.patternMarkdown?.toJson() case final value?)
+        'patternMarkdown': value,
+      if (instance.patternMarkdownElement?.toJson() case final value?)
+        '_patternMarkdown': value,
+      if (instance.patternAnnotation?.toJson() case final value?)
+        'patternAnnotation': value,
+      if (instance.patternAttachment?.toJson() case final value?)
+        'patternAttachment': value,
+      if (instance.patternIdentifier?.toJson() case final value?)
+        'patternIdentifier': value,
+      if (instance.patternCodeableConcept?.toJson() case final value?)
+        'patternCodeableConcept': value,
+      if (instance.patternCoding?.toJson() case final value?)
+        'patternCoding': value,
+      if (instance.patternQuantity?.toJson() case final value?)
+        'patternQuantity': value,
+      if (instance.patternRange?.toJson() case final value?)
+        'patternRange': value,
+      if (instance.patternPeriod?.toJson() case final value?)
+        'patternPeriod': value,
+      if (instance.patternRatio?.toJson() case final value?)
+        'patternRatio': value,
+      if (instance.patternSampledData?.toJson() case final value?)
+        'patternSampledData': value,
+      if (instance.patternSignature?.toJson() case final value?)
+        'patternSignature': value,
+      if (instance.patternHumanName?.toJson() case final value?)
+        'patternHumanName': value,
+      if (instance.patternAddress?.toJson() case final value?)
+        'patternAddress': value,
+      if (instance.patternContactPoint?.toJson() case final value?)
+        'patternContactPoint': value,
+      if (instance.patternTiming?.toJson() case final value?)
+        'patternTiming': value,
+      if (instance.patternReference?.toJson() case final value?)
+        'patternReference': value,
+      if (instance.patternMeta?.toJson() case final value?)
+        'patternMeta': value,
+      if (instance.exampleBoolean?.toJson() case final value?)
+        'exampleBoolean': value,
+      if (instance.exampleBooleanElement?.toJson() case final value?)
+        '_exampleBoolean': value,
+      if (instance.exampleInteger?.toJson() case final value?)
+        'exampleInteger': value,
+      if (instance.exampleIntegerElement?.toJson() case final value?)
+        '_exampleInteger': value,
+      if (instance.exampleDecimal?.toJson() case final value?)
+        'exampleDecimal': value,
+      if (instance.exampleDecimalElement?.toJson() case final value?)
+        '_exampleDecimal': value,
+      if (instance.exampleBase64Binary?.toJson() case final value?)
+        'exampleBase64Binary': value,
+      if (instance.exampleBase64BinaryElement?.toJson() case final value?)
+        '_exampleBase64Binary': value,
+      if (instance.exampleInstant?.toJson() case final value?)
+        'exampleInstant': value,
+      if (instance.exampleInstantElement?.toJson() case final value?)
+        '_exampleInstant': value,
+      if (instance.exampleString case final value?) 'exampleString': value,
+      if (instance.exampleStringElement?.toJson() case final value?)
+        '_exampleString': value,
+      if (instance.exampleUri?.toJson() case final value?) 'exampleUri': value,
+      if (instance.exampleUriElement?.toJson() case final value?)
+        '_exampleUri': value,
+      if (instance.exampleDate?.toJson() case final value?)
+        'exampleDate': value,
+      if (instance.exampleDateElement?.toJson() case final value?)
+        '_exampleDate': value,
+      if (instance.exampleDateTime?.toJson() case final value?)
+        'exampleDateTime': value,
+      if (instance.exampleDateTimeElement?.toJson() case final value?)
+        '_exampleDateTime': value,
+      if (instance.exampleTime?.toJson() case final value?)
+        'exampleTime': value,
+      if (instance.exampleTimeElement?.toJson() case final value?)
+        '_exampleTime': value,
+      if (instance.exampleCode?.toJson() case final value?)
+        'exampleCode': value,
+      if (instance.exampleCodeElement?.toJson() case final value?)
+        '_exampleCode': value,
+      if (instance.exampleOid?.toJson() case final value?) 'exampleOid': value,
+      if (instance.exampleOidElement?.toJson() case final value?)
+        '_exampleOid': value,
+      if (instance.exampleId?.toJson() case final value?) 'exampleId': value,
+      if (instance.exampleIdElement?.toJson() case final value?)
+        '_exampleId': value,
+      if (instance.exampleUnsignedInt?.toJson() case final value?)
+        'exampleUnsignedInt': value,
+      if (instance.exampleUnsignedIntElement?.toJson() case final value?)
+        '_exampleUnsignedInt': value,
+      if (instance.examplePositiveInt?.toJson() case final value?)
+        'examplePositiveInt': value,
+      if (instance.examplePositiveIntElement?.toJson() case final value?)
+        '_examplePositiveInt': value,
+      if (instance.exampleMarkdown?.toJson() case final value?)
+        'exampleMarkdown': value,
+      if (instance.exampleMarkdownElement?.toJson() case final value?)
+        '_exampleMarkdown': value,
+      if (instance.exampleAnnotation?.toJson() case final value?)
+        'exampleAnnotation': value,
+      if (instance.exampleAttachment?.toJson() case final value?)
+        'exampleAttachment': value,
+      if (instance.exampleIdentifier?.toJson() case final value?)
+        'exampleIdentifier': value,
+      if (instance.exampleCodeableConcept?.toJson() case final value?)
+        'exampleCodeableConcept': value,
+      if (instance.exampleCoding?.toJson() case final value?)
+        'exampleCoding': value,
+      if (instance.exampleQuantity?.toJson() case final value?)
+        'exampleQuantity': value,
+      if (instance.exampleRange?.toJson() case final value?)
+        'exampleRange': value,
+      if (instance.examplePeriod?.toJson() case final value?)
+        'examplePeriod': value,
+      if (instance.exampleRatio?.toJson() case final value?)
+        'exampleRatio': value,
+      if (instance.exampleSampleData?.toJson() case final value?)
+        'exampleSampleData': value,
+      if (instance.exampleSignature?.toJson() case final value?)
+        'exampleSignature': value,
+      if (instance.exampleHumanName?.toJson() case final value?)
+        'exampleHumanName': value,
+      if (instance.exampleAddress?.toJson() case final value?)
+        'exampleAddress': value,
+      if (instance.exampleContactPoint?.toJson() case final value?)
+        'exampleContactPoint': value,
+      if (instance.exampleTiming?.toJson() case final value?)
+        'exampleTiming': value,
+      if (instance.exampleReference?.toJson() case final value?)
+        'exampleReference': value,
+      if (instance.exampleMeta?.toJson() case final value?)
+        'exampleMeta': value,
+      if (instance.minValueBoolean?.toJson() case final value?)
+        'minValueBoolean': value,
+      if (instance.minValueBooleanElement?.toJson() case final value?)
+        '_minValueBoolean': value,
+      if (instance.minValueInteger?.toJson() case final value?)
+        'minValueInteger': value,
+      if (instance.minValueIntegerElement?.toJson() case final value?)
+        '_minValueInteger': value,
+      if (instance.minValueDecimal?.toJson() case final value?)
+        'minValueDecimal': value,
+      if (instance.minValueDecimalElement?.toJson() case final value?)
+        '_minValueDecimal': value,
+      if (instance.minValueBase64Binary?.toJson() case final value?)
+        'minValueBase64Binary': value,
+      if (instance.minValueBase64BinaryElement?.toJson() case final value?)
+        '_minValueBase64Binary': value,
+      if (instance.minValueInstant?.toJson() case final value?)
+        'minValueInstant': value,
+      if (instance.minValueInstantElement?.toJson() case final value?)
+        '_minValueInstant': value,
+      if (instance.minValueString case final value?) 'minValueString': value,
+      if (instance.minValueStringElement?.toJson() case final value?)
+        '_minValueString': value,
+      if (instance.minValueUri?.toJson() case final value?)
+        'minValueUri': value,
+      if (instance.minValueUriElement?.toJson() case final value?)
+        '_minValueUri': value,
+      if (instance.minValueDate?.toJson() case final value?)
+        'minValueDate': value,
+      if (instance.minValueDateElement?.toJson() case final value?)
+        '_minValueDate': value,
+      if (instance.minValueDateTime?.toIso8601String() case final value?)
+        'minValueDateTime': value,
+      if (instance.minValueDateTimeElement?.toJson() case final value?)
+        '_minValueDateTime': value,
+      if (instance.minValueTime?.toJson() case final value?)
+        'minValueTime': value,
+      if (instance.minValueTimeElement?.toJson() case final value?)
+        '_minValueTime': value,
+      if (instance.minValueCode?.toJson() case final value?)
+        'minValueCode': value,
+      if (instance.minValueCodeElement?.toJson() case final value?)
+        '_minValueCode': value,
+      if (instance.minValueOid?.toJson() case final value?)
+        'minValueOid': value,
+      if (instance.minValueOidElement?.toJson() case final value?)
+        '_minValueOid': value,
+      if (instance.minValueId?.toJson() case final value?) 'minValueId': value,
+      if (instance.minValueIdElement?.toJson() case final value?)
+        '_minValueId': value,
+      if (instance.minValueUnsignedInt?.toJson() case final value?)
+        'minValueUnsignedInt': value,
+      if (instance.minValueUnsignedIntElement?.toJson() case final value?)
+        '_minValueUnsignedInt': value,
+      if (instance.minValuePositiveInt?.toJson() case final value?)
+        'minValuePositiveInt': value,
+      if (instance.minValuePositiveIntElement?.toJson() case final value?)
+        '_minValuePositiveInt': value,
+      if (instance.minValueMarkdown?.toJson() case final value?)
+        'minValueMarkdown': value,
+      if (instance.minValueMarkdownElement?.toJson() case final value?)
+        '_minValueMarkdown': value,
+      if (instance.minValueAnnotation?.toJson() case final value?)
+        'minValueAnnotation': value,
+      if (instance.minValueAttachment?.toJson() case final value?)
+        'minValueAttachment': value,
+      if (instance.minValueIdentifier?.toJson() case final value?)
+        'minValueIdentifier': value,
+      if (instance.minValueCodeableConcept?.toJson() case final value?)
+        'minValueCodeableConcept': value,
+      if (instance.minValueCoding?.toJson() case final value?)
+        'minValueCoding': value,
+      if (instance.minValueQuantity?.toJson() case final value?)
+        'minValueQuantity': value,
+      if (instance.minValueRange?.toJson() case final value?)
+        'minValueRange': value,
+      if (instance.minValuePeriod?.toJson() case final value?)
+        'minValuePeriod': value,
+      if (instance.minValueRatio?.toJson() case final value?)
+        'minValueRatio': value,
+      if (instance.minValueSampledData?.toJson() case final value?)
+        'minValueSampledData': value,
+      if (instance.minValueSignature?.toJson() case final value?)
+        'minValueSignature': value,
+      if (instance.minValueHumanName?.toJson() case final value?)
+        'minValueHumanName': value,
+      if (instance.minValueAddress?.toJson() case final value?)
+        'minValueAddress': value,
+      if (instance.minValueContactPoint?.toJson() case final value?)
+        'minValueContactPoint': value,
+      if (instance.minValueTiming?.toJson() case final value?)
+        'minValueTiming': value,
+      if (instance.minValueReference?.toJson() case final value?)
+        'minValueReference': value,
+      if (instance.minValueMeta?.toJson() case final value?)
+        'minValueMeta': value,
+      if (instance.maxValueBoolean?.toJson() case final value?)
+        'maxValueBoolean': value,
+      if (instance.maxValueBooleanElement?.toJson() case final value?)
+        '_maxValueBoolean': value,
+      if (instance.maxValueInteger?.toJson() case final value?)
+        'maxValueInteger': value,
+      if (instance.maxValueIntegerElement?.toJson() case final value?)
+        '_maxValueInteger': value,
+      if (instance.maxValueDecimal?.toJson() case final value?)
+        'maxValueDecimal': value,
+      if (instance.maxValueDecimalElement?.toJson() case final value?)
+        '_maxValueDecimal': value,
+      if (instance.maxValueBase64Binary?.toJson() case final value?)
+        'maxValueBase64Binary': value,
+      if (instance.maxValueBase64BinaryElement?.toJson() case final value?)
+        '_maxValueBase64Binary': value,
+      if (instance.maxValueInstant?.toJson() case final value?)
+        'maxValueInstant': value,
+      if (instance.maxValueInstantElement?.toJson() case final value?)
+        '_maxValueInstant': value,
+      if (instance.maxValueString case final value?) 'maxValueString': value,
+      if (instance.maxValueStringElement?.toJson() case final value?)
+        '_maxValueString': value,
+      if (instance.maxValueUri?.toJson() case final value?)
+        'maxValueUri': value,
+      if (instance.maxValueUriElement?.toJson() case final value?)
+        '_maxValueUri': value,
+      if (instance.maxValueDate?.toJson() case final value?)
+        'maxValueDate': value,
+      if (instance.maxValueDateElement?.toJson() case final value?)
+        '_maxValueDate': value,
+      if (instance.maxValueDateTime?.toIso8601String() case final value?)
+        'maxValueDateTime': value,
+      if (instance.maxValueDateTimeElement?.toJson() case final value?)
+        '_maxValueDateTime': value,
+      if (instance.maxValueTime?.toJson() case final value?)
+        'maxValueTime': value,
+      if (instance.maxValueTimeElement?.toJson() case final value?)
+        '_maxValueTime': value,
+      if (instance.maxValueCode?.toJson() case final value?)
+        'maxValueCode': value,
+      if (instance.maxValueCodeElement?.toJson() case final value?)
+        '_maxValueCode': value,
+      if (instance.maxValueOid?.toJson() case final value?)
+        'maxValueOid': value,
+      if (instance.maxValueOidElement?.toJson() case final value?)
+        '_maxValueOid': value,
+      if (instance.maxValueId?.toJson() case final value?) 'maxValueId': value,
+      if (instance.maxValueIdElement?.toJson() case final value?)
+        '_maxValueId': value,
+      if (instance.maxValueUnsignedInt?.toJson() case final value?)
+        'maxValueUnsignedInt': value,
+      if (instance.maxValueUnsignedIntElement?.toJson() case final value?)
+        '_maxValueUnsignedInt': value,
+      if (instance.maxValuePositiveInt?.toJson() case final value?)
+        'maxValuePositiveInt': value,
+      if (instance.maxValuePositiveIntElement?.toJson() case final value?)
+        '_maxValuePositiveInt': value,
+      if (instance.maxValueMarkdown?.toJson() case final value?)
+        'maxValueMarkdown': value,
+      if (instance.maxValueMarkdownElement?.toJson() case final value?)
+        '_maxValueMarkdown': value,
+      if (instance.maxValueAnnotation?.toJson() case final value?)
+        'maxValueAnnotation': value,
+      if (instance.maxValueAttachment?.toJson() case final value?)
+        'maxValueAttachment': value,
+      if (instance.maxValueIdentifier?.toJson() case final value?)
+        'maxValueIdentifier': value,
+      if (instance.maxValueCodeableConcept?.toJson() case final value?)
+        'maxValueCodeableConcept': value,
+      if (instance.maxValueCoding?.toJson() case final value?)
+        'maxValueCoding': value,
+      if (instance.maxValueQuantity?.toJson() case final value?)
+        'maxValueQuantity': value,
+      if (instance.maxValueRange?.toJson() case final value?)
+        'maxValueRange': value,
+      if (instance.maxValuePeriod?.toJson() case final value?)
+        'maxValuePeriod': value,
+      if (instance.maxValueRatio?.toJson() case final value?)
+        'maxValueRatio': value,
+      if (instance.maxValueSampledData?.toJson() case final value?)
+        'maxValueSampledData': value,
+      if (instance.maxValueSignature?.toJson() case final value?)
+        'maxValueSignature': value,
+      if (instance.maxValueHumanName?.toJson() case final value?)
+        'maxValueHumanName': value,
+      if (instance.maxValueAddress?.toJson() case final value?)
+        'maxValueAddress': value,
+      if (instance.maxValueContactPoint?.toJson() case final value?)
+        'maxValueContactPoint': value,
+      if (instance.maxValueTiming?.toJson() case final value?)
+        'maxValueTiming': value,
+      if (instance.maxValueReference?.toJson() case final value?)
+        'maxValueReference': value,
+      if (instance.maxValueMeta?.toJson() case final value?)
+        'maxValueMeta': value,
+      if (instance.maxLength?.toJson() case final value?) 'maxLength': value,
+      if (instance.maxLengthElement?.toJson() case final value?)
+        '_maxLength': value,
+      if (instance.condition?.map((e) => e.toJson()).toList() case final value?)
+        'condition': value,
+      if (instance.conditionElement?.toJson() case final value?)
+        '_condition': value,
+      if (instance.constraint?.map((e) => e.toJson()).toList()
+          case final value?)
+        'constraint': value,
+      if (instance.mustSupport?.toJson() case final value?)
+        'mustSupport': value,
+      if (instance.mustSupportElement?.toJson() case final value?)
+        '_mustSupport': value,
+      if (instance.isModifier?.toJson() case final value?) 'isModifier': value,
+      if (instance.isModifierElement?.toJson() case final value?)
+        '_isModifier': value,
+      if (instance.isSummary?.toJson() case final value?) 'isSummary': value,
+      if (instance.isSummaryElement?.toJson() case final value?)
+        '_isSummary': value,
+      if (instance.binding?.toJson() case final value?) 'binding': value,
+      if (instance.mapping?.map((e) => e.toJson()).toList() case final value?)
+        'mapping': value,
+    };
 
 _$NarrativeImpl _$$NarrativeImplFromJson(Map<String, dynamic> json) =>
     _$NarrativeImpl(
@@ -1554,24 +1788,17 @@ _$NarrativeImpl _$$NarrativeImplFromJson(Map<String, dynamic> json) =>
       div: json['div'] as String,
     );
 
-Map<String, dynamic> _$$NarrativeImplToJson(_$NarrativeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('fhir_comments', instance.fhirComments);
-  val['status'] = _$NarrativeStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  val['div'] = instance.div;
-  return val;
-}
+Map<String, dynamic> _$$NarrativeImplToJson(_$NarrativeImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.fhirComments case final value?) 'fhir_comments': value,
+      'status': _$NarrativeStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      'div': instance.div,
+    };
 
 const _$NarrativeStatusEnumMap = {
   NarrativeStatus.generated: 'generated',
@@ -1608,27 +1835,22 @@ _$ElementDefinitionSlicingImpl _$$ElementDefinitionSlicingImplFromJson(
     );
 
 Map<String, dynamic> _$$ElementDefinitionSlicingImplToJson(
-    _$ElementDefinitionSlicingImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('discriminator', instance.discriminator);
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('ordered', instance.ordered?.toJson());
-  writeNotNull('_ordered', instance.orderedElement?.toJson());
-  val['rules'] = _$SlicingRulesEnumMap[instance.rules]!;
-  writeNotNull('_rules', instance.rulesElement?.toJson());
-  return val;
-}
+        _$ElementDefinitionSlicingImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.discriminator case final value?) 'discriminator': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.ordered?.toJson() case final value?) 'ordered': value,
+      if (instance.orderedElement?.toJson() case final value?)
+        '_ordered': value,
+      'rules': _$SlicingRulesEnumMap[instance.rules]!,
+      if (instance.rulesElement?.toJson() case final value?) '_rules': value,
+    };
 
 const _$SlicingRulesEnumMap = {
   SlicingRules.closed: 'closed',
@@ -1659,26 +1881,19 @@ _$ElementDefinitionBaseImpl _$$ElementDefinitionBaseImplFromJson(
     );
 
 Map<String, dynamic> _$$ElementDefinitionBaseImplToJson(
-    _$ElementDefinitionBaseImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  val['path'] = instance.path;
-  writeNotNull('_path', instance.pathElement?.toJson());
-  val['min'] = instance.min.toJson();
-  writeNotNull('_min', instance.minElement?.toJson());
-  val['max'] = instance.max;
-  writeNotNull('_max', instance.maxElement?.toJson());
-  return val;
-}
+        _$ElementDefinitionBaseImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      'path': instance.path,
+      if (instance.pathElement?.toJson() case final value?) '_path': value,
+      'min': instance.min.toJson(),
+      if (instance.minElement?.toJson() case final value?) '_min': value,
+      'max': instance.max,
+      if (instance.maxElement?.toJson() case final value?) '_max': value,
+    };
 
 _$ElementDefinitionTypeImpl _$$ElementDefinitionTypeImplFromJson(
         Map<String, dynamic> json) =>
@@ -1705,27 +1920,25 @@ _$ElementDefinitionTypeImpl _$$ElementDefinitionTypeImplFromJson(
     );
 
 Map<String, dynamic> _$$ElementDefinitionTypeImplToJson(
-    _$ElementDefinitionTypeImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeExtension?.toJson());
-  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
-  writeNotNull('aggregation',
-      instance.aggregation?.map((e) => _$TypeAggregationEnumMap[e]!).toList());
-  writeNotNull('_aggregation', instance.aggregationElement?.toJson());
-  writeNotNull('fhir_comments', instance.fhirElement);
-  return val;
-}
+        _$ElementDefinitionTypeImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeExtension?.toJson() case final value?) '_code': value,
+      if (instance.profile?.map((e) => e.toJson()).toList() case final value?)
+        'profile': value,
+      if (instance.aggregation
+              ?.map((e) => _$TypeAggregationEnumMap[e]!)
+              .toList()
+          case final value?)
+        'aggregation': value,
+      if (instance.aggregationElement?.toJson() case final value?)
+        '_aggregation': value,
+      if (instance.fhirElement case final value?) 'fhir_comments': value,
+    };
 
 const _$TypeAggregationEnumMap = {
   TypeAggregation.contained: 'contained',
@@ -1743,19 +1956,12 @@ _$TypeCodeExtensionImpl _$$TypeCodeExtensionImplFromJson(
     );
 
 Map<String, dynamic> _$$TypeCodeExtensionImplToJson(
-    _$TypeCodeExtensionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$TypeCodeExtensionImpl instance) =>
+    <String, dynamic>{
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+    };
 
 _$ElementDefinitionConstraintImpl _$$ElementDefinitionConstraintImplFromJson(
         Map<String, dynamic> json) =>
@@ -1788,30 +1994,25 @@ _$ElementDefinitionConstraintImpl _$$ElementDefinitionConstraintImplFromJson(
     );
 
 Map<String, dynamic> _$$ElementDefinitionConstraintImplToJson(
-    _$ElementDefinitionConstraintImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  val['key'] = instance.key.toJson();
-  writeNotNull('_key', instance.keyElement?.toJson());
-  writeNotNull('requirements', instance.requirements);
-  writeNotNull('_requirements', instance.requirementsElement?.toJson());
-  val['severity'] = _$ConstraintSeverityEnumMap[instance.severity]!;
-  writeNotNull('_severity', instance.severityElement?.toJson());
-  val['human'] = instance.human;
-  writeNotNull('_human', instance.humanElement?.toJson());
-  val['xpath'] = instance.xpath;
-  writeNotNull('_xpath', instance.xpathElement?.toJson());
-  return val;
-}
+        _$ElementDefinitionConstraintImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      'key': instance.key.toJson(),
+      if (instance.keyElement?.toJson() case final value?) '_key': value,
+      if (instance.requirements case final value?) 'requirements': value,
+      if (instance.requirementsElement?.toJson() case final value?)
+        '_requirements': value,
+      'severity': _$ConstraintSeverityEnumMap[instance.severity]!,
+      if (instance.severityElement?.toJson() case final value?)
+        '_severity': value,
+      'human': instance.human,
+      if (instance.humanElement?.toJson() case final value?) '_human': value,
+      'xpath': instance.xpath,
+      if (instance.xpathElement?.toJson() case final value?) '_xpath': value,
+    };
 
 const _$ConstraintSeverityEnumMap = {
   ConstraintSeverity.error: 'error',
@@ -1850,27 +2051,23 @@ _$ElementDefinitionBindingImpl _$$ElementDefinitionBindingImplFromJson(
 }
 
 Map<String, dynamic> _$$ElementDefinitionBindingImplToJson(
-    _$ElementDefinitionBindingImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  val['strength'] =
-      _$ElementDefinitionBindingStrengthEnumMap[instance.strength]!;
-  writeNotNull('_strength', instance.strengthElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('valueSetUri', instance.valueSetUri?.toJson());
-  writeNotNull('valueSetReference', instance.valueSetReference?.toJson());
-  return val;
-}
+        _$ElementDefinitionBindingImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      'strength': _$ElementDefinitionBindingStrengthEnumMap[instance.strength]!,
+      if (instance.strengthElement?.toJson() case final value?)
+        '_strength': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.valueSetUri?.toJson() case final value?)
+        'valueSetUri': value,
+      if (instance.valueSetReference?.toJson() case final value?)
+        'valueSetReference': value,
+    };
 
 const _$ElementDefinitionBindingStrengthEnumMap = {
   ElementDefinitionBindingStrength.required: 'required',
@@ -1906,24 +2103,19 @@ _$ElementDefinitionMappingImpl _$$ElementDefinitionMappingImplFromJson(
     );
 
 Map<String, dynamic> _$$ElementDefinitionMappingImplToJson(
-    _$ElementDefinitionMappingImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('fhir_comments', instance.fhirComments);
-  val['identity'] = instance.identity.toJson();
-  writeNotNull('_identity', instance.identityElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  val['map'] = instance.map;
-  writeNotNull('_map', instance.mapElement?.toJson());
-  return val;
-}
+        _$ElementDefinitionMappingImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.fhirComments case final value?) 'fhir_comments': value,
+      'identity': instance.identity.toJson(),
+      if (instance.identityElement?.toJson() case final value?)
+        '_identity': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      'map': instance.map,
+      if (instance.mapElement?.toJson() case final value?) '_map': value,
+    };

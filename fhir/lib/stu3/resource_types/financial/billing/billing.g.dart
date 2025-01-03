@@ -135,70 +135,80 @@ _$ClaimImpl _$$ClaimImplFromJson(Map<String, dynamic> json) => _$ClaimImpl(
           : Money.fromJson(json['total'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ClaimImplToJson(_$ClaimImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('subType', instance.subType?.map((e) => e.toJson()).toList());
-  writeNotNull('use', _$ClaimUseEnumMap[instance.use]);
-  writeNotNull('_use', instance.useElement?.toJson());
-  writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
-  writeNotNull('created', instance.created);
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('enterer', instance.enterer?.toJson());
-  writeNotNull('insurer', instance.insurer?.toJson());
-  writeNotNull('provider', instance.provider?.toJson());
-  writeNotNull('organization', instance.organization?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
-  writeNotNull('fundsReserve', instance.fundsReserve?.toJson());
-  writeNotNull('related', instance.related?.map((e) => e.toJson()).toList());
-  writeNotNull('prescription', instance.prescription?.toJson());
-  writeNotNull('originalPrescription', instance.originalPrescription?.toJson());
-  writeNotNull('payee', instance.payee?.toJson());
-  writeNotNull('referral', instance.referral?.toJson());
-  writeNotNull('facility', instance.facility?.toJson());
-  writeNotNull('careTeam', instance.careTeam?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'information', instance.information?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'diagnosis', instance.diagnosis?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'procedure', instance.procedure?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'insurance', instance.insurance?.map((e) => e.toJson()).toList());
-  writeNotNull('accident', instance.accident?.toJson());
-  writeNotNull('employmentImpacted', instance.employmentImpacted?.toJson());
-  writeNotNull('hospitalization', instance.hospitalization?.toJson());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  writeNotNull('total', instance.total?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ClaimImplToJson(_$ClaimImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.status case final value?) 'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.subType?.map((e) => e.toJson()).toList() case final value?)
+        'subType': value,
+      if (_$ClaimUseEnumMap[instance.use] case final value?) 'use': value,
+      if (instance.useElement?.toJson() case final value?) '_use': value,
+      if (instance.patient?.toJson() case final value?) 'patient': value,
+      if (instance.billablePeriod?.toJson() case final value?)
+        'billablePeriod': value,
+      if (instance.created case final value?) 'created': value,
+      if (instance.createdElement?.toJson() case final value?)
+        '_created': value,
+      if (instance.enterer?.toJson() case final value?) 'enterer': value,
+      if (instance.insurer?.toJson() case final value?) 'insurer': value,
+      if (instance.provider?.toJson() case final value?) 'provider': value,
+      if (instance.organization?.toJson() case final value?)
+        'organization': value,
+      if (instance.priority?.toJson() case final value?) 'priority': value,
+      if (instance.fundsReserve?.toJson() case final value?)
+        'fundsReserve': value,
+      if (instance.related?.map((e) => e.toJson()).toList() case final value?)
+        'related': value,
+      if (instance.prescription?.toJson() case final value?)
+        'prescription': value,
+      if (instance.originalPrescription?.toJson() case final value?)
+        'originalPrescription': value,
+      if (instance.payee?.toJson() case final value?) 'payee': value,
+      if (instance.referral?.toJson() case final value?) 'referral': value,
+      if (instance.facility?.toJson() case final value?) 'facility': value,
+      if (instance.careTeam?.map((e) => e.toJson()).toList() case final value?)
+        'careTeam': value,
+      if (instance.information?.map((e) => e.toJson()).toList()
+          case final value?)
+        'information': value,
+      if (instance.diagnosis?.map((e) => e.toJson()).toList() case final value?)
+        'diagnosis': value,
+      if (instance.procedure?.map((e) => e.toJson()).toList() case final value?)
+        'procedure': value,
+      if (instance.insurance?.map((e) => e.toJson()).toList() case final value?)
+        'insurance': value,
+      if (instance.accident?.toJson() case final value?) 'accident': value,
+      if (instance.employmentImpacted?.toJson() case final value?)
+        'employmentImpacted': value,
+      if (instance.hospitalization?.toJson() case final value?)
+        'hospitalization': value,
+      if (instance.item?.map((e) => e.toJson()).toList() case final value?)
+        'item': value,
+      if (instance.total?.toJson() case final value?) 'total': value,
+    };
 
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',
@@ -342,20 +352,13 @@ _$ClaimRelatedImpl _$$ClaimRelatedImplFromJson(Map<String, dynamic> json) =>
           : Identifier.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ClaimRelatedImplToJson(_$ClaimRelatedImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('claim', instance.claim?.toJson());
-  writeNotNull('relationship', instance.relationship?.toJson());
-  writeNotNull('reference', instance.reference?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ClaimRelatedImplToJson(_$ClaimRelatedImpl instance) =>
+    <String, dynamic>{
+      if (instance.claim?.toJson() case final value?) 'claim': value,
+      if (instance.relationship?.toJson() case final value?)
+        'relationship': value,
+      if (instance.reference?.toJson() case final value?) 'reference': value,
+    };
 
 _$ClaimPayeeImpl _$$ClaimPayeeImplFromJson(Map<String, dynamic> json) =>
     _$ClaimPayeeImpl(
@@ -365,20 +368,11 @@ _$ClaimPayeeImpl _$$ClaimPayeeImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['party'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ClaimPayeeImplToJson(_$ClaimPayeeImpl instance) {
-  final val = <String, dynamic>{
-    'type': instance.type.toJson(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('party', instance.party?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ClaimPayeeImplToJson(_$ClaimPayeeImpl instance) =>
+    <String, dynamic>{
+      'type': instance.type.toJson(),
+      if (instance.party?.toJson() case final value?) 'party': value,
+    };
 
 _$ClaimCareTeamImpl _$$ClaimCareTeamImplFromJson(Map<String, dynamic> json) =>
     _$ClaimCareTeamImpl(
@@ -403,24 +397,20 @@ _$ClaimCareTeamImpl _$$ClaimCareTeamImplFromJson(Map<String, dynamic> json) =>
               json['qualification'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ClaimCareTeamImplToJson(_$ClaimCareTeamImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  val['provider'] = instance.provider.toJson();
-  writeNotNull('responsible', instance.responsible?.toJson());
-  writeNotNull('_responsible', instance.responsibleElement?.toJson());
-  writeNotNull('role', instance.role?.toJson());
-  writeNotNull('qualification', instance.qualification?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ClaimCareTeamImplToJson(_$ClaimCareTeamImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      'provider': instance.provider.toJson(),
+      if (instance.responsible?.toJson() case final value?)
+        'responsible': value,
+      if (instance.responsibleElement?.toJson() case final value?)
+        '_responsible': value,
+      if (instance.role?.toJson() case final value?) 'role': value,
+      if (instance.qualification?.toJson() case final value?)
+        'qualification': value,
+    };
 
 _$ClaimInformationImpl _$$ClaimInformationImplFromJson(
         Map<String, dynamic> json) =>
@@ -463,30 +453,29 @@ _$ClaimInformationImpl _$$ClaimInformationImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimInformationImplToJson(
-    _$ClaimInformationImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  val['category'] = instance.category.toJson();
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('timingDate', instance.timingDate?.toJson());
-  writeNotNull('_timingDate', instance.timingDateElement?.toJson());
-  writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
-  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
-  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
-  writeNotNull('valueReference', instance.valueReference?.toJson());
-  writeNotNull('reason', instance.reason?.toJson());
-  return val;
-}
+        _$ClaimInformationImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      'category': instance.category.toJson(),
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.timingDate?.toJson() case final value?) 'timingDate': value,
+      if (instance.timingDateElement?.toJson() case final value?)
+        '_timingDate': value,
+      if (instance.timingPeriod?.toJson() case final value?)
+        'timingPeriod': value,
+      if (instance.valueString case final value?) 'valueString': value,
+      if (instance.valueStringElement?.toJson() case final value?)
+        '_valueString': value,
+      if (instance.valueQuantity?.toJson() case final value?)
+        'valueQuantity': value,
+      if (instance.valueAttachment?.toJson() case final value?)
+        'valueAttachment': value,
+      if (instance.valueReference?.toJson() case final value?)
+        'valueReference': value,
+      if (instance.reason?.toJson() case final value?) 'reason': value,
+    };
 
 _$ClaimDiagnosisImpl _$$ClaimDiagnosisImplFromJson(Map<String, dynamic> json) =>
     _$ClaimDiagnosisImpl(
@@ -513,24 +502,20 @@ _$ClaimDiagnosisImpl _$$ClaimDiagnosisImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$ClaimDiagnosisImplToJson(
-    _$ClaimDiagnosisImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull(
-      'diagnosisCodeableConcept', instance.diagnosisCodeableConcept?.toJson());
-  writeNotNull('diagnosisReference', instance.diagnosisReference?.toJson());
-  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('packageCode', instance.packageCode?.toJson());
-  return val;
-}
+        _$ClaimDiagnosisImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.diagnosisCodeableConcept?.toJson() case final value?)
+        'diagnosisCodeableConcept': value,
+      if (instance.diagnosisReference?.toJson() case final value?)
+        'diagnosisReference': value,
+      if (instance.type?.map((e) => e.toJson()).toList() case final value?)
+        'type': value,
+      if (instance.packageCode?.toJson() case final value?)
+        'packageCode': value,
+    };
 
 _$ClaimProcedureImpl _$$ClaimProcedureImplFromJson(Map<String, dynamic> json) =>
     _$ClaimProcedureImpl(
@@ -554,24 +539,18 @@ _$ClaimProcedureImpl _$$ClaimProcedureImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$ClaimProcedureImplToJson(
-    _$ClaimProcedureImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull(
-      'procedureCodeableConcept', instance.procedureCodeableConcept?.toJson());
-  writeNotNull('procedureReference', instance.procedureReference?.toJson());
-  return val;
-}
+        _$ClaimProcedureImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.procedureCodeableConcept?.toJson() case final value?)
+        'procedureCodeableConcept': value,
+      if (instance.procedureReference?.toJson() case final value?)
+        'procedureReference': value,
+    };
 
 _$ClaimInsuranceImpl _$$ClaimInsuranceImplFromJson(Map<String, dynamic> json) =>
     _$ClaimInsuranceImpl(
@@ -603,29 +582,25 @@ _$ClaimInsuranceImpl _$$ClaimInsuranceImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$ClaimInsuranceImplToJson(
-    _$ClaimInsuranceImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('focal', instance.focal?.toJson());
-  writeNotNull('_focal', instance.focalElement?.toJson());
-  val['coverage'] = instance.coverage.toJson();
-  writeNotNull('businessArrangement', instance.businessArrangement);
-  writeNotNull(
-      '_businessArrangement', instance.businessArrangementElement?.toJson());
-  writeNotNull('preAuthRef', instance.preAuthRef);
-  writeNotNull('_preAuthRef',
-      instance.preAuthRefElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('claimResponse', instance.claimResponse?.toJson());
-  return val;
-}
+        _$ClaimInsuranceImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.focal?.toJson() case final value?) 'focal': value,
+      if (instance.focalElement?.toJson() case final value?) '_focal': value,
+      'coverage': instance.coverage.toJson(),
+      if (instance.businessArrangement case final value?)
+        'businessArrangement': value,
+      if (instance.businessArrangementElement?.toJson() case final value?)
+        '_businessArrangement': value,
+      if (instance.preAuthRef case final value?) 'preAuthRef': value,
+      if (instance.preAuthRefElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_preAuthRef': value,
+      if (instance.claimResponse?.toJson() case final value?)
+        'claimResponse': value,
+    };
 
 _$ClaimAccidentImpl _$$ClaimAccidentImplFromJson(Map<String, dynamic> json) =>
     _$ClaimAccidentImpl(
@@ -645,22 +620,16 @@ _$ClaimAccidentImpl _$$ClaimAccidentImplFromJson(Map<String, dynamic> json) =>
               json['locationReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ClaimAccidentImplToJson(_$ClaimAccidentImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('locationAddress', instance.locationAddress?.toJson());
-  writeNotNull('locationReference', instance.locationReference?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ClaimAccidentImplToJson(_$ClaimAccidentImpl instance) =>
+    <String, dynamic>{
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.locationAddress?.toJson() case final value?)
+        'locationAddress': value,
+      if (instance.locationReference?.toJson() case final value?)
+        'locationReference': value,
+    };
 
 _$ClaimItemImpl _$$ClaimItemImplFromJson(Map<String, dynamic> json) =>
     _$ClaimItemImpl(
@@ -760,59 +729,70 @@ _$ClaimItemImpl _$$ClaimItemImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$ClaimItemImplToJson(_$ClaimItemImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('careTeamLinkId',
-      instance.careTeamLinkId?.map((e) => e.toJson()).toList());
-  writeNotNull('_careTeamLinkId',
-      instance.careTeamLinkIdElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('diagnosisLinkId',
-      instance.diagnosisLinkId?.map((e) => e.toJson()).toList());
-  writeNotNull('_diagnosisLinkId',
-      instance.diagnosisLinkIdElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('procedureLinkId',
-      instance.procedureLinkId?.map((e) => e.toJson()).toList());
-  writeNotNull('_procedureLinkId',
-      instance.procedureLinkIdElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('informationLinkId',
-      instance.informationLinkId?.map((e) => e.toJson()).toList());
-  writeNotNull('_informationLinkId',
-      instance.informationLinkIdElement?.map((e) => e.toJson()).toList());
-  writeNotNull('revenue', instance.revenue?.toJson());
-  writeNotNull('category', instance.category?.toJson());
-  writeNotNull('service', instance.service?.toJson());
-  writeNotNull('modifier', instance.modifier?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'programCode', instance.programCode?.map((e) => e.toJson()).toList());
-  writeNotNull('servicedDate', instance.servicedDate?.toJson());
-  writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
-  writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
-  writeNotNull(
-      'locationCodeableConcept', instance.locationCodeableConcept?.toJson());
-  writeNotNull('locationAddress', instance.locationAddress?.toJson());
-  writeNotNull('locationReference', instance.locationReference?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
-  writeNotNull('_factor', instance.factorElement?.toJson());
-  writeNotNull('net', instance.net?.toJson());
-  writeNotNull('udi', instance.udi?.map((e) => e.toJson()).toList());
-  writeNotNull('bodySite', instance.bodySite?.toJson());
-  writeNotNull('subSite', instance.subSite?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'encounter', instance.encounter?.map((e) => e.toJson()).toList());
-  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$ClaimItemImplToJson(_$ClaimItemImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.careTeamLinkId?.map((e) => e.toJson()).toList()
+          case final value?)
+        'careTeamLinkId': value,
+      if (instance.careTeamLinkIdElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_careTeamLinkId': value,
+      if (instance.diagnosisLinkId?.map((e) => e.toJson()).toList()
+          case final value?)
+        'diagnosisLinkId': value,
+      if (instance.diagnosisLinkIdElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_diagnosisLinkId': value,
+      if (instance.procedureLinkId?.map((e) => e.toJson()).toList()
+          case final value?)
+        'procedureLinkId': value,
+      if (instance.procedureLinkIdElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_procedureLinkId': value,
+      if (instance.informationLinkId?.map((e) => e.toJson()).toList()
+          case final value?)
+        'informationLinkId': value,
+      if (instance.informationLinkIdElement?.map((e) => e.toJson()).toList()
+          case final value?)
+        '_informationLinkId': value,
+      if (instance.revenue?.toJson() case final value?) 'revenue': value,
+      if (instance.category?.toJson() case final value?) 'category': value,
+      if (instance.service?.toJson() case final value?) 'service': value,
+      if (instance.modifier?.map((e) => e.toJson()).toList() case final value?)
+        'modifier': value,
+      if (instance.programCode?.map((e) => e.toJson()).toList()
+          case final value?)
+        'programCode': value,
+      if (instance.servicedDate?.toJson() case final value?)
+        'servicedDate': value,
+      if (instance.servicedDateElement?.toJson() case final value?)
+        '_servicedDate': value,
+      if (instance.servicedPeriod?.toJson() case final value?)
+        'servicedPeriod': value,
+      if (instance.locationCodeableConcept?.toJson() case final value?)
+        'locationCodeableConcept': value,
+      if (instance.locationAddress?.toJson() case final value?)
+        'locationAddress': value,
+      if (instance.locationReference?.toJson() case final value?)
+        'locationReference': value,
+      if (instance.quantity?.toJson() case final value?) 'quantity': value,
+      if (instance.unitPrice?.toJson() case final value?) 'unitPrice': value,
+      if (instance.factor?.toJson() case final value?) 'factor': value,
+      if (instance.factorElement?.toJson() case final value?) '_factor': value,
+      if (instance.net?.toJson() case final value?) 'net': value,
+      if (instance.udi?.map((e) => e.toJson()).toList() case final value?)
+        'udi': value,
+      if (instance.bodySite?.toJson() case final value?) 'bodySite': value,
+      if (instance.subSite?.map((e) => e.toJson()).toList() case final value?)
+        'subSite': value,
+      if (instance.encounter?.map((e) => e.toJson()).toList() case final value?)
+        'encounter': value,
+      if (instance.detail?.map((e) => e.toJson()).toList() case final value?)
+        'detail': value,
+    };
 
 _$ClaimDetailImpl _$$ClaimDetailImplFromJson(Map<String, dynamic> json) =>
     _$ClaimDetailImpl(
@@ -857,33 +837,29 @@ _$ClaimDetailImpl _$$ClaimDetailImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$ClaimDetailImplToJson(_$ClaimDetailImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('revenue', instance.revenue?.toJson());
-  writeNotNull('category', instance.category?.toJson());
-  writeNotNull('service', instance.service?.toJson());
-  writeNotNull('modifier', instance.modifier?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'programCode', instance.programCode?.map((e) => e.toJson()).toList());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
-  writeNotNull('_factor', instance.factorElement?.toJson());
-  writeNotNull('net', instance.net?.toJson());
-  writeNotNull('udi', instance.udi?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'subDetail', instance.subDetail?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$ClaimDetailImplToJson(_$ClaimDetailImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.revenue?.toJson() case final value?) 'revenue': value,
+      if (instance.category?.toJson() case final value?) 'category': value,
+      if (instance.service?.toJson() case final value?) 'service': value,
+      if (instance.modifier?.map((e) => e.toJson()).toList() case final value?)
+        'modifier': value,
+      if (instance.programCode?.map((e) => e.toJson()).toList()
+          case final value?)
+        'programCode': value,
+      if (instance.quantity?.toJson() case final value?) 'quantity': value,
+      if (instance.unitPrice?.toJson() case final value?) 'unitPrice': value,
+      if (instance.factor?.toJson() case final value?) 'factor': value,
+      if (instance.factorElement?.toJson() case final value?) '_factor': value,
+      if (instance.net?.toJson() case final value?) 'net': value,
+      if (instance.udi?.map((e) => e.toJson()).toList() case final value?)
+        'udi': value,
+      if (instance.subDetail?.map((e) => e.toJson()).toList() case final value?)
+        'subDetail': value,
+    };
 
 _$ClaimSubDetailImpl _$$ClaimSubDetailImplFromJson(Map<String, dynamic> json) =>
     _$ClaimSubDetailImpl(
@@ -926,31 +902,27 @@ _$ClaimSubDetailImpl _$$ClaimSubDetailImplFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$$ClaimSubDetailImplToJson(
-    _$ClaimSubDetailImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('revenue', instance.revenue?.toJson());
-  writeNotNull('category', instance.category?.toJson());
-  writeNotNull('service', instance.service?.toJson());
-  writeNotNull('modifier', instance.modifier?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'programCode', instance.programCode?.map((e) => e.toJson()).toList());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('unitPrice', instance.unitPrice?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
-  writeNotNull('_factor', instance.factorElement?.toJson());
-  writeNotNull('net', instance.net?.toJson());
-  writeNotNull('udi', instance.udi?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ClaimSubDetailImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.revenue?.toJson() case final value?) 'revenue': value,
+      if (instance.category?.toJson() case final value?) 'category': value,
+      if (instance.service?.toJson() case final value?) 'service': value,
+      if (instance.modifier?.map((e) => e.toJson()).toList() case final value?)
+        'modifier': value,
+      if (instance.programCode?.map((e) => e.toJson()).toList()
+          case final value?)
+        'programCode': value,
+      if (instance.quantity?.toJson() case final value?) 'quantity': value,
+      if (instance.unitPrice?.toJson() case final value?) 'unitPrice': value,
+      if (instance.factor?.toJson() case final value?) 'factor': value,
+      if (instance.factorElement?.toJson() case final value?) '_factor': value,
+      if (instance.net?.toJson() case final value?) 'net': value,
+      if (instance.udi?.map((e) => e.toJson()).toList() case final value?)
+        'udi': value,
+    };
 
 _$ClaimResponseImpl _$$ClaimResponseImplFromJson(Map<String, dynamic> json) =>
     _$ClaimResponseImpl(
@@ -1063,62 +1035,70 @@ _$ClaimResponseImpl _$$ClaimResponseImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$ClaimResponseImplToJson(_$ClaimResponseImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('created', instance.created);
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('insurer', instance.insurer?.toJson());
-  writeNotNull('requestProvider', instance.requestProvider?.toJson());
-  writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
-  writeNotNull('disposition', instance.disposition);
-  writeNotNull('_disposition', instance.dispositionElement?.toJson());
-  writeNotNull('payeeType', instance.payeeType?.toJson());
-  writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
-  writeNotNull('addItem', instance.addItem?.map((e) => e.toJson()).toList());
-  writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
-  writeNotNull('totalCost', instance.totalCost?.toJson());
-  writeNotNull('unallocDeductable', instance.unallocDeductable?.toJson());
-  writeNotNull('totalBenefit', instance.totalBenefit?.toJson());
-  writeNotNull('payment', instance.payment?.toJson());
-  writeNotNull('reserved', instance.reserved?.toJson());
-  writeNotNull('form', instance.form?.toJson());
-  writeNotNull(
-      'processNote', instance.processNote?.map((e) => e.toJson()).toList());
-  writeNotNull('communicationRequest',
-      instance.communicationRequest?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'insurance', instance.insurance?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$ClaimResponseImplToJson(_$ClaimResponseImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.status case final value?) 'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.patient?.toJson() case final value?) 'patient': value,
+      if (instance.created case final value?) 'created': value,
+      if (instance.createdElement?.toJson() case final value?)
+        '_created': value,
+      if (instance.insurer?.toJson() case final value?) 'insurer': value,
+      if (instance.requestProvider?.toJson() case final value?)
+        'requestProvider': value,
+      if (instance.requestOrganization?.toJson() case final value?)
+        'requestOrganization': value,
+      if (instance.request?.toJson() case final value?) 'request': value,
+      if (instance.outcome?.toJson() case final value?) 'outcome': value,
+      if (instance.disposition case final value?) 'disposition': value,
+      if (instance.dispositionElement?.toJson() case final value?)
+        '_disposition': value,
+      if (instance.payeeType?.toJson() case final value?) 'payeeType': value,
+      if (instance.item?.map((e) => e.toJson()).toList() case final value?)
+        'item': value,
+      if (instance.addItem?.map((e) => e.toJson()).toList() case final value?)
+        'addItem': value,
+      if (instance.error?.map((e) => e.toJson()).toList() case final value?)
+        'error': value,
+      if (instance.totalCost?.toJson() case final value?) 'totalCost': value,
+      if (instance.unallocDeductable?.toJson() case final value?)
+        'unallocDeductable': value,
+      if (instance.totalBenefit?.toJson() case final value?)
+        'totalBenefit': value,
+      if (instance.payment?.toJson() case final value?) 'payment': value,
+      if (instance.reserved?.toJson() case final value?) 'reserved': value,
+      if (instance.form?.toJson() case final value?) 'form': value,
+      if (instance.processNote?.map((e) => e.toJson()).toList()
+          case final value?)
+        'processNote': value,
+      if (instance.communicationRequest?.map((e) => e.toJson()).toList()
+          case final value?)
+        'communicationRequest': value,
+      if (instance.insurance?.map((e) => e.toJson()).toList() case final value?)
+        'insurance': value,
+    };
 
 _$ClaimResponseItemImpl _$$ClaimResponseItemImplFromJson(
         Map<String, dynamic> json) =>
@@ -1146,26 +1126,24 @@ _$ClaimResponseItemImpl _$$ClaimResponseItemImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseItemImplToJson(
-    _$ClaimResponseItemImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
-  writeNotNull('_sequenceLinkId', instance.sequenceLinkIdElement?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
-  writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
-  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ClaimResponseItemImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequenceLinkId?.toJson() case final value?)
+        'sequenceLinkId': value,
+      if (instance.sequenceLinkIdElement?.toJson() case final value?)
+        '_sequenceLinkId': value,
+      if (instance.noteNumber?.map((e) => e.toJson()).toList()
+          case final value?)
+        'noteNumber': value,
+      if (instance.noteNumberElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_noteNumber': value,
+      if (instance.adjudication?.map((e) => e.toJson()).toList()
+          case final value?)
+        'adjudication': value,
+      if (instance.detail?.map((e) => e.toJson()).toList() case final value?)
+        'detail': value,
+    };
 
 _$ClaimResponseAdjudicationImpl _$$ClaimResponseAdjudicationImplFromJson(
         Map<String, dynamic> json) =>
@@ -1185,23 +1163,14 @@ _$ClaimResponseAdjudicationImpl _$$ClaimResponseAdjudicationImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseAdjudicationImplToJson(
-    _$ClaimResponseAdjudicationImpl instance) {
-  final val = <String, dynamic>{
-    'category': instance.category.toJson(),
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('reason', instance.reason?.toJson());
-  writeNotNull('amount', instance.amount?.toJson());
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  return val;
-}
+        _$ClaimResponseAdjudicationImpl instance) =>
+    <String, dynamic>{
+      'category': instance.category.toJson(),
+      if (instance.reason?.toJson() case final value?) 'reason': value,
+      if (instance.amount?.toJson() case final value?) 'amount': value,
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+    };
 
 _$ClaimResponseDetailImpl _$$ClaimResponseDetailImplFromJson(
         Map<String, dynamic> json) =>
@@ -1230,27 +1199,24 @@ _$ClaimResponseDetailImpl _$$ClaimResponseDetailImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseDetailImplToJson(
-    _$ClaimResponseDetailImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
-  writeNotNull('_sequenceLinkId', instance.sequenceLinkIdElement?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
-  writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'subDetail', instance.subDetail?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ClaimResponseDetailImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequenceLinkId?.toJson() case final value?)
+        'sequenceLinkId': value,
+      if (instance.sequenceLinkIdElement?.toJson() case final value?)
+        '_sequenceLinkId': value,
+      if (instance.noteNumber?.map((e) => e.toJson()).toList()
+          case final value?)
+        'noteNumber': value,
+      if (instance.noteNumberElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_noteNumber': value,
+      if (instance.adjudication?.map((e) => e.toJson()).toList()
+          case final value?)
+        'adjudication': value,
+      if (instance.subDetail?.map((e) => e.toJson()).toList() case final value?)
+        'subDetail': value,
+    };
 
 _$ClaimResponseSubDetailImpl _$$ClaimResponseSubDetailImplFromJson(
         Map<String, dynamic> json) =>
@@ -1275,25 +1241,22 @@ _$ClaimResponseSubDetailImpl _$$ClaimResponseSubDetailImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseSubDetailImplToJson(
-    _$ClaimResponseSubDetailImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
-  writeNotNull('_sequenceLinkId', instance.sequenceLinkIdElement?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
-  writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ClaimResponseSubDetailImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequenceLinkId?.toJson() case final value?)
+        'sequenceLinkId': value,
+      if (instance.sequenceLinkIdElement?.toJson() case final value?)
+        '_sequenceLinkId': value,
+      if (instance.noteNumber?.map((e) => e.toJson()).toList()
+          case final value?)
+        'noteNumber': value,
+      if (instance.noteNumberElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_noteNumber': value,
+      if (instance.adjudication?.map((e) => e.toJson()).toList()
+          case final value?)
+        'adjudication': value,
+    };
 
 _$ClaimResponseAddItemImpl _$$ClaimResponseAddItemImplFromJson(
         Map<String, dynamic> json) =>
@@ -1336,33 +1299,32 @@ _$ClaimResponseAddItemImpl _$$ClaimResponseAddItemImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseAddItemImplToJson(
-    _$ClaimResponseAddItemImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequenceLinkId',
-      instance.sequenceLinkId?.map((e) => e.toJson()).toList());
-  writeNotNull('_sequenceLinkId',
-      instance.sequenceLinkIdElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('revenue', instance.revenue?.toJson());
-  writeNotNull('category', instance.category?.toJson());
-  writeNotNull('service', instance.service?.toJson());
-  writeNotNull('modifier', instance.modifier?.map((e) => e.toJson()).toList());
-  writeNotNull('fee', instance.fee?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
-  writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
-  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ClaimResponseAddItemImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequenceLinkId?.map((e) => e.toJson()).toList()
+          case final value?)
+        'sequenceLinkId': value,
+      if (instance.sequenceLinkIdElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_sequenceLinkId': value,
+      if (instance.revenue?.toJson() case final value?) 'revenue': value,
+      if (instance.category?.toJson() case final value?) 'category': value,
+      if (instance.service?.toJson() case final value?) 'service': value,
+      if (instance.modifier?.map((e) => e.toJson()).toList() case final value?)
+        'modifier': value,
+      if (instance.fee?.toJson() case final value?) 'fee': value,
+      if (instance.noteNumber?.map((e) => e.toJson()).toList()
+          case final value?)
+        'noteNumber': value,
+      if (instance.noteNumberElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_noteNumber': value,
+      if (instance.adjudication?.map((e) => e.toJson()).toList()
+          case final value?)
+        'adjudication': value,
+      if (instance.detail?.map((e) => e.toJson()).toList() case final value?)
+        'detail': value,
+    };
 
 _$ClaimResponseDetail1Impl _$$ClaimResponseDetail1ImplFromJson(
         Map<String, dynamic> json) =>
@@ -1396,28 +1358,24 @@ _$ClaimResponseDetail1Impl _$$ClaimResponseDetail1ImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseDetail1ImplToJson(
-    _$ClaimResponseDetail1Impl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('revenue', instance.revenue?.toJson());
-  writeNotNull('category', instance.category?.toJson());
-  writeNotNull('service', instance.service?.toJson());
-  writeNotNull('modifier', instance.modifier?.map((e) => e.toJson()).toList());
-  writeNotNull('fee', instance.fee?.toJson());
-  writeNotNull(
-      'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
-  writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$ClaimResponseDetail1Impl instance) =>
+    <String, dynamic>{
+      if (instance.revenue?.toJson() case final value?) 'revenue': value,
+      if (instance.category?.toJson() case final value?) 'category': value,
+      if (instance.service?.toJson() case final value?) 'service': value,
+      if (instance.modifier?.map((e) => e.toJson()).toList() case final value?)
+        'modifier': value,
+      if (instance.fee?.toJson() case final value?) 'fee': value,
+      if (instance.noteNumber?.map((e) => e.toJson()).toList()
+          case final value?)
+        'noteNumber': value,
+      if (instance.noteNumberElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_noteNumber': value,
+      if (instance.adjudication?.map((e) => e.toJson()).toList()
+          case final value?)
+        'adjudication': value,
+    };
 
 _$ClaimResponseErrorImpl _$$ClaimResponseErrorImplFromJson(
         Map<String, dynamic> json) =>
@@ -1446,27 +1404,22 @@ _$ClaimResponseErrorImpl _$$ClaimResponseErrorImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseErrorImplToJson(
-    _$ClaimResponseErrorImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequenceLinkId', instance.sequenceLinkId?.toJson());
-  writeNotNull('_sequenceLinkId', instance.sequenceLinkIdElement?.toJson());
-  writeNotNull('detailSequenceLinkId', instance.detailSequenceLinkId?.toJson());
-  writeNotNull(
-      '_detailSequenceLinkId', instance.detailSequenceLinkIdElement?.toJson());
-  writeNotNull(
-      'subdetailSequenceLinkId', instance.subdetailSequenceLinkId?.toJson());
-  writeNotNull('_subdetailSequenceLinkId',
-      instance.subdetailSequenceLinkIdElement?.toJson());
-  val['code'] = instance.code.toJson();
-  return val;
-}
+        _$ClaimResponseErrorImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequenceLinkId?.toJson() case final value?)
+        'sequenceLinkId': value,
+      if (instance.sequenceLinkIdElement?.toJson() case final value?)
+        '_sequenceLinkId': value,
+      if (instance.detailSequenceLinkId?.toJson() case final value?)
+        'detailSequenceLinkId': value,
+      if (instance.detailSequenceLinkIdElement?.toJson() case final value?)
+        '_detailSequenceLinkId': value,
+      if (instance.subdetailSequenceLinkId?.toJson() case final value?)
+        'subdetailSequenceLinkId': value,
+      if (instance.subdetailSequenceLinkIdElement?.toJson() case final value?)
+        '_subdetailSequenceLinkId': value,
+      'code': instance.code.toJson(),
+    };
 
 _$ClaimResponsePaymentImpl _$$ClaimResponsePaymentImplFromJson(
         Map<String, dynamic> json) =>
@@ -1494,24 +1447,17 @@ _$ClaimResponsePaymentImpl _$$ClaimResponsePaymentImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponsePaymentImplToJson(
-    _$ClaimResponsePaymentImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('adjustment', instance.adjustment?.toJson());
-  writeNotNull('adjustmentReason', instance.adjustmentReason?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('amount', instance.amount?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  return val;
-}
+        _$ClaimResponsePaymentImpl instance) =>
+    <String, dynamic>{
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.adjustment?.toJson() case final value?) 'adjustment': value,
+      if (instance.adjustmentReason?.toJson() case final value?)
+        'adjustmentReason': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.amount?.toJson() case final value?) 'amount': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+    };
 
 _$ClaimResponseProcessNoteImpl _$$ClaimResponseProcessNoteImplFromJson(
         Map<String, dynamic> json) =>
@@ -1533,23 +1479,15 @@ _$ClaimResponseProcessNoteImpl _$$ClaimResponseProcessNoteImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseProcessNoteImplToJson(
-    _$ClaimResponseProcessNoteImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('number', instance.number?.toJson());
-  writeNotNull('_number', instance.numberElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  return val;
-}
+        _$ClaimResponseProcessNoteImpl instance) =>
+    <String, dynamic>{
+      if (instance.number?.toJson() case final value?) 'number': value,
+      if (instance.numberElement?.toJson() case final value?) '_number': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+    };
 
 _$ClaimResponseInsuranceImpl _$$ClaimResponseInsuranceImplFromJson(
         Map<String, dynamic> json) =>
@@ -1582,26 +1520,22 @@ _$ClaimResponseInsuranceImpl _$$ClaimResponseInsuranceImplFromJson(
     );
 
 Map<String, dynamic> _$$ClaimResponseInsuranceImplToJson(
-    _$ClaimResponseInsuranceImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('sequence', instance.sequence?.toJson());
-  writeNotNull('_sequence', instance.sequenceElement?.toJson());
-  writeNotNull('focal', instance.focal?.toJson());
-  writeNotNull('_focal', instance.focalElement?.toJson());
-  val['coverage'] = instance.coverage.toJson();
-  writeNotNull('businessArrangement', instance.businessArrangement);
-  writeNotNull(
-      '_businessArrangement', instance.businessArrangementElement?.toJson());
-  writeNotNull('preAuthRef', instance.preAuthRef);
-  writeNotNull('_preAuthRef',
-      instance.preAuthRefElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('claimResponse', instance.claimResponse?.toJson());
-  return val;
-}
+        _$ClaimResponseInsuranceImpl instance) =>
+    <String, dynamic>{
+      if (instance.sequence?.toJson() case final value?) 'sequence': value,
+      if (instance.sequenceElement?.toJson() case final value?)
+        '_sequence': value,
+      if (instance.focal?.toJson() case final value?) 'focal': value,
+      if (instance.focalElement?.toJson() case final value?) '_focal': value,
+      'coverage': instance.coverage.toJson(),
+      if (instance.businessArrangement case final value?)
+        'businessArrangement': value,
+      if (instance.businessArrangementElement?.toJson() case final value?)
+        '_businessArrangement': value,
+      if (instance.preAuthRef case final value?) 'preAuthRef': value,
+      if (instance.preAuthRefElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_preAuthRef': value,
+      if (instance.claimResponse?.toJson() case final value?)
+        'claimResponse': value,
+    };

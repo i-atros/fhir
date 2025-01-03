@@ -86,50 +86,51 @@ _$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$CompositionImplToJson(_$CompositionImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  val['date'] = instance.date.toJson();
-  writeNotNull('_date', instance.dateElement?.toJson());
-  val['type'] = instance.type.toJson();
-  writeNotNull('class', instance.class_?.toJson());
-  val['title'] = instance.title;
-  writeNotNull('_title', instance.titleElement?.toJson());
-  val['status'] = _$CompositionStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('confidentiality', instance.confidentiality?.toJson());
-  writeNotNull('_confidentiality', instance.confidentialityElement?.toJson());
-  val['subject'] = instance.subject.toJson();
-  val['author'] = instance.author.map((e) => e.toJson()).toList();
-  writeNotNull('attester', instance.attester?.map((e) => e.toJson()).toList());
-  writeNotNull('custodian', instance.custodian?.toJson());
-  writeNotNull('event', instance.event?.map((e) => e.toJson()).toList());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('section', instance.section?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$CompositionImplToJson(_$CompositionImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      'date': instance.date.toJson(),
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      'type': instance.type.toJson(),
+      if (instance.class_?.toJson() case final value?) 'class': value,
+      'title': instance.title,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      'status': _$CompositionStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.confidentiality?.toJson() case final value?)
+        'confidentiality': value,
+      if (instance.confidentialityElement?.toJson() case final value?)
+        '_confidentiality': value,
+      'subject': instance.subject.toJson(),
+      'author': instance.author.map((e) => e.toJson()).toList(),
+      if (instance.attester?.map((e) => e.toJson()).toList() case final value?)
+        'attester': value,
+      if (instance.custodian?.toJson() case final value?) 'custodian': value,
+      if (instance.event?.map((e) => e.toJson()).toList() case final value?)
+        'event': value,
+      if (instance.encounter?.toJson() case final value?) 'encounter': value,
+      if (instance.section?.map((e) => e.toJson()).toList() case final value?)
+        'section': value,
+    };
 
 const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Account: 'Account',
@@ -263,27 +264,21 @@ _$CompositionAttesterImpl _$$CompositionAttesterImplFromJson(
     );
 
 Map<String, dynamic> _$$CompositionAttesterImplToJson(
-    _$CompositionAttesterImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['mode'] = instance.mode.map((e) => _$AttesterModeEnumMap[e]!).toList();
-  writeNotNull('_mode', instance.modeElement?.toJson());
-  writeNotNull('time', instance.time?.toJson());
-  writeNotNull('_time', instance.timeElement?.toJson());
-  writeNotNull('party', instance.party?.toJson());
-  return val;
-}
+        _$CompositionAttesterImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      'mode': instance.mode.map((e) => _$AttesterModeEnumMap[e]!).toList(),
+      if (instance.modeElement?.toJson() case final value?) '_mode': value,
+      if (instance.time?.toJson() case final value?) 'time': value,
+      if (instance.timeElement?.toJson() case final value?) '_time': value,
+      if (instance.party?.toJson() case final value?) 'party': value,
+    };
 
 const _$AttesterModeEnumMap = {
   AttesterMode.personal: 'personal',
@@ -315,25 +310,21 @@ _$CompositionEventImpl _$$CompositionEventImplFromJson(
     );
 
 Map<String, dynamic> _$$CompositionEventImplToJson(
-    _$CompositionEventImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$CompositionEventImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.code?.map((e) => e.toJson()).toList() case final value?)
+        'code': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.detail?.map((e) => e.toJson()).toList() case final value?)
+        'detail': value,
+    };
 
 _$CompositionSectionImpl _$$CompositionSectionImplFromJson(
         Map<String, dynamic> json) =>
@@ -379,33 +370,30 @@ _$CompositionSectionImpl _$$CompositionSectionImplFromJson(
     );
 
 Map<String, dynamic> _$$CompositionSectionImplToJson(
-    _$CompositionSectionImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull('mode', _$SectionModeEnumMap[instance.mode]);
-  writeNotNull('_mode', instance.modeElement?.toJson());
-  writeNotNull('orderedBy', instance.orderedBy?.toJson());
-  writeNotNull('entry', instance.entry?.map((e) => e.toJson()).toList());
-  writeNotNull('emptyReason', instance.emptyReason?.toJson());
-  writeNotNull('section', instance.section?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$CompositionSectionImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.fhirComments case final value?) 'fhir_comments': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (_$SectionModeEnumMap[instance.mode] case final value?) 'mode': value,
+      if (instance.modeElement?.toJson() case final value?) '_mode': value,
+      if (instance.orderedBy?.toJson() case final value?) 'orderedBy': value,
+      if (instance.entry?.map((e) => e.toJson()).toList() case final value?)
+        'entry': value,
+      if (instance.emptyReason?.toJson() case final value?)
+        'emptyReason': value,
+      if (instance.section?.map((e) => e.toJson()).toList() case final value?)
+        'section': value,
+    };
 
 const _$SectionModeEnumMap = {
   SectionMode.working: 'working',
@@ -497,50 +485,52 @@ _$DocumentManifestImpl _$$DocumentManifestImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentManifestImplToJson(
-    _$DocumentManifestImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull(
-      'recipient', instance.recipient?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
-  writeNotNull('created', instance.created?.toJson());
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('source', instance.source?.toJson());
-  writeNotNull('_source', instance.sourceElement?.toJson());
-  val['status'] = _$DocumentManifestStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  val['content'] = instance.content.map((e) => e.toJson()).toList();
-  writeNotNull('related', instance.related?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$DocumentManifestImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.masterIdentifier?.toJson() case final value?)
+        'masterIdentifier': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.subject?.toJson() case final value?) 'subject': value,
+      if (instance.recipient?.map((e) => e.toJson()).toList() case final value?)
+        'recipient': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.author?.map((e) => e.toJson()).toList() case final value?)
+        'author': value,
+      if (instance.created?.toJson() case final value?) 'created': value,
+      if (instance.createdElement?.toJson() case final value?)
+        '_created': value,
+      if (instance.source?.toJson() case final value?) 'source': value,
+      if (instance.sourceElement?.toJson() case final value?) '_source': value,
+      'status': _$DocumentManifestStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      'content': instance.content.map((e) => e.toJson()).toList(),
+      if (instance.related?.map((e) => e.toJson()).toList() case final value?)
+        'related': value,
+    };
 
 const _$DocumentManifestStatusEnumMap = {
   DocumentManifestStatus.current: 'current',
@@ -568,24 +558,19 @@ _$DocumentManifestContentImpl _$$DocumentManifestContentImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentManifestContentImplToJson(
-    _$DocumentManifestContentImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('pAttachment', instance.pAttachment?.toJson());
-  writeNotNull('pReference', instance.pReference?.toJson());
-  return val;
-}
+        _$DocumentManifestContentImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.pAttachment?.toJson() case final value?)
+        'pAttachment': value,
+      if (instance.pReference?.toJson() case final value?) 'pReference': value,
+    };
 
 _$DocumentManifestRelatedImpl _$$DocumentManifestRelatedImplFromJson(
         Map<String, dynamic> json) =>
@@ -606,24 +591,18 @@ _$DocumentManifestRelatedImpl _$$DocumentManifestRelatedImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentManifestRelatedImplToJson(
-    _$DocumentManifestRelatedImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('ref', instance.ref?.toJson());
-  return val;
-}
+        _$DocumentManifestRelatedImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      if (instance.ref?.toJson() case final value?) 'ref': value,
+    };
 
 _$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
         Map<String, dynamic> json) =>
@@ -719,55 +698,58 @@ _$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentReferenceImplToJson(
-    _$DocumentReferenceImpl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('subject', instance.subject?.toJson());
-  val['type'] = instance.type.toJson();
-  writeNotNull('class', instance.class_?.toJson());
-  writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
-  writeNotNull('custodian', instance.custodian?.toJson());
-  writeNotNull('authenticator', instance.authenticator?.toJson());
-  writeNotNull('created', instance.created?.toJson());
-  val['indexed'] = instance.indexed.toJson();
-  val['status'] = _$DocumentReferenceStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('docStatus', instance.docStatus?.toJson());
-  writeNotNull('_docStatus', instance.docStatusElement?.toJson());
-  writeNotNull(
-      'relatesTo', instance.relatesTo?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull(
-      'securityLabel', instance.securityLabel?.map((e) => e.toJson()).toList());
-  val['content'] = instance.content.map((e) => e.toJson()).toList();
-  writeNotNull('context', instance.context?.toJson());
-  return val;
-}
+        _$DocumentReferenceImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.masterIdentifier?.toJson() case final value?)
+        'masterIdentifier': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.subject?.toJson() case final value?) 'subject': value,
+      'type': instance.type.toJson(),
+      if (instance.class_?.toJson() case final value?) 'class': value,
+      if (instance.author?.map((e) => e.toJson()).toList() case final value?)
+        'author': value,
+      if (instance.custodian?.toJson() case final value?) 'custodian': value,
+      if (instance.authenticator?.toJson() case final value?)
+        'authenticator': value,
+      if (instance.created?.toJson() case final value?) 'created': value,
+      'indexed': instance.indexed.toJson(),
+      'status': _$DocumentReferenceStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.docStatus?.toJson() case final value?) 'docStatus': value,
+      if (instance.docStatusElement?.toJson() case final value?)
+        '_docStatus': value,
+      if (instance.relatesTo?.map((e) => e.toJson()).toList() case final value?)
+        'relatesTo': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.securityLabel?.map((e) => e.toJson()).toList()
+          case final value?)
+        'securityLabel': value,
+      'content': instance.content.map((e) => e.toJson()).toList(),
+      if (instance.context?.toJson() case final value?) 'context': value,
+    };
 
 const _$DocumentReferenceStatusEnumMap = {
   DocumentReferenceStatus.current: 'current',
@@ -795,25 +777,19 @@ _$DocumentReferenceRelatesToImpl _$$DocumentReferenceRelatesToImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentReferenceRelatesToImplToJson(
-    _$DocumentReferenceRelatesToImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['code'] = _$RelatesToCodeEnumMap[instance.code]!;
-  writeNotNull('_code', instance.codeElement?.toJson());
-  val['target'] = instance.target.toJson();
-  return val;
-}
+        _$DocumentReferenceRelatesToImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      'code': _$RelatesToCodeEnumMap[instance.code]!,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+      'target': instance.target.toJson(),
+    };
 
 const _$RelatesToCodeEnumMap = {
   RelatesToCode.replaces: 'replaces',
@@ -841,24 +817,19 @@ _$DocumentReferenceContentImpl _$$DocumentReferenceContentImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentReferenceContentImplToJson(
-    _$DocumentReferenceContentImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['attachment'] = instance.attachment.toJson();
-  writeNotNull('format', instance.format?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$DocumentReferenceContentImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      'attachment': instance.attachment.toJson(),
+      if (instance.format?.map((e) => e.toJson()).toList() case final value?)
+        'format': value,
+    };
 
 _$DocumentReferenceContextImpl _$$DocumentReferenceContextImplFromJson(
         Map<String, dynamic> json) =>
@@ -898,29 +869,28 @@ _$DocumentReferenceContextImpl _$$DocumentReferenceContextImplFromJson(
     );
 
 Map<String, dynamic> _$$DocumentReferenceContextImplToJson(
-    _$DocumentReferenceContextImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('event', instance.event?.map((e) => e.toJson()).toList());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('facilityType', instance.facilityType?.toJson());
-  writeNotNull('practiceSetting', instance.practiceSetting?.toJson());
-  writeNotNull('sourcePatientInfo', instance.sourcePatientInfo?.toJson());
-  writeNotNull('related', instance.related?.map((e) => e.toJson()).toList());
-  return val;
-}
+        _$DocumentReferenceContextImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.encounter?.toJson() case final value?) 'encounter': value,
+      if (instance.event?.map((e) => e.toJson()).toList() case final value?)
+        'event': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.facilityType?.toJson() case final value?)
+        'facilityType': value,
+      if (instance.practiceSetting?.toJson() case final value?)
+        'practiceSetting': value,
+      if (instance.sourcePatientInfo?.toJson() case final value?)
+        'sourcePatientInfo': value,
+      if (instance.related?.map((e) => e.toJson()).toList() case final value?)
+        'related': value,
+    };
 
 _$DocumentReferenceContextRelatedImpl
     _$$DocumentReferenceContextRelatedImplFromJson(Map<String, dynamic> json) =>
@@ -941,24 +911,18 @@ _$DocumentReferenceContextRelatedImpl
         );
 
 Map<String, dynamic> _$$DocumentReferenceContextRelatedImplToJson(
-    _$DocumentReferenceContextRelatedImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('ref', instance.ref?.toJson());
-  return val;
-}
+        _$DocumentReferenceContextRelatedImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      if (instance.ref?.toJson() case final value?) 'ref': value,
+    };
 
 _$List_Impl _$$List_ImplFromJson(Map<String, dynamic> json) => _$List_Impl(
       resourceType: $enumDecodeNullable(
@@ -1038,50 +1002,49 @@ _$List_Impl _$$List_ImplFromJson(Map<String, dynamic> json) => _$List_Impl(
               json['emptyReason'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$List_ImplToJson(_$List_Impl instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('source', instance.source?.toJson());
-  writeNotNull('encounter', instance.encounter?.toJson());
-  val['status'] = _$ListStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('orderedBy', instance.orderedBy?.toJson());
-  val['mode'] = _$ListModeEnumMap[instance.mode]!;
-  writeNotNull('_mode', instance.modeElement?.toJson());
-  writeNotNull('note', instance.note);
-  writeNotNull('entry', instance.entry?.map((e) => e.toJson()).toList());
-  writeNotNull('emptyReason', instance.emptyReason?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$List_ImplToJson(_$List_Impl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.subject?.toJson() case final value?) 'subject': value,
+      if (instance.source?.toJson() case final value?) 'source': value,
+      if (instance.encounter?.toJson() case final value?) 'encounter': value,
+      'status': _$ListStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.orderedBy?.toJson() case final value?) 'orderedBy': value,
+      'mode': _$ListModeEnumMap[instance.mode]!,
+      if (instance.modeElement?.toJson() case final value?) '_mode': value,
+      if (instance.note case final value?) 'note': value,
+      if (instance.entry?.map((e) => e.toJson()).toList() case final value?)
+        'entry': value,
+      if (instance.emptyReason?.toJson() case final value?)
+        'emptyReason': value,
+    };
 
 const _$ListStatusEnumMap = {
   ListStatus.current: 'current',
@@ -1124,26 +1087,21 @@ _$ListEntryImpl _$$ListEntryImplFromJson(Map<String, dynamic> json) =>
       item: Reference.fromJson(json['item'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$ListEntryImplToJson(_$ListEntryImpl instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('fhir_comments', instance.fhirComments);
-  writeNotNull('flag', instance.flag?.toJson());
-  writeNotNull('deleted', instance.deleted?.toJson());
-  writeNotNull('_deleted', instance.deletedElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  val['item'] = instance.item.toJson();
-  return val;
-}
+Map<String, dynamic> _$$ListEntryImplToJson(_$ListEntryImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.fhirComments case final value?) 'fhir_comments': value,
+      if (instance.flag?.toJson() case final value?) 'flag': value,
+      if (instance.deleted?.toJson() case final value?) 'deleted': value,
+      if (instance.deletedElement?.toJson() case final value?)
+        '_deleted': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      'item': instance.item.toJson(),
+    };
