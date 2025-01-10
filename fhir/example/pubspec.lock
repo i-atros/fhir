@@ -20,8 +20,8 @@ packages:
     dependency: transitive
     description:
       path: fhir_yaml
-      ref: "upgrade-flutter-3.27"
-      resolved-ref: b7b456d6c69dc38be4274426432ba9f358dd1572
+      ref: "fhir-yaml-upgrade-flutter-3.27"
+      resolved-ref: "4c1cad67cc6b062494878f9e3074bed4491a01d5"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.5.0"
