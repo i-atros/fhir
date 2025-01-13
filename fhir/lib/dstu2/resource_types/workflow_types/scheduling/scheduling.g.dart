@@ -6,8 +6,8 @@ part of 'scheduling.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
-    _$_Appointment(
+_$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) =>
+    _$AppointmentImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Appointment) ??
@@ -90,52 +90,55 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['status'] = _$AppointmentStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('reason', instance.reason?.toJson());
-  writeNotNull('priority', instance.priority?.toJson());
-  writeNotNull('_priority', instance.priorityElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
-  writeNotNull('_end', instance.endElement?.toJson());
-  writeNotNull('minutesDuration', instance.minutesDuration?.toJson());
-  writeNotNull('_minutesDuration', instance.minutesDurationElement?.toJson());
-  writeNotNull('slot', instance.slot?.map((e) => e.toJson()).toList());
-  writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
-  val['participant'] = instance.participant.map((e) => e.toJson()).toList();
-  return val;
-}
+Map<String, dynamic> _$$AppointmentImplToJson(_$AppointmentImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      'status': _$AppointmentStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.reason?.toJson() case final value?) 'reason': value,
+      if (instance.priority?.toJson() case final value?) 'priority': value,
+      if (instance.priorityElement?.toJson() case final value?)
+        '_priority': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.start?.toJson() case final value?) 'start': value,
+      if (instance.startElement?.toJson() case final value?) '_start': value,
+      if (instance.end?.toJson() case final value?) 'end': value,
+      if (instance.endElement?.toJson() case final value?) '_end': value,
+      if (instance.minutesDuration?.toJson() case final value?)
+        'minutesDuration': value,
+      if (instance.minutesDurationElement?.toJson() case final value?)
+        '_minutesDuration': value,
+      if (instance.slot?.map((e) => e.toJson()).toList() case final value?)
+        'slot': value,
+      if (instance.comment case final value?) 'comment': value,
+      if (instance.commentElement?.toJson() case final value?)
+        '_comment': value,
+      'participant': instance.participant.map((e) => e.toJson()).toList(),
+    };
 
 const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Account: 'Account',
@@ -246,9 +249,9 @@ const _$AppointmentStatusEnumMap = {
   AppointmentStatus.unknown: 'unknown',
 };
 
-_$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
+_$AppointmentParticipantImpl _$$AppointmentParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentParticipant(
+    _$AppointmentParticipantImpl(
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -275,29 +278,26 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentParticipantToJson(
-    _$_AppointmentParticipant instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('actor', instance.actor?.toJson());
-  writeNotNull('required', _$ParticipantRequiredEnumMap[instance.required_]);
-  writeNotNull('_required', instance.requiredElement?.toJson());
-  val['status'] = _$ParticipantStatusEnumMap[instance.status]!;
-  writeNotNull('_status', instance.statusElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$AppointmentParticipantImplToJson(
+        _$AppointmentParticipantImpl instance) =>
+    <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.type?.map((e) => e.toJson()).toList() case final value?)
+        'type': value,
+      if (instance.actor?.toJson() case final value?) 'actor': value,
+      if (_$ParticipantRequiredEnumMap[instance.required_] case final value?)
+        'required': value,
+      if (instance.requiredElement?.toJson() case final value?)
+        '_required': value,
+      'status': _$ParticipantStatusEnumMap[instance.status]!,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+    };
 
 const _$ParticipantRequiredEnumMap = {
   ParticipantRequired.required: 'required',
@@ -314,13 +314,13 @@ const _$ParticipantStatusEnumMap = {
   ParticipantStatus.unknown: 'unknown',
 };
 
-_$_AppointmentResponse _$$_AppointmentResponseFromJson(
+_$AppointmentResponseImpl _$$AppointmentResponseImplFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const ['participantStatus'],
   );
-  return _$_AppointmentResponse(
+  return _$AppointmentResponseImpl(
     resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.AppointmentResponse) ??
@@ -384,49 +384,48 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
   );
 }
 
-Map<String, dynamic> _$$_AppointmentResponseToJson(
-    _$_AppointmentResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['appointment'] = instance.appointment.toJson();
-  writeNotNull('start', instance.start?.toJson());
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end?.toJson());
-  writeNotNull('_end', instance.endElement?.toJson());
-  writeNotNull('participantType',
-      instance.participantType?.map((e) => e.toJson()).toList());
-  writeNotNull('actor', instance.actor?.toJson());
-  val['participantStatus'] = _$AppointmentResponseParticipantStatusEnumMap[
-      instance.participantStatus]!;
-  writeNotNull(
-      '_participantStatus', instance.participantStatusElement?.toJson());
-  writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$AppointmentResponseImplToJson(
+        _$AppointmentResponseImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      'appointment': instance.appointment.toJson(),
+      if (instance.start?.toJson() case final value?) 'start': value,
+      if (instance.startElement?.toJson() case final value?) '_start': value,
+      if (instance.end?.toJson() case final value?) 'end': value,
+      if (instance.endElement?.toJson() case final value?) '_end': value,
+      if (instance.participantType?.map((e) => e.toJson()).toList()
+          case final value?)
+        'participantType': value,
+      if (instance.actor?.toJson() case final value?) 'actor': value,
+      'participantStatus': _$AppointmentResponseParticipantStatusEnumMap[
+          instance.participantStatus]!,
+      if (instance.participantStatusElement?.toJson() case final value?)
+        '_participantStatus': value,
+      if (instance.comment case final value?) 'comment': value,
+      if (instance.commentElement?.toJson() case final value?)
+        '_comment': value,
+    };
 
 const _$AppointmentResponseParticipantStatusEnumMap = {
   AppointmentResponseParticipantStatus.accepted: 'accepted',
@@ -438,7 +437,8 @@ const _$AppointmentResponseParticipantStatusEnumMap = {
   AppointmentResponseParticipantStatus.unknown: 'unknown',
 };
 
-_$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
+    _$ScheduleImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Schedule) ??
@@ -486,41 +486,41 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.type?.map((e) => e.toJson()).toList() case final value?)
+        'type': value,
+      'actor': instance.actor.toJson(),
+      if (instance.planningHorizon?.toJson() case final value?)
+        'planningHorizon': value,
+      if (instance.comment case final value?) 'comment': value,
+      if (instance.commentElement?.toJson() case final value?)
+        '_comment': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  val['actor'] = instance.actor.toJson();
-  writeNotNull('planningHorizon', instance.planningHorizon?.toJson());
-  writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
-  return val;
-}
-
-_$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
+_$SlotImpl _$$SlotImplFromJson(Map<String, dynamic> json) => _$SlotImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Slot) ??
@@ -581,45 +581,44 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
-  val['schedule'] = instance.schedule.toJson();
-  val['freeBusyType'] = _$SlotFreeBusyTypeEnumMap[instance.freeBusyType]!;
-  val['start'] = instance.start.toJson();
-  writeNotNull('_start', instance.startElement?.toJson());
-  val['end'] = instance.end.toJson();
-  writeNotNull('_end', instance.endElement?.toJson());
-  writeNotNull('overbooked', instance.overbooked?.toJson());
-  writeNotNull('_overbooked', instance.overbookedElement?.toJson());
-  writeNotNull('comment', instance.comment);
-  writeNotNull('_comment', instance.commentElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$SlotImplToJson(_$SlotImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      'schedule': instance.schedule.toJson(),
+      'freeBusyType': _$SlotFreeBusyTypeEnumMap[instance.freeBusyType]!,
+      'start': instance.start.toJson(),
+      if (instance.startElement?.toJson() case final value?) '_start': value,
+      'end': instance.end.toJson(),
+      if (instance.endElement?.toJson() case final value?) '_end': value,
+      if (instance.overbooked?.toJson() case final value?) 'overbooked': value,
+      if (instance.overbookedElement?.toJson() case final value?)
+        '_overbooked': value,
+      if (instance.comment case final value?) 'comment': value,
+      if (instance.commentElement?.toJson() case final value?)
+        '_comment': value,
+    };
 
 const _$SlotFreeBusyTypeEnumMap = {
   SlotFreeBusyType.busy: 'busy',

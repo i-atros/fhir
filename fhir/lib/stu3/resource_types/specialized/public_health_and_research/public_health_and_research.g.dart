@@ -6,8 +6,8 @@ part of 'public_health_and_research.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
-    _$_ResearchStudy(
+_$ResearchStudyImpl _$$ResearchStudyImplFromJson(Map<String, dynamic> json) =>
+    _$ResearchStudyImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ResearchStudy) ??
@@ -106,60 +106,72 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('protocol', instance.protocol?.map((e) => e.toJson()).toList());
-  writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ResearchStudyStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
-  writeNotNull('focus', instance.focus?.map((e) => e.toJson()).toList());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('relatedArtifact',
-      instance.relatedArtifact?.map((e) => e.toJson()).toList());
-  writeNotNull('keyword', instance.keyword?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull(
-      'enrollment', instance.enrollment?.map((e) => e.toJson()).toList());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('sponsor', instance.sponsor?.toJson());
-  writeNotNull(
-      'principalInvestigator', instance.principalInvestigator?.toJson());
-  writeNotNull('site', instance.site?.map((e) => e.toJson()).toList());
-  writeNotNull('reasonStopped', instance.reasonStopped?.toJson());
-  writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('arm', instance.arm?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$$ResearchStudyImplToJson(_$ResearchStudyImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (instance.protocol?.map((e) => e.toJson()).toList() case final value?)
+        'protocol': value,
+      if (instance.partOf?.map((e) => e.toJson()).toList() case final value?)
+        'partOf': value,
+      if (_$ResearchStudyStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.category?.map((e) => e.toJson()).toList() case final value?)
+        'category': value,
+      if (instance.focus?.map((e) => e.toJson()).toList() case final value?)
+        'focus': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.relatedArtifact?.map((e) => e.toJson()).toList()
+          case final value?)
+        'relatedArtifact': value,
+      if (instance.keyword?.map((e) => e.toJson()).toList() case final value?)
+        'keyword': value,
+      if (instance.jurisdiction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'jurisdiction': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.enrollment?.map((e) => e.toJson()).toList()
+          case final value?)
+        'enrollment': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.sponsor?.toJson() case final value?) 'sponsor': value,
+      if (instance.principalInvestigator?.toJson() case final value?)
+        'principalInvestigator': value,
+      if (instance.site?.map((e) => e.toJson()).toList() case final value?)
+        'site': value,
+      if (instance.reasonStopped?.toJson() case final value?)
+        'reasonStopped': value,
+      if (instance.note?.map((e) => e.toJson()).toList() case final value?)
+        'note': value,
+      if (instance.arm?.map((e) => e.toJson()).toList() case final value?)
+        'arm': value,
+    };
 
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',
@@ -291,8 +303,9 @@ const _$ResearchStudyStatusEnumMap = {
   ResearchStudyStatus.unknown: 'unknown',
 };
 
-_$_ResearchStudyArm _$$_ResearchStudyArmFromJson(Map<String, dynamic> json) =>
-    _$_ResearchStudyArm(
+_$ResearchStudyArmImpl _$$ResearchStudyArmImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ResearchStudyArmImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -306,25 +319,20 @@ _$_ResearchStudyArm _$$_ResearchStudyArmFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyArmToJson(_$_ResearchStudyArm instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$ResearchStudyArmImplToJson(
+        _$ResearchStudyArmImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  return val;
-}
-
-_$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
-    _$_ResearchSubject(
+_$ResearchSubjectImpl _$$ResearchSubjectImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ResearchSubjectImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ResearchSubject) ??
@@ -383,43 +391,43 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['consent'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('status', _$ResearchSubjectStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  val['study'] = instance.study.toJson();
-  val['individual'] = instance.individual.toJson();
-  writeNotNull('assignedArm', instance.assignedArm);
-  writeNotNull('_assignedArm', instance.assignedArmElement?.toJson());
-  writeNotNull('actualArm', instance.actualArm);
-  writeNotNull('_actualArm', instance.actualArmElement?.toJson());
-  writeNotNull('consent', instance.consent?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ResearchSubjectImplToJson(
+        _$ResearchSubjectImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      if (_$ResearchSubjectStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      'study': instance.study.toJson(),
+      'individual': instance.individual.toJson(),
+      if (instance.assignedArm case final value?) 'assignedArm': value,
+      if (instance.assignedArmElement?.toJson() case final value?)
+        '_assignedArm': value,
+      if (instance.actualArm case final value?) 'actualArm': value,
+      if (instance.actualArmElement?.toJson() case final value?)
+        '_actualArm': value,
+      if (instance.consent?.toJson() case final value?) 'consent': value,
+    };
 
 const _$ResearchSubjectStatusEnumMap = {
   ResearchSubjectStatus.candidate: 'candidate',

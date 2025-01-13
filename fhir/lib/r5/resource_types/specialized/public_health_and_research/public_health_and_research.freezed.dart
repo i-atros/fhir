@@ -12,7 +12,7 @@ part of 'public_health_and_research.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
   return _ResearchStudy.fromJson(json);
@@ -114,44 +114,35 @@ abstract class $ResearchStudyCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      ResearchStudyStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? category,
@@ -160,11 +151,9 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
       Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<ContactDetail>? contact,
       Reference? sponsor,
@@ -733,53 +722,44 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyCopyWith<$Res>
+abstract class _$$ResearchStudyImplCopyWith<$Res>
     implements $ResearchStudyCopyWith<$Res> {
-  factory _$$_ResearchStudyCopyWith(
-          _$_ResearchStudy value, $Res Function(_$_ResearchStudy) then) =
-      __$$_ResearchStudyCopyWithImpl<$Res>;
+  factory _$$ResearchStudyImplCopyWith(
+          _$ResearchStudyImpl value, $Res Function(_$ResearchStudyImpl) then) =
+      __$$ResearchStudyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      ResearchStudyStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? category,
@@ -788,11 +768,9 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
       Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<ContactDetail>? contact,
       Reference? sponsor,
@@ -852,11 +830,11 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyCopyWithImpl<$Res>
-    extends _$ResearchStudyCopyWithImpl<$Res, _$_ResearchStudy>
-    implements _$$_ResearchStudyCopyWith<$Res> {
-  __$$_ResearchStudyCopyWithImpl(
-      _$_ResearchStudy _value, $Res Function(_$_ResearchStudy) _then)
+class __$$ResearchStudyImplCopyWithImpl<$Res>
+    extends _$ResearchStudyCopyWithImpl<$Res, _$ResearchStudyImpl>
+    implements _$$ResearchStudyImplCopyWith<$Res> {
+  __$$ResearchStudyImplCopyWithImpl(
+      _$ResearchStudyImpl _value, $Res Function(_$ResearchStudyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -919,7 +897,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
     Object? result = freezed,
     Object? webLocation = freezed,
   }) {
-    return _then(_$_ResearchStudy(
+    return _then(_$ResearchStudyImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1150,47 +1128,37 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudy extends _ResearchStudy {
-  _$_ResearchStudy(
+class _$ResearchStudyImpl extends _ResearchStudy {
+  _$ResearchStudyImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          this.resourceType = R5ResourceType.ResearchStudy,
+      this.resourceType = R5ResourceType.ResearchStudy,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.label,
       this.protocol,
       this.partOf,
       this.relatedArtifact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.primaryPurposeType,
       this.phase,
       this.category,
@@ -1199,11 +1167,9 @@ class _$_ResearchStudy extends _ResearchStudy {
       this.keyword,
       this.location,
       this.descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          this.descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') this.descriptionSummaryElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.period,
       this.contact,
       this.sponsor,
@@ -1223,8 +1189,8 @@ class _$_ResearchStudy extends _ResearchStudy {
       this.webLocation})
       : super._();
 
-  factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyFromJson(json);
+  factory _$ResearchStudyImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
@@ -1358,10 +1324,10 @@ class _$_ResearchStudy extends _ResearchStudy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudy &&
+            other is _$ResearchStudyImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -1516,12 +1482,12 @@ class _$_ResearchStudy extends _ResearchStudy {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyCopyWith<_$_ResearchStudy> get copyWith =>
-      __$$_ResearchStudyCopyWithImpl<_$_ResearchStudy>(this, _$identity);
+  _$$ResearchStudyImplCopyWith<_$ResearchStudyImpl> get copyWith =>
+      __$$ResearchStudyImplCopyWithImpl<_$ResearchStudyImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyToJson(
+    return _$$ResearchStudyImplToJson(
       this,
     );
   }
@@ -1530,44 +1496,35 @@ class _$_ResearchStudy extends _ResearchStudy {
 abstract class _ResearchStudy extends ResearchStudy {
   factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final List<ResearchStudyLabel>? label,
       final List<Reference>? protocol,
       final List<Reference>? partOf,
       final List<RelatedArtifact>? relatedArtifact,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          final ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final ResearchStudyStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? primaryPurposeType,
       final CodeableConcept? phase,
       final List<CodeableConcept>? category,
@@ -1577,10 +1534,9 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<CodeableConcept>? location,
       final Markdown? descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
-          final Element? descriptionSummaryElement,
+      final Element? descriptionSummaryElement,
       final Markdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? period,
       final List<ContactDetail>? contact,
       final Reference? sponsor,
@@ -1597,11 +1553,11 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<ResearchStudyObjective>? objective,
       final List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
       final List<Reference>? result,
-      final List<ResearchStudyWebLocation>? webLocation}) = _$_ResearchStudy;
+      final List<ResearchStudyWebLocation>? webLocation}) = _$ResearchStudyImpl;
   _ResearchStudy._() : super._();
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudy.fromJson;
+      _$ResearchStudyImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
@@ -1730,7 +1686,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<ResearchStudyWebLocation>? get webLocation;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyCopyWith<_$_ResearchStudy> get copyWith =>
+  _$$ResearchStudyImplCopyWith<_$ResearchStudyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1848,11 +1804,11 @@ class _$ResearchStudyLabelCopyWithImpl<$Res, $Val extends ResearchStudyLabel>
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyLabelCopyWith<$Res>
+abstract class _$$ResearchStudyLabelImplCopyWith<$Res>
     implements $ResearchStudyLabelCopyWith<$Res> {
-  factory _$$_ResearchStudyLabelCopyWith(_$_ResearchStudyLabel value,
-          $Res Function(_$_ResearchStudyLabel) then) =
-      __$$_ResearchStudyLabelCopyWithImpl<$Res>;
+  factory _$$ResearchStudyLabelImplCopyWith(_$ResearchStudyLabelImpl value,
+          $Res Function(_$ResearchStudyLabelImpl) then) =
+      __$$ResearchStudyLabelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1870,11 +1826,11 @@ abstract class _$$_ResearchStudyLabelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyLabelCopyWithImpl<$Res>
-    extends _$ResearchStudyLabelCopyWithImpl<$Res, _$_ResearchStudyLabel>
-    implements _$$_ResearchStudyLabelCopyWith<$Res> {
-  __$$_ResearchStudyLabelCopyWithImpl(
-      _$_ResearchStudyLabel _value, $Res Function(_$_ResearchStudyLabel) _then)
+class __$$ResearchStudyLabelImplCopyWithImpl<$Res>
+    extends _$ResearchStudyLabelCopyWithImpl<$Res, _$ResearchStudyLabelImpl>
+    implements _$$ResearchStudyLabelImplCopyWith<$Res> {
+  __$$ResearchStudyLabelImplCopyWithImpl(_$ResearchStudyLabelImpl _value,
+      $Res Function(_$ResearchStudyLabelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1887,7 +1843,7 @@ class __$$_ResearchStudyLabelCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_$_ResearchStudyLabel(
+    return _then(_$ResearchStudyLabelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1918,8 +1874,8 @@ class __$$_ResearchStudyLabelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyLabel extends _ResearchStudyLabel {
-  _$_ResearchStudyLabel(
+class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
+  _$ResearchStudyLabelImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1928,8 +1884,8 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyLabelFromJson(json);
+  factory _$ResearchStudyLabelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyLabelImplFromJson(json);
 
   @override
   final String? id;
@@ -1952,10 +1908,10 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyLabel &&
+            other is _$ResearchStudyLabelImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1981,13 +1937,13 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyLabelCopyWith<_$_ResearchStudyLabel> get copyWith =>
-      __$$_ResearchStudyLabelCopyWithImpl<_$_ResearchStudyLabel>(
+  _$$ResearchStudyLabelImplCopyWith<_$ResearchStudyLabelImpl> get copyWith =>
+      __$$ResearchStudyLabelImplCopyWithImpl<_$ResearchStudyLabelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyLabelToJson(
+    return _$$ResearchStudyLabelImplToJson(
       this,
     );
   }
@@ -2001,11 +1957,11 @@ abstract class _ResearchStudyLabel extends ResearchStudyLabel {
           final CodeableConcept? type,
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
-      _$_ResearchStudyLabel;
+      _$ResearchStudyLabelImpl;
   _ResearchStudyLabel._() : super._();
 
   factory _ResearchStudyLabel.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyLabel.fromJson;
+      _$ResearchStudyLabelImpl.fromJson;
 
   @override
   String? get id;
@@ -2023,7 +1979,7 @@ abstract class _ResearchStudyLabel extends ResearchStudyLabel {
   Element? get valueElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyLabelCopyWith<_$_ResearchStudyLabel> get copyWith =>
+  _$$ResearchStudyLabelImplCopyWith<_$ResearchStudyLabelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2148,11 +2104,11 @@ class _$ResearchStudyFocusCopyWithImpl<$Res, $Val extends ResearchStudyFocus>
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyFocusCopyWith<$Res>
+abstract class _$$ResearchStudyFocusImplCopyWith<$Res>
     implements $ResearchStudyFocusCopyWith<$Res> {
-  factory _$$_ResearchStudyFocusCopyWith(_$_ResearchStudyFocus value,
-          $Res Function(_$_ResearchStudyFocus) then) =
-      __$$_ResearchStudyFocusCopyWithImpl<$Res>;
+  factory _$$ResearchStudyFocusImplCopyWith(_$ResearchStudyFocusImpl value,
+          $Res Function(_$ResearchStudyFocusImpl) then) =
+      __$$ResearchStudyFocusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2171,11 +2127,11 @@ abstract class _$$_ResearchStudyFocusCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyFocusCopyWithImpl<$Res>
-    extends _$ResearchStudyFocusCopyWithImpl<$Res, _$_ResearchStudyFocus>
-    implements _$$_ResearchStudyFocusCopyWith<$Res> {
-  __$$_ResearchStudyFocusCopyWithImpl(
-      _$_ResearchStudyFocus _value, $Res Function(_$_ResearchStudyFocus) _then)
+class __$$ResearchStudyFocusImplCopyWithImpl<$Res>
+    extends _$ResearchStudyFocusCopyWithImpl<$Res, _$ResearchStudyFocusImpl>
+    implements _$$ResearchStudyFocusImplCopyWith<$Res> {
+  __$$ResearchStudyFocusImplCopyWithImpl(_$ResearchStudyFocusImpl _value,
+      $Res Function(_$ResearchStudyFocusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2189,7 +2145,7 @@ class __$$_ResearchStudyFocusCopyWithImpl<$Res>
     Object? factor = freezed,
     Object? factorElement = freezed,
   }) {
-    return _then(_$_ResearchStudyFocus(
+    return _then(_$ResearchStudyFocusImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2224,8 +2180,8 @@ class __$$_ResearchStudyFocusCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyFocus extends _ResearchStudyFocus {
-  _$_ResearchStudyFocus(
+class _$ResearchStudyFocusImpl extends _ResearchStudyFocus {
+  _$ResearchStudyFocusImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2235,8 +2191,8 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
       @JsonKey(name: '_factor') this.factorElement})
       : super._();
 
-  factory _$_ResearchStudyFocus.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyFocusFromJson(json);
+  factory _$ResearchStudyFocusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyFocusImplFromJson(json);
 
   @override
   final String? id;
@@ -2261,10 +2217,10 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyFocus &&
+            other is _$ResearchStudyFocusImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2293,13 +2249,13 @@ class _$_ResearchStudyFocus extends _ResearchStudyFocus {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyFocusCopyWith<_$_ResearchStudyFocus> get copyWith =>
-      __$$_ResearchStudyFocusCopyWithImpl<_$_ResearchStudyFocus>(
+  _$$ResearchStudyFocusImplCopyWith<_$ResearchStudyFocusImpl> get copyWith =>
+      __$$ResearchStudyFocusImplCopyWithImpl<_$ResearchStudyFocusImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyFocusToJson(
+    return _$$ResearchStudyFocusImplToJson(
       this,
     );
   }
@@ -2314,11 +2270,11 @@ abstract class _ResearchStudyFocus extends ResearchStudyFocus {
           final List<CodeableConcept>? focusType,
           final Markdown? factor,
           @JsonKey(name: '_factor') final Element? factorElement}) =
-      _$_ResearchStudyFocus;
+      _$ResearchStudyFocusImpl;
   _ResearchStudyFocus._() : super._();
 
   factory _ResearchStudyFocus.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyFocus.fromJson;
+      _$ResearchStudyFocusImpl.fromJson;
 
   @override
   String? get id;
@@ -2338,7 +2294,7 @@ abstract class _ResearchStudyFocus extends ResearchStudyFocus {
   Element? get factorElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyFocusCopyWith<_$_ResearchStudyFocus> get copyWith =>
+  _$$ResearchStudyFocusImplCopyWith<_$ResearchStudyFocusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2439,12 +2395,12 @@ class _$ResearchStudyClassificationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyClassificationCopyWith<$Res>
+abstract class _$$ResearchStudyClassificationImplCopyWith<$Res>
     implements $ResearchStudyClassificationCopyWith<$Res> {
-  factory _$$_ResearchStudyClassificationCopyWith(
-          _$_ResearchStudyClassification value,
-          $Res Function(_$_ResearchStudyClassification) then) =
-      __$$_ResearchStudyClassificationCopyWithImpl<$Res>;
+  factory _$$ResearchStudyClassificationImplCopyWith(
+          _$ResearchStudyClassificationImpl value,
+          $Res Function(_$ResearchStudyClassificationImpl) then) =
+      __$$ResearchStudyClassificationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2459,13 +2415,13 @@ abstract class _$$_ResearchStudyClassificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
+class __$$ResearchStudyClassificationImplCopyWithImpl<$Res>
     extends _$ResearchStudyClassificationCopyWithImpl<$Res,
-        _$_ResearchStudyClassification>
-    implements _$$_ResearchStudyClassificationCopyWith<$Res> {
-  __$$_ResearchStudyClassificationCopyWithImpl(
-      _$_ResearchStudyClassification _value,
-      $Res Function(_$_ResearchStudyClassification) _then)
+        _$ResearchStudyClassificationImpl>
+    implements _$$ResearchStudyClassificationImplCopyWith<$Res> {
+  __$$ResearchStudyClassificationImplCopyWithImpl(
+      _$ResearchStudyClassificationImpl _value,
+      $Res Function(_$ResearchStudyClassificationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2477,7 +2433,7 @@ class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
     Object? type = freezed,
     Object? classifier = freezed,
   }) {
-    return _then(_$_ResearchStudyClassification(
+    return _then(_$ResearchStudyClassificationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2504,8 +2460,8 @@ class __$$_ResearchStudyClassificationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyClassification extends _ResearchStudyClassification {
-  _$_ResearchStudyClassification(
+class _$ResearchStudyClassificationImpl extends _ResearchStudyClassification {
+  _$ResearchStudyClassificationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2513,8 +2469,9 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
       this.classifier})
       : super._();
 
-  factory _$_ResearchStudyClassification.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyClassificationFromJson(json);
+  factory _$ResearchStudyClassificationImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ResearchStudyClassificationImplFromJson(json);
 
   @override
   final String? id;
@@ -2534,10 +2491,10 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyClassification &&
+            other is _$ResearchStudyClassificationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2561,13 +2518,13 @@ class _$_ResearchStudyClassification extends _ResearchStudyClassification {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyClassificationCopyWith<_$_ResearchStudyClassification>
-      get copyWith => __$$_ResearchStudyClassificationCopyWithImpl<
-          _$_ResearchStudyClassification>(this, _$identity);
+  _$$ResearchStudyClassificationImplCopyWith<_$ResearchStudyClassificationImpl>
+      get copyWith => __$$ResearchStudyClassificationImplCopyWithImpl<
+          _$ResearchStudyClassificationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyClassificationToJson(
+    return _$$ResearchStudyClassificationImplToJson(
       this,
     );
   }
@@ -2581,11 +2538,11 @@ abstract class _ResearchStudyClassification
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
           final List<CodeableConcept>? classifier}) =
-      _$_ResearchStudyClassification;
+      _$ResearchStudyClassificationImpl;
   _ResearchStudyClassification._() : super._();
 
   factory _ResearchStudyClassification.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyClassification.fromJson;
+      _$ResearchStudyClassificationImpl.fromJson;
 
   @override
   String? get id;
@@ -2600,7 +2557,7 @@ abstract class _ResearchStudyClassification
   List<CodeableConcept>? get classifier;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyClassificationCopyWith<_$_ResearchStudyClassification>
+  _$$ResearchStudyClassificationImplCopyWith<_$ResearchStudyClassificationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2745,12 +2702,12 @@ class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyAssociatedPartyCopyWith<$Res>
+abstract class _$$ResearchStudyAssociatedPartyImplCopyWith<$Res>
     implements $ResearchStudyAssociatedPartyCopyWith<$Res> {
-  factory _$$_ResearchStudyAssociatedPartyCopyWith(
-          _$_ResearchStudyAssociatedParty value,
-          $Res Function(_$_ResearchStudyAssociatedParty) then) =
-      __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>;
+  factory _$$ResearchStudyAssociatedPartyImplCopyWith(
+          _$ResearchStudyAssociatedPartyImpl value,
+          $Res Function(_$ResearchStudyAssociatedPartyImpl) then) =
+      __$$ResearchStudyAssociatedPartyImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2772,13 +2729,13 @@ abstract class _$$_ResearchStudyAssociatedPartyCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
+class __$$ResearchStudyAssociatedPartyImplCopyWithImpl<$Res>
     extends _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
-        _$_ResearchStudyAssociatedParty>
-    implements _$$_ResearchStudyAssociatedPartyCopyWith<$Res> {
-  __$$_ResearchStudyAssociatedPartyCopyWithImpl(
-      _$_ResearchStudyAssociatedParty _value,
-      $Res Function(_$_ResearchStudyAssociatedParty) _then)
+        _$ResearchStudyAssociatedPartyImpl>
+    implements _$$ResearchStudyAssociatedPartyImplCopyWith<$Res> {
+  __$$ResearchStudyAssociatedPartyImplCopyWithImpl(
+      _$ResearchStudyAssociatedPartyImpl _value,
+      $Res Function(_$ResearchStudyAssociatedPartyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2793,7 +2750,7 @@ class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
     Object? classifier = freezed,
     Object? party = freezed,
   }) {
-    return _then(_$_ResearchStudyAssociatedParty(
+    return _then(_$ResearchStudyAssociatedPartyImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2832,8 +2789,8 @@ class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
-  _$_ResearchStudyAssociatedParty(
+class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
+  _$ResearchStudyAssociatedPartyImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -2844,8 +2801,9 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
       this.party})
       : super._();
 
-  factory _$_ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyAssociatedPartyFromJson(json);
+  factory _$ResearchStudyAssociatedPartyImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ResearchStudyAssociatedPartyImplFromJson(json);
 
   @override
   final String? id;
@@ -2872,10 +2830,10 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyAssociatedParty &&
+            other is _$ResearchStudyAssociatedPartyImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2906,13 +2864,14 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyAssociatedPartyCopyWith<_$_ResearchStudyAssociatedParty>
-      get copyWith => __$$_ResearchStudyAssociatedPartyCopyWithImpl<
-          _$_ResearchStudyAssociatedParty>(this, _$identity);
+  _$$ResearchStudyAssociatedPartyImplCopyWith<
+          _$ResearchStudyAssociatedPartyImpl>
+      get copyWith => __$$ResearchStudyAssociatedPartyImplCopyWithImpl<
+          _$ResearchStudyAssociatedPartyImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyAssociatedPartyToJson(
+    return _$$ResearchStudyAssociatedPartyImplToJson(
       this,
     );
   }
@@ -2928,11 +2887,11 @@ abstract class _ResearchStudyAssociatedParty
       @JsonKey(name: '_name') final Element? nameElement,
       required final CodeableConcept role,
       final List<CodeableConcept>? classifier,
-      final Reference? party}) = _$_ResearchStudyAssociatedParty;
+      final Reference? party}) = _$ResearchStudyAssociatedPartyImpl;
   _ResearchStudyAssociatedParty._() : super._();
 
   factory _ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyAssociatedParty.fromJson;
+      _$ResearchStudyAssociatedPartyImpl.fromJson;
 
   @override
   String? get id;
@@ -2954,7 +2913,8 @@ abstract class _ResearchStudyAssociatedParty
   Reference? get party;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyAssociatedPartyCopyWith<_$_ResearchStudyAssociatedParty>
+  _$$ResearchStudyAssociatedPartyImplCopyWith<
+          _$ResearchStudyAssociatedPartyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3086,11 +3046,12 @@ class _$ResearchStudyStatusDateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyStatusDateCopyWith<$Res>
+abstract class _$$ResearchStudyStatusDateImplCopyWith<$Res>
     implements $ResearchStudyStatusDateCopyWith<$Res> {
-  factory _$$_ResearchStudyStatusDateCopyWith(_$_ResearchStudyStatusDate value,
-          $Res Function(_$_ResearchStudyStatusDate) then) =
-      __$$_ResearchStudyStatusDateCopyWithImpl<$Res>;
+  factory _$$ResearchStudyStatusDateImplCopyWith(
+          _$ResearchStudyStatusDateImpl value,
+          $Res Function(_$ResearchStudyStatusDateImpl) then) =
+      __$$ResearchStudyStatusDateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3111,12 +3072,13 @@ abstract class _$$_ResearchStudyStatusDateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyStatusDateCopyWithImpl<$Res>
+class __$$ResearchStudyStatusDateImplCopyWithImpl<$Res>
     extends _$ResearchStudyStatusDateCopyWithImpl<$Res,
-        _$_ResearchStudyStatusDate>
-    implements _$$_ResearchStudyStatusDateCopyWith<$Res> {
-  __$$_ResearchStudyStatusDateCopyWithImpl(_$_ResearchStudyStatusDate _value,
-      $Res Function(_$_ResearchStudyStatusDate) _then)
+        _$ResearchStudyStatusDateImpl>
+    implements _$$ResearchStudyStatusDateImplCopyWith<$Res> {
+  __$$ResearchStudyStatusDateImplCopyWithImpl(
+      _$ResearchStudyStatusDateImpl _value,
+      $Res Function(_$ResearchStudyStatusDateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3130,7 +3092,7 @@ class __$$_ResearchStudyStatusDateCopyWithImpl<$Res>
     Object? actualElement = freezed,
     Object? period = null,
   }) {
-    return _then(_$_ResearchStudyStatusDate(
+    return _then(_$ResearchStudyStatusDateImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3165,8 +3127,8 @@ class __$$_ResearchStudyStatusDateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
-  _$_ResearchStudyStatusDate(
+class _$ResearchStudyStatusDateImpl extends _ResearchStudyStatusDate {
+  _$ResearchStudyStatusDateImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3176,8 +3138,8 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
       required this.period})
       : super._();
 
-  factory _$_ResearchStudyStatusDate.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyStatusDateFromJson(json);
+  factory _$ResearchStudyStatusDateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyStatusDateImplFromJson(json);
 
   @override
   final String? id;
@@ -3202,10 +3164,10 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyStatusDate &&
+            other is _$ResearchStudyStatusDateImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3234,14 +3196,13 @@ class _$_ResearchStudyStatusDate extends _ResearchStudyStatusDate {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyStatusDateCopyWith<_$_ResearchStudyStatusDate>
-      get copyWith =>
-          __$$_ResearchStudyStatusDateCopyWithImpl<_$_ResearchStudyStatusDate>(
-              this, _$identity);
+  _$$ResearchStudyStatusDateImplCopyWith<_$ResearchStudyStatusDateImpl>
+      get copyWith => __$$ResearchStudyStatusDateImplCopyWithImpl<
+          _$ResearchStudyStatusDateImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyStatusDateToJson(
+    return _$$ResearchStudyStatusDateImplToJson(
       this,
     );
   }
@@ -3255,11 +3216,11 @@ abstract class _ResearchStudyStatusDate extends ResearchStudyStatusDate {
       required final CodeableConcept activity,
       final Boolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
-      required final Period period}) = _$_ResearchStudyStatusDate;
+      required final Period period}) = _$ResearchStudyStatusDateImpl;
   _ResearchStudyStatusDate._() : super._();
 
   factory _ResearchStudyStatusDate.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyStatusDate.fromJson;
+      _$ResearchStudyStatusDateImpl.fromJson;
 
   @override
   String? get id;
@@ -3279,7 +3240,7 @@ abstract class _ResearchStudyStatusDate extends ResearchStudyStatusDate {
   Period get period;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyStatusDateCopyWith<_$_ResearchStudyStatusDate>
+  _$$ResearchStudyStatusDateImplCopyWith<_$ResearchStudyStatusDateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3447,12 +3408,12 @@ class _$ResearchStudyRecruitmentCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyRecruitmentCopyWith<$Res>
+abstract class _$$ResearchStudyRecruitmentImplCopyWith<$Res>
     implements $ResearchStudyRecruitmentCopyWith<$Res> {
-  factory _$$_ResearchStudyRecruitmentCopyWith(
-          _$_ResearchStudyRecruitment value,
-          $Res Function(_$_ResearchStudyRecruitment) then) =
-      __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>;
+  factory _$$ResearchStudyRecruitmentImplCopyWith(
+          _$ResearchStudyRecruitmentImpl value,
+          $Res Function(_$ResearchStudyRecruitmentImpl) then) =
+      __$$ResearchStudyRecruitmentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3477,12 +3438,13 @@ abstract class _$$_ResearchStudyRecruitmentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
+class __$$ResearchStudyRecruitmentImplCopyWithImpl<$Res>
     extends _$ResearchStudyRecruitmentCopyWithImpl<$Res,
-        _$_ResearchStudyRecruitment>
-    implements _$$_ResearchStudyRecruitmentCopyWith<$Res> {
-  __$$_ResearchStudyRecruitmentCopyWithImpl(_$_ResearchStudyRecruitment _value,
-      $Res Function(_$_ResearchStudyRecruitment) _then)
+        _$ResearchStudyRecruitmentImpl>
+    implements _$$ResearchStudyRecruitmentImplCopyWith<$Res> {
+  __$$ResearchStudyRecruitmentImplCopyWithImpl(
+      _$ResearchStudyRecruitmentImpl _value,
+      $Res Function(_$ResearchStudyRecruitmentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3498,7 +3460,7 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
     Object? eligibility = freezed,
     Object? actualGroup = freezed,
   }) {
-    return _then(_$_ResearchStudyRecruitment(
+    return _then(_$ResearchStudyRecruitmentImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3541,8 +3503,8 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
-  _$_ResearchStudyRecruitment(
+class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
+  _$ResearchStudyRecruitmentImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3554,8 +3516,8 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
       this.actualGroup})
       : super._();
 
-  factory _$_ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyRecruitmentFromJson(json);
+  factory _$ResearchStudyRecruitmentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyRecruitmentImplFromJson(json);
 
   @override
   final String? id;
@@ -3585,10 +3547,10 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyRecruitment &&
+            other is _$ResearchStudyRecruitmentImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3625,13 +3587,13 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyRecruitmentCopyWith<_$_ResearchStudyRecruitment>
-      get copyWith => __$$_ResearchStudyRecruitmentCopyWithImpl<
-          _$_ResearchStudyRecruitment>(this, _$identity);
+  _$$ResearchStudyRecruitmentImplCopyWith<_$ResearchStudyRecruitmentImpl>
+      get copyWith => __$$ResearchStudyRecruitmentImplCopyWithImpl<
+          _$ResearchStudyRecruitmentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyRecruitmentToJson(
+    return _$$ResearchStudyRecruitmentImplToJson(
       this,
     );
   }
@@ -3647,11 +3609,11 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
       final UnsignedInt? actualNumber,
       @JsonKey(name: '_actualNumber') final Element? actualNumberElement,
       final Reference? eligibility,
-      final Reference? actualGroup}) = _$_ResearchStudyRecruitment;
+      final Reference? actualGroup}) = _$ResearchStudyRecruitmentImpl;
   _ResearchStudyRecruitment._() : super._();
 
   factory _ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyRecruitment.fromJson;
+      _$ResearchStudyRecruitmentImpl.fromJson;
 
   @override
   String? get id;
@@ -3676,7 +3638,7 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
   Reference? get actualGroup;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyRecruitmentCopyWith<_$_ResearchStudyRecruitment>
+  _$$ResearchStudyRecruitmentImplCopyWith<_$ResearchStudyRecruitmentImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3901,12 +3863,12 @@ class _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyComparisonGroupCopyWith<$Res>
+abstract class _$$ResearchStudyComparisonGroupImplCopyWith<$Res>
     implements $ResearchStudyComparisonGroupCopyWith<$Res> {
-  factory _$$_ResearchStudyComparisonGroupCopyWith(
-          _$_ResearchStudyComparisonGroup value,
-          $Res Function(_$_ResearchStudyComparisonGroup) then) =
-      __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>;
+  factory _$$ResearchStudyComparisonGroupImplCopyWith(
+          _$ResearchStudyComparisonGroupImpl value,
+          $Res Function(_$ResearchStudyComparisonGroupImpl) then) =
+      __$$ResearchStudyComparisonGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3939,13 +3901,13 @@ abstract class _$$_ResearchStudyComparisonGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
+class __$$ResearchStudyComparisonGroupImplCopyWithImpl<$Res>
     extends _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
-        _$_ResearchStudyComparisonGroup>
-    implements _$$_ResearchStudyComparisonGroupCopyWith<$Res> {
-  __$$_ResearchStudyComparisonGroupCopyWithImpl(
-      _$_ResearchStudyComparisonGroup _value,
-      $Res Function(_$_ResearchStudyComparisonGroup) _then)
+        _$ResearchStudyComparisonGroupImpl>
+    implements _$$ResearchStudyComparisonGroupImplCopyWith<$Res> {
+  __$$ResearchStudyComparisonGroupImplCopyWithImpl(
+      _$ResearchStudyComparisonGroupImpl _value,
+      $Res Function(_$ResearchStudyComparisonGroupImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3965,7 +3927,7 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
     Object? intendedExposure = freezed,
     Object? observedGroup = freezed,
   }) {
-    return _then(_$_ResearchStudyComparisonGroup(
+    return _then(_$ResearchStudyComparisonGroupImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4024,8 +3986,8 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
-  _$_ResearchStudyComparisonGroup(
+class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
+  _$ResearchStudyComparisonGroupImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4041,8 +4003,9 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
       this.observedGroup})
       : super._();
 
-  factory _$_ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyComparisonGroupFromJson(json);
+  factory _$ResearchStudyComparisonGroupImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ResearchStudyComparisonGroupImplFromJson(json);
 
   @override
   final String? id;
@@ -4081,10 +4044,10 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyComparisonGroup &&
+            other is _$ResearchStudyComparisonGroupImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4131,13 +4094,14 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyComparisonGroupCopyWith<_$_ResearchStudyComparisonGroup>
-      get copyWith => __$$_ResearchStudyComparisonGroupCopyWithImpl<
-          _$_ResearchStudyComparisonGroup>(this, _$identity);
+  _$$ResearchStudyComparisonGroupImplCopyWith<
+          _$ResearchStudyComparisonGroupImpl>
+      get copyWith => __$$ResearchStudyComparisonGroupImplCopyWithImpl<
+          _$ResearchStudyComparisonGroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyComparisonGroupToJson(
+    return _$$ResearchStudyComparisonGroupImplToJson(
       this,
     );
   }
@@ -4158,11 +4122,11 @@ abstract class _ResearchStudyComparisonGroup
       final Markdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Reference>? intendedExposure,
-      final Reference? observedGroup}) = _$_ResearchStudyComparisonGroup;
+      final Reference? observedGroup}) = _$ResearchStudyComparisonGroupImpl;
   _ResearchStudyComparisonGroup._() : super._();
 
   factory _ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyComparisonGroup.fromJson;
+      _$ResearchStudyComparisonGroupImpl.fromJson;
 
   @override
   String? get id;
@@ -4196,7 +4160,8 @@ abstract class _ResearchStudyComparisonGroup
   Reference? get observedGroup;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyComparisonGroupCopyWith<_$_ResearchStudyComparisonGroup>
+  _$$ResearchStudyComparisonGroupImplCopyWith<
+          _$ResearchStudyComparisonGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4344,11 +4309,12 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyObjectiveCopyWith<$Res>
+abstract class _$$ResearchStudyObjectiveImplCopyWith<$Res>
     implements $ResearchStudyObjectiveCopyWith<$Res> {
-  factory _$$_ResearchStudyObjectiveCopyWith(_$_ResearchStudyObjective value,
-          $Res Function(_$_ResearchStudyObjective) then) =
-      __$$_ResearchStudyObjectiveCopyWithImpl<$Res>;
+  factory _$$ResearchStudyObjectiveImplCopyWith(
+          _$ResearchStudyObjectiveImpl value,
+          $Res Function(_$ResearchStudyObjectiveImpl) then) =
+      __$$ResearchStudyObjectiveImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4370,12 +4336,13 @@ abstract class _$$_ResearchStudyObjectiveCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
+class __$$ResearchStudyObjectiveImplCopyWithImpl<$Res>
     extends _$ResearchStudyObjectiveCopyWithImpl<$Res,
-        _$_ResearchStudyObjective>
-    implements _$$_ResearchStudyObjectiveCopyWith<$Res> {
-  __$$_ResearchStudyObjectiveCopyWithImpl(_$_ResearchStudyObjective _value,
-      $Res Function(_$_ResearchStudyObjective) _then)
+        _$ResearchStudyObjectiveImpl>
+    implements _$$ResearchStudyObjectiveImplCopyWith<$Res> {
+  __$$ResearchStudyObjectiveImplCopyWithImpl(
+      _$ResearchStudyObjectiveImpl _value,
+      $Res Function(_$ResearchStudyObjectiveImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4390,7 +4357,7 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
   }) {
-    return _then(_$_ResearchStudyObjective(
+    return _then(_$ResearchStudyObjectiveImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4429,8 +4396,8 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyObjective extends _ResearchStudyObjective {
-  _$_ResearchStudyObjective(
+class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
+  _$ResearchStudyObjectiveImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4441,8 +4408,8 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
       @JsonKey(name: '_description') this.descriptionElement})
       : super._();
 
-  factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyObjectiveFromJson(json);
+  factory _$ResearchStudyObjectiveImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyObjectiveImplFromJson(json);
 
   @override
   final String? id;
@@ -4470,10 +4437,10 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyObjective &&
+            other is _$ResearchStudyObjectiveImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4505,13 +4472,13 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyObjectiveCopyWith<_$_ResearchStudyObjective> get copyWith =>
-      __$$_ResearchStudyObjectiveCopyWithImpl<_$_ResearchStudyObjective>(
-          this, _$identity);
+  _$$ResearchStudyObjectiveImplCopyWith<_$ResearchStudyObjectiveImpl>
+      get copyWith => __$$ResearchStudyObjectiveImplCopyWithImpl<
+          _$ResearchStudyObjectiveImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyObjectiveToJson(
+    return _$$ResearchStudyObjectiveImplToJson(
       this,
     );
   }
@@ -4527,11 +4494,11 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
           final CodeableConcept? type,
           final Markdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
-      _$_ResearchStudyObjective;
+      _$ResearchStudyObjectiveImpl;
   _ResearchStudyObjective._() : super._();
 
   factory _ResearchStudyObjective.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyObjective.fromJson;
+      _$ResearchStudyObjectiveImpl.fromJson;
 
   @override
   String? get id;
@@ -4554,8 +4521,8 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   Element? get descriptionElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyObjectiveCopyWith<_$_ResearchStudyObjective> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResearchStudyObjectiveImplCopyWith<_$ResearchStudyObjectiveImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 ResearchStudyOutcomeMeasure _$ResearchStudyOutcomeMeasureFromJson(
@@ -4711,12 +4678,12 @@ class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyOutcomeMeasureCopyWith<$Res>
+abstract class _$$ResearchStudyOutcomeMeasureImplCopyWith<$Res>
     implements $ResearchStudyOutcomeMeasureCopyWith<$Res> {
-  factory _$$_ResearchStudyOutcomeMeasureCopyWith(
-          _$_ResearchStudyOutcomeMeasure value,
-          $Res Function(_$_ResearchStudyOutcomeMeasure) then) =
-      __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>;
+  factory _$$ResearchStudyOutcomeMeasureImplCopyWith(
+          _$ResearchStudyOutcomeMeasureImpl value,
+          $Res Function(_$ResearchStudyOutcomeMeasureImpl) then) =
+      __$$ResearchStudyOutcomeMeasureImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4739,13 +4706,13 @@ abstract class _$$_ResearchStudyOutcomeMeasureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
+class __$$ResearchStudyOutcomeMeasureImplCopyWithImpl<$Res>
     extends _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
-        _$_ResearchStudyOutcomeMeasure>
-    implements _$$_ResearchStudyOutcomeMeasureCopyWith<$Res> {
-  __$$_ResearchStudyOutcomeMeasureCopyWithImpl(
-      _$_ResearchStudyOutcomeMeasure _value,
-      $Res Function(_$_ResearchStudyOutcomeMeasure) _then)
+        _$ResearchStudyOutcomeMeasureImpl>
+    implements _$$ResearchStudyOutcomeMeasureImplCopyWith<$Res> {
+  __$$ResearchStudyOutcomeMeasureImplCopyWithImpl(
+      _$ResearchStudyOutcomeMeasureImpl _value,
+      $Res Function(_$ResearchStudyOutcomeMeasureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4761,7 +4728,7 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? reference = freezed,
   }) {
-    return _then(_$_ResearchStudyOutcomeMeasure(
+    return _then(_$ResearchStudyOutcomeMeasureImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4804,8 +4771,8 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
-  _$_ResearchStudyOutcomeMeasure(
+class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
+  _$ResearchStudyOutcomeMeasureImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4817,8 +4784,9 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
       this.reference})
       : super._();
 
-  factory _$_ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyOutcomeMeasureFromJson(json);
+  factory _$ResearchStudyOutcomeMeasureImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ResearchStudyOutcomeMeasureImplFromJson(json);
 
   @override
   final String? id;
@@ -4848,10 +4816,10 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyOutcomeMeasure &&
+            other is _$ResearchStudyOutcomeMeasureImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4886,13 +4854,13 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyOutcomeMeasureCopyWith<_$_ResearchStudyOutcomeMeasure>
-      get copyWith => __$$_ResearchStudyOutcomeMeasureCopyWithImpl<
-          _$_ResearchStudyOutcomeMeasure>(this, _$identity);
+  _$$ResearchStudyOutcomeMeasureImplCopyWith<_$ResearchStudyOutcomeMeasureImpl>
+      get copyWith => __$$ResearchStudyOutcomeMeasureImplCopyWithImpl<
+          _$ResearchStudyOutcomeMeasureImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyOutcomeMeasureToJson(
+    return _$$ResearchStudyOutcomeMeasureImplToJson(
       this,
     );
   }
@@ -4909,11 +4877,11 @@ abstract class _ResearchStudyOutcomeMeasure
       final List<CodeableConcept>? type,
       final Markdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final Reference? reference}) = _$_ResearchStudyOutcomeMeasure;
+      final Reference? reference}) = _$ResearchStudyOutcomeMeasureImpl;
   _ResearchStudyOutcomeMeasure._() : super._();
 
   factory _ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyOutcomeMeasure.fromJson;
+      _$ResearchStudyOutcomeMeasureImpl.fromJson;
 
   @override
   String? get id;
@@ -4938,7 +4906,7 @@ abstract class _ResearchStudyOutcomeMeasure
   Reference? get reference;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyOutcomeMeasureCopyWith<_$_ResearchStudyOutcomeMeasure>
+  _$$ResearchStudyOutcomeMeasureImplCopyWith<_$ResearchStudyOutcomeMeasureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5058,12 +5026,12 @@ class _$ResearchStudyWebLocationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchStudyWebLocationCopyWith<$Res>
+abstract class _$$ResearchStudyWebLocationImplCopyWith<$Res>
     implements $ResearchStudyWebLocationCopyWith<$Res> {
-  factory _$$_ResearchStudyWebLocationCopyWith(
-          _$_ResearchStudyWebLocation value,
-          $Res Function(_$_ResearchStudyWebLocation) then) =
-      __$$_ResearchStudyWebLocationCopyWithImpl<$Res>;
+  factory _$$ResearchStudyWebLocationImplCopyWith(
+          _$ResearchStudyWebLocationImpl value,
+          $Res Function(_$ResearchStudyWebLocationImpl) then) =
+      __$$ResearchStudyWebLocationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5081,12 +5049,13 @@ abstract class _$$_ResearchStudyWebLocationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchStudyWebLocationCopyWithImpl<$Res>
+class __$$ResearchStudyWebLocationImplCopyWithImpl<$Res>
     extends _$ResearchStudyWebLocationCopyWithImpl<$Res,
-        _$_ResearchStudyWebLocation>
-    implements _$$_ResearchStudyWebLocationCopyWith<$Res> {
-  __$$_ResearchStudyWebLocationCopyWithImpl(_$_ResearchStudyWebLocation _value,
-      $Res Function(_$_ResearchStudyWebLocation) _then)
+        _$ResearchStudyWebLocationImpl>
+    implements _$$ResearchStudyWebLocationImplCopyWith<$Res> {
+  __$$ResearchStudyWebLocationImplCopyWithImpl(
+      _$ResearchStudyWebLocationImpl _value,
+      $Res Function(_$ResearchStudyWebLocationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5099,7 +5068,7 @@ class __$$_ResearchStudyWebLocationCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_$_ResearchStudyWebLocation(
+    return _then(_$ResearchStudyWebLocationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5130,8 +5099,8 @@ class __$$_ResearchStudyWebLocationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
-  _$_ResearchStudyWebLocation(
+class _$ResearchStudyWebLocationImpl extends _ResearchStudyWebLocation {
+  _$ResearchStudyWebLocationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5140,8 +5109,8 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
       @JsonKey(name: '_url') this.urlElement})
       : super._();
 
-  factory _$_ResearchStudyWebLocation.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchStudyWebLocationFromJson(json);
+  factory _$ResearchStudyWebLocationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchStudyWebLocationImplFromJson(json);
 
   @override
   final String? id;
@@ -5164,10 +5133,10 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchStudyWebLocation &&
+            other is _$ResearchStudyWebLocationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -5193,13 +5162,13 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchStudyWebLocationCopyWith<_$_ResearchStudyWebLocation>
-      get copyWith => __$$_ResearchStudyWebLocationCopyWithImpl<
-          _$_ResearchStudyWebLocation>(this, _$identity);
+  _$$ResearchStudyWebLocationImplCopyWith<_$ResearchStudyWebLocationImpl>
+      get copyWith => __$$ResearchStudyWebLocationImplCopyWithImpl<
+          _$ResearchStudyWebLocationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchStudyWebLocationToJson(
+    return _$$ResearchStudyWebLocationImplToJson(
       this,
     );
   }
@@ -5213,11 +5182,11 @@ abstract class _ResearchStudyWebLocation extends ResearchStudyWebLocation {
           final CodeableConcept? type,
           final FhirUri? url,
           @JsonKey(name: '_url') final Element? urlElement}) =
-      _$_ResearchStudyWebLocation;
+      _$ResearchStudyWebLocationImpl;
   _ResearchStudyWebLocation._() : super._();
 
   factory _ResearchStudyWebLocation.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyWebLocation.fromJson;
+      _$ResearchStudyWebLocationImpl.fromJson;
 
   @override
   String? get id;
@@ -5235,7 +5204,7 @@ abstract class _ResearchStudyWebLocation extends ResearchStudyWebLocation {
   Element? get urlElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchStudyWebLocationCopyWith<_$_ResearchStudyWebLocation>
+  _$$ResearchStudyWebLocationImplCopyWith<_$ResearchStudyWebLocationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5293,35 +5262,29 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      ResearchSubjectStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       Reference study,
       Reference subject,
       String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') Element? assignedArmElement,
       String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
+      @JsonKey(name: '_actualArm') Element? actualArmElement,
       Reference? consent});
 
   $MetaCopyWith<$Res>? get meta;
@@ -5596,44 +5559,38 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
 }
 
 /// @nodoc
-abstract class _$$_ResearchSubjectCopyWith<$Res>
+abstract class _$$ResearchSubjectImplCopyWith<$Res>
     implements $ResearchSubjectCopyWith<$Res> {
-  factory _$$_ResearchSubjectCopyWith(
-          _$_ResearchSubject value, $Res Function(_$_ResearchSubject) then) =
-      __$$_ResearchSubjectCopyWithImpl<$Res>;
+  factory _$$ResearchSubjectImplCopyWith(_$ResearchSubjectImpl value,
+          $Res Function(_$ResearchSubjectImpl) then) =
+      __$$ResearchSubjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      ResearchSubjectStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       Reference study,
       Reference subject,
       String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') Element? assignedArmElement,
       String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
+      @JsonKey(name: '_actualArm') Element? actualArmElement,
       Reference? consent});
 
   @override
@@ -5661,11 +5618,11 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchSubjectCopyWithImpl<$Res>
-    extends _$ResearchSubjectCopyWithImpl<$Res, _$_ResearchSubject>
-    implements _$$_ResearchSubjectCopyWith<$Res> {
-  __$$_ResearchSubjectCopyWithImpl(
-      _$_ResearchSubject _value, $Res Function(_$_ResearchSubject) _then)
+class __$$ResearchSubjectImplCopyWithImpl<$Res>
+    extends _$ResearchSubjectCopyWithImpl<$Res, _$ResearchSubjectImpl>
+    implements _$$ResearchSubjectImplCopyWith<$Res> {
+  __$$ResearchSubjectImplCopyWithImpl(
+      _$ResearchSubjectImpl _value, $Res Function(_$ResearchSubjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5695,7 +5652,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
     Object? actualArmElement = freezed,
     Object? consent = freezed,
   }) {
-    return _then(_$_ResearchSubject(
+    return _then(_$ResearchSubjectImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5794,43 +5751,36 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchSubject extends _ResearchSubject {
-  _$_ResearchSubject(
+class _$ResearchSubjectImpl extends _ResearchSubject {
+  _$ResearchSubjectImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          this.resourceType = R5ResourceType.ResearchSubject,
+      this.resourceType = R5ResourceType.ResearchSubject,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.progress,
       this.period,
       required this.study,
       required this.subject,
       this.assignedArm,
-      @JsonKey(name: '_assignedArm')
-          this.assignedArmElement,
+      @JsonKey(name: '_assignedArm') this.assignedArmElement,
       this.actualArm,
-      @JsonKey(name: '_actualArm')
-          this.actualArmElement,
+      @JsonKey(name: '_actualArm') this.actualArmElement,
       this.consent})
       : super._();
 
-  factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchSubjectFromJson(json);
+  factory _$ResearchSubjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchSubjectImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
@@ -5893,10 +5843,10 @@ class _$_ResearchSubject extends _ResearchSubject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchSubject &&
+            other is _$ResearchSubjectImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -5967,12 +5917,13 @@ class _$_ResearchSubject extends _ResearchSubject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchSubjectCopyWith<_$_ResearchSubject> get copyWith =>
-      __$$_ResearchSubjectCopyWithImpl<_$_ResearchSubject>(this, _$identity);
+  _$$ResearchSubjectImplCopyWith<_$ResearchSubjectImpl> get copyWith =>
+      __$$ResearchSubjectImplCopyWithImpl<_$ResearchSubjectImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectToJson(
+    return _$$ResearchSubjectImplToJson(
       this,
     );
   }
@@ -5981,40 +5932,34 @@ class _$_ResearchSubject extends _ResearchSubject {
 abstract class _ResearchSubject extends ResearchSubject {
   factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          final ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final ResearchSubjectStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<ResearchSubjectProgress>? progress,
       final Period? period,
       required final Reference study,
       required final Reference subject,
       final String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          final Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') final Element? assignedArmElement,
       final String? actualArm,
-      @JsonKey(name: '_actualArm')
-          final Element? actualArmElement,
-      final Reference? consent}) = _$_ResearchSubject;
+      @JsonKey(name: '_actualArm') final Element? actualArmElement,
+      final Reference? consent}) = _$ResearchSubjectImpl;
   _ResearchSubject._() : super._();
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
-      _$_ResearchSubject.fromJson;
+      _$ResearchSubjectImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
@@ -6072,7 +6017,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   Reference? get consent;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchSubjectCopyWith<_$_ResearchSubject> get copyWith =>
+  _$$ResearchSubjectImplCopyWith<_$ResearchSubjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6280,11 +6225,12 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResearchSubjectProgressCopyWith<$Res>
+abstract class _$$ResearchSubjectProgressImplCopyWith<$Res>
     implements $ResearchSubjectProgressCopyWith<$Res> {
-  factory _$$_ResearchSubjectProgressCopyWith(_$_ResearchSubjectProgress value,
-          $Res Function(_$_ResearchSubjectProgress) then) =
-      __$$_ResearchSubjectProgressCopyWithImpl<$Res>;
+  factory _$$ResearchSubjectProgressImplCopyWith(
+          _$ResearchSubjectProgressImpl value,
+          $Res Function(_$ResearchSubjectProgressImpl) then) =
+      __$$ResearchSubjectProgressImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6315,12 +6261,13 @@ abstract class _$$_ResearchSubjectProgressCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
+class __$$ResearchSubjectProgressImplCopyWithImpl<$Res>
     extends _$ResearchSubjectProgressCopyWithImpl<$Res,
-        _$_ResearchSubjectProgress>
-    implements _$$_ResearchSubjectProgressCopyWith<$Res> {
-  __$$_ResearchSubjectProgressCopyWithImpl(_$_ResearchSubjectProgress _value,
-      $Res Function(_$_ResearchSubjectProgress) _then)
+        _$ResearchSubjectProgressImpl>
+    implements _$$ResearchSubjectProgressImplCopyWith<$Res> {
+  __$$ResearchSubjectProgressImplCopyWithImpl(
+      _$ResearchSubjectProgressImpl _value,
+      $Res Function(_$ResearchSubjectProgressImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6338,7 +6285,7 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
     Object? endDate = freezed,
     Object? endDateElement = freezed,
   }) {
-    return _then(_$_ResearchSubjectProgress(
+    return _then(_$ResearchSubjectProgressImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6389,8 +6336,8 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
-  _$_ResearchSubjectProgress(
+class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
+  _$ResearchSubjectProgressImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6404,8 +6351,8 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
       @JsonKey(name: '_endDate') this.endDateElement})
       : super._();
 
-  factory _$_ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
-      _$$_ResearchSubjectProgressFromJson(json);
+  factory _$ResearchSubjectProgressImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResearchSubjectProgressImplFromJson(json);
 
   @override
   final String? id;
@@ -6439,10 +6386,10 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResearchSubjectProgress &&
+            other is _$ResearchSubjectProgressImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -6482,14 +6429,13 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResearchSubjectProgressCopyWith<_$_ResearchSubjectProgress>
-      get copyWith =>
-          __$$_ResearchSubjectProgressCopyWithImpl<_$_ResearchSubjectProgress>(
-              this, _$identity);
+  _$$ResearchSubjectProgressImplCopyWith<_$ResearchSubjectProgressImpl>
+      get copyWith => __$$ResearchSubjectProgressImplCopyWithImpl<
+          _$ResearchSubjectProgressImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResearchSubjectProgressToJson(
+    return _$$ResearchSubjectProgressImplToJson(
       this,
     );
   }
@@ -6508,11 +6454,11 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
           @JsonKey(name: '_startDate') final Element? startDateElement,
           final FhirDateTime? endDate,
           @JsonKey(name: '_endDate') final Element? endDateElement}) =
-      _$_ResearchSubjectProgress;
+      _$ResearchSubjectProgressImpl;
   _ResearchSubjectProgress._() : super._();
 
   factory _ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =
-      _$_ResearchSubjectProgress.fromJson;
+      _$ResearchSubjectProgressImpl.fromJson;
 
   @override
   String? get id;
@@ -6541,6 +6487,6 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   Element? get endDateElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ResearchSubjectProgressCopyWith<_$_ResearchSubjectProgress>
+  _$$ResearchSubjectProgressImplCopyWith<_$ResearchSubjectProgressImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -12,7 +12,7 @@ part of 'clinical_decision_support.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
   return _GuidanceResponse.fromJson(json);
@@ -74,33 +74,27 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
+      @JsonKey(name: '_requestId') Element? requestIdElement,
       Identifier? identifier,
       Reference module,
       GuidanceResponseStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Reference? performer,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
@@ -482,42 +476,36 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
 }
 
 /// @nodoc
-abstract class _$$_GuidanceResponseCopyWith<$Res>
+abstract class _$$GuidanceResponseImplCopyWith<$Res>
     implements $GuidanceResponseCopyWith<$Res> {
-  factory _$$_GuidanceResponseCopyWith(
-          _$_GuidanceResponse value, $Res Function(_$_GuidanceResponse) then) =
-      __$$_GuidanceResponseCopyWithImpl<$Res>;
+  factory _$$GuidanceResponseImplCopyWith(_$GuidanceResponseImpl value,
+          $Res Function(_$GuidanceResponseImpl) then) =
+      __$$GuidanceResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? requestId,
-      @JsonKey(name: '_requestId')
-          Element? requestIdElement,
+      @JsonKey(name: '_requestId') Element? requestIdElement,
       Identifier? identifier,
       Reference module,
       GuidanceResponseStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Reference? performer,
       CodeableConcept? reasonCodeableConcept,
       Reference? reasonReference,
@@ -562,11 +550,11 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GuidanceResponseCopyWithImpl<$Res>
-    extends _$GuidanceResponseCopyWithImpl<$Res, _$_GuidanceResponse>
-    implements _$$_GuidanceResponseCopyWith<$Res> {
-  __$$_GuidanceResponseCopyWithImpl(
-      _$_GuidanceResponse _value, $Res Function(_$_GuidanceResponse) _then)
+class __$$GuidanceResponseImplCopyWithImpl<$Res>
+    extends _$GuidanceResponseCopyWithImpl<$Res, _$GuidanceResponseImpl>
+    implements _$$GuidanceResponseImplCopyWith<$Res> {
+  __$$GuidanceResponseImplCopyWithImpl(_$GuidanceResponseImpl _value,
+      $Res Function(_$GuidanceResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -602,7 +590,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
     Object? result = freezed,
     Object? dataRequirement = freezed,
   }) {
-    return _then(_$_GuidanceResponse(
+    return _then(_$GuidanceResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -725,36 +713,30 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GuidanceResponse extends _GuidanceResponse {
-  _$_GuidanceResponse(
+class _$GuidanceResponseImpl extends _GuidanceResponse {
+  _$GuidanceResponseImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-          this.resourceType = Stu3ResourceType.GuidanceResponse,
+      this.resourceType = Stu3ResourceType.GuidanceResponse,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.requestId,
-      @JsonKey(name: '_requestId')
-          this.requestIdElement,
+      @JsonKey(name: '_requestId') this.requestIdElement,
       this.identifier,
       required this.module,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.subject,
       this.context,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.performer,
       this.reasonCodeableConcept,
       this.reasonReference,
@@ -765,8 +747,8 @@ class _$_GuidanceResponse extends _GuidanceResponse {
       this.dataRequirement})
       : super._();
 
-  factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GuidanceResponseFromJson(json);
+  factory _$GuidanceResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GuidanceResponseImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
@@ -840,10 +822,10 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GuidanceResponse &&
+            other is _$GuidanceResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -933,12 +915,13 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
-      __$$_GuidanceResponseCopyWithImpl<_$_GuidanceResponse>(this, _$identity);
+  _$$GuidanceResponseImplCopyWith<_$GuidanceResponseImpl> get copyWith =>
+      __$$GuidanceResponseImplCopyWithImpl<_$GuidanceResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GuidanceResponseToJson(
+    return _$$GuidanceResponseImplToJson(
       this,
     );
   }
@@ -947,33 +930,28 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 abstract class _GuidanceResponse extends GuidanceResponse {
   factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Id? requestId,
-      @JsonKey(name: '_requestId')
-          final Element? requestIdElement,
+      @JsonKey(name: '_requestId') final Element? requestIdElement,
       final Identifier? identifier,
       required final Reference module,
       final GuidanceResponseStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? subject,
       final Reference? context,
       final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          final Element? occurrenceDateTimeElement,
+      final Element? occurrenceDateTimeElement,
       final Reference? performer,
       final CodeableConcept? reasonCodeableConcept,
       final Reference? reasonReference,
@@ -981,11 +959,11 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final List<Reference>? evaluationMessage,
       final Reference? outputParameters,
       final Reference? result,
-      final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
+      final List<DataRequirement>? dataRequirement}) = _$GuidanceResponseImpl;
   _GuidanceResponse._() : super._();
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
-      _$_GuidanceResponse.fromJson;
+      _$GuidanceResponseImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
@@ -1054,6 +1032,6 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   List<DataRequirement>? get dataRequirement;
   @override
   @JsonKey(ignore: true)
-  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
+  _$$GuidanceResponseImplCopyWith<_$GuidanceResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -6,8 +6,8 @@ part of 'testing.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
-    _$_TestReport(
+_$TestReportImpl _$$TestReportImplFromJson(Map<String, dynamic> json) =>
+    _$TestReportImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.TestReport) ??
@@ -84,51 +84,51 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
               json['teardown'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('status', _$TestReportStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  val['testScript'] = instance.testScript.toJson();
-  writeNotNull('result', _$TestReportResultEnumMap[instance.result]);
-  writeNotNull('_result', instance.resultElement?.toJson());
-  writeNotNull('score', instance.score?.toJson());
-  writeNotNull('_score', instance.scoreElement?.toJson());
-  writeNotNull('tester', instance.tester);
-  writeNotNull('_tester', instance.testerElement?.toJson());
-  writeNotNull('issued', instance.issued);
-  writeNotNull('_issued', instance.issuedElement?.toJson());
-  writeNotNull(
-      'participant', instance.participant?.map((e) => e.toJson()).toList());
-  writeNotNull('setup', instance.setup?.toJson());
-  writeNotNull('test', instance.test?.map((e) => e.toJson()).toList());
-  writeNotNull('teardown', instance.teardown?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestReportImplToJson(_$TestReportImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (_$TestReportStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      'testScript': instance.testScript.toJson(),
+      if (_$TestReportResultEnumMap[instance.result] case final value?)
+        'result': value,
+      if (instance.resultElement?.toJson() case final value?) '_result': value,
+      if (instance.score?.toJson() case final value?) 'score': value,
+      if (instance.scoreElement?.toJson() case final value?) '_score': value,
+      if (instance.tester case final value?) 'tester': value,
+      if (instance.testerElement?.toJson() case final value?) '_tester': value,
+      if (instance.issued case final value?) 'issued': value,
+      if (instance.issuedElement?.toJson() case final value?) '_issued': value,
+      if (instance.participant?.map((e) => e.toJson()).toList()
+          case final value?)
+        'participant': value,
+      if (instance.setup?.toJson() case final value?) 'setup': value,
+      if (instance.test?.map((e) => e.toJson()).toList() case final value?)
+        'test': value,
+      if (instance.teardown?.toJson() case final value?) 'teardown': value,
+    };
 
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',
@@ -266,9 +266,9 @@ const _$TestReportResultEnumMap = {
   TestReportResult.unknown: 'unknown',
 };
 
-_$_TestReportParticipant _$$_TestReportParticipantFromJson(
+_$TestReportParticipantImpl _$$TestReportParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestReportParticipant(
+    _$TestReportParticipantImpl(
       type:
           $enumDecodeNullable(_$TestReportParticipantTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
@@ -284,24 +284,18 @@ _$_TestReportParticipant _$$_TestReportParticipantFromJson(
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportParticipantToJson(
-    _$_TestReportParticipant instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', _$TestReportParticipantTypeEnumMap[instance.type]);
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('uri', instance.uri);
-  writeNotNull('_uri', instance.uriElement?.toJson());
-  writeNotNull('display', instance.display);
-  writeNotNull('_display', instance.displayElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestReportParticipantImplToJson(
+        _$TestReportParticipantImpl instance) =>
+    <String, dynamic>{
+      if (_$TestReportParticipantTypeEnumMap[instance.type] case final value?)
+        'type': value,
+      if (instance.typeElement?.toJson() case final value?) '_type': value,
+      if (instance.uri case final value?) 'uri': value,
+      if (instance.uriElement?.toJson() case final value?) '_uri': value,
+      if (instance.display case final value?) 'display': value,
+      if (instance.displayElement?.toJson() case final value?)
+        '_display': value,
+    };
 
 const _$TestReportParticipantTypeEnumMap = {
   TestReportParticipantType.test_engine: 'test-engine',
@@ -310,20 +304,23 @@ const _$TestReportParticipantTypeEnumMap = {
   TestReportParticipantType.unknown: 'unknown',
 };
 
-_$_TestReportSetup _$$_TestReportSetupFromJson(Map<String, dynamic> json) =>
-    _$_TestReportSetup(
+_$TestReportSetupImpl _$$TestReportSetupImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestReportSetupImpl(
       action: (json['action'] as List<dynamic>)
           .map((e) => TestReportAction.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestReportSetupToJson(_$_TestReportSetup instance) =>
+Map<String, dynamic> _$$TestReportSetupImplToJson(
+        _$TestReportSetupImpl instance) =>
     <String, dynamic>{
       'action': instance.action.map((e) => e.toJson()).toList(),
     };
 
-_$_TestReportAction _$$_TestReportActionFromJson(Map<String, dynamic> json) =>
-    _$_TestReportAction(
+_$TestReportActionImpl _$$TestReportActionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestReportActionImpl(
       operation: json['operation'] == null
           ? null
           : TestReportOperation.fromJson(
@@ -333,23 +330,16 @@ _$_TestReportAction _$$_TestReportActionFromJson(Map<String, dynamic> json) =>
           : TestReportAssert.fromJson(json['assert'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportActionToJson(_$_TestReportAction instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestReportActionImplToJson(
+        _$TestReportActionImpl instance) =>
+    <String, dynamic>{
+      if (instance.operation?.toJson() case final value?) 'operation': value,
+      if (instance.assert_?.toJson() case final value?) 'assert': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('operation', instance.operation?.toJson());
-  writeNotNull('assert', instance.assert_?.toJson());
-  return val;
-}
-
-_$_TestReportOperation _$$_TestReportOperationFromJson(
+_$TestReportOperationImpl _$$TestReportOperationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestReportOperation(
+    _$TestReportOperationImpl(
       result: $enumDecodeNullable(
           _$TestReportOperationResultEnumMap, json['result']),
       resultElement: json['_result'] == null
@@ -365,24 +355,18 @@ _$_TestReportOperation _$$_TestReportOperationFromJson(
           : Element.fromJson(json['_detail'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportOperationToJson(
-    _$_TestReportOperation instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('result', _$TestReportOperationResultEnumMap[instance.result]);
-  writeNotNull('_result', instance.resultElement?.toJson());
-  writeNotNull('message', instance.message);
-  writeNotNull('_message', instance.messageElement?.toJson());
-  writeNotNull('detail', instance.detail);
-  writeNotNull('_detail', instance.detailElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestReportOperationImplToJson(
+        _$TestReportOperationImpl instance) =>
+    <String, dynamic>{
+      if (_$TestReportOperationResultEnumMap[instance.result] case final value?)
+        'result': value,
+      if (instance.resultElement?.toJson() case final value?) '_result': value,
+      if (instance.message case final value?) 'message': value,
+      if (instance.messageElement?.toJson() case final value?)
+        '_message': value,
+      if (instance.detail case final value?) 'detail': value,
+      if (instance.detailElement?.toJson() case final value?) '_detail': value,
+    };
 
 const _$TestReportOperationResultEnumMap = {
   TestReportOperationResult.pass: 'pass',
@@ -393,8 +377,9 @@ const _$TestReportOperationResultEnumMap = {
   TestReportOperationResult.unknown: 'unknown',
 };
 
-_$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
-    _$_TestReportAssert(
+_$TestReportAssertImpl _$$TestReportAssertImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestReportAssertImpl(
       result:
           $enumDecodeNullable(_$TestReportAssertResultEnumMap, json['result']),
       resultElement: json['_result'] == null
@@ -410,23 +395,18 @@ _$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_detail'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportAssertToJson(_$_TestReportAssert instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('result', _$TestReportAssertResultEnumMap[instance.result]);
-  writeNotNull('_result', instance.resultElement?.toJson());
-  writeNotNull('message', instance.message);
-  writeNotNull('_message', instance.messageElement?.toJson());
-  writeNotNull('detail', instance.detail);
-  writeNotNull('_detail', instance.detailElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestReportAssertImplToJson(
+        _$TestReportAssertImpl instance) =>
+    <String, dynamic>{
+      if (_$TestReportAssertResultEnumMap[instance.result] case final value?)
+        'result': value,
+      if (instance.resultElement?.toJson() case final value?) '_result': value,
+      if (instance.message case final value?) 'message': value,
+      if (instance.messageElement?.toJson() case final value?)
+        '_message': value,
+      if (instance.detail case final value?) 'detail': value,
+      if (instance.detailElement?.toJson() case final value?) '_detail': value,
+    };
 
 const _$TestReportAssertResultEnumMap = {
   TestReportAssertResult.pass: 'pass',
@@ -437,8 +417,8 @@ const _$TestReportAssertResultEnumMap = {
   TestReportAssertResult.unknown: 'unknown',
 };
 
-_$_TestReportTest _$$_TestReportTestFromJson(Map<String, dynamic> json) =>
-    _$_TestReportTest(
+_$TestReportTestImpl _$$TestReportTestImplFromJson(Map<String, dynamic> json) =>
+    _$TestReportTestImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -452,25 +432,20 @@ _$_TestReportTest _$$_TestReportTestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestReportTestToJson(_$_TestReportTest instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestReportTestImplToJson(
+        _$TestReportTestImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      'action': instance.action.map((e) => e.toJson()).toList(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  val['action'] = instance.action.map((e) => e.toJson()).toList();
-  return val;
-}
-
-_$_TestReportAction1 _$$_TestReportAction1FromJson(Map<String, dynamic> json) =>
-    _$_TestReportAction1(
+_$TestReportAction1Impl _$$TestReportAction1ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestReportAction1Impl(
       operation: json['operation'] == null
           ? null
           : TestReportOperation.fromJson(
@@ -480,49 +455,42 @@ _$_TestReportAction1 _$$_TestReportAction1FromJson(Map<String, dynamic> json) =>
           : TestReportAssert.fromJson(json['assert'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportAction1ToJson(
-    _$_TestReportAction1 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestReportAction1ImplToJson(
+        _$TestReportAction1Impl instance) =>
+    <String, dynamic>{
+      if (instance.operation?.toJson() case final value?) 'operation': value,
+      if (instance.assert_?.toJson() case final value?) 'assert': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('operation', instance.operation?.toJson());
-  writeNotNull('assert', instance.assert_?.toJson());
-  return val;
-}
-
-_$_TestReportTeardown _$$_TestReportTeardownFromJson(
+_$TestReportTeardownImpl _$$TestReportTeardownImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestReportTeardown(
+    _$TestReportTeardownImpl(
       action: (json['action'] as List<dynamic>)
           .map((e) => TestReportAction2.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestReportTeardownToJson(
-        _$_TestReportTeardown instance) =>
+Map<String, dynamic> _$$TestReportTeardownImplToJson(
+        _$TestReportTeardownImpl instance) =>
     <String, dynamic>{
       'action': instance.action.map((e) => e.toJson()).toList(),
     };
 
-_$_TestReportAction2 _$$_TestReportAction2FromJson(Map<String, dynamic> json) =>
-    _$_TestReportAction2(
+_$TestReportAction2Impl _$$TestReportAction2ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestReportAction2Impl(
       operation: TestReportOperation.fromJson(
           json['operation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestReportAction2ToJson(
-        _$_TestReportAction2 instance) =>
+Map<String, dynamic> _$$TestReportAction2ImplToJson(
+        _$TestReportAction2Impl instance) =>
     <String, dynamic>{
       'operation': instance.operation.toJson(),
     };
 
-_$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
-    _$_TestScript(
+_$TestScriptImpl _$$TestScriptImplFromJson(Map<String, dynamic> json) =>
+    _$TestScriptImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.TestScript) ??
@@ -650,72 +618,87 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
               json['teardown'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptToJson(_$_TestScript instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('version', instance.version);
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$TestScriptStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('experimental', instance.experimental?.toJson());
-  writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
-  writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('publisher', instance.publisher);
-  writeNotNull('_publisher', instance.publisherElement?.toJson());
-  writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull(
-      'useContext', instance.useContext?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'jurisdiction', instance.jurisdiction?.map((e) => e.toJson()).toList());
-  writeNotNull('purpose', instance.purpose);
-  writeNotNull('_purpose', instance.purposeElement?.toJson());
-  writeNotNull('copyright', instance.copyright);
-  writeNotNull('_copyright', instance.copyrightElement?.toJson());
-  writeNotNull('origin', instance.origin?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'destination', instance.destination?.map((e) => e.toJson()).toList());
-  writeNotNull('metadata', instance.metadata?.toJson());
-  writeNotNull('fixture', instance.fixture?.map((e) => e.toJson()).toList());
-  writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
-  writeNotNull('variable', instance.variable?.map((e) => e.toJson()).toList());
-  writeNotNull('rule', instance.rule?.map((e) => e.toJson()).toList());
-  writeNotNull('ruleset', instance.ruleset?.map((e) => e.toJson()).toList());
-  writeNotNull('setup', instance.setup?.toJson());
-  writeNotNull('test', instance.test?.map((e) => e.toJson()).toList());
-  writeNotNull('teardown', instance.teardown?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestScriptImplToJson(_$TestScriptImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.identifier?.toJson() case final value?) 'identifier': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.versionElement?.toJson() case final value?)
+        '_version': value,
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (_$TestScriptStatusEnumMap[instance.status] case final value?)
+        'status': value,
+      if (instance.statusElement?.toJson() case final value?) '_status': value,
+      if (instance.experimental?.toJson() case final value?)
+        'experimental': value,
+      if (instance.experimentalElement?.toJson() case final value?)
+        '_experimental': value,
+      if (instance.date?.toJson() case final value?) 'date': value,
+      if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.publisher case final value?) 'publisher': value,
+      if (instance.publisherElement?.toJson() case final value?)
+        '_publisher': value,
+      if (instance.contact?.map((e) => e.toJson()).toList() case final value?)
+        'contact': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.useContext?.map((e) => e.toJson()).toList()
+          case final value?)
+        'useContext': value,
+      if (instance.jurisdiction?.map((e) => e.toJson()).toList()
+          case final value?)
+        'jurisdiction': value,
+      if (instance.purpose case final value?) 'purpose': value,
+      if (instance.purposeElement?.toJson() case final value?)
+        '_purpose': value,
+      if (instance.copyright case final value?) 'copyright': value,
+      if (instance.copyrightElement?.toJson() case final value?)
+        '_copyright': value,
+      if (instance.origin?.map((e) => e.toJson()).toList() case final value?)
+        'origin': value,
+      if (instance.destination?.map((e) => e.toJson()).toList()
+          case final value?)
+        'destination': value,
+      if (instance.metadata?.toJson() case final value?) 'metadata': value,
+      if (instance.fixture?.map((e) => e.toJson()).toList() case final value?)
+        'fixture': value,
+      if (instance.profile?.map((e) => e.toJson()).toList() case final value?)
+        'profile': value,
+      if (instance.variable?.map((e) => e.toJson()).toList() case final value?)
+        'variable': value,
+      if (instance.rule?.map((e) => e.toJson()).toList() case final value?)
+        'rule': value,
+      if (instance.ruleset?.map((e) => e.toJson()).toList() case final value?)
+        'ruleset': value,
+      if (instance.setup?.toJson() case final value?) 'setup': value,
+      if (instance.test?.map((e) => e.toJson()).toList() case final value?)
+        'test': value,
+      if (instance.teardown?.toJson() case final value?) 'teardown': value,
+    };
 
 const _$TestScriptStatusEnumMap = {
   TestScriptStatus.draft: 'draft',
@@ -724,8 +707,9 @@ const _$TestScriptStatusEnumMap = {
   TestScriptStatus.unknown: 'unknown',
 };
 
-_$_TestScriptOrigin _$$_TestScriptOriginFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptOrigin(
+_$TestScriptOriginImpl _$$TestScriptOriginImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptOriginImpl(
       index: json['index'] == null ? null : Decimal.fromJson(json['index']),
       indexElement: json['_index'] == null
           ? null
@@ -733,24 +717,17 @@ _$_TestScriptOrigin _$$_TestScriptOriginFromJson(Map<String, dynamic> json) =>
       profile: Coding.fromJson(json['profile'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptOriginToJson(_$_TestScriptOrigin instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptOriginImplToJson(
+        _$TestScriptOriginImpl instance) =>
+    <String, dynamic>{
+      if (instance.index?.toJson() case final value?) 'index': value,
+      if (instance.indexElement?.toJson() case final value?) '_index': value,
+      'profile': instance.profile.toJson(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('index', instance.index?.toJson());
-  writeNotNull('_index', instance.indexElement?.toJson());
-  val['profile'] = instance.profile.toJson();
-  return val;
-}
-
-_$_TestScriptDestination _$$_TestScriptDestinationFromJson(
+_$TestScriptDestinationImpl _$$TestScriptDestinationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptDestination(
+    _$TestScriptDestinationImpl(
       index: json['index'] == null ? null : Decimal.fromJson(json['index']),
       indexElement: json['_index'] == null
           ? null
@@ -758,25 +735,17 @@ _$_TestScriptDestination _$$_TestScriptDestinationFromJson(
       profile: Coding.fromJson(json['profile'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptDestinationToJson(
-    _$_TestScriptDestination instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptDestinationImplToJson(
+        _$TestScriptDestinationImpl instance) =>
+    <String, dynamic>{
+      if (instance.index?.toJson() case final value?) 'index': value,
+      if (instance.indexElement?.toJson() case final value?) '_index': value,
+      'profile': instance.profile.toJson(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('index', instance.index?.toJson());
-  writeNotNull('_index', instance.indexElement?.toJson());
-  val['profile'] = instance.profile.toJson();
-  return val;
-}
-
-_$_TestScriptMetadata _$$_TestScriptMetadataFromJson(
+_$TestScriptMetadataImpl _$$TestScriptMetadataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptMetadata(
+    _$TestScriptMetadataImpl(
       link: (json['link'] as List<dynamic>?)
           ?.map((e) => TestScriptLink.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -785,23 +754,16 @@ _$_TestScriptMetadata _$$_TestScriptMetadataFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptMetadataToJson(
-    _$_TestScriptMetadata instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptMetadataImplToJson(
+        _$TestScriptMetadataImpl instance) =>
+    <String, dynamic>{
+      if (instance.link?.map((e) => e.toJson()).toList() case final value?)
+        'link': value,
+      'capability': instance.capability.map((e) => e.toJson()).toList(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
-  val['capability'] = instance.capability.map((e) => e.toJson()).toList();
-  return val;
-}
-
-_$_TestScriptLink _$$_TestScriptLinkFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptLink(
+_$TestScriptLinkImpl _$$TestScriptLinkImplFromJson(Map<String, dynamic> json) =>
+    _$TestScriptLinkImpl(
       url: json['url'] as String?,
       urlElement: json['_url'] == null
           ? null
@@ -812,25 +774,19 @@ _$_TestScriptLink _$$_TestScriptLinkFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptLinkToJson(_$_TestScriptLink instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptLinkImplToJson(
+        _$TestScriptLinkImpl instance) =>
+    <String, dynamic>{
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  return val;
-}
-
-_$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
+_$TestScriptCapabilityImpl _$$TestScriptCapabilityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptCapability(
+    _$TestScriptCapabilityImpl(
       required_:
           json['required'] == null ? null : Boolean.fromJson(json['required']),
       requiredElement: json['_required'] == null
@@ -846,9 +802,8 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      origin: (json['origin'] as List<dynamic>?)
-          ?.map((e) => Decimal.fromJson(e))
-          .toList(),
+      origin:
+          (json['origin'] as List<dynamic>?)?.map(Decimal.fromJson).toList(),
       originElement: (json['_origin'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -868,35 +823,37 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
           Reference.fromJson(json['capabilities'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptCapabilityToJson(
-    _$_TestScriptCapability instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptCapabilityImplToJson(
+        _$TestScriptCapabilityImpl instance) =>
+    <String, dynamic>{
+      if (instance.required_?.toJson() case final value?) 'required': value,
+      if (instance.requiredElement?.toJson() case final value?)
+        '_required': value,
+      if (instance.validated?.toJson() case final value?) 'validated': value,
+      if (instance.validatedElement?.toJson() case final value?)
+        '_validated': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.origin?.map((e) => e.toJson()).toList() case final value?)
+        'origin': value,
+      if (instance.originElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_origin': value,
+      if (instance.destination?.toJson() case final value?)
+        'destination': value,
+      if (instance.destinationElement?.toJson() case final value?)
+        '_destination': value,
+      if (instance.link case final value?) 'link': value,
+      if (instance.linkElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_link': value,
+      'capabilities': instance.capabilities.toJson(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('required', instance.required_?.toJson());
-  writeNotNull('_required', instance.requiredElement?.toJson());
-  writeNotNull('validated', instance.validated?.toJson());
-  writeNotNull('_validated', instance.validatedElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('origin', instance.origin?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      '_origin', instance.originElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('destination', instance.destination?.toJson());
-  writeNotNull('_destination', instance.destinationElement?.toJson());
-  writeNotNull('link', instance.link);
-  writeNotNull('_link', instance.linkElement?.map((e) => e?.toJson()).toList());
-  val['capabilities'] = instance.capabilities.toJson();
-  return val;
-}
-
-_$_TestScriptFixture _$$_TestScriptFixtureFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptFixture(
+_$TestScriptFixtureImpl _$$TestScriptFixtureImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptFixtureImpl(
       autocreate: json['autocreate'] == null
           ? null
           : Boolean.fromJson(json['autocreate']),
@@ -914,27 +871,21 @@ _$_TestScriptFixture _$$_TestScriptFixtureFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['resource'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptFixtureToJson(
-    _$_TestScriptFixture instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptFixtureImplToJson(
+        _$TestScriptFixtureImpl instance) =>
+    <String, dynamic>{
+      if (instance.autocreate?.toJson() case final value?) 'autocreate': value,
+      if (instance.autocreateElement?.toJson() case final value?)
+        '_autocreate': value,
+      if (instance.autodelete?.toJson() case final value?) 'autodelete': value,
+      if (instance.autodeleteElement?.toJson() case final value?)
+        '_autodelete': value,
+      if (instance.resource?.toJson() case final value?) 'resource': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('autocreate', instance.autocreate?.toJson());
-  writeNotNull('_autocreate', instance.autocreateElement?.toJson());
-  writeNotNull('autodelete', instance.autodelete?.toJson());
-  writeNotNull('_autodelete', instance.autodeleteElement?.toJson());
-  writeNotNull('resource', instance.resource?.toJson());
-  return val;
-}
-
-_$_TestScriptVariable _$$_TestScriptVariableFromJson(
+_$TestScriptVariableImpl _$$TestScriptVariableImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptVariable(
+    _$TestScriptVariableImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -969,60 +920,51 @@ _$_TestScriptVariable _$$_TestScriptVariableFromJson(
           : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptVariableToJson(
-    _$_TestScriptVariable instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptVariableImplToJson(
+        _$TestScriptVariableImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.defaultValue case final value?) 'defaultValue': value,
+      if (instance.defaultValueElement?.toJson() case final value?)
+        '_defaultValue': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (instance.expression case final value?) 'expression': value,
+      if (instance.expressionElement?.toJson() case final value?)
+        '_expression': value,
+      if (instance.headerField case final value?) 'headerField': value,
+      if (instance.headerFieldElement?.toJson() case final value?)
+        '_headerField': value,
+      if (instance.hint case final value?) 'hint': value,
+      if (instance.hintElement?.toJson() case final value?) '_hint': value,
+      if (instance.path case final value?) 'path': value,
+      if (instance.pathElement?.toJson() case final value?) '_path': value,
+      if (instance.sourceId?.toJson() case final value?) 'sourceId': value,
+      if (instance.sourceIdElement?.toJson() case final value?)
+        '_sourceId': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('defaultValue', instance.defaultValue);
-  writeNotNull('_defaultValue', instance.defaultValueElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('expression', instance.expression);
-  writeNotNull('_expression', instance.expressionElement?.toJson());
-  writeNotNull('headerField', instance.headerField);
-  writeNotNull('_headerField', instance.headerFieldElement?.toJson());
-  writeNotNull('hint', instance.hint);
-  writeNotNull('_hint', instance.hintElement?.toJson());
-  writeNotNull('path', instance.path);
-  writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('sourceId', instance.sourceId?.toJson());
-  writeNotNull('_sourceId', instance.sourceIdElement?.toJson());
-  return val;
-}
-
-_$_TestScriptRule _$$_TestScriptRuleFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptRule(
+_$TestScriptRuleImpl _$$TestScriptRuleImplFromJson(Map<String, dynamic> json) =>
+    _$TestScriptRuleImpl(
       resource: Reference.fromJson(json['resource'] as Map<String, dynamic>),
       param: (json['param'] as List<dynamic>?)
           ?.map((e) => TestScriptParam.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptRuleToJson(_$_TestScriptRule instance) {
-  final val = <String, dynamic>{
-    'resource': instance.resource.toJson(),
-  };
+Map<String, dynamic> _$$TestScriptRuleImplToJson(
+        _$TestScriptRuleImpl instance) =>
+    <String, dynamic>{
+      'resource': instance.resource.toJson(),
+      if (instance.param?.map((e) => e.toJson()).toList() case final value?)
+        'param': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('param', instance.param?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_TestScriptParam _$$_TestScriptParamFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptParam(
+_$TestScriptParamImpl _$$TestScriptParamImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptParamImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -1033,39 +975,34 @@ _$_TestScriptParam _$$_TestScriptParamFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptParamToJson(_$_TestScriptParam instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptParamImplToJson(
+        _$TestScriptParamImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  return val;
-}
-
-_$_TestScriptRuleset _$$_TestScriptRulesetFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptRuleset(
+_$TestScriptRulesetImpl _$$TestScriptRulesetImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptRulesetImpl(
       resource: Reference.fromJson(json['resource'] as Map<String, dynamic>),
       rule: (json['rule'] as List<dynamic>)
           .map((e) => TestScriptRule1.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptRulesetToJson(
-        _$_TestScriptRuleset instance) =>
+Map<String, dynamic> _$$TestScriptRulesetImplToJson(
+        _$TestScriptRulesetImpl instance) =>
     <String, dynamic>{
       'resource': instance.resource.toJson(),
       'rule': instance.rule.map((e) => e.toJson()).toList(),
     };
 
-_$_TestScriptRule1 _$$_TestScriptRule1FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptRule1(
+_$TestScriptRule1Impl _$$TestScriptRule1ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptRule1Impl(
       ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
       ruleIdElement: json['_ruleId'] == null
           ? null
@@ -1075,23 +1012,18 @@ _$_TestScriptRule1 _$$_TestScriptRule1FromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptRule1ToJson(_$_TestScriptRule1 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptRule1ImplToJson(
+        _$TestScriptRule1Impl instance) =>
+    <String, dynamic>{
+      if (instance.ruleId?.toJson() case final value?) 'ruleId': value,
+      if (instance.ruleIdElement?.toJson() case final value?) '_ruleId': value,
+      if (instance.param?.map((e) => e.toJson()).toList() case final value?)
+        'param': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('ruleId', instance.ruleId?.toJson());
-  writeNotNull('_ruleId', instance.ruleIdElement?.toJson());
-  writeNotNull('param', instance.param?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_TestScriptParam1 _$$_TestScriptParam1FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptParam1(
+_$TestScriptParam1Impl _$$TestScriptParam1ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptParam1Impl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -1102,36 +1034,32 @@ _$_TestScriptParam1 _$$_TestScriptParam1FromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptParam1ToJson(_$_TestScriptParam1 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptParam1ImplToJson(
+        _$TestScriptParam1Impl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  return val;
-}
-
-_$_TestScriptSetup _$$_TestScriptSetupFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptSetup(
+_$TestScriptSetupImpl _$$TestScriptSetupImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptSetupImpl(
       action: (json['action'] as List<dynamic>)
           .map((e) => TestScriptAction.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptSetupToJson(_$_TestScriptSetup instance) =>
+Map<String, dynamic> _$$TestScriptSetupImplToJson(
+        _$TestScriptSetupImpl instance) =>
     <String, dynamic>{
       'action': instance.action.map((e) => e.toJson()).toList(),
     };
 
-_$_TestScriptAction _$$_TestScriptActionFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptAction(
+_$TestScriptActionImpl _$$TestScriptActionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptActionImpl(
       operation: json['operation'] == null
           ? null
           : TestScriptOperation.fromJson(
@@ -1141,23 +1069,16 @@ _$_TestScriptAction _$$_TestScriptActionFromJson(Map<String, dynamic> json) =>
           : TestScriptAssert.fromJson(json['assert'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptActionToJson(_$_TestScriptAction instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptActionImplToJson(
+        _$TestScriptActionImpl instance) =>
+    <String, dynamic>{
+      if (instance.operation?.toJson() case final value?) 'operation': value,
+      if (instance.assert_?.toJson() case final value?) 'assert': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('operation', instance.operation?.toJson());
-  writeNotNull('assert', instance.assert_?.toJson());
-  return val;
-}
-
-_$_TestScriptOperation _$$_TestScriptOperationFromJson(
+_$TestScriptOperationImpl _$$TestScriptOperationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptOperation(
+    _$TestScriptOperationImpl(
       type: json['type'] == null
           ? null
           : Coding.fromJson(json['type'] as Map<String, dynamic>),
@@ -1231,50 +1152,56 @@ _$_TestScriptOperation _$$_TestScriptOperationFromJson(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptOperationToJson(
-    _$_TestScriptOperation instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('resource', instance.resource);
-  writeNotNull('_resource', instance.resourceElement?.toJson());
-  writeNotNull('label', instance.label);
-  writeNotNull('_label', instance.labelElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('accept', _$TestScriptOperationAcceptEnumMap[instance.accept]);
-  writeNotNull('_accept', instance.acceptElement?.toJson());
-  writeNotNull('contentType',
-      _$TestScriptOperationContentTypeEnumMap[instance.contentType]);
-  writeNotNull('_contentType', instance.contentTypeElement?.toJson());
-  writeNotNull('destination', instance.destination?.toJson());
-  writeNotNull('_destination', instance.destinationElement?.toJson());
-  writeNotNull('encodeRequestUrl', instance.encodeRequestUrl?.toJson());
-  writeNotNull('_encodeRequestUrl', instance.encodeRequestUrlElement?.toJson());
-  writeNotNull('origin', instance.origin?.toJson());
-  writeNotNull('_origin', instance.originElement?.toJson());
-  writeNotNull('params', instance.params);
-  writeNotNull('_params', instance.paramsElement?.toJson());
-  writeNotNull(
-      'requestHeader', instance.requestHeader?.map((e) => e.toJson()).toList());
-  writeNotNull('requestId', instance.requestId?.toJson());
-  writeNotNull('_requestId', instance.requestIdElement?.toJson());
-  writeNotNull('responseId', instance.responseId?.toJson());
-  writeNotNull('_responseId', instance.responseIdElement?.toJson());
-  writeNotNull('sourceId', instance.sourceId?.toJson());
-  writeNotNull('_sourceId', instance.sourceIdElement?.toJson());
-  writeNotNull('targetId', instance.targetId?.toJson());
-  writeNotNull('_targetId', instance.targetIdElement?.toJson());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestScriptOperationImplToJson(
+        _$TestScriptOperationImpl instance) =>
+    <String, dynamic>{
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.resource case final value?) 'resource': value,
+      if (instance.resourceElement?.toJson() case final value?)
+        '_resource': value,
+      if (instance.label case final value?) 'label': value,
+      if (instance.labelElement?.toJson() case final value?) '_label': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (_$TestScriptOperationAcceptEnumMap[instance.accept] case final value?)
+        'accept': value,
+      if (instance.acceptElement?.toJson() case final value?) '_accept': value,
+      if (_$TestScriptOperationContentTypeEnumMap[instance.contentType]
+          case final value?)
+        'contentType': value,
+      if (instance.contentTypeElement?.toJson() case final value?)
+        '_contentType': value,
+      if (instance.destination?.toJson() case final value?)
+        'destination': value,
+      if (instance.destinationElement?.toJson() case final value?)
+        '_destination': value,
+      if (instance.encodeRequestUrl?.toJson() case final value?)
+        'encodeRequestUrl': value,
+      if (instance.encodeRequestUrlElement?.toJson() case final value?)
+        '_encodeRequestUrl': value,
+      if (instance.origin?.toJson() case final value?) 'origin': value,
+      if (instance.originElement?.toJson() case final value?) '_origin': value,
+      if (instance.params case final value?) 'params': value,
+      if (instance.paramsElement?.toJson() case final value?) '_params': value,
+      if (instance.requestHeader?.map((e) => e.toJson()).toList()
+          case final value?)
+        'requestHeader': value,
+      if (instance.requestId?.toJson() case final value?) 'requestId': value,
+      if (instance.requestIdElement?.toJson() case final value?)
+        '_requestId': value,
+      if (instance.responseId?.toJson() case final value?) 'responseId': value,
+      if (instance.responseIdElement?.toJson() case final value?)
+        '_responseId': value,
+      if (instance.sourceId?.toJson() case final value?) 'sourceId': value,
+      if (instance.sourceIdElement?.toJson() case final value?)
+        '_sourceId': value,
+      if (instance.targetId?.toJson() case final value?) 'targetId': value,
+      if (instance.targetIdElement?.toJson() case final value?)
+        '_targetId': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+    };
 
 const _$TestScriptOperationAcceptEnumMap = {
   TestScriptOperationAccept.xml: 'xml',
@@ -1292,9 +1219,9 @@ const _$TestScriptOperationContentTypeEnumMap = {
   TestScriptOperationContentType.unknown: 'unknown',
 };
 
-_$_TestScriptRequestHeader _$$_TestScriptRequestHeaderFromJson(
+_$TestScriptRequestHeaderImpl _$$TestScriptRequestHeaderImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptRequestHeader(
+    _$TestScriptRequestHeaderImpl(
       field: json['field'] as String?,
       fieldElement: json['_field'] == null
           ? null
@@ -1305,25 +1232,18 @@ _$_TestScriptRequestHeader _$$_TestScriptRequestHeaderFromJson(
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptRequestHeaderToJson(
-    _$_TestScriptRequestHeader instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptRequestHeaderImplToJson(
+        _$TestScriptRequestHeaderImpl instance) =>
+    <String, dynamic>{
+      if (instance.field case final value?) 'field': value,
+      if (instance.fieldElement?.toJson() case final value?) '_field': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('field', instance.field);
-  writeNotNull('_field', instance.fieldElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  return val;
-}
-
-_$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptAssert(
+_$TestScriptAssertImpl _$$TestScriptAssertImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptAssertImpl(
       label: json['label'] as String?,
       labelElement: json['_label'] == null
           ? null
@@ -1437,72 +1357,91 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_warningOnly'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptAssertToJson(_$_TestScriptAssert instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('label', instance.label);
-  writeNotNull('_label', instance.labelElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull(
-      'direction', _$TestScriptAssertDirectionEnumMap[instance.direction]);
-  writeNotNull('_direction', instance.directionElement?.toJson());
-  writeNotNull('compareToSourceId', instance.compareToSourceId);
-  writeNotNull(
-      '_compareToSourceId', instance.compareToSourceIdElement?.toJson());
-  writeNotNull('compareToSourceExpression', instance.compareToSourceExpression);
-  writeNotNull('_compareToSourceExpression',
-      instance.compareToSourceExpressionElement?.toJson());
-  writeNotNull('compareToSourcePath', instance.compareToSourcePath);
-  writeNotNull(
-      '_compareToSourcePath', instance.compareToSourcePathElement?.toJson());
-  writeNotNull('contentType',
-      _$TestScriptAssertContentTypeEnumMap[instance.contentType]);
-  writeNotNull('_contentType', instance.contentTypeElement?.toJson());
-  writeNotNull('expression', instance.expression);
-  writeNotNull('_expression', instance.expressionElement?.toJson());
-  writeNotNull('headerField', instance.headerField);
-  writeNotNull('_headerField', instance.headerFieldElement?.toJson());
-  writeNotNull('minimumId', instance.minimumId);
-  writeNotNull('_minimumId', instance.minimumIdElement?.toJson());
-  writeNotNull('navigationLinks', instance.navigationLinks?.toJson());
-  writeNotNull('_navigationLinks', instance.navigationLinksElement?.toJson());
-  writeNotNull(
-      'operator', _$TestScriptAssertOperatorEnumMap[instance.operator_]);
-  writeNotNull('_operator', instance.operatorElement?.toJson());
-  writeNotNull('path', instance.path);
-  writeNotNull('_path', instance.pathElement?.toJson());
-  writeNotNull('requestMethod',
-      _$TestScriptAssertRequestMethodEnumMap[instance.requestMethod]);
-  writeNotNull('_requestMethod', instance.requestMethodElement?.toJson());
-  writeNotNull('requestURL', instance.requestURL);
-  writeNotNull('_requestURL', instance.requestURLElement?.toJson());
-  writeNotNull('resource', instance.resource);
-  writeNotNull('_resource', instance.resourceElement?.toJson());
-  writeNotNull(
-      'response', _$TestScriptAssertResponseEnumMap[instance.response]);
-  writeNotNull('_response', instance.responseElement?.toJson());
-  writeNotNull('responseCode', instance.responseCode);
-  writeNotNull('_responseCode', instance.responseCodeElement?.toJson());
-  writeNotNull('rule', instance.rule?.toJson());
-  writeNotNull('ruleset', instance.ruleset?.toJson());
-  writeNotNull('sourceId', instance.sourceId?.toJson());
-  writeNotNull('_sourceId', instance.sourceIdElement?.toJson());
-  writeNotNull('validateProfileId', instance.validateProfileId?.toJson());
-  writeNotNull(
-      '_validateProfileId', instance.validateProfileIdElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('warningOnly', instance.warningOnly?.toJson());
-  writeNotNull('_warningOnly', instance.warningOnlyElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TestScriptAssertImplToJson(
+        _$TestScriptAssertImpl instance) =>
+    <String, dynamic>{
+      if (instance.label case final value?) 'label': value,
+      if (instance.labelElement?.toJson() case final value?) '_label': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      if (_$TestScriptAssertDirectionEnumMap[instance.direction]
+          case final value?)
+        'direction': value,
+      if (instance.directionElement?.toJson() case final value?)
+        '_direction': value,
+      if (instance.compareToSourceId case final value?)
+        'compareToSourceId': value,
+      if (instance.compareToSourceIdElement?.toJson() case final value?)
+        '_compareToSourceId': value,
+      if (instance.compareToSourceExpression case final value?)
+        'compareToSourceExpression': value,
+      if (instance.compareToSourceExpressionElement?.toJson() case final value?)
+        '_compareToSourceExpression': value,
+      if (instance.compareToSourcePath case final value?)
+        'compareToSourcePath': value,
+      if (instance.compareToSourcePathElement?.toJson() case final value?)
+        '_compareToSourcePath': value,
+      if (_$TestScriptAssertContentTypeEnumMap[instance.contentType]
+          case final value?)
+        'contentType': value,
+      if (instance.contentTypeElement?.toJson() case final value?)
+        '_contentType': value,
+      if (instance.expression case final value?) 'expression': value,
+      if (instance.expressionElement?.toJson() case final value?)
+        '_expression': value,
+      if (instance.headerField case final value?) 'headerField': value,
+      if (instance.headerFieldElement?.toJson() case final value?)
+        '_headerField': value,
+      if (instance.minimumId case final value?) 'minimumId': value,
+      if (instance.minimumIdElement?.toJson() case final value?)
+        '_minimumId': value,
+      if (instance.navigationLinks?.toJson() case final value?)
+        'navigationLinks': value,
+      if (instance.navigationLinksElement?.toJson() case final value?)
+        '_navigationLinks': value,
+      if (_$TestScriptAssertOperatorEnumMap[instance.operator_]
+          case final value?)
+        'operator': value,
+      if (instance.operatorElement?.toJson() case final value?)
+        '_operator': value,
+      if (instance.path case final value?) 'path': value,
+      if (instance.pathElement?.toJson() case final value?) '_path': value,
+      if (_$TestScriptAssertRequestMethodEnumMap[instance.requestMethod]
+          case final value?)
+        'requestMethod': value,
+      if (instance.requestMethodElement?.toJson() case final value?)
+        '_requestMethod': value,
+      if (instance.requestURL case final value?) 'requestURL': value,
+      if (instance.requestURLElement?.toJson() case final value?)
+        '_requestURL': value,
+      if (instance.resource case final value?) 'resource': value,
+      if (instance.resourceElement?.toJson() case final value?)
+        '_resource': value,
+      if (_$TestScriptAssertResponseEnumMap[instance.response]
+          case final value?)
+        'response': value,
+      if (instance.responseElement?.toJson() case final value?)
+        '_response': value,
+      if (instance.responseCode case final value?) 'responseCode': value,
+      if (instance.responseCodeElement?.toJson() case final value?)
+        '_responseCode': value,
+      if (instance.rule?.toJson() case final value?) 'rule': value,
+      if (instance.ruleset?.toJson() case final value?) 'ruleset': value,
+      if (instance.sourceId?.toJson() case final value?) 'sourceId': value,
+      if (instance.sourceIdElement?.toJson() case final value?)
+        '_sourceId': value,
+      if (instance.validateProfileId?.toJson() case final value?)
+        'validateProfileId': value,
+      if (instance.validateProfileIdElement?.toJson() case final value?)
+        '_validateProfileId': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (instance.warningOnly?.toJson() case final value?)
+        'warningOnly': value,
+      if (instance.warningOnlyElement?.toJson() case final value?)
+        '_warningOnly': value,
+    };
 
 const _$TestScriptAssertDirectionEnumMap = {
   TestScriptAssertDirection.response: 'response',
@@ -1559,8 +1498,9 @@ const _$TestScriptAssertResponseEnumMap = {
   TestScriptAssertResponse.unknown: 'unknown',
 };
 
-_$_TestScriptRule2 _$$_TestScriptRule2FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptRule2(
+_$TestScriptRule2Impl _$$TestScriptRule2ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptRule2Impl(
       ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
       ruleIdElement: json['_ruleId'] == null
           ? null
@@ -1570,23 +1510,18 @@ _$_TestScriptRule2 _$$_TestScriptRule2FromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptRule2ToJson(_$_TestScriptRule2 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptRule2ImplToJson(
+        _$TestScriptRule2Impl instance) =>
+    <String, dynamic>{
+      if (instance.ruleId?.toJson() case final value?) 'ruleId': value,
+      if (instance.ruleIdElement?.toJson() case final value?) '_ruleId': value,
+      if (instance.param?.map((e) => e.toJson()).toList() case final value?)
+        'param': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('ruleId', instance.ruleId?.toJson());
-  writeNotNull('_ruleId', instance.ruleIdElement?.toJson());
-  writeNotNull('param', instance.param?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_TestScriptParam2 _$$_TestScriptParam2FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptParam2(
+_$TestScriptParam2Impl _$$TestScriptParam2ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptParam2Impl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -1597,25 +1532,18 @@ _$_TestScriptParam2 _$$_TestScriptParam2FromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptParam2ToJson(_$_TestScriptParam2 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptParam2ImplToJson(
+        _$TestScriptParam2Impl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  return val;
-}
-
-_$_TestScriptRuleset1 _$$_TestScriptRuleset1FromJson(
+_$TestScriptRuleset1Impl _$$TestScriptRuleset1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptRuleset1(
+    _$TestScriptRuleset1Impl(
       rulesetId:
           json['rulesetId'] == null ? null : Id.fromJson(json['rulesetId']),
       rulesetIdElement: json['_rulesetId'] == null
@@ -1626,24 +1554,19 @@ _$_TestScriptRuleset1 _$$_TestScriptRuleset1FromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptRuleset1ToJson(
-    _$_TestScriptRuleset1 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptRuleset1ImplToJson(
+        _$TestScriptRuleset1Impl instance) =>
+    <String, dynamic>{
+      if (instance.rulesetId?.toJson() case final value?) 'rulesetId': value,
+      if (instance.rulesetIdElement?.toJson() case final value?)
+        '_rulesetId': value,
+      if (instance.rule?.map((e) => e.toJson()).toList() case final value?)
+        'rule': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('rulesetId', instance.rulesetId?.toJson());
-  writeNotNull('_rulesetId', instance.rulesetIdElement?.toJson());
-  writeNotNull('rule', instance.rule?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_TestScriptRule3 _$$_TestScriptRule3FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptRule3(
+_$TestScriptRule3Impl _$$TestScriptRule3ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptRule3Impl(
       ruleId: json['ruleId'] == null ? null : Id.fromJson(json['ruleId']),
       ruleIdElement: json['_ruleId'] == null
           ? null
@@ -1653,23 +1576,18 @@ _$_TestScriptRule3 _$$_TestScriptRule3FromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptRule3ToJson(_$_TestScriptRule3 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptRule3ImplToJson(
+        _$TestScriptRule3Impl instance) =>
+    <String, dynamic>{
+      if (instance.ruleId?.toJson() case final value?) 'ruleId': value,
+      if (instance.ruleIdElement?.toJson() case final value?) '_ruleId': value,
+      if (instance.param?.map((e) => e.toJson()).toList() case final value?)
+        'param': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('ruleId', instance.ruleId?.toJson());
-  writeNotNull('_ruleId', instance.ruleIdElement?.toJson());
-  writeNotNull('param', instance.param?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_TestScriptParam3 _$$_TestScriptParam3FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptParam3(
+_$TestScriptParam3Impl _$$TestScriptParam3ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptParam3Impl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -1680,24 +1598,17 @@ _$_TestScriptParam3 _$$_TestScriptParam3FromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptParam3ToJson(_$_TestScriptParam3 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptParam3ImplToJson(
+        _$TestScriptParam3Impl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  return val;
-}
-
-_$_TestScriptTest _$$_TestScriptTestFromJson(Map<String, dynamic> json) =>
-    _$_TestScriptTest(
+_$TestScriptTestImpl _$$TestScriptTestImplFromJson(Map<String, dynamic> json) =>
+    _$TestScriptTestImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -1711,25 +1622,20 @@ _$_TestScriptTest _$$_TestScriptTestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptTestToJson(_$_TestScriptTest instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptTestImplToJson(
+        _$TestScriptTestImpl instance) =>
+    <String, dynamic>{
+      if (instance.name case final value?) 'name': value,
+      if (instance.nameElement?.toJson() case final value?) '_name': value,
+      if (instance.description case final value?) 'description': value,
+      if (instance.descriptionElement?.toJson() case final value?)
+        '_description': value,
+      'action': instance.action.map((e) => e.toJson()).toList(),
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('name', instance.name);
-  writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  val['action'] = instance.action.map((e) => e.toJson()).toList();
-  return val;
-}
-
-_$_TestScriptAction1 _$$_TestScriptAction1FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptAction1(
+_$TestScriptAction1Impl _$$TestScriptAction1ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptAction1Impl(
       operation: json['operation'] == null
           ? null
           : TestScriptOperation.fromJson(
@@ -1739,43 +1645,36 @@ _$_TestScriptAction1 _$$_TestScriptAction1FromJson(Map<String, dynamic> json) =>
           : TestScriptAssert.fromJson(json['assert'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptAction1ToJson(
-    _$_TestScriptAction1 instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TestScriptAction1ImplToJson(
+        _$TestScriptAction1Impl instance) =>
+    <String, dynamic>{
+      if (instance.operation?.toJson() case final value?) 'operation': value,
+      if (instance.assert_?.toJson() case final value?) 'assert': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('operation', instance.operation?.toJson());
-  writeNotNull('assert', instance.assert_?.toJson());
-  return val;
-}
-
-_$_TestScriptTeardown _$$_TestScriptTeardownFromJson(
+_$TestScriptTeardownImpl _$$TestScriptTeardownImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScriptTeardown(
+    _$TestScriptTeardownImpl(
       action: (json['action'] as List<dynamic>)
           .map((e) => TestScriptAction2.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScriptTeardownToJson(
-        _$_TestScriptTeardown instance) =>
+Map<String, dynamic> _$$TestScriptTeardownImplToJson(
+        _$TestScriptTeardownImpl instance) =>
     <String, dynamic>{
       'action': instance.action.map((e) => e.toJson()).toList(),
     };
 
-_$_TestScriptAction2 _$$_TestScriptAction2FromJson(Map<String, dynamic> json) =>
-    _$_TestScriptAction2(
+_$TestScriptAction2Impl _$$TestScriptAction2ImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestScriptAction2Impl(
       operation: TestScriptOperation.fromJson(
           json['operation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TestScriptAction2ToJson(
-        _$_TestScriptAction2 instance) =>
+Map<String, dynamic> _$$TestScriptAction2ImplToJson(
+        _$TestScriptAction2Impl instance) =>
     <String, dynamic>{
       'operation': instance.operation.toJson(),
     };
