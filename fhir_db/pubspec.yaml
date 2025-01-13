@@ -16,19 +16,16 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: upgrade-flutter-3.27
   path: ^1.8.0
   path_provider: ^2.0.2
   sembast:
     git:
       url: https://github.com/i-atros/sembast.dart.git
       path: sembast
-      ref: upgrade-flutter-3.27
   sembast_sqflite:
     git:
       url: https://github.com/i-atros/sembast_sqflite.git
       path: sembast_sqflite
-      ref: upgrade-flutter-3.27
   sqflite: ^2.0.0+3
   sqflite_common_ffi: ^2.0.0+1
 
