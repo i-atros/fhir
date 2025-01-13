@@ -122,8 +122,8 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: "upgrade-flutter-3.27"
-      resolved-ref: "3d0e4037a52abb2c879d3e2c1986e6f33c59c0e6"
+      ref: HEAD
+      resolved-ref: "7e8d47b93d5d82ff81fd593157aebf14b263955b"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
@@ -131,8 +131,8 @@ packages:
     dependency: transitive
     description:
       path: fhir_yaml
-      ref: "fhir-yaml-upgrade-flutter-3.27"
-      resolved-ref: "4c1cad67cc6b062494878f9e3074bed4491a01d5"
+      ref: HEAD
+      resolved-ref: b32e5e8b26f2295b48e891cfbc3dc87c38226569
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.5.0"
@@ -377,8 +377,8 @@ packages:
     dependency: "direct main"
     description:
       path: sembast
-      ref: "upgrade-flutter-3.27"
-      resolved-ref: c454b363bbd3e312173ca9bbaf1e4d6a3f0777e8
+      ref: HEAD
+      resolved-ref: "99854b9d2d4e0ccc86c1f8e6b0c66144703a4b81"
       url: "https://github.com/i-atros/sembast.dart.git"
     source: git
     version: "3.3.0"
@@ -386,8 +386,8 @@ packages:
     dependency: "direct main"
     description:
       path: sembast_sqflite
-      ref: "upgrade-flutter-3.27"
-      resolved-ref: "7f802c545883174662ab59caee654b2b2bfbb112"
+      ref: HEAD
+      resolved-ref: "574b645c4583e2c4586c7cdcfe5f629091216fc1"
       url: "https://github.com/i-atros/sembast_sqflite.git"
     source: git
     version: "2.0.1"
