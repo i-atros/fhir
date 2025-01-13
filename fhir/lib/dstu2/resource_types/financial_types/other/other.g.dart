@@ -6,9 +6,9 @@ part of 'other.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
+_$ExplanationOfBenefitImpl _$$ExplanationOfBenefitImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefit(
+    _$ExplanationOfBenefitImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ExplanationOfBenefit) ??
@@ -80,48 +80,53 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
               json['requestOrganization'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
-    _$_ExplanationOfBenefit instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('request', instance.request?.toJson());
-  writeNotNull(
-      'outcome', _$ExplanationOfBenefitOutcomeEnumMap[instance.outcome]);
-  writeNotNull('_outcome', instance.outcomeElement?.toJson());
-  writeNotNull('disposition', instance.disposition);
-  writeNotNull('_disposition', instance.dispositionElement?.toJson());
-  writeNotNull('ruleset', instance.ruleset?.toJson());
-  writeNotNull('originalRuleset', instance.originalRuleset?.toJson());
-  writeNotNull('created', instance.created?.toJson());
-  writeNotNull('_created', instance.createdElement?.toJson());
-  writeNotNull('organization', instance.organization?.toJson());
-  writeNotNull('requestProvider', instance.requestProvider?.toJson());
-  writeNotNull('requestOrganization', instance.requestOrganization?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ExplanationOfBenefitImplToJson(
+        _$ExplanationOfBenefitImpl instance) =>
+    <String, dynamic>{
+      'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.implicitRulesElement?.toJson() case final value?)
+        '_implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+      if (instance.identifier?.map((e) => e.toJson()).toList()
+          case final value?)
+        'identifier': value,
+      if (instance.request?.toJson() case final value?) 'request': value,
+      if (_$ExplanationOfBenefitOutcomeEnumMap[instance.outcome]
+          case final value?)
+        'outcome': value,
+      if (instance.outcomeElement?.toJson() case final value?)
+        '_outcome': value,
+      if (instance.disposition case final value?) 'disposition': value,
+      if (instance.dispositionElement?.toJson() case final value?)
+        '_disposition': value,
+      if (instance.ruleset?.toJson() case final value?) 'ruleset': value,
+      if (instance.originalRuleset?.toJson() case final value?)
+        'originalRuleset': value,
+      if (instance.created?.toJson() case final value?) 'created': value,
+      if (instance.createdElement?.toJson() case final value?)
+        '_created': value,
+      if (instance.organization?.toJson() case final value?)
+        'organization': value,
+      if (instance.requestProvider?.toJson() case final value?)
+        'requestProvider': value,
+      if (instance.requestOrganization?.toJson() case final value?)
+        'requestOrganization': value,
+    };
 
 const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Account: 'Account',

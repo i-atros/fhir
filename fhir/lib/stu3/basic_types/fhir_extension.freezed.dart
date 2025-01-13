@@ -12,7 +12,7 @@ part of 'fhir_extension.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) {
   return _FhirExtension.fromJson(json);
@@ -1310,11 +1310,11 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
 }
 
 /// @nodoc
-abstract class _$$_FhirExtensionCopyWith<$Res>
+abstract class _$$FhirExtensionImplCopyWith<$Res>
     implements $FhirExtensionCopyWith<$Res> {
-  factory _$$_FhirExtensionCopyWith(
-          _$_FhirExtension value, $Res Function(_$_FhirExtension) then) =
-      __$$_FhirExtensionCopyWithImpl<$Res>;
+  factory _$$FhirExtensionImplCopyWith(
+          _$FhirExtensionImpl value, $Res Function(_$FhirExtensionImpl) then) =
+      __$$FhirExtensionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1504,11 +1504,11 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirExtensionCopyWithImpl<$Res>
-    extends _$FhirExtensionCopyWithImpl<$Res, _$_FhirExtension>
-    implements _$$_FhirExtensionCopyWith<$Res> {
-  __$$_FhirExtensionCopyWithImpl(
-      _$_FhirExtension _value, $Res Function(_$_FhirExtension) _then)
+class __$$FhirExtensionImplCopyWithImpl<$Res>
+    extends _$FhirExtensionCopyWithImpl<$Res, _$FhirExtensionImpl>
+    implements _$$FhirExtensionImplCopyWith<$Res> {
+  __$$FhirExtensionImplCopyWithImpl(
+      _$FhirExtensionImpl _value, $Res Function(_$FhirExtensionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1589,7 +1589,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
     Object? valueParameterDefinition = freezed,
     Object? valueTriggerDefinition = freezed,
   }) {
-    return _then(_$_FhirExtension(
+    return _then(_$FhirExtensionImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1892,8 +1892,8 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FhirExtension extends _FhirExtension {
-  _$_FhirExtension(
+class _$FhirExtensionImpl extends _FhirExtension {
+  _$FhirExtensionImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.url,
@@ -1970,8 +1970,8 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueTriggerDefinition})
       : super._();
 
-  factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
-      _$$_FhirExtensionFromJson(json);
+  factory _$FhirExtensionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FhirExtensionImplFromJson(json);
 
   @override
   final String? id;
@@ -2147,10 +2147,10 @@ class _$_FhirExtension extends _FhirExtension {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirExtension &&
+            other is _$FhirExtensionImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2344,12 +2344,12 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
-      __$$_FhirExtensionCopyWithImpl<_$_FhirExtension>(this, _$identity);
+  _$$FhirExtensionImplCopyWith<_$FhirExtensionImpl> get copyWith =>
+      __$$FhirExtensionImplCopyWithImpl<_$FhirExtensionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FhirExtensionToJson(
+    return _$$FhirExtensionImplToJson(
       this,
     );
   }
@@ -2358,62 +2358,46 @@ class _$_FhirExtension extends _FhirExtension {
 abstract class _FhirExtension extends FhirExtension {
   factory _FhirExtension(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final Boolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          final Element? valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final Integer? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          final Element? valueIntegerElement,
+      @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final Decimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal')
-          final Element? valueDecimalElement,
+      @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
       final Base64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
-          final Element? valueBase64BinaryElement,
+      final Element? valueBase64BinaryElement,
       final Instant? valueInstant,
-      @JsonKey(name: '_valueInstant')
-          final Element? valueInstantElement,
+      @JsonKey(name: '_valueInstant') final Element? valueInstantElement,
       final String? valueString,
-      @JsonKey(name: '_valueString')
-          final Element? valueStringElement,
+      @JsonKey(name: '_valueString') final Element? valueStringElement,
       final FhirUri? valueUri,
-      @JsonKey(name: '_valueUri')
-          final Element? valueUriElement,
+      @JsonKey(name: '_valueUri') final Element? valueUriElement,
       final Date? valueDate,
-      @JsonKey(name: '_valueDate')
-          final Element? valueDateElement,
+      @JsonKey(name: '_valueDate') final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          final Element? valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Time? valueTime,
-      @JsonKey(name: '_valueTime')
-          final Element? valueTimeElement,
+      @JsonKey(name: '_valueTime') final Element? valueTimeElement,
       final Code? valueCode,
-      @JsonKey(name: '_valueCode')
-          final Element? valueCodeElement,
+      @JsonKey(name: '_valueCode') final Element? valueCodeElement,
       final Oid? valueOid,
-      @JsonKey(name: '_valueOid')
-          final Element? valueOidElement,
+      @JsonKey(name: '_valueOid') final Element? valueOidElement,
       final Uuid? valueUuid,
-      @JsonKey(name: '_valueUuid')
-          final Element? valueUuidElement,
+      @JsonKey(name: '_valueUuid') final Element? valueUuidElement,
       final Id? valueId,
-      @JsonKey(name: '_valueId')
-          final Element? valueIdElement,
+      @JsonKey(name: '_valueId') final Element? valueIdElement,
       final UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
-          final Element? valueUnsignedIntElement,
+      final Element? valueUnsignedIntElement,
       final PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
-          final Element? valuePositiveIntElement,
+      final Element? valuePositiveIntElement,
       final String? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown')
-          final Element? valueMarkdownElement,
+      @JsonKey(name: '_valueMarkdown') final Element? valueMarkdownElement,
       final Element? valueElement,
       final FhirExtension? valueExtension,
       final BackboneElement? valueBackboneElement,
@@ -2449,11 +2433,11 @@ abstract class _FhirExtension extends FhirExtension {
       final UsageContext? valueUsageContext,
       final DataRequirement? valueDataRequirement,
       final ParameterDefinition? valueParameterDefinition,
-      final TriggerDefinition? valueTriggerDefinition}) = _$_FhirExtension;
+      final TriggerDefinition? valueTriggerDefinition}) = _$FhirExtensionImpl;
   _FhirExtension._() : super._();
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
-      _$_FhirExtension.fromJson;
+      _$FhirExtensionImpl.fromJson;
 
   @override
   String? get id;
@@ -2624,6 +2608,6 @@ abstract class _FhirExtension extends FhirExtension {
   TriggerDefinition? get valueTriggerDefinition;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
+  _$$FhirExtensionImplCopyWith<_$FhirExtensionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

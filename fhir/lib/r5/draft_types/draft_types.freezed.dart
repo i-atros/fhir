@@ -12,7 +12,7 @@ part of 'draft_types.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Population _$PopulationFromJson(Map<String, dynamic> json) {
   return _Population.fromJson(json);
@@ -182,11 +182,11 @@ class _$PopulationCopyWithImpl<$Res, $Val extends Population>
 }
 
 /// @nodoc
-abstract class _$$_PopulationCopyWith<$Res>
+abstract class _$$PopulationImplCopyWith<$Res>
     implements $PopulationCopyWith<$Res> {
-  factory _$$_PopulationCopyWith(
-          _$_Population value, $Res Function(_$_Population) then) =
-      __$$_PopulationCopyWithImpl<$Res>;
+  factory _$$PopulationImplCopyWith(
+          _$PopulationImpl value, $Res Function(_$PopulationImpl) then) =
+      __$$PopulationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -212,11 +212,11 @@ abstract class _$$_PopulationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PopulationCopyWithImpl<$Res>
-    extends _$PopulationCopyWithImpl<$Res, _$_Population>
-    implements _$$_PopulationCopyWith<$Res> {
-  __$$_PopulationCopyWithImpl(
-      _$_Population _value, $Res Function(_$_Population) _then)
+class __$$PopulationImplCopyWithImpl<$Res>
+    extends _$PopulationCopyWithImpl<$Res, _$PopulationImpl>
+    implements _$$PopulationImplCopyWith<$Res> {
+  __$$PopulationImplCopyWithImpl(
+      _$PopulationImpl _value, $Res Function(_$PopulationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -231,7 +231,7 @@ class __$$_PopulationCopyWithImpl<$Res>
     Object? race = freezed,
     Object? physiologicalCondition = freezed,
   }) {
-    return _then(_$_Population(
+    return _then(_$PopulationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -270,8 +270,8 @@ class __$$_PopulationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Population extends _Population {
-  _$_Population(
+class _$PopulationImpl extends _Population {
+  _$PopulationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -282,8 +282,8 @@ class _$_Population extends _Population {
       this.physiologicalCondition})
       : super._();
 
-  factory _$_Population.fromJson(Map<String, dynamic> json) =>
-      _$$_PopulationFromJson(json);
+  factory _$PopulationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PopulationImplFromJson(json);
 
   @override
   final String? id;
@@ -309,10 +309,10 @@ class _$_Population extends _Population {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Population &&
+            other is _$PopulationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -344,12 +344,12 @@ class _$_Population extends _Population {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PopulationCopyWith<_$_Population> get copyWith =>
-      __$$_PopulationCopyWithImpl<_$_Population>(this, _$identity);
+  _$$PopulationImplCopyWith<_$PopulationImpl> get copyWith =>
+      __$$PopulationImplCopyWithImpl<_$PopulationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PopulationToJson(
+    return _$$PopulationImplToJson(
       this,
     );
   }
@@ -364,11 +364,11 @@ abstract class _Population extends Population {
       final CodeableConcept? ageCodeableConcept,
       final CodeableConcept? gender,
       final CodeableConcept? race,
-      final CodeableConcept? physiologicalCondition}) = _$_Population;
+      final CodeableConcept? physiologicalCondition}) = _$PopulationImpl;
   _Population._() : super._();
 
   factory _Population.fromJson(Map<String, dynamic> json) =
-      _$_Population.fromJson;
+      _$PopulationImpl.fromJson;
 
   @override
   String? get id;
@@ -389,7 +389,7 @@ abstract class _Population extends Population {
   CodeableConcept? get physiologicalCondition;
   @override
   @JsonKey(ignore: true)
-  _$$_PopulationCopyWith<_$_Population> get copyWith =>
+  _$$PopulationImplCopyWith<_$PopulationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -535,11 +535,11 @@ class _$ProductShelfLifeCopyWithImpl<$Res, $Val extends ProductShelfLife>
 }
 
 /// @nodoc
-abstract class _$$_ProductShelfLifeCopyWith<$Res>
+abstract class _$$ProductShelfLifeImplCopyWith<$Res>
     implements $ProductShelfLifeCopyWith<$Res> {
-  factory _$$_ProductShelfLifeCopyWith(
-          _$_ProductShelfLife value, $Res Function(_$_ProductShelfLife) then) =
-      __$$_ProductShelfLifeCopyWithImpl<$Res>;
+  factory _$$ProductShelfLifeImplCopyWith(_$ProductShelfLifeImpl value,
+          $Res Function(_$ProductShelfLifeImpl) then) =
+      __$$ProductShelfLifeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -561,11 +561,11 @@ abstract class _$$_ProductShelfLifeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProductShelfLifeCopyWithImpl<$Res>
-    extends _$ProductShelfLifeCopyWithImpl<$Res, _$_ProductShelfLife>
-    implements _$$_ProductShelfLifeCopyWith<$Res> {
-  __$$_ProductShelfLifeCopyWithImpl(
-      _$_ProductShelfLife _value, $Res Function(_$_ProductShelfLife) _then)
+class __$$ProductShelfLifeImplCopyWithImpl<$Res>
+    extends _$ProductShelfLifeCopyWithImpl<$Res, _$ProductShelfLifeImpl>
+    implements _$$ProductShelfLifeImplCopyWith<$Res> {
+  __$$ProductShelfLifeImplCopyWithImpl(_$ProductShelfLifeImpl _value,
+      $Res Function(_$ProductShelfLifeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -580,7 +580,7 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
     Object? periodStringElement = freezed,
     Object? specialPrecautionsForStorage = freezed,
   }) {
-    return _then(_$_ProductShelfLife(
+    return _then(_$ProductShelfLifeImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -619,8 +619,8 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProductShelfLife extends _ProductShelfLife {
-  _$_ProductShelfLife(
+class _$ProductShelfLifeImpl extends _ProductShelfLife {
+  _$ProductShelfLifeImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -631,8 +631,8 @@ class _$_ProductShelfLife extends _ProductShelfLife {
       this.specialPrecautionsForStorage})
       : super._();
 
-  factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
-      _$$_ProductShelfLifeFromJson(json);
+  factory _$ProductShelfLifeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProductShelfLifeImplFromJson(json);
 
   @override
   final String? id;
@@ -659,10 +659,10 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProductShelfLife &&
+            other is _$ProductShelfLifeImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -696,12 +696,13 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProductShelfLifeCopyWith<_$_ProductShelfLife> get copyWith =>
-      __$$_ProductShelfLifeCopyWithImpl<_$_ProductShelfLife>(this, _$identity);
+  _$$ProductShelfLifeImplCopyWith<_$ProductShelfLifeImpl> get copyWith =>
+      __$$ProductShelfLifeImplCopyWithImpl<_$ProductShelfLifeImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProductShelfLifeToJson(
+    return _$$ProductShelfLifeImplToJson(
       this,
     );
   }
@@ -717,11 +718,11 @@ abstract class _ProductShelfLife extends ProductShelfLife {
           final String? periodString,
           @JsonKey(name: '_periodString') final Element? periodStringElement,
           final List<CodeableConcept>? specialPrecautionsForStorage}) =
-      _$_ProductShelfLife;
+      _$ProductShelfLifeImpl;
   _ProductShelfLife._() : super._();
 
   factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
-      _$_ProductShelfLife.fromJson;
+      _$ProductShelfLifeImpl.fromJson;
 
   @override
   String? get id;
@@ -743,7 +744,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   List<CodeableConcept>? get specialPrecautionsForStorage;
   @override
   @JsonKey(ignore: true)
-  _$$_ProductShelfLifeCopyWith<_$_ProductShelfLife> get copyWith =>
+  _$$ProductShelfLifeImplCopyWith<_$ProductShelfLifeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1018,11 +1019,11 @@ class _$ProdCharacteristicCopyWithImpl<$Res, $Val extends ProdCharacteristic>
 }
 
 /// @nodoc
-abstract class _$$_ProdCharacteristicCopyWith<$Res>
+abstract class _$$ProdCharacteristicImplCopyWith<$Res>
     implements $ProdCharacteristicCopyWith<$Res> {
-  factory _$$_ProdCharacteristicCopyWith(_$_ProdCharacteristic value,
-          $Res Function(_$_ProdCharacteristic) then) =
-      __$$_ProdCharacteristicCopyWithImpl<$Res>;
+  factory _$$ProdCharacteristicImplCopyWith(_$ProdCharacteristicImpl value,
+          $Res Function(_$ProdCharacteristicImpl) then) =
+      __$$ProdCharacteristicImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1063,11 +1064,11 @@ abstract class _$$_ProdCharacteristicCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProdCharacteristicCopyWithImpl<$Res>
-    extends _$ProdCharacteristicCopyWithImpl<$Res, _$_ProdCharacteristic>
-    implements _$$_ProdCharacteristicCopyWith<$Res> {
-  __$$_ProdCharacteristicCopyWithImpl(
-      _$_ProdCharacteristic _value, $Res Function(_$_ProdCharacteristic) _then)
+class __$$ProdCharacteristicImplCopyWithImpl<$Res>
+    extends _$ProdCharacteristicCopyWithImpl<$Res, _$ProdCharacteristicImpl>
+    implements _$$ProdCharacteristicImplCopyWith<$Res> {
+  __$$ProdCharacteristicImplCopyWithImpl(_$ProdCharacteristicImpl _value,
+      $Res Function(_$ProdCharacteristicImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1091,7 +1092,7 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
     Object? image = freezed,
     Object? scoring = freezed,
   }) {
-    return _then(_$_ProdCharacteristic(
+    return _then(_$ProdCharacteristicImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1166,8 +1167,8 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProdCharacteristic extends _ProdCharacteristic {
-  _$_ProdCharacteristic(
+class _$ProdCharacteristicImpl extends _ProdCharacteristic {
+  _$ProdCharacteristicImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1187,8 +1188,8 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       this.scoring})
       : super._();
 
-  factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$$_ProdCharacteristicFromJson(json);
+  factory _$ProdCharacteristicImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProdCharacteristicImplFromJson(json);
 
   @override
   final String? id;
@@ -1235,10 +1236,10 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProdCharacteristic &&
+            other is _$ProdCharacteristicImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1290,13 +1291,13 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProdCharacteristicCopyWith<_$_ProdCharacteristic> get copyWith =>
-      __$$_ProdCharacteristicCopyWithImpl<_$_ProdCharacteristic>(
+  _$$ProdCharacteristicImplCopyWith<_$ProdCharacteristicImpl> get copyWith =>
+      __$$ProdCharacteristicImplCopyWithImpl<_$ProdCharacteristicImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProdCharacteristicToJson(
+    return _$$ProdCharacteristicImplToJson(
       this,
     );
   }
@@ -1320,11 +1321,11 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
       final List<String>? imprint,
       @JsonKey(name: '_imprint') final List<Element>? imprintElement,
       final List<Attachment>? image,
-      final CodeableConcept? scoring}) = _$_ProdCharacteristic;
+      final CodeableConcept? scoring}) = _$ProdCharacteristicImpl;
   _ProdCharacteristic._() : super._();
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
-      _$_ProdCharacteristic.fromJson;
+      _$ProdCharacteristicImpl.fromJson;
 
   @override
   String? get id;
@@ -1366,7 +1367,7 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
   CodeableConcept? get scoring;
   @override
   @JsonKey(ignore: true)
-  _$$_ProdCharacteristicCopyWith<_$_ProdCharacteristic> get copyWith =>
+  _$$ProdCharacteristicImplCopyWith<_$ProdCharacteristicImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1540,11 +1541,11 @@ class _$MarketingStatusCopyWithImpl<$Res, $Val extends MarketingStatus>
 }
 
 /// @nodoc
-abstract class _$$_MarketingStatusCopyWith<$Res>
+abstract class _$$MarketingStatusImplCopyWith<$Res>
     implements $MarketingStatusCopyWith<$Res> {
-  factory _$$_MarketingStatusCopyWith(
-          _$_MarketingStatus value, $Res Function(_$_MarketingStatus) then) =
-      __$$_MarketingStatusCopyWithImpl<$Res>;
+  factory _$$MarketingStatusImplCopyWith(_$MarketingStatusImpl value,
+          $Res Function(_$MarketingStatusImpl) then) =
+      __$$MarketingStatusImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1571,11 +1572,11 @@ abstract class _$$_MarketingStatusCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MarketingStatusCopyWithImpl<$Res>
-    extends _$MarketingStatusCopyWithImpl<$Res, _$_MarketingStatus>
-    implements _$$_MarketingStatusCopyWith<$Res> {
-  __$$_MarketingStatusCopyWithImpl(
-      _$_MarketingStatus _value, $Res Function(_$_MarketingStatus) _then)
+class __$$MarketingStatusImplCopyWithImpl<$Res>
+    extends _$MarketingStatusCopyWithImpl<$Res, _$MarketingStatusImpl>
+    implements _$$MarketingStatusImplCopyWith<$Res> {
+  __$$MarketingStatusImplCopyWithImpl(
+      _$MarketingStatusImpl _value, $Res Function(_$MarketingStatusImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1591,7 +1592,7 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
     Object? restoreDate = freezed,
     Object? restoreDateElement = freezed,
   }) {
-    return _then(_$_MarketingStatus(
+    return _then(_$MarketingStatusImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1634,8 +1635,8 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MarketingStatus extends _MarketingStatus {
-  _$_MarketingStatus(
+class _$MarketingStatusImpl extends _MarketingStatus {
+  _$MarketingStatusImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1647,8 +1648,8 @@ class _$_MarketingStatus extends _MarketingStatus {
       @JsonKey(name: '_restoreDate') this.restoreDateElement})
       : super._();
 
-  factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
-      _$$_MarketingStatusFromJson(json);
+  factory _$MarketingStatusImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MarketingStatusImplFromJson(json);
 
   @override
   final String? id;
@@ -1677,10 +1678,10 @@ class _$_MarketingStatus extends _MarketingStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MarketingStatus &&
+            other is _$MarketingStatusImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1715,12 +1716,13 @@ class _$_MarketingStatus extends _MarketingStatus {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MarketingStatusCopyWith<_$_MarketingStatus> get copyWith =>
-      __$$_MarketingStatusCopyWithImpl<_$_MarketingStatus>(this, _$identity);
+  _$$MarketingStatusImplCopyWith<_$MarketingStatusImpl> get copyWith =>
+      __$$MarketingStatusImplCopyWithImpl<_$MarketingStatusImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MarketingStatusToJson(
+    return _$$MarketingStatusImplToJson(
       this,
     );
   }
@@ -1737,11 +1739,11 @@ abstract class _MarketingStatus extends MarketingStatus {
           final Period? dateRange,
           final FhirDateTime? restoreDate,
           @JsonKey(name: '_restoreDate') final Element? restoreDateElement}) =
-      _$_MarketingStatus;
+      _$MarketingStatusImpl;
   _MarketingStatus._() : super._();
 
   factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
-      _$_MarketingStatus.fromJson;
+      _$MarketingStatusImpl.fromJson;
 
   @override
   String? get id;
@@ -1765,7 +1767,7 @@ abstract class _MarketingStatus extends MarketingStatus {
   Element? get restoreDateElement;
   @override
   @JsonKey(ignore: true)
-  _$$_MarketingStatusCopyWith<_$_MarketingStatus> get copyWith =>
+  _$$MarketingStatusImplCopyWith<_$MarketingStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1867,64 +1869,47 @@ abstract class $CitationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown)
-          CitationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -2484,72 +2469,56 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
 }
 
 /// @nodoc
-abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
-  factory _$$_CitationCopyWith(
-          _$_Citation value, $Res Function(_$_Citation) then) =
-      __$$_CitationCopyWithImpl<$Res>;
+abstract class _$$CitationImplCopyWith<$Res>
+    implements $CitationCopyWith<$Res> {
+  factory _$$CitationImplCopyWith(
+          _$CitationImpl value, $Res Function(_$CitationImpl) then) =
+      __$$CitationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown)
-          CitationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -2606,11 +2575,11 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CitationCopyWithImpl<$Res>
-    extends _$CitationCopyWithImpl<$Res, _$_Citation>
-    implements _$$_CitationCopyWith<$Res> {
-  __$$_CitationCopyWithImpl(
-      _$_Citation _value, $Res Function(_$_Citation) _then)
+class __$$CitationImplCopyWithImpl<$Res>
+    extends _$CitationCopyWithImpl<$Res, _$CitationImpl>
+    implements _$$CitationImplCopyWith<$Res> {
+  __$$CitationImplCopyWithImpl(
+      _$CitationImpl _value, $Res Function(_$CitationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2672,7 +2641,7 @@ class __$$_CitationCopyWithImpl<$Res>
     Object? relatesTo = freezed,
     Object? citedArtifact = freezed,
   }) {
-    return _then(_$_Citation(
+    return _then(_$CitationImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2899,67 +2868,50 @@ class __$$_CitationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Citation extends _Citation {
-  _$_Citation(
+class _$CitationImpl extends _Citation {
+  _$CitationImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-          this.resourceType = R5ResourceType.Citation,
+      this.resourceType = R5ResourceType.Citation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(unknownEnumValue: CitationStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.topic,
       this.author,
@@ -2976,8 +2928,8 @@ class _$_Citation extends _Citation {
       this.citedArtifact})
       : super._();
 
-  factory _$_Citation.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationFromJson(json);
+  factory _$CitationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Citation)
@@ -3114,10 +3066,10 @@ class _$_Citation extends _Citation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Citation &&
+            other is _$CitationImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -3274,12 +3226,12 @@ class _$_Citation extends _Citation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationCopyWith<_$_Citation> get copyWith =>
-      __$$_CitationCopyWithImpl<_$_Citation>(this, _$identity);
+  _$$CitationImplCopyWith<_$CitationImpl> get copyWith =>
+      __$$CitationImplCopyWithImpl<_$CitationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationToJson(
+    return _$$CitationImplToJson(
       this,
     );
   }
@@ -3288,64 +3240,48 @@ class _$_Citation extends _Citation {
 abstract class _Citation extends Citation {
   factory _Citation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       @JsonKey(unknownEnumValue: CitationStatus.unknown)
-          final CitationStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final CitationStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -3359,10 +3295,11 @@ abstract class _Citation extends Citation {
       final List<CodeableConcept>? currentState,
       final List<CitationStatusDate>? statusDate,
       final List<CitationRelatesTo>? relatesTo,
-      final CitationCitedArtifact? citedArtifact}) = _$_Citation;
+      final CitationCitedArtifact? citedArtifact}) = _$CitationImpl;
   _Citation._() : super._();
 
-  factory _Citation.fromJson(Map<String, dynamic> json) = _$_Citation.fromJson;
+  factory _Citation.fromJson(Map<String, dynamic> json) =
+      _$CitationImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Citation)
@@ -3494,7 +3431,7 @@ abstract class _Citation extends Citation {
   CitationCitedArtifact? get citedArtifact;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationCopyWith<_$_Citation> get copyWith =>
+  _$$CitationImplCopyWith<_$CitationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3593,11 +3530,12 @@ class _$CitationClassificationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationClassificationCopyWith<$Res>
+abstract class _$$CitationClassificationImplCopyWith<$Res>
     implements $CitationClassificationCopyWith<$Res> {
-  factory _$$_CitationClassificationCopyWith(_$_CitationClassification value,
-          $Res Function(_$_CitationClassification) then) =
-      __$$_CitationClassificationCopyWithImpl<$Res>;
+  factory _$$CitationClassificationImplCopyWith(
+          _$CitationClassificationImpl value,
+          $Res Function(_$CitationClassificationImpl) then) =
+      __$$CitationClassificationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3612,12 +3550,13 @@ abstract class _$$_CitationClassificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationClassificationCopyWithImpl<$Res>
+class __$$CitationClassificationImplCopyWithImpl<$Res>
     extends _$CitationClassificationCopyWithImpl<$Res,
-        _$_CitationClassification>
-    implements _$$_CitationClassificationCopyWith<$Res> {
-  __$$_CitationClassificationCopyWithImpl(_$_CitationClassification _value,
-      $Res Function(_$_CitationClassification) _then)
+        _$CitationClassificationImpl>
+    implements _$$CitationClassificationImplCopyWith<$Res> {
+  __$$CitationClassificationImplCopyWithImpl(
+      _$CitationClassificationImpl _value,
+      $Res Function(_$CitationClassificationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3629,7 +3568,7 @@ class __$$_CitationClassificationCopyWithImpl<$Res>
     Object? type = freezed,
     Object? classifier = freezed,
   }) {
-    return _then(_$_CitationClassification(
+    return _then(_$CitationClassificationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3656,8 +3595,8 @@ class __$$_CitationClassificationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationClassification extends _CitationClassification {
-  _$_CitationClassification(
+class _$CitationClassificationImpl extends _CitationClassification {
+  _$CitationClassificationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3665,8 +3604,8 @@ class _$_CitationClassification extends _CitationClassification {
       this.classifier})
       : super._();
 
-  factory _$_CitationClassification.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationClassificationFromJson(json);
+  factory _$CitationClassificationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationClassificationImplFromJson(json);
 
   @override
   final String? id;
@@ -3686,10 +3625,10 @@ class _$_CitationClassification extends _CitationClassification {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationClassification &&
+            other is _$CitationClassificationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3713,13 +3652,13 @@ class _$_CitationClassification extends _CitationClassification {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationClassificationCopyWith<_$_CitationClassification> get copyWith =>
-      __$$_CitationClassificationCopyWithImpl<_$_CitationClassification>(
-          this, _$identity);
+  _$$CitationClassificationImplCopyWith<_$CitationClassificationImpl>
+      get copyWith => __$$CitationClassificationImplCopyWithImpl<
+          _$CitationClassificationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationClassificationToJson(
+    return _$$CitationClassificationImplToJson(
       this,
     );
   }
@@ -3731,11 +3670,11 @@ abstract class _CitationClassification extends CitationClassification {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? type,
-      final List<CodeableConcept>? classifier}) = _$_CitationClassification;
+      final List<CodeableConcept>? classifier}) = _$CitationClassificationImpl;
   _CitationClassification._() : super._();
 
   factory _CitationClassification.fromJson(Map<String, dynamic> json) =
-      _$_CitationClassification.fromJson;
+      _$CitationClassificationImpl.fromJson;
 
   @override
   String? get id;
@@ -3750,8 +3689,8 @@ abstract class _CitationClassification extends CitationClassification {
   List<CodeableConcept>? get classifier;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationClassificationCopyWith<_$_CitationClassification> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CitationClassificationImplCopyWith<_$CitationClassificationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CitationStatusDate _$CitationStatusDateFromJson(Map<String, dynamic> json) {
@@ -3880,11 +3819,11 @@ class _$CitationStatusDateCopyWithImpl<$Res, $Val extends CitationStatusDate>
 }
 
 /// @nodoc
-abstract class _$$_CitationStatusDateCopyWith<$Res>
+abstract class _$$CitationStatusDateImplCopyWith<$Res>
     implements $CitationStatusDateCopyWith<$Res> {
-  factory _$$_CitationStatusDateCopyWith(_$_CitationStatusDate value,
-          $Res Function(_$_CitationStatusDate) then) =
-      __$$_CitationStatusDateCopyWithImpl<$Res>;
+  factory _$$CitationStatusDateImplCopyWith(_$CitationStatusDateImpl value,
+          $Res Function(_$CitationStatusDateImpl) then) =
+      __$$CitationStatusDateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3905,11 +3844,11 @@ abstract class _$$_CitationStatusDateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationStatusDateCopyWithImpl<$Res>
-    extends _$CitationStatusDateCopyWithImpl<$Res, _$_CitationStatusDate>
-    implements _$$_CitationStatusDateCopyWith<$Res> {
-  __$$_CitationStatusDateCopyWithImpl(
-      _$_CitationStatusDate _value, $Res Function(_$_CitationStatusDate) _then)
+class __$$CitationStatusDateImplCopyWithImpl<$Res>
+    extends _$CitationStatusDateCopyWithImpl<$Res, _$CitationStatusDateImpl>
+    implements _$$CitationStatusDateImplCopyWith<$Res> {
+  __$$CitationStatusDateImplCopyWithImpl(_$CitationStatusDateImpl _value,
+      $Res Function(_$CitationStatusDateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3923,7 +3862,7 @@ class __$$_CitationStatusDateCopyWithImpl<$Res>
     Object? actualElement = freezed,
     Object? period = null,
   }) {
-    return _then(_$_CitationStatusDate(
+    return _then(_$CitationStatusDateImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3958,8 +3897,8 @@ class __$$_CitationStatusDateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationStatusDate extends _CitationStatusDate {
-  _$_CitationStatusDate(
+class _$CitationStatusDateImpl extends _CitationStatusDate {
+  _$CitationStatusDateImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3969,8 +3908,8 @@ class _$_CitationStatusDate extends _CitationStatusDate {
       required this.period})
       : super._();
 
-  factory _$_CitationStatusDate.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationStatusDateFromJson(json);
+  factory _$CitationStatusDateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationStatusDateImplFromJson(json);
 
   @override
   final String? id;
@@ -3995,10 +3934,10 @@ class _$_CitationStatusDate extends _CitationStatusDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationStatusDate &&
+            other is _$CitationStatusDateImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4027,13 +3966,13 @@ class _$_CitationStatusDate extends _CitationStatusDate {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationStatusDateCopyWith<_$_CitationStatusDate> get copyWith =>
-      __$$_CitationStatusDateCopyWithImpl<_$_CitationStatusDate>(
+  _$$CitationStatusDateImplCopyWith<_$CitationStatusDateImpl> get copyWith =>
+      __$$CitationStatusDateImplCopyWithImpl<_$CitationStatusDateImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationStatusDateToJson(
+    return _$$CitationStatusDateImplToJson(
       this,
     );
   }
@@ -4047,11 +3986,11 @@ abstract class _CitationStatusDate extends CitationStatusDate {
       required final CodeableConcept activity,
       final Boolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
-      required final Period period}) = _$_CitationStatusDate;
+      required final Period period}) = _$CitationStatusDateImpl;
   _CitationStatusDate._() : super._();
 
   factory _CitationStatusDate.fromJson(Map<String, dynamic> json) =
-      _$_CitationStatusDate.fromJson;
+      _$CitationStatusDateImpl.fromJson;
 
   @override
   String? get id;
@@ -4071,7 +4010,7 @@ abstract class _CitationStatusDate extends CitationStatusDate {
   Period get period;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationStatusDateCopyWith<_$_CitationStatusDate> get copyWith =>
+  _$$CitationStatusDateImplCopyWith<_$CitationStatusDateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4253,11 +4192,11 @@ class _$CitationRelatesToCopyWithImpl<$Res, $Val extends CitationRelatesTo>
 }
 
 /// @nodoc
-abstract class _$$_CitationRelatesToCopyWith<$Res>
+abstract class _$$CitationRelatesToImplCopyWith<$Res>
     implements $CitationRelatesToCopyWith<$Res> {
-  factory _$$_CitationRelatesToCopyWith(_$_CitationRelatesTo value,
-          $Res Function(_$_CitationRelatesTo) then) =
-      __$$_CitationRelatesToCopyWithImpl<$Res>;
+  factory _$$CitationRelatesToImplCopyWith(_$CitationRelatesToImpl value,
+          $Res Function(_$CitationRelatesToImpl) then) =
+      __$$CitationRelatesToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4285,11 +4224,11 @@ abstract class _$$_CitationRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationRelatesToCopyWithImpl<$Res>
-    extends _$CitationRelatesToCopyWithImpl<$Res, _$_CitationRelatesTo>
-    implements _$$_CitationRelatesToCopyWith<$Res> {
-  __$$_CitationRelatesToCopyWithImpl(
-      _$_CitationRelatesTo _value, $Res Function(_$_CitationRelatesTo) _then)
+class __$$CitationRelatesToImplCopyWithImpl<$Res>
+    extends _$CitationRelatesToCopyWithImpl<$Res, _$CitationRelatesToImpl>
+    implements _$$CitationRelatesToImplCopyWith<$Res> {
+  __$$CitationRelatesToImplCopyWithImpl(_$CitationRelatesToImpl _value,
+      $Res Function(_$CitationRelatesToImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4306,7 +4245,7 @@ class __$$_CitationRelatesToCopyWithImpl<$Res>
     Object? targetReference = freezed,
     Object? targetAttachment = freezed,
   }) {
-    return _then(_$_CitationRelatesTo(
+    return _then(_$CitationRelatesToImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4353,8 +4292,8 @@ class __$$_CitationRelatesToCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationRelatesTo extends _CitationRelatesTo {
-  _$_CitationRelatesTo(
+class _$CitationRelatesToImpl extends _CitationRelatesTo {
+  _$CitationRelatesToImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4367,8 +4306,8 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
       this.targetAttachment})
       : super._();
 
-  factory _$_CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationRelatesToFromJson(json);
+  factory _$CitationRelatesToImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationRelatesToImplFromJson(json);
 
   @override
   final String? id;
@@ -4399,10 +4338,10 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationRelatesTo &&
+            other is _$CitationRelatesToImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4442,13 +4381,13 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationRelatesToCopyWith<_$_CitationRelatesTo> get copyWith =>
-      __$$_CitationRelatesToCopyWithImpl<_$_CitationRelatesTo>(
+  _$$CitationRelatesToImplCopyWith<_$CitationRelatesToImpl> get copyWith =>
+      __$$CitationRelatesToImplCopyWithImpl<_$CitationRelatesToImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationRelatesToToJson(
+    return _$$CitationRelatesToImplToJson(
       this,
     );
   }
@@ -4465,11 +4404,11 @@ abstract class _CitationRelatesTo extends CitationRelatesTo {
       @JsonKey(name: '_targetUri') final Element? targetUriElement,
       final Identifier? targetIdentifier,
       final Reference? targetReference,
-      final Attachment? targetAttachment}) = _$_CitationRelatesTo;
+      final Attachment? targetAttachment}) = _$CitationRelatesToImpl;
   _CitationRelatesTo._() : super._();
 
   factory _CitationRelatesTo.fromJson(Map<String, dynamic> json) =
-      _$_CitationRelatesTo.fromJson;
+      _$CitationRelatesToImpl.fromJson;
 
   @override
   String? get id;
@@ -4495,7 +4434,7 @@ abstract class _CitationRelatesTo extends CitationRelatesTo {
   Attachment? get targetAttachment;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationRelatesToCopyWith<_$_CitationRelatesTo> get copyWith =>
+  _$$CitationRelatesToImplCopyWith<_$CitationRelatesToImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4739,11 +4678,12 @@ class _$CitationCitedArtifactCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationCitedArtifactCopyWith<$Res>
+abstract class _$$CitationCitedArtifactImplCopyWith<$Res>
     implements $CitationCitedArtifactCopyWith<$Res> {
-  factory _$$_CitationCitedArtifactCopyWith(_$_CitationCitedArtifact value,
-          $Res Function(_$_CitationCitedArtifact) then) =
-      __$$_CitationCitedArtifactCopyWithImpl<$Res>;
+  factory _$$CitationCitedArtifactImplCopyWith(
+          _$CitationCitedArtifactImpl value,
+          $Res Function(_$CitationCitedArtifactImpl) then) =
+      __$$CitationCitedArtifactImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4778,11 +4718,12 @@ abstract class _$$_CitationCitedArtifactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationCitedArtifactCopyWithImpl<$Res>
-    extends _$CitationCitedArtifactCopyWithImpl<$Res, _$_CitationCitedArtifact>
-    implements _$$_CitationCitedArtifactCopyWith<$Res> {
-  __$$_CitationCitedArtifactCopyWithImpl(_$_CitationCitedArtifact _value,
-      $Res Function(_$_CitationCitedArtifact) _then)
+class __$$CitationCitedArtifactImplCopyWithImpl<$Res>
+    extends _$CitationCitedArtifactCopyWithImpl<$Res,
+        _$CitationCitedArtifactImpl>
+    implements _$$CitationCitedArtifactImplCopyWith<$Res> {
+  __$$CitationCitedArtifactImplCopyWithImpl(_$CitationCitedArtifactImpl _value,
+      $Res Function(_$CitationCitedArtifactImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4808,7 +4749,7 @@ class __$$_CitationCitedArtifactCopyWithImpl<$Res>
     Object? contributorship = freezed,
     Object? note = freezed,
   }) {
-    return _then(_$_CitationCitedArtifact(
+    return _then(_$CitationCitedArtifactImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4891,8 +4832,8 @@ class __$$_CitationCitedArtifactCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationCitedArtifact extends _CitationCitedArtifact {
-  _$_CitationCitedArtifact(
+class _$CitationCitedArtifactImpl extends _CitationCitedArtifact {
+  _$CitationCitedArtifactImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -4914,8 +4855,8 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
       this.note})
       : super._();
 
-  factory _$_CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationCitedArtifactFromJson(json);
+  factory _$CitationCitedArtifactImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationCitedArtifactImplFromJson(json);
 
   @override
   final String? id;
@@ -4965,10 +4906,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationCitedArtifact &&
+            other is _$CitationCitedArtifactImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -5030,13 +4971,13 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationCitedArtifactCopyWith<_$_CitationCitedArtifact> get copyWith =>
-      __$$_CitationCitedArtifactCopyWithImpl<_$_CitationCitedArtifact>(
-          this, _$identity);
+  _$$CitationCitedArtifactImplCopyWith<_$CitationCitedArtifactImpl>
+      get copyWith => __$$CitationCitedArtifactImplCopyWithImpl<
+          _$CitationCitedArtifactImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationCitedArtifactToJson(
+    return _$$CitationCitedArtifactImplToJson(
       this,
     );
   }
@@ -5062,11 +5003,11 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
       final List<CitationWebLocation>? webLocation,
       final List<CitationClassification1>? classification,
       final CitationContributorship? contributorship,
-      final List<Annotation>? note}) = _$_CitationCitedArtifact;
+      final List<Annotation>? note}) = _$CitationCitedArtifactImpl;
   _CitationCitedArtifact._() : super._();
 
   factory _CitationCitedArtifact.fromJson(Map<String, dynamic> json) =
-      _$_CitationCitedArtifact.fromJson;
+      _$CitationCitedArtifactImpl.fromJson;
 
   @override
   String? get id;
@@ -5111,8 +5052,8 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationCitedArtifactCopyWith<_$_CitationCitedArtifact> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CitationCitedArtifactImplCopyWith<_$CitationCitedArtifactImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CitationVersion _$CitationVersionFromJson(Map<String, dynamic> json) {
@@ -5229,11 +5170,11 @@ class _$CitationVersionCopyWithImpl<$Res, $Val extends CitationVersion>
 }
 
 /// @nodoc
-abstract class _$$_CitationVersionCopyWith<$Res>
+abstract class _$$CitationVersionImplCopyWith<$Res>
     implements $CitationVersionCopyWith<$Res> {
-  factory _$$_CitationVersionCopyWith(
-          _$_CitationVersion value, $Res Function(_$_CitationVersion) then) =
-      __$$_CitationVersionCopyWithImpl<$Res>;
+  factory _$$CitationVersionImplCopyWith(_$CitationVersionImpl value,
+          $Res Function(_$CitationVersionImpl) then) =
+      __$$CitationVersionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5251,11 +5192,11 @@ abstract class _$$_CitationVersionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationVersionCopyWithImpl<$Res>
-    extends _$CitationVersionCopyWithImpl<$Res, _$_CitationVersion>
-    implements _$$_CitationVersionCopyWith<$Res> {
-  __$$_CitationVersionCopyWithImpl(
-      _$_CitationVersion _value, $Res Function(_$_CitationVersion) _then)
+class __$$CitationVersionImplCopyWithImpl<$Res>
+    extends _$CitationVersionCopyWithImpl<$Res, _$CitationVersionImpl>
+    implements _$$CitationVersionImplCopyWith<$Res> {
+  __$$CitationVersionImplCopyWithImpl(
+      _$CitationVersionImpl _value, $Res Function(_$CitationVersionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5268,7 +5209,7 @@ class __$$_CitationVersionCopyWithImpl<$Res>
     Object? valueElement = freezed,
     Object? baseCitation = freezed,
   }) {
-    return _then(_$_CitationVersion(
+    return _then(_$CitationVersionImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5299,8 +5240,8 @@ class __$$_CitationVersionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationVersion extends _CitationVersion {
-  _$_CitationVersion(
+class _$CitationVersionImpl extends _CitationVersion {
+  _$CitationVersionImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5309,8 +5250,8 @@ class _$_CitationVersion extends _CitationVersion {
       this.baseCitation})
       : super._();
 
-  factory _$_CitationVersion.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationVersionFromJson(json);
+  factory _$CitationVersionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationVersionImplFromJson(json);
 
   @override
   final String? id;
@@ -5333,10 +5274,10 @@ class _$_CitationVersion extends _CitationVersion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationVersion &&
+            other is _$CitationVersionImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -5363,12 +5304,13 @@ class _$_CitationVersion extends _CitationVersion {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationVersionCopyWith<_$_CitationVersion> get copyWith =>
-      __$$_CitationVersionCopyWithImpl<_$_CitationVersion>(this, _$identity);
+  _$$CitationVersionImplCopyWith<_$CitationVersionImpl> get copyWith =>
+      __$$CitationVersionImplCopyWithImpl<_$CitationVersionImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationVersionToJson(
+    return _$$CitationVersionImplToJson(
       this,
     );
   }
@@ -5381,11 +5323,11 @@ abstract class _CitationVersion extends CitationVersion {
       final List<FhirExtension>? modifierExtension,
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement,
-      final Reference? baseCitation}) = _$_CitationVersion;
+      final Reference? baseCitation}) = _$CitationVersionImpl;
   _CitationVersion._() : super._();
 
   factory _CitationVersion.fromJson(Map<String, dynamic> json) =
-      _$_CitationVersion.fromJson;
+      _$CitationVersionImpl.fromJson;
 
   @override
   String? get id;
@@ -5403,7 +5345,7 @@ abstract class _CitationVersion extends CitationVersion {
   Reference? get baseCitation;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationVersionCopyWith<_$_CitationVersion> get copyWith =>
+  _$$CitationVersionImplCopyWith<_$CitationVersionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5533,11 +5475,11 @@ class _$CitationStatusDate1CopyWithImpl<$Res, $Val extends CitationStatusDate1>
 }
 
 /// @nodoc
-abstract class _$$_CitationStatusDate1CopyWith<$Res>
+abstract class _$$CitationStatusDate1ImplCopyWith<$Res>
     implements $CitationStatusDate1CopyWith<$Res> {
-  factory _$$_CitationStatusDate1CopyWith(_$_CitationStatusDate1 value,
-          $Res Function(_$_CitationStatusDate1) then) =
-      __$$_CitationStatusDate1CopyWithImpl<$Res>;
+  factory _$$CitationStatusDate1ImplCopyWith(_$CitationStatusDate1Impl value,
+          $Res Function(_$CitationStatusDate1Impl) then) =
+      __$$CitationStatusDate1ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5558,11 +5500,11 @@ abstract class _$$_CitationStatusDate1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationStatusDate1CopyWithImpl<$Res>
-    extends _$CitationStatusDate1CopyWithImpl<$Res, _$_CitationStatusDate1>
-    implements _$$_CitationStatusDate1CopyWith<$Res> {
-  __$$_CitationStatusDate1CopyWithImpl(_$_CitationStatusDate1 _value,
-      $Res Function(_$_CitationStatusDate1) _then)
+class __$$CitationStatusDate1ImplCopyWithImpl<$Res>
+    extends _$CitationStatusDate1CopyWithImpl<$Res, _$CitationStatusDate1Impl>
+    implements _$$CitationStatusDate1ImplCopyWith<$Res> {
+  __$$CitationStatusDate1ImplCopyWithImpl(_$CitationStatusDate1Impl _value,
+      $Res Function(_$CitationStatusDate1Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5576,7 +5518,7 @@ class __$$_CitationStatusDate1CopyWithImpl<$Res>
     Object? actualElement = freezed,
     Object? period = null,
   }) {
-    return _then(_$_CitationStatusDate1(
+    return _then(_$CitationStatusDate1Impl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5611,8 +5553,8 @@ class __$$_CitationStatusDate1CopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationStatusDate1 extends _CitationStatusDate1 {
-  _$_CitationStatusDate1(
+class _$CitationStatusDate1Impl extends _CitationStatusDate1 {
+  _$CitationStatusDate1Impl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5622,8 +5564,8 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
       required this.period})
       : super._();
 
-  factory _$_CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationStatusDate1FromJson(json);
+  factory _$CitationStatusDate1Impl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationStatusDate1ImplFromJson(json);
 
   @override
   final String? id;
@@ -5648,10 +5590,10 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationStatusDate1 &&
+            other is _$CitationStatusDate1Impl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -5680,13 +5622,13 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationStatusDate1CopyWith<_$_CitationStatusDate1> get copyWith =>
-      __$$_CitationStatusDate1CopyWithImpl<_$_CitationStatusDate1>(
+  _$$CitationStatusDate1ImplCopyWith<_$CitationStatusDate1Impl> get copyWith =>
+      __$$CitationStatusDate1ImplCopyWithImpl<_$CitationStatusDate1Impl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationStatusDate1ToJson(
+    return _$$CitationStatusDate1ImplToJson(
       this,
     );
   }
@@ -5700,11 +5642,11 @@ abstract class _CitationStatusDate1 extends CitationStatusDate1 {
       required final CodeableConcept activity,
       final Boolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
-      required final Period period}) = _$_CitationStatusDate1;
+      required final Period period}) = _$CitationStatusDate1Impl;
   _CitationStatusDate1._() : super._();
 
   factory _CitationStatusDate1.fromJson(Map<String, dynamic> json) =
-      _$_CitationStatusDate1.fromJson;
+      _$CitationStatusDate1Impl.fromJson;
 
   @override
   String? get id;
@@ -5724,7 +5666,7 @@ abstract class _CitationStatusDate1 extends CitationStatusDate1 {
   Period get period;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationStatusDate1CopyWith<_$_CitationStatusDate1> get copyWith =>
+  _$$CitationStatusDate1ImplCopyWith<_$CitationStatusDate1Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5862,11 +5804,11 @@ class _$CitationTitleCopyWithImpl<$Res, $Val extends CitationTitle>
 }
 
 /// @nodoc
-abstract class _$$_CitationTitleCopyWith<$Res>
+abstract class _$$CitationTitleImplCopyWith<$Res>
     implements $CitationTitleCopyWith<$Res> {
-  factory _$$_CitationTitleCopyWith(
-          _$_CitationTitle value, $Res Function(_$_CitationTitle) then) =
-      __$$_CitationTitleCopyWithImpl<$Res>;
+  factory _$$CitationTitleImplCopyWith(
+          _$CitationTitleImpl value, $Res Function(_$CitationTitleImpl) then) =
+      __$$CitationTitleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5887,11 +5829,11 @@ abstract class _$$_CitationTitleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationTitleCopyWithImpl<$Res>
-    extends _$CitationTitleCopyWithImpl<$Res, _$_CitationTitle>
-    implements _$$_CitationTitleCopyWith<$Res> {
-  __$$_CitationTitleCopyWithImpl(
-      _$_CitationTitle _value, $Res Function(_$_CitationTitle) _then)
+class __$$CitationTitleImplCopyWithImpl<$Res>
+    extends _$CitationTitleCopyWithImpl<$Res, _$CitationTitleImpl>
+    implements _$$CitationTitleImplCopyWith<$Res> {
+  __$$CitationTitleImplCopyWithImpl(
+      _$CitationTitleImpl _value, $Res Function(_$CitationTitleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5905,7 +5847,7 @@ class __$$_CitationTitleCopyWithImpl<$Res>
     Object? text = freezed,
     Object? textElement = freezed,
   }) {
-    return _then(_$_CitationTitle(
+    return _then(_$CitationTitleImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5940,8 +5882,8 @@ class __$$_CitationTitleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationTitle extends _CitationTitle {
-  _$_CitationTitle(
+class _$CitationTitleImpl extends _CitationTitle {
+  _$CitationTitleImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5951,8 +5893,8 @@ class _$_CitationTitle extends _CitationTitle {
       @JsonKey(name: '_text') this.textElement})
       : super._();
 
-  factory _$_CitationTitle.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationTitleFromJson(json);
+  factory _$CitationTitleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationTitleImplFromJson(json);
 
   @override
   final String? id;
@@ -5977,10 +5919,10 @@ class _$_CitationTitle extends _CitationTitle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationTitle &&
+            other is _$CitationTitleImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -6009,12 +5951,12 @@ class _$_CitationTitle extends _CitationTitle {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationTitleCopyWith<_$_CitationTitle> get copyWith =>
-      __$$_CitationTitleCopyWithImpl<_$_CitationTitle>(this, _$identity);
+  _$$CitationTitleImplCopyWith<_$CitationTitleImpl> get copyWith =>
+      __$$CitationTitleImplCopyWithImpl<_$CitationTitleImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationTitleToJson(
+    return _$$CitationTitleImplToJson(
       this,
     );
   }
@@ -6022,17 +5964,18 @@ class _$_CitationTitle extends _CitationTitle {
 
 abstract class _CitationTitle extends CitationTitle {
   factory _CitationTitle(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? type,
-      final CodeableConcept? language,
-      final Markdown? text,
-      @JsonKey(name: '_text') final Element? textElement}) = _$_CitationTitle;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? language,
+          final Markdown? text,
+          @JsonKey(name: '_text') final Element? textElement}) =
+      _$CitationTitleImpl;
   _CitationTitle._() : super._();
 
   factory _CitationTitle.fromJson(Map<String, dynamic> json) =
-      _$_CitationTitle.fromJson;
+      _$CitationTitleImpl.fromJson;
 
   @override
   String? get id;
@@ -6052,7 +5995,7 @@ abstract class _CitationTitle extends CitationTitle {
   Element? get textElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationTitleCopyWith<_$_CitationTitle> get copyWith =>
+  _$$CitationTitleImplCopyWith<_$CitationTitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6218,11 +6161,11 @@ class _$CitationAbstractCopyWithImpl<$Res, $Val extends CitationAbstract>
 }
 
 /// @nodoc
-abstract class _$$_CitationAbstractCopyWith<$Res>
+abstract class _$$CitationAbstractImplCopyWith<$Res>
     implements $CitationAbstractCopyWith<$Res> {
-  factory _$$_CitationAbstractCopyWith(
-          _$_CitationAbstract value, $Res Function(_$_CitationAbstract) then) =
-      __$$_CitationAbstractCopyWithImpl<$Res>;
+  factory _$$CitationAbstractImplCopyWith(_$CitationAbstractImpl value,
+          $Res Function(_$CitationAbstractImpl) then) =
+      __$$CitationAbstractImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6247,11 +6190,11 @@ abstract class _$$_CitationAbstractCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationAbstractCopyWithImpl<$Res>
-    extends _$CitationAbstractCopyWithImpl<$Res, _$_CitationAbstract>
-    implements _$$_CitationAbstractCopyWith<$Res> {
-  __$$_CitationAbstractCopyWithImpl(
-      _$_CitationAbstract _value, $Res Function(_$_CitationAbstract) _then)
+class __$$CitationAbstractImplCopyWithImpl<$Res>
+    extends _$CitationAbstractCopyWithImpl<$Res, _$CitationAbstractImpl>
+    implements _$$CitationAbstractImplCopyWith<$Res> {
+  __$$CitationAbstractImplCopyWithImpl(_$CitationAbstractImpl _value,
+      $Res Function(_$CitationAbstractImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6267,7 +6210,7 @@ class __$$_CitationAbstractCopyWithImpl<$Res>
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
   }) {
-    return _then(_$_CitationAbstract(
+    return _then(_$CitationAbstractImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6310,8 +6253,8 @@ class __$$_CitationAbstractCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationAbstract extends _CitationAbstract {
-  _$_CitationAbstract(
+class _$CitationAbstractImpl extends _CitationAbstract {
+  _$CitationAbstractImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6323,8 +6266,8 @@ class _$_CitationAbstract extends _CitationAbstract {
       @JsonKey(name: '_copyright') this.copyrightElement})
       : super._();
 
-  factory _$_CitationAbstract.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationAbstractFromJson(json);
+  factory _$CitationAbstractImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationAbstractImplFromJson(json);
 
   @override
   final String? id;
@@ -6354,10 +6297,10 @@ class _$_CitationAbstract extends _CitationAbstract {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationAbstract &&
+            other is _$CitationAbstractImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -6392,12 +6335,13 @@ class _$_CitationAbstract extends _CitationAbstract {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationAbstractCopyWith<_$_CitationAbstract> get copyWith =>
-      __$$_CitationAbstractCopyWithImpl<_$_CitationAbstract>(this, _$identity);
+  _$$CitationAbstractImplCopyWith<_$CitationAbstractImpl> get copyWith =>
+      __$$CitationAbstractImplCopyWithImpl<_$CitationAbstractImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationAbstractToJson(
+    return _$$CitationAbstractImplToJson(
       this,
     );
   }
@@ -6414,11 +6358,11 @@ abstract class _CitationAbstract extends CitationAbstract {
           @JsonKey(name: '_text') final Element? textElement,
           final Markdown? copyright,
           @JsonKey(name: '_copyright') final Element? copyrightElement}) =
-      _$_CitationAbstract;
+      _$CitationAbstractImpl;
   _CitationAbstract._() : super._();
 
   factory _CitationAbstract.fromJson(Map<String, dynamic> json) =
-      _$_CitationAbstract.fromJson;
+      _$CitationAbstractImpl.fromJson;
 
   @override
   String? get id;
@@ -6443,7 +6387,7 @@ abstract class _CitationAbstract extends CitationAbstract {
   Element? get copyrightElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationAbstractCopyWith<_$_CitationAbstract> get copyWith =>
+  _$$CitationAbstractImplCopyWith<_$CitationAbstractImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6581,11 +6525,11 @@ class _$CitationPartCopyWithImpl<$Res, $Val extends CitationPart>
 }
 
 /// @nodoc
-abstract class _$$_CitationPartCopyWith<$Res>
+abstract class _$$CitationPartImplCopyWith<$Res>
     implements $CitationPartCopyWith<$Res> {
-  factory _$$_CitationPartCopyWith(
-          _$_CitationPart value, $Res Function(_$_CitationPart) then) =
-      __$$_CitationPartCopyWithImpl<$Res>;
+  factory _$$CitationPartImplCopyWith(
+          _$CitationPartImpl value, $Res Function(_$CitationPartImpl) then) =
+      __$$CitationPartImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6606,11 +6550,11 @@ abstract class _$$_CitationPartCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationPartCopyWithImpl<$Res>
-    extends _$CitationPartCopyWithImpl<$Res, _$_CitationPart>
-    implements _$$_CitationPartCopyWith<$Res> {
-  __$$_CitationPartCopyWithImpl(
-      _$_CitationPart _value, $Res Function(_$_CitationPart) _then)
+class __$$CitationPartImplCopyWithImpl<$Res>
+    extends _$CitationPartCopyWithImpl<$Res, _$CitationPartImpl>
+    implements _$$CitationPartImplCopyWith<$Res> {
+  __$$CitationPartImplCopyWithImpl(
+      _$CitationPartImpl _value, $Res Function(_$CitationPartImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6624,7 +6568,7 @@ class __$$_CitationPartCopyWithImpl<$Res>
     Object? valueElement = freezed,
     Object? baseCitation = freezed,
   }) {
-    return _then(_$_CitationPart(
+    return _then(_$CitationPartImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6659,8 +6603,8 @@ class __$$_CitationPartCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationPart extends _CitationPart {
-  _$_CitationPart(
+class _$CitationPartImpl extends _CitationPart {
+  _$CitationPartImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6670,8 +6614,8 @@ class _$_CitationPart extends _CitationPart {
       this.baseCitation})
       : super._();
 
-  factory _$_CitationPart.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationPartFromJson(json);
+  factory _$CitationPartImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationPartImplFromJson(json);
 
   @override
   final String? id;
@@ -6696,10 +6640,10 @@ class _$_CitationPart extends _CitationPart {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationPart &&
+            other is _$CitationPartImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -6728,12 +6672,12 @@ class _$_CitationPart extends _CitationPart {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationPartCopyWith<_$_CitationPart> get copyWith =>
-      __$$_CitationPartCopyWithImpl<_$_CitationPart>(this, _$identity);
+  _$$CitationPartImplCopyWith<_$CitationPartImpl> get copyWith =>
+      __$$CitationPartImplCopyWithImpl<_$CitationPartImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPartToJson(
+    return _$$CitationPartImplToJson(
       this,
     );
   }
@@ -6747,11 +6691,11 @@ abstract class _CitationPart extends CitationPart {
       final CodeableConcept? type,
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement,
-      final Reference? baseCitation}) = _$_CitationPart;
+      final Reference? baseCitation}) = _$CitationPartImpl;
   _CitationPart._() : super._();
 
   factory _CitationPart.fromJson(Map<String, dynamic> json) =
-      _$_CitationPart.fromJson;
+      _$CitationPartImpl.fromJson;
 
   @override
   String? get id;
@@ -6771,7 +6715,7 @@ abstract class _CitationPart extends CitationPart {
   Reference? get baseCitation;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationPartCopyWith<_$_CitationPart> get copyWith =>
+  _$$CitationPartImplCopyWith<_$CitationPartImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6953,11 +6897,11 @@ class _$CitationRelatesTo1CopyWithImpl<$Res, $Val extends CitationRelatesTo1>
 }
 
 /// @nodoc
-abstract class _$$_CitationRelatesTo1CopyWith<$Res>
+abstract class _$$CitationRelatesTo1ImplCopyWith<$Res>
     implements $CitationRelatesTo1CopyWith<$Res> {
-  factory _$$_CitationRelatesTo1CopyWith(_$_CitationRelatesTo1 value,
-          $Res Function(_$_CitationRelatesTo1) then) =
-      __$$_CitationRelatesTo1CopyWithImpl<$Res>;
+  factory _$$CitationRelatesTo1ImplCopyWith(_$CitationRelatesTo1Impl value,
+          $Res Function(_$CitationRelatesTo1Impl) then) =
+      __$$CitationRelatesTo1ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6985,11 +6929,11 @@ abstract class _$$_CitationRelatesTo1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationRelatesTo1CopyWithImpl<$Res>
-    extends _$CitationRelatesTo1CopyWithImpl<$Res, _$_CitationRelatesTo1>
-    implements _$$_CitationRelatesTo1CopyWith<$Res> {
-  __$$_CitationRelatesTo1CopyWithImpl(
-      _$_CitationRelatesTo1 _value, $Res Function(_$_CitationRelatesTo1) _then)
+class __$$CitationRelatesTo1ImplCopyWithImpl<$Res>
+    extends _$CitationRelatesTo1CopyWithImpl<$Res, _$CitationRelatesTo1Impl>
+    implements _$$CitationRelatesTo1ImplCopyWith<$Res> {
+  __$$CitationRelatesTo1ImplCopyWithImpl(_$CitationRelatesTo1Impl _value,
+      $Res Function(_$CitationRelatesTo1Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7006,7 +6950,7 @@ class __$$_CitationRelatesTo1CopyWithImpl<$Res>
     Object? targetReference = freezed,
     Object? targetAttachment = freezed,
   }) {
-    return _then(_$_CitationRelatesTo1(
+    return _then(_$CitationRelatesTo1Impl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7053,8 +6997,8 @@ class __$$_CitationRelatesTo1CopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationRelatesTo1 extends _CitationRelatesTo1 {
-  _$_CitationRelatesTo1(
+class _$CitationRelatesTo1Impl extends _CitationRelatesTo1 {
+  _$CitationRelatesTo1Impl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7067,8 +7011,8 @@ class _$_CitationRelatesTo1 extends _CitationRelatesTo1 {
       this.targetAttachment})
       : super._();
 
-  factory _$_CitationRelatesTo1.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationRelatesTo1FromJson(json);
+  factory _$CitationRelatesTo1Impl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationRelatesTo1ImplFromJson(json);
 
   @override
   final String? id;
@@ -7099,10 +7043,10 @@ class _$_CitationRelatesTo1 extends _CitationRelatesTo1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationRelatesTo1 &&
+            other is _$CitationRelatesTo1Impl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -7142,13 +7086,13 @@ class _$_CitationRelatesTo1 extends _CitationRelatesTo1 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationRelatesTo1CopyWith<_$_CitationRelatesTo1> get copyWith =>
-      __$$_CitationRelatesTo1CopyWithImpl<_$_CitationRelatesTo1>(
+  _$$CitationRelatesTo1ImplCopyWith<_$CitationRelatesTo1Impl> get copyWith =>
+      __$$CitationRelatesTo1ImplCopyWithImpl<_$CitationRelatesTo1Impl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationRelatesTo1ToJson(
+    return _$$CitationRelatesTo1ImplToJson(
       this,
     );
   }
@@ -7165,11 +7109,11 @@ abstract class _CitationRelatesTo1 extends CitationRelatesTo1 {
       @JsonKey(name: '_targetUri') final Element? targetUriElement,
       final Identifier? targetIdentifier,
       final Reference? targetReference,
-      final Attachment? targetAttachment}) = _$_CitationRelatesTo1;
+      final Attachment? targetAttachment}) = _$CitationRelatesTo1Impl;
   _CitationRelatesTo1._() : super._();
 
   factory _CitationRelatesTo1.fromJson(Map<String, dynamic> json) =
-      _$_CitationRelatesTo1.fromJson;
+      _$CitationRelatesTo1Impl.fromJson;
 
   @override
   String? get id;
@@ -7195,7 +7139,7 @@ abstract class _CitationRelatesTo1 extends CitationRelatesTo1 {
   Attachment? get targetAttachment;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationRelatesTo1CopyWith<_$_CitationRelatesTo1> get copyWith =>
+  _$$CitationRelatesTo1ImplCopyWith<_$CitationRelatesTo1Impl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7540,11 +7484,12 @@ class _$CitationPublicationFormCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationPublicationFormCopyWith<$Res>
+abstract class _$$CitationPublicationFormImplCopyWith<$Res>
     implements $CitationPublicationFormCopyWith<$Res> {
-  factory _$$_CitationPublicationFormCopyWith(_$_CitationPublicationForm value,
-          $Res Function(_$_CitationPublicationForm) then) =
-      __$$_CitationPublicationFormCopyWithImpl<$Res>;
+  factory _$$CitationPublicationFormImplCopyWith(
+          _$CitationPublicationFormImpl value,
+          $Res Function(_$CitationPublicationFormImpl) then) =
+      __$$CitationPublicationFormImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7594,12 +7539,13 @@ abstract class _$$_CitationPublicationFormCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationPublicationFormCopyWithImpl<$Res>
+class __$$CitationPublicationFormImplCopyWithImpl<$Res>
     extends _$CitationPublicationFormCopyWithImpl<$Res,
-        _$_CitationPublicationForm>
-    implements _$$_CitationPublicationFormCopyWith<$Res> {
-  __$$_CitationPublicationFormCopyWithImpl(_$_CitationPublicationForm _value,
-      $Res Function(_$_CitationPublicationForm) _then)
+        _$CitationPublicationFormImpl>
+    implements _$$CitationPublicationFormImplCopyWith<$Res> {
+  __$$CitationPublicationFormImplCopyWithImpl(
+      _$CitationPublicationFormImpl _value,
+      $Res Function(_$CitationPublicationFormImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7628,7 +7574,7 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
   }) {
-    return _then(_$_CitationPublicationForm(
+    return _then(_$CitationPublicationFormImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7723,8 +7669,8 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationPublicationForm extends _CitationPublicationForm {
-  _$_CitationPublicationForm(
+class _$CitationPublicationFormImpl extends _CitationPublicationForm {
+  _$CitationPublicationFormImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7749,8 +7695,8 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
       @JsonKey(name: '_copyright') this.copyrightElement})
       : super._();
 
-  factory _$_CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationPublicationFormFromJson(json);
+  factory _$CitationPublicationFormImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationPublicationFormImplFromJson(json);
 
   @override
   final String? id;
@@ -7812,10 +7758,10 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationPublicationForm &&
+            other is _$CitationPublicationFormImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -7892,14 +7838,13 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationPublicationFormCopyWith<_$_CitationPublicationForm>
-      get copyWith =>
-          __$$_CitationPublicationFormCopyWithImpl<_$_CitationPublicationForm>(
-              this, _$identity);
+  _$$CitationPublicationFormImplCopyWith<_$CitationPublicationFormImpl>
+      get copyWith => __$$CitationPublicationFormImplCopyWithImpl<
+          _$CitationPublicationFormImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPublicationFormToJson(
+    return _$$CitationPublicationFormImplToJson(
       this,
     );
   }
@@ -7908,40 +7853,33 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
 abstract class _CitationPublicationForm extends CitationPublicationForm {
   factory _CitationPublicationForm(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CitationPublishedIn? publishedIn,
       final CitationPeriodicRelease? periodicRelease,
       final FhirDateTime? articleDate,
-      @JsonKey(name: '_articleDate')
-          final Element? articleDateElement,
+      @JsonKey(name: '_articleDate') final Element? articleDateElement,
       final FhirDateTime? lastRevisionDate,
       @JsonKey(name: '_lastRevisionDate')
-          final Element? lastRevisionDateElement,
+      final Element? lastRevisionDateElement,
       final List<CodeableConcept>? language,
       final String? accessionNumber,
-      @JsonKey(name: '_accessionNumber')
-          final Element? accessionNumberElement,
+      @JsonKey(name: '_accessionNumber') final Element? accessionNumberElement,
       final String? pageString,
-      @JsonKey(name: '_pageString')
-          final Element? pageStringElement,
+      @JsonKey(name: '_pageString') final Element? pageStringElement,
       final String? firstPage,
-      @JsonKey(name: '_firstPage')
-          final Element? firstPageElement,
+      @JsonKey(name: '_firstPage') final Element? firstPageElement,
       final String? lastPage,
-      @JsonKey(name: '_lastPage')
-          final Element? lastPageElement,
+      @JsonKey(name: '_lastPage') final Element? lastPageElement,
       final String? pageCount,
-      @JsonKey(name: '_pageCount')
-          final Element? pageCountElement,
+      @JsonKey(name: '_pageCount') final Element? pageCountElement,
       final Markdown? copyright,
       @JsonKey(name: '_copyright')
-          final Element? copyrightElement}) = _$_CitationPublicationForm;
+      final Element? copyrightElement}) = _$CitationPublicationFormImpl;
   _CitationPublicationForm._() : super._();
 
   factory _CitationPublicationForm.fromJson(Map<String, dynamic> json) =
-      _$_CitationPublicationForm.fromJson;
+      _$CitationPublicationFormImpl.fromJson;
 
   @override
   String? get id;
@@ -7998,7 +7936,7 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
   Element? get copyrightElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationPublicationFormCopyWith<_$_CitationPublicationForm>
+  _$$CitationPublicationFormImplCopyWith<_$CitationPublicationFormImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8171,11 +8109,11 @@ class _$CitationPublishedInCopyWithImpl<$Res, $Val extends CitationPublishedIn>
 }
 
 /// @nodoc
-abstract class _$$_CitationPublishedInCopyWith<$Res>
+abstract class _$$CitationPublishedInImplCopyWith<$Res>
     implements $CitationPublishedInCopyWith<$Res> {
-  factory _$$_CitationPublishedInCopyWith(_$_CitationPublishedIn value,
-          $Res Function(_$_CitationPublishedIn) then) =
-      __$$_CitationPublishedInCopyWithImpl<$Res>;
+  factory _$$CitationPublishedInImplCopyWith(_$CitationPublishedInImpl value,
+          $Res Function(_$CitationPublishedInImpl) then) =
+      __$$CitationPublishedInImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8201,11 +8139,11 @@ abstract class _$$_CitationPublishedInCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationPublishedInCopyWithImpl<$Res>
-    extends _$CitationPublishedInCopyWithImpl<$Res, _$_CitationPublishedIn>
-    implements _$$_CitationPublishedInCopyWith<$Res> {
-  __$$_CitationPublishedInCopyWithImpl(_$_CitationPublishedIn _value,
-      $Res Function(_$_CitationPublishedIn) _then)
+class __$$CitationPublishedInImplCopyWithImpl<$Res>
+    extends _$CitationPublishedInCopyWithImpl<$Res, _$CitationPublishedInImpl>
+    implements _$$CitationPublishedInImplCopyWith<$Res> {
+  __$$CitationPublishedInImplCopyWithImpl(_$CitationPublishedInImpl _value,
+      $Res Function(_$CitationPublishedInImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8222,7 +8160,7 @@ class __$$_CitationPublishedInCopyWithImpl<$Res>
     Object? publisherLocation = freezed,
     Object? publisherLocationElement = freezed,
   }) {
-    return _then(_$_CitationPublishedIn(
+    return _then(_$CitationPublishedInImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8269,8 +8207,8 @@ class __$$_CitationPublishedInCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationPublishedIn extends _CitationPublishedIn {
-  _$_CitationPublishedIn(
+class _$CitationPublishedInImpl extends _CitationPublishedIn {
+  _$CitationPublishedInImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8283,8 +8221,8 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
       @JsonKey(name: '_publisherLocation') this.publisherLocationElement})
       : super._();
 
-  factory _$_CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationPublishedInFromJson(json);
+  factory _$CitationPublishedInImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationPublishedInImplFromJson(json);
 
   @override
   final String? id;
@@ -8316,10 +8254,10 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationPublishedIn &&
+            other is _$CitationPublishedInImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -8358,13 +8296,13 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationPublishedInCopyWith<_$_CitationPublishedIn> get copyWith =>
-      __$$_CitationPublishedInCopyWithImpl<_$_CitationPublishedIn>(
+  _$$CitationPublishedInImplCopyWith<_$CitationPublishedInImpl> get copyWith =>
+      __$$CitationPublishedInImplCopyWithImpl<_$CitationPublishedInImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPublishedInToJson(
+    return _$$CitationPublishedInImplToJson(
       this,
     );
   }
@@ -8373,22 +8311,20 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
 abstract class _CitationPublishedIn extends CitationPublishedIn {
   factory _CitationPublishedIn(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? type,
       final List<Identifier>? identifier,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final Reference? publisher,
       final String? publisherLocation,
       @JsonKey(name: '_publisherLocation')
-          final Element? publisherLocationElement}) = _$_CitationPublishedIn;
+      final Element? publisherLocationElement}) = _$CitationPublishedInImpl;
   _CitationPublishedIn._() : super._();
 
   factory _CitationPublishedIn.fromJson(Map<String, dynamic> json) =
-      _$_CitationPublishedIn.fromJson;
+      _$CitationPublishedInImpl.fromJson;
 
   @override
   String? get id;
@@ -8415,7 +8351,7 @@ abstract class _CitationPublishedIn extends CitationPublishedIn {
   Element? get publisherLocationElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationPublishedInCopyWith<_$_CitationPublishedIn> get copyWith =>
+  _$$CitationPublishedInImplCopyWith<_$CitationPublishedInImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8585,11 +8521,12 @@ class _$CitationPeriodicReleaseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationPeriodicReleaseCopyWith<$Res>
+abstract class _$$CitationPeriodicReleaseImplCopyWith<$Res>
     implements $CitationPeriodicReleaseCopyWith<$Res> {
-  factory _$$_CitationPeriodicReleaseCopyWith(_$_CitationPeriodicRelease value,
-          $Res Function(_$_CitationPeriodicRelease) then) =
-      __$$_CitationPeriodicReleaseCopyWithImpl<$Res>;
+  factory _$$CitationPeriodicReleaseImplCopyWith(
+          _$CitationPeriodicReleaseImpl value,
+          $Res Function(_$CitationPeriodicReleaseImpl) then) =
+      __$$CitationPeriodicReleaseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8614,12 +8551,13 @@ abstract class _$$_CitationPeriodicReleaseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationPeriodicReleaseCopyWithImpl<$Res>
+class __$$CitationPeriodicReleaseImplCopyWithImpl<$Res>
     extends _$CitationPeriodicReleaseCopyWithImpl<$Res,
-        _$_CitationPeriodicRelease>
-    implements _$$_CitationPeriodicReleaseCopyWith<$Res> {
-  __$$_CitationPeriodicReleaseCopyWithImpl(_$_CitationPeriodicRelease _value,
-      $Res Function(_$_CitationPeriodicRelease) _then)
+        _$CitationPeriodicReleaseImpl>
+    implements _$$CitationPeriodicReleaseImplCopyWith<$Res> {
+  __$$CitationPeriodicReleaseImplCopyWithImpl(
+      _$CitationPeriodicReleaseImpl _value,
+      $Res Function(_$CitationPeriodicReleaseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8635,7 +8573,7 @@ class __$$_CitationPeriodicReleaseCopyWithImpl<$Res>
     Object? issueElement = freezed,
     Object? dateOfPublication = freezed,
   }) {
-    return _then(_$_CitationPeriodicRelease(
+    return _then(_$CitationPeriodicReleaseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -8678,8 +8616,8 @@ class __$$_CitationPeriodicReleaseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
-  _$_CitationPeriodicRelease(
+class _$CitationPeriodicReleaseImpl extends _CitationPeriodicRelease {
+  _$CitationPeriodicReleaseImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -8691,8 +8629,8 @@ class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
       this.dateOfPublication})
       : super._();
 
-  factory _$_CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationPeriodicReleaseFromJson(json);
+  factory _$CitationPeriodicReleaseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationPeriodicReleaseImplFromJson(json);
 
   @override
   final String? id;
@@ -8722,10 +8660,10 @@ class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationPeriodicRelease &&
+            other is _$CitationPeriodicReleaseImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -8760,14 +8698,13 @@ class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationPeriodicReleaseCopyWith<_$_CitationPeriodicRelease>
-      get copyWith =>
-          __$$_CitationPeriodicReleaseCopyWithImpl<_$_CitationPeriodicRelease>(
-              this, _$identity);
+  _$$CitationPeriodicReleaseImplCopyWith<_$CitationPeriodicReleaseImpl>
+      get copyWith => __$$CitationPeriodicReleaseImplCopyWithImpl<
+          _$CitationPeriodicReleaseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationPeriodicReleaseToJson(
+    return _$$CitationPeriodicReleaseImplToJson(
       this,
     );
   }
@@ -8784,11 +8721,11 @@ abstract class _CitationPeriodicRelease extends CitationPeriodicRelease {
           final String? issue,
           @JsonKey(name: '_issue') final Element? issueElement,
           final CitationDateOfPublication? dateOfPublication}) =
-      _$_CitationPeriodicRelease;
+      _$CitationPeriodicReleaseImpl;
   _CitationPeriodicRelease._() : super._();
 
   factory _CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =
-      _$_CitationPeriodicRelease.fromJson;
+      _$CitationPeriodicReleaseImpl.fromJson;
 
   @override
   String? get id;
@@ -8813,7 +8750,7 @@ abstract class _CitationPeriodicRelease extends CitationPeriodicRelease {
   CitationDateOfPublication? get dateOfPublication;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationPeriodicReleaseCopyWith<_$_CitationPeriodicRelease>
+  _$$CitationPeriodicReleaseImplCopyWith<_$CitationPeriodicReleaseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9053,12 +8990,12 @@ class _$CitationDateOfPublicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationDateOfPublicationCopyWith<$Res>
+abstract class _$$CitationDateOfPublicationImplCopyWith<$Res>
     implements $CitationDateOfPublicationCopyWith<$Res> {
-  factory _$$_CitationDateOfPublicationCopyWith(
-          _$_CitationDateOfPublication value,
-          $Res Function(_$_CitationDateOfPublication) then) =
-      __$$_CitationDateOfPublicationCopyWithImpl<$Res>;
+  factory _$$CitationDateOfPublicationImplCopyWith(
+          _$CitationDateOfPublicationImpl value,
+          $Res Function(_$CitationDateOfPublicationImpl) then) =
+      __$$CitationDateOfPublicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9093,13 +9030,13 @@ abstract class _$$_CitationDateOfPublicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationDateOfPublicationCopyWithImpl<$Res>
+class __$$CitationDateOfPublicationImplCopyWithImpl<$Res>
     extends _$CitationDateOfPublicationCopyWithImpl<$Res,
-        _$_CitationDateOfPublication>
-    implements _$$_CitationDateOfPublicationCopyWith<$Res> {
-  __$$_CitationDateOfPublicationCopyWithImpl(
-      _$_CitationDateOfPublication _value,
-      $Res Function(_$_CitationDateOfPublication) _then)
+        _$CitationDateOfPublicationImpl>
+    implements _$$CitationDateOfPublicationImplCopyWith<$Res> {
+  __$$CitationDateOfPublicationImplCopyWithImpl(
+      _$CitationDateOfPublicationImpl _value,
+      $Res Function(_$CitationDateOfPublicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9121,7 +9058,7 @@ class __$$_CitationDateOfPublicationCopyWithImpl<$Res>
     Object? text = freezed,
     Object? textElement = freezed,
   }) {
-    return _then(_$_CitationDateOfPublication(
+    return _then(_$CitationDateOfPublicationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9188,8 +9125,8 @@ class __$$_CitationDateOfPublicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationDateOfPublication extends _CitationDateOfPublication {
-  _$_CitationDateOfPublication(
+class _$CitationDateOfPublicationImpl extends _CitationDateOfPublication {
+  _$CitationDateOfPublicationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9207,8 +9144,8 @@ class _$_CitationDateOfPublication extends _CitationDateOfPublication {
       @JsonKey(name: '_text') this.textElement})
       : super._();
 
-  factory _$_CitationDateOfPublication.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationDateOfPublicationFromJson(json);
+  factory _$CitationDateOfPublicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationDateOfPublicationImplFromJson(json);
 
   @override
   final String? id;
@@ -9254,10 +9191,10 @@ class _$_CitationDateOfPublication extends _CitationDateOfPublication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationDateOfPublication &&
+            other is _$CitationDateOfPublicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -9306,13 +9243,13 @@ class _$_CitationDateOfPublication extends _CitationDateOfPublication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationDateOfPublicationCopyWith<_$_CitationDateOfPublication>
-      get copyWith => __$$_CitationDateOfPublicationCopyWithImpl<
-          _$_CitationDateOfPublication>(this, _$identity);
+  _$$CitationDateOfPublicationImplCopyWith<_$CitationDateOfPublicationImpl>
+      get copyWith => __$$CitationDateOfPublicationImplCopyWithImpl<
+          _$CitationDateOfPublicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationDateOfPublicationToJson(
+    return _$$CitationDateOfPublicationImplToJson(
       this,
     );
   }
@@ -9335,11 +9272,11 @@ abstract class _CitationDateOfPublication extends CitationDateOfPublication {
           @JsonKey(name: '_season') final Element? seasonElement,
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
-      _$_CitationDateOfPublication;
+      _$CitationDateOfPublicationImpl;
   _CitationDateOfPublication._() : super._();
 
   factory _CitationDateOfPublication.fromJson(Map<String, dynamic> json) =
-      _$_CitationDateOfPublication.fromJson;
+      _$CitationDateOfPublicationImpl.fromJson;
 
   @override
   String? get id;
@@ -9380,7 +9317,7 @@ abstract class _CitationDateOfPublication extends CitationDateOfPublication {
   Element? get textElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationDateOfPublicationCopyWith<_$_CitationDateOfPublication>
+  _$$CitationDateOfPublicationImplCopyWith<_$CitationDateOfPublicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9498,11 +9435,11 @@ class _$CitationWebLocationCopyWithImpl<$Res, $Val extends CitationWebLocation>
 }
 
 /// @nodoc
-abstract class _$$_CitationWebLocationCopyWith<$Res>
+abstract class _$$CitationWebLocationImplCopyWith<$Res>
     implements $CitationWebLocationCopyWith<$Res> {
-  factory _$$_CitationWebLocationCopyWith(_$_CitationWebLocation value,
-          $Res Function(_$_CitationWebLocation) then) =
-      __$$_CitationWebLocationCopyWithImpl<$Res>;
+  factory _$$CitationWebLocationImplCopyWith(_$CitationWebLocationImpl value,
+          $Res Function(_$CitationWebLocationImpl) then) =
+      __$$CitationWebLocationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9520,11 +9457,11 @@ abstract class _$$_CitationWebLocationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationWebLocationCopyWithImpl<$Res>
-    extends _$CitationWebLocationCopyWithImpl<$Res, _$_CitationWebLocation>
-    implements _$$_CitationWebLocationCopyWith<$Res> {
-  __$$_CitationWebLocationCopyWithImpl(_$_CitationWebLocation _value,
-      $Res Function(_$_CitationWebLocation) _then)
+class __$$CitationWebLocationImplCopyWithImpl<$Res>
+    extends _$CitationWebLocationCopyWithImpl<$Res, _$CitationWebLocationImpl>
+    implements _$$CitationWebLocationImplCopyWith<$Res> {
+  __$$CitationWebLocationImplCopyWithImpl(_$CitationWebLocationImpl _value,
+      $Res Function(_$CitationWebLocationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9537,7 +9474,7 @@ class __$$_CitationWebLocationCopyWithImpl<$Res>
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
-    return _then(_$_CitationWebLocation(
+    return _then(_$CitationWebLocationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9568,8 +9505,8 @@ class __$$_CitationWebLocationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationWebLocation extends _CitationWebLocation {
-  _$_CitationWebLocation(
+class _$CitationWebLocationImpl extends _CitationWebLocation {
+  _$CitationWebLocationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9578,8 +9515,8 @@ class _$_CitationWebLocation extends _CitationWebLocation {
       @JsonKey(name: '_url') this.urlElement})
       : super._();
 
-  factory _$_CitationWebLocation.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationWebLocationFromJson(json);
+  factory _$CitationWebLocationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationWebLocationImplFromJson(json);
 
   @override
   final String? id;
@@ -9602,10 +9539,10 @@ class _$_CitationWebLocation extends _CitationWebLocation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationWebLocation &&
+            other is _$CitationWebLocationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -9631,13 +9568,13 @@ class _$_CitationWebLocation extends _CitationWebLocation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationWebLocationCopyWith<_$_CitationWebLocation> get copyWith =>
-      __$$_CitationWebLocationCopyWithImpl<_$_CitationWebLocation>(
+  _$$CitationWebLocationImplCopyWith<_$CitationWebLocationImpl> get copyWith =>
+      __$$CitationWebLocationImplCopyWithImpl<_$CitationWebLocationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationWebLocationToJson(
+    return _$$CitationWebLocationImplToJson(
       this,
     );
   }
@@ -9651,11 +9588,11 @@ abstract class _CitationWebLocation extends CitationWebLocation {
           final CodeableConcept? type,
           final FhirUri? url,
           @JsonKey(name: '_url') final Element? urlElement}) =
-      _$_CitationWebLocation;
+      _$CitationWebLocationImpl;
   _CitationWebLocation._() : super._();
 
   factory _CitationWebLocation.fromJson(Map<String, dynamic> json) =
-      _$_CitationWebLocation.fromJson;
+      _$CitationWebLocationImpl.fromJson;
 
   @override
   String? get id;
@@ -9673,7 +9610,7 @@ abstract class _CitationWebLocation extends CitationWebLocation {
   Element? get urlElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationWebLocationCopyWith<_$_CitationWebLocation> get copyWith =>
+  _$$CitationWebLocationImplCopyWith<_$CitationWebLocationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9793,11 +9730,12 @@ class _$CitationClassification1CopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationClassification1CopyWith<$Res>
+abstract class _$$CitationClassification1ImplCopyWith<$Res>
     implements $CitationClassification1CopyWith<$Res> {
-  factory _$$_CitationClassification1CopyWith(_$_CitationClassification1 value,
-          $Res Function(_$_CitationClassification1) then) =
-      __$$_CitationClassification1CopyWithImpl<$Res>;
+  factory _$$CitationClassification1ImplCopyWith(
+          _$CitationClassification1Impl value,
+          $Res Function(_$CitationClassification1Impl) then) =
+      __$$CitationClassification1ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9815,12 +9753,13 @@ abstract class _$$_CitationClassification1CopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationClassification1CopyWithImpl<$Res>
+class __$$CitationClassification1ImplCopyWithImpl<$Res>
     extends _$CitationClassification1CopyWithImpl<$Res,
-        _$_CitationClassification1>
-    implements _$$_CitationClassification1CopyWith<$Res> {
-  __$$_CitationClassification1CopyWithImpl(_$_CitationClassification1 _value,
-      $Res Function(_$_CitationClassification1) _then)
+        _$CitationClassification1Impl>
+    implements _$$CitationClassification1ImplCopyWith<$Res> {
+  __$$CitationClassification1ImplCopyWithImpl(
+      _$CitationClassification1Impl _value,
+      $Res Function(_$CitationClassification1Impl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9833,7 +9772,7 @@ class __$$_CitationClassification1CopyWithImpl<$Res>
     Object? classifier = freezed,
     Object? whoClassified = freezed,
   }) {
-    return _then(_$_CitationClassification1(
+    return _then(_$CitationClassification1Impl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9864,8 +9803,8 @@ class __$$_CitationClassification1CopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationClassification1 extends _CitationClassification1 {
-  _$_CitationClassification1(
+class _$CitationClassification1Impl extends _CitationClassification1 {
+  _$CitationClassification1Impl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9874,8 +9813,8 @@ class _$_CitationClassification1 extends _CitationClassification1 {
       this.whoClassified})
       : super._();
 
-  factory _$_CitationClassification1.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationClassification1FromJson(json);
+  factory _$CitationClassification1Impl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationClassification1ImplFromJson(json);
 
   @override
   final String? id;
@@ -9897,10 +9836,10 @@ class _$_CitationClassification1 extends _CitationClassification1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationClassification1 &&
+            other is _$CitationClassification1Impl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -9927,14 +9866,13 @@ class _$_CitationClassification1 extends _CitationClassification1 {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationClassification1CopyWith<_$_CitationClassification1>
-      get copyWith =>
-          __$$_CitationClassification1CopyWithImpl<_$_CitationClassification1>(
-              this, _$identity);
+  _$$CitationClassification1ImplCopyWith<_$CitationClassification1Impl>
+      get copyWith => __$$CitationClassification1ImplCopyWithImpl<
+          _$CitationClassification1Impl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationClassification1ToJson(
+    return _$$CitationClassification1ImplToJson(
       this,
     );
   }
@@ -9942,16 +9880,17 @@ class _$_CitationClassification1 extends _CitationClassification1 {
 
 abstract class _CitationClassification1 extends CitationClassification1 {
   factory _CitationClassification1(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? type,
-      final List<CodeableConcept>? classifier,
-      final CitationWhoClassified? whoClassified}) = _$_CitationClassification1;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final List<CodeableConcept>? classifier,
+          final CitationWhoClassified? whoClassified}) =
+      _$CitationClassification1Impl;
   _CitationClassification1._() : super._();
 
   factory _CitationClassification1.fromJson(Map<String, dynamic> json) =
-      _$_CitationClassification1.fromJson;
+      _$CitationClassification1Impl.fromJson;
 
   @override
   String? get id;
@@ -9968,7 +9907,7 @@ abstract class _CitationClassification1 extends CitationClassification1 {
   CitationWhoClassified? get whoClassified;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationClassification1CopyWith<_$_CitationClassification1>
+  _$$CitationClassification1ImplCopyWith<_$CitationClassification1Impl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10008,18 +9947,16 @@ abstract class $CitationWhoClassifiedCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference? person,
       Reference? organization,
       Reference? publisher,
       String? classifierCopyright,
       @JsonKey(name: '_classifierCopyright')
-          Element? classifierCopyrightElement,
+      Element? classifierCopyrightElement,
       Boolean? freeToShare,
-      @JsonKey(name: '_freeToShare')
-          Element? freeToShareElement});
+      @JsonKey(name: '_freeToShare') Element? freeToShareElement});
 
   $ReferenceCopyWith<$Res>? get person;
   $ReferenceCopyWith<$Res>? get organization;
@@ -10159,27 +10096,26 @@ class _$CitationWhoClassifiedCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationWhoClassifiedCopyWith<$Res>
+abstract class _$$CitationWhoClassifiedImplCopyWith<$Res>
     implements $CitationWhoClassifiedCopyWith<$Res> {
-  factory _$$_CitationWhoClassifiedCopyWith(_$_CitationWhoClassified value,
-          $Res Function(_$_CitationWhoClassified) then) =
-      __$$_CitationWhoClassifiedCopyWithImpl<$Res>;
+  factory _$$CitationWhoClassifiedImplCopyWith(
+          _$CitationWhoClassifiedImpl value,
+          $Res Function(_$CitationWhoClassifiedImpl) then) =
+      __$$CitationWhoClassifiedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference? person,
       Reference? organization,
       Reference? publisher,
       String? classifierCopyright,
       @JsonKey(name: '_classifierCopyright')
-          Element? classifierCopyrightElement,
+      Element? classifierCopyrightElement,
       Boolean? freeToShare,
-      @JsonKey(name: '_freeToShare')
-          Element? freeToShareElement});
+      @JsonKey(name: '_freeToShare') Element? freeToShareElement});
 
   @override
   $ReferenceCopyWith<$Res>? get person;
@@ -10194,11 +10130,12 @@ abstract class _$$_CitationWhoClassifiedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationWhoClassifiedCopyWithImpl<$Res>
-    extends _$CitationWhoClassifiedCopyWithImpl<$Res, _$_CitationWhoClassified>
-    implements _$$_CitationWhoClassifiedCopyWith<$Res> {
-  __$$_CitationWhoClassifiedCopyWithImpl(_$_CitationWhoClassified _value,
-      $Res Function(_$_CitationWhoClassified) _then)
+class __$$CitationWhoClassifiedImplCopyWithImpl<$Res>
+    extends _$CitationWhoClassifiedCopyWithImpl<$Res,
+        _$CitationWhoClassifiedImpl>
+    implements _$$CitationWhoClassifiedImplCopyWith<$Res> {
+  __$$CitationWhoClassifiedImplCopyWithImpl(_$CitationWhoClassifiedImpl _value,
+      $Res Function(_$CitationWhoClassifiedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -10215,7 +10152,7 @@ class __$$_CitationWhoClassifiedCopyWithImpl<$Res>
     Object? freeToShare = freezed,
     Object? freeToShareElement = freezed,
   }) {
-    return _then(_$_CitationWhoClassified(
+    return _then(_$CitationWhoClassifiedImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -10262,8 +10199,8 @@ class __$$_CitationWhoClassifiedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationWhoClassified extends _CitationWhoClassified {
-  _$_CitationWhoClassified(
+class _$CitationWhoClassifiedImpl extends _CitationWhoClassified {
+  _$CitationWhoClassifiedImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10276,8 +10213,8 @@ class _$_CitationWhoClassified extends _CitationWhoClassified {
       @JsonKey(name: '_freeToShare') this.freeToShareElement})
       : super._();
 
-  factory _$_CitationWhoClassified.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationWhoClassifiedFromJson(json);
+  factory _$CitationWhoClassifiedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationWhoClassifiedImplFromJson(json);
 
   @override
   final String? id;
@@ -10309,10 +10246,10 @@ class _$_CitationWhoClassified extends _CitationWhoClassified {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationWhoClassified &&
+            other is _$CitationWhoClassifiedImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -10353,13 +10290,13 @@ class _$_CitationWhoClassified extends _CitationWhoClassified {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationWhoClassifiedCopyWith<_$_CitationWhoClassified> get copyWith =>
-      __$$_CitationWhoClassifiedCopyWithImpl<_$_CitationWhoClassified>(
-          this, _$identity);
+  _$$CitationWhoClassifiedImplCopyWith<_$CitationWhoClassifiedImpl>
+      get copyWith => __$$CitationWhoClassifiedImplCopyWithImpl<
+          _$CitationWhoClassifiedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationWhoClassifiedToJson(
+    return _$$CitationWhoClassifiedImplToJson(
       this,
     );
   }
@@ -10367,23 +10304,22 @@ class _$_CitationWhoClassified extends _CitationWhoClassified {
 
 abstract class _CitationWhoClassified extends CitationWhoClassified {
   factory _CitationWhoClassified(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Reference? person,
-      final Reference? organization,
-      final Reference? publisher,
-      final String? classifierCopyright,
-      @JsonKey(name: '_classifierCopyright')
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Reference? person,
+          final Reference? organization,
+          final Reference? publisher,
+          final String? classifierCopyright,
+          @JsonKey(name: '_classifierCopyright')
           final Element? classifierCopyrightElement,
-      final Boolean? freeToShare,
-      @JsonKey(name: '_freeToShare')
-          final Element? freeToShareElement}) = _$_CitationWhoClassified;
+          final Boolean? freeToShare,
+          @JsonKey(name: '_freeToShare') final Element? freeToShareElement}) =
+      _$CitationWhoClassifiedImpl;
   _CitationWhoClassified._() : super._();
 
   factory _CitationWhoClassified.fromJson(Map<String, dynamic> json) =
-      _$_CitationWhoClassified.fromJson;
+      _$CitationWhoClassifiedImpl.fromJson;
 
   @override
   String? get id;
@@ -10410,8 +10346,8 @@ abstract class _CitationWhoClassified extends CitationWhoClassified {
   Element? get freeToShareElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationWhoClassifiedCopyWith<_$_CitationWhoClassified> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CitationWhoClassifiedImplCopyWith<_$CitationWhoClassifiedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CitationContributorship _$CitationContributorshipFromJson(
@@ -10524,11 +10460,12 @@ class _$CitationContributorshipCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationContributorshipCopyWith<$Res>
+abstract class _$$CitationContributorshipImplCopyWith<$Res>
     implements $CitationContributorshipCopyWith<$Res> {
-  factory _$$_CitationContributorshipCopyWith(_$_CitationContributorship value,
-          $Res Function(_$_CitationContributorship) then) =
-      __$$_CitationContributorshipCopyWithImpl<$Res>;
+  factory _$$CitationContributorshipImplCopyWith(
+          _$CitationContributorshipImpl value,
+          $Res Function(_$CitationContributorshipImpl) then) =
+      __$$CitationContributorshipImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10545,12 +10482,13 @@ abstract class _$$_CitationContributorshipCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationContributorshipCopyWithImpl<$Res>
+class __$$CitationContributorshipImplCopyWithImpl<$Res>
     extends _$CitationContributorshipCopyWithImpl<$Res,
-        _$_CitationContributorship>
-    implements _$$_CitationContributorshipCopyWith<$Res> {
-  __$$_CitationContributorshipCopyWithImpl(_$_CitationContributorship _value,
-      $Res Function(_$_CitationContributorship) _then)
+        _$CitationContributorshipImpl>
+    implements _$$CitationContributorshipImplCopyWith<$Res> {
+  __$$CitationContributorshipImplCopyWithImpl(
+      _$CitationContributorshipImpl _value,
+      $Res Function(_$CitationContributorshipImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -10564,7 +10502,7 @@ class __$$_CitationContributorshipCopyWithImpl<$Res>
     Object? entry = freezed,
     Object? summary = freezed,
   }) {
-    return _then(_$_CitationContributorship(
+    return _then(_$CitationContributorshipImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -10599,8 +10537,8 @@ class __$$_CitationContributorshipCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationContributorship extends _CitationContributorship {
-  _$_CitationContributorship(
+class _$CitationContributorshipImpl extends _CitationContributorship {
+  _$CitationContributorshipImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -10610,8 +10548,8 @@ class _$_CitationContributorship extends _CitationContributorship {
       this.summary})
       : super._();
 
-  factory _$_CitationContributorship.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationContributorshipFromJson(json);
+  factory _$CitationContributorshipImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationContributorshipImplFromJson(json);
 
   @override
   final String? id;
@@ -10636,10 +10574,10 @@ class _$_CitationContributorship extends _CitationContributorship {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationContributorship &&
+            other is _$CitationContributorshipImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -10668,14 +10606,13 @@ class _$_CitationContributorship extends _CitationContributorship {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationContributorshipCopyWith<_$_CitationContributorship>
-      get copyWith =>
-          __$$_CitationContributorshipCopyWithImpl<_$_CitationContributorship>(
-              this, _$identity);
+  _$$CitationContributorshipImplCopyWith<_$CitationContributorshipImpl>
+      get copyWith => __$$CitationContributorshipImplCopyWithImpl<
+          _$CitationContributorshipImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationContributorshipToJson(
+    return _$$CitationContributorshipImplToJson(
       this,
     );
   }
@@ -10689,11 +10626,11 @@ abstract class _CitationContributorship extends CitationContributorship {
       final Boolean? complete,
       @JsonKey(name: '_complete') final Element? completeElement,
       final List<CitationEntry>? entry,
-      final List<CitationSummary>? summary}) = _$_CitationContributorship;
+      final List<CitationSummary>? summary}) = _$CitationContributorshipImpl;
   _CitationContributorship._() : super._();
 
   factory _CitationContributorship.fromJson(Map<String, dynamic> json) =
-      _$_CitationContributorship.fromJson;
+      _$CitationContributorshipImpl.fromJson;
 
   @override
   String? get id;
@@ -10713,7 +10650,7 @@ abstract class _CitationContributorship extends CitationContributorship {
   List<CitationSummary>? get summary;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationContributorshipCopyWith<_$_CitationContributorship>
+  _$$CitationContributorshipImplCopyWith<_$CitationContributorshipImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10767,16 +10704,13 @@ abstract class $CitationEntryCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       HumanName? name,
       String? initials,
-      @JsonKey(name: '_initials')
-          Element? initialsElement,
+      @JsonKey(name: '_initials') Element? initialsElement,
       String? collectiveName,
-      @JsonKey(name: '_collectiveName')
-          Element? collectiveNameElement,
+      @JsonKey(name: '_collectiveName') Element? collectiveNameElement,
       List<Identifier>? identifier,
       List<CitationAffiliationInfo>? affiliationInfo,
       List<Address>? address,
@@ -10786,10 +10720,9 @@ abstract class $CitationEntryCopyWith<$Res> {
       List<CitationContributionInstance>? contributionInstance,
       Boolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
-          Element? correspondingContactElement,
+      Element? correspondingContactElement,
       PositiveInt? listOrder,
-      @JsonKey(name: '_listOrder')
-          Element? listOrderElement});
+      @JsonKey(name: '_listOrder') Element? listOrderElement});
 
   $HumanNameCopyWith<$Res>? get name;
   $ElementCopyWith<$Res>? get initialsElement;
@@ -10986,25 +10919,22 @@ class _$CitationEntryCopyWithImpl<$Res, $Val extends CitationEntry>
 }
 
 /// @nodoc
-abstract class _$$_CitationEntryCopyWith<$Res>
+abstract class _$$CitationEntryImplCopyWith<$Res>
     implements $CitationEntryCopyWith<$Res> {
-  factory _$$_CitationEntryCopyWith(
-          _$_CitationEntry value, $Res Function(_$_CitationEntry) then) =
-      __$$_CitationEntryCopyWithImpl<$Res>;
+  factory _$$CitationEntryImplCopyWith(
+          _$CitationEntryImpl value, $Res Function(_$CitationEntryImpl) then) =
+      __$$CitationEntryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       HumanName? name,
       String? initials,
-      @JsonKey(name: '_initials')
-          Element? initialsElement,
+      @JsonKey(name: '_initials') Element? initialsElement,
       String? collectiveName,
-      @JsonKey(name: '_collectiveName')
-          Element? collectiveNameElement,
+      @JsonKey(name: '_collectiveName') Element? collectiveNameElement,
       List<Identifier>? identifier,
       List<CitationAffiliationInfo>? affiliationInfo,
       List<Address>? address,
@@ -11014,10 +10944,9 @@ abstract class _$$_CitationEntryCopyWith<$Res>
       List<CitationContributionInstance>? contributionInstance,
       Boolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
-          Element? correspondingContactElement,
+      Element? correspondingContactElement,
       PositiveInt? listOrder,
-      @JsonKey(name: '_listOrder')
-          Element? listOrderElement});
+      @JsonKey(name: '_listOrder') Element? listOrderElement});
 
   @override
   $HumanNameCopyWith<$Res>? get name;
@@ -11034,11 +10963,11 @@ abstract class _$$_CitationEntryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationEntryCopyWithImpl<$Res>
-    extends _$CitationEntryCopyWithImpl<$Res, _$_CitationEntry>
-    implements _$$_CitationEntryCopyWith<$Res> {
-  __$$_CitationEntryCopyWithImpl(
-      _$_CitationEntry _value, $Res Function(_$_CitationEntry) _then)
+class __$$CitationEntryImplCopyWithImpl<$Res>
+    extends _$CitationEntryCopyWithImpl<$Res, _$CitationEntryImpl>
+    implements _$$CitationEntryImplCopyWith<$Res> {
+  __$$CitationEntryImplCopyWithImpl(
+      _$CitationEntryImpl _value, $Res Function(_$CitationEntryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -11064,7 +10993,7 @@ class __$$_CitationEntryCopyWithImpl<$Res>
     Object? listOrder = freezed,
     Object? listOrderElement = freezed,
   }) {
-    return _then(_$_CitationEntry(
+    return _then(_$CitationEntryImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -11147,8 +11076,8 @@ class __$$_CitationEntryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationEntry extends _CitationEntry {
-  _$_CitationEntry(
+class _$CitationEntryImpl extends _CitationEntry {
+  _$CitationEntryImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11170,8 +11099,8 @@ class _$_CitationEntry extends _CitationEntry {
       @JsonKey(name: '_listOrder') this.listOrderElement})
       : super._();
 
-  factory _$_CitationEntry.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationEntryFromJson(json);
+  factory _$CitationEntryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationEntryImplFromJson(json);
 
   @override
   final String? id;
@@ -11223,10 +11152,10 @@ class _$_CitationEntry extends _CitationEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationEntry &&
+            other is _$CitationEntryImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -11292,12 +11221,12 @@ class _$_CitationEntry extends _CitationEntry {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationEntryCopyWith<_$_CitationEntry> get copyWith =>
-      __$$_CitationEntryCopyWithImpl<_$_CitationEntry>(this, _$identity);
+  _$$CitationEntryImplCopyWith<_$CitationEntryImpl> get copyWith =>
+      __$$CitationEntryImplCopyWithImpl<_$CitationEntryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationEntryToJson(
+    return _$$CitationEntryImplToJson(
       this,
     );
   }
@@ -11306,16 +11235,13 @@ class _$_CitationEntry extends _CitationEntry {
 abstract class _CitationEntry extends CitationEntry {
   factory _CitationEntry(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final HumanName? name,
       final String? initials,
-      @JsonKey(name: '_initials')
-          final Element? initialsElement,
+      @JsonKey(name: '_initials') final Element? initialsElement,
       final String? collectiveName,
-      @JsonKey(name: '_collectiveName')
-          final Element? collectiveNameElement,
+      @JsonKey(name: '_collectiveName') final Element? collectiveNameElement,
       final List<Identifier>? identifier,
       final List<CitationAffiliationInfo>? affiliationInfo,
       final List<Address>? address,
@@ -11325,14 +11251,14 @@ abstract class _CitationEntry extends CitationEntry {
       final List<CitationContributionInstance>? contributionInstance,
       final Boolean? correspondingContact,
       @JsonKey(name: '_correspondingContact')
-          final Element? correspondingContactElement,
+      final Element? correspondingContactElement,
       final PositiveInt? listOrder,
       @JsonKey(name: '_listOrder')
-          final Element? listOrderElement}) = _$_CitationEntry;
+      final Element? listOrderElement}) = _$CitationEntryImpl;
   _CitationEntry._() : super._();
 
   factory _CitationEntry.fromJson(Map<String, dynamic> json) =
-      _$_CitationEntry.fromJson;
+      _$CitationEntryImpl.fromJson;
 
   @override
   String? get id;
@@ -11379,7 +11305,7 @@ abstract class _CitationEntry extends CitationEntry {
   Element? get listOrderElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationEntryCopyWith<_$_CitationEntry> get copyWith =>
+  _$$CitationEntryImplCopyWith<_$CitationEntryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -11514,11 +11440,12 @@ class _$CitationAffiliationInfoCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationAffiliationInfoCopyWith<$Res>
+abstract class _$$CitationAffiliationInfoImplCopyWith<$Res>
     implements $CitationAffiliationInfoCopyWith<$Res> {
-  factory _$$_CitationAffiliationInfoCopyWith(_$_CitationAffiliationInfo value,
-          $Res Function(_$_CitationAffiliationInfo) then) =
-      __$$_CitationAffiliationInfoCopyWithImpl<$Res>;
+  factory _$$CitationAffiliationInfoImplCopyWith(
+          _$CitationAffiliationInfoImpl value,
+          $Res Function(_$CitationAffiliationInfoImpl) then) =
+      __$$CitationAffiliationInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11538,12 +11465,13 @@ abstract class _$$_CitationAffiliationInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationAffiliationInfoCopyWithImpl<$Res>
+class __$$CitationAffiliationInfoImplCopyWithImpl<$Res>
     extends _$CitationAffiliationInfoCopyWithImpl<$Res,
-        _$_CitationAffiliationInfo>
-    implements _$$_CitationAffiliationInfoCopyWith<$Res> {
-  __$$_CitationAffiliationInfoCopyWithImpl(_$_CitationAffiliationInfo _value,
-      $Res Function(_$_CitationAffiliationInfo) _then)
+        _$CitationAffiliationInfoImpl>
+    implements _$$CitationAffiliationInfoImplCopyWith<$Res> {
+  __$$CitationAffiliationInfoImplCopyWithImpl(
+      _$CitationAffiliationInfoImpl _value,
+      $Res Function(_$CitationAffiliationInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -11558,7 +11486,7 @@ class __$$_CitationAffiliationInfoCopyWithImpl<$Res>
     Object? roleElement = freezed,
     Object? identifier = freezed,
   }) {
-    return _then(_$_CitationAffiliationInfo(
+    return _then(_$CitationAffiliationInfoImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -11597,8 +11525,8 @@ class __$$_CitationAffiliationInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
-  _$_CitationAffiliationInfo(
+class _$CitationAffiliationInfoImpl extends _CitationAffiliationInfo {
+  _$CitationAffiliationInfoImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11609,8 +11537,8 @@ class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
       this.identifier})
       : super._();
 
-  factory _$_CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationAffiliationInfoFromJson(json);
+  factory _$CitationAffiliationInfoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationAffiliationInfoImplFromJson(json);
 
   @override
   final String? id;
@@ -11638,10 +11566,10 @@ class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationAffiliationInfo &&
+            other is _$CitationAffiliationInfoImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -11674,14 +11602,13 @@ class _$_CitationAffiliationInfo extends _CitationAffiliationInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationAffiliationInfoCopyWith<_$_CitationAffiliationInfo>
-      get copyWith =>
-          __$$_CitationAffiliationInfoCopyWithImpl<_$_CitationAffiliationInfo>(
-              this, _$identity);
+  _$$CitationAffiliationInfoImplCopyWith<_$CitationAffiliationInfoImpl>
+      get copyWith => __$$CitationAffiliationInfoImplCopyWithImpl<
+          _$CitationAffiliationInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationAffiliationInfoToJson(
+    return _$$CitationAffiliationInfoImplToJson(
       this,
     );
   }
@@ -11696,11 +11623,11 @@ abstract class _CitationAffiliationInfo extends CitationAffiliationInfo {
       @JsonKey(name: '_affiliation') final Element? affiliationElement,
       final String? role,
       @JsonKey(name: '_role') final Element? roleElement,
-      final List<Identifier>? identifier}) = _$_CitationAffiliationInfo;
+      final List<Identifier>? identifier}) = _$CitationAffiliationInfoImpl;
   _CitationAffiliationInfo._() : super._();
 
   factory _CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =
-      _$_CitationAffiliationInfo.fromJson;
+      _$CitationAffiliationInfoImpl.fromJson;
 
   @override
   String? get id;
@@ -11723,7 +11650,7 @@ abstract class _CitationAffiliationInfo extends CitationAffiliationInfo {
   List<Identifier>? get identifier;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationAffiliationInfoCopyWith<_$_CitationAffiliationInfo>
+  _$$CitationAffiliationInfoImplCopyWith<_$CitationAffiliationInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11841,12 +11768,12 @@ class _$CitationContributionInstanceCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CitationContributionInstanceCopyWith<$Res>
+abstract class _$$CitationContributionInstanceImplCopyWith<$Res>
     implements $CitationContributionInstanceCopyWith<$Res> {
-  factory _$$_CitationContributionInstanceCopyWith(
-          _$_CitationContributionInstance value,
-          $Res Function(_$_CitationContributionInstance) then) =
-      __$$_CitationContributionInstanceCopyWithImpl<$Res>;
+  factory _$$CitationContributionInstanceImplCopyWith(
+          _$CitationContributionInstanceImpl value,
+          $Res Function(_$CitationContributionInstanceImpl) then) =
+      __$$CitationContributionInstanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11864,13 +11791,13 @@ abstract class _$$_CitationContributionInstanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationContributionInstanceCopyWithImpl<$Res>
+class __$$CitationContributionInstanceImplCopyWithImpl<$Res>
     extends _$CitationContributionInstanceCopyWithImpl<$Res,
-        _$_CitationContributionInstance>
-    implements _$$_CitationContributionInstanceCopyWith<$Res> {
-  __$$_CitationContributionInstanceCopyWithImpl(
-      _$_CitationContributionInstance _value,
-      $Res Function(_$_CitationContributionInstance) _then)
+        _$CitationContributionInstanceImpl>
+    implements _$$CitationContributionInstanceImplCopyWith<$Res> {
+  __$$CitationContributionInstanceImplCopyWithImpl(
+      _$CitationContributionInstanceImpl _value,
+      $Res Function(_$CitationContributionInstanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -11883,7 +11810,7 @@ class __$$_CitationContributionInstanceCopyWithImpl<$Res>
     Object? time = freezed,
     Object? timeElement = freezed,
   }) {
-    return _then(_$_CitationContributionInstance(
+    return _then(_$CitationContributionInstanceImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -11914,8 +11841,8 @@ class __$$_CitationContributionInstanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationContributionInstance extends _CitationContributionInstance {
-  _$_CitationContributionInstance(
+class _$CitationContributionInstanceImpl extends _CitationContributionInstance {
+  _$CitationContributionInstanceImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -11924,8 +11851,9 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
       @JsonKey(name: '_time') this.timeElement})
       : super._();
 
-  factory _$_CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationContributionInstanceFromJson(json);
+  factory _$CitationContributionInstanceImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$CitationContributionInstanceImplFromJson(json);
 
   @override
   final String? id;
@@ -11948,10 +11876,10 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationContributionInstance &&
+            other is _$CitationContributionInstanceImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -11977,13 +11905,14 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationContributionInstanceCopyWith<_$_CitationContributionInstance>
-      get copyWith => __$$_CitationContributionInstanceCopyWithImpl<
-          _$_CitationContributionInstance>(this, _$identity);
+  _$$CitationContributionInstanceImplCopyWith<
+          _$CitationContributionInstanceImpl>
+      get copyWith => __$$CitationContributionInstanceImplCopyWithImpl<
+          _$CitationContributionInstanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationContributionInstanceToJson(
+    return _$$CitationContributionInstanceImplToJson(
       this,
     );
   }
@@ -11998,11 +11927,11 @@ abstract class _CitationContributionInstance
           required final CodeableConcept type,
           final FhirDateTime? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
-      _$_CitationContributionInstance;
+      _$CitationContributionInstanceImpl;
   _CitationContributionInstance._() : super._();
 
   factory _CitationContributionInstance.fromJson(Map<String, dynamic> json) =
-      _$_CitationContributionInstance.fromJson;
+      _$CitationContributionInstanceImpl.fromJson;
 
   @override
   String? get id;
@@ -12020,7 +11949,8 @@ abstract class _CitationContributionInstance
   Element? get timeElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationContributionInstanceCopyWith<_$_CitationContributionInstance>
+  _$$CitationContributionInstanceImplCopyWith<
+          _$CitationContributionInstanceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12178,11 +12108,11 @@ class _$CitationSummaryCopyWithImpl<$Res, $Val extends CitationSummary>
 }
 
 /// @nodoc
-abstract class _$$_CitationSummaryCopyWith<$Res>
+abstract class _$$CitationSummaryImplCopyWith<$Res>
     implements $CitationSummaryCopyWith<$Res> {
-  factory _$$_CitationSummaryCopyWith(
-          _$_CitationSummary value, $Res Function(_$_CitationSummary) then) =
-      __$$_CitationSummaryCopyWithImpl<$Res>;
+  factory _$$CitationSummaryImplCopyWith(_$CitationSummaryImpl value,
+          $Res Function(_$CitationSummaryImpl) then) =
+      __$$CitationSummaryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -12206,11 +12136,11 @@ abstract class _$$_CitationSummaryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CitationSummaryCopyWithImpl<$Res>
-    extends _$CitationSummaryCopyWithImpl<$Res, _$_CitationSummary>
-    implements _$$_CitationSummaryCopyWith<$Res> {
-  __$$_CitationSummaryCopyWithImpl(
-      _$_CitationSummary _value, $Res Function(_$_CitationSummary) _then)
+class __$$CitationSummaryImplCopyWithImpl<$Res>
+    extends _$CitationSummaryCopyWithImpl<$Res, _$CitationSummaryImpl>
+    implements _$$CitationSummaryImplCopyWith<$Res> {
+  __$$CitationSummaryImplCopyWithImpl(
+      _$CitationSummaryImpl _value, $Res Function(_$CitationSummaryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -12225,7 +12155,7 @@ class __$$_CitationSummaryCopyWithImpl<$Res>
     Object? value = freezed,
     Object? valueElement = freezed,
   }) {
-    return _then(_$_CitationSummary(
+    return _then(_$CitationSummaryImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -12264,8 +12194,8 @@ class __$$_CitationSummaryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CitationSummary extends _CitationSummary {
-  _$_CitationSummary(
+class _$CitationSummaryImpl extends _CitationSummary {
+  _$CitationSummaryImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -12276,8 +12206,8 @@ class _$_CitationSummary extends _CitationSummary {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_CitationSummary.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationSummaryFromJson(json);
+  factory _$CitationSummaryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CitationSummaryImplFromJson(json);
 
   @override
   final String? id;
@@ -12304,10 +12234,10 @@ class _$_CitationSummary extends _CitationSummary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CitationSummary &&
+            other is _$CitationSummaryImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -12337,12 +12267,13 @@ class _$_CitationSummary extends _CitationSummary {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CitationSummaryCopyWith<_$_CitationSummary> get copyWith =>
-      __$$_CitationSummaryCopyWithImpl<_$_CitationSummary>(this, _$identity);
+  _$$CitationSummaryImplCopyWith<_$CitationSummaryImpl> get copyWith =>
+      __$$CitationSummaryImplCopyWithImpl<_$CitationSummaryImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CitationSummaryToJson(
+    return _$$CitationSummaryImplToJson(
       this,
     );
   }
@@ -12358,11 +12289,11 @@ abstract class _CitationSummary extends CitationSummary {
           final CodeableConcept? source,
           final Markdown? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
-      _$_CitationSummary;
+      _$CitationSummaryImpl;
   _CitationSummary._() : super._();
 
   factory _CitationSummary.fromJson(Map<String, dynamic> json) =
-      _$_CitationSummary.fromJson;
+      _$CitationSummaryImpl.fromJson;
 
   @override
   String? get id;
@@ -12384,7 +12315,7 @@ abstract class _CitationSummary extends CitationSummary {
   Element? get valueElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CitationSummaryCopyWith<_$_CitationSummary> get copyWith =>
+  _$$CitationSummaryImplCopyWith<_$CitationSummaryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -12489,64 +12420,48 @@ abstract class $EvidenceReportCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
-          EvidenceReportStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EvidenceReportStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -12557,8 +12472,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
       List<Identifier>? relatedIdentifier,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown')
-          Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
       CodeableConcept? type,
       List<Annotation>? note,
       EvidenceReportSubject subject,
@@ -13154,73 +13068,57 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
 }
 
 /// @nodoc
-abstract class _$$_EvidenceReportCopyWith<$Res>
+abstract class _$$EvidenceReportImplCopyWith<$Res>
     implements $EvidenceReportCopyWith<$Res> {
-  factory _$$_EvidenceReportCopyWith(
-          _$_EvidenceReport value, $Res Function(_$_EvidenceReport) then) =
-      __$$_EvidenceReportCopyWithImpl<$Res>;
+  factory _$$EvidenceReportImplCopyWith(_$EvidenceReportImpl value,
+          $Res Function(_$EvidenceReportImpl) then) =
+      __$$EvidenceReportImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
-          EvidenceReportStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EvidenceReportStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -13231,8 +13129,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       List<Identifier>? relatedIdentifier,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown')
-          Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
       CodeableConcept? type,
       List<Annotation>? note,
       EvidenceReportSubject subject,
@@ -13286,11 +13183,11 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceReportCopyWithImpl<$Res>
-    extends _$EvidenceReportCopyWithImpl<$Res, _$_EvidenceReport>
-    implements _$$_EvidenceReportCopyWith<$Res> {
-  __$$_EvidenceReportCopyWithImpl(
-      _$_EvidenceReport _value, $Res Function(_$_EvidenceReport) _then)
+class __$$EvidenceReportImplCopyWithImpl<$Res>
+    extends _$EvidenceReportCopyWithImpl<$Res, _$EvidenceReportImpl>
+    implements _$$EvidenceReportImplCopyWith<$Res> {
+  __$$EvidenceReportImplCopyWithImpl(
+      _$EvidenceReportImpl _value, $Res Function(_$EvidenceReportImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -13354,7 +13251,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
     Object? relatesTo = freezed,
     Object? section = freezed,
   }) {
-    return _then(_$_EvidenceReport(
+    return _then(_$EvidenceReportImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -13589,67 +13486,50 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceReport extends _EvidenceReport {
-  _$_EvidenceReport(
+class _$EvidenceReportImpl extends _EvidenceReport {
+  _$EvidenceReportImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-          this.resourceType = R5ResourceType.EvidenceReport,
+      this.resourceType = R5ResourceType.EvidenceReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
-      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.useContext,
       this.jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       this.topic,
       this.author,
@@ -13660,8 +13540,7 @@ class _$_EvidenceReport extends _EvidenceReport {
       this.relatedIdentifier,
       this.citeAsReference,
       this.citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown')
-          this.citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
       this.type,
       this.note,
       required this.subject,
@@ -13669,8 +13548,8 @@ class _$_EvidenceReport extends _EvidenceReport {
       this.section})
       : super._();
 
-  factory _$_EvidenceReport.fromJson(Map<String, dynamic> json) =>
-      _$$_EvidenceReportFromJson(json);
+  factory _$EvidenceReportImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EvidenceReportImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
@@ -13812,10 +13691,10 @@ class _$_EvidenceReport extends _EvidenceReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceReport &&
+            other is _$EvidenceReportImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -13976,12 +13855,13 @@ class _$_EvidenceReport extends _EvidenceReport {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceReportCopyWith<_$_EvidenceReport> get copyWith =>
-      __$$_EvidenceReportCopyWithImpl<_$_EvidenceReport>(this, _$identity);
+  _$$EvidenceReportImplCopyWith<_$EvidenceReportImpl> get copyWith =>
+      __$$EvidenceReportImplCopyWithImpl<_$EvidenceReportImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportToJson(
+    return _$$EvidenceReportImplToJson(
       this,
     );
   }
@@ -13990,64 +13870,48 @@ class _$_EvidenceReport extends _EvidenceReport {
 abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
-          final EvidenceReportStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final EvidenceReportStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -14058,17 +13922,16 @@ abstract class _EvidenceReport extends EvidenceReport {
       final List<Identifier>? relatedIdentifier,
       final Reference? citeAsReference,
       final Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown')
-          final Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown') final Element? citeAsMarkdownElement,
       final CodeableConcept? type,
       final List<Annotation>? note,
       required final EvidenceReportSubject subject,
       final List<EvidenceReportRelatesTo>? relatesTo,
-      final List<EvidenceReportSection>? section}) = _$_EvidenceReport;
+      final List<EvidenceReportSection>? section}) = _$EvidenceReportImpl;
   _EvidenceReport._() : super._();
 
   factory _EvidenceReport.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceReport.fromJson;
+      _$EvidenceReportImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
@@ -14205,7 +14068,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   List<EvidenceReportSection>? get section;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceReportCopyWith<_$_EvidenceReport> get copyWith =>
+  _$$EvidenceReportImplCopyWith<_$EvidenceReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14291,11 +14154,12 @@ class _$EvidenceReportSubjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EvidenceReportSubjectCopyWith<$Res>
+abstract class _$$EvidenceReportSubjectImplCopyWith<$Res>
     implements $EvidenceReportSubjectCopyWith<$Res> {
-  factory _$$_EvidenceReportSubjectCopyWith(_$_EvidenceReportSubject value,
-          $Res Function(_$_EvidenceReportSubject) then) =
-      __$$_EvidenceReportSubjectCopyWithImpl<$Res>;
+  factory _$$EvidenceReportSubjectImplCopyWith(
+          _$EvidenceReportSubjectImpl value,
+          $Res Function(_$EvidenceReportSubjectImpl) then) =
+      __$$EvidenceReportSubjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -14307,11 +14171,12 @@ abstract class _$$_EvidenceReportSubjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceReportSubjectCopyWithImpl<$Res>
-    extends _$EvidenceReportSubjectCopyWithImpl<$Res, _$_EvidenceReportSubject>
-    implements _$$_EvidenceReportSubjectCopyWith<$Res> {
-  __$$_EvidenceReportSubjectCopyWithImpl(_$_EvidenceReportSubject _value,
-      $Res Function(_$_EvidenceReportSubject) _then)
+class __$$EvidenceReportSubjectImplCopyWithImpl<$Res>
+    extends _$EvidenceReportSubjectCopyWithImpl<$Res,
+        _$EvidenceReportSubjectImpl>
+    implements _$$EvidenceReportSubjectImplCopyWith<$Res> {
+  __$$EvidenceReportSubjectImplCopyWithImpl(_$EvidenceReportSubjectImpl _value,
+      $Res Function(_$EvidenceReportSubjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -14323,7 +14188,7 @@ class __$$_EvidenceReportSubjectCopyWithImpl<$Res>
     Object? characteristic = freezed,
     Object? note = freezed,
   }) {
-    return _then(_$_EvidenceReportSubject(
+    return _then(_$EvidenceReportSubjectImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -14350,8 +14215,8 @@ class __$$_EvidenceReportSubjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceReportSubject extends _EvidenceReportSubject {
-  _$_EvidenceReportSubject(
+class _$EvidenceReportSubjectImpl extends _EvidenceReportSubject {
+  _$EvidenceReportSubjectImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -14359,8 +14224,8 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
       this.note})
       : super._();
 
-  factory _$_EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
-      _$$_EvidenceReportSubjectFromJson(json);
+  factory _$EvidenceReportSubjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EvidenceReportSubjectImplFromJson(json);
 
   @override
   final String? id;
@@ -14380,10 +14245,10 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceReportSubject &&
+            other is _$EvidenceReportSubjectImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -14407,13 +14272,13 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceReportSubjectCopyWith<_$_EvidenceReportSubject> get copyWith =>
-      __$$_EvidenceReportSubjectCopyWithImpl<_$_EvidenceReportSubject>(
-          this, _$identity);
+  _$$EvidenceReportSubjectImplCopyWith<_$EvidenceReportSubjectImpl>
+      get copyWith => __$$EvidenceReportSubjectImplCopyWithImpl<
+          _$EvidenceReportSubjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportSubjectToJson(
+    return _$$EvidenceReportSubjectImplToJson(
       this,
     );
   }
@@ -14425,11 +14290,11 @@ abstract class _EvidenceReportSubject extends EvidenceReportSubject {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<EvidenceReportCharacteristic>? characteristic,
-      final List<Annotation>? note}) = _$_EvidenceReportSubject;
+      final List<Annotation>? note}) = _$EvidenceReportSubjectImpl;
   _EvidenceReportSubject._() : super._();
 
   factory _EvidenceReportSubject.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceReportSubject.fromJson;
+      _$EvidenceReportSubjectImpl.fromJson;
 
   @override
   String? get id;
@@ -14444,8 +14309,8 @@ abstract class _EvidenceReportSubject extends EvidenceReportSubject {
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceReportSubjectCopyWith<_$_EvidenceReportSubject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EvidenceReportSubjectImplCopyWith<_$EvidenceReportSubjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 EvidenceReportCharacteristic _$EvidenceReportCharacteristicFromJson(
@@ -14692,12 +14557,12 @@ class _$EvidenceReportCharacteristicCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EvidenceReportCharacteristicCopyWith<$Res>
+abstract class _$$EvidenceReportCharacteristicImplCopyWith<$Res>
     implements $EvidenceReportCharacteristicCopyWith<$Res> {
-  factory _$$_EvidenceReportCharacteristicCopyWith(
-          _$_EvidenceReportCharacteristic value,
-          $Res Function(_$_EvidenceReportCharacteristic) then) =
-      __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>;
+  factory _$$EvidenceReportCharacteristicImplCopyWith(
+          _$EvidenceReportCharacteristicImpl value,
+          $Res Function(_$EvidenceReportCharacteristicImpl) then) =
+      __$$EvidenceReportCharacteristicImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -14734,13 +14599,13 @@ abstract class _$$_EvidenceReportCharacteristicCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>
+class __$$EvidenceReportCharacteristicImplCopyWithImpl<$Res>
     extends _$EvidenceReportCharacteristicCopyWithImpl<$Res,
-        _$_EvidenceReportCharacteristic>
-    implements _$$_EvidenceReportCharacteristicCopyWith<$Res> {
-  __$$_EvidenceReportCharacteristicCopyWithImpl(
-      _$_EvidenceReportCharacteristic _value,
-      $Res Function(_$_EvidenceReportCharacteristic) _then)
+        _$EvidenceReportCharacteristicImpl>
+    implements _$$EvidenceReportCharacteristicImplCopyWith<$Res> {
+  __$$EvidenceReportCharacteristicImplCopyWithImpl(
+      _$EvidenceReportCharacteristicImpl _value,
+      $Res Function(_$EvidenceReportCharacteristicImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -14760,7 +14625,7 @@ class __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>
     Object? excludeElement = freezed,
     Object? period = freezed,
   }) {
-    return _then(_$_EvidenceReportCharacteristic(
+    return _then(_$EvidenceReportCharacteristicImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -14819,8 +14684,8 @@ class __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
-  _$_EvidenceReportCharacteristic(
+class _$EvidenceReportCharacteristicImpl extends _EvidenceReportCharacteristic {
+  _$EvidenceReportCharacteristicImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -14836,8 +14701,9 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
       this.period})
       : super._();
 
-  factory _$_EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$$_EvidenceReportCharacteristicFromJson(json);
+  factory _$EvidenceReportCharacteristicImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$EvidenceReportCharacteristicImplFromJson(json);
 
   @override
   final String? id;
@@ -14875,10 +14741,10 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceReportCharacteristic &&
+            other is _$EvidenceReportCharacteristicImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -14924,13 +14790,14 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceReportCharacteristicCopyWith<_$_EvidenceReportCharacteristic>
-      get copyWith => __$$_EvidenceReportCharacteristicCopyWithImpl<
-          _$_EvidenceReportCharacteristic>(this, _$identity);
+  _$$EvidenceReportCharacteristicImplCopyWith<
+          _$EvidenceReportCharacteristicImpl>
+      get copyWith => __$$EvidenceReportCharacteristicImplCopyWithImpl<
+          _$EvidenceReportCharacteristicImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportCharacteristicToJson(
+    return _$$EvidenceReportCharacteristicImplToJson(
       this,
     );
   }
@@ -14951,11 +14818,11 @@ abstract class _EvidenceReportCharacteristic
       final Range? valueRange,
       final Boolean? exclude,
       @JsonKey(name: '_exclude') final Element? excludeElement,
-      final Period? period}) = _$_EvidenceReportCharacteristic;
+      final Period? period}) = _$EvidenceReportCharacteristicImpl;
   _EvidenceReportCharacteristic._() : super._();
 
   factory _EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceReportCharacteristic.fromJson;
+      _$EvidenceReportCharacteristicImpl.fromJson;
 
   @override
   String? get id;
@@ -14988,7 +14855,8 @@ abstract class _EvidenceReportCharacteristic
   Period? get period;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceReportCharacteristicCopyWith<_$_EvidenceReportCharacteristic>
+  _$$EvidenceReportCharacteristicImplCopyWith<
+          _$EvidenceReportCharacteristicImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -15025,13 +14893,11 @@ abstract class $EvidenceReportRelatesToCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
-          EvidenceReportRelatesToCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
 
@@ -15132,22 +14998,21 @@ class _$EvidenceReportRelatesToCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EvidenceReportRelatesToCopyWith<$Res>
+abstract class _$$EvidenceReportRelatesToImplCopyWith<$Res>
     implements $EvidenceReportRelatesToCopyWith<$Res> {
-  factory _$$_EvidenceReportRelatesToCopyWith(_$_EvidenceReportRelatesTo value,
-          $Res Function(_$_EvidenceReportRelatesTo) then) =
-      __$$_EvidenceReportRelatesToCopyWithImpl<$Res>;
+  factory _$$EvidenceReportRelatesToImplCopyWith(
+          _$EvidenceReportRelatesToImpl value,
+          $Res Function(_$EvidenceReportRelatesToImpl) then) =
+      __$$EvidenceReportRelatesToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
-          EvidenceReportRelatesToCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code') Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
 
@@ -15160,12 +15025,13 @@ abstract class _$$_EvidenceReportRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceReportRelatesToCopyWithImpl<$Res>
+class __$$EvidenceReportRelatesToImplCopyWithImpl<$Res>
     extends _$EvidenceReportRelatesToCopyWithImpl<$Res,
-        _$_EvidenceReportRelatesTo>
-    implements _$$_EvidenceReportRelatesToCopyWith<$Res> {
-  __$$_EvidenceReportRelatesToCopyWithImpl(_$_EvidenceReportRelatesTo _value,
-      $Res Function(_$_EvidenceReportRelatesTo) _then)
+        _$EvidenceReportRelatesToImpl>
+    implements _$$EvidenceReportRelatesToImplCopyWith<$Res> {
+  __$$EvidenceReportRelatesToImplCopyWithImpl(
+      _$EvidenceReportRelatesToImpl _value,
+      $Res Function(_$EvidenceReportRelatesToImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -15179,7 +15045,7 @@ class __$$_EvidenceReportRelatesToCopyWithImpl<$Res>
     Object? targetIdentifier = freezed,
     Object? targetReference = freezed,
   }) {
-    return _then(_$_EvidenceReportRelatesTo(
+    return _then(_$EvidenceReportRelatesToImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -15214,8 +15080,8 @@ class __$$_EvidenceReportRelatesToCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
-  _$_EvidenceReportRelatesTo(
+class _$EvidenceReportRelatesToImpl extends _EvidenceReportRelatesTo {
+  _$EvidenceReportRelatesToImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -15225,8 +15091,8 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
       this.targetReference})
       : super._();
 
-  factory _$_EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$$_EvidenceReportRelatesToFromJson(json);
+  factory _$EvidenceReportRelatesToImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EvidenceReportRelatesToImplFromJson(json);
 
   @override
   final String? id;
@@ -15252,10 +15118,10 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceReportRelatesTo &&
+            other is _$EvidenceReportRelatesToImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -15285,14 +15151,13 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceReportRelatesToCopyWith<_$_EvidenceReportRelatesTo>
-      get copyWith =>
-          __$$_EvidenceReportRelatesToCopyWithImpl<_$_EvidenceReportRelatesTo>(
-              this, _$identity);
+  _$$EvidenceReportRelatesToImplCopyWith<_$EvidenceReportRelatesToImpl>
+      get copyWith => __$$EvidenceReportRelatesToImplCopyWithImpl<
+          _$EvidenceReportRelatesToImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportRelatesToToJson(
+    return _$$EvidenceReportRelatesToImplToJson(
       this,
     );
   }
@@ -15301,19 +15166,17 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
 abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
   factory _EvidenceReportRelatesTo(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
-          final EvidenceReportRelatesToCode? code,
-      @JsonKey(name: '_code')
-          final Element? codeElement,
+      final EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code') final Element? codeElement,
       final Identifier? targetIdentifier,
-      final Reference? targetReference}) = _$_EvidenceReportRelatesTo;
+      final Reference? targetReference}) = _$EvidenceReportRelatesToImpl;
   _EvidenceReportRelatesTo._() : super._();
 
   factory _EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceReportRelatesTo.fromJson;
+      _$EvidenceReportRelatesToImpl.fromJson;
 
   @override
   String? get id;
@@ -15334,7 +15197,7 @@ abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
   Reference? get targetReference;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceReportRelatesToCopyWith<_$_EvidenceReportRelatesTo>
+  _$$EvidenceReportRelatesToImplCopyWith<_$EvidenceReportRelatesToImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -15599,11 +15462,12 @@ class _$EvidenceReportSectionCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EvidenceReportSectionCopyWith<$Res>
+abstract class _$$EvidenceReportSectionImplCopyWith<$Res>
     implements $EvidenceReportSectionCopyWith<$Res> {
-  factory _$$_EvidenceReportSectionCopyWith(_$_EvidenceReportSection value,
-          $Res Function(_$_EvidenceReportSection) then) =
-      __$$_EvidenceReportSectionCopyWithImpl<$Res>;
+  factory _$$EvidenceReportSectionImplCopyWith(
+          _$EvidenceReportSectionImpl value,
+          $Res Function(_$EvidenceReportSectionImpl) then) =
+      __$$EvidenceReportSectionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -15642,11 +15506,12 @@ abstract class _$$_EvidenceReportSectionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceReportSectionCopyWithImpl<$Res>
-    extends _$EvidenceReportSectionCopyWithImpl<$Res, _$_EvidenceReportSection>
-    implements _$$_EvidenceReportSectionCopyWith<$Res> {
-  __$$_EvidenceReportSectionCopyWithImpl(_$_EvidenceReportSection _value,
-      $Res Function(_$_EvidenceReportSection) _then)
+class __$$EvidenceReportSectionImplCopyWithImpl<$Res>
+    extends _$EvidenceReportSectionCopyWithImpl<$Res,
+        _$EvidenceReportSectionImpl>
+    implements _$$EvidenceReportSectionImplCopyWith<$Res> {
+  __$$EvidenceReportSectionImplCopyWithImpl(_$EvidenceReportSectionImpl _value,
+      $Res Function(_$EvidenceReportSectionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -15670,7 +15535,7 @@ class __$$_EvidenceReportSectionCopyWithImpl<$Res>
     Object? emptyReason = freezed,
     Object? section = freezed,
   }) {
-    return _then(_$_EvidenceReportSection(
+    return _then(_$EvidenceReportSectionImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -15745,8 +15610,8 @@ class __$$_EvidenceReportSectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceReportSection extends _EvidenceReportSection {
-  _$_EvidenceReportSection(
+class _$EvidenceReportSectionImpl extends _EvidenceReportSection {
+  _$EvidenceReportSectionImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -15766,8 +15631,8 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
       this.section})
       : super._();
 
-  factory _$_EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
-      _$$_EvidenceReportSectionFromJson(json);
+  factory _$EvidenceReportSectionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EvidenceReportSectionImplFromJson(json);
 
   @override
   final String? id;
@@ -15813,10 +15678,10 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceReportSection &&
+            other is _$EvidenceReportSectionImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -15871,13 +15736,13 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceReportSectionCopyWith<_$_EvidenceReportSection> get copyWith =>
-      __$$_EvidenceReportSectionCopyWithImpl<_$_EvidenceReportSection>(
-          this, _$identity);
+  _$$EvidenceReportSectionImplCopyWith<_$EvidenceReportSectionImpl>
+      get copyWith => __$$EvidenceReportSectionImplCopyWithImpl<
+          _$EvidenceReportSectionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceReportSectionToJson(
+    return _$$EvidenceReportSectionImplToJson(
       this,
     );
   }
@@ -15885,27 +15750,28 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
 
 abstract class _EvidenceReportSection extends EvidenceReportSection {
   factory _EvidenceReportSection(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? title,
-      @JsonKey(name: '_title') final Element? titleElement,
-      final CodeableConcept? focus,
-      final Reference? focusReference,
-      final List<Reference>? author,
-      final Narrative? text,
-      final Code? mode,
-      @JsonKey(name: '_mode') final Element? modeElement,
-      final CodeableConcept? orderedBy,
-      final List<CodeableConcept>? entryClassifier,
-      final List<Reference>? entryReference,
-      final List<Quantity>? entryQuantity,
-      final CodeableConcept? emptyReason,
-      final List<EvidenceReportSection>? section}) = _$_EvidenceReportSection;
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? title,
+          @JsonKey(name: '_title') final Element? titleElement,
+          final CodeableConcept? focus,
+          final Reference? focusReference,
+          final List<Reference>? author,
+          final Narrative? text,
+          final Code? mode,
+          @JsonKey(name: '_mode') final Element? modeElement,
+          final CodeableConcept? orderedBy,
+          final List<CodeableConcept>? entryClassifier,
+          final List<Reference>? entryReference,
+          final List<Quantity>? entryQuantity,
+          final CodeableConcept? emptyReason,
+          final List<EvidenceReportSection>? section}) =
+      _$EvidenceReportSectionImpl;
   _EvidenceReportSection._() : super._();
 
   factory _EvidenceReportSection.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceReportSection.fromJson;
+      _$EvidenceReportSectionImpl.fromJson;
 
   @override
   String? get id;
@@ -15946,6 +15812,6 @@ abstract class _EvidenceReportSection extends EvidenceReportSection {
   List<EvidenceReportSection>? get section;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceReportSectionCopyWith<_$_EvidenceReportSection> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EvidenceReportSectionImplCopyWith<_$EvidenceReportSectionImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

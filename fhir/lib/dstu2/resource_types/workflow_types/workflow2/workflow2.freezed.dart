@@ -12,7 +12,7 @@ part of 'workflow2.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) {
   return _ProcessRequest.fromJson(json);
@@ -64,18 +64,17 @@ abstract class $ProcessRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
-          ProcessRequestAction action,
+      ProcessRequestAction action,
       List<Identifier>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
@@ -369,27 +368,26 @@ class _$ProcessRequestCopyWithImpl<$Res, $Val extends ProcessRequest>
 }
 
 /// @nodoc
-abstract class _$$_ProcessRequestCopyWith<$Res>
+abstract class _$$ProcessRequestImplCopyWith<$Res>
     implements $ProcessRequestCopyWith<$Res> {
-  factory _$$_ProcessRequestCopyWith(
-          _$_ProcessRequest value, $Res Function(_$_ProcessRequest) then) =
-      __$$_ProcessRequestCopyWithImpl<$Res>;
+  factory _$$ProcessRequestImplCopyWith(_$ProcessRequestImpl value,
+          $Res Function(_$ProcessRequestImpl) then) =
+      __$$ProcessRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
-          ProcessRequestAction action,
+      ProcessRequestAction action,
       List<Identifier>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
@@ -429,11 +427,11 @@ abstract class _$$_ProcessRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProcessRequestCopyWithImpl<$Res>
-    extends _$ProcessRequestCopyWithImpl<$Res, _$_ProcessRequest>
-    implements _$$_ProcessRequestCopyWith<$Res> {
-  __$$_ProcessRequestCopyWithImpl(
-      _$_ProcessRequest _value, $Res Function(_$_ProcessRequest) _then)
+class __$$ProcessRequestImplCopyWithImpl<$Res>
+    extends _$ProcessRequestCopyWithImpl<$Res, _$ProcessRequestImpl>
+    implements _$$ProcessRequestImplCopyWith<$Res> {
+  __$$ProcessRequestImplCopyWithImpl(
+      _$ProcessRequestImpl _value, $Res Function(_$ProcessRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -465,7 +463,7 @@ class __$$_ProcessRequestCopyWithImpl<$Res>
     Object? exclude = freezed,
     Object? period = freezed,
   }) {
-    return _then(_$_ProcessRequest(
+    return _then(_$ProcessRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -572,21 +570,20 @@ class __$$_ProcessRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProcessRequest extends _ProcessRequest {
-  _$_ProcessRequest(
+class _$ProcessRequestImpl extends _ProcessRequest {
+  _$ProcessRequestImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-          this.resourceType = Dstu2ResourceType.ProcessRequest,
+      this.resourceType = Dstu2ResourceType.ProcessRequest,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
-          required this.action,
+      required this.action,
       this.identifier,
       this.ruleset,
       this.originalRuleset,
@@ -604,8 +601,8 @@ class _$_ProcessRequest extends _ProcessRequest {
       this.period})
       : super._();
 
-  factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ProcessRequestFromJson(json);
+  factory _$ProcessRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProcessRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
@@ -667,10 +664,10 @@ class _$_ProcessRequest extends _ProcessRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProcessRequest &&
+            other is _$ProcessRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -743,12 +740,13 @@ class _$_ProcessRequest extends _ProcessRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProcessRequestCopyWith<_$_ProcessRequest> get copyWith =>
-      __$$_ProcessRequestCopyWithImpl<_$_ProcessRequest>(this, _$identity);
+  _$$ProcessRequestImplCopyWith<_$ProcessRequestImpl> get copyWith =>
+      __$$ProcessRequestImplCopyWithImpl<_$ProcessRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessRequestToJson(
+    return _$$ProcessRequestImplToJson(
       this,
     );
   }
@@ -757,18 +755,17 @@ class _$_ProcessRequest extends _ProcessRequest {
 abstract class _ProcessRequest extends ProcessRequest {
   factory _ProcessRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-          final Dstu2ResourceType resourceType,
+      final Dstu2ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       final Code? language,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
-          required final ProcessRequestAction action,
+      required final ProcessRequestAction action,
       final List<Identifier>? identifier,
       final Coding? ruleset,
       final Coding? originalRuleset,
@@ -783,11 +780,11 @@ abstract class _ProcessRequest extends ProcessRequest {
       final List<ProcessRequestItem>? item,
       final List<String>? include,
       final List<String>? exclude,
-      final Period? period}) = _$_ProcessRequest;
+      final Period? period}) = _$ProcessRequestImpl;
   _ProcessRequest._() : super._();
 
   factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequest.fromJson;
+      _$ProcessRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
@@ -844,7 +841,7 @@ abstract class _ProcessRequest extends ProcessRequest {
   Period? get period;
   @override
   @JsonKey(ignore: true)
-  _$$_ProcessRequestCopyWith<_$_ProcessRequest> get copyWith =>
+  _$$ProcessRequestImplCopyWith<_$ProcessRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -920,11 +917,11 @@ class _$ProcessRequestItemCopyWithImpl<$Res, $Val extends ProcessRequestItem>
 }
 
 /// @nodoc
-abstract class _$$_ProcessRequestItemCopyWith<$Res>
+abstract class _$$ProcessRequestItemImplCopyWith<$Res>
     implements $ProcessRequestItemCopyWith<$Res> {
-  factory _$$_ProcessRequestItemCopyWith(_$_ProcessRequestItem value,
-          $Res Function(_$_ProcessRequestItem) then) =
-      __$$_ProcessRequestItemCopyWithImpl<$Res>;
+  factory _$$ProcessRequestItemImplCopyWith(_$ProcessRequestItemImpl value,
+          $Res Function(_$ProcessRequestItemImpl) then) =
+      __$$ProcessRequestItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -935,11 +932,11 @@ abstract class _$$_ProcessRequestItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProcessRequestItemCopyWithImpl<$Res>
-    extends _$ProcessRequestItemCopyWithImpl<$Res, _$_ProcessRequestItem>
-    implements _$$_ProcessRequestItemCopyWith<$Res> {
-  __$$_ProcessRequestItemCopyWithImpl(
-      _$_ProcessRequestItem _value, $Res Function(_$_ProcessRequestItem) _then)
+class __$$ProcessRequestItemImplCopyWithImpl<$Res>
+    extends _$ProcessRequestItemCopyWithImpl<$Res, _$ProcessRequestItemImpl>
+    implements _$$ProcessRequestItemImplCopyWith<$Res> {
+  __$$ProcessRequestItemImplCopyWithImpl(_$ProcessRequestItemImpl _value,
+      $Res Function(_$ProcessRequestItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -950,7 +947,7 @@ class __$$_ProcessRequestItemCopyWithImpl<$Res>
     Object? modifierExtension = freezed,
     Object? sequenceLinkId = null,
   }) {
-    return _then(_$_ProcessRequestItem(
+    return _then(_$ProcessRequestItemImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -973,16 +970,16 @@ class __$$_ProcessRequestItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProcessRequestItem extends _ProcessRequestItem {
-  _$_ProcessRequestItem(
+class _$ProcessRequestItemImpl extends _ProcessRequestItem {
+  _$ProcessRequestItemImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.sequenceLinkId})
       : super._();
 
-  factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
-      _$$_ProcessRequestItemFromJson(json);
+  factory _$ProcessRequestItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProcessRequestItemImplFromJson(json);
 
   @override
   final Id? id;
@@ -1000,10 +997,10 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProcessRequestItem &&
+            other is _$ProcessRequestItemImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1025,13 +1022,13 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProcessRequestItemCopyWith<_$_ProcessRequestItem> get copyWith =>
-      __$$_ProcessRequestItemCopyWithImpl<_$_ProcessRequestItem>(
+  _$$ProcessRequestItemImplCopyWith<_$ProcessRequestItemImpl> get copyWith =>
+      __$$ProcessRequestItemImplCopyWithImpl<_$ProcessRequestItemImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessRequestItemToJson(
+    return _$$ProcessRequestItemImplToJson(
       this,
     );
   }
@@ -1042,11 +1039,11 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
       {final Id? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      required final Integer sequenceLinkId}) = _$_ProcessRequestItem;
+      required final Integer sequenceLinkId}) = _$ProcessRequestItemImpl;
   _ProcessRequestItem._() : super._();
 
   factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequestItem.fromJson;
+      _$ProcessRequestItemImpl.fromJson;
 
   @override
   Id? get id;
@@ -1059,7 +1056,7 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
   Integer get sequenceLinkId;
   @override
   @JsonKey(ignore: true)
-  _$$_ProcessRequestItemCopyWith<_$_ProcessRequestItem> get copyWith =>
+  _$$ProcessRequestItemImplCopyWith<_$ProcessRequestItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1109,15 +1106,14 @@ abstract class $ProcessResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? request,
@@ -1395,24 +1391,23 @@ class _$ProcessResponseCopyWithImpl<$Res, $Val extends ProcessResponse>
 }
 
 /// @nodoc
-abstract class _$$_ProcessResponseCopyWith<$Res>
+abstract class _$$ProcessResponseImplCopyWith<$Res>
     implements $ProcessResponseCopyWith<$Res> {
-  factory _$$_ProcessResponseCopyWith(
-          _$_ProcessResponse value, $Res Function(_$_ProcessResponse) then) =
-      __$$_ProcessResponseCopyWithImpl<$Res>;
+  factory _$$ProcessResponseImplCopyWith(_$ProcessResponseImpl value,
+          $Res Function(_$ProcessResponseImpl) then) =
+      __$$ProcessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
       Code? language,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? request,
@@ -1451,11 +1446,11 @@ abstract class _$$_ProcessResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProcessResponseCopyWithImpl<$Res>
-    extends _$ProcessResponseCopyWithImpl<$Res, _$_ProcessResponse>
-    implements _$$_ProcessResponseCopyWith<$Res> {
-  __$$_ProcessResponseCopyWithImpl(
-      _$_ProcessResponse _value, $Res Function(_$_ProcessResponse) _then)
+class __$$ProcessResponseImplCopyWithImpl<$Res>
+    extends _$ProcessResponseCopyWithImpl<$Res, _$ProcessResponseImpl>
+    implements _$$ProcessResponseImplCopyWith<$Res> {
+  __$$ProcessResponseImplCopyWithImpl(
+      _$ProcessResponseImpl _value, $Res Function(_$ProcessResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1484,7 +1479,7 @@ class __$$_ProcessResponseCopyWithImpl<$Res>
     Object? notes = freezed,
     Object? error = freezed,
   }) {
-    return _then(_$_ProcessResponse(
+    return _then(_$ProcessResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -1579,18 +1574,17 @@ class __$$_ProcessResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProcessResponse extends _ProcessResponse {
-  _$_ProcessResponse(
+class _$ProcessResponseImpl extends _ProcessResponse {
+  _$ProcessResponseImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
-          this.resourceType = Dstu2ResourceType.ProcessResponse,
+      this.resourceType = Dstu2ResourceType.ProcessResponse,
       this.id,
       this.meta,
       this.implicitRules,
       this.language,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.request,
@@ -1607,8 +1601,8 @@ class _$_ProcessResponse extends _ProcessResponse {
       this.error})
       : super._();
 
-  factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ProcessResponseFromJson(json);
+  factory _$ProcessResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProcessResponseImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
@@ -1663,10 +1657,10 @@ class _$_ProcessResponse extends _ProcessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProcessResponse &&
+            other is _$ProcessResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -1733,12 +1727,13 @@ class _$_ProcessResponse extends _ProcessResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProcessResponseCopyWith<_$_ProcessResponse> get copyWith =>
-      __$$_ProcessResponseCopyWithImpl<_$_ProcessResponse>(this, _$identity);
+  _$$ProcessResponseImplCopyWith<_$ProcessResponseImpl> get copyWith =>
+      __$$ProcessResponseImplCopyWithImpl<_$ProcessResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessResponseToJson(
+    return _$$ProcessResponseImplToJson(
       this,
     );
   }
@@ -1747,15 +1742,14 @@ class _$_ProcessResponse extends _ProcessResponse {
 abstract class _ProcessResponse extends ProcessResponse {
   factory _ProcessResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
-          final Dstu2ResourceType resourceType,
+      final Dstu2ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       final Code? language,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Reference? request,
@@ -1769,11 +1763,11 @@ abstract class _ProcessResponse extends ProcessResponse {
       final Reference? requestOrganization,
       final Coding? form,
       final List<ProcessResponseNotes>? notes,
-      final List<Coding>? error}) = _$_ProcessResponse;
+      final List<Coding>? error}) = _$ProcessResponseImpl;
   _ProcessResponse._() : super._();
 
   factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponse.fromJson;
+      _$ProcessResponseImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
@@ -1823,7 +1817,7 @@ abstract class _ProcessResponse extends ProcessResponse {
   List<Coding>? get error;
   @override
   @JsonKey(ignore: true)
-  _$$_ProcessResponseCopyWith<_$_ProcessResponse> get copyWith =>
+  _$$ProcessResponseImplCopyWith<_$ProcessResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1921,11 +1915,11 @@ class _$ProcessResponseNotesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ProcessResponseNotesCopyWith<$Res>
+abstract class _$$ProcessResponseNotesImplCopyWith<$Res>
     implements $ProcessResponseNotesCopyWith<$Res> {
-  factory _$$_ProcessResponseNotesCopyWith(_$_ProcessResponseNotes value,
-          $Res Function(_$_ProcessResponseNotes) then) =
-      __$$_ProcessResponseNotesCopyWithImpl<$Res>;
+  factory _$$ProcessResponseNotesImplCopyWith(_$ProcessResponseNotesImpl value,
+          $Res Function(_$ProcessResponseNotesImpl) then) =
+      __$$ProcessResponseNotesImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1940,11 +1934,11 @@ abstract class _$$_ProcessResponseNotesCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProcessResponseNotesCopyWithImpl<$Res>
-    extends _$ProcessResponseNotesCopyWithImpl<$Res, _$_ProcessResponseNotes>
-    implements _$$_ProcessResponseNotesCopyWith<$Res> {
-  __$$_ProcessResponseNotesCopyWithImpl(_$_ProcessResponseNotes _value,
-      $Res Function(_$_ProcessResponseNotes) _then)
+class __$$ProcessResponseNotesImplCopyWithImpl<$Res>
+    extends _$ProcessResponseNotesCopyWithImpl<$Res, _$ProcessResponseNotesImpl>
+    implements _$$ProcessResponseNotesImplCopyWith<$Res> {
+  __$$ProcessResponseNotesImplCopyWithImpl(_$ProcessResponseNotesImpl _value,
+      $Res Function(_$ProcessResponseNotesImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1956,7 +1950,7 @@ class __$$_ProcessResponseNotesCopyWithImpl<$Res>
     Object? type = freezed,
     Object? text = freezed,
   }) {
-    return _then(_$_ProcessResponseNotes(
+    return _then(_$ProcessResponseNotesImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1983,8 +1977,8 @@ class __$$_ProcessResponseNotesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProcessResponseNotes extends _ProcessResponseNotes {
-  _$_ProcessResponseNotes(
+class _$ProcessResponseNotesImpl extends _ProcessResponseNotes {
+  _$ProcessResponseNotesImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1992,8 +1986,8 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
       this.text})
       : super._();
 
-  factory _$_ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
-      _$$_ProcessResponseNotesFromJson(json);
+  factory _$ProcessResponseNotesImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProcessResponseNotesImplFromJson(json);
 
   @override
   final Id? id;
@@ -2013,10 +2007,10 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProcessResponseNotes &&
+            other is _$ProcessResponseNotesImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2039,13 +2033,14 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProcessResponseNotesCopyWith<_$_ProcessResponseNotes> get copyWith =>
-      __$$_ProcessResponseNotesCopyWithImpl<_$_ProcessResponseNotes>(
-          this, _$identity);
+  _$$ProcessResponseNotesImplCopyWith<_$ProcessResponseNotesImpl>
+      get copyWith =>
+          __$$ProcessResponseNotesImplCopyWithImpl<_$ProcessResponseNotesImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcessResponseNotesToJson(
+    return _$$ProcessResponseNotesImplToJson(
       this,
     );
   }
@@ -2057,11 +2052,11 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Coding? type,
-      final String? text}) = _$_ProcessResponseNotes;
+      final String? text}) = _$ProcessResponseNotesImpl;
   _ProcessResponseNotes._() : super._();
 
   factory _ProcessResponseNotes.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponseNotes.fromJson;
+      _$ProcessResponseNotesImpl.fromJson;
 
   @override
   Id? get id;
@@ -2076,8 +2071,8 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
   String? get text;
   @override
   @JsonKey(ignore: true)
-  _$$_ProcessResponseNotesCopyWith<_$_ProcessResponseNotes> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ProcessResponseNotesImplCopyWith<_$ProcessResponseNotesImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) {
@@ -2132,28 +2127,24 @@ abstract class $SupplyRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference? patient,
       Reference? source,
       FhirDateTime? date,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      SupplyRequestStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? kind,
       Reference? orderedItem,
       List<Reference>? supplier,
@@ -2468,37 +2459,33 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
 }
 
 /// @nodoc
-abstract class _$$_SupplyRequestCopyWith<$Res>
+abstract class _$$SupplyRequestImplCopyWith<$Res>
     implements $SupplyRequestCopyWith<$Res> {
-  factory _$$_SupplyRequestCopyWith(
-          _$_SupplyRequest value, $Res Function(_$_SupplyRequest) then) =
-      __$$_SupplyRequestCopyWithImpl<$Res>;
+  factory _$$SupplyRequestImplCopyWith(
+          _$SupplyRequestImpl value, $Res Function(_$SupplyRequestImpl) then) =
+      __$$SupplyRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference? patient,
       Reference? source,
       FhirDateTime? date,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      SupplyRequestStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? kind,
       Reference? orderedItem,
       List<Reference>? supplier,
@@ -2535,11 +2522,11 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyRequestCopyWithImpl<$Res>
-    extends _$SupplyRequestCopyWithImpl<$Res, _$_SupplyRequest>
-    implements _$$_SupplyRequestCopyWith<$Res> {
-  __$$_SupplyRequestCopyWithImpl(
-      _$_SupplyRequest _value, $Res Function(_$_SupplyRequest) _then)
+class __$$SupplyRequestImplCopyWithImpl<$Res>
+    extends _$SupplyRequestCopyWithImpl<$Res, _$SupplyRequestImpl>
+    implements _$$SupplyRequestImplCopyWith<$Res> {
+  __$$SupplyRequestImplCopyWithImpl(
+      _$SupplyRequestImpl _value, $Res Function(_$SupplyRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2569,7 +2556,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
     Object? reasonReference = freezed,
     Object? when = freezed,
   }) {
-    return _then(_$_SupplyRequest(
+    return _then(_$SupplyRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2668,31 +2655,26 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyRequest extends _SupplyRequest {
-  _$_SupplyRequest(
+class _$SupplyRequestImpl extends _SupplyRequest {
+  _$SupplyRequestImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
-          this.resourceType = Dstu2ResourceType.SupplyRequest,
+      this.resourceType = Dstu2ResourceType.SupplyRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.patient,
       this.source,
       this.date,
       this.identifier,
-      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.kind,
       this.orderedItem,
       this.supplier,
@@ -2701,8 +2683,8 @@ class _$_SupplyRequest extends _SupplyRequest {
       this.when})
       : super._();
 
-  factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyRequestFromJson(json);
+  factory _$SupplyRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
@@ -2763,10 +2745,10 @@ class _$_SupplyRequest extends _SupplyRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyRequest &&
+            other is _$SupplyRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -2836,12 +2818,12 @@ class _$_SupplyRequest extends _SupplyRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
-      __$$_SupplyRequestCopyWithImpl<_$_SupplyRequest>(this, _$identity);
+  _$$SupplyRequestImplCopyWith<_$SupplyRequestImpl> get copyWith =>
+      __$$SupplyRequestImplCopyWithImpl<_$SupplyRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestToJson(
+    return _$$SupplyRequestImplToJson(
       this,
     );
   }
@@ -2850,38 +2832,34 @@ class _$_SupplyRequest extends _SupplyRequest {
 abstract class _SupplyRequest extends SupplyRequest {
   factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
-          final Dstu2ResourceType resourceType,
+      final Dstu2ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Reference? patient,
       final Reference? source,
       final FhirDateTime? date,
       final Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-          final SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final SupplyRequestStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? kind,
       final Reference? orderedItem,
       final List<Reference>? supplier,
       final CodeableConcept? reasonCodeableConcept,
       final Reference? reasonReference,
-      final SupplyRequestWhen? when}) = _$_SupplyRequest;
+      final SupplyRequestWhen? when}) = _$SupplyRequestImpl;
   _SupplyRequest._() : super._();
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequest.fromJson;
+      _$SupplyRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
@@ -2937,7 +2915,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   SupplyRequestWhen? get when;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
+  _$$SupplyRequestImplCopyWith<_$SupplyRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3047,11 +3025,11 @@ class _$SupplyRequestWhenCopyWithImpl<$Res, $Val extends SupplyRequestWhen>
 }
 
 /// @nodoc
-abstract class _$$_SupplyRequestWhenCopyWith<$Res>
+abstract class _$$SupplyRequestWhenImplCopyWith<$Res>
     implements $SupplyRequestWhenCopyWith<$Res> {
-  factory _$$_SupplyRequestWhenCopyWith(_$_SupplyRequestWhen value,
-          $Res Function(_$_SupplyRequestWhen) then) =
-      __$$_SupplyRequestWhenCopyWithImpl<$Res>;
+  factory _$$SupplyRequestWhenImplCopyWith(_$SupplyRequestWhenImpl value,
+          $Res Function(_$SupplyRequestWhenImpl) then) =
+      __$$SupplyRequestWhenImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3068,11 +3046,11 @@ abstract class _$$_SupplyRequestWhenCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyRequestWhenCopyWithImpl<$Res>
-    extends _$SupplyRequestWhenCopyWithImpl<$Res, _$_SupplyRequestWhen>
-    implements _$$_SupplyRequestWhenCopyWith<$Res> {
-  __$$_SupplyRequestWhenCopyWithImpl(
-      _$_SupplyRequestWhen _value, $Res Function(_$_SupplyRequestWhen) _then)
+class __$$SupplyRequestWhenImplCopyWithImpl<$Res>
+    extends _$SupplyRequestWhenCopyWithImpl<$Res, _$SupplyRequestWhenImpl>
+    implements _$$SupplyRequestWhenImplCopyWith<$Res> {
+  __$$SupplyRequestWhenImplCopyWithImpl(_$SupplyRequestWhenImpl _value,
+      $Res Function(_$SupplyRequestWhenImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3084,7 +3062,7 @@ class __$$_SupplyRequestWhenCopyWithImpl<$Res>
     Object? code = freezed,
     Object? schedule = freezed,
   }) {
-    return _then(_$_SupplyRequestWhen(
+    return _then(_$SupplyRequestWhenImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3111,8 +3089,8 @@ class __$$_SupplyRequestWhenCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyRequestWhen extends _SupplyRequestWhen {
-  _$_SupplyRequestWhen(
+class _$SupplyRequestWhenImpl extends _SupplyRequestWhen {
+  _$SupplyRequestWhenImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3120,8 +3098,8 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
       this.schedule})
       : super._();
 
-  factory _$_SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyRequestWhenFromJson(json);
+  factory _$SupplyRequestWhenImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyRequestWhenImplFromJson(json);
 
   @override
   final Id? id;
@@ -3141,10 +3119,10 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyRequestWhen &&
+            other is _$SupplyRequestWhenImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3168,13 +3146,13 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyRequestWhenCopyWith<_$_SupplyRequestWhen> get copyWith =>
-      __$$_SupplyRequestWhenCopyWithImpl<_$_SupplyRequestWhen>(
+  _$$SupplyRequestWhenImplCopyWith<_$SupplyRequestWhenImpl> get copyWith =>
+      __$$SupplyRequestWhenImplCopyWithImpl<_$SupplyRequestWhenImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestWhenToJson(
+    return _$$SupplyRequestWhenImplToJson(
       this,
     );
   }
@@ -3186,11 +3164,11 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? code,
-      final Timing? schedule}) = _$_SupplyRequestWhen;
+      final Timing? schedule}) = _$SupplyRequestWhenImpl;
   _SupplyRequestWhen._() : super._();
 
   factory _SupplyRequestWhen.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequestWhen.fromJson;
+      _$SupplyRequestWhenImpl.fromJson;
 
   @override
   Id? get id;
@@ -3205,7 +3183,7 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
   Timing? get schedule;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyRequestWhenCopyWith<_$_SupplyRequestWhen> get copyWith =>
+  _$$SupplyRequestWhenImplCopyWith<_$SupplyRequestWhenImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3260,25 +3238,21 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      SupplyDeliveryStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? patient,
       CodeableConcept? type,
       Quantity? quantity,
@@ -3595,34 +3569,30 @@ class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
 }
 
 /// @nodoc
-abstract class _$$_SupplyDeliveryCopyWith<$Res>
+abstract class _$$SupplyDeliveryImplCopyWith<$Res>
     implements $SupplyDeliveryCopyWith<$Res> {
-  factory _$$_SupplyDeliveryCopyWith(
-          _$_SupplyDelivery value, $Res Function(_$_SupplyDelivery) then) =
-      __$$_SupplyDeliveryCopyWithImpl<$Res>;
+  factory _$$SupplyDeliveryImplCopyWith(_$SupplyDeliveryImpl value,
+          $Res Function(_$SupplyDeliveryImpl) then) =
+      __$$SupplyDeliveryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
-          Dstu2ResourceType resourceType,
+      Dstu2ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      SupplyDeliveryStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? patient,
       CodeableConcept? type,
       Quantity? quantity,
@@ -3662,11 +3632,11 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyDeliveryCopyWithImpl<$Res>
-    extends _$SupplyDeliveryCopyWithImpl<$Res, _$_SupplyDelivery>
-    implements _$$_SupplyDeliveryCopyWith<$Res> {
-  __$$_SupplyDeliveryCopyWithImpl(
-      _$_SupplyDelivery _value, $Res Function(_$_SupplyDelivery) _then)
+class __$$SupplyDeliveryImplCopyWithImpl<$Res>
+    extends _$SupplyDeliveryCopyWithImpl<$Res, _$SupplyDeliveryImpl>
+    implements _$$SupplyDeliveryImplCopyWith<$Res> {
+  __$$SupplyDeliveryImplCopyWithImpl(
+      _$SupplyDeliveryImpl _value, $Res Function(_$SupplyDeliveryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3696,7 +3666,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
     Object? destination = freezed,
     Object? receiver = freezed,
   }) {
-    return _then(_$_SupplyDelivery(
+    return _then(_$SupplyDeliveryImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3795,28 +3765,23 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyDelivery extends _SupplyDelivery {
-  _$_SupplyDelivery(
+class _$SupplyDeliveryImpl extends _SupplyDelivery {
+  _$SupplyDeliveryImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
-          this.resourceType = Dstu2ResourceType.SupplyDelivery,
+      this.resourceType = Dstu2ResourceType.SupplyDelivery,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.patient,
       this.type,
       this.quantity,
@@ -3828,8 +3793,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       this.receiver})
       : super._();
 
-  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyDeliveryFromJson(json);
+  factory _$SupplyDeliveryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyDeliveryImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
@@ -3890,10 +3855,10 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyDelivery &&
+            other is _$SupplyDeliveryImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -3965,12 +3930,13 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
-      __$$_SupplyDeliveryCopyWithImpl<_$_SupplyDelivery>(this, _$identity);
+  _$$SupplyDeliveryImplCopyWith<_$SupplyDeliveryImpl> get copyWith =>
+      __$$SupplyDeliveryImplCopyWithImpl<_$SupplyDeliveryImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliveryToJson(
+    return _$$SupplyDeliveryImplToJson(
       this,
     );
   }
@@ -3979,25 +3945,21 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 abstract class _SupplyDelivery extends SupplyDelivery {
   factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
-          final Dstu2ResourceType resourceType,
+      final Dstu2ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-          final SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final SupplyDeliveryStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? patient,
       final CodeableConcept? type,
       final Quantity? quantity,
@@ -4006,11 +3968,11 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final Period? whenPrepared,
       final FhirDateTime? time,
       final Reference? destination,
-      final List<Reference>? receiver}) = _$_SupplyDelivery;
+      final List<Reference>? receiver}) = _$SupplyDeliveryImpl;
   _SupplyDelivery._() : super._();
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDelivery.fromJson;
+      _$SupplyDeliveryImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
@@ -4066,6 +4028,6 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   List<Reference>? get receiver;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
+  _$$SupplyDeliveryImplCopyWith<_$SupplyDeliveryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
