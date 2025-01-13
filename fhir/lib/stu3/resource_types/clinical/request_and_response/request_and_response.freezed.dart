@@ -12,7 +12,7 @@ part of 'request_and_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Communication _$CommunicationFromJson(Map<String, dynamic> json) {
   return _Communication.fromJson(json);
@@ -79,30 +79,25 @@ abstract class $CommunicationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? definition,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? notDone,
-      @JsonKey(name: '_notDone')
-          Element? notDoneElement,
+      @JsonKey(name: '_notDone') Element? notDoneElement,
       CodeableConcept? notDoneReason,
       List<CodeableConcept>? category,
       List<CodeableConcept>? medium,
@@ -111,11 +106,9 @@ abstract class $CommunicationCopyWith<$Res> {
       List<Reference>? topic,
       Reference? context,
       String? sent,
-      @JsonKey(name: '_sent')
-          Element? sentElement,
+      @JsonKey(name: '_sent') Element? sentElement,
       String? received,
-      @JsonKey(name: '_received')
-          Element? receivedElement,
+      @JsonKey(name: '_received') Element? receivedElement,
       Reference? sender,
       List<CodeableConcept>? reasonCode,
       List<Reference>? reasonReference,
@@ -475,39 +468,34 @@ class _$CommunicationCopyWithImpl<$Res, $Val extends Communication>
 }
 
 /// @nodoc
-abstract class _$$_CommunicationCopyWith<$Res>
+abstract class _$$CommunicationImplCopyWith<$Res>
     implements $CommunicationCopyWith<$Res> {
-  factory _$$_CommunicationCopyWith(
-          _$_Communication value, $Res Function(_$_Communication) then) =
-      __$$_CommunicationCopyWithImpl<$Res>;
+  factory _$$CommunicationImplCopyWith(
+          _$CommunicationImpl value, $Res Function(_$CommunicationImpl) then) =
+      __$$CommunicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? definition,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Boolean? notDone,
-      @JsonKey(name: '_notDone')
-          Element? notDoneElement,
+      @JsonKey(name: '_notDone') Element? notDoneElement,
       CodeableConcept? notDoneReason,
       List<CodeableConcept>? category,
       List<CodeableConcept>? medium,
@@ -516,11 +504,9 @@ abstract class _$$_CommunicationCopyWith<$Res>
       List<Reference>? topic,
       Reference? context,
       String? sent,
-      @JsonKey(name: '_sent')
-          Element? sentElement,
+      @JsonKey(name: '_sent') Element? sentElement,
       String? received,
-      @JsonKey(name: '_received')
-          Element? receivedElement,
+      @JsonKey(name: '_received') Element? receivedElement,
       Reference? sender,
       List<CodeableConcept>? reasonCode,
       List<Reference>? reasonReference,
@@ -554,11 +540,11 @@ abstract class _$$_CommunicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunicationCopyWithImpl<$Res>
-    extends _$CommunicationCopyWithImpl<$Res, _$_Communication>
-    implements _$$_CommunicationCopyWith<$Res> {
-  __$$_CommunicationCopyWithImpl(
-      _$_Communication _value, $Res Function(_$_Communication) _then)
+class __$$CommunicationImplCopyWithImpl<$Res>
+    extends _$CommunicationCopyWithImpl<$Res, _$CommunicationImpl>
+    implements _$$CommunicationImplCopyWith<$Res> {
+  __$$CommunicationImplCopyWithImpl(
+      _$CommunicationImpl _value, $Res Function(_$CommunicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -600,7 +586,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
     Object? payload = freezed,
     Object? note = freezed,
   }) {
-    return _then(_$_Communication(
+    return _then(_$CommunicationImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -747,33 +733,28 @@ class __$$_CommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Communication extends _Communication {
-  _$_Communication(
+class _$CommunicationImpl extends _Communication {
+  _$CommunicationImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-          this.resourceType = Stu3ResourceType.Communication,
+      this.resourceType = Stu3ResourceType.Communication,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
       this.basedOn,
       this.partOf,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.notDone,
-      @JsonKey(name: '_notDone')
-          this.notDoneElement,
+      @JsonKey(name: '_notDone') this.notDoneElement,
       this.notDoneReason,
       this.category,
       this.medium,
@@ -782,11 +763,9 @@ class _$_Communication extends _Communication {
       this.topic,
       this.context,
       this.sent,
-      @JsonKey(name: '_sent')
-          this.sentElement,
+      @JsonKey(name: '_sent') this.sentElement,
       this.received,
-      @JsonKey(name: '_received')
-          this.receivedElement,
+      @JsonKey(name: '_received') this.receivedElement,
       this.sender,
       this.reasonCode,
       this.reasonReference,
@@ -794,8 +773,8 @@ class _$_Communication extends _Communication {
       this.note})
       : super._();
 
-  factory _$_Communication.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunicationFromJson(json);
+  factory _$CommunicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunicationImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
@@ -882,10 +861,10 @@ class _$_Communication extends _Communication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Communication &&
+            other is _$CommunicationImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -984,12 +963,12 @@ class _$_Communication extends _Communication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunicationCopyWith<_$_Communication> get copyWith =>
-      __$$_CommunicationCopyWithImpl<_$_Communication>(this, _$identity);
+  _$$CommunicationImplCopyWith<_$CommunicationImpl> get copyWith =>
+      __$$CommunicationImplCopyWithImpl<_$CommunicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationToJson(
+    return _$$CommunicationImplToJson(
       this,
     );
   }
@@ -998,30 +977,25 @@ class _$_Communication extends _Communication {
 abstract class _Communication extends Communication {
   factory _Communication(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? definition,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Boolean? notDone,
-      @JsonKey(name: '_notDone')
-          final Element? notDoneElement,
+      @JsonKey(name: '_notDone') final Element? notDoneElement,
       final CodeableConcept? notDoneReason,
       final List<CodeableConcept>? category,
       final List<CodeableConcept>? medium,
@@ -1030,20 +1004,18 @@ abstract class _Communication extends Communication {
       final List<Reference>? topic,
       final Reference? context,
       final String? sent,
-      @JsonKey(name: '_sent')
-          final Element? sentElement,
+      @JsonKey(name: '_sent') final Element? sentElement,
       final String? received,
-      @JsonKey(name: '_received')
-          final Element? receivedElement,
+      @JsonKey(name: '_received') final Element? receivedElement,
       final Reference? sender,
       final List<CodeableConcept>? reasonCode,
       final List<Reference>? reasonReference,
       final List<CommunicationPayload>? payload,
-      final List<Annotation>? note}) = _$_Communication;
+      final List<Annotation>? note}) = _$CommunicationImpl;
   _Communication._() : super._();
 
   factory _Communication.fromJson(Map<String, dynamic> json) =
-      _$_Communication.fromJson;
+      _$CommunicationImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
@@ -1125,7 +1097,7 @@ abstract class _Communication extends Communication {
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunicationCopyWith<_$_Communication> get copyWith =>
+  _$$CommunicationImplCopyWith<_$CommunicationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1241,11 +1213,11 @@ class _$CommunicationPayloadCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CommunicationPayloadCopyWith<$Res>
+abstract class _$$CommunicationPayloadImplCopyWith<$Res>
     implements $CommunicationPayloadCopyWith<$Res> {
-  factory _$$_CommunicationPayloadCopyWith(_$_CommunicationPayload value,
-          $Res Function(_$_CommunicationPayload) then) =
-      __$$_CommunicationPayloadCopyWithImpl<$Res>;
+  factory _$$CommunicationPayloadImplCopyWith(_$CommunicationPayloadImpl value,
+          $Res Function(_$CommunicationPayloadImpl) then) =
+      __$$CommunicationPayloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1263,11 +1235,11 @@ abstract class _$$_CommunicationPayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunicationPayloadCopyWithImpl<$Res>
-    extends _$CommunicationPayloadCopyWithImpl<$Res, _$_CommunicationPayload>
-    implements _$$_CommunicationPayloadCopyWith<$Res> {
-  __$$_CommunicationPayloadCopyWithImpl(_$_CommunicationPayload _value,
-      $Res Function(_$_CommunicationPayload) _then)
+class __$$CommunicationPayloadImplCopyWithImpl<$Res>
+    extends _$CommunicationPayloadCopyWithImpl<$Res, _$CommunicationPayloadImpl>
+    implements _$$CommunicationPayloadImplCopyWith<$Res> {
+  __$$CommunicationPayloadImplCopyWithImpl(_$CommunicationPayloadImpl _value,
+      $Res Function(_$CommunicationPayloadImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1278,7 +1250,7 @@ class __$$_CommunicationPayloadCopyWithImpl<$Res>
     Object? contentAttachment = freezed,
     Object? contentReference = freezed,
   }) {
-    return _then(_$_CommunicationPayload(
+    return _then(_$CommunicationPayloadImpl(
       contentString: freezed == contentString
           ? _value.contentString
           : contentString // ignore: cast_nullable_to_non_nullable
@@ -1301,16 +1273,16 @@ class __$$_CommunicationPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CommunicationPayload extends _CommunicationPayload {
-  _$_CommunicationPayload(
+class _$CommunicationPayloadImpl extends _CommunicationPayload {
+  _$CommunicationPayloadImpl(
       {this.contentString,
       @JsonKey(name: '_contentString') this.contentStringElement,
       this.contentAttachment,
       this.contentReference})
       : super._();
 
-  factory _$_CommunicationPayload.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunicationPayloadFromJson(json);
+  factory _$CommunicationPayloadImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunicationPayloadImplFromJson(json);
 
   @override
   final String? contentString;
@@ -1328,10 +1300,10 @@ class _$_CommunicationPayload extends _CommunicationPayload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunicationPayload &&
+            other is _$CommunicationPayloadImpl &&
             (identical(other.contentString, contentString) ||
                 other.contentString == contentString) &&
             (identical(other.contentStringElement, contentStringElement) ||
@@ -1350,13 +1322,14 @@ class _$_CommunicationPayload extends _CommunicationPayload {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunicationPayloadCopyWith<_$_CommunicationPayload> get copyWith =>
-      __$$_CommunicationPayloadCopyWithImpl<_$_CommunicationPayload>(
-          this, _$identity);
+  _$$CommunicationPayloadImplCopyWith<_$CommunicationPayloadImpl>
+      get copyWith =>
+          __$$CommunicationPayloadImplCopyWithImpl<_$CommunicationPayloadImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationPayloadToJson(
+    return _$$CommunicationPayloadImplToJson(
       this,
     );
   }
@@ -1367,11 +1340,11 @@ abstract class _CommunicationPayload extends CommunicationPayload {
       {final String? contentString,
       @JsonKey(name: '_contentString') final Element? contentStringElement,
       final Attachment? contentAttachment,
-      final Reference? contentReference}) = _$_CommunicationPayload;
+      final Reference? contentReference}) = _$CommunicationPayloadImpl;
   _CommunicationPayload._() : super._();
 
   factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationPayload.fromJson;
+      _$CommunicationPayloadImpl.fromJson;
 
   @override
   String? get contentString;
@@ -1384,8 +1357,8 @@ abstract class _CommunicationPayload extends CommunicationPayload {
   Reference? get contentReference;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunicationPayloadCopyWith<_$_CommunicationPayload> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommunicationPayloadImplCopyWith<_$CommunicationPayloadImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CommunicationRequest _$CommunicationRequestFromJson(Map<String, dynamic> json) {
@@ -1456,31 +1429,26 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? replaces,
       Identifier? groupIdentifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       List<CodeableConcept>? medium,
       Reference? subject,
       List<Reference>? recipient,
@@ -1488,12 +1456,10 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       Reference? context,
       List<CommunicationRequestPayload>? payload,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? sender,
       CommunicationRequestRequester? requester,
       List<CodeableConcept>? reasonCode,
@@ -1886,40 +1852,35 @@ class _$CommunicationRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CommunicationRequestCopyWith<$Res>
+abstract class _$$CommunicationRequestImplCopyWith<$Res>
     implements $CommunicationRequestCopyWith<$Res> {
-  factory _$$_CommunicationRequestCopyWith(_$_CommunicationRequest value,
-          $Res Function(_$_CommunicationRequest) then) =
-      __$$_CommunicationRequestCopyWithImpl<$Res>;
+  factory _$$CommunicationRequestImplCopyWith(_$CommunicationRequestImpl value,
+          $Res Function(_$CommunicationRequestImpl) then) =
+      __$$CommunicationRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? replaces,
       Identifier? groupIdentifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       List<CodeableConcept>? medium,
       Reference? subject,
       List<Reference>? recipient,
@@ -1927,12 +1888,10 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       Reference? context,
       List<CommunicationRequestPayload>? payload,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       Reference? sender,
       CommunicationRequestRequester? requester,
       List<CodeableConcept>? reasonCode,
@@ -1970,11 +1929,11 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunicationRequestCopyWithImpl<$Res>
-    extends _$CommunicationRequestCopyWithImpl<$Res, _$_CommunicationRequest>
-    implements _$$_CommunicationRequestCopyWith<$Res> {
-  __$$_CommunicationRequestCopyWithImpl(_$_CommunicationRequest _value,
-      $Res Function(_$_CommunicationRequest) _then)
+class __$$CommunicationRequestImplCopyWithImpl<$Res>
+    extends _$CommunicationRequestCopyWithImpl<$Res, _$CommunicationRequestImpl>
+    implements _$$CommunicationRequestImplCopyWith<$Res> {
+  __$$CommunicationRequestImplCopyWithImpl(_$CommunicationRequestImpl _value,
+      $Res Function(_$CommunicationRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2017,7 +1976,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
     Object? reasonReference = freezed,
     Object? note = freezed,
   }) {
-    return _then(_$_CommunicationRequest(
+    return _then(_$CommunicationRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2168,34 +2127,29 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CommunicationRequest extends _CommunicationRequest {
-  _$_CommunicationRequest(
+class _$CommunicationRequestImpl extends _CommunicationRequest {
+  _$CommunicationRequestImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-          this.resourceType = Stu3ResourceType.CommunicationRequest,
+      this.resourceType = Stu3ResourceType.CommunicationRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.replaces,
       this.groupIdentifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.category,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
+      @JsonKey(name: '_priority') this.priorityElement,
       this.medium,
       this.subject,
       this.recipient,
@@ -2203,12 +2157,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       this.context,
       this.payload,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn')
-          this.authoredOnElement,
+      @JsonKey(name: '_authoredOn') this.authoredOnElement,
       this.sender,
       this.requester,
       this.reasonCode,
@@ -2216,8 +2168,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       this.note})
       : super._();
 
-  factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunicationRequestFromJson(json);
+  factory _$CommunicationRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommunicationRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
@@ -2306,10 +2258,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunicationRequest &&
+            other is _$CommunicationRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -2414,13 +2366,14 @@ class _$_CommunicationRequest extends _CommunicationRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunicationRequestCopyWith<_$_CommunicationRequest> get copyWith =>
-      __$$_CommunicationRequestCopyWithImpl<_$_CommunicationRequest>(
-          this, _$identity);
+  _$$CommunicationRequestImplCopyWith<_$CommunicationRequestImpl>
+      get copyWith =>
+          __$$CommunicationRequestImplCopyWithImpl<_$CommunicationRequestImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestToJson(
+    return _$$CommunicationRequestImplToJson(
       this,
     );
   }
@@ -2429,31 +2382,26 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 abstract class _CommunicationRequest extends CommunicationRequest {
   factory _CommunicationRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? replaces,
       final Identifier? groupIdentifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       final String? priority,
-      @JsonKey(name: '_priority')
-          final Element? priorityElement,
+      @JsonKey(name: '_priority') final Element? priorityElement,
       final List<CodeableConcept>? medium,
       final Reference? subject,
       final List<Reference>? recipient,
@@ -2462,20 +2410,19 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final List<CommunicationRequestPayload>? payload,
       final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          final Element? occurrenceDateTimeElement,
+      final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          final Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') final Element? authoredOnElement,
       final Reference? sender,
       final CommunicationRequestRequester? requester,
       final List<CodeableConcept>? reasonCode,
       final List<Reference>? reasonReference,
-      final List<Annotation>? note}) = _$_CommunicationRequest;
+      final List<Annotation>? note}) = _$CommunicationRequestImpl;
   _CommunicationRequest._() : super._();
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequest.fromJson;
+      _$CommunicationRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
@@ -2559,8 +2506,8 @@ abstract class _CommunicationRequest extends CommunicationRequest {
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunicationRequestCopyWith<_$_CommunicationRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommunicationRequestImplCopyWith<_$CommunicationRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CommunicationRequestPayload _$CommunicationRequestPayloadFromJson(
@@ -2678,12 +2625,12 @@ class _$CommunicationRequestPayloadCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CommunicationRequestPayloadCopyWith<$Res>
+abstract class _$$CommunicationRequestPayloadImplCopyWith<$Res>
     implements $CommunicationRequestPayloadCopyWith<$Res> {
-  factory _$$_CommunicationRequestPayloadCopyWith(
-          _$_CommunicationRequestPayload value,
-          $Res Function(_$_CommunicationRequestPayload) then) =
-      __$$_CommunicationRequestPayloadCopyWithImpl<$Res>;
+  factory _$$CommunicationRequestPayloadImplCopyWith(
+          _$CommunicationRequestPayloadImpl value,
+          $Res Function(_$CommunicationRequestPayloadImpl) then) =
+      __$$CommunicationRequestPayloadImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2701,13 +2648,13 @@ abstract class _$$_CommunicationRequestPayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunicationRequestPayloadCopyWithImpl<$Res>
+class __$$CommunicationRequestPayloadImplCopyWithImpl<$Res>
     extends _$CommunicationRequestPayloadCopyWithImpl<$Res,
-        _$_CommunicationRequestPayload>
-    implements _$$_CommunicationRequestPayloadCopyWith<$Res> {
-  __$$_CommunicationRequestPayloadCopyWithImpl(
-      _$_CommunicationRequestPayload _value,
-      $Res Function(_$_CommunicationRequestPayload) _then)
+        _$CommunicationRequestPayloadImpl>
+    implements _$$CommunicationRequestPayloadImplCopyWith<$Res> {
+  __$$CommunicationRequestPayloadImplCopyWithImpl(
+      _$CommunicationRequestPayloadImpl _value,
+      $Res Function(_$CommunicationRequestPayloadImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2718,7 +2665,7 @@ class __$$_CommunicationRequestPayloadCopyWithImpl<$Res>
     Object? contentAttachment = freezed,
     Object? contentReference = freezed,
   }) {
-    return _then(_$_CommunicationRequestPayload(
+    return _then(_$CommunicationRequestPayloadImpl(
       contentString: freezed == contentString
           ? _value.contentString
           : contentString // ignore: cast_nullable_to_non_nullable
@@ -2741,16 +2688,17 @@ class __$$_CommunicationRequestPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
-  _$_CommunicationRequestPayload(
+class _$CommunicationRequestPayloadImpl extends _CommunicationRequestPayload {
+  _$CommunicationRequestPayloadImpl(
       {this.contentString,
       @JsonKey(name: '_contentString') this.contentStringElement,
       this.contentAttachment,
       this.contentReference})
       : super._();
 
-  factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
-      _$$_CommunicationRequestPayloadFromJson(json);
+  factory _$CommunicationRequestPayloadImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$CommunicationRequestPayloadImplFromJson(json);
 
   @override
   final String? contentString;
@@ -2768,10 +2716,10 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunicationRequestPayload &&
+            other is _$CommunicationRequestPayloadImpl &&
             (identical(other.contentString, contentString) ||
                 other.contentString == contentString) &&
             (identical(other.contentStringElement, contentStringElement) ||
@@ -2790,13 +2738,13 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunicationRequestPayloadCopyWith<_$_CommunicationRequestPayload>
-      get copyWith => __$$_CommunicationRequestPayloadCopyWithImpl<
-          _$_CommunicationRequestPayload>(this, _$identity);
+  _$$CommunicationRequestPayloadImplCopyWith<_$CommunicationRequestPayloadImpl>
+      get copyWith => __$$CommunicationRequestPayloadImplCopyWithImpl<
+          _$CommunicationRequestPayloadImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestPayloadToJson(
+    return _$$CommunicationRequestPayloadImplToJson(
       this,
     );
   }
@@ -2808,11 +2756,11 @@ abstract class _CommunicationRequestPayload
       {final String? contentString,
       @JsonKey(name: '_contentString') final Element? contentStringElement,
       final Attachment? contentAttachment,
-      final Reference? contentReference}) = _$_CommunicationRequestPayload;
+      final Reference? contentReference}) = _$CommunicationRequestPayloadImpl;
   _CommunicationRequestPayload._() : super._();
 
   factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequestPayload.fromJson;
+      _$CommunicationRequestPayloadImpl.fromJson;
 
   @override
   String? get contentString;
@@ -2825,7 +2773,7 @@ abstract class _CommunicationRequestPayload
   Reference? get contentReference;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunicationRequestPayloadCopyWith<_$_CommunicationRequestPayload>
+  _$$CommunicationRequestPayloadImplCopyWith<_$CommunicationRequestPayloadImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2910,12 +2858,12 @@ class _$CommunicationRequestRequesterCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CommunicationRequestRequesterCopyWith<$Res>
+abstract class _$$CommunicationRequestRequesterImplCopyWith<$Res>
     implements $CommunicationRequestRequesterCopyWith<$Res> {
-  factory _$$_CommunicationRequestRequesterCopyWith(
-          _$_CommunicationRequestRequester value,
-          $Res Function(_$_CommunicationRequestRequester) then) =
-      __$$_CommunicationRequestRequesterCopyWithImpl<$Res>;
+  factory _$$CommunicationRequestRequesterImplCopyWith(
+          _$CommunicationRequestRequesterImpl value,
+          $Res Function(_$CommunicationRequestRequesterImpl) then) =
+      __$$CommunicationRequestRequesterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
@@ -2927,13 +2875,13 @@ abstract class _$$_CommunicationRequestRequesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommunicationRequestRequesterCopyWithImpl<$Res>
+class __$$CommunicationRequestRequesterImplCopyWithImpl<$Res>
     extends _$CommunicationRequestRequesterCopyWithImpl<$Res,
-        _$_CommunicationRequestRequester>
-    implements _$$_CommunicationRequestRequesterCopyWith<$Res> {
-  __$$_CommunicationRequestRequesterCopyWithImpl(
-      _$_CommunicationRequestRequester _value,
-      $Res Function(_$_CommunicationRequestRequester) _then)
+        _$CommunicationRequestRequesterImpl>
+    implements _$$CommunicationRequestRequesterImplCopyWith<$Res> {
+  __$$CommunicationRequestRequesterImplCopyWithImpl(
+      _$CommunicationRequestRequesterImpl _value,
+      $Res Function(_$CommunicationRequestRequesterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2942,7 +2890,7 @@ class __$$_CommunicationRequestRequesterCopyWithImpl<$Res>
     Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
-    return _then(_$_CommunicationRequestRequester(
+    return _then(_$CommunicationRequestRequesterImpl(
       agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
@@ -2957,13 +2905,14 @@ class __$$_CommunicationRequestRequesterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
-  _$_CommunicationRequestRequester({required this.agent, this.onBehalfOf})
+class _$CommunicationRequestRequesterImpl
+    extends _CommunicationRequestRequester {
+  _$CommunicationRequestRequesterImpl({required this.agent, this.onBehalfOf})
       : super._();
 
-  factory _$_CommunicationRequestRequester.fromJson(
+  factory _$CommunicationRequestRequesterImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CommunicationRequestRequesterFromJson(json);
+      _$$CommunicationRequestRequesterImplFromJson(json);
 
   @override
   final Reference agent;
@@ -2976,10 +2925,10 @@ class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommunicationRequestRequester &&
+            other is _$CommunicationRequestRequesterImpl &&
             (identical(other.agent, agent) || other.agent == agent) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
                 other.onBehalfOf == onBehalfOf));
@@ -2992,13 +2941,14 @@ class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommunicationRequestRequesterCopyWith<_$_CommunicationRequestRequester>
-      get copyWith => __$$_CommunicationRequestRequesterCopyWithImpl<
-          _$_CommunicationRequestRequester>(this, _$identity);
+  _$$CommunicationRequestRequesterImplCopyWith<
+          _$CommunicationRequestRequesterImpl>
+      get copyWith => __$$CommunicationRequestRequesterImplCopyWithImpl<
+          _$CommunicationRequestRequesterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommunicationRequestRequesterToJson(
+    return _$$CommunicationRequestRequesterImplToJson(
       this,
     );
   }
@@ -3008,11 +2958,11 @@ abstract class _CommunicationRequestRequester
     extends CommunicationRequestRequester {
   factory _CommunicationRequestRequester(
       {required final Reference agent,
-      final Reference? onBehalfOf}) = _$_CommunicationRequestRequester;
+      final Reference? onBehalfOf}) = _$CommunicationRequestRequesterImpl;
   _CommunicationRequestRequester._() : super._();
 
   factory _CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequestRequester.fromJson;
+      _$CommunicationRequestRequesterImpl.fromJson;
 
   @override
   Reference get agent;
@@ -3020,7 +2970,8 @@ abstract class _CommunicationRequestRequester
   Reference? get onBehalfOf;
   @override
   @JsonKey(ignore: true)
-  _$$_CommunicationRequestRequesterCopyWith<_$_CommunicationRequestRequester>
+  _$$CommunicationRequestRequesterImplCopyWith<
+          _$CommunicationRequestRequesterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3094,19 +3045,16 @@ abstract class $DeviceRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? definition,
@@ -3114,24 +3062,20 @@ abstract class $DeviceRequestCopyWith<$Res> {
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept intent,
       String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       Reference? codeReference,
       CodeableConcept? codeCodeableConcept,
       Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
       String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       DeviceRequestRequester? requester,
       CodeableConcept? performerType,
       Reference? performer,
@@ -3597,28 +3541,25 @@ class _$DeviceRequestCopyWithImpl<$Res, $Val extends DeviceRequest>
 }
 
 /// @nodoc
-abstract class _$$_DeviceRequestCopyWith<$Res>
+abstract class _$$DeviceRequestImplCopyWith<$Res>
     implements $DeviceRequestCopyWith<$Res> {
-  factory _$$_DeviceRequestCopyWith(
-          _$_DeviceRequest value, $Res Function(_$_DeviceRequest) then) =
-      __$$_DeviceRequestCopyWithImpl<$Res>;
+  factory _$$DeviceRequestImplCopyWith(
+          _$DeviceRequestImpl value, $Res Function(_$DeviceRequestImpl) then) =
+      __$$DeviceRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? definition,
@@ -3626,24 +3567,20 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
       List<Reference>? priorRequest,
       Identifier? groupIdentifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept intent,
       String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       Reference? codeReference,
       CodeableConcept? codeCodeableConcept,
       Reference subject,
       Reference? context,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
       String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       DeviceRequestRequester? requester,
       CodeableConcept? performerType,
       Reference? performer,
@@ -3694,11 +3631,11 @@ abstract class _$$_DeviceRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DeviceRequestCopyWithImpl<$Res>
-    extends _$DeviceRequestCopyWithImpl<$Res, _$_DeviceRequest>
-    implements _$$_DeviceRequestCopyWith<$Res> {
-  __$$_DeviceRequestCopyWithImpl(
-      _$_DeviceRequest _value, $Res Function(_$_DeviceRequest) _then)
+class __$$DeviceRequestImplCopyWithImpl<$Res>
+    extends _$DeviceRequestCopyWithImpl<$Res, _$DeviceRequestImpl>
+    implements _$$DeviceRequestImplCopyWith<$Res> {
+  __$$DeviceRequestImplCopyWithImpl(
+      _$DeviceRequestImpl _value, $Res Function(_$DeviceRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3744,7 +3681,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
     Object? note = freezed,
     Object? relevantHistory = freezed,
   }) {
-    return _then(_$_DeviceRequest(
+    return _then(_$DeviceRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3907,22 +3844,19 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DeviceRequest extends _DeviceRequest {
-  _$_DeviceRequest(
+class _$DeviceRequestImpl extends _DeviceRequest {
+  _$DeviceRequestImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-          this.resourceType = Stu3ResourceType.DeviceRequest,
+      this.resourceType = Stu3ResourceType.DeviceRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.definition,
@@ -3930,24 +3864,20 @@ class _$_DeviceRequest extends _DeviceRequest {
       this.priorRequest,
       this.groupIdentifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       required this.intent,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
+      @JsonKey(name: '_priority') this.priorityElement,
       this.codeReference,
       this.codeCodeableConcept,
       required this.subject,
       this.context,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn')
-          this.authoredOnElement,
+      @JsonKey(name: '_authoredOn') this.authoredOnElement,
       this.requester,
       this.performerType,
       this.performer,
@@ -3958,8 +3888,8 @@ class _$_DeviceRequest extends _DeviceRequest {
       this.relevantHistory})
       : super._();
 
-  factory _$_DeviceRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_DeviceRequestFromJson(json);
+  factory _$DeviceRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeviceRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
@@ -4054,10 +3984,10 @@ class _$_DeviceRequest extends _DeviceRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeviceRequest &&
+            other is _$DeviceRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -4177,12 +4107,12 @@ class _$_DeviceRequest extends _DeviceRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeviceRequestCopyWith<_$_DeviceRequest> get copyWith =>
-      __$$_DeviceRequestCopyWithImpl<_$_DeviceRequest>(this, _$identity);
+  _$$DeviceRequestImplCopyWith<_$DeviceRequestImpl> get copyWith =>
+      __$$DeviceRequestImplCopyWithImpl<_$DeviceRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceRequestToJson(
+    return _$$DeviceRequestImplToJson(
       this,
     );
   }
@@ -4191,19 +4121,16 @@ class _$_DeviceRequest extends _DeviceRequest {
 abstract class _DeviceRequest extends DeviceRequest {
   factory _DeviceRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? definition,
@@ -4211,24 +4138,21 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<Reference>? priorRequest,
       final Identifier? groupIdentifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final CodeableConcept intent,
       final String? priority,
-      @JsonKey(name: '_priority')
-          final Element? priorityElement,
+      @JsonKey(name: '_priority') final Element? priorityElement,
       final Reference? codeReference,
       final CodeableConcept? codeCodeableConcept,
       required final Reference subject,
       final Reference? context,
       final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          final Element? occurrenceDateTimeElement,
+      final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
       final String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          final Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') final Element? authoredOnElement,
       final DeviceRequestRequester? requester,
       final CodeableConcept? performerType,
       final Reference? performer,
@@ -4236,11 +4160,11 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<Reference>? reasonReference,
       final List<Reference>? supportingInfo,
       final List<Annotation>? note,
-      final List<Reference>? relevantHistory}) = _$_DeviceRequest;
+      final List<Reference>? relevantHistory}) = _$DeviceRequestImpl;
   _DeviceRequest._() : super._();
 
   factory _DeviceRequest.fromJson(Map<String, dynamic> json) =
-      _$_DeviceRequest.fromJson;
+      _$DeviceRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
@@ -4330,7 +4254,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   List<Reference>? get relevantHistory;
   @override
   @JsonKey(ignore: true)
-  _$$_DeviceRequestCopyWith<_$_DeviceRequest> get copyWith =>
+  _$$DeviceRequestImplCopyWith<_$DeviceRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4413,11 +4337,12 @@ class _$DeviceRequestRequesterCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DeviceRequestRequesterCopyWith<$Res>
+abstract class _$$DeviceRequestRequesterImplCopyWith<$Res>
     implements $DeviceRequestRequesterCopyWith<$Res> {
-  factory _$$_DeviceRequestRequesterCopyWith(_$_DeviceRequestRequester value,
-          $Res Function(_$_DeviceRequestRequester) then) =
-      __$$_DeviceRequestRequesterCopyWithImpl<$Res>;
+  factory _$$DeviceRequestRequesterImplCopyWith(
+          _$DeviceRequestRequesterImpl value,
+          $Res Function(_$DeviceRequestRequesterImpl) then) =
+      __$$DeviceRequestRequesterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
@@ -4429,12 +4354,13 @@ abstract class _$$_DeviceRequestRequesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DeviceRequestRequesterCopyWithImpl<$Res>
+class __$$DeviceRequestRequesterImplCopyWithImpl<$Res>
     extends _$DeviceRequestRequesterCopyWithImpl<$Res,
-        _$_DeviceRequestRequester>
-    implements _$$_DeviceRequestRequesterCopyWith<$Res> {
-  __$$_DeviceRequestRequesterCopyWithImpl(_$_DeviceRequestRequester _value,
-      $Res Function(_$_DeviceRequestRequester) _then)
+        _$DeviceRequestRequesterImpl>
+    implements _$$DeviceRequestRequesterImplCopyWith<$Res> {
+  __$$DeviceRequestRequesterImplCopyWithImpl(
+      _$DeviceRequestRequesterImpl _value,
+      $Res Function(_$DeviceRequestRequesterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4443,7 +4369,7 @@ class __$$_DeviceRequestRequesterCopyWithImpl<$Res>
     Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
-    return _then(_$_DeviceRequestRequester(
+    return _then(_$DeviceRequestRequesterImpl(
       agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
@@ -4458,11 +4384,12 @@ class __$$_DeviceRequestRequesterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DeviceRequestRequester extends _DeviceRequestRequester {
-  _$_DeviceRequestRequester({required this.agent, this.onBehalfOf}) : super._();
+class _$DeviceRequestRequesterImpl extends _DeviceRequestRequester {
+  _$DeviceRequestRequesterImpl({required this.agent, this.onBehalfOf})
+      : super._();
 
-  factory _$_DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
-      _$$_DeviceRequestRequesterFromJson(json);
+  factory _$DeviceRequestRequesterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeviceRequestRequesterImplFromJson(json);
 
   @override
   final Reference agent;
@@ -4475,10 +4402,10 @@ class _$_DeviceRequestRequester extends _DeviceRequestRequester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeviceRequestRequester &&
+            other is _$DeviceRequestRequesterImpl &&
             (identical(other.agent, agent) || other.agent == agent) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
                 other.onBehalfOf == onBehalfOf));
@@ -4491,13 +4418,13 @@ class _$_DeviceRequestRequester extends _DeviceRequestRequester {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeviceRequestRequesterCopyWith<_$_DeviceRequestRequester> get copyWith =>
-      __$$_DeviceRequestRequesterCopyWithImpl<_$_DeviceRequestRequester>(
-          this, _$identity);
+  _$$DeviceRequestRequesterImplCopyWith<_$DeviceRequestRequesterImpl>
+      get copyWith => __$$DeviceRequestRequesterImplCopyWithImpl<
+          _$DeviceRequestRequesterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceRequestRequesterToJson(
+    return _$$DeviceRequestRequesterImplToJson(
       this,
     );
   }
@@ -4506,11 +4433,11 @@ class _$_DeviceRequestRequester extends _DeviceRequestRequester {
 abstract class _DeviceRequestRequester extends DeviceRequestRequester {
   factory _DeviceRequestRequester(
       {required final Reference agent,
-      final Reference? onBehalfOf}) = _$_DeviceRequestRequester;
+      final Reference? onBehalfOf}) = _$DeviceRequestRequesterImpl;
   _DeviceRequestRequester._() : super._();
 
   factory _DeviceRequestRequester.fromJson(Map<String, dynamic> json) =
-      _$_DeviceRequestRequester.fromJson;
+      _$DeviceRequestRequesterImpl.fromJson;
 
   @override
   Reference get agent;
@@ -4518,8 +4445,8 @@ abstract class _DeviceRequestRequester extends DeviceRequestRequester {
   Reference? get onBehalfOf;
   @override
   @JsonKey(ignore: true)
-  _$$_DeviceRequestRequesterCopyWith<_$_DeviceRequestRequester> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeviceRequestRequesterImplCopyWith<_$DeviceRequestRequesterImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
@@ -4578,34 +4505,28 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       DeviceUseStatementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference subject,
       Period? whenUsed,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       String? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          Element? recordedOnElement,
+      @JsonKey(name: '_recordedOn') Element? recordedOnElement,
       Reference? source,
       Reference device,
       List<CodeableConcept>? indication,
@@ -4943,43 +4864,37 @@ class _$DeviceUseStatementCopyWithImpl<$Res, $Val extends DeviceUseStatement>
 }
 
 /// @nodoc
-abstract class _$$_DeviceUseStatementCopyWith<$Res>
+abstract class _$$DeviceUseStatementImplCopyWith<$Res>
     implements $DeviceUseStatementCopyWith<$Res> {
-  factory _$$_DeviceUseStatementCopyWith(_$_DeviceUseStatement value,
-          $Res Function(_$_DeviceUseStatement) then) =
-      __$$_DeviceUseStatementCopyWithImpl<$Res>;
+  factory _$$DeviceUseStatementImplCopyWith(_$DeviceUseStatementImpl value,
+          $Res Function(_$DeviceUseStatementImpl) then) =
+      __$$DeviceUseStatementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       DeviceUseStatementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference subject,
       Period? whenUsed,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       String? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          Element? recordedOnElement,
+      @JsonKey(name: '_recordedOn') Element? recordedOnElement,
       Reference? source,
       Reference device,
       List<CodeableConcept>? indication,
@@ -5017,11 +4932,11 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DeviceUseStatementCopyWithImpl<$Res>
-    extends _$DeviceUseStatementCopyWithImpl<$Res, _$_DeviceUseStatement>
-    implements _$$_DeviceUseStatementCopyWith<$Res> {
-  __$$_DeviceUseStatementCopyWithImpl(
-      _$_DeviceUseStatement _value, $Res Function(_$_DeviceUseStatement) _then)
+class __$$DeviceUseStatementImplCopyWithImpl<$Res>
+    extends _$DeviceUseStatementCopyWithImpl<$Res, _$DeviceUseStatementImpl>
+    implements _$$DeviceUseStatementImplCopyWith<$Res> {
+  __$$DeviceUseStatementImplCopyWithImpl(_$DeviceUseStatementImpl _value,
+      $Res Function(_$DeviceUseStatementImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5055,7 +4970,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
     Object? bodySite = freezed,
     Object? note = freezed,
   }) {
-    return _then(_$_DeviceUseStatement(
+    return _then(_$DeviceUseStatementImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5170,37 +5085,31 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DeviceUseStatement extends _DeviceUseStatement {
-  _$_DeviceUseStatement(
+class _$DeviceUseStatementImpl extends _DeviceUseStatement {
+  _$DeviceUseStatementImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-          this.resourceType = Stu3ResourceType.DeviceUseStatement,
+      this.resourceType = Stu3ResourceType.DeviceUseStatement,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       required this.subject,
       this.whenUsed,
       this.timingTiming,
       this.timingPeriod,
       this.timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          this.timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement,
       this.recordedOn,
-      @JsonKey(name: '_recordedOn')
-          this.recordedOnElement,
+      @JsonKey(name: '_recordedOn') this.recordedOnElement,
       this.source,
       required this.device,
       this.indication,
@@ -5208,8 +5117,8 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       this.note})
       : super._();
 
-  factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
-      _$$_DeviceUseStatementFromJson(json);
+  factory _$DeviceUseStatementImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeviceUseStatementImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
@@ -5279,10 +5188,10 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeviceUseStatement &&
+            other is _$DeviceUseStatementImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -5366,13 +5275,13 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeviceUseStatementCopyWith<_$_DeviceUseStatement> get copyWith =>
-      __$$_DeviceUseStatementCopyWithImpl<_$_DeviceUseStatement>(
+  _$$DeviceUseStatementImplCopyWith<_$DeviceUseStatementImpl> get copyWith =>
+      __$$DeviceUseStatementImplCopyWithImpl<_$DeviceUseStatementImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUseStatementToJson(
+    return _$$DeviceUseStatementImplToJson(
       this,
     );
   }
@@ -5381,43 +5290,37 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 abstract class _DeviceUseStatement extends DeviceUseStatement {
   factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final DeviceUseStatementStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final Reference subject,
       final Period? whenUsed,
       final Timing? timingTiming,
       final Period? timingPeriod,
       final FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          final Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') final Element? timingDateTimeElement,
       final String? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          final Element? recordedOnElement,
+      @JsonKey(name: '_recordedOn') final Element? recordedOnElement,
       final Reference? source,
       required final Reference device,
       final List<CodeableConcept>? indication,
       final CodeableConcept? bodySite,
-      final List<Annotation>? note}) = _$_DeviceUseStatement;
+      final List<Annotation>? note}) = _$DeviceUseStatementImpl;
   _DeviceUseStatement._() : super._();
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
-      _$_DeviceUseStatement.fromJson;
+      _$DeviceUseStatementImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
@@ -5482,7 +5385,7 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
-  _$$_DeviceUseStatementCopyWith<_$_DeviceUseStatement> get copyWith =>
+  _$$DeviceUseStatementImplCopyWith<_$DeviceUseStatementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5541,32 +5444,27 @@ abstract class $SupplyDeliveryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? patient,
       CodeableConcept? type,
       SupplyDeliverySuppliedItem? suppliedItem,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
       Reference? supplier,
@@ -5908,41 +5806,36 @@ class _$SupplyDeliveryCopyWithImpl<$Res, $Val extends SupplyDelivery>
 }
 
 /// @nodoc
-abstract class _$$_SupplyDeliveryCopyWith<$Res>
+abstract class _$$SupplyDeliveryImplCopyWith<$Res>
     implements $SupplyDeliveryCopyWith<$Res> {
-  factory _$$_SupplyDeliveryCopyWith(
-          _$_SupplyDelivery value, $Res Function(_$_SupplyDelivery) then) =
-      __$$_SupplyDeliveryCopyWithImpl<$Res>;
+  factory _$$SupplyDeliveryImplCopyWith(_$SupplyDeliveryImpl value,
+          $Res Function(_$SupplyDeliveryImpl) then) =
+      __$$SupplyDeliveryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? patient,
       CodeableConcept? type,
       SupplyDeliverySuppliedItem? suppliedItem,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
       Reference? supplier,
@@ -5980,11 +5873,11 @@ abstract class _$$_SupplyDeliveryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyDeliveryCopyWithImpl<$Res>
-    extends _$SupplyDeliveryCopyWithImpl<$Res, _$_SupplyDelivery>
-    implements _$$_SupplyDeliveryCopyWith<$Res> {
-  __$$_SupplyDeliveryCopyWithImpl(
-      _$_SupplyDelivery _value, $Res Function(_$_SupplyDelivery) _then)
+class __$$SupplyDeliveryImplCopyWithImpl<$Res>
+    extends _$SupplyDeliveryCopyWithImpl<$Res, _$SupplyDeliveryImpl>
+    implements _$$SupplyDeliveryImplCopyWith<$Res> {
+  __$$SupplyDeliveryImplCopyWithImpl(
+      _$SupplyDeliveryImpl _value, $Res Function(_$SupplyDeliveryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6017,7 +5910,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
     Object? destination = freezed,
     Object? receiver = freezed,
   }) {
-    return _then(_$_SupplyDelivery(
+    return _then(_$SupplyDeliveryImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6128,35 +6021,30 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyDelivery extends _SupplyDelivery {
-  _$_SupplyDelivery(
+class _$SupplyDeliveryImpl extends _SupplyDelivery {
+  _$SupplyDeliveryImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-          this.resourceType = Stu3ResourceType.SupplyDelivery,
+      this.resourceType = Stu3ResourceType.SupplyDelivery,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.basedOn,
       this.partOf,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.patient,
       this.type,
       this.suppliedItem,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
       this.supplier,
@@ -6164,8 +6052,8 @@ class _$_SupplyDelivery extends _SupplyDelivery {
       this.receiver})
       : super._();
 
-  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyDeliveryFromJson(json);
+  factory _$SupplyDeliveryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyDeliveryImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
@@ -6232,10 +6120,10 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyDelivery &&
+            other is _$SupplyDeliveryImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -6316,12 +6204,13 @@ class _$_SupplyDelivery extends _SupplyDelivery {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
-      __$$_SupplyDeliveryCopyWithImpl<_$_SupplyDelivery>(this, _$identity);
+  _$$SupplyDeliveryImplCopyWith<_$SupplyDeliveryImpl> get copyWith =>
+      __$$SupplyDeliveryImplCopyWithImpl<_$SupplyDeliveryImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliveryToJson(
+    return _$$SupplyDeliveryImplToJson(
       this,
     );
   }
@@ -6330,41 +6219,37 @@ class _$_SupplyDelivery extends _SupplyDelivery {
 abstract class _SupplyDelivery extends SupplyDelivery {
   factory _SupplyDelivery(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final SupplyDeliveryStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? patient,
       final CodeableConcept? type,
       final SupplyDeliverySuppliedItem? suppliedItem,
       final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          final Element? occurrenceDateTimeElement,
+      final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
       final Reference? supplier,
       final Reference? destination,
-      final List<Reference>? receiver}) = _$_SupplyDelivery;
+      final List<Reference>? receiver}) = _$SupplyDeliveryImpl;
   _SupplyDelivery._() : super._();
 
   factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDelivery.fromJson;
+      _$SupplyDeliveryImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
@@ -6426,7 +6311,7 @@ abstract class _SupplyDelivery extends SupplyDelivery {
   List<Reference>? get receiver;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyDeliveryCopyWith<_$_SupplyDelivery> get copyWith =>
+  _$$SupplyDeliveryImplCopyWith<_$SupplyDeliveryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6537,12 +6422,12 @@ class _$SupplyDeliverySuppliedItemCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SupplyDeliverySuppliedItemCopyWith<$Res>
+abstract class _$$SupplyDeliverySuppliedItemImplCopyWith<$Res>
     implements $SupplyDeliverySuppliedItemCopyWith<$Res> {
-  factory _$$_SupplyDeliverySuppliedItemCopyWith(
-          _$_SupplyDeliverySuppliedItem value,
-          $Res Function(_$_SupplyDeliverySuppliedItem) then) =
-      __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>;
+  factory _$$SupplyDeliverySuppliedItemImplCopyWith(
+          _$SupplyDeliverySuppliedItemImpl value,
+          $Res Function(_$SupplyDeliverySuppliedItemImpl) then) =
+      __$$SupplyDeliverySuppliedItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6559,13 +6444,13 @@ abstract class _$$_SupplyDeliverySuppliedItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>
+class __$$SupplyDeliverySuppliedItemImplCopyWithImpl<$Res>
     extends _$SupplyDeliverySuppliedItemCopyWithImpl<$Res,
-        _$_SupplyDeliverySuppliedItem>
-    implements _$$_SupplyDeliverySuppliedItemCopyWith<$Res> {
-  __$$_SupplyDeliverySuppliedItemCopyWithImpl(
-      _$_SupplyDeliverySuppliedItem _value,
-      $Res Function(_$_SupplyDeliverySuppliedItem) _then)
+        _$SupplyDeliverySuppliedItemImpl>
+    implements _$$SupplyDeliverySuppliedItemImplCopyWith<$Res> {
+  __$$SupplyDeliverySuppliedItemImplCopyWithImpl(
+      _$SupplyDeliverySuppliedItemImpl _value,
+      $Res Function(_$SupplyDeliverySuppliedItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6575,7 +6460,7 @@ class __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>
     Object? itemCodeableConcept = freezed,
     Object? itemReference = freezed,
   }) {
-    return _then(_$_SupplyDeliverySuppliedItem(
+    return _then(_$SupplyDeliverySuppliedItemImpl(
       quantity: freezed == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -6594,13 +6479,14 @@ class __$$_SupplyDeliverySuppliedItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
-  _$_SupplyDeliverySuppliedItem(
+class _$SupplyDeliverySuppliedItemImpl extends _SupplyDeliverySuppliedItem {
+  _$SupplyDeliverySuppliedItemImpl(
       {this.quantity, this.itemCodeableConcept, this.itemReference})
       : super._();
 
-  factory _$_SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyDeliverySuppliedItemFromJson(json);
+  factory _$SupplyDeliverySuppliedItemImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SupplyDeliverySuppliedItemImplFromJson(json);
 
   @override
   final Quantity? quantity;
@@ -6615,10 +6501,10 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyDeliverySuppliedItem &&
+            other is _$SupplyDeliverySuppliedItemImpl &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.itemCodeableConcept, itemCodeableConcept) ||
@@ -6635,13 +6521,13 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyDeliverySuppliedItemCopyWith<_$_SupplyDeliverySuppliedItem>
-      get copyWith => __$$_SupplyDeliverySuppliedItemCopyWithImpl<
-          _$_SupplyDeliverySuppliedItem>(this, _$identity);
+  _$$SupplyDeliverySuppliedItemImplCopyWith<_$SupplyDeliverySuppliedItemImpl>
+      get copyWith => __$$SupplyDeliverySuppliedItemImplCopyWithImpl<
+          _$SupplyDeliverySuppliedItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyDeliverySuppliedItemToJson(
+    return _$$SupplyDeliverySuppliedItemImplToJson(
       this,
     );
   }
@@ -6651,11 +6537,11 @@ abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
   factory _SupplyDeliverySuppliedItem(
       {final Quantity? quantity,
       final CodeableConcept? itemCodeableConcept,
-      final Reference? itemReference}) = _$_SupplyDeliverySuppliedItem;
+      final Reference? itemReference}) = _$SupplyDeliverySuppliedItemImpl;
   _SupplyDeliverySuppliedItem._() : super._();
 
   factory _SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDeliverySuppliedItem.fromJson;
+      _$SupplyDeliverySuppliedItemImpl.fromJson;
 
   @override
   Quantity? get quantity;
@@ -6665,7 +6551,7 @@ abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
   Reference? get itemReference;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyDeliverySuppliedItemCopyWith<_$_SupplyDeliverySuppliedItem>
+  _$$SupplyDeliverySuppliedItemImplCopyWith<_$SupplyDeliverySuppliedItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6731,37 +6617,30 @@ abstract class $SupplyRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? category,
       String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       SupplyRequestOrderedItem? orderedItem,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
       String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       SupplyRequestRequester? requester,
       List<Reference>? supplier,
       CodeableConcept? reasonCodeableConcept,
@@ -7177,46 +7056,39 @@ class _$SupplyRequestCopyWithImpl<$Res, $Val extends SupplyRequest>
 }
 
 /// @nodoc
-abstract class _$$_SupplyRequestCopyWith<$Res>
+abstract class _$$SupplyRequestImplCopyWith<$Res>
     implements $SupplyRequestCopyWith<$Res> {
-  factory _$$_SupplyRequestCopyWith(
-          _$_SupplyRequest value, $Res Function(_$_SupplyRequest) then) =
-      __$$_SupplyRequestCopyWithImpl<$Res>;
+  factory _$$SupplyRequestImplCopyWith(
+          _$SupplyRequestImpl value, $Res Function(_$SupplyRequestImpl) then) =
+      __$$SupplyRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? category,
       String? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       SupplyRequestOrderedItem? orderedItem,
       FhirDateTime? occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          Element? occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
       Period? occurrencePeriod,
       Timing? occurrenceTiming,
       String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
       SupplyRequestRequester? requester,
       List<Reference>? supplier,
       CodeableConcept? reasonCodeableConcept,
@@ -7263,11 +7135,11 @@ abstract class _$$_SupplyRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyRequestCopyWithImpl<$Res>
-    extends _$SupplyRequestCopyWithImpl<$Res, _$_SupplyRequest>
-    implements _$$_SupplyRequestCopyWith<$Res> {
-  __$$_SupplyRequestCopyWithImpl(
-      _$_SupplyRequest _value, $Res Function(_$_SupplyRequest) _then)
+class __$$SupplyRequestImplCopyWithImpl<$Res>
+    extends _$SupplyRequestCopyWithImpl<$Res, _$SupplyRequestImpl>
+    implements _$$SupplyRequestImplCopyWith<$Res> {
+  __$$SupplyRequestImplCopyWithImpl(
+      _$SupplyRequestImpl _value, $Res Function(_$SupplyRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7304,7 +7176,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
     Object? deliverFrom = freezed,
     Object? deliverTo = freezed,
   }) {
-    return _then(_$_SupplyRequest(
+    return _then(_$SupplyRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7431,40 +7303,33 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyRequest extends _SupplyRequest {
-  _$_SupplyRequest(
+class _$SupplyRequestImpl extends _SupplyRequest {
+  _$SupplyRequestImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-          this.resourceType = Stu3ResourceType.SupplyRequest,
+      this.resourceType = Stu3ResourceType.SupplyRequest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.category,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
+      @JsonKey(name: '_priority') this.priorityElement,
       this.orderedItem,
       this.occurrenceDateTime,
-      @JsonKey(name: '_occurrenceDateTime')
-          this.occurrenceDateTimeElement,
+      @JsonKey(name: '_occurrenceDateTime') this.occurrenceDateTimeElement,
       this.occurrencePeriod,
       this.occurrenceTiming,
       this.authoredOn,
-      @JsonKey(name: '_authoredOn')
-          this.authoredOnElement,
+      @JsonKey(name: '_authoredOn') this.authoredOnElement,
       this.requester,
       this.supplier,
       this.reasonCodeableConcept,
@@ -7473,8 +7338,8 @@ class _$_SupplyRequest extends _SupplyRequest {
       this.deliverTo})
       : super._();
 
-  factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyRequestFromJson(json);
+  factory _$SupplyRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
@@ -7551,10 +7416,10 @@ class _$_SupplyRequest extends _SupplyRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyRequest &&
+            other is _$SupplyRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -7651,12 +7516,12 @@ class _$_SupplyRequest extends _SupplyRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
-      __$$_SupplyRequestCopyWithImpl<_$_SupplyRequest>(this, _$identity);
+  _$$SupplyRequestImplCopyWith<_$SupplyRequestImpl> get copyWith =>
+      __$$SupplyRequestImplCopyWithImpl<_$SupplyRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestToJson(
+    return _$$SupplyRequestImplToJson(
       this,
     );
   }
@@ -7665,47 +7530,41 @@ class _$_SupplyRequest extends _SupplyRequest {
 abstract class _SupplyRequest extends SupplyRequest {
   factory _SupplyRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final SupplyRequestStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? category,
       final String? priority,
-      @JsonKey(name: '_priority')
-          final Element? priorityElement,
+      @JsonKey(name: '_priority') final Element? priorityElement,
       final SupplyRequestOrderedItem? orderedItem,
       final FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
-          final Element? occurrenceDateTimeElement,
+      final Element? occurrenceDateTimeElement,
       final Period? occurrencePeriod,
       final Timing? occurrenceTiming,
       final String? authoredOn,
-      @JsonKey(name: '_authoredOn')
-          final Element? authoredOnElement,
+      @JsonKey(name: '_authoredOn') final Element? authoredOnElement,
       final SupplyRequestRequester? requester,
       final List<Reference>? supplier,
       final CodeableConcept? reasonCodeableConcept,
       final Reference? reasonReference,
       final Reference? deliverFrom,
-      final Reference? deliverTo}) = _$_SupplyRequest;
+      final Reference? deliverTo}) = _$SupplyRequestImpl;
   _SupplyRequest._() : super._();
 
   factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequest.fromJson;
+      _$SupplyRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
@@ -7777,7 +7636,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   Reference? get deliverTo;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyRequestCopyWith<_$_SupplyRequest> get copyWith =>
+  _$$SupplyRequestImplCopyWith<_$SupplyRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7883,12 +7742,12 @@ class _$SupplyRequestOrderedItemCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SupplyRequestOrderedItemCopyWith<$Res>
+abstract class _$$SupplyRequestOrderedItemImplCopyWith<$Res>
     implements $SupplyRequestOrderedItemCopyWith<$Res> {
-  factory _$$_SupplyRequestOrderedItemCopyWith(
-          _$_SupplyRequestOrderedItem value,
-          $Res Function(_$_SupplyRequestOrderedItem) then) =
-      __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>;
+  factory _$$SupplyRequestOrderedItemImplCopyWith(
+          _$SupplyRequestOrderedItemImpl value,
+          $Res Function(_$SupplyRequestOrderedItemImpl) then) =
+      __$$SupplyRequestOrderedItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7905,12 +7764,13 @@ abstract class _$$_SupplyRequestOrderedItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>
+class __$$SupplyRequestOrderedItemImplCopyWithImpl<$Res>
     extends _$SupplyRequestOrderedItemCopyWithImpl<$Res,
-        _$_SupplyRequestOrderedItem>
-    implements _$$_SupplyRequestOrderedItemCopyWith<$Res> {
-  __$$_SupplyRequestOrderedItemCopyWithImpl(_$_SupplyRequestOrderedItem _value,
-      $Res Function(_$_SupplyRequestOrderedItem) _then)
+        _$SupplyRequestOrderedItemImpl>
+    implements _$$SupplyRequestOrderedItemImplCopyWith<$Res> {
+  __$$SupplyRequestOrderedItemImplCopyWithImpl(
+      _$SupplyRequestOrderedItemImpl _value,
+      $Res Function(_$SupplyRequestOrderedItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7920,7 +7780,7 @@ class __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>
     Object? itemCodeableConcept = freezed,
     Object? itemReference = freezed,
   }) {
-    return _then(_$_SupplyRequestOrderedItem(
+    return _then(_$SupplyRequestOrderedItemImpl(
       quantity: null == quantity
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -7939,13 +7799,13 @@ class __$$_SupplyRequestOrderedItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
-  _$_SupplyRequestOrderedItem(
+class _$SupplyRequestOrderedItemImpl extends _SupplyRequestOrderedItem {
+  _$SupplyRequestOrderedItemImpl(
       {required this.quantity, this.itemCodeableConcept, this.itemReference})
       : super._();
 
-  factory _$_SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyRequestOrderedItemFromJson(json);
+  factory _$SupplyRequestOrderedItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyRequestOrderedItemImplFromJson(json);
 
   @override
   final Quantity quantity;
@@ -7960,10 +7820,10 @@ class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyRequestOrderedItem &&
+            other is _$SupplyRequestOrderedItemImpl &&
             (identical(other.quantity, quantity) ||
                 other.quantity == quantity) &&
             (identical(other.itemCodeableConcept, itemCodeableConcept) ||
@@ -7980,13 +7840,13 @@ class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyRequestOrderedItemCopyWith<_$_SupplyRequestOrderedItem>
-      get copyWith => __$$_SupplyRequestOrderedItemCopyWithImpl<
-          _$_SupplyRequestOrderedItem>(this, _$identity);
+  _$$SupplyRequestOrderedItemImplCopyWith<_$SupplyRequestOrderedItemImpl>
+      get copyWith => __$$SupplyRequestOrderedItemImplCopyWithImpl<
+          _$SupplyRequestOrderedItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestOrderedItemToJson(
+    return _$$SupplyRequestOrderedItemImplToJson(
       this,
     );
   }
@@ -7996,11 +7856,11 @@ abstract class _SupplyRequestOrderedItem extends SupplyRequestOrderedItem {
   factory _SupplyRequestOrderedItem(
       {required final Quantity quantity,
       final CodeableConcept? itemCodeableConcept,
-      final Reference? itemReference}) = _$_SupplyRequestOrderedItem;
+      final Reference? itemReference}) = _$SupplyRequestOrderedItemImpl;
   _SupplyRequestOrderedItem._() : super._();
 
   factory _SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequestOrderedItem.fromJson;
+      _$SupplyRequestOrderedItemImpl.fromJson;
 
   @override
   Quantity get quantity;
@@ -8010,7 +7870,7 @@ abstract class _SupplyRequestOrderedItem extends SupplyRequestOrderedItem {
   Reference? get itemReference;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyRequestOrderedItemCopyWith<_$_SupplyRequestOrderedItem>
+  _$$SupplyRequestOrderedItemImplCopyWith<_$SupplyRequestOrderedItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8093,11 +7953,12 @@ class _$SupplyRequestRequesterCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SupplyRequestRequesterCopyWith<$Res>
+abstract class _$$SupplyRequestRequesterImplCopyWith<$Res>
     implements $SupplyRequestRequesterCopyWith<$Res> {
-  factory _$$_SupplyRequestRequesterCopyWith(_$_SupplyRequestRequester value,
-          $Res Function(_$_SupplyRequestRequester) then) =
-      __$$_SupplyRequestRequesterCopyWithImpl<$Res>;
+  factory _$$SupplyRequestRequesterImplCopyWith(
+          _$SupplyRequestRequesterImpl value,
+          $Res Function(_$SupplyRequestRequesterImpl) then) =
+      __$$SupplyRequestRequesterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Reference agent, Reference? onBehalfOf});
@@ -8109,12 +7970,13 @@ abstract class _$$_SupplyRequestRequesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SupplyRequestRequesterCopyWithImpl<$Res>
+class __$$SupplyRequestRequesterImplCopyWithImpl<$Res>
     extends _$SupplyRequestRequesterCopyWithImpl<$Res,
-        _$_SupplyRequestRequester>
-    implements _$$_SupplyRequestRequesterCopyWith<$Res> {
-  __$$_SupplyRequestRequesterCopyWithImpl(_$_SupplyRequestRequester _value,
-      $Res Function(_$_SupplyRequestRequester) _then)
+        _$SupplyRequestRequesterImpl>
+    implements _$$SupplyRequestRequesterImplCopyWith<$Res> {
+  __$$SupplyRequestRequesterImplCopyWithImpl(
+      _$SupplyRequestRequesterImpl _value,
+      $Res Function(_$SupplyRequestRequesterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8123,7 +7985,7 @@ class __$$_SupplyRequestRequesterCopyWithImpl<$Res>
     Object? agent = null,
     Object? onBehalfOf = freezed,
   }) {
-    return _then(_$_SupplyRequestRequester(
+    return _then(_$SupplyRequestRequesterImpl(
       agent: null == agent
           ? _value.agent
           : agent // ignore: cast_nullable_to_non_nullable
@@ -8138,11 +8000,12 @@ class __$$_SupplyRequestRequesterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SupplyRequestRequester extends _SupplyRequestRequester {
-  _$_SupplyRequestRequester({required this.agent, this.onBehalfOf}) : super._();
+class _$SupplyRequestRequesterImpl extends _SupplyRequestRequester {
+  _$SupplyRequestRequesterImpl({required this.agent, this.onBehalfOf})
+      : super._();
 
-  factory _$_SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
-      _$$_SupplyRequestRequesterFromJson(json);
+  factory _$SupplyRequestRequesterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SupplyRequestRequesterImplFromJson(json);
 
   @override
   final Reference agent;
@@ -8155,10 +8018,10 @@ class _$_SupplyRequestRequester extends _SupplyRequestRequester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SupplyRequestRequester &&
+            other is _$SupplyRequestRequesterImpl &&
             (identical(other.agent, agent) || other.agent == agent) &&
             (identical(other.onBehalfOf, onBehalfOf) ||
                 other.onBehalfOf == onBehalfOf));
@@ -8171,13 +8034,13 @@ class _$_SupplyRequestRequester extends _SupplyRequestRequester {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SupplyRequestRequesterCopyWith<_$_SupplyRequestRequester> get copyWith =>
-      __$$_SupplyRequestRequesterCopyWithImpl<_$_SupplyRequestRequester>(
-          this, _$identity);
+  _$$SupplyRequestRequesterImplCopyWith<_$SupplyRequestRequesterImpl>
+      get copyWith => __$$SupplyRequestRequesterImplCopyWithImpl<
+          _$SupplyRequestRequesterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SupplyRequestRequesterToJson(
+    return _$$SupplyRequestRequesterImplToJson(
       this,
     );
   }
@@ -8186,11 +8049,11 @@ class _$_SupplyRequestRequester extends _SupplyRequestRequester {
 abstract class _SupplyRequestRequester extends SupplyRequestRequester {
   factory _SupplyRequestRequester(
       {required final Reference agent,
-      final Reference? onBehalfOf}) = _$_SupplyRequestRequester;
+      final Reference? onBehalfOf}) = _$SupplyRequestRequesterImpl;
   _SupplyRequestRequester._() : super._();
 
   factory _SupplyRequestRequester.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequestRequester.fromJson;
+      _$SupplyRequestRequesterImpl.fromJson;
 
   @override
   Reference get agent;
@@ -8198,6 +8061,6 @@ abstract class _SupplyRequestRequester extends SupplyRequestRequester {
   Reference? get onBehalfOf;
   @override
   @JsonKey(ignore: true)
-  _$$_SupplyRequestRequesterCopyWith<_$_SupplyRequestRequester> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SupplyRequestRequesterImplCopyWith<_$SupplyRequestRequesterImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

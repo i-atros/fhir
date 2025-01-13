@@ -12,7 +12,7 @@ part of 'documents.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Composition _$CompositionFromJson(Map<String, dynamic> json) {
   return _Composition.fromJson(json);
@@ -76,39 +76,31 @@ abstract class $CompositionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       CompositionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class')
-          CodeableConcept? class_,
+      @JsonKey(name: 'class') CodeableConcept? class_,
       Reference subject,
       Reference? encounter,
       Date? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       List<Reference> author,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       Id? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          Element? confidentialityElement,
+      @JsonKey(name: '_confidentiality') Element? confidentialityElement,
       List<CompositionAttester>? attester,
       Reference? custodian,
       List<CompositionRelatesTo>? relatesTo,
@@ -461,48 +453,40 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
 }
 
 /// @nodoc
-abstract class _$$_CompositionCopyWith<$Res>
+abstract class _$$CompositionImplCopyWith<$Res>
     implements $CompositionCopyWith<$Res> {
-  factory _$$_CompositionCopyWith(
-          _$_Composition value, $Res Function(_$_Composition) then) =
-      __$$_CompositionCopyWithImpl<$Res>;
+  factory _$$CompositionImplCopyWith(
+          _$CompositionImpl value, $Res Function(_$CompositionImpl) then) =
+      __$$CompositionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       CompositionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class')
-          CodeableConcept? class_,
+      @JsonKey(name: 'class') CodeableConcept? class_,
       Reference subject,
       Reference? encounter,
       Date? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       List<Reference> author,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       Id? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          Element? confidentialityElement,
+      @JsonKey(name: '_confidentiality') Element? confidentialityElement,
       List<CompositionAttester>? attester,
       Reference? custodian,
       List<CompositionRelatesTo>? relatesTo,
@@ -540,11 +524,11 @@ abstract class _$$_CompositionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionCopyWithImpl<$Res>
-    extends _$CompositionCopyWithImpl<$Res, _$_Composition>
-    implements _$$_CompositionCopyWith<$Res> {
-  __$$_CompositionCopyWithImpl(
-      _$_Composition _value, $Res Function(_$_Composition) _then)
+class __$$CompositionImplCopyWithImpl<$Res>
+    extends _$CompositionCopyWithImpl<$Res, _$CompositionImpl>
+    implements _$$CompositionImplCopyWith<$Res> {
+  __$$CompositionImplCopyWithImpl(
+      _$CompositionImpl _value, $Res Function(_$CompositionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -581,7 +565,7 @@ class __$$_CompositionCopyWithImpl<$Res>
     Object? event = freezed,
     Object? section = freezed,
   }) {
-    return _then(_$_Composition(
+    return _then(_$CompositionImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -708,42 +692,34 @@ class __$$_CompositionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Composition extends _Composition {
-  _$_Composition(
+class _$CompositionImpl extends _Composition {
+  _$CompositionImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-          this.resourceType = Stu3ResourceType.Composition,
+      this.resourceType = Stu3ResourceType.Composition,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       required this.type,
-      @JsonKey(name: 'class')
-          this.class_,
+      @JsonKey(name: 'class') this.class_,
       required this.subject,
       this.encounter,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       required this.author,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.confidentiality,
-      @JsonKey(name: '_confidentiality')
-          this.confidentialityElement,
+      @JsonKey(name: '_confidentiality') this.confidentialityElement,
       this.attester,
       this.custodian,
       this.relatesTo,
@@ -751,8 +727,8 @@ class _$_Composition extends _Composition {
       this.section})
       : super._();
 
-  factory _$_Composition.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionFromJson(json);
+  factory _$CompositionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
@@ -830,10 +806,10 @@ class _$_Composition extends _Composition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Composition &&
+            other is _$CompositionImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -920,12 +896,12 @@ class _$_Composition extends _Composition {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionCopyWith<_$_Composition> get copyWith =>
-      __$$_CompositionCopyWithImpl<_$_Composition>(this, _$identity);
+  _$$CompositionImplCopyWith<_$CompositionImpl> get copyWith =>
+      __$$CompositionImplCopyWithImpl<_$CompositionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionToJson(
+    return _$$CompositionImplToJson(
       this,
     );
   }
@@ -934,48 +910,40 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   factory _Composition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final CompositionStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final CodeableConcept type,
-      @JsonKey(name: 'class')
-          final CodeableConcept? class_,
+      @JsonKey(name: 'class') final CodeableConcept? class_,
       required final Reference subject,
       final Reference? encounter,
       final Date? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       required final List<Reference> author,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final Id? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          final Element? confidentialityElement,
+      @JsonKey(name: '_confidentiality') final Element? confidentialityElement,
       final List<CompositionAttester>? attester,
       final Reference? custodian,
       final List<CompositionRelatesTo>? relatesTo,
       final List<CompositionEvent>? event,
-      final List<CompositionSection>? section}) = _$_Composition;
+      final List<CompositionSection>? section}) = _$CompositionImpl;
   _Composition._() : super._();
 
   factory _Composition.fromJson(Map<String, dynamic> json) =
-      _$_Composition.fromJson;
+      _$CompositionImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
@@ -1048,7 +1016,7 @@ abstract class _Composition extends Composition {
   List<CompositionSection>? get section;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionCopyWith<_$_Composition> get copyWith =>
+  _$$CompositionImplCopyWith<_$CompositionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1158,11 +1126,11 @@ class _$CompositionAttesterCopyWithImpl<$Res, $Val extends CompositionAttester>
 }
 
 /// @nodoc
-abstract class _$$_CompositionAttesterCopyWith<$Res>
+abstract class _$$CompositionAttesterImplCopyWith<$Res>
     implements $CompositionAttesterCopyWith<$Res> {
-  factory _$$_CompositionAttesterCopyWith(_$_CompositionAttester value,
-          $Res Function(_$_CompositionAttester) then) =
-      __$$_CompositionAttesterCopyWithImpl<$Res>;
+  factory _$$CompositionAttesterImplCopyWith(_$CompositionAttesterImpl value,
+          $Res Function(_$CompositionAttesterImpl) then) =
+      __$$CompositionAttesterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1179,11 +1147,11 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionAttesterCopyWithImpl<$Res>
-    extends _$CompositionAttesterCopyWithImpl<$Res, _$_CompositionAttester>
-    implements _$$_CompositionAttesterCopyWith<$Res> {
-  __$$_CompositionAttesterCopyWithImpl(_$_CompositionAttester _value,
-      $Res Function(_$_CompositionAttester) _then)
+class __$$CompositionAttesterImplCopyWithImpl<$Res>
+    extends _$CompositionAttesterCopyWithImpl<$Res, _$CompositionAttesterImpl>
+    implements _$$CompositionAttesterImplCopyWith<$Res> {
+  __$$CompositionAttesterImplCopyWithImpl(_$CompositionAttesterImpl _value,
+      $Res Function(_$CompositionAttesterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1195,7 +1163,7 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
     Object? timeElement = freezed,
     Object? party = freezed,
   }) {
-    return _then(_$_CompositionAttester(
+    return _then(_$CompositionAttesterImpl(
       mode: freezed == mode
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
@@ -1222,8 +1190,8 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionAttester extends _CompositionAttester {
-  _$_CompositionAttester(
+class _$CompositionAttesterImpl extends _CompositionAttester {
+  _$CompositionAttesterImpl(
       {this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.time,
@@ -1231,8 +1199,8 @@ class _$_CompositionAttester extends _CompositionAttester {
       this.party})
       : super._();
 
-  factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionAttesterFromJson(json);
+  factory _$CompositionAttesterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionAttesterImplFromJson(json);
 
   @override
   final List<CompositionAttesterMode>? mode;
@@ -1253,10 +1221,10 @@ class _$_CompositionAttester extends _CompositionAttester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionAttester &&
+            other is _$CompositionAttesterImpl &&
             const DeepCollectionEquality().equals(other.mode, mode) &&
             const DeepCollectionEquality()
                 .equals(other.modeElement, modeElement) &&
@@ -1279,13 +1247,13 @@ class _$_CompositionAttester extends _CompositionAttester {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
-      __$$_CompositionAttesterCopyWithImpl<_$_CompositionAttester>(
+  _$$CompositionAttesterImplCopyWith<_$CompositionAttesterImpl> get copyWith =>
+      __$$CompositionAttesterImplCopyWithImpl<_$CompositionAttesterImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionAttesterToJson(
+    return _$$CompositionAttesterImplToJson(
       this,
     );
   }
@@ -1297,11 +1265,11 @@ abstract class _CompositionAttester extends CompositionAttester {
       @JsonKey(name: '_mode') final List<Element?>? modeElement,
       final Time? time,
       @JsonKey(name: '_time') final Element? timeElement,
-      final Reference? party}) = _$_CompositionAttester;
+      final Reference? party}) = _$CompositionAttesterImpl;
   _CompositionAttester._() : super._();
 
   factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
-      _$_CompositionAttester.fromJson;
+      _$CompositionAttesterImpl.fromJson;
 
   @override
   List<CompositionAttesterMode>? get mode;
@@ -1317,7 +1285,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   Reference? get party;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
+  _$$CompositionAttesterImplCopyWith<_$CompositionAttesterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1433,11 +1401,11 @@ class _$CompositionRelatesToCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CompositionRelatesToCopyWith<$Res>
+abstract class _$$CompositionRelatesToImplCopyWith<$Res>
     implements $CompositionRelatesToCopyWith<$Res> {
-  factory _$$_CompositionRelatesToCopyWith(_$_CompositionRelatesTo value,
-          $Res Function(_$_CompositionRelatesTo) then) =
-      __$$_CompositionRelatesToCopyWithImpl<$Res>;
+  factory _$$CompositionRelatesToImplCopyWith(_$CompositionRelatesToImpl value,
+          $Res Function(_$CompositionRelatesToImpl) then) =
+      __$$CompositionRelatesToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1455,11 +1423,11 @@ abstract class _$$_CompositionRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionRelatesToCopyWithImpl<$Res>
-    extends _$CompositionRelatesToCopyWithImpl<$Res, _$_CompositionRelatesTo>
-    implements _$$_CompositionRelatesToCopyWith<$Res> {
-  __$$_CompositionRelatesToCopyWithImpl(_$_CompositionRelatesTo _value,
-      $Res Function(_$_CompositionRelatesTo) _then)
+class __$$CompositionRelatesToImplCopyWithImpl<$Res>
+    extends _$CompositionRelatesToCopyWithImpl<$Res, _$CompositionRelatesToImpl>
+    implements _$$CompositionRelatesToImplCopyWith<$Res> {
+  __$$CompositionRelatesToImplCopyWithImpl(_$CompositionRelatesToImpl _value,
+      $Res Function(_$CompositionRelatesToImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1470,7 +1438,7 @@ class __$$_CompositionRelatesToCopyWithImpl<$Res>
     Object? targetIdentifier = freezed,
     Object? targetReference = freezed,
   }) {
-    return _then(_$_CompositionRelatesTo(
+    return _then(_$CompositionRelatesToImpl(
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -1493,16 +1461,16 @@ class __$$_CompositionRelatesToCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionRelatesTo extends _CompositionRelatesTo {
-  _$_CompositionRelatesTo(
+class _$CompositionRelatesToImpl extends _CompositionRelatesTo {
+  _$CompositionRelatesToImpl(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.targetIdentifier,
       this.targetReference})
       : super._();
 
-  factory _$_CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionRelatesToFromJson(json);
+  factory _$CompositionRelatesToImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionRelatesToImplFromJson(json);
 
   @override
   final Code? code;
@@ -1520,10 +1488,10 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionRelatesTo &&
+            other is _$CompositionRelatesToImpl &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.codeElement, codeElement) ||
                 other.codeElement == codeElement) &&
@@ -1541,13 +1509,14 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionRelatesToCopyWith<_$_CompositionRelatesTo> get copyWith =>
-      __$$_CompositionRelatesToCopyWithImpl<_$_CompositionRelatesTo>(
-          this, _$identity);
+  _$$CompositionRelatesToImplCopyWith<_$CompositionRelatesToImpl>
+      get copyWith =>
+          __$$CompositionRelatesToImplCopyWithImpl<_$CompositionRelatesToImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionRelatesToToJson(
+    return _$$CompositionRelatesToImplToJson(
       this,
     );
   }
@@ -1558,11 +1527,11 @@ abstract class _CompositionRelatesTo extends CompositionRelatesTo {
       {final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final Identifier? targetIdentifier,
-      final Reference? targetReference}) = _$_CompositionRelatesTo;
+      final Reference? targetReference}) = _$CompositionRelatesToImpl;
   _CompositionRelatesTo._() : super._();
 
   factory _CompositionRelatesTo.fromJson(Map<String, dynamic> json) =
-      _$_CompositionRelatesTo.fromJson;
+      _$CompositionRelatesToImpl.fromJson;
 
   @override
   Code? get code;
@@ -1575,8 +1544,8 @@ abstract class _CompositionRelatesTo extends CompositionRelatesTo {
   Reference? get targetReference;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionRelatesToCopyWith<_$_CompositionRelatesTo> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CompositionRelatesToImplCopyWith<_$CompositionRelatesToImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CompositionEvent _$CompositionEventFromJson(Map<String, dynamic> json) {
@@ -1654,11 +1623,11 @@ class _$CompositionEventCopyWithImpl<$Res, $Val extends CompositionEvent>
 }
 
 /// @nodoc
-abstract class _$$_CompositionEventCopyWith<$Res>
+abstract class _$$CompositionEventImplCopyWith<$Res>
     implements $CompositionEventCopyWith<$Res> {
-  factory _$$_CompositionEventCopyWith(
-          _$_CompositionEvent value, $Res Function(_$_CompositionEvent) then) =
-      __$$_CompositionEventCopyWithImpl<$Res>;
+  factory _$$CompositionEventImplCopyWith(_$CompositionEventImpl value,
+          $Res Function(_$CompositionEventImpl) then) =
+      __$$CompositionEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1669,11 +1638,11 @@ abstract class _$$_CompositionEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionEventCopyWithImpl<$Res>
-    extends _$CompositionEventCopyWithImpl<$Res, _$_CompositionEvent>
-    implements _$$_CompositionEventCopyWith<$Res> {
-  __$$_CompositionEventCopyWithImpl(
-      _$_CompositionEvent _value, $Res Function(_$_CompositionEvent) _then)
+class __$$CompositionEventImplCopyWithImpl<$Res>
+    extends _$CompositionEventCopyWithImpl<$Res, _$CompositionEventImpl>
+    implements _$$CompositionEventImplCopyWith<$Res> {
+  __$$CompositionEventImplCopyWithImpl(_$CompositionEventImpl _value,
+      $Res Function(_$CompositionEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1683,7 +1652,7 @@ class __$$_CompositionEventCopyWithImpl<$Res>
     Object? period = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$_CompositionEvent(
+    return _then(_$CompositionEventImpl(
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -1702,11 +1671,11 @@ class __$$_CompositionEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionEvent extends _CompositionEvent {
-  _$_CompositionEvent({this.code, this.period, this.detail}) : super._();
+class _$CompositionEventImpl extends _CompositionEvent {
+  _$CompositionEventImpl({this.code, this.period, this.detail}) : super._();
 
-  factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionEventFromJson(json);
+  factory _$CompositionEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionEventImplFromJson(json);
 
   @override
   final List<CodeableConcept>? code;
@@ -1721,10 +1690,10 @@ class _$_CompositionEvent extends _CompositionEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionEvent &&
+            other is _$CompositionEventImpl &&
             const DeepCollectionEquality().equals(other.code, code) &&
             (identical(other.period, period) || other.period == period) &&
             const DeepCollectionEquality().equals(other.detail, detail));
@@ -1741,12 +1710,13 @@ class _$_CompositionEvent extends _CompositionEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
-      __$$_CompositionEventCopyWithImpl<_$_CompositionEvent>(this, _$identity);
+  _$$CompositionEventImplCopyWith<_$CompositionEventImpl> get copyWith =>
+      __$$CompositionEventImplCopyWithImpl<_$CompositionEventImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionEventToJson(
+    return _$$CompositionEventImplToJson(
       this,
     );
   }
@@ -1756,11 +1726,11 @@ abstract class _CompositionEvent extends CompositionEvent {
   factory _CompositionEvent(
       {final List<CodeableConcept>? code,
       final Period? period,
-      final List<Reference>? detail}) = _$_CompositionEvent;
+      final List<Reference>? detail}) = _$CompositionEventImpl;
   _CompositionEvent._() : super._();
 
   factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
-      _$_CompositionEvent.fromJson;
+      _$CompositionEventImpl.fromJson;
 
   @override
   List<CodeableConcept>? get code;
@@ -1770,7 +1740,7 @@ abstract class _CompositionEvent extends CompositionEvent {
   List<Reference>? get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
+  _$$CompositionEventImplCopyWith<_$CompositionEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1967,11 +1937,11 @@ class _$CompositionSectionCopyWithImpl<$Res, $Val extends CompositionSection>
 }
 
 /// @nodoc
-abstract class _$$_CompositionSectionCopyWith<$Res>
+abstract class _$$CompositionSectionImplCopyWith<$Res>
     implements $CompositionSectionCopyWith<$Res> {
-  factory _$$_CompositionSectionCopyWith(_$_CompositionSection value,
-          $Res Function(_$_CompositionSection) then) =
-      __$$_CompositionSectionCopyWithImpl<$Res>;
+  factory _$$CompositionSectionImplCopyWith(_$CompositionSectionImpl value,
+          $Res Function(_$CompositionSectionImpl) then) =
+      __$$CompositionSectionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2001,11 +1971,11 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionSectionCopyWithImpl<$Res>
-    extends _$CompositionSectionCopyWithImpl<$Res, _$_CompositionSection>
-    implements _$$_CompositionSectionCopyWith<$Res> {
-  __$$_CompositionSectionCopyWithImpl(
-      _$_CompositionSection _value, $Res Function(_$_CompositionSection) _then)
+class __$$CompositionSectionImplCopyWithImpl<$Res>
+    extends _$CompositionSectionCopyWithImpl<$Res, _$CompositionSectionImpl>
+    implements _$$CompositionSectionImplCopyWith<$Res> {
+  __$$CompositionSectionImplCopyWithImpl(_$CompositionSectionImpl _value,
+      $Res Function(_$CompositionSectionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2022,7 +1992,7 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
     Object? emptyReason = freezed,
     Object? section = freezed,
   }) {
-    return _then(_$_CompositionSection(
+    return _then(_$CompositionSectionImpl(
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -2069,8 +2039,8 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionSection extends _CompositionSection {
-  _$_CompositionSection(
+class _$CompositionSectionImpl extends _CompositionSection {
+  _$CompositionSectionImpl(
       {this.title,
       @JsonKey(name: '_title') this.titleElement,
       this.code,
@@ -2083,8 +2053,8 @@ class _$_CompositionSection extends _CompositionSection {
       this.section})
       : super._();
 
-  factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionSectionFromJson(json);
+  factory _$CompositionSectionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionSectionImplFromJson(json);
 
   @override
   final String? title;
@@ -2115,10 +2085,10 @@ class _$_CompositionSection extends _CompositionSection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionSection &&
+            other is _$CompositionSectionImpl &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.titleElement, titleElement) ||
                 other.titleElement == titleElement) &&
@@ -2153,13 +2123,13 @@ class _$_CompositionSection extends _CompositionSection {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
-      __$$_CompositionSectionCopyWithImpl<_$_CompositionSection>(
+  _$$CompositionSectionImplCopyWith<_$CompositionSectionImpl> get copyWith =>
+      __$$CompositionSectionImplCopyWithImpl<_$CompositionSectionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionSectionToJson(
+    return _$$CompositionSectionImplToJson(
       this,
     );
   }
@@ -2176,11 +2146,11 @@ abstract class _CompositionSection extends CompositionSection {
       final CodeableConcept? orderedBy,
       final List<Reference>? entry,
       final CodeableConcept? emptyReason,
-      final List<CompositionSection>? section}) = _$_CompositionSection;
+      final List<CompositionSection>? section}) = _$CompositionSectionImpl;
   _CompositionSection._() : super._();
 
   factory _CompositionSection.fromJson(Map<String, dynamic> json) =
-      _$_CompositionSection.fromJson;
+      _$CompositionSectionImpl.fromJson;
 
   @override
   String? get title;
@@ -2206,7 +2176,7 @@ abstract class _CompositionSection extends CompositionSection {
   List<CompositionSection>? get section;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
+  _$$CompositionSectionImplCopyWith<_$CompositionSectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2269,38 +2239,31 @@ abstract class $DocumentManifestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       DocumentManifestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
       String? source,
-      @JsonKey(name: '_source')
-          Element? sourceElement,
+      @JsonKey(name: '_source') Element? sourceElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<DocumentManifestContent> content,
       List<DocumentManifestRelated>? related});
 
@@ -2604,47 +2567,40 @@ class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
 }
 
 /// @nodoc
-abstract class _$$_DocumentManifestCopyWith<$Res>
+abstract class _$$DocumentManifestImplCopyWith<$Res>
     implements $DocumentManifestCopyWith<$Res> {
-  factory _$$_DocumentManifestCopyWith(
-          _$_DocumentManifest value, $Res Function(_$_DocumentManifest) then) =
-      __$$_DocumentManifestCopyWithImpl<$Res>;
+  factory _$$DocumentManifestImplCopyWith(_$DocumentManifestImpl value,
+          $Res Function(_$DocumentManifestImpl) then) =
+      __$$DocumentManifestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       DocumentManifestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
       String? source,
-      @JsonKey(name: '_source')
-          Element? sourceElement,
+      @JsonKey(name: '_source') Element? sourceElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<DocumentManifestContent> content,
       List<DocumentManifestRelated>? related});
 
@@ -2673,11 +2629,11 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentManifestCopyWithImpl<$Res>
-    extends _$DocumentManifestCopyWithImpl<$Res, _$_DocumentManifest>
-    implements _$$_DocumentManifestCopyWith<$Res> {
-  __$$_DocumentManifestCopyWithImpl(
-      _$_DocumentManifest _value, $Res Function(_$_DocumentManifest) _then)
+class __$$DocumentManifestImplCopyWithImpl<$Res>
+    extends _$DocumentManifestCopyWithImpl<$Res, _$DocumentManifestImpl>
+    implements _$$DocumentManifestImplCopyWith<$Res> {
+  __$$DocumentManifestImplCopyWithImpl(_$DocumentManifestImpl _value,
+      $Res Function(_$DocumentManifestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2711,7 +2667,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
     Object? content = null,
     Object? related = freezed,
   }) {
-    return _then(_$_DocumentManifest(
+    return _then(_$DocumentManifestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2826,47 +2782,40 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentManifest extends _DocumentManifest {
-  _$_DocumentManifest(
+class _$DocumentManifestImpl extends _DocumentManifest {
+  _$DocumentManifestImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
-          this.resourceType = Stu3ResourceType.DocumentManifest,
+      this.resourceType = Stu3ResourceType.DocumentManifest,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.subject,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.author,
       this.recipient,
       this.source,
-      @JsonKey(name: '_source')
-          this.sourceElement,
+      @JsonKey(name: '_source') this.sourceElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       required this.content,
       this.related})
       : super._();
 
-  factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentManifestFromJson(json);
+  factory _$DocumentManifestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentManifestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
@@ -2937,10 +2886,10 @@ class _$_DocumentManifest extends _DocumentManifest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentManifest &&
+            other is _$DocumentManifestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -3020,12 +2969,13 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentManifestCopyWith<_$_DocumentManifest> get copyWith =>
-      __$$_DocumentManifestCopyWithImpl<_$_DocumentManifest>(this, _$identity);
+  _$$DocumentManifestImplCopyWith<_$DocumentManifestImpl> get copyWith =>
+      __$$DocumentManifestImplCopyWithImpl<_$DocumentManifestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentManifestToJson(
+    return _$$DocumentManifestImplToJson(
       this,
     );
   }
@@ -3034,44 +2984,37 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? masterIdentifier,
       final List<Identifier>? identifier,
       final DocumentManifestStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final List<Reference>? author,
       final List<Reference>? recipient,
       final String? source,
-      @JsonKey(name: '_source')
-          final Element? sourceElement,
+      @JsonKey(name: '_source') final Element? sourceElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       required final List<DocumentManifestContent> content,
-      final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
+      final List<DocumentManifestRelated>? related}) = _$DocumentManifestImpl;
   _DocumentManifest._() : super._();
 
   factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
-      _$_DocumentManifest.fromJson;
+      _$DocumentManifestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
@@ -3137,7 +3080,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   List<DocumentManifestRelated>? get related;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentManifestCopyWith<_$_DocumentManifest> get copyWith =>
+  _$$DocumentManifestImplCopyWith<_$DocumentManifestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3224,11 +3167,12 @@ class _$DocumentManifestContentCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentManifestContentCopyWith<$Res>
+abstract class _$$DocumentManifestContentImplCopyWith<$Res>
     implements $DocumentManifestContentCopyWith<$Res> {
-  factory _$$_DocumentManifestContentCopyWith(_$_DocumentManifestContent value,
-          $Res Function(_$_DocumentManifestContent) then) =
-      __$$_DocumentManifestContentCopyWithImpl<$Res>;
+  factory _$$DocumentManifestContentImplCopyWith(
+          _$DocumentManifestContentImpl value,
+          $Res Function(_$DocumentManifestContentImpl) then) =
+      __$$DocumentManifestContentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Attachment? pAttachment, Reference? pReference});
@@ -3240,12 +3184,13 @@ abstract class _$$_DocumentManifestContentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentManifestContentCopyWithImpl<$Res>
+class __$$DocumentManifestContentImplCopyWithImpl<$Res>
     extends _$DocumentManifestContentCopyWithImpl<$Res,
-        _$_DocumentManifestContent>
-    implements _$$_DocumentManifestContentCopyWith<$Res> {
-  __$$_DocumentManifestContentCopyWithImpl(_$_DocumentManifestContent _value,
-      $Res Function(_$_DocumentManifestContent) _then)
+        _$DocumentManifestContentImpl>
+    implements _$$DocumentManifestContentImplCopyWith<$Res> {
+  __$$DocumentManifestContentImplCopyWithImpl(
+      _$DocumentManifestContentImpl _value,
+      $Res Function(_$DocumentManifestContentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3254,7 +3199,7 @@ class __$$_DocumentManifestContentCopyWithImpl<$Res>
     Object? pAttachment = freezed,
     Object? pReference = freezed,
   }) {
-    return _then(_$_DocumentManifestContent(
+    return _then(_$DocumentManifestContentImpl(
       pAttachment: freezed == pAttachment
           ? _value.pAttachment
           : pAttachment // ignore: cast_nullable_to_non_nullable
@@ -3269,11 +3214,12 @@ class __$$_DocumentManifestContentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentManifestContent extends _DocumentManifestContent {
-  _$_DocumentManifestContent({this.pAttachment, this.pReference}) : super._();
+class _$DocumentManifestContentImpl extends _DocumentManifestContent {
+  _$DocumentManifestContentImpl({this.pAttachment, this.pReference})
+      : super._();
 
-  factory _$_DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentManifestContentFromJson(json);
+  factory _$DocumentManifestContentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentManifestContentImplFromJson(json);
 
   @override
   final Attachment? pAttachment;
@@ -3286,10 +3232,10 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentManifestContent &&
+            other is _$DocumentManifestContentImpl &&
             (identical(other.pAttachment, pAttachment) ||
                 other.pAttachment == pAttachment) &&
             (identical(other.pReference, pReference) ||
@@ -3303,14 +3249,13 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentManifestContentCopyWith<_$_DocumentManifestContent>
-      get copyWith =>
-          __$$_DocumentManifestContentCopyWithImpl<_$_DocumentManifestContent>(
-              this, _$identity);
+  _$$DocumentManifestContentImplCopyWith<_$DocumentManifestContentImpl>
+      get copyWith => __$$DocumentManifestContentImplCopyWithImpl<
+          _$DocumentManifestContentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentManifestContentToJson(
+    return _$$DocumentManifestContentImplToJson(
       this,
     );
   }
@@ -3319,11 +3264,11 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
 abstract class _DocumentManifestContent extends DocumentManifestContent {
   factory _DocumentManifestContent(
       {final Attachment? pAttachment,
-      final Reference? pReference}) = _$_DocumentManifestContent;
+      final Reference? pReference}) = _$DocumentManifestContentImpl;
   _DocumentManifestContent._() : super._();
 
   factory _DocumentManifestContent.fromJson(Map<String, dynamic> json) =
-      _$_DocumentManifestContent.fromJson;
+      _$DocumentManifestContentImpl.fromJson;
 
   @override
   Attachment? get pAttachment;
@@ -3331,7 +3276,7 @@ abstract class _DocumentManifestContent extends DocumentManifestContent {
   Reference? get pReference;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentManifestContentCopyWith<_$_DocumentManifestContent>
+  _$$DocumentManifestContentImplCopyWith<_$DocumentManifestContentImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3418,11 +3363,12 @@ class _$DocumentManifestRelatedCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentManifestRelatedCopyWith<$Res>
+abstract class _$$DocumentManifestRelatedImplCopyWith<$Res>
     implements $DocumentManifestRelatedCopyWith<$Res> {
-  factory _$$_DocumentManifestRelatedCopyWith(_$_DocumentManifestRelated value,
-          $Res Function(_$_DocumentManifestRelated) then) =
-      __$$_DocumentManifestRelatedCopyWithImpl<$Res>;
+  factory _$$DocumentManifestRelatedImplCopyWith(
+          _$DocumentManifestRelatedImpl value,
+          $Res Function(_$DocumentManifestRelatedImpl) then) =
+      __$$DocumentManifestRelatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Identifier? identifier, Reference? ref});
@@ -3434,12 +3380,13 @@ abstract class _$$_DocumentManifestRelatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
+class __$$DocumentManifestRelatedImplCopyWithImpl<$Res>
     extends _$DocumentManifestRelatedCopyWithImpl<$Res,
-        _$_DocumentManifestRelated>
-    implements _$$_DocumentManifestRelatedCopyWith<$Res> {
-  __$$_DocumentManifestRelatedCopyWithImpl(_$_DocumentManifestRelated _value,
-      $Res Function(_$_DocumentManifestRelated) _then)
+        _$DocumentManifestRelatedImpl>
+    implements _$$DocumentManifestRelatedImplCopyWith<$Res> {
+  __$$DocumentManifestRelatedImplCopyWithImpl(
+      _$DocumentManifestRelatedImpl _value,
+      $Res Function(_$DocumentManifestRelatedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3448,7 +3395,7 @@ class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? ref = freezed,
   }) {
-    return _then(_$_DocumentManifestRelated(
+    return _then(_$DocumentManifestRelatedImpl(
       identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
@@ -3463,11 +3410,11 @@ class __$$_DocumentManifestRelatedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentManifestRelated extends _DocumentManifestRelated {
-  _$_DocumentManifestRelated({this.identifier, this.ref}) : super._();
+class _$DocumentManifestRelatedImpl extends _DocumentManifestRelated {
+  _$DocumentManifestRelatedImpl({this.identifier, this.ref}) : super._();
 
-  factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentManifestRelatedFromJson(json);
+  factory _$DocumentManifestRelatedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentManifestRelatedImplFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -3480,10 +3427,10 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentManifestRelated &&
+            other is _$DocumentManifestRelatedImpl &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.ref, ref) || other.ref == ref));
@@ -3496,14 +3443,13 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentManifestRelatedCopyWith<_$_DocumentManifestRelated>
-      get copyWith =>
-          __$$_DocumentManifestRelatedCopyWithImpl<_$_DocumentManifestRelated>(
-              this, _$identity);
+  _$$DocumentManifestRelatedImplCopyWith<_$DocumentManifestRelatedImpl>
+      get copyWith => __$$DocumentManifestRelatedImplCopyWithImpl<
+          _$DocumentManifestRelatedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentManifestRelatedToJson(
+    return _$$DocumentManifestRelatedImplToJson(
       this,
     );
   }
@@ -3512,11 +3458,11 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
 abstract class _DocumentManifestRelated extends DocumentManifestRelated {
   factory _DocumentManifestRelated(
       {final Identifier? identifier,
-      final Reference? ref}) = _$_DocumentManifestRelated;
+      final Reference? ref}) = _$DocumentManifestRelatedImpl;
   _DocumentManifestRelated._() : super._();
 
   factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
-      _$_DocumentManifestRelated.fromJson;
+      _$DocumentManifestRelatedImpl.fromJson;
 
   @override
   Identifier? get identifier;
@@ -3524,7 +3470,7 @@ abstract class _DocumentManifestRelated extends DocumentManifestRelated {
   Reference? get ref;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentManifestRelatedCopyWith<_$_DocumentManifestRelated>
+  _$$DocumentManifestRelatedImplCopyWith<_$DocumentManifestRelatedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3596,45 +3542,36 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       DocumentReferenceStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       String? docStatus,
-      @JsonKey(name: '_docStatus')
-          Element? docStatusElement,
+      @JsonKey(name: '_docStatus') Element? docStatusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class')
-          CodeableConcept? class_,
+      @JsonKey(name: 'class') CodeableConcept? class_,
       Reference? subject,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       String? indexed,
-      @JsonKey(name: '_indexed')
-          Element? indexedElement,
+      @JsonKey(name: '_indexed') Element? indexedElement,
       List<Reference>? author,
       Reference? authenticator,
       Reference? custodian,
       List<DocumentReferenceRelatesTo>? relatesTo,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? securityLabel,
       List<DocumentReferenceContent> content,
       DocumentReferenceContext? context});
@@ -4030,54 +3967,45 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceCopyWith<$Res>
+abstract class _$$DocumentReferenceImplCopyWith<$Res>
     implements $DocumentReferenceCopyWith<$Res> {
-  factory _$$_DocumentReferenceCopyWith(_$_DocumentReference value,
-          $Res Function(_$_DocumentReference) then) =
-      __$$_DocumentReferenceCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceImplCopyWith(_$DocumentReferenceImpl value,
+          $Res Function(_$DocumentReferenceImpl) then) =
+      __$$DocumentReferenceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
-          Stu3ResourceType resourceType,
+      Stu3ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       DocumentReferenceStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       String? docStatus,
-      @JsonKey(name: '_docStatus')
-          Element? docStatusElement,
+      @JsonKey(name: '_docStatus') Element? docStatusElement,
       CodeableConcept type,
-      @JsonKey(name: 'class')
-          CodeableConcept? class_,
+      @JsonKey(name: 'class') CodeableConcept? class_,
       Reference? subject,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       String? indexed,
-      @JsonKey(name: '_indexed')
-          Element? indexedElement,
+      @JsonKey(name: '_indexed') Element? indexedElement,
       List<Reference>? author,
       Reference? authenticator,
       Reference? custodian,
       List<DocumentReferenceRelatesTo>? relatesTo,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? securityLabel,
       List<DocumentReferenceContent> content,
       DocumentReferenceContext? context});
@@ -4117,11 +4045,11 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceCopyWithImpl<$Res>
-    extends _$DocumentReferenceCopyWithImpl<$Res, _$_DocumentReference>
-    implements _$$_DocumentReferenceCopyWith<$Res> {
-  __$$_DocumentReferenceCopyWithImpl(
-      _$_DocumentReference _value, $Res Function(_$_DocumentReference) _then)
+class __$$DocumentReferenceImplCopyWithImpl<$Res>
+    extends _$DocumentReferenceCopyWithImpl<$Res, _$DocumentReferenceImpl>
+    implements _$$DocumentReferenceImplCopyWith<$Res> {
+  __$$DocumentReferenceImplCopyWithImpl(_$DocumentReferenceImpl _value,
+      $Res Function(_$DocumentReferenceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4161,7 +4089,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
     Object? content = null,
     Object? context = freezed,
   }) {
-    return _then(_$_DocumentReference(
+    return _then(_$DocumentReferenceImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4300,55 +4228,46 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReference extends _DocumentReference {
-  _$_DocumentReference(
+class _$DocumentReferenceImpl extends _DocumentReference {
+  _$DocumentReferenceImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
-          this.resourceType = Stu3ResourceType.DocumentReference,
+      this.resourceType = Stu3ResourceType.DocumentReference,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.docStatus,
-      @JsonKey(name: '_docStatus')
-          this.docStatusElement,
+      @JsonKey(name: '_docStatus') this.docStatusElement,
       required this.type,
-      @JsonKey(name: 'class')
-          this.class_,
+      @JsonKey(name: 'class') this.class_,
       this.subject,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.indexed,
-      @JsonKey(name: '_indexed')
-          this.indexedElement,
+      @JsonKey(name: '_indexed') this.indexedElement,
       this.author,
       this.authenticator,
       this.custodian,
       this.relatesTo,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.securityLabel,
       required this.content,
       this.context})
       : super._();
 
-  factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceFromJson(json);
+  factory _$DocumentReferenceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
@@ -4433,10 +4352,10 @@ class _$_DocumentReference extends _DocumentReference {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReference &&
+            other is _$DocumentReferenceImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -4533,13 +4452,13 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
-      __$$_DocumentReferenceCopyWithImpl<_$_DocumentReference>(
+  _$$DocumentReferenceImplCopyWith<_$DocumentReferenceImpl> get copyWith =>
+      __$$DocumentReferenceImplCopyWithImpl<_$DocumentReferenceImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceToJson(
+    return _$$DocumentReferenceImplToJson(
       this,
     );
   }
@@ -4548,52 +4467,43 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   factory _DocumentReference(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
-          final Stu3ResourceType resourceType,
+      final Stu3ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? masterIdentifier,
       final List<Identifier>? identifier,
       final DocumentReferenceStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final String? docStatus,
-      @JsonKey(name: '_docStatus')
-          final Element? docStatusElement,
+      @JsonKey(name: '_docStatus') final Element? docStatusElement,
       required final CodeableConcept type,
-      @JsonKey(name: 'class')
-          final CodeableConcept? class_,
+      @JsonKey(name: 'class') final CodeableConcept? class_,
       final Reference? subject,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final String? indexed,
-      @JsonKey(name: '_indexed')
-          final Element? indexedElement,
+      @JsonKey(name: '_indexed') final Element? indexedElement,
       final List<Reference>? author,
       final Reference? authenticator,
       final Reference? custodian,
       final List<DocumentReferenceRelatesTo>? relatesTo,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<CodeableConcept>? securityLabel,
       required final List<DocumentReferenceContent> content,
-      final DocumentReferenceContext? context}) = _$_DocumentReference;
+      final DocumentReferenceContext? context}) = _$DocumentReferenceImpl;
   _DocumentReference._() : super._();
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReference.fromJson;
+      _$DocumentReferenceImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
@@ -4673,7 +4583,7 @@ abstract class _DocumentReference extends DocumentReference {
   DocumentReferenceContext? get context;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
+  _$$DocumentReferenceImplCopyWith<_$DocumentReferenceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4768,12 +4678,12 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
+abstract class _$$DocumentReferenceRelatesToImplCopyWith<$Res>
     implements $DocumentReferenceRelatesToCopyWith<$Res> {
-  factory _$$_DocumentReferenceRelatesToCopyWith(
-          _$_DocumentReferenceRelatesTo value,
-          $Res Function(_$_DocumentReferenceRelatesTo) then) =
-      __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceRelatesToImplCopyWith(
+          _$DocumentReferenceRelatesToImpl value,
+          $Res Function(_$DocumentReferenceRelatesToImpl) then) =
+      __$$DocumentReferenceRelatesToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4788,13 +4698,13 @@ abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
+class __$$DocumentReferenceRelatesToImplCopyWithImpl<$Res>
     extends _$DocumentReferenceRelatesToCopyWithImpl<$Res,
-        _$_DocumentReferenceRelatesTo>
-    implements _$$_DocumentReferenceRelatesToCopyWith<$Res> {
-  __$$_DocumentReferenceRelatesToCopyWithImpl(
-      _$_DocumentReferenceRelatesTo _value,
-      $Res Function(_$_DocumentReferenceRelatesTo) _then)
+        _$DocumentReferenceRelatesToImpl>
+    implements _$$DocumentReferenceRelatesToImplCopyWith<$Res> {
+  __$$DocumentReferenceRelatesToImplCopyWithImpl(
+      _$DocumentReferenceRelatesToImpl _value,
+      $Res Function(_$DocumentReferenceRelatesToImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4804,7 +4714,7 @@ class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
     Object? codeElement = freezed,
     Object? target = null,
   }) {
-    return _then(_$_DocumentReferenceRelatesTo(
+    return _then(_$DocumentReferenceRelatesToImpl(
       code: freezed == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -4823,15 +4733,16 @@ class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
-  _$_DocumentReferenceRelatesTo(
+class _$DocumentReferenceRelatesToImpl extends _DocumentReferenceRelatesTo {
+  _$DocumentReferenceRelatesToImpl(
       {this.code,
       @JsonKey(name: '_code') this.codeElement,
       required this.target})
       : super._();
 
-  factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceRelatesToFromJson(json);
+  factory _$DocumentReferenceRelatesToImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$DocumentReferenceRelatesToImplFromJson(json);
 
   @override
   final DocumentReferenceRelatesToCode? code;
@@ -4847,10 +4758,10 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceRelatesTo &&
+            other is _$DocumentReferenceRelatesToImpl &&
             (identical(other.code, code) || other.code == code) &&
             (identical(other.codeElement, codeElement) ||
                 other.codeElement == codeElement) &&
@@ -4864,13 +4775,13 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
-      get copyWith => __$$_DocumentReferenceRelatesToCopyWithImpl<
-          _$_DocumentReferenceRelatesTo>(this, _$identity);
+  _$$DocumentReferenceRelatesToImplCopyWith<_$DocumentReferenceRelatesToImpl>
+      get copyWith => __$$DocumentReferenceRelatesToImplCopyWithImpl<
+          _$DocumentReferenceRelatesToImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceRelatesToToJson(
+    return _$$DocumentReferenceRelatesToImplToJson(
       this,
     );
   }
@@ -4880,11 +4791,11 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   factory _DocumentReferenceRelatesTo(
       {final DocumentReferenceRelatesToCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
-      required final Reference target}) = _$_DocumentReferenceRelatesTo;
+      required final Reference target}) = _$DocumentReferenceRelatesToImpl;
   _DocumentReferenceRelatesTo._() : super._();
 
   factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceRelatesTo.fromJson;
+      _$DocumentReferenceRelatesToImpl.fromJson;
 
   @override
   DocumentReferenceRelatesToCode? get code;
@@ -4895,7 +4806,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   Reference get target;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
+  _$$DocumentReferenceRelatesToImplCopyWith<_$DocumentReferenceRelatesToImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4978,12 +4889,12 @@ class _$DocumentReferenceContentCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceContentCopyWith<$Res>
+abstract class _$$DocumentReferenceContentImplCopyWith<$Res>
     implements $DocumentReferenceContentCopyWith<$Res> {
-  factory _$$_DocumentReferenceContentCopyWith(
-          _$_DocumentReferenceContent value,
-          $Res Function(_$_DocumentReferenceContent) then) =
-      __$$_DocumentReferenceContentCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceContentImplCopyWith(
+          _$DocumentReferenceContentImpl value,
+          $Res Function(_$DocumentReferenceContentImpl) then) =
+      __$$DocumentReferenceContentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Attachment attachment, Coding? format});
@@ -4995,12 +4906,13 @@ abstract class _$$_DocumentReferenceContentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceContentCopyWithImpl<$Res>
+class __$$DocumentReferenceContentImplCopyWithImpl<$Res>
     extends _$DocumentReferenceContentCopyWithImpl<$Res,
-        _$_DocumentReferenceContent>
-    implements _$$_DocumentReferenceContentCopyWith<$Res> {
-  __$$_DocumentReferenceContentCopyWithImpl(_$_DocumentReferenceContent _value,
-      $Res Function(_$_DocumentReferenceContent) _then)
+        _$DocumentReferenceContentImpl>
+    implements _$$DocumentReferenceContentImplCopyWith<$Res> {
+  __$$DocumentReferenceContentImplCopyWithImpl(
+      _$DocumentReferenceContentImpl _value,
+      $Res Function(_$DocumentReferenceContentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5009,7 +4921,7 @@ class __$$_DocumentReferenceContentCopyWithImpl<$Res>
     Object? attachment = null,
     Object? format = freezed,
   }) {
-    return _then(_$_DocumentReferenceContent(
+    return _then(_$DocumentReferenceContentImpl(
       attachment: null == attachment
           ? _value.attachment
           : attachment // ignore: cast_nullable_to_non_nullable
@@ -5024,12 +4936,12 @@ class __$$_DocumentReferenceContentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceContent extends _DocumentReferenceContent {
-  _$_DocumentReferenceContent({required this.attachment, this.format})
+class _$DocumentReferenceContentImpl extends _DocumentReferenceContent {
+  _$DocumentReferenceContentImpl({required this.attachment, this.format})
       : super._();
 
-  factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceContentFromJson(json);
+  factory _$DocumentReferenceContentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceContentImplFromJson(json);
 
   @override
   final Attachment attachment;
@@ -5042,10 +4954,10 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceContent &&
+            other is _$DocumentReferenceContentImpl &&
             (identical(other.attachment, attachment) ||
                 other.attachment == attachment) &&
             (identical(other.format, format) || other.format == format));
@@ -5058,13 +4970,13 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
-      get copyWith => __$$_DocumentReferenceContentCopyWithImpl<
-          _$_DocumentReferenceContent>(this, _$identity);
+  _$$DocumentReferenceContentImplCopyWith<_$DocumentReferenceContentImpl>
+      get copyWith => __$$DocumentReferenceContentImplCopyWithImpl<
+          _$DocumentReferenceContentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceContentToJson(
+    return _$$DocumentReferenceContentImplToJson(
       this,
     );
   }
@@ -5073,11 +4985,11 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   factory _DocumentReferenceContent(
       {required final Attachment attachment,
-      final Coding? format}) = _$_DocumentReferenceContent;
+      final Coding? format}) = _$DocumentReferenceContentImpl;
   _DocumentReferenceContent._() : super._();
 
   factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceContent.fromJson;
+      _$DocumentReferenceContentImpl.fromJson;
 
   @override
   Attachment get attachment;
@@ -5085,7 +4997,7 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   Coding? get format;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
+  _$$DocumentReferenceContentImplCopyWith<_$DocumentReferenceContentImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5249,12 +5161,12 @@ class _$DocumentReferenceContextCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceContextCopyWith<$Res>
+abstract class _$$DocumentReferenceContextImplCopyWith<$Res>
     implements $DocumentReferenceContextCopyWith<$Res> {
-  factory _$$_DocumentReferenceContextCopyWith(
-          _$_DocumentReferenceContext value,
-          $Res Function(_$_DocumentReferenceContext) then) =
-      __$$_DocumentReferenceContextCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceContextImplCopyWith(
+          _$DocumentReferenceContextImpl value,
+          $Res Function(_$DocumentReferenceContextImpl) then) =
+      __$$DocumentReferenceContextImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5279,12 +5191,13 @@ abstract class _$$_DocumentReferenceContextCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceContextCopyWithImpl<$Res>
+class __$$DocumentReferenceContextImplCopyWithImpl<$Res>
     extends _$DocumentReferenceContextCopyWithImpl<$Res,
-        _$_DocumentReferenceContext>
-    implements _$$_DocumentReferenceContextCopyWith<$Res> {
-  __$$_DocumentReferenceContextCopyWithImpl(_$_DocumentReferenceContext _value,
-      $Res Function(_$_DocumentReferenceContext) _then)
+        _$DocumentReferenceContextImpl>
+    implements _$$DocumentReferenceContextImplCopyWith<$Res> {
+  __$$DocumentReferenceContextImplCopyWithImpl(
+      _$DocumentReferenceContextImpl _value,
+      $Res Function(_$DocumentReferenceContextImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5298,7 +5211,7 @@ class __$$_DocumentReferenceContextCopyWithImpl<$Res>
     Object? sourcePatientInfo = freezed,
     Object? related = freezed,
   }) {
-    return _then(_$_DocumentReferenceContext(
+    return _then(_$DocumentReferenceContextImpl(
       encounter: freezed == encounter
           ? _value.encounter
           : encounter // ignore: cast_nullable_to_non_nullable
@@ -5333,8 +5246,8 @@ class __$$_DocumentReferenceContextCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceContext extends _DocumentReferenceContext {
-  _$_DocumentReferenceContext(
+class _$DocumentReferenceContextImpl extends _DocumentReferenceContext {
+  _$DocumentReferenceContextImpl(
       {this.encounter,
       this.event,
       this.period,
@@ -5344,8 +5257,8 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
       this.related})
       : super._();
 
-  factory _$_DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceContextFromJson(json);
+  factory _$DocumentReferenceContextImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceContextImplFromJson(json);
 
   @override
   final Reference? encounter;
@@ -5368,10 +5281,10 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceContext &&
+            other is _$DocumentReferenceContextImpl &&
             (identical(other.encounter, encounter) ||
                 other.encounter == encounter) &&
             const DeepCollectionEquality().equals(other.event, event) &&
@@ -5400,13 +5313,13 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceContextCopyWith<_$_DocumentReferenceContext>
-      get copyWith => __$$_DocumentReferenceContextCopyWithImpl<
-          _$_DocumentReferenceContext>(this, _$identity);
+  _$$DocumentReferenceContextImplCopyWith<_$DocumentReferenceContextImpl>
+      get copyWith => __$$DocumentReferenceContextImplCopyWithImpl<
+          _$DocumentReferenceContextImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceContextToJson(
+    return _$$DocumentReferenceContextImplToJson(
       this,
     );
   }
@@ -5421,11 +5334,11 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
           final CodeableConcept? practiceSetting,
           final Reference? sourcePatientInfo,
           final List<DocumentReferenceRelated>? related}) =
-      _$_DocumentReferenceContext;
+      _$DocumentReferenceContextImpl;
   _DocumentReferenceContext._() : super._();
 
   factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceContext.fromJson;
+      _$DocumentReferenceContextImpl.fromJson;
 
   @override
   Reference? get encounter;
@@ -5443,7 +5356,7 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
   List<DocumentReferenceRelated>? get related;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceContextCopyWith<_$_DocumentReferenceContext>
+  _$$DocumentReferenceContextImplCopyWith<_$DocumentReferenceContextImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5530,12 +5443,12 @@ class _$DocumentReferenceRelatedCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceRelatedCopyWith<$Res>
+abstract class _$$DocumentReferenceRelatedImplCopyWith<$Res>
     implements $DocumentReferenceRelatedCopyWith<$Res> {
-  factory _$$_DocumentReferenceRelatedCopyWith(
-          _$_DocumentReferenceRelated value,
-          $Res Function(_$_DocumentReferenceRelated) then) =
-      __$$_DocumentReferenceRelatedCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceRelatedImplCopyWith(
+          _$DocumentReferenceRelatedImpl value,
+          $Res Function(_$DocumentReferenceRelatedImpl) then) =
+      __$$DocumentReferenceRelatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Identifier? identifier, Reference? ref});
@@ -5547,12 +5460,13 @@ abstract class _$$_DocumentReferenceRelatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceRelatedCopyWithImpl<$Res>
+class __$$DocumentReferenceRelatedImplCopyWithImpl<$Res>
     extends _$DocumentReferenceRelatedCopyWithImpl<$Res,
-        _$_DocumentReferenceRelated>
-    implements _$$_DocumentReferenceRelatedCopyWith<$Res> {
-  __$$_DocumentReferenceRelatedCopyWithImpl(_$_DocumentReferenceRelated _value,
-      $Res Function(_$_DocumentReferenceRelated) _then)
+        _$DocumentReferenceRelatedImpl>
+    implements _$$DocumentReferenceRelatedImplCopyWith<$Res> {
+  __$$DocumentReferenceRelatedImplCopyWithImpl(
+      _$DocumentReferenceRelatedImpl _value,
+      $Res Function(_$DocumentReferenceRelatedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5561,7 +5475,7 @@ class __$$_DocumentReferenceRelatedCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? ref = freezed,
   }) {
-    return _then(_$_DocumentReferenceRelated(
+    return _then(_$DocumentReferenceRelatedImpl(
       identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
@@ -5576,11 +5490,11 @@ class __$$_DocumentReferenceRelatedCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceRelated extends _DocumentReferenceRelated {
-  _$_DocumentReferenceRelated({this.identifier, this.ref}) : super._();
+class _$DocumentReferenceRelatedImpl extends _DocumentReferenceRelated {
+  _$DocumentReferenceRelatedImpl({this.identifier, this.ref}) : super._();
 
-  factory _$_DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceRelatedFromJson(json);
+  factory _$DocumentReferenceRelatedImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceRelatedImplFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -5593,10 +5507,10 @@ class _$_DocumentReferenceRelated extends _DocumentReferenceRelated {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceRelated &&
+            other is _$DocumentReferenceRelatedImpl &&
             (identical(other.identifier, identifier) ||
                 other.identifier == identifier) &&
             (identical(other.ref, ref) || other.ref == ref));
@@ -5609,13 +5523,13 @@ class _$_DocumentReferenceRelated extends _DocumentReferenceRelated {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceRelatedCopyWith<_$_DocumentReferenceRelated>
-      get copyWith => __$$_DocumentReferenceRelatedCopyWithImpl<
-          _$_DocumentReferenceRelated>(this, _$identity);
+  _$$DocumentReferenceRelatedImplCopyWith<_$DocumentReferenceRelatedImpl>
+      get copyWith => __$$DocumentReferenceRelatedImplCopyWithImpl<
+          _$DocumentReferenceRelatedImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceRelatedToJson(
+    return _$$DocumentReferenceRelatedImplToJson(
       this,
     );
   }
@@ -5624,11 +5538,11 @@ class _$_DocumentReferenceRelated extends _DocumentReferenceRelated {
 abstract class _DocumentReferenceRelated extends DocumentReferenceRelated {
   factory _DocumentReferenceRelated(
       {final Identifier? identifier,
-      final Reference? ref}) = _$_DocumentReferenceRelated;
+      final Reference? ref}) = _$DocumentReferenceRelatedImpl;
   _DocumentReferenceRelated._() : super._();
 
   factory _DocumentReferenceRelated.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceRelated.fromJson;
+      _$DocumentReferenceRelatedImpl.fromJson;
 
   @override
   Identifier? get identifier;
@@ -5636,6 +5550,6 @@ abstract class _DocumentReferenceRelated extends DocumentReferenceRelated {
   Reference? get ref;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceRelatedCopyWith<_$_DocumentReferenceRelated>
+  _$$DocumentReferenceRelatedImplCopyWith<_$DocumentReferenceRelatedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

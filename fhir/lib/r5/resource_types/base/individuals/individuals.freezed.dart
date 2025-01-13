@@ -12,7 +12,7 @@ part of 'individuals.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Group _$GroupFromJson(Map<String, dynamic> json) {
   return _Group.fromJson(json);
@@ -71,38 +71,29 @@ abstract class $GroupCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          GroupType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_active') Element? activeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       Boolean? actual,
-      @JsonKey(name: '_actual')
-          Element? actualElement,
+      @JsonKey(name: '_actual') Element? actualElement,
       CodeableConcept? code,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       UnsignedInt? quantity,
-      @JsonKey(name: '_quantity')
-          Element? quantityElement,
+      @JsonKey(name: '_quantity') Element? quantityElement,
       Reference? managingEntity,
       List<GroupCharacteristic>? characteristic,
       List<GroupMember>? member});
@@ -402,45 +393,37 @@ class _$GroupCopyWithImpl<$Res, $Val extends Group>
 }
 
 /// @nodoc
-abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
-  factory _$$_GroupCopyWith(_$_Group value, $Res Function(_$_Group) then) =
-      __$$_GroupCopyWithImpl<$Res>;
+abstract class _$$GroupImplCopyWith<$Res> implements $GroupCopyWith<$Res> {
+  factory _$$GroupImplCopyWith(
+          _$GroupImpl value, $Res Function(_$GroupImpl) then) =
+      __$$GroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          GroupType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_active') Element? activeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       Boolean? actual,
-      @JsonKey(name: '_actual')
-          Element? actualElement,
+      @JsonKey(name: '_actual') Element? actualElement,
       CodeableConcept? code,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       UnsignedInt? quantity,
-      @JsonKey(name: '_quantity')
-          Element? quantityElement,
+      @JsonKey(name: '_quantity') Element? quantityElement,
       Reference? managingEntity,
       List<GroupCharacteristic>? characteristic,
       List<GroupMember>? member});
@@ -470,9 +453,11 @@ abstract class _$$_GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
-    implements _$$_GroupCopyWith<$Res> {
-  __$$_GroupCopyWithImpl(_$_Group _value, $Res Function(_$_Group) _then)
+class __$$GroupImplCopyWithImpl<$Res>
+    extends _$GroupCopyWithImpl<$Res, _$GroupImpl>
+    implements _$$GroupImplCopyWith<$Res> {
+  __$$GroupImplCopyWithImpl(
+      _$GroupImpl _value, $Res Function(_$GroupImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -505,7 +490,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
     Object? characteristic = freezed,
     Object? member = freezed,
   }) {
-    return _then(_$_Group(
+    return _then(_$GroupImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -616,48 +601,39 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Group extends _Group {
-  _$_Group(
+class _$GroupImpl extends _Group {
+  _$GroupImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
-          this.resourceType = R5ResourceType.Group,
+      this.resourceType = R5ResourceType.Group,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_active') this.activeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.actual,
-      @JsonKey(name: '_actual')
-          this.actualElement,
+      @JsonKey(name: '_actual') this.actualElement,
       this.code,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.quantity,
-      @JsonKey(name: '_quantity')
-          this.quantityElement,
+      @JsonKey(name: '_quantity') this.quantityElement,
       this.managingEntity,
       this.characteristic,
       this.member})
       : super._();
 
-  factory _$_Group.fromJson(Map<String, dynamic> json) =>
-      _$$_GroupFromJson(json);
+  factory _$GroupImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GroupImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Group)
@@ -728,10 +704,10 @@ class _$_Group extends _Group {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Group &&
+            other is _$GroupImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -811,12 +787,12 @@ class _$_Group extends _Group {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GroupCopyWith<_$_Group> get copyWith =>
-      __$$_GroupCopyWithImpl<_$_Group>(this, _$identity);
+  _$$GroupImplCopyWith<_$GroupImpl> get copyWith =>
+      __$$GroupImplCopyWithImpl<_$GroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupToJson(
+    return _$$GroupImplToJson(
       this,
     );
   }
@@ -825,44 +801,35 @@ class _$_Group extends _Group {
 abstract class _Group extends Group {
   factory _Group(
       {@JsonKey(unknownEnumValue: R5ResourceType.Group)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Boolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          final GroupType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_active') final Element? activeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) final GroupType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final Boolean? actual,
-      @JsonKey(name: '_actual')
-          final Element? actualElement,
+      @JsonKey(name: '_actual') final Element? actualElement,
       final CodeableConcept? code,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final UnsignedInt? quantity,
-      @JsonKey(name: '_quantity')
-          final Element? quantityElement,
+      @JsonKey(name: '_quantity') final Element? quantityElement,
       final Reference? managingEntity,
       final List<GroupCharacteristic>? characteristic,
-      final List<GroupMember>? member}) = _$_Group;
+      final List<GroupMember>? member}) = _$GroupImpl;
   _Group._() : super._();
 
-  factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
+  factory _Group.fromJson(Map<String, dynamic> json) = _$GroupImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Group)
@@ -928,7 +895,7 @@ abstract class _Group extends Group {
   List<GroupMember>? get member;
   @override
   @JsonKey(ignore: true)
-  _$$_GroupCopyWith<_$_Group> get copyWith =>
+  _$$GroupImplCopyWith<_$GroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1172,11 +1139,11 @@ class _$GroupCharacteristicCopyWithImpl<$Res, $Val extends GroupCharacteristic>
 }
 
 /// @nodoc
-abstract class _$$_GroupCharacteristicCopyWith<$Res>
+abstract class _$$GroupCharacteristicImplCopyWith<$Res>
     implements $GroupCharacteristicCopyWith<$Res> {
-  factory _$$_GroupCharacteristicCopyWith(_$_GroupCharacteristic value,
-          $Res Function(_$_GroupCharacteristic) then) =
-      __$$_GroupCharacteristicCopyWithImpl<$Res>;
+  factory _$$GroupCharacteristicImplCopyWith(_$GroupCharacteristicImpl value,
+          $Res Function(_$GroupCharacteristicImpl) then) =
+      __$$GroupCharacteristicImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1213,11 +1180,11 @@ abstract class _$$_GroupCharacteristicCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GroupCharacteristicCopyWithImpl<$Res>
-    extends _$GroupCharacteristicCopyWithImpl<$Res, _$_GroupCharacteristic>
-    implements _$$_GroupCharacteristicCopyWith<$Res> {
-  __$$_GroupCharacteristicCopyWithImpl(_$_GroupCharacteristic _value,
-      $Res Function(_$_GroupCharacteristic) _then)
+class __$$GroupCharacteristicImplCopyWithImpl<$Res>
+    extends _$GroupCharacteristicCopyWithImpl<$Res, _$GroupCharacteristicImpl>
+    implements _$$GroupCharacteristicImplCopyWith<$Res> {
+  __$$GroupCharacteristicImplCopyWithImpl(_$GroupCharacteristicImpl _value,
+      $Res Function(_$GroupCharacteristicImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1237,7 +1204,7 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
     Object? excludeElement = freezed,
     Object? period = freezed,
   }) {
-    return _then(_$_GroupCharacteristic(
+    return _then(_$GroupCharacteristicImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1296,8 +1263,8 @@ class __$$_GroupCharacteristicCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GroupCharacteristic extends _GroupCharacteristic {
-  _$_GroupCharacteristic(
+class _$GroupCharacteristicImpl extends _GroupCharacteristic {
+  _$GroupCharacteristicImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1313,8 +1280,8 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
       this.period})
       : super._();
 
-  factory _$_GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$$_GroupCharacteristicFromJson(json);
+  factory _$GroupCharacteristicImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GroupCharacteristicImplFromJson(json);
 
   @override
   final String? id;
@@ -1352,10 +1319,10 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GroupCharacteristic &&
+            other is _$GroupCharacteristicImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1401,13 +1368,13 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GroupCharacteristicCopyWith<_$_GroupCharacteristic> get copyWith =>
-      __$$_GroupCharacteristicCopyWithImpl<_$_GroupCharacteristic>(
+  _$$GroupCharacteristicImplCopyWith<_$GroupCharacteristicImpl> get copyWith =>
+      __$$GroupCharacteristicImplCopyWithImpl<_$GroupCharacteristicImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupCharacteristicToJson(
+    return _$$GroupCharacteristicImplToJson(
       this,
     );
   }
@@ -1427,11 +1394,11 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final Reference? valueReference,
       final Boolean? exclude,
       @JsonKey(name: '_exclude') final Element? excludeElement,
-      final Period? period}) = _$_GroupCharacteristic;
+      final Period? period}) = _$GroupCharacteristicImpl;
   _GroupCharacteristic._() : super._();
 
   factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
-      _$_GroupCharacteristic.fromJson;
+      _$GroupCharacteristicImpl.fromJson;
 
   @override
   String? get id;
@@ -1464,7 +1431,7 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
   Period? get period;
   @override
   @JsonKey(ignore: true)
-  _$$_GroupCharacteristicCopyWith<_$_GroupCharacteristic> get copyWith =>
+  _$$GroupCharacteristicImplCopyWith<_$GroupCharacteristicImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1598,11 +1565,11 @@ class _$GroupMemberCopyWithImpl<$Res, $Val extends GroupMember>
 }
 
 /// @nodoc
-abstract class _$$_GroupMemberCopyWith<$Res>
+abstract class _$$GroupMemberImplCopyWith<$Res>
     implements $GroupMemberCopyWith<$Res> {
-  factory _$$_GroupMemberCopyWith(
-          _$_GroupMember value, $Res Function(_$_GroupMember) then) =
-      __$$_GroupMemberCopyWithImpl<$Res>;
+  factory _$$GroupMemberImplCopyWith(
+          _$GroupMemberImpl value, $Res Function(_$GroupMemberImpl) then) =
+      __$$GroupMemberImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1623,11 +1590,11 @@ abstract class _$$_GroupMemberCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GroupMemberCopyWithImpl<$Res>
-    extends _$GroupMemberCopyWithImpl<$Res, _$_GroupMember>
-    implements _$$_GroupMemberCopyWith<$Res> {
-  __$$_GroupMemberCopyWithImpl(
-      _$_GroupMember _value, $Res Function(_$_GroupMember) _then)
+class __$$GroupMemberImplCopyWithImpl<$Res>
+    extends _$GroupMemberCopyWithImpl<$Res, _$GroupMemberImpl>
+    implements _$$GroupMemberImplCopyWith<$Res> {
+  __$$GroupMemberImplCopyWithImpl(
+      _$GroupMemberImpl _value, $Res Function(_$GroupMemberImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1641,7 +1608,7 @@ class __$$_GroupMemberCopyWithImpl<$Res>
     Object? inactive = freezed,
     Object? inactiveElement = freezed,
   }) {
-    return _then(_$_GroupMember(
+    return _then(_$GroupMemberImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1676,8 +1643,8 @@ class __$$_GroupMemberCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GroupMember extends _GroupMember {
-  _$_GroupMember(
+class _$GroupMemberImpl extends _GroupMember {
+  _$GroupMemberImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -1687,8 +1654,8 @@ class _$_GroupMember extends _GroupMember {
       @JsonKey(name: '_inactive') this.inactiveElement})
       : super._();
 
-  factory _$_GroupMember.fromJson(Map<String, dynamic> json) =>
-      _$$_GroupMemberFromJson(json);
+  factory _$GroupMemberImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GroupMemberImplFromJson(json);
 
   @override
   final String? id;
@@ -1713,10 +1680,10 @@ class _$_GroupMember extends _GroupMember {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GroupMember &&
+            other is _$GroupMemberImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1745,12 +1712,12 @@ class _$_GroupMember extends _GroupMember {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GroupMemberCopyWith<_$_GroupMember> get copyWith =>
-      __$$_GroupMemberCopyWithImpl<_$_GroupMember>(this, _$identity);
+  _$$GroupMemberImplCopyWith<_$GroupMemberImpl> get copyWith =>
+      __$$GroupMemberImplCopyWithImpl<_$GroupMemberImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GroupMemberToJson(
+    return _$$GroupMemberImplToJson(
       this,
     );
   }
@@ -1765,11 +1732,11 @@ abstract class _GroupMember extends GroupMember {
           final Period? period,
           final Boolean? inactive,
           @JsonKey(name: '_inactive') final Element? inactiveElement}) =
-      _$_GroupMember;
+      _$GroupMemberImpl;
   _GroupMember._() : super._();
 
   factory _GroupMember.fromJson(Map<String, dynamic> json) =
-      _$_GroupMember.fromJson;
+      _$GroupMemberImpl.fromJson;
 
   @override
   String? get id;
@@ -1789,7 +1756,7 @@ abstract class _GroupMember extends GroupMember {
   Element? get inactiveElement;
   @override
   @JsonKey(ignore: true)
-  _$$_GroupMemberCopyWith<_$_GroupMember> get copyWith =>
+  _$$GroupMemberImplCopyWith<_$GroupMemberImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1865,47 +1832,38 @@ abstract class $PatientCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          PatientGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       Boolean? deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          Element? deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime')
-          Element? deceasedDateTimeElement,
+      @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
       Boolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-          Element? multipleBirthBooleanElement,
+      Element? multipleBirthBooleanElement,
       Integer? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-          Element? multipleBirthIntegerElement,
+      Element? multipleBirthIntegerElement,
       List<Attachment>? photo,
       List<PatientContact>? contact,
       List<PatientCommunication>? communication,
@@ -2284,55 +2242,46 @@ class _$PatientCopyWithImpl<$Res, $Val extends Patient>
 }
 
 /// @nodoc
-abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
-  factory _$$_PatientCopyWith(
-          _$_Patient value, $Res Function(_$_Patient) then) =
-      __$$_PatientCopyWithImpl<$Res>;
+abstract class _$$PatientImplCopyWith<$Res> implements $PatientCopyWith<$Res> {
+  factory _$$PatientImplCopyWith(
+          _$PatientImpl value, $Res Function(_$PatientImpl) then) =
+      __$$PatientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          PatientGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       Boolean? deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          Element? deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime')
-          Element? deceasedDateTimeElement,
+      @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
       List<Address>? address,
       CodeableConcept? maritalStatus,
       Boolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-          Element? multipleBirthBooleanElement,
+      Element? multipleBirthBooleanElement,
       Integer? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-          Element? multipleBirthIntegerElement,
+      Element? multipleBirthIntegerElement,
       List<Attachment>? photo,
       List<PatientContact>? contact,
       List<PatientCommunication>? communication,
@@ -2369,10 +2318,11 @@ abstract class _$$_PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PatientCopyWithImpl<$Res>
-    extends _$PatientCopyWithImpl<$Res, _$_Patient>
-    implements _$$_PatientCopyWith<$Res> {
-  __$$_PatientCopyWithImpl(_$_Patient _value, $Res Function(_$_Patient) _then)
+class __$$PatientImplCopyWithImpl<$Res>
+    extends _$PatientCopyWithImpl<$Res, _$PatientImpl>
+    implements _$$PatientImplCopyWith<$Res> {
+  __$$PatientImplCopyWithImpl(
+      _$PatientImpl _value, $Res Function(_$PatientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2415,7 +2365,7 @@ class __$$_PatientCopyWithImpl<$Res>
     Object? managingOrganization = freezed,
     Object? link = freezed,
   }) {
-    return _then(_$_Patient(
+    return _then(_$PatientImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2566,50 +2516,39 @@ class __$$_PatientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Patient extends _Patient {
-  _$_Patient(
+class _$PatientImpl extends _Patient {
+  _$PatientImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
-          this.resourceType = R5ResourceType.Patient,
+      this.resourceType = R5ResourceType.Patient,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.name,
       this.telecom,
-      @JsonKey(unknownEnumValue: PatientGender.unknown)
-          this.gender,
-      @JsonKey(name: '_gender')
-          this.genderElement,
+      @JsonKey(unknownEnumValue: PatientGender.unknown) this.gender,
+      @JsonKey(name: '_gender') this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate')
-          this.birthDateElement,
+      @JsonKey(name: '_birthDate') this.birthDateElement,
       this.deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
       this.deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime')
-          this.deceasedDateTimeElement,
+      @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
       this.address,
       this.maritalStatus,
       this.multipleBirthBoolean,
-      @JsonKey(name: '_multipleBirthBoolean')
-          this.multipleBirthBooleanElement,
+      @JsonKey(name: '_multipleBirthBoolean') this.multipleBirthBooleanElement,
       this.multipleBirthInteger,
-      @JsonKey(name: '_multipleBirthInteger')
-          this.multipleBirthIntegerElement,
+      @JsonKey(name: '_multipleBirthInteger') this.multipleBirthIntegerElement,
       this.photo,
       this.contact,
       this.communication,
@@ -2618,8 +2557,8 @@ class _$_Patient extends _Patient {
       this.link})
       : super._();
 
-  factory _$_Patient.fromJson(Map<String, dynamic> json) =>
-      _$$_PatientFromJson(json);
+  factory _$PatientImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PatientImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Patient)
@@ -2712,10 +2651,10 @@ class _$_Patient extends _Patient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Patient &&
+            other is _$PatientImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -2828,12 +2767,12 @@ class _$_Patient extends _Patient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PatientCopyWith<_$_Patient> get copyWith =>
-      __$$_PatientCopyWithImpl<_$_Patient>(this, _$identity);
+  _$$PatientImplCopyWith<_$PatientImpl> get copyWith =>
+      __$$PatientImplCopyWithImpl<_$PatientImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientToJson(
+    return _$$PatientImplToJson(
       this,
     );
   }
@@ -2842,56 +2781,49 @@ class _$_Patient extends _Patient {
 abstract class _Patient extends Patient {
   factory _Patient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Patient)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Boolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
+      @JsonKey(name: '_active') final Element? activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PatientGender.unknown)
-          final PatientGender? gender,
-      @JsonKey(name: '_gender')
-          final Element? genderElement,
+      final PatientGender? gender,
+      @JsonKey(name: '_gender') final Element? genderElement,
       final Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          final Element? birthDateElement,
+      @JsonKey(name: '_birthDate') final Element? birthDateElement,
       final Boolean? deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          final Element? deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') final Element? deceasedBooleanElement,
       final FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
-          final Element? deceasedDateTimeElement,
+      final Element? deceasedDateTimeElement,
       final List<Address>? address,
       final CodeableConcept? maritalStatus,
       final Boolean? multipleBirthBoolean,
       @JsonKey(name: '_multipleBirthBoolean')
-          final Element? multipleBirthBooleanElement,
+      final Element? multipleBirthBooleanElement,
       final Integer? multipleBirthInteger,
       @JsonKey(name: '_multipleBirthInteger')
-          final Element? multipleBirthIntegerElement,
+      final Element? multipleBirthIntegerElement,
       final List<Attachment>? photo,
       final List<PatientContact>? contact,
       final List<PatientCommunication>? communication,
       final List<Reference>? generalPractitioner,
       final Reference? managingOrganization,
-      final List<PatientLink>? link}) = _$_Patient;
+      final List<PatientLink>? link}) = _$PatientImpl;
   _Patient._() : super._();
 
-  factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
+  factory _Patient.fromJson(Map<String, dynamic> json) = _$PatientImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Patient)
@@ -2979,7 +2911,7 @@ abstract class _Patient extends Patient {
   List<PatientLink>? get link;
   @override
   @JsonKey(ignore: true)
-  _$$_PatientCopyWith<_$_Patient> get copyWith =>
+  _$$PatientImplCopyWith<_$PatientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3019,17 +2951,15 @@ abstract class $PatientContactCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
       @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-          PatientContactGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      PatientContactGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
 
@@ -3175,26 +3105,24 @@ class _$PatientContactCopyWithImpl<$Res, $Val extends PatientContact>
 }
 
 /// @nodoc
-abstract class _$$_PatientContactCopyWith<$Res>
+abstract class _$$PatientContactImplCopyWith<$Res>
     implements $PatientContactCopyWith<$Res> {
-  factory _$$_PatientContactCopyWith(
-          _$_PatientContact value, $Res Function(_$_PatientContact) then) =
-      __$$_PatientContactCopyWithImpl<$Res>;
+  factory _$$PatientContactImplCopyWith(_$PatientContactImpl value,
+          $Res Function(_$PatientContactImpl) then) =
+      __$$PatientContactImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
       @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-          PatientContactGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      PatientContactGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Reference? organization,
       Period? period});
 
@@ -3211,11 +3139,11 @@ abstract class _$$_PatientContactCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PatientContactCopyWithImpl<$Res>
-    extends _$PatientContactCopyWithImpl<$Res, _$_PatientContact>
-    implements _$$_PatientContactCopyWith<$Res> {
-  __$$_PatientContactCopyWithImpl(
-      _$_PatientContact _value, $Res Function(_$_PatientContact) _then)
+class __$$PatientContactImplCopyWithImpl<$Res>
+    extends _$PatientContactCopyWithImpl<$Res, _$PatientContactImpl>
+    implements _$$PatientContactImplCopyWith<$Res> {
+  __$$PatientContactImplCopyWithImpl(
+      _$PatientContactImpl _value, $Res Function(_$PatientContactImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3233,7 +3161,7 @@ class __$$_PatientContactCopyWithImpl<$Res>
     Object? organization = freezed,
     Object? period = freezed,
   }) {
-    return _then(_$_PatientContact(
+    return _then(_$PatientContactImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3284,8 +3212,8 @@ class __$$_PatientContactCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PatientContact extends _PatientContact {
-  _$_PatientContact(
+class _$PatientContactImpl extends _PatientContact {
+  _$PatientContactImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3299,8 +3227,8 @@ class _$_PatientContact extends _PatientContact {
       this.period})
       : super._();
 
-  factory _$_PatientContact.fromJson(Map<String, dynamic> json) =>
-      _$$_PatientContactFromJson(json);
+  factory _$PatientContactImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PatientContactImplFromJson(json);
 
   @override
   final String? id;
@@ -3334,10 +3262,10 @@ class _$_PatientContact extends _PatientContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PatientContact &&
+            other is _$PatientContactImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3375,12 +3303,13 @@ class _$_PatientContact extends _PatientContact {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PatientContactCopyWith<_$_PatientContact> get copyWith =>
-      __$$_PatientContactCopyWithImpl<_$_PatientContact>(this, _$identity);
+  _$$PatientContactImplCopyWith<_$PatientContactImpl> get copyWith =>
+      __$$PatientContactImplCopyWithImpl<_$PatientContactImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientContactToJson(
+    return _$$PatientContactImplToJson(
       this,
     );
   }
@@ -3389,23 +3318,21 @@ class _$_PatientContact extends _PatientContact {
 abstract class _PatientContact extends PatientContact {
   factory _PatientContact(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? relationship,
       final HumanName? name,
       final List<ContactPoint>? telecom,
       final Address? address,
       @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-          final PatientContactGender? gender,
-      @JsonKey(name: '_gender')
-          final Element? genderElement,
+      final PatientContactGender? gender,
+      @JsonKey(name: '_gender') final Element? genderElement,
       final Reference? organization,
-      final Period? period}) = _$_PatientContact;
+      final Period? period}) = _$PatientContactImpl;
   _PatientContact._() : super._();
 
   factory _PatientContact.fromJson(Map<String, dynamic> json) =
-      _$_PatientContact.fromJson;
+      _$PatientContactImpl.fromJson;
 
   @override
   String? get id;
@@ -3434,7 +3361,7 @@ abstract class _PatientContact extends PatientContact {
   Period? get period;
   @override
   @JsonKey(ignore: true)
-  _$$_PatientContactCopyWith<_$_PatientContact> get copyWith =>
+  _$$PatientContactImplCopyWith<_$PatientContactImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3549,11 +3476,11 @@ class _$PatientCommunicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PatientCommunicationCopyWith<$Res>
+abstract class _$$PatientCommunicationImplCopyWith<$Res>
     implements $PatientCommunicationCopyWith<$Res> {
-  factory _$$_PatientCommunicationCopyWith(_$_PatientCommunication value,
-          $Res Function(_$_PatientCommunication) then) =
-      __$$_PatientCommunicationCopyWithImpl<$Res>;
+  factory _$$PatientCommunicationImplCopyWith(_$PatientCommunicationImpl value,
+          $Res Function(_$PatientCommunicationImpl) then) =
+      __$$PatientCommunicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3571,11 +3498,11 @@ abstract class _$$_PatientCommunicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PatientCommunicationCopyWithImpl<$Res>
-    extends _$PatientCommunicationCopyWithImpl<$Res, _$_PatientCommunication>
-    implements _$$_PatientCommunicationCopyWith<$Res> {
-  __$$_PatientCommunicationCopyWithImpl(_$_PatientCommunication _value,
-      $Res Function(_$_PatientCommunication) _then)
+class __$$PatientCommunicationImplCopyWithImpl<$Res>
+    extends _$PatientCommunicationCopyWithImpl<$Res, _$PatientCommunicationImpl>
+    implements _$$PatientCommunicationImplCopyWith<$Res> {
+  __$$PatientCommunicationImplCopyWithImpl(_$PatientCommunicationImpl _value,
+      $Res Function(_$PatientCommunicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3588,7 +3515,7 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
     Object? preferred = freezed,
     Object? preferredElement = freezed,
   }) {
-    return _then(_$_PatientCommunication(
+    return _then(_$PatientCommunicationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3619,8 +3546,8 @@ class __$$_PatientCommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PatientCommunication extends _PatientCommunication {
-  _$_PatientCommunication(
+class _$PatientCommunicationImpl extends _PatientCommunication {
+  _$PatientCommunicationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3629,8 +3556,8 @@ class _$_PatientCommunication extends _PatientCommunication {
       @JsonKey(name: '_preferred') this.preferredElement})
       : super._();
 
-  factory _$_PatientCommunication.fromJson(Map<String, dynamic> json) =>
-      _$$_PatientCommunicationFromJson(json);
+  factory _$PatientCommunicationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PatientCommunicationImplFromJson(json);
 
   @override
   final String? id;
@@ -3653,10 +3580,10 @@ class _$_PatientCommunication extends _PatientCommunication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PatientCommunication &&
+            other is _$PatientCommunicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3684,13 +3611,14 @@ class _$_PatientCommunication extends _PatientCommunication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PatientCommunicationCopyWith<_$_PatientCommunication> get copyWith =>
-      __$$_PatientCommunicationCopyWithImpl<_$_PatientCommunication>(
-          this, _$identity);
+  _$$PatientCommunicationImplCopyWith<_$PatientCommunicationImpl>
+      get copyWith =>
+          __$$PatientCommunicationImplCopyWithImpl<_$PatientCommunicationImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientCommunicationToJson(
+    return _$$PatientCommunicationImplToJson(
       this,
     );
   }
@@ -3704,11 +3632,11 @@ abstract class _PatientCommunication extends PatientCommunication {
           required final CodeableConcept language,
           final Boolean? preferred,
           @JsonKey(name: '_preferred') final Element? preferredElement}) =
-      _$_PatientCommunication;
+      _$PatientCommunicationImpl;
   _PatientCommunication._() : super._();
 
   factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
-      _$_PatientCommunication.fromJson;
+      _$PatientCommunicationImpl.fromJson;
 
   @override
   String? get id;
@@ -3726,8 +3654,8 @@ abstract class _PatientCommunication extends PatientCommunication {
   Element? get preferredElement;
   @override
   @JsonKey(ignore: true)
-  _$$_PatientCommunicationCopyWith<_$_PatientCommunication> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PatientCommunicationImplCopyWith<_$PatientCommunicationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) {
@@ -3841,11 +3769,11 @@ class _$PatientLinkCopyWithImpl<$Res, $Val extends PatientLink>
 }
 
 /// @nodoc
-abstract class _$$_PatientLinkCopyWith<$Res>
+abstract class _$$PatientLinkImplCopyWith<$Res>
     implements $PatientLinkCopyWith<$Res> {
-  factory _$$_PatientLinkCopyWith(
-          _$_PatientLink value, $Res Function(_$_PatientLink) then) =
-      __$$_PatientLinkCopyWithImpl<$Res>;
+  factory _$$PatientLinkImplCopyWith(
+          _$PatientLinkImpl value, $Res Function(_$PatientLinkImpl) then) =
+      __$$PatientLinkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3863,11 +3791,11 @@ abstract class _$$_PatientLinkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PatientLinkCopyWithImpl<$Res>
-    extends _$PatientLinkCopyWithImpl<$Res, _$_PatientLink>
-    implements _$$_PatientLinkCopyWith<$Res> {
-  __$$_PatientLinkCopyWithImpl(
-      _$_PatientLink _value, $Res Function(_$_PatientLink) _then)
+class __$$PatientLinkImplCopyWithImpl<$Res>
+    extends _$PatientLinkCopyWithImpl<$Res, _$PatientLinkImpl>
+    implements _$$PatientLinkImplCopyWith<$Res> {
+  __$$PatientLinkImplCopyWithImpl(
+      _$PatientLinkImpl _value, $Res Function(_$PatientLinkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3880,7 +3808,7 @@ class __$$_PatientLinkCopyWithImpl<$Res>
     Object? type = freezed,
     Object? typeElement = freezed,
   }) {
-    return _then(_$_PatientLink(
+    return _then(_$PatientLinkImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3911,8 +3839,8 @@ class __$$_PatientLinkCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PatientLink extends _PatientLink {
-  _$_PatientLink(
+class _$PatientLinkImpl extends _PatientLink {
+  _$PatientLinkImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -3921,8 +3849,8 @@ class _$_PatientLink extends _PatientLink {
       @JsonKey(name: '_type') this.typeElement})
       : super._();
 
-  factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
-      _$$_PatientLinkFromJson(json);
+  factory _$PatientLinkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PatientLinkImplFromJson(json);
 
   @override
   final String? id;
@@ -3946,10 +3874,10 @@ class _$_PatientLink extends _PatientLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PatientLink &&
+            other is _$PatientLinkImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3975,12 +3903,12 @@ class _$_PatientLink extends _PatientLink {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PatientLinkCopyWith<_$_PatientLink> get copyWith =>
-      __$$_PatientLinkCopyWithImpl<_$_PatientLink>(this, _$identity);
+  _$$PatientLinkImplCopyWith<_$PatientLinkImpl> get copyWith =>
+      __$$PatientLinkImplCopyWithImpl<_$PatientLinkImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PatientLinkToJson(
+    return _$$PatientLinkImplToJson(
       this,
     );
   }
@@ -3989,18 +3917,16 @@ class _$_PatientLink extends _PatientLink {
 abstract class _PatientLink extends PatientLink {
   factory _PatientLink(
       {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference other,
       @JsonKey(unknownEnumValue: PatientLinkType.unknown)
-          final PatientLinkType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement}) = _$_PatientLink;
+      final PatientLinkType? type,
+      @JsonKey(name: '_type') final Element? typeElement}) = _$PatientLinkImpl;
   _PatientLink._() : super._();
 
   factory _PatientLink.fromJson(Map<String, dynamic> json) =
-      _$_PatientLink.fromJson;
+      _$PatientLinkImpl.fromJson;
 
   @override
   String? get id;
@@ -4019,7 +3945,7 @@ abstract class _PatientLink extends PatientLink {
   Element? get typeElement;
   @override
   @JsonKey(ignore: true)
-  _$$_PatientLinkCopyWith<_$_PatientLink> get copyWith =>
+  _$$PatientLinkImplCopyWith<_$PatientLinkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4075,36 +4001,29 @@ abstract class $PersonCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          PersonGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       List<Address>? address,
       Attachment? photo,
       Reference? managingOrganization,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<PersonLink>? link});
 
   $MetaCopyWith<$Res>? get meta;
@@ -4366,43 +4285,37 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
 }
 
 /// @nodoc
-abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
-  factory _$$_PersonCopyWith(_$_Person value, $Res Function(_$_Person) then) =
-      __$$_PersonCopyWithImpl<$Res>;
+abstract class _$$PersonImplCopyWith<$Res> implements $PersonCopyWith<$Res> {
+  factory _$$PersonImplCopyWith(
+          _$PersonImpl value, $Res Function(_$PersonImpl) then) =
+      __$$PersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          PersonGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       List<Address>? address,
       Attachment? photo,
       Reference? managingOrganization,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<PersonLink>? link});
 
   @override
@@ -4426,10 +4339,11 @@ abstract class _$$_PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PersonCopyWithImpl<$Res>
-    extends _$PersonCopyWithImpl<$Res, _$_Person>
-    implements _$$_PersonCopyWith<$Res> {
-  __$$_PersonCopyWithImpl(_$_Person _value, $Res Function(_$_Person) _then)
+class __$$PersonImplCopyWithImpl<$Res>
+    extends _$PersonCopyWithImpl<$Res, _$PersonImpl>
+    implements _$$PersonImplCopyWith<$Res> {
+  __$$PersonImplCopyWithImpl(
+      _$PersonImpl _value, $Res Function(_$PersonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4460,7 +4374,7 @@ class __$$_PersonCopyWithImpl<$Res>
     Object? activeElement = freezed,
     Object? link = freezed,
   }) {
-    return _then(_$_Person(
+    return _then(_$PersonImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4563,44 +4477,37 @@ class __$$_PersonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Person extends _Person {
-  _$_Person(
+class _$PersonImpl extends _Person {
+  _$PersonImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
-          this.resourceType = R5ResourceType.Person,
+      this.resourceType = R5ResourceType.Person,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.name,
       this.telecom,
-      @JsonKey(unknownEnumValue: PersonGender.unknown)
-          this.gender,
-      @JsonKey(name: '_gender')
-          this.genderElement,
+      @JsonKey(unknownEnumValue: PersonGender.unknown) this.gender,
+      @JsonKey(name: '_gender') this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate')
-          this.birthDateElement,
+      @JsonKey(name: '_birthDate') this.birthDateElement,
       this.address,
       this.photo,
       this.managingOrganization,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.link})
       : super._();
 
-  factory _$_Person.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonFromJson(json);
+  factory _$PersonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Person)
@@ -4665,10 +4572,10 @@ class _$_Person extends _Person {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Person &&
+            other is _$PersonImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -4741,12 +4648,12 @@ class _$_Person extends _Person {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonCopyWith<_$_Person> get copyWith =>
-      __$$_PersonCopyWithImpl<_$_Person>(this, _$identity);
+  _$$PersonImplCopyWith<_$PersonImpl> get copyWith =>
+      __$$PersonImplCopyWithImpl<_$PersonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonToJson(
+    return _$$PersonImplToJson(
       this,
     );
   }
@@ -4755,40 +4662,34 @@ class _$_Person extends _Person {
 abstract class _Person extends Person {
   factory _Person(
       {@JsonKey(unknownEnumValue: R5ResourceType.Person)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: PersonGender.unknown)
-          final PersonGender? gender,
-      @JsonKey(name: '_gender')
-          final Element? genderElement,
+      final PersonGender? gender,
+      @JsonKey(name: '_gender') final Element? genderElement,
       final Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          final Element? birthDateElement,
+      @JsonKey(name: '_birthDate') final Element? birthDateElement,
       final List<Address>? address,
       final Attachment? photo,
       final Reference? managingOrganization,
       final Boolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
-      final List<PersonLink>? link}) = _$_Person;
+      @JsonKey(name: '_active') final Element? activeElement,
+      final List<PersonLink>? link}) = _$PersonImpl;
   _Person._() : super._();
 
-  factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
+  factory _Person.fromJson(Map<String, dynamic> json) = _$PersonImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Person)
@@ -4848,7 +4749,7 @@ abstract class _Person extends Person {
   List<PersonLink>? get link;
   @override
   @JsonKey(ignore: true)
-  _$$_PersonCopyWith<_$_Person> get copyWith =>
+  _$$PersonImplCopyWith<_$PersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4883,14 +4784,12 @@ abstract class $PersonLinkCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance? assurance,
-      @JsonKey(name: '_assurance')
-          Element? assuranceElement});
+      PersonLinkAssurance? assurance,
+      @JsonKey(name: '_assurance') Element? assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
   $ElementCopyWith<$Res>? get assuranceElement;
@@ -4966,23 +4865,21 @@ class _$PersonLinkCopyWithImpl<$Res, $Val extends PersonLink>
 }
 
 /// @nodoc
-abstract class _$$_PersonLinkCopyWith<$Res>
+abstract class _$$PersonLinkImplCopyWith<$Res>
     implements $PersonLinkCopyWith<$Res> {
-  factory _$$_PersonLinkCopyWith(
-          _$_PersonLink value, $Res Function(_$_PersonLink) then) =
-      __$$_PersonLinkCopyWithImpl<$Res>;
+  factory _$$PersonLinkImplCopyWith(
+          _$PersonLinkImpl value, $Res Function(_$PersonLinkImpl) then) =
+      __$$PersonLinkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
       @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-          PersonLinkAssurance? assurance,
-      @JsonKey(name: '_assurance')
-          Element? assuranceElement});
+      PersonLinkAssurance? assurance,
+      @JsonKey(name: '_assurance') Element? assuranceElement});
 
   @override
   $ReferenceCopyWith<$Res> get target;
@@ -4991,11 +4888,11 @@ abstract class _$$_PersonLinkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PersonLinkCopyWithImpl<$Res>
-    extends _$PersonLinkCopyWithImpl<$Res, _$_PersonLink>
-    implements _$$_PersonLinkCopyWith<$Res> {
-  __$$_PersonLinkCopyWithImpl(
-      _$_PersonLink _value, $Res Function(_$_PersonLink) _then)
+class __$$PersonLinkImplCopyWithImpl<$Res>
+    extends _$PersonLinkCopyWithImpl<$Res, _$PersonLinkImpl>
+    implements _$$PersonLinkImplCopyWith<$Res> {
+  __$$PersonLinkImplCopyWithImpl(
+      _$PersonLinkImpl _value, $Res Function(_$PersonLinkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5008,7 +4905,7 @@ class __$$_PersonLinkCopyWithImpl<$Res>
     Object? assurance = freezed,
     Object? assuranceElement = freezed,
   }) {
-    return _then(_$_PersonLink(
+    return _then(_$PersonLinkImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -5039,8 +4936,8 @@ class __$$_PersonLinkCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PersonLink extends _PersonLink {
-  _$_PersonLink(
+class _$PersonLinkImpl extends _PersonLink {
+  _$PersonLinkImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -5049,8 +4946,8 @@ class _$_PersonLink extends _PersonLink {
       @JsonKey(name: '_assurance') this.assuranceElement})
       : super._();
 
-  factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
-      _$$_PersonLinkFromJson(json);
+  factory _$PersonLinkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PersonLinkImplFromJson(json);
 
   @override
   final String? id;
@@ -5074,10 +4971,10 @@ class _$_PersonLink extends _PersonLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PersonLink &&
+            other is _$PersonLinkImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -5104,12 +5001,12 @@ class _$_PersonLink extends _PersonLink {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PersonLinkCopyWith<_$_PersonLink> get copyWith =>
-      __$$_PersonLinkCopyWithImpl<_$_PersonLink>(this, _$identity);
+  _$$PersonLinkImplCopyWith<_$PersonLinkImpl> get copyWith =>
+      __$$PersonLinkImplCopyWithImpl<_$PersonLinkImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PersonLinkToJson(
+    return _$$PersonLinkImplToJson(
       this,
     );
   }
@@ -5117,19 +5014,18 @@ class _$_PersonLink extends _PersonLink {
 
 abstract class _PersonLink extends PersonLink {
   factory _PersonLink(
-      {final String? id,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final Reference target,
-      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final Reference target,
+          @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
           final PersonLinkAssurance? assurance,
-      @JsonKey(name: '_assurance')
-          final Element? assuranceElement}) = _$_PersonLink;
+          @JsonKey(name: '_assurance') final Element? assuranceElement}) =
+      _$PersonLinkImpl;
   _PersonLink._() : super._();
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
-      _$_PersonLink.fromJson;
+      _$PersonLinkImpl.fromJson;
 
   @override
   String? get id;
@@ -5148,7 +5044,7 @@ abstract class _PersonLink extends PersonLink {
   Element? get assuranceElement;
   @override
   @JsonKey(ignore: true)
-  _$$_PersonLinkCopyWith<_$_PersonLink> get copyWith =>
+  _$$PersonLinkImplCopyWith<_$PersonLinkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5214,40 +5110,32 @@ abstract class $PractitionerCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       Boolean? deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          Element? deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime')
-          Element? deceasedDateTimeElement,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          PractitionerGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      PractitionerGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       List<Attachment>? photo,
       List<PractitionerQualification>? qualification,
       List<CodeableConcept>? communication});
@@ -5531,49 +5419,41 @@ class _$PractitionerCopyWithImpl<$Res, $Val extends Practitioner>
 }
 
 /// @nodoc
-abstract class _$$_PractitionerCopyWith<$Res>
+abstract class _$$PractitionerImplCopyWith<$Res>
     implements $PractitionerCopyWith<$Res> {
-  factory _$$_PractitionerCopyWith(
-          _$_Practitioner value, $Res Function(_$_Practitioner) then) =
-      __$$_PractitionerCopyWithImpl<$Res>;
+  factory _$$PractitionerImplCopyWith(
+          _$PractitionerImpl value, $Res Function(_$PractitionerImpl) then) =
+      __$$PractitionerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
       Boolean? deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          Element? deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
       FhirDateTime? deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime')
-          Element? deceasedDateTimeElement,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          PractitionerGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      PractitionerGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       List<Attachment>? photo,
       List<PractitionerQualification>? qualification,
       List<CodeableConcept>? communication});
@@ -5599,11 +5479,11 @@ abstract class _$$_PractitionerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PractitionerCopyWithImpl<$Res>
-    extends _$PractitionerCopyWithImpl<$Res, _$_Practitioner>
-    implements _$$_PractitionerCopyWith<$Res> {
-  __$$_PractitionerCopyWithImpl(
-      _$_Practitioner _value, $Res Function(_$_Practitioner) _then)
+class __$$PractitionerImplCopyWithImpl<$Res>
+    extends _$PractitionerCopyWithImpl<$Res, _$PractitionerImpl>
+    implements _$$PractitionerImplCopyWith<$Res> {
+  __$$PractitionerImplCopyWithImpl(
+      _$PractitionerImpl _value, $Res Function(_$PractitionerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5638,7 +5518,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
     Object? qualification = freezed,
     Object? communication = freezed,
   }) {
-    return _then(_$_Practitioner(
+    return _then(_$PractitionerImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5757,50 +5637,41 @@ class __$$_PractitionerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Practitioner extends _Practitioner {
-  _$_Practitioner(
+class _$PractitionerImpl extends _Practitioner {
+  _$PractitionerImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
-          this.resourceType = R5ResourceType.Practitioner,
+      this.resourceType = R5ResourceType.Practitioner,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
       this.deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          this.deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
       this.deceasedDateTime,
-      @JsonKey(name: '_deceasedDateTime')
-          this.deceasedDateTimeElement,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.name,
       this.telecom,
       this.address,
-      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          this.gender,
-      @JsonKey(name: '_gender')
-          this.genderElement,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown) this.gender,
+      @JsonKey(name: '_gender') this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate')
-          this.birthDateElement,
+      @JsonKey(name: '_birthDate') this.birthDateElement,
       this.photo,
       this.qualification,
       this.communication})
       : super._();
 
-  factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
-      _$$_PractitionerFromJson(json);
+  factory _$PractitionerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PractitionerImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
@@ -5875,10 +5746,10 @@ class _$_Practitioner extends _Practitioner {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Practitioner &&
+            other is _$PractitionerImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -5965,12 +5836,12 @@ class _$_Practitioner extends _Practitioner {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PractitionerCopyWith<_$_Practitioner> get copyWith =>
-      __$$_PractitionerCopyWithImpl<_$_Practitioner>(this, _$identity);
+  _$$PractitionerImplCopyWith<_$PractitionerImpl> get copyWith =>
+      __$$PractitionerImplCopyWithImpl<_$PractitionerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerToJson(
+    return _$$PractitionerImplToJson(
       this,
     );
   }
@@ -5979,47 +5850,40 @@ class _$_Practitioner extends _Practitioner {
 abstract class _Practitioner extends Practitioner {
   factory _Practitioner(
       {@JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
       final Boolean? deceasedBoolean,
-      @JsonKey(name: '_deceasedBoolean')
-          final Element? deceasedBooleanElement,
+      @JsonKey(name: '_deceasedBoolean') final Element? deceasedBooleanElement,
       final FhirDateTime? deceasedDateTime,
       @JsonKey(name: '_deceasedDateTime')
-          final Element? deceasedDateTimeElement,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      final Element? deceasedDateTimeElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Boolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
+      @JsonKey(name: '_active') final Element? activeElement,
       final List<HumanName>? name,
       final List<ContactPoint>? telecom,
       final List<Address>? address,
       @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-          final PractitionerGender? gender,
-      @JsonKey(name: '_gender')
-          final Element? genderElement,
+      final PractitionerGender? gender,
+      @JsonKey(name: '_gender') final Element? genderElement,
       final Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          final Element? birthDateElement,
+      @JsonKey(name: '_birthDate') final Element? birthDateElement,
       final List<Attachment>? photo,
       final List<PractitionerQualification>? qualification,
-      final List<CodeableConcept>? communication}) = _$_Practitioner;
+      final List<CodeableConcept>? communication}) = _$PractitionerImpl;
   _Practitioner._() : super._();
 
   factory _Practitioner.fromJson(Map<String, dynamic> json) =
-      _$_Practitioner.fromJson;
+      _$PractitionerImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
@@ -6089,7 +5953,7 @@ abstract class _Practitioner extends Practitioner {
   List<CodeableConcept>? get communication;
   @override
   @JsonKey(ignore: true)
-  _$$_PractitionerCopyWith<_$_Practitioner> get copyWith =>
+  _$$PractitionerImplCopyWith<_$PractitionerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6224,12 +6088,12 @@ class _$PractitionerQualificationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PractitionerQualificationCopyWith<$Res>
+abstract class _$$PractitionerQualificationImplCopyWith<$Res>
     implements $PractitionerQualificationCopyWith<$Res> {
-  factory _$$_PractitionerQualificationCopyWith(
-          _$_PractitionerQualification value,
-          $Res Function(_$_PractitionerQualification) then) =
-      __$$_PractitionerQualificationCopyWithImpl<$Res>;
+  factory _$$PractitionerQualificationImplCopyWith(
+          _$PractitionerQualificationImpl value,
+          $Res Function(_$PractitionerQualificationImpl) then) =
+      __$$PractitionerQualificationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6250,13 +6114,13 @@ abstract class _$$_PractitionerQualificationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PractitionerQualificationCopyWithImpl<$Res>
+class __$$PractitionerQualificationImplCopyWithImpl<$Res>
     extends _$PractitionerQualificationCopyWithImpl<$Res,
-        _$_PractitionerQualification>
-    implements _$$_PractitionerQualificationCopyWith<$Res> {
-  __$$_PractitionerQualificationCopyWithImpl(
-      _$_PractitionerQualification _value,
-      $Res Function(_$_PractitionerQualification) _then)
+        _$PractitionerQualificationImpl>
+    implements _$$PractitionerQualificationImplCopyWith<$Res> {
+  __$$PractitionerQualificationImplCopyWithImpl(
+      _$PractitionerQualificationImpl _value,
+      $Res Function(_$PractitionerQualificationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6270,7 +6134,7 @@ class __$$_PractitionerQualificationCopyWithImpl<$Res>
     Object? period = freezed,
     Object? issuer = freezed,
   }) {
-    return _then(_$_PractitionerQualification(
+    return _then(_$PractitionerQualificationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -6305,8 +6169,8 @@ class __$$_PractitionerQualificationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PractitionerQualification extends _PractitionerQualification {
-  _$_PractitionerQualification(
+class _$PractitionerQualificationImpl extends _PractitionerQualification {
+  _$PractitionerQualificationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -6316,8 +6180,8 @@ class _$_PractitionerQualification extends _PractitionerQualification {
       this.issuer})
       : super._();
 
-  factory _$_PractitionerQualification.fromJson(Map<String, dynamic> json) =>
-      _$$_PractitionerQualificationFromJson(json);
+  factory _$PractitionerQualificationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PractitionerQualificationImplFromJson(json);
 
   @override
   final String? id;
@@ -6341,10 +6205,10 @@ class _$_PractitionerQualification extends _PractitionerQualification {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PractitionerQualification &&
+            other is _$PractitionerQualificationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -6372,13 +6236,13 @@ class _$_PractitionerQualification extends _PractitionerQualification {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PractitionerQualificationCopyWith<_$_PractitionerQualification>
-      get copyWith => __$$_PractitionerQualificationCopyWithImpl<
-          _$_PractitionerQualification>(this, _$identity);
+  _$$PractitionerQualificationImplCopyWith<_$PractitionerQualificationImpl>
+      get copyWith => __$$PractitionerQualificationImplCopyWithImpl<
+          _$PractitionerQualificationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerQualificationToJson(
+    return _$$PractitionerQualificationImplToJson(
       this,
     );
   }
@@ -6392,11 +6256,11 @@ abstract class _PractitionerQualification extends PractitionerQualification {
       final List<Identifier>? identifier,
       required final CodeableConcept code,
       final Period? period,
-      final Reference? issuer}) = _$_PractitionerQualification;
+      final Reference? issuer}) = _$PractitionerQualificationImpl;
   _PractitionerQualification._() : super._();
 
   factory _PractitionerQualification.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerQualification.fromJson;
+      _$PractitionerQualificationImpl.fromJson;
 
   @override
   String? get id;
@@ -6415,7 +6279,7 @@ abstract class _PractitionerQualification extends PractitionerQualification {
   Reference? get issuer;
   @override
   @JsonKey(ignore: true)
-  _$$_PractitionerQualificationCopyWith<_$_PractitionerQualification>
+  _$$PractitionerQualificationImplCopyWith<_$PractitionerQualificationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6477,24 +6341,20 @@ abstract class $PractitionerRoleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Period? period,
       Reference? practitioner,
       Reference? organization,
@@ -6507,7 +6367,7 @@ abstract class $PractitionerRoleCopyWith<$Res> {
       List<PractitionerRoleNotAvailable>? notAvailable,
       String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          Element? availabilityExceptionsElement,
+      Element? availabilityExceptionsElement,
       List<Reference>? endpoint});
 
   $MetaCopyWith<$Res>? get meta;
@@ -6786,33 +6646,29 @@ class _$PractitionerRoleCopyWithImpl<$Res, $Val extends PractitionerRole>
 }
 
 /// @nodoc
-abstract class _$$_PractitionerRoleCopyWith<$Res>
+abstract class _$$PractitionerRoleImplCopyWith<$Res>
     implements $PractitionerRoleCopyWith<$Res> {
-  factory _$$_PractitionerRoleCopyWith(
-          _$_PractitionerRole value, $Res Function(_$_PractitionerRole) then) =
-      __$$_PractitionerRoleCopyWithImpl<$Res>;
+  factory _$$PractitionerRoleImplCopyWith(_$PractitionerRoleImpl value,
+          $Res Function(_$PractitionerRoleImpl) then) =
+      __$$PractitionerRoleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Period? period,
       Reference? practitioner,
       Reference? organization,
@@ -6825,7 +6681,7 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
       List<PractitionerRoleNotAvailable>? notAvailable,
       String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          Element? availabilityExceptionsElement,
+      Element? availabilityExceptionsElement,
       List<Reference>? endpoint});
 
   @override
@@ -6849,11 +6705,11 @@ abstract class _$$_PractitionerRoleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PractitionerRoleCopyWithImpl<$Res>
-    extends _$PractitionerRoleCopyWithImpl<$Res, _$_PractitionerRole>
-    implements _$$_PractitionerRoleCopyWith<$Res> {
-  __$$_PractitionerRoleCopyWithImpl(
-      _$_PractitionerRole _value, $Res Function(_$_PractitionerRole) _then)
+class __$$PractitionerRoleImplCopyWithImpl<$Res>
+    extends _$PractitionerRoleCopyWithImpl<$Res, _$PractitionerRoleImpl>
+    implements _$$PractitionerRoleImplCopyWith<$Res> {
+  __$$PractitionerRoleImplCopyWithImpl(_$PractitionerRoleImpl _value,
+      $Res Function(_$PractitionerRoleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6887,7 +6743,7 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
     Object? availabilityExceptionsElement = freezed,
     Object? endpoint = freezed,
   }) {
-    return _then(_$_PractitionerRole(
+    return _then(_$PractitionerRoleImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7002,27 +6858,23 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PractitionerRole extends _PractitionerRole {
-  _$_PractitionerRole(
+class _$PractitionerRoleImpl extends _PractitionerRole {
+  _$PractitionerRoleImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
-          this.resourceType = R5ResourceType.PractitionerRole,
+      this.resourceType = R5ResourceType.PractitionerRole,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.period,
       this.practitioner,
       this.organization,
@@ -7035,12 +6887,12 @@ class _$_PractitionerRole extends _PractitionerRole {
       this.notAvailable,
       this.availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          this.availabilityExceptionsElement,
+      this.availabilityExceptionsElement,
       this.endpoint})
       : super._();
 
-  factory _$_PractitionerRole.fromJson(Map<String, dynamic> json) =>
-      _$$_PractitionerRoleFromJson(json);
+  factory _$PractitionerRoleImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PractitionerRoleImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
@@ -7109,10 +6961,10 @@ class _$_PractitionerRole extends _PractitionerRole {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PractitionerRole &&
+            other is _$PractitionerRoleImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -7196,12 +7048,13 @@ class _$_PractitionerRole extends _PractitionerRole {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PractitionerRoleCopyWith<_$_PractitionerRole> get copyWith =>
-      __$$_PractitionerRoleCopyWithImpl<_$_PractitionerRole>(this, _$identity);
+  _$$PractitionerRoleImplCopyWith<_$PractitionerRoleImpl> get copyWith =>
+      __$$PractitionerRoleImplCopyWithImpl<_$PractitionerRoleImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerRoleToJson(
+    return _$$PractitionerRoleImplToJson(
       this,
     );
   }
@@ -7210,24 +7063,20 @@ class _$_PractitionerRole extends _PractitionerRole {
 abstract class _PractitionerRole extends PractitionerRole {
   factory _PractitionerRole(
       {@JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
-          final R5ResourceType resourceType,
+      final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Boolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
+      @JsonKey(name: '_active') final Element? activeElement,
       final Period? period,
       final Reference? practitioner,
       final Reference? organization,
@@ -7240,12 +7089,12 @@ abstract class _PractitionerRole extends PractitionerRole {
       final List<PractitionerRoleNotAvailable>? notAvailable,
       final String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          final Element? availabilityExceptionsElement,
-      final List<Reference>? endpoint}) = _$_PractitionerRole;
+      final Element? availabilityExceptionsElement,
+      final List<Reference>? endpoint}) = _$PractitionerRoleImpl;
   _PractitionerRole._() : super._();
 
   factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerRole.fromJson;
+      _$PractitionerRoleImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
@@ -7309,7 +7158,7 @@ abstract class _PractitionerRole extends PractitionerRole {
   List<Reference>? get endpoint;
   @override
   @JsonKey(ignore: true)
-  _$$_PractitionerRoleCopyWith<_$_PractitionerRole> get copyWith =>
+  _$$PractitionerRoleImplCopyWith<_$PractitionerRoleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7482,12 +7331,12 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PractitionerRoleAvailableTimeCopyWith<$Res>
+abstract class _$$PractitionerRoleAvailableTimeImplCopyWith<$Res>
     implements $PractitionerRoleAvailableTimeCopyWith<$Res> {
-  factory _$$_PractitionerRoleAvailableTimeCopyWith(
-          _$_PractitionerRoleAvailableTime value,
-          $Res Function(_$_PractitionerRoleAvailableTime) then) =
-      __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>;
+  factory _$$PractitionerRoleAvailableTimeImplCopyWith(
+          _$PractitionerRoleAvailableTimeImpl value,
+          $Res Function(_$PractitionerRoleAvailableTimeImpl) then) =
+      __$$PractitionerRoleAvailableTimeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7512,13 +7361,13 @@ abstract class _$$_PractitionerRoleAvailableTimeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
+class __$$PractitionerRoleAvailableTimeImplCopyWithImpl<$Res>
     extends _$PractitionerRoleAvailableTimeCopyWithImpl<$Res,
-        _$_PractitionerRoleAvailableTime>
-    implements _$$_PractitionerRoleAvailableTimeCopyWith<$Res> {
-  __$$_PractitionerRoleAvailableTimeCopyWithImpl(
-      _$_PractitionerRoleAvailableTime _value,
-      $Res Function(_$_PractitionerRoleAvailableTime) _then)
+        _$PractitionerRoleAvailableTimeImpl>
+    implements _$$PractitionerRoleAvailableTimeImplCopyWith<$Res> {
+  __$$PractitionerRoleAvailableTimeImplCopyWithImpl(
+      _$PractitionerRoleAvailableTimeImpl _value,
+      $Res Function(_$PractitionerRoleAvailableTimeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7536,7 +7385,7 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
     Object? availableEndTime = freezed,
     Object? availableEndTimeElement = freezed,
   }) {
-    return _then(_$_PractitionerRoleAvailableTime(
+    return _then(_$PractitionerRoleAvailableTimeImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7587,8 +7436,9 @@ class __$$_PractitionerRoleAvailableTimeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
-  _$_PractitionerRoleAvailableTime(
+class _$PractitionerRoleAvailableTimeImpl
+    extends _PractitionerRoleAvailableTime {
+  _$PractitionerRoleAvailableTimeImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7602,9 +7452,9 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
       @JsonKey(name: '_availableEndTime') this.availableEndTimeElement})
       : super._();
 
-  factory _$_PractitionerRoleAvailableTime.fromJson(
+  factory _$PractitionerRoleAvailableTimeImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_PractitionerRoleAvailableTimeFromJson(json);
+      _$$PractitionerRoleAvailableTimeImplFromJson(json);
 
   @override
   final String? id;
@@ -7640,10 +7490,10 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PractitionerRoleAvailableTime &&
+            other is _$PractitionerRoleAvailableTimeImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -7687,13 +7537,14 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PractitionerRoleAvailableTimeCopyWith<_$_PractitionerRoleAvailableTime>
-      get copyWith => __$$_PractitionerRoleAvailableTimeCopyWithImpl<
-          _$_PractitionerRoleAvailableTime>(this, _$identity);
+  _$$PractitionerRoleAvailableTimeImplCopyWith<
+          _$PractitionerRoleAvailableTimeImpl>
+      get copyWith => __$$PractitionerRoleAvailableTimeImplCopyWithImpl<
+          _$PractitionerRoleAvailableTimeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerRoleAvailableTimeToJson(
+    return _$$PractitionerRoleAvailableTimeImplToJson(
       this,
     );
   }
@@ -7703,26 +7554,23 @@ abstract class _PractitionerRoleAvailableTime
     extends PractitionerRoleAvailableTime {
   factory _PractitionerRoleAvailableTime(
           {final String? id,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Code>? daysOfWeek,
-          @JsonKey(name: '_daysOfWeek')
-              final List<Element>? daysOfWeekElement,
+          @JsonKey(name: '_daysOfWeek') final List<Element>? daysOfWeekElement,
           final Boolean? allDay,
-          @JsonKey(name: '_allDay')
-              final Element? allDayElement,
+          @JsonKey(name: '_allDay') final Element? allDayElement,
           final Time? availableStartTime,
           @JsonKey(name: '_availableStartTime')
-              final Element? availableStartTimeElement,
+          final Element? availableStartTimeElement,
           final Time? availableEndTime,
           @JsonKey(name: '_availableEndTime')
-              final Element? availableEndTimeElement}) =
-      _$_PractitionerRoleAvailableTime;
+          final Element? availableEndTimeElement}) =
+      _$PractitionerRoleAvailableTimeImpl;
   _PractitionerRoleAvailableTime._() : super._();
 
   factory _PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerRoleAvailableTime.fromJson;
+      _$PractitionerRoleAvailableTimeImpl.fromJson;
 
   @override
   String? get id;
@@ -7753,7 +7601,8 @@ abstract class _PractitionerRoleAvailableTime
   Element? get availableEndTimeElement;
   @override
   @JsonKey(ignore: true)
-  _$$_PractitionerRoleAvailableTimeCopyWith<_$_PractitionerRoleAvailableTime>
+  _$$PractitionerRoleAvailableTimeImplCopyWith<
+          _$PractitionerRoleAvailableTimeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7875,12 +7724,12 @@ class _$PractitionerRoleNotAvailableCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PractitionerRoleNotAvailableCopyWith<$Res>
+abstract class _$$PractitionerRoleNotAvailableImplCopyWith<$Res>
     implements $PractitionerRoleNotAvailableCopyWith<$Res> {
-  factory _$$_PractitionerRoleNotAvailableCopyWith(
-          _$_PractitionerRoleNotAvailable value,
-          $Res Function(_$_PractitionerRoleNotAvailable) then) =
-      __$$_PractitionerRoleNotAvailableCopyWithImpl<$Res>;
+  factory _$$PractitionerRoleNotAvailableImplCopyWith(
+          _$PractitionerRoleNotAvailableImpl value,
+          $Res Function(_$PractitionerRoleNotAvailableImpl) then) =
+      __$$PractitionerRoleNotAvailableImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7898,13 +7747,13 @@ abstract class _$$_PractitionerRoleNotAvailableCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PractitionerRoleNotAvailableCopyWithImpl<$Res>
+class __$$PractitionerRoleNotAvailableImplCopyWithImpl<$Res>
     extends _$PractitionerRoleNotAvailableCopyWithImpl<$Res,
-        _$_PractitionerRoleNotAvailable>
-    implements _$$_PractitionerRoleNotAvailableCopyWith<$Res> {
-  __$$_PractitionerRoleNotAvailableCopyWithImpl(
-      _$_PractitionerRoleNotAvailable _value,
-      $Res Function(_$_PractitionerRoleNotAvailable) _then)
+        _$PractitionerRoleNotAvailableImpl>
+    implements _$$PractitionerRoleNotAvailableImplCopyWith<$Res> {
+  __$$PractitionerRoleNotAvailableImplCopyWithImpl(
+      _$PractitionerRoleNotAvailableImpl _value,
+      $Res Function(_$PractitionerRoleNotAvailableImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7917,7 +7766,7 @@ class __$$_PractitionerRoleNotAvailableCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
     Object? during = freezed,
   }) {
-    return _then(_$_PractitionerRoleNotAvailable(
+    return _then(_$PractitionerRoleNotAvailableImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -7948,8 +7797,8 @@ class __$$_PractitionerRoleNotAvailableCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
-  _$_PractitionerRoleNotAvailable(
+class _$PractitionerRoleNotAvailableImpl extends _PractitionerRoleNotAvailable {
+  _$PractitionerRoleNotAvailableImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -7958,8 +7807,9 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
       this.during})
       : super._();
 
-  factory _$_PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
-      _$$_PractitionerRoleNotAvailableFromJson(json);
+  factory _$PractitionerRoleNotAvailableImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$PractitionerRoleNotAvailableImplFromJson(json);
 
   @override
   final String? id;
@@ -7982,10 +7832,10 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PractitionerRoleNotAvailable &&
+            other is _$PractitionerRoleNotAvailableImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -8012,13 +7862,14 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PractitionerRoleNotAvailableCopyWith<_$_PractitionerRoleNotAvailable>
-      get copyWith => __$$_PractitionerRoleNotAvailableCopyWithImpl<
-          _$_PractitionerRoleNotAvailable>(this, _$identity);
+  _$$PractitionerRoleNotAvailableImplCopyWith<
+          _$PractitionerRoleNotAvailableImpl>
+      get copyWith => __$$PractitionerRoleNotAvailableImplCopyWithImpl<
+          _$PractitionerRoleNotAvailableImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PractitionerRoleNotAvailableToJson(
+    return _$$PractitionerRoleNotAvailableImplToJson(
       this,
     );
   }
@@ -8032,11 +7883,11 @@ abstract class _PractitionerRoleNotAvailable
       final List<FhirExtension>? modifierExtension,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final Period? during}) = _$_PractitionerRoleNotAvailable;
+      final Period? during}) = _$PractitionerRoleNotAvailableImpl;
   _PractitionerRoleNotAvailable._() : super._();
 
   factory _PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerRoleNotAvailable.fromJson;
+      _$PractitionerRoleNotAvailableImpl.fromJson;
 
   @override
   String? get id;
@@ -8054,7 +7905,8 @@ abstract class _PractitionerRoleNotAvailable
   Period? get during;
   @override
   @JsonKey(ignore: true)
-  _$$_PractitionerRoleNotAvailableCopyWith<_$_PractitionerRoleNotAvailable>
+  _$$PractitionerRoleNotAvailableImplCopyWith<
+          _$PractitionerRoleNotAvailableImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8115,35 +7967,29 @@ abstract class $RelatedPersonCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Reference patient,
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-          RelatedPersonGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      RelatedPersonGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       List<Address>? address,
       List<Attachment>? photo,
       Period? period,
@@ -8414,44 +8260,38 @@ class _$RelatedPersonCopyWithImpl<$Res, $Val extends RelatedPerson>
 }
 
 /// @nodoc
-abstract class _$$_RelatedPersonCopyWith<$Res>
+abstract class _$$RelatedPersonImplCopyWith<$Res>
     implements $RelatedPersonCopyWith<$Res> {
-  factory _$$_RelatedPersonCopyWith(
-          _$_RelatedPerson value, $Res Function(_$_RelatedPerson) then) =
-      __$$_RelatedPersonCopyWithImpl<$Res>;
+  factory _$$RelatedPersonImplCopyWith(
+          _$RelatedPersonImpl value, $Res Function(_$RelatedPersonImpl) then) =
+      __$$RelatedPersonImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
-          R5ResourceType resourceType,
+      R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Reference patient,
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-          RelatedPersonGender? gender,
-      @JsonKey(name: '_gender')
-          Element? genderElement,
+      RelatedPersonGender? gender,
+      @JsonKey(name: '_gender') Element? genderElement,
       Date? birthDate,
-      @JsonKey(name: '_birthDate')
-          Element? birthDateElement,
+      @JsonKey(name: '_birthDate') Element? birthDateElement,
       List<Address>? address,
       List<Attachment>? photo,
       Period? period,
@@ -8478,11 +8318,11 @@ abstract class _$$_RelatedPersonCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RelatedPersonCopyWithImpl<$Res>
-    extends _$RelatedPersonCopyWithImpl<$Res, _$_RelatedPerson>
-    implements _$$_RelatedPersonCopyWith<$Res> {
-  __$$_RelatedPersonCopyWithImpl(
-      _$_RelatedPerson _value, $Res Function(_$_RelatedPerson) _then)
+class __$$RelatedPersonImplCopyWithImpl<$Res>
+    extends _$RelatedPersonCopyWithImpl<$Res, _$RelatedPersonImpl>
+    implements _$$RelatedPersonImplCopyWith<$Res> {
+  __$$RelatedPersonImplCopyWithImpl(
+      _$RelatedPersonImpl _value, $Res Function(_$RelatedPersonImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8515,7 +8355,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
     Object? period = freezed,
     Object? communication = freezed,
   }) {
-    return _then(_$_RelatedPerson(
+    return _then(_$RelatedPersonImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -8626,46 +8466,39 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RelatedPerson extends _RelatedPerson {
-  _$_RelatedPerson(
+class _$RelatedPersonImpl extends _RelatedPerson {
+  _$RelatedPersonImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
-          this.resourceType = R5ResourceType.RelatedPerson,
+      this.resourceType = R5ResourceType.RelatedPerson,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       required this.patient,
       this.relationship,
       this.name,
       this.telecom,
-      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-          this.gender,
-      @JsonKey(name: '_gender')
-          this.genderElement,
+      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown) this.gender,
+      @JsonKey(name: '_gender') this.genderElement,
       this.birthDate,
-      @JsonKey(name: '_birthDate')
-          this.birthDateElement,
+      @JsonKey(name: '_birthDate') this.birthDateElement,
       this.address,
       this.photo,
       this.period,
       this.communication})
       : super._();
 
-  factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
-      _$$_RelatedPersonFromJson(json);
+  factory _$RelatedPersonImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RelatedPersonImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
@@ -8734,10 +8567,10 @@ class _$_RelatedPerson extends _RelatedPerson {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RelatedPerson &&
+            other is _$RelatedPersonImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -8815,12 +8648,12 @@ class _$_RelatedPerson extends _RelatedPerson {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RelatedPersonCopyWith<_$_RelatedPerson> get copyWith =>
-      __$$_RelatedPersonCopyWithImpl<_$_RelatedPerson>(this, _$identity);
+  _$$RelatedPersonImplCopyWith<_$RelatedPersonImpl> get copyWith =>
+      __$$RelatedPersonImplCopyWithImpl<_$RelatedPersonImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelatedPersonToJson(
+    return _$$RelatedPersonImplToJson(
       this,
     );
   }
@@ -8829,44 +8662,38 @@ class _$_RelatedPerson extends _RelatedPerson {
 abstract class _RelatedPerson extends RelatedPerson {
   factory _RelatedPerson(
           {@JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
-              final R5ResourceType resourceType,
+          final R5ResourceType resourceType,
           final Id? id,
           final Meta? meta,
           final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
           final Code? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
           final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
           final Boolean? active,
-          @JsonKey(name: '_active')
-              final Element? activeElement,
+          @JsonKey(name: '_active') final Element? activeElement,
           required final Reference patient,
           final List<CodeableConcept>? relationship,
           final List<HumanName>? name,
           final List<ContactPoint>? telecom,
           @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-              final RelatedPersonGender? gender,
-          @JsonKey(name: '_gender')
-              final Element? genderElement,
+          final RelatedPersonGender? gender,
+          @JsonKey(name: '_gender') final Element? genderElement,
           final Date? birthDate,
-          @JsonKey(name: '_birthDate')
-              final Element? birthDateElement,
+          @JsonKey(name: '_birthDate') final Element? birthDateElement,
           final List<Address>? address,
           final List<Attachment>? photo,
           final Period? period,
           final List<RelatedPersonCommunication>? communication}) =
-      _$_RelatedPerson;
+      _$RelatedPersonImpl;
   _RelatedPerson._() : super._();
 
   factory _RelatedPerson.fromJson(Map<String, dynamic> json) =
-      _$_RelatedPerson.fromJson;
+      _$RelatedPersonImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
@@ -8930,7 +8757,7 @@ abstract class _RelatedPerson extends RelatedPerson {
   List<RelatedPersonCommunication>? get communication;
   @override
   @JsonKey(ignore: true)
-  _$$_RelatedPersonCopyWith<_$_RelatedPerson> get copyWith =>
+  _$$RelatedPersonImplCopyWith<_$RelatedPersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9047,12 +8874,12 @@ class _$RelatedPersonCommunicationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RelatedPersonCommunicationCopyWith<$Res>
+abstract class _$$RelatedPersonCommunicationImplCopyWith<$Res>
     implements $RelatedPersonCommunicationCopyWith<$Res> {
-  factory _$$_RelatedPersonCommunicationCopyWith(
-          _$_RelatedPersonCommunication value,
-          $Res Function(_$_RelatedPersonCommunication) then) =
-      __$$_RelatedPersonCommunicationCopyWithImpl<$Res>;
+  factory _$$RelatedPersonCommunicationImplCopyWith(
+          _$RelatedPersonCommunicationImpl value,
+          $Res Function(_$RelatedPersonCommunicationImpl) then) =
+      __$$RelatedPersonCommunicationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9070,13 +8897,13 @@ abstract class _$$_RelatedPersonCommunicationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RelatedPersonCommunicationCopyWithImpl<$Res>
+class __$$RelatedPersonCommunicationImplCopyWithImpl<$Res>
     extends _$RelatedPersonCommunicationCopyWithImpl<$Res,
-        _$_RelatedPersonCommunication>
-    implements _$$_RelatedPersonCommunicationCopyWith<$Res> {
-  __$$_RelatedPersonCommunicationCopyWithImpl(
-      _$_RelatedPersonCommunication _value,
-      $Res Function(_$_RelatedPersonCommunication) _then)
+        _$RelatedPersonCommunicationImpl>
+    implements _$$RelatedPersonCommunicationImplCopyWith<$Res> {
+  __$$RelatedPersonCommunicationImplCopyWithImpl(
+      _$RelatedPersonCommunicationImpl _value,
+      $Res Function(_$RelatedPersonCommunicationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9089,7 +8916,7 @@ class __$$_RelatedPersonCommunicationCopyWithImpl<$Res>
     Object? preferred = freezed,
     Object? preferredElement = freezed,
   }) {
-    return _then(_$_RelatedPersonCommunication(
+    return _then(_$RelatedPersonCommunicationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -9120,8 +8947,8 @@ class __$$_RelatedPersonCommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
-  _$_RelatedPersonCommunication(
+class _$RelatedPersonCommunicationImpl extends _RelatedPersonCommunication {
+  _$RelatedPersonCommunicationImpl(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
@@ -9130,8 +8957,9 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
       @JsonKey(name: '_preferred') this.preferredElement})
       : super._();
 
-  factory _$_RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
-      _$$_RelatedPersonCommunicationFromJson(json);
+  factory _$RelatedPersonCommunicationImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$RelatedPersonCommunicationImplFromJson(json);
 
   @override
   final String? id;
@@ -9154,10 +8982,10 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RelatedPersonCommunication &&
+            other is _$RelatedPersonCommunicationImpl &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -9185,13 +9013,13 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RelatedPersonCommunicationCopyWith<_$_RelatedPersonCommunication>
-      get copyWith => __$$_RelatedPersonCommunicationCopyWithImpl<
-          _$_RelatedPersonCommunication>(this, _$identity);
+  _$$RelatedPersonCommunicationImplCopyWith<_$RelatedPersonCommunicationImpl>
+      get copyWith => __$$RelatedPersonCommunicationImplCopyWithImpl<
+          _$RelatedPersonCommunicationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelatedPersonCommunicationToJson(
+    return _$$RelatedPersonCommunicationImplToJson(
       this,
     );
   }
@@ -9205,11 +9033,11 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
           required final CodeableConcept language,
           final Boolean? preferred,
           @JsonKey(name: '_preferred') final Element? preferredElement}) =
-      _$_RelatedPersonCommunication;
+      _$RelatedPersonCommunicationImpl;
   _RelatedPersonCommunication._() : super._();
 
   factory _RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =
-      _$_RelatedPersonCommunication.fromJson;
+      _$RelatedPersonCommunicationImpl.fromJson;
 
   @override
   String? get id;
@@ -9227,6 +9055,6 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
   Element? get preferredElement;
   @override
   @JsonKey(ignore: true)
-  _$$_RelatedPersonCommunicationCopyWith<_$_RelatedPersonCommunication>
+  _$$RelatedPersonCommunicationImplCopyWith<_$RelatedPersonCommunicationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -30,29 +30,24 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
       ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
       .toList();
 
-Map<String, dynamic> _$ResourceToJson(Resource instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  return val;
-}
+Map<String, dynamic> _$ResourceToJson(Resource instance) => <String, dynamic>{
+      if (instance.id?.toJson() case final value?) 'id': value,
+      if (_$R5ResourceTypeEnumMap[instance.resourceType] case final value?)
+        'resourceType': value,
+      if (instance.meta?.toJson() case final value?) 'meta': value,
+      if (instance.implicitRules?.toJson() case final value?)
+        'implicitRules': value,
+      if (instance.language?.toJson() case final value?) 'language': value,
+      if (instance.text?.toJson() case final value?) 'text': value,
+      if (instance.contained?.map((e) => e.toJson()).toList() case final value?)
+        'contained': value,
+      if (instance.extension_?.map((e) => e.toJson()).toList()
+          case final value?)
+        'extension': value,
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+    };
 
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',

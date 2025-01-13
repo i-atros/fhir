@@ -6,29 +6,24 @@ part of 'general_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BackboneElement _$$_BackboneElementFromJson(Map<String, dynamic> json) =>
-    _$_BackboneElement(
+_$BackboneElementImpl _$$BackboneElementImplFromJson(
+        Map<String, dynamic> json) =>
+    _$BackboneElementImpl(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_BackboneElementToJson(_$_BackboneElement instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$BackboneElementImplToJson(
+        _$BackboneElementImpl instance) =>
+    <String, dynamic>{
+      if (instance.modifierExtension?.map((e) => e.toJson()).toList()
+          case final value?)
+        'modifierExtension': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_Annotation _$$_AnnotationFromJson(Map<String, dynamic> json) =>
-    _$_Annotation(
+_$AnnotationImpl _$$AnnotationImplFromJson(Map<String, dynamic> json) =>
+    _$AnnotationImpl(
       authorReference: json['authorReference'] == null
           ? null
           : Reference.fromJson(json['authorReference'] as Map<String, dynamic>),
@@ -46,27 +41,21 @@ _$_Annotation _$$_AnnotationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AnnotationToJson(_$_Annotation instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$AnnotationImplToJson(_$AnnotationImpl instance) =>
+    <String, dynamic>{
+      if (instance.authorReference?.toJson() case final value?)
+        'authorReference': value,
+      if (instance.authorString case final value?) 'authorString': value,
+      if (instance.authorStringElement?.toJson() case final value?)
+        '_authorString': value,
+      if (instance.time?.toJson() case final value?) 'time': value,
+      if (instance.timeElement?.toJson() case final value?) '_time': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('authorReference', instance.authorReference?.toJson());
-  writeNotNull('authorString', instance.authorString);
-  writeNotNull('_authorString', instance.authorStringElement?.toJson());
-  writeNotNull('time', instance.time?.toJson());
-  writeNotNull('_time', instance.timeElement?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  return val;
-}
-
-_$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
-    _$_Attachment(
+_$AttachmentImpl _$$AttachmentImplFromJson(Map<String, dynamic> json) =>
+    _$AttachmentImpl(
       contentType: json['contentType'] as String?,
       contentTypeElement: json['_contentType'] == null
           ? null
@@ -101,36 +90,31 @@ _$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_creation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AttachmentToJson(_$_Attachment instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$AttachmentImplToJson(_$AttachmentImpl instance) =>
+    <String, dynamic>{
+      if (instance.contentType case final value?) 'contentType': value,
+      if (instance.contentTypeElement?.toJson() case final value?)
+        '_contentType': value,
+      if (instance.language case final value?) 'language': value,
+      if (instance.languageElement?.toJson() case final value?)
+        '_language': value,
+      if (instance.data case final value?) 'data': value,
+      if (instance.dataElement?.toJson() case final value?) '_data': value,
+      if (instance.url case final value?) 'url': value,
+      if (instance.urlElement?.toJson() case final value?) '_url': value,
+      if (instance.size?.toJson() case final value?) 'size': value,
+      if (instance.sizeElement?.toJson() case final value?) '_size': value,
+      if (instance.hash case final value?) 'hash': value,
+      if (instance.hashElement?.toJson() case final value?) '_hash': value,
+      if (instance.title case final value?) 'title': value,
+      if (instance.titleElement?.toJson() case final value?) '_title': value,
+      if (instance.creation case final value?) 'creation': value,
+      if (instance.creationElement?.toJson() case final value?)
+        '_creation': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('contentType', instance.contentType);
-  writeNotNull('_contentType', instance.contentTypeElement?.toJson());
-  writeNotNull('language', instance.language);
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('data', instance.data);
-  writeNotNull('_data', instance.dataElement?.toJson());
-  writeNotNull('url', instance.url);
-  writeNotNull('_url', instance.urlElement?.toJson());
-  writeNotNull('size', instance.size?.toJson());
-  writeNotNull('_size', instance.sizeElement?.toJson());
-  writeNotNull('hash', instance.hash);
-  writeNotNull('_hash', instance.hashElement?.toJson());
-  writeNotNull('title', instance.title);
-  writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('creation', instance.creation);
-  writeNotNull('_creation', instance.creationElement?.toJson());
-  return val;
-}
-
-_$_Identifier _$$_IdentifierFromJson(Map<String, dynamic> json) =>
-    _$_Identifier(
+_$IdentifierImpl _$$IdentifierImplFromJson(Map<String, dynamic> json) =>
+    _$IdentifierImpl(
       use: $enumDecodeNullable(_$IdentifierUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
@@ -154,26 +138,18 @@ _$_Identifier _$$_IdentifierFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['assigner'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_IdentifierToJson(_$_Identifier instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('use', _$IdentifierUseEnumMap[instance.use]);
-  writeNotNull('_use', instance.useElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('assigner', instance.assigner?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$IdentifierImplToJson(_$IdentifierImpl instance) =>
+    <String, dynamic>{
+      if (_$IdentifierUseEnumMap[instance.use] case final value?) 'use': value,
+      if (instance.useElement?.toJson() case final value?) '_use': value,
+      if (instance.type?.toJson() case final value?) 'type': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.assigner?.toJson() case final value?) 'assigner': value,
+    };
 
 const _$IdentifierUseEnumMap = {
   IdentifierUse.usual: 'usual',
@@ -183,8 +159,9 @@ const _$IdentifierUseEnumMap = {
   IdentifierUse.unknown: 'unknown',
 };
 
-_$_CodeableConcept _$$_CodeableConceptFromJson(Map<String, dynamic> json) =>
-    _$_CodeableConcept(
+_$CodeableConceptImpl _$$CodeableConceptImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CodeableConceptImpl(
       coding: (json['coding'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -194,22 +171,16 @@ _$_CodeableConcept _$$_CodeableConceptFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodeableConceptToJson(_$_CodeableConcept instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$CodeableConceptImplToJson(
+        _$CodeableConceptImpl instance) =>
+    <String, dynamic>{
+      if (instance.coding?.map((e) => e.toJson()).toList() case final value?)
+        'coding': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('coding', instance.coding?.map((e) => e.toJson()).toList());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  return val;
-}
-
-_$_Coding _$$_CodingFromJson(Map<String, dynamic> json) => _$_Coding(
+_$CodingImpl _$$CodingImplFromJson(Map<String, dynamic> json) => _$CodingImpl(
       system: json['system'] as String?,
       systemElement: json['_system'] == null
           ? null
@@ -234,29 +205,26 @@ _$_Coding _$$_CodingFromJson(Map<String, dynamic> json) => _$_Coding(
           : Element.fromJson(json['_userSelected'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodingToJson(_$_Coding instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$CodingImplToJson(_$CodingImpl instance) =>
+    <String, dynamic>{
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.version case final value?) 'version': value,
+      if (instance.versionElement?.toJson() case final value?)
+        '_version': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+      if (instance.display case final value?) 'display': value,
+      if (instance.displayElement?.toJson() case final value?)
+        '_display': value,
+      if (instance.userSelected?.toJson() case final value?)
+        'userSelected': value,
+      if (instance.userSelectedElement?.toJson() case final value?)
+        '_userSelected': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('version', instance.version);
-  writeNotNull('_version', instance.versionElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  writeNotNull('display', instance.display);
-  writeNotNull('_display', instance.displayElement?.toJson());
-  writeNotNull('userSelected', instance.userSelected?.toJson());
-  writeNotNull('_userSelected', instance.userSelectedElement?.toJson());
-  return val;
-}
-
-_$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
+_$QuantityImpl _$$QuantityImplFromJson(Map<String, dynamic> json) =>
+    _$QuantityImpl(
       value: json['value'] == null ? null : Decimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
@@ -280,27 +248,21 @@ _$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_QuantityToJson(_$_Quantity instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
-  writeNotNull('_comparator', instance.comparatorElement?.toJson());
-  writeNotNull('unit', instance.unit);
-  writeNotNull('_unit', instance.unitElement?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$QuantityImplToJson(_$QuantityImpl instance) =>
+    <String, dynamic>{
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$QuantityComparatorEnumMap[instance.comparator] case final value?)
+        'comparator': value,
+      if (instance.comparatorElement?.toJson() case final value?)
+        '_comparator': value,
+      if (instance.unit case final value?) 'unit': value,
+      if (instance.unitElement?.toJson() case final value?) '_unit': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+    };
 
 const _$QuantityComparatorEnumMap = {
   QuantityComparator.lt: '<',
@@ -310,8 +272,8 @@ const _$QuantityComparatorEnumMap = {
   QuantityComparator.unknown: 'unknown',
 };
 
-_$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
-    _$_FhirDuration(
+_$FhirDurationImpl _$$FhirDurationImplFromJson(Map<String, dynamic> json) =>
+    _$FhirDurationImpl(
       value: json['value'] == null ? null : Decimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
@@ -335,29 +297,24 @@ _$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_FhirDurationToJson(_$_FhirDuration instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$FhirDurationImplToJson(_$FhirDurationImpl instance) =>
+    <String, dynamic>{
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$QuantityComparatorEnumMap[instance.comparator] case final value?)
+        'comparator': value,
+      if (instance.comparatorElement?.toJson() case final value?)
+        '_comparator': value,
+      if (instance.unit case final value?) 'unit': value,
+      if (instance.unitElement?.toJson() case final value?) '_unit': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
-  writeNotNull('_comparator', instance.comparatorElement?.toJson());
-  writeNotNull('unit', instance.unit);
-  writeNotNull('_unit', instance.unitElement?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  return val;
-}
-
-_$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
+_$DistanceImpl _$$DistanceImplFromJson(Map<String, dynamic> json) =>
+    _$DistanceImpl(
       value: json['value'] == null ? null : Decimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
@@ -381,29 +338,23 @@ _$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DistanceToJson(_$_Distance instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$DistanceImplToJson(_$DistanceImpl instance) =>
+    <String, dynamic>{
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$QuantityComparatorEnumMap[instance.comparator] case final value?)
+        'comparator': value,
+      if (instance.comparatorElement?.toJson() case final value?)
+        '_comparator': value,
+      if (instance.unit case final value?) 'unit': value,
+      if (instance.unitElement?.toJson() case final value?) '_unit': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
-  writeNotNull('_comparator', instance.comparatorElement?.toJson());
-  writeNotNull('unit', instance.unit);
-  writeNotNull('_unit', instance.unitElement?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  return val;
-}
-
-_$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
+_$CountImpl _$$CountImplFromJson(Map<String, dynamic> json) => _$CountImpl(
       value: json['value'] == null ? null : Decimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
@@ -427,29 +378,23 @@ _$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CountToJson(_$_Count instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$CountImplToJson(_$CountImpl instance) =>
+    <String, dynamic>{
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$QuantityComparatorEnumMap[instance.comparator] case final value?)
+        'comparator': value,
+      if (instance.comparatorElement?.toJson() case final value?)
+        '_comparator': value,
+      if (instance.unit case final value?) 'unit': value,
+      if (instance.unitElement?.toJson() case final value?) '_unit': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
-  writeNotNull('_comparator', instance.comparatorElement?.toJson());
-  writeNotNull('unit', instance.unit);
-  writeNotNull('_unit', instance.unitElement?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  return val;
-}
-
-_$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
+_$MoneyImpl _$$MoneyImplFromJson(Map<String, dynamic> json) => _$MoneyImpl(
       value: json['value'] == null ? null : Decimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
@@ -473,29 +418,23 @@ _$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MoneyToJson(_$_Money instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$MoneyImplToJson(_$MoneyImpl instance) =>
+    <String, dynamic>{
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$QuantityComparatorEnumMap[instance.comparator] case final value?)
+        'comparator': value,
+      if (instance.comparatorElement?.toJson() case final value?)
+        '_comparator': value,
+      if (instance.unit case final value?) 'unit': value,
+      if (instance.unitElement?.toJson() case final value?) '_unit': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
-  writeNotNull('_comparator', instance.comparatorElement?.toJson());
-  writeNotNull('unit', instance.unit);
-  writeNotNull('_unit', instance.unitElement?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  return val;
-}
-
-_$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
+_$AgeImpl _$$AgeImplFromJson(Map<String, dynamic> json) => _$AgeImpl(
       value: json['value'] == null ? null : Decimal.fromJson(json['value']),
       valueElement: json['_value'] == null
           ? null
@@ -519,29 +458,22 @@ _$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AgeToJson(_$_Age instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$AgeImplToJson(_$AgeImpl instance) => <String, dynamic>{
+      if (instance.value?.toJson() case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$QuantityComparatorEnumMap[instance.comparator] case final value?)
+        'comparator': value,
+      if (instance.comparatorElement?.toJson() case final value?)
+        '_comparator': value,
+      if (instance.unit case final value?) 'unit': value,
+      if (instance.unitElement?.toJson() case final value?) '_unit': value,
+      if (instance.system case final value?) 'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+      if (instance.codeElement?.toJson() case final value?) '_code': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('value', instance.value?.toJson());
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('comparator', _$QuantityComparatorEnumMap[instance.comparator]);
-  writeNotNull('_comparator', instance.comparatorElement?.toJson());
-  writeNotNull('unit', instance.unit);
-  writeNotNull('_unit', instance.unitElement?.toJson());
-  writeNotNull('system', instance.system);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  writeNotNull('_code', instance.codeElement?.toJson());
-  return val;
-}
-
-_$_Range _$$_RangeFromJson(Map<String, dynamic> json) => _$_Range(
+_$RangeImpl _$$RangeImplFromJson(Map<String, dynamic> json) => _$RangeImpl(
       low: json['low'] == null
           ? null
           : Quantity.fromJson(json['low'] as Map<String, dynamic>),
@@ -550,21 +482,13 @@ _$_Range _$$_RangeFromJson(Map<String, dynamic> json) => _$_Range(
           : Quantity.fromJson(json['high'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RangeToJson(_$_Range instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$RangeImplToJson(_$RangeImpl instance) =>
+    <String, dynamic>{
+      if (instance.low?.toJson() case final value?) 'low': value,
+      if (instance.high?.toJson() case final value?) 'high': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('low', instance.low?.toJson());
-  writeNotNull('high', instance.high?.toJson());
-  return val;
-}
-
-_$_Period _$$_PeriodFromJson(Map<String, dynamic> json) => _$_Period(
+_$PeriodImpl _$$PeriodImplFromJson(Map<String, dynamic> json) => _$PeriodImpl(
       start: json['start'] as String?,
       startElement: json['_start'] == null
           ? null
@@ -575,23 +499,15 @@ _$_Period _$$_PeriodFromJson(Map<String, dynamic> json) => _$_Period(
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PeriodToJson(_$_Period instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$PeriodImplToJson(_$PeriodImpl instance) =>
+    <String, dynamic>{
+      if (instance.start case final value?) 'start': value,
+      if (instance.startElement?.toJson() case final value?) '_start': value,
+      if (instance.end case final value?) 'end': value,
+      if (instance.endElement?.toJson() case final value?) '_end': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('start', instance.start);
-  writeNotNull('_start', instance.startElement?.toJson());
-  writeNotNull('end', instance.end);
-  writeNotNull('_end', instance.endElement?.toJson());
-  return val;
-}
-
-_$_Ratio _$$_RatioFromJson(Map<String, dynamic> json) => _$_Ratio(
+_$RatioImpl _$$RatioImplFromJson(Map<String, dynamic> json) => _$RatioImpl(
       numerator: json['numerator'] == null
           ? null
           : Quantity.fromJson(json['numerator'] as Map<String, dynamic>),
@@ -600,22 +516,15 @@ _$_Ratio _$$_RatioFromJson(Map<String, dynamic> json) => _$_Ratio(
           : Quantity.fromJson(json['denominator'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RatioToJson(_$_Ratio instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$RatioImplToJson(_$RatioImpl instance) =>
+    <String, dynamic>{
+      if (instance.numerator?.toJson() case final value?) 'numerator': value,
+      if (instance.denominator?.toJson() case final value?)
+        'denominator': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('numerator', instance.numerator?.toJson());
-  writeNotNull('denominator', instance.denominator?.toJson());
-  return val;
-}
-
-_$_SampledData _$$_SampledDataFromJson(Map<String, dynamic> json) =>
-    _$_SampledData(
+_$SampledDataImpl _$$SampledDataImplFromJson(Map<String, dynamic> json) =>
+    _$SampledDataImpl(
       origin: Quantity.fromJson(json['origin'] as Map<String, dynamic>),
       period: json['period'] == null ? null : Decimal.fromJson(json['period']),
       periodElement: json['_period'] == null
@@ -649,33 +558,28 @@ _$_SampledData _$$_SampledDataFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SampledDataToJson(_$_SampledData instance) {
-  final val = <String, dynamic>{
-    'origin': instance.origin.toJson(),
-  };
+Map<String, dynamic> _$$SampledDataImplToJson(_$SampledDataImpl instance) =>
+    <String, dynamic>{
+      'origin': instance.origin.toJson(),
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.periodElement?.toJson() case final value?) '_period': value,
+      if (instance.factor?.toJson() case final value?) 'factor': value,
+      if (instance.factorElement?.toJson() case final value?) '_factor': value,
+      if (instance.lowerLimit?.toJson() case final value?) 'lowerLimit': value,
+      if (instance.lowerLimitElement?.toJson() case final value?)
+        '_lowerLimit': value,
+      if (instance.upperLimit?.toJson() case final value?) 'upperLimit': value,
+      if (instance.upperLimitElement?.toJson() case final value?)
+        '_upperLimit': value,
+      if (instance.dimensions?.toJson() case final value?) 'dimensions': value,
+      if (instance.dimensionsElement?.toJson() case final value?)
+        '_dimensions': value,
+      if (instance.data case final value?) 'data': value,
+      if (instance.dataElement?.toJson() case final value?) '_data': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('_period', instance.periodElement?.toJson());
-  writeNotNull('factor', instance.factor?.toJson());
-  writeNotNull('_factor', instance.factorElement?.toJson());
-  writeNotNull('lowerLimit', instance.lowerLimit?.toJson());
-  writeNotNull('_lowerLimit', instance.lowerLimitElement?.toJson());
-  writeNotNull('upperLimit', instance.upperLimit?.toJson());
-  writeNotNull('_upperLimit', instance.upperLimitElement?.toJson());
-  writeNotNull('dimensions', instance.dimensions?.toJson());
-  writeNotNull('_dimensions', instance.dimensionsElement?.toJson());
-  writeNotNull('data', instance.data);
-  writeNotNull('_data', instance.dataElement?.toJson());
-  return val;
-}
-
-_$_Signature _$$_SignatureFromJson(Map<String, dynamic> json) => _$_Signature(
+_$SignatureImpl _$$SignatureImplFromJson(Map<String, dynamic> json) =>
+    _$SignatureImpl(
       type: (json['type'] as List<dynamic>)
           .map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -708,33 +612,29 @@ _$_Signature _$$_SignatureFromJson(Map<String, dynamic> json) => _$_Signature(
           : Element.fromJson(json['_blob'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SignatureToJson(_$_Signature instance) {
-  final val = <String, dynamic>{
-    'type': instance.type.map((e) => e.toJson()).toList(),
-  };
+Map<String, dynamic> _$$SignatureImplToJson(_$SignatureImpl instance) =>
+    <String, dynamic>{
+      'type': instance.type.map((e) => e.toJson()).toList(),
+      if (instance.when case final value?) 'when': value,
+      if (instance.whenElement?.toJson() case final value?) '_when': value,
+      if (instance.whoUri case final value?) 'whoUri': value,
+      if (instance.whoUriElement?.toJson() case final value?) '_whoUri': value,
+      if (instance.whoReference?.toJson() case final value?)
+        'whoReference': value,
+      if (instance.onBehalfOfUri case final value?) 'onBehalfOfUri': value,
+      if (instance.onBehalfOfUriElement?.toJson() case final value?)
+        '_onBehalfOfUri': value,
+      if (instance.onBehalfOfReference?.toJson() case final value?)
+        'onBehalfOfReference': value,
+      if (instance.contentType case final value?) 'contentType': value,
+      if (instance.contentTypeElement?.toJson() case final value?)
+        '_contentType': value,
+      if (instance.blob case final value?) 'blob': value,
+      if (instance.blobElement?.toJson() case final value?) '_blob': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('when', instance.when);
-  writeNotNull('_when', instance.whenElement?.toJson());
-  writeNotNull('whoUri', instance.whoUri);
-  writeNotNull('_whoUri', instance.whoUriElement?.toJson());
-  writeNotNull('whoReference', instance.whoReference?.toJson());
-  writeNotNull('onBehalfOfUri', instance.onBehalfOfUri);
-  writeNotNull('_onBehalfOfUri', instance.onBehalfOfUriElement?.toJson());
-  writeNotNull('onBehalfOfReference', instance.onBehalfOfReference?.toJson());
-  writeNotNull('contentType', instance.contentType);
-  writeNotNull('_contentType', instance.contentTypeElement?.toJson());
-  writeNotNull('blob', instance.blob);
-  writeNotNull('_blob', instance.blobElement?.toJson());
-  return val;
-}
-
-_$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
+_$HumanNameImpl _$$HumanNameImplFromJson(Map<String, dynamic> json) =>
+    _$HumanNameImpl(
       use: $enumDecodeNullable(_$HumanNameUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
@@ -770,33 +670,28 @@ _$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_HumanNameToJson(_$_HumanName instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('use', _$HumanNameUseEnumMap[instance.use]);
-  writeNotNull('_use', instance.useElement?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('family', instance.family);
-  writeNotNull('_family', instance.familyElement?.toJson());
-  writeNotNull('given', instance.given);
-  writeNotNull(
-      '_given', instance.givenElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('prefix', instance.prefix);
-  writeNotNull(
-      '_prefix', instance.prefixElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('suffix', instance.suffix);
-  writeNotNull(
-      '_suffix', instance.suffixElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('period', instance.period?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$HumanNameImplToJson(_$HumanNameImpl instance) =>
+    <String, dynamic>{
+      if (_$HumanNameUseEnumMap[instance.use] case final value?) 'use': value,
+      if (instance.useElement?.toJson() case final value?) '_use': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+      if (instance.family case final value?) 'family': value,
+      if (instance.familyElement?.toJson() case final value?) '_family': value,
+      if (instance.given case final value?) 'given': value,
+      if (instance.givenElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_given': value,
+      if (instance.prefix case final value?) 'prefix': value,
+      if (instance.prefixElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_prefix': value,
+      if (instance.suffix case final value?) 'suffix': value,
+      if (instance.suffixElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_suffix': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+    };
 
 const _$HumanNameUseEnumMap = {
   HumanNameUse.usual: 'usual',
@@ -809,7 +704,8 @@ const _$HumanNameUseEnumMap = {
   HumanNameUse.unknown: 'unknown',
 };
 
-_$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
+_$AddressImpl _$$AddressImplFromJson(Map<String, dynamic> json) =>
+    _$AddressImpl(
       use: $enumDecodeNullable(_$AddressUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
@@ -852,36 +748,33 @@ _$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AddressToJson(_$_Address instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('use', _$AddressUseEnumMap[instance.use]);
-  writeNotNull('_use', instance.useElement?.toJson());
-  writeNotNull('type', _$AddressTypeEnumMap[instance.type]);
-  writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('text', instance.text);
-  writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('line', instance.line);
-  writeNotNull('_line', instance.lineElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('city', instance.city);
-  writeNotNull('_city', instance.cityElement?.toJson());
-  writeNotNull('district', instance.district);
-  writeNotNull('_district', instance.districtElement?.toJson());
-  writeNotNull('state', instance.state);
-  writeNotNull('_state', instance.stateElement?.toJson());
-  writeNotNull('postalCode', instance.postalCode);
-  writeNotNull('_postalCode', instance.postalCodeElement?.toJson());
-  writeNotNull('country', instance.country);
-  writeNotNull('_country', instance.countryElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$AddressImplToJson(_$AddressImpl instance) =>
+    <String, dynamic>{
+      if (_$AddressUseEnumMap[instance.use] case final value?) 'use': value,
+      if (instance.useElement?.toJson() case final value?) '_use': value,
+      if (_$AddressTypeEnumMap[instance.type] case final value?) 'type': value,
+      if (instance.typeElement?.toJson() case final value?) '_type': value,
+      if (instance.text case final value?) 'text': value,
+      if (instance.textElement?.toJson() case final value?) '_text': value,
+      if (instance.line case final value?) 'line': value,
+      if (instance.lineElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_line': value,
+      if (instance.city case final value?) 'city': value,
+      if (instance.cityElement?.toJson() case final value?) '_city': value,
+      if (instance.district case final value?) 'district': value,
+      if (instance.districtElement?.toJson() case final value?)
+        '_district': value,
+      if (instance.state case final value?) 'state': value,
+      if (instance.stateElement?.toJson() case final value?) '_state': value,
+      if (instance.postalCode case final value?) 'postalCode': value,
+      if (instance.postalCodeElement?.toJson() case final value?)
+        '_postalCode': value,
+      if (instance.country case final value?) 'country': value,
+      if (instance.countryElement?.toJson() case final value?)
+        '_country': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+    };
 
 const _$AddressUseEnumMap = {
   AddressUse.home: 'home',
@@ -898,8 +791,8 @@ const _$AddressTypeEnumMap = {
   AddressType.unknown: 'unknown',
 };
 
-_$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
-    _$_ContactPoint(
+_$ContactPointImpl _$$ContactPointImplFromJson(Map<String, dynamic> json) =>
+    _$ContactPointImpl(
       system: $enumDecodeNullable(_$ContactPointSystemEnumMap, json['system']),
       systemElement: json['_system'] == null
           ? null
@@ -921,26 +814,20 @@ _$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ContactPointToJson(_$_ContactPoint instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('system', _$ContactPointSystemEnumMap[instance.system]);
-  writeNotNull('_system', instance.systemElement?.toJson());
-  writeNotNull('value', instance.value);
-  writeNotNull('_value', instance.valueElement?.toJson());
-  writeNotNull('use', _$ContactPointUseEnumMap[instance.use]);
-  writeNotNull('_use', instance.useElement?.toJson());
-  writeNotNull('rank', instance.rank?.toJson());
-  writeNotNull('_rank', instance.rankElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$ContactPointImplToJson(_$ContactPointImpl instance) =>
+    <String, dynamic>{
+      if (_$ContactPointSystemEnumMap[instance.system] case final value?)
+        'system': value,
+      if (instance.systemElement?.toJson() case final value?) '_system': value,
+      if (instance.value case final value?) 'value': value,
+      if (instance.valueElement?.toJson() case final value?) '_value': value,
+      if (_$ContactPointUseEnumMap[instance.use] case final value?)
+        'use': value,
+      if (instance.useElement?.toJson() case final value?) '_use': value,
+      if (instance.rank?.toJson() case final value?) 'rank': value,
+      if (instance.rankElement?.toJson() case final value?) '_rank': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+    };
 
 const _$ContactPointSystemEnumMap = {
   ContactPointSystem.phone: 'phone',
@@ -962,7 +849,7 @@ const _$ContactPointUseEnumMap = {
   ContactPointUse.unknown: 'unknown',
 };
 
-_$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
+_$TimingImpl _$$TimingImplFromJson(Map<String, dynamic> json) => _$TimingImpl(
       event:
           (json['event'] as List<dynamic>?)?.map((e) => e as String).toList(),
       eventElement: (json['_event'] as List<dynamic>?)
@@ -977,25 +864,18 @@ _$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TimingToJson(_$_Timing instance) {
-  final val = <String, dynamic>{};
+Map<String, dynamic> _$$TimingImplToJson(_$TimingImpl instance) =>
+    <String, dynamic>{
+      if (instance.event case final value?) 'event': value,
+      if (instance.eventElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_event': value,
+      if (instance.repeat?.toJson() case final value?) 'repeat': value,
+      if (instance.code?.toJson() case final value?) 'code': value,
+    };
 
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('event', instance.event);
-  writeNotNull(
-      '_event', instance.eventElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('repeat', instance.repeat?.toJson());
-  writeNotNull('code', instance.code?.toJson());
-  return val;
-}
-
-_$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
-    _$_TimingRepeat(
+_$TimingRepeatImpl _$$TimingRepeatImplFromJson(Map<String, dynamic> json) =>
+    _$TimingRepeatImpl(
       boundsDuration: json['boundsDuration'] == null
           ? null
           : FhirDuration.fromJson(
@@ -1065,9 +945,8 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      timeOfDay: (json['timeOfDay'] as List<dynamic>?)
-          ?.map((e) => Time.fromJson(e))
-          .toList(),
+      timeOfDay:
+          (json['timeOfDay'] as List<dynamic>?)?.map(Time.fromJson).toList(),
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
@@ -1085,54 +964,66 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_offset'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TimingRepeatToJson(_$_TimingRepeat instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('boundsDuration', instance.boundsDuration?.toJson());
-  writeNotNull('boundsRange', instance.boundsRange?.toJson());
-  writeNotNull('boundsPeriod', instance.boundsPeriod?.toJson());
-  writeNotNull('count', instance.count?.toJson());
-  writeNotNull('_count', instance.countElement?.toJson());
-  writeNotNull('countMax', instance.countMax?.toJson());
-  writeNotNull('_countMax', instance.countMaxElement?.toJson());
-  writeNotNull('duration', instance.duration?.toJson());
-  writeNotNull('_duration', instance.durationElement?.toJson());
-  writeNotNull('durationMax', instance.durationMax?.toJson());
-  writeNotNull('_durationMax', instance.durationMaxElement?.toJson());
-  writeNotNull(
-      'durationUnit', _$TimingRepeatDurationUnitEnumMap[instance.durationUnit]);
-  writeNotNull('_durationUnit', instance.durationUnitElement?.toJson());
-  writeNotNull('frequency', instance.frequency?.toJson());
-  writeNotNull('_frequency', instance.frequencyElement?.toJson());
-  writeNotNull('frequencyMax', instance.frequencyMax?.toJson());
-  writeNotNull('_frequencyMax', instance.frequencyMaxElement?.toJson());
-  writeNotNull('period', instance.period?.toJson());
-  writeNotNull('_period', instance.periodElement?.toJson());
-  writeNotNull('periodMax', instance.periodMax?.toJson());
-  writeNotNull('_periodMax', instance.periodMaxElement?.toJson());
-  writeNotNull(
-      'periodUnit', _$TimingRepeatPeriodUnitEnumMap[instance.periodUnit]);
-  writeNotNull('_periodUnit', instance.periodUnitElement?.toJson());
-  writeNotNull('dayOfWeek', instance.dayOfWeek);
-  writeNotNull('_dayOfWeek',
-      instance.dayOfWeekElement?.map((e) => e?.toJson()).toList());
-  writeNotNull(
-      'timeOfDay', instance.timeOfDay?.map((e) => e.toJson()).toList());
-  writeNotNull('_timeOfDay',
-      instance.timeOfDayElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('when',
-      instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]!).toList());
-  writeNotNull('_when', instance.whenElement?.map((e) => e?.toJson()).toList());
-  writeNotNull('offset', instance.offset?.toJson());
-  writeNotNull('_offset', instance.offsetElement?.toJson());
-  return val;
-}
+Map<String, dynamic> _$$TimingRepeatImplToJson(_$TimingRepeatImpl instance) =>
+    <String, dynamic>{
+      if (instance.boundsDuration?.toJson() case final value?)
+        'boundsDuration': value,
+      if (instance.boundsRange?.toJson() case final value?)
+        'boundsRange': value,
+      if (instance.boundsPeriod?.toJson() case final value?)
+        'boundsPeriod': value,
+      if (instance.count?.toJson() case final value?) 'count': value,
+      if (instance.countElement?.toJson() case final value?) '_count': value,
+      if (instance.countMax?.toJson() case final value?) 'countMax': value,
+      if (instance.countMaxElement?.toJson() case final value?)
+        '_countMax': value,
+      if (instance.duration?.toJson() case final value?) 'duration': value,
+      if (instance.durationElement?.toJson() case final value?)
+        '_duration': value,
+      if (instance.durationMax?.toJson() case final value?)
+        'durationMax': value,
+      if (instance.durationMaxElement?.toJson() case final value?)
+        '_durationMax': value,
+      if (_$TimingRepeatDurationUnitEnumMap[instance.durationUnit]
+          case final value?)
+        'durationUnit': value,
+      if (instance.durationUnitElement?.toJson() case final value?)
+        '_durationUnit': value,
+      if (instance.frequency?.toJson() case final value?) 'frequency': value,
+      if (instance.frequencyElement?.toJson() case final value?)
+        '_frequency': value,
+      if (instance.frequencyMax?.toJson() case final value?)
+        'frequencyMax': value,
+      if (instance.frequencyMaxElement?.toJson() case final value?)
+        '_frequencyMax': value,
+      if (instance.period?.toJson() case final value?) 'period': value,
+      if (instance.periodElement?.toJson() case final value?) '_period': value,
+      if (instance.periodMax?.toJson() case final value?) 'periodMax': value,
+      if (instance.periodMaxElement?.toJson() case final value?)
+        '_periodMax': value,
+      if (_$TimingRepeatPeriodUnitEnumMap[instance.periodUnit]
+          case final value?)
+        'periodUnit': value,
+      if (instance.periodUnitElement?.toJson() case final value?)
+        '_periodUnit': value,
+      if (instance.dayOfWeek case final value?) 'dayOfWeek': value,
+      if (instance.dayOfWeekElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_dayOfWeek': value,
+      if (instance.timeOfDay?.map((e) => e.toJson()).toList() case final value?)
+        'timeOfDay': value,
+      if (instance.timeOfDayElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_timeOfDay': value,
+      if (instance.when?.map((e) => _$TimingRepeatWhenEnumMap[e]!).toList()
+          case final value?)
+        'when': value,
+      if (instance.whenElement?.map((e) => e?.toJson()).toList()
+          case final value?)
+        '_when': value,
+      if (instance.offset?.toJson() case final value?) 'offset': value,
+      if (instance.offsetElement?.toJson() case final value?) '_offset': value,
+    };
 
 const _$TimingRepeatDurationUnitEnumMap = {
   TimingRepeatDurationUnit.s: 's',
