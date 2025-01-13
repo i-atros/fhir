@@ -170,8 +170,8 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: "upgrade-flutter-3.27"
-      resolved-ref: "5771711e4b6b2a75c4b76bf633e93fc589553068"
+      ref: HEAD
+      resolved-ref: "7e8d47b93d5d82ff81fd593157aebf14b263955b"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
@@ -179,8 +179,8 @@ packages:
     dependency: transitive
     description:
       path: fhir_yaml
-      ref: "upgrade-flutter-3.27"
-      resolved-ref: "5771711e4b6b2a75c4b76bf633e93fc589553068"
+      ref: HEAD
+      resolved-ref: b32e5e8b26f2295b48e891cfbc3dc87c38226569
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.5.0"
