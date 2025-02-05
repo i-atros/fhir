@@ -60,8 +60,12 @@ mixin _$GuidanceResponse {
   List<DataRequirement>? get dataRequirement =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this GuidanceResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GuidanceResponseCopyWith<GuidanceResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -132,6 +136,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -285,6 +291,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     ) as $Val);
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -297,6 +305,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -309,6 +319,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -321,6 +333,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -333,6 +347,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requestIdElement {
@@ -345,6 +361,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -357,6 +375,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get module {
@@ -365,6 +385,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -377,6 +399,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
@@ -389,6 +413,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get context {
@@ -401,6 +427,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement {
@@ -413,6 +441,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get performer {
@@ -425,6 +455,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get reasonCodeableConcept {
@@ -438,6 +470,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get reasonReference {
@@ -450,6 +484,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get outputParameters {
@@ -462,6 +498,8 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
     });
   }
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get result {
@@ -557,6 +595,8 @@ class __$$GuidanceResponseImplCopyWithImpl<$Res>
       $Res Function(_$GuidanceResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -877,7 +917,7 @@ class _$GuidanceResponseImpl extends _GuidanceResponse {
                 .equals(other.dataRequirement, dataRequirement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -912,7 +952,9 @@ class _$GuidanceResponseImpl extends _GuidanceResponse {
         const DeepCollectionEquality().hash(dataRequirement)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GuidanceResponseImplCopyWith<_$GuidanceResponseImpl> get copyWith =>
@@ -1030,8 +1072,11 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   Reference? get result;
   @override
   List<DataRequirement>? get dataRequirement;
+
+  /// Create a copy of GuidanceResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GuidanceResponseImplCopyWith<_$GuidanceResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -2132,6 +2132,14 @@ _$InvoiceImpl _$$InvoiceImplFromJson(Map<String, dynamic> json) =>
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      creation: json['creation'] == null
+          ? null
+          : FhirDateTime.fromJson(json['creation']),
+      periodDate:
+          json['periodDate'] == null ? null : Date.fromJson(json['periodDate']),
+      periodPeriod: json['periodPeriod'] == null
+          ? null
+          : Period.fromJson(json['periodPeriod'] as Map<String, dynamic>),
       participant: (json['participant'] as List<dynamic>?)
           ?.map((e) => InvoiceParticipant.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2200,6 +2208,10 @@ Map<String, dynamic> _$$InvoiceImplToJson(_$InvoiceImpl instance) =>
       if (instance.recipient?.toJson() case final value?) 'recipient': value,
       if (instance.date?.toJson() case final value?) 'date': value,
       if (instance.dateElement?.toJson() case final value?) '_date': value,
+      if (instance.creation?.toJson() case final value?) 'creation': value,
+      if (instance.periodDate?.toJson() case final value?) 'periodDate': value,
+      if (instance.periodPeriod?.toJson() case final value?)
+        'periodPeriod': value,
       if (instance.participant?.map((e) => e.toJson()).toList()
           case final value?)
         'participant': value,
