@@ -65,8 +65,12 @@ mixin _$Coverage {
   Element? get networkElement => throw _privateConstructorUsedError;
   List<Reference>? get contract => throw _privateConstructorUsedError;
 
+  /// Serializes this Coverage to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CoverageCopyWith<Coverage> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -141,6 +145,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -314,6 +320,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     ) as $Val);
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -326,6 +334,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -338,6 +348,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -350,6 +362,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -362,6 +376,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -374,6 +390,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
@@ -386,6 +404,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get policyHolder {
@@ -398,6 +418,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subscriber {
@@ -410,6 +432,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subscriberIdElement {
@@ -422,6 +446,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get beneficiary {
@@ -434,6 +460,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get relationship {
@@ -446,6 +474,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
@@ -458,6 +488,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CoverageGroupingCopyWith<$Res>? get grouping {
@@ -470,6 +502,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dependentElement {
@@ -482,6 +516,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get sequenceElement {
@@ -494,6 +530,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get orderElement {
@@ -506,6 +544,8 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
     });
   }
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get networkElement {
@@ -607,6 +647,8 @@ class __$$CoverageImplCopyWithImpl<$Res>
       _$CoverageImpl _value, $Res Function(_$CoverageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -968,7 +1010,7 @@ class _$CoverageImpl extends _Coverage {
             const DeepCollectionEquality().equals(other.contract, contract));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1007,7 +1049,9 @@ class _$CoverageImpl extends _Coverage {
         const DeepCollectionEquality().hash(contract)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CoverageImplCopyWith<_$CoverageImpl> get copyWith =>
@@ -1138,8 +1182,11 @@ abstract class _Coverage extends Coverage {
   Element? get networkElement;
   @override
   List<Reference>? get contract;
+
+  /// Create a copy of Coverage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CoverageImplCopyWith<_$CoverageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1188,8 +1235,12 @@ mixin _$CoverageGrouping {
   @JsonKey(name: '_subClassDisplay')
   Element? get subClassDisplayElement => throw _privateConstructorUsedError;
 
+  /// Serializes this CoverageGrouping to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CoverageGroupingCopyWith<CoverageGrouping> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1250,6 +1301,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1378,6 +1431,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     ) as $Val);
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get groupElement {
@@ -1390,6 +1445,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get groupDisplayElement {
@@ -1402,6 +1459,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subGroupElement {
@@ -1414,6 +1473,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subGroupDisplayElement {
@@ -1426,6 +1487,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get planElement {
@@ -1438,6 +1501,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get planDisplayElement {
@@ -1450,6 +1515,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subPlanElement {
@@ -1462,6 +1529,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subPlanDisplayElement {
@@ -1474,6 +1543,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get classElement {
@@ -1486,6 +1557,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get classDisplayElement {
@@ -1498,6 +1571,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subClassElement {
@@ -1510,6 +1585,8 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
     });
   }
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get subClassDisplayElement {
@@ -1591,6 +1668,8 @@ class __$$CoverageGroupingImplCopyWithImpl<$Res>
       $Res Function(_$CoverageGroupingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1871,7 +1950,7 @@ class _$CoverageGroupingImpl extends _CoverageGrouping {
                 other.subClassDisplayElement == subClassDisplayElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1901,7 +1980,9 @@ class _$CoverageGroupingImpl extends _CoverageGrouping {
         subClassDisplayElement
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CoverageGroupingImplCopyWith<_$CoverageGroupingImpl> get copyWith =>
@@ -2009,8 +2090,11 @@ abstract class _CoverageGrouping extends CoverageGrouping {
   @override
   @JsonKey(name: '_subClassDisplay')
   Element? get subClassDisplayElement;
+
+  /// Create a copy of CoverageGrouping
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CoverageGroupingImplCopyWith<_$CoverageGroupingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2062,8 +2146,12 @@ mixin _$EligibilityRequest {
   CodeableConcept? get benefitCategory => throw _privateConstructorUsedError;
   CodeableConcept? get benefitSubCategory => throw _privateConstructorUsedError;
 
+  /// Serializes this EligibilityRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EligibilityRequestCopyWith<EligibilityRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2140,6 +2228,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2303,6 +2393,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     ) as $Val);
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -2315,6 +2407,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -2327,6 +2421,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -2339,6 +2435,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -2351,6 +2449,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -2363,6 +2463,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get priority {
@@ -2375,6 +2477,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patient {
@@ -2387,6 +2491,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get servicedDateElement {
@@ -2399,6 +2505,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get servicedPeriod {
@@ -2411,6 +2519,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -2423,6 +2533,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get enterer {
@@ -2435,6 +2547,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get provider {
@@ -2447,6 +2561,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
@@ -2459,6 +2575,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get insurer {
@@ -2471,6 +2589,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get facility {
@@ -2483,6 +2603,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get coverage {
@@ -2495,6 +2617,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get businessArrangementElement {
@@ -2507,6 +2631,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get benefitCategory {
@@ -2519,6 +2645,8 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
     });
   }
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get benefitSubCategory {
@@ -2623,6 +2751,8 @@ class __$$EligibilityRequestImplCopyWithImpl<$Res>
       $Res Function(_$EligibilityRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2966,7 +3096,7 @@ class _$EligibilityRequestImpl extends _EligibilityRequest {
                 other.benefitSubCategory == benefitSubCategory));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3003,7 +3133,9 @@ class _$EligibilityRequestImpl extends _EligibilityRequest {
         benefitSubCategory
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EligibilityRequestImplCopyWith<_$EligibilityRequestImpl> get copyWith =>
@@ -3128,8 +3260,11 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   CodeableConcept? get benefitCategory;
   @override
   CodeableConcept? get benefitSubCategory;
+
+  /// Create a copy of EligibilityRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EligibilityRequestImplCopyWith<_$EligibilityRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3180,8 +3315,12 @@ mixin _$EligibilityResponse {
   List<EligibilityResponseError>? get error =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this EligibilityResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EligibilityResponseCopyWith<EligibilityResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3249,6 +3388,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3397,6 +3538,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     ) as $Val);
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -3409,6 +3552,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -3421,6 +3566,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -3433,6 +3580,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -3445,6 +3594,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -3457,6 +3608,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -3469,6 +3622,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestProvider {
@@ -3481,6 +3636,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestOrganization {
@@ -3493,6 +3650,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
@@ -3505,6 +3664,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get outcome {
@@ -3517,6 +3678,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dispositionElement {
@@ -3529,6 +3692,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get insurer {
@@ -3541,6 +3706,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get inforceElement {
@@ -3553,6 +3720,8 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
     });
   }
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get form {
@@ -3643,6 +3812,8 @@ class __$$EligibilityResponseImplCopyWithImpl<$Res>
       $Res Function(_$EligibilityResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3950,7 +4121,7 @@ class _$EligibilityResponseImpl extends _EligibilityResponse {
             const DeepCollectionEquality().equals(other.error, error));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3984,7 +4155,9 @@ class _$EligibilityResponseImpl extends _EligibilityResponse {
         const DeepCollectionEquality().hash(error)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EligibilityResponseImplCopyWith<_$EligibilityResponseImpl> get copyWith =>
@@ -4099,8 +4272,11 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   CodeableConcept? get form;
   @override
   List<EligibilityResponseError>? get error;
+
+  /// Create a copy of EligibilityResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EligibilityResponseImplCopyWith<_$EligibilityResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4117,8 +4293,12 @@ mixin _$EligibilityResponseInsurance {
   List<EligibilityResponseBenefitBalance>? get benefitBalance =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this EligibilityResponseInsurance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EligibilityResponseInsuranceCopyWith<EligibilityResponseInsurance>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4151,6 +4331,8 @@ class _$EligibilityResponseInsuranceCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4174,6 +4356,8 @@ class _$EligibilityResponseInsuranceCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get coverage {
@@ -4186,6 +4370,8 @@ class _$EligibilityResponseInsuranceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get contract {
@@ -4229,6 +4415,8 @@ class __$$EligibilityResponseInsuranceImplCopyWithImpl<$Res>
       $Res Function(_$EligibilityResponseInsuranceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4289,12 +4477,14 @@ class _$EligibilityResponseInsuranceImpl extends _EligibilityResponseInsurance {
                 .equals(other.benefitBalance, benefitBalance));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, coverage, contract,
       const DeepCollectionEquality().hash(benefitBalance));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EligibilityResponseInsuranceImplCopyWith<
@@ -4328,8 +4518,11 @@ abstract class _EligibilityResponseInsurance
   Reference? get contract;
   @override
   List<EligibilityResponseBenefitBalance>? get benefitBalance;
+
+  /// Create a copy of EligibilityResponseInsurance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EligibilityResponseInsuranceImplCopyWith<
           _$EligibilityResponseInsuranceImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4359,8 +4552,12 @@ mixin _$EligibilityResponseBenefitBalance {
   List<EligibilityResponseFinancial>? get financial =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this EligibilityResponseBenefitBalance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EligibilityResponseBenefitBalanceCopyWith<EligibilityResponseBenefitBalance>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4408,6 +4605,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4476,6 +4675,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get category {
@@ -4484,6 +4685,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get subCategory {
@@ -4496,6 +4699,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get excludedElement {
@@ -4508,6 +4713,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -4520,6 +4727,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -4532,6 +4741,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get network {
@@ -4544,6 +4755,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get unit {
@@ -4556,6 +4769,8 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get term {
@@ -4620,6 +4835,8 @@ class __$$EligibilityResponseBenefitBalanceImplCopyWithImpl<$Res>
       $Res Function(_$EligibilityResponseBenefitBalanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4771,7 +4988,7 @@ class _$EligibilityResponseBenefitBalanceImpl
             const DeepCollectionEquality().equals(other.financial, financial));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4788,7 +5005,9 @@ class _$EligibilityResponseBenefitBalanceImpl
       term,
       const DeepCollectionEquality().hash(financial));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EligibilityResponseBenefitBalanceImplCopyWith<
@@ -4853,8 +5072,11 @@ abstract class _EligibilityResponseBenefitBalance
   CodeableConcept? get term;
   @override
   List<EligibilityResponseFinancial>? get financial;
+
+  /// Create a copy of EligibilityResponseBenefitBalance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EligibilityResponseBenefitBalanceImplCopyWith<
           _$EligibilityResponseBenefitBalanceImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4880,8 +5102,12 @@ mixin _$EligibilityResponseFinancial {
   Element? get usedUnsignedIntElement => throw _privateConstructorUsedError;
   Money? get usedMoney => throw _privateConstructorUsedError;
 
+  /// Serializes this EligibilityResponseFinancial to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EligibilityResponseFinancialCopyWith<EligibilityResponseFinancial>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4924,6 +5150,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4977,6 +5205,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
@@ -4985,6 +5215,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get allowedUnsignedIntElement {
@@ -4997,6 +5229,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get allowedStringElement {
@@ -5009,6 +5243,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res>? get allowedMoney {
@@ -5021,6 +5257,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get usedUnsignedIntElement {
@@ -5033,6 +5271,8 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res>? get usedMoney {
@@ -5090,6 +5330,8 @@ class __$$EligibilityResponseFinancialImplCopyWithImpl<$Res>
       $Res Function(_$EligibilityResponseFinancialImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5215,7 +5457,7 @@ class _$EligibilityResponseFinancialImpl extends _EligibilityResponseFinancial {
                 other.usedMoney == usedMoney));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5229,7 +5471,9 @@ class _$EligibilityResponseFinancialImpl extends _EligibilityResponseFinancial {
       usedUnsignedIntElement,
       usedMoney);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EligibilityResponseFinancialImplCopyWith<
@@ -5284,8 +5528,11 @@ abstract class _EligibilityResponseFinancial
   Element? get usedUnsignedIntElement;
   @override
   Money? get usedMoney;
+
+  /// Create a copy of EligibilityResponseFinancial
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EligibilityResponseFinancialImplCopyWith<
           _$EligibilityResponseFinancialImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5300,8 +5547,12 @@ EligibilityResponseError _$EligibilityResponseErrorFromJson(
 mixin _$EligibilityResponseError {
   CodeableConcept get code => throw _privateConstructorUsedError;
 
+  /// Serializes this EligibilityResponseError to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EligibilityResponseError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EligibilityResponseErrorCopyWith<EligibilityResponseError> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5328,6 +5579,8 @@ class _$EligibilityResponseErrorCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EligibilityResponseError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5341,6 +5594,8 @@ class _$EligibilityResponseErrorCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of EligibilityResponseError
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get code {
@@ -5375,6 +5630,8 @@ class __$$EligibilityResponseErrorImplCopyWithImpl<$Res>
       $Res Function(_$EligibilityResponseErrorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EligibilityResponseError
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5413,11 +5670,13 @@ class _$EligibilityResponseErrorImpl extends _EligibilityResponseError {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, code);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EligibilityResponseError
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EligibilityResponseErrorImplCopyWith<_$EligibilityResponseErrorImpl>
@@ -5442,8 +5701,11 @@ abstract class _EligibilityResponseError extends EligibilityResponseError {
 
   @override
   CodeableConcept get code;
+
+  /// Create a copy of EligibilityResponseError
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EligibilityResponseErrorImplCopyWith<_$EligibilityResponseErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5483,8 +5745,12 @@ mixin _$EnrollmentRequest {
   Reference? get subject => throw _privateConstructorUsedError;
   Reference? get coverage => throw _privateConstructorUsedError;
 
+  /// Serializes this EnrollmentRequest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5542,6 +5808,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5655,6 +5923,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     ) as $Val);
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -5667,6 +5937,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -5679,6 +5951,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -5691,6 +5965,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -5703,6 +5979,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -5715,6 +5993,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -5727,6 +6007,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get insurer {
@@ -5739,6 +6021,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get provider {
@@ -5751,6 +6035,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
@@ -5763,6 +6049,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
@@ -5775,6 +6063,8 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
     });
   }
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get coverage {
@@ -5852,6 +6142,8 @@ class __$$EnrollmentRequestImplCopyWithImpl<$Res>
       $Res Function(_$EnrollmentRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6092,7 +6384,7 @@ class _$EnrollmentRequestImpl extends _EnrollmentRequest {
                 other.coverage == coverage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -6119,7 +6411,9 @@ class _$EnrollmentRequestImpl extends _EnrollmentRequest {
         coverage
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnrollmentRequestImplCopyWith<_$EnrollmentRequestImpl> get copyWith =>
@@ -6211,8 +6505,11 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   Reference? get subject;
   @override
   Reference? get coverage;
+
+  /// Create a copy of EnrollmentRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnrollmentRequestImplCopyWith<_$EnrollmentRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6255,8 +6552,12 @@ mixin _$EnrollmentResponse {
   Reference? get requestProvider => throw _privateConstructorUsedError;
   Reference? get requestOrganization => throw _privateConstructorUsedError;
 
+  /// Serializes this EnrollmentResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6317,6 +6618,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6440,6 +6743,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     ) as $Val);
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -6452,6 +6757,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -6464,6 +6771,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -6476,6 +6785,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -6488,6 +6799,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -6500,6 +6813,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
@@ -6512,6 +6827,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get outcome {
@@ -6524,6 +6841,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dispositionElement {
@@ -6536,6 +6855,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -6548,6 +6869,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
@@ -6560,6 +6883,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestProvider {
@@ -6572,6 +6897,8 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
     });
   }
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestOrganization {
@@ -6653,6 +6980,8 @@ class __$$EnrollmentResponseImplCopyWithImpl<$Res>
       $Res Function(_$EnrollmentResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6914,7 +7243,7 @@ class _$EnrollmentResponseImpl extends _EnrollmentResponse {
                 other.requestOrganization == requestOrganization));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -6943,7 +7272,9 @@ class _$EnrollmentResponseImpl extends _EnrollmentResponse {
         requestOrganization
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EnrollmentResponseImplCopyWith<_$EnrollmentResponseImpl> get copyWith =>
@@ -7042,8 +7373,11 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   Reference? get requestProvider;
   @override
   Reference? get requestOrganization;
+
+  /// Create a copy of EnrollmentResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EnrollmentResponseImplCopyWith<_$EnrollmentResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
