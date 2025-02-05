@@ -53,8 +53,12 @@ mixin _$PaymentNotice {
   Reference? get organization => throw _privateConstructorUsedError;
   CodeableConcept? get paymentStatus => throw _privateConstructorUsedError;
 
+  /// Serializes this PaymentNotice to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PaymentNoticeCopyWith<PaymentNotice> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -117,6 +121,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -245,6 +251,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     ) as $Val);
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -257,6 +265,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -269,6 +279,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -281,6 +293,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -293,6 +307,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -305,6 +321,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
@@ -317,6 +335,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get response {
@@ -329,6 +349,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusDateElement {
@@ -341,6 +363,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -353,6 +377,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get target {
@@ -365,6 +391,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get provider {
@@ -377,6 +405,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
@@ -389,6 +419,8 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
     });
   }
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get paymentStatus {
@@ -473,6 +505,8 @@ class __$$PaymentNoticeImplCopyWithImpl<$Res>
       _$PaymentNoticeImpl _value, $Res Function(_$PaymentNoticeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -744,7 +778,7 @@ class _$PaymentNoticeImpl extends _PaymentNotice {
                 other.paymentStatus == paymentStatus));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -774,7 +808,9 @@ class _$PaymentNoticeImpl extends _PaymentNotice {
         paymentStatus
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PaymentNoticeImplCopyWith<_$PaymentNoticeImpl> get copyWith =>
@@ -875,8 +911,11 @@ abstract class _PaymentNotice extends PaymentNotice {
   Reference? get organization;
   @override
   CodeableConcept? get paymentStatus;
+
+  /// Create a copy of PaymentNotice
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PaymentNoticeImplCopyWith<_$PaymentNoticeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -927,8 +966,12 @@ mixin _$PaymentReconciliation {
   List<PaymentReconciliationProcessNote>? get processNote =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this PaymentReconciliation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -998,6 +1041,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1146,6 +1191,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -1158,6 +1205,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -1170,6 +1219,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -1182,6 +1233,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -1194,6 +1247,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -1206,6 +1261,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get period {
@@ -1218,6 +1275,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -1230,6 +1289,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
@@ -1242,6 +1303,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
@@ -1254,6 +1317,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get outcome {
@@ -1266,6 +1331,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dispositionElement {
@@ -1278,6 +1345,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestProvider {
@@ -1290,6 +1359,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestOrganization {
@@ -1302,6 +1373,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get form {
@@ -1314,6 +1387,8 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res>? get total {
@@ -1408,6 +1483,8 @@ class __$$PaymentReconciliationImplCopyWithImpl<$Res>
       $Res Function(_$PaymentReconciliationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1715,7 +1792,7 @@ class _$PaymentReconciliationImpl extends _PaymentReconciliation {
                 .equals(other.processNote, processNote));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1749,7 +1826,9 @@ class _$PaymentReconciliationImpl extends _PaymentReconciliation {
         const DeepCollectionEquality().hash(processNote)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PaymentReconciliationImplCopyWith<_$PaymentReconciliationImpl>
@@ -1864,8 +1943,11 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   Money? get total;
   @override
   List<PaymentReconciliationProcessNote>? get processNote;
+
+  /// Create a copy of PaymentReconciliation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PaymentReconciliationImplCopyWith<_$PaymentReconciliationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1887,8 +1969,12 @@ mixin _$PaymentReconciliationDetail {
   Element? get dateElement => throw _privateConstructorUsedError;
   Money? get amount => throw _privateConstructorUsedError;
 
+  /// Serializes this PaymentReconciliationDetail to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PaymentReconciliationDetailCopyWith<PaymentReconciliationDetail>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1931,6 +2017,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1979,6 +2067,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get type {
@@ -1987,6 +2077,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
@@ -1999,6 +2091,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get response {
@@ -2011,6 +2105,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get submitter {
@@ -2023,6 +2119,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get payee {
@@ -2035,6 +2133,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
@@ -2047,6 +2147,8 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res>? get amount {
@@ -2105,6 +2207,8 @@ class __$$PaymentReconciliationDetailImplCopyWithImpl<$Res>
       $Res Function(_$PaymentReconciliationDetailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2213,12 +2317,14 @@ class _$PaymentReconciliationDetailImpl extends _PaymentReconciliationDetail {
             (identical(other.amount, amount) || other.amount == amount));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type, request, response,
       submitter, payee, date, dateElement, amount);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PaymentReconciliationDetailImplCopyWith<_$PaymentReconciliationDetailImpl>
@@ -2266,8 +2372,11 @@ abstract class _PaymentReconciliationDetail
   Element? get dateElement;
   @override
   Money? get amount;
+
+  /// Create a copy of PaymentReconciliationDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PaymentReconciliationDetailImplCopyWith<_$PaymentReconciliationDetailImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2284,8 +2393,12 @@ mixin _$PaymentReconciliationProcessNote {
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
+  /// Serializes this PaymentReconciliationProcessNote to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PaymentReconciliationProcessNoteCopyWith<PaymentReconciliationProcessNote>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2318,6 +2431,8 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2341,6 +2456,8 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
@@ -2353,6 +2470,8 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get textElement {
@@ -2396,6 +2515,8 @@ class __$$PaymentReconciliationProcessNoteImplCopyWithImpl<$Res>
       $Res Function(_$PaymentReconciliationProcessNoteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2456,11 +2577,13 @@ class _$PaymentReconciliationProcessNoteImpl
                 other.textElement == textElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type, text, textElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PaymentReconciliationProcessNoteImplCopyWith<
@@ -2496,8 +2619,11 @@ abstract class _PaymentReconciliationProcessNote
   @override
   @JsonKey(name: '_text')
   Element? get textElement;
+
+  /// Create a copy of PaymentReconciliationProcessNote
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PaymentReconciliationProcessNoteImplCopyWith<
           _$PaymentReconciliationProcessNoteImpl>
       get copyWith => throw _privateConstructorUsedError;

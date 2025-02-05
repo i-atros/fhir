@@ -35,8 +35,12 @@ mixin _$Meta {
   List<Coding>? get security => throw _privateConstructorUsedError;
   List<Coding>? get tag => throw _privateConstructorUsedError;
 
+  /// Serializes this Meta to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MetaCopyWith<Meta> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -71,6 +75,8 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,6 +135,8 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
     ) as $Val);
   }
 
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get versionIdElement {
@@ -141,6 +149,8 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
     });
   }
 
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get lastUpdatedElement {
@@ -186,6 +196,8 @@ class __$$MetaImplCopyWithImpl<$Res>
   __$$MetaImplCopyWithImpl(_$MetaImpl _value, $Res Function(_$MetaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -317,7 +329,7 @@ class _$MetaImpl extends _Meta {
             const DeepCollectionEquality().equals(other.tag, tag));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -332,7 +344,9 @@ class _$MetaImpl extends _Meta {
       const DeepCollectionEquality().hash(security),
       const DeepCollectionEquality().hash(tag));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MetaImplCopyWith<_$MetaImpl> get copyWith =>
@@ -386,8 +400,11 @@ abstract class _Meta extends Meta {
   List<Coding>? get security;
   @override
   List<Coding>? get tag;
+
+  /// Create a copy of Meta
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MetaImplCopyWith<_$MetaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -410,8 +427,12 @@ mixin _$Reference {
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
 
+  /// Serializes this Reference to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReferenceCopyWith<Reference> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -444,6 +465,8 @@ class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -487,6 +510,8 @@ class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
     ) as $Val);
   }
 
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get referenceElement {
@@ -499,6 +524,8 @@ class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
     });
   }
 
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get displayElement {
@@ -543,6 +570,8 @@ class __$$ReferenceImplCopyWithImpl<$Res>
       _$ReferenceImpl _value, $Res Function(_$ReferenceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -646,7 +675,7 @@ class _$ReferenceImpl extends _Reference {
                 other.displayElement == displayElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -658,7 +687,9 @@ class _$ReferenceImpl extends _Reference {
       display,
       displayElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReferenceImplCopyWith<_$ReferenceImpl> get copyWith =>
@@ -705,8 +736,11 @@ abstract class _Reference extends Reference {
   @override
   @JsonKey(name: '_display')
   Element? get displayElement;
+
+  /// Create a copy of Reference
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReferenceImplCopyWith<_$ReferenceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1183,8 +1217,12 @@ mixin _$ElementDefinition {
   List<ElementDefinitionMapping>? get mapping =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinition to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionCopyWith<ElementDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1775,6 +1813,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3454,6 +3494,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get representationElement {
@@ -3466,6 +3508,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get labelElement {
@@ -3478,6 +3522,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementDefinitionSlicingCopyWith<$Res>? get slicing {
@@ -3490,6 +3536,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get shortElement {
@@ -3502,6 +3550,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get definitionElement {
@@ -3514,6 +3564,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get commentElement {
@@ -3526,6 +3578,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requirementsElement {
@@ -3538,6 +3592,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get aliasElement {
@@ -3550,6 +3606,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minElement {
@@ -3562,6 +3620,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxElement {
@@ -3574,6 +3634,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementDefinitionBaseCopyWith<$Res>? get base {
@@ -3586,6 +3648,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueBooleanElement {
@@ -3598,6 +3662,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueIntegerElement {
@@ -3610,6 +3676,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueDecimalElement {
@@ -3622,6 +3690,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueBase64BinaryElement {
@@ -3636,6 +3706,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueInstantElement {
@@ -3648,6 +3720,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueStringElement {
@@ -3660,6 +3734,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueUriElement {
@@ -3672,6 +3748,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueDateElement {
@@ -3684,6 +3762,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueDateTimeElement {
@@ -3696,6 +3776,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueTimeElement {
@@ -3708,6 +3790,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueCodeElement {
@@ -3720,6 +3804,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueOidElement {
@@ -3732,6 +3818,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueIdElement {
@@ -3744,6 +3832,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueUnsignedIntElement {
@@ -3758,6 +3848,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValuePositiveIntElement {
@@ -3772,6 +3864,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get defaultValueMarkDownElement {
@@ -3784,6 +3878,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get defaultValueAnnotation {
@@ -3796,6 +3892,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get defaultValueAttachment {
@@ -3808,6 +3906,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get defaultValueIdentifier {
@@ -3820,6 +3920,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get defaultValueCodeableConcept {
@@ -3833,6 +3935,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get defaultValueCoding {
@@ -3845,6 +3949,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get defaultValueQuantity {
@@ -3857,6 +3963,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get defaultValueRange {
@@ -3869,6 +3977,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get defaultValuePeriod {
@@ -3881,6 +3991,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get defaultValueRatio {
@@ -3893,6 +4005,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get defaultValueSampledData {
@@ -3905,6 +4019,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get defaultValueSignature {
@@ -3917,6 +4033,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get defaultValueHumanName {
@@ -3929,6 +4047,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get defaultValueAddress {
@@ -3941,6 +4061,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get defaultValueContactPoint {
@@ -3954,6 +4076,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get defaultValueTiming {
@@ -3966,6 +4090,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get defaultValueReference {
@@ -3978,6 +4104,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get defaultValueMeta {
@@ -3990,6 +4118,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get meaningWhenMissingElement {
@@ -4002,6 +4132,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedBooleanElement {
@@ -4014,6 +4146,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedIntegerElement {
@@ -4026,6 +4160,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedDecimalElement {
@@ -4038,6 +4174,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedBase64BinaryElement {
@@ -4050,6 +4188,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedInstantElement {
@@ -4062,6 +4202,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedStringElement {
@@ -4074,6 +4216,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedUriElement {
@@ -4086,6 +4230,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedDateElement {
@@ -4098,6 +4244,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedDateTimeElement {
@@ -4110,6 +4258,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedCodeElement {
@@ -4122,6 +4272,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedOidElement {
@@ -4134,6 +4286,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedIdElement {
@@ -4146,6 +4300,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedUnsignedIntElement {
@@ -4158,6 +4314,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedPositiveIntElement {
@@ -4170,6 +4328,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fixedMarkdownElement {
@@ -4182,6 +4342,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get fixedAnnotation {
@@ -4194,6 +4356,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get fixedAttachment {
@@ -4206,6 +4370,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get fixedIdentifier {
@@ -4218,6 +4384,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get fixedCodeableConcept {
@@ -4231,6 +4399,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get fixedCoding {
@@ -4243,6 +4413,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get fixedQuantity {
@@ -4255,6 +4427,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get fixedRange {
@@ -4267,6 +4441,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get fixedPeriod {
@@ -4279,6 +4455,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get fixedRatio {
@@ -4291,6 +4469,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get fixedSampledData {
@@ -4303,6 +4483,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get fixedSignature {
@@ -4315,6 +4497,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get fixedHumanName {
@@ -4327,6 +4511,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get fixedAddress {
@@ -4339,6 +4525,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get fixedContactPoint {
@@ -4351,6 +4539,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get fixedTiming {
@@ -4363,6 +4553,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get fixedReference {
@@ -4375,6 +4567,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get fixedMeta {
@@ -4387,6 +4581,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternBooleanElement {
@@ -4399,6 +4595,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternIntegerElement {
@@ -4411,6 +4609,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternDecimalElement {
@@ -4423,6 +4623,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternBase64BinaryElement {
@@ -4435,6 +4637,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternInstantElement {
@@ -4447,6 +4651,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternStringElement {
@@ -4459,6 +4665,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternUriElement {
@@ -4471,6 +4679,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternDateElement {
@@ -4483,6 +4693,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternDateTimeElement {
@@ -4495,6 +4707,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternTimeElement {
@@ -4507,6 +4721,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternCodeElement {
@@ -4519,6 +4735,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternOidElement {
@@ -4531,6 +4749,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternIdElement {
@@ -4543,6 +4763,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternUnsignedIntElement {
@@ -4555,6 +4777,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternPositiveIntElement {
@@ -4567,6 +4791,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get patternMarkdownElement {
@@ -4579,6 +4805,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get patternAnnotation {
@@ -4591,6 +4819,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get patternAttachment {
@@ -4603,6 +4833,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get patternIdentifier {
@@ -4615,6 +4847,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get patternCodeableConcept {
@@ -4628,6 +4862,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get patternCoding {
@@ -4640,6 +4876,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get patternQuantity {
@@ -4652,6 +4890,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get patternRange {
@@ -4664,6 +4904,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get patternPeriod {
@@ -4676,6 +4918,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get patternRatio {
@@ -4688,6 +4932,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get patternSampledData {
@@ -4700,6 +4946,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get patternSignature {
@@ -4712,6 +4960,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get patternHumanName {
@@ -4724,6 +4974,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get patternAddress {
@@ -4736,6 +4988,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get patternContactPoint {
@@ -4748,6 +5002,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get patternTiming {
@@ -4760,6 +5016,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patternReference {
@@ -4772,6 +5030,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get patternMeta {
@@ -4784,6 +5044,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleBooleanElement {
@@ -4796,6 +5058,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleIntegerElement {
@@ -4808,6 +5072,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleDecimalElement {
@@ -4820,6 +5086,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleBase64BinaryElement {
@@ -4832,6 +5100,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleInstantElement {
@@ -4844,6 +5114,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleStringElement {
@@ -4856,6 +5128,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleUriElement {
@@ -4868,6 +5142,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleDateElement {
@@ -4880,6 +5156,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleDateTimeElement {
@@ -4892,6 +5170,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleTimeElement {
@@ -4904,6 +5184,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleCodeElement {
@@ -4916,6 +5198,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleOidElement {
@@ -4928,6 +5212,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleIdElement {
@@ -4940,6 +5226,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleUnsignedIntElement {
@@ -4952,6 +5240,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get examplePositiveIntElement {
@@ -4964,6 +5254,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get exampleMarkdownElement {
@@ -4976,6 +5268,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get exampleAnnotation {
@@ -4988,6 +5282,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get exampleAttachment {
@@ -5000,6 +5296,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get exampleIdentifier {
@@ -5012,6 +5310,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get exampleCodeableConcept {
@@ -5025,6 +5325,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get exampleCoding {
@@ -5037,6 +5339,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get exampleQuantity {
@@ -5049,6 +5353,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get exampleRange {
@@ -5061,6 +5367,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get examplePeriod {
@@ -5073,6 +5381,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get exampleRatio {
@@ -5085,6 +5395,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get exampleSampleData {
@@ -5097,6 +5409,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get exampleSignature {
@@ -5109,6 +5423,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get exampleHumanName {
@@ -5121,6 +5437,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get exampleAddress {
@@ -5133,6 +5451,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get exampleContactPoint {
@@ -5145,6 +5465,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get exampleTiming {
@@ -5157,6 +5479,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get exampleReference {
@@ -5169,6 +5493,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get exampleMeta {
@@ -5181,6 +5507,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueBooleanElement {
@@ -5193,6 +5521,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueIntegerElement {
@@ -5205,6 +5535,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueDecimalElement {
@@ -5217,6 +5549,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueBase64BinaryElement {
@@ -5229,6 +5563,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueInstantElement {
@@ -5241,6 +5577,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueStringElement {
@@ -5253,6 +5591,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueUriElement {
@@ -5265,6 +5605,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueDateElement {
@@ -5277,6 +5619,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueDateTimeElement {
@@ -5289,6 +5633,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueTimeElement {
@@ -5301,6 +5647,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueCodeElement {
@@ -5313,6 +5661,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueOidElement {
@@ -5325,6 +5675,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueIdElement {
@@ -5337,6 +5689,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueUnsignedIntElement {
@@ -5349,6 +5703,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValuePositiveIntElement {
@@ -5361,6 +5717,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minValueMarkdownElement {
@@ -5373,6 +5731,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get minValueAnnotation {
@@ -5385,6 +5745,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get minValueAttachment {
@@ -5397,6 +5759,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get minValueIdentifier {
@@ -5409,6 +5773,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get minValueCodeableConcept {
@@ -5422,6 +5788,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get minValueCoding {
@@ -5434,6 +5802,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get minValueQuantity {
@@ -5446,6 +5816,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get minValueRange {
@@ -5458,6 +5830,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get minValuePeriod {
@@ -5470,6 +5844,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get minValueRatio {
@@ -5482,6 +5858,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get minValueSampledData {
@@ -5494,6 +5872,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get minValueSignature {
@@ -5506,6 +5886,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get minValueHumanName {
@@ -5518,6 +5900,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get minValueAddress {
@@ -5530,6 +5914,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get minValueContactPoint {
@@ -5542,6 +5928,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get minValueTiming {
@@ -5554,6 +5942,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get minValueReference {
@@ -5566,6 +5956,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get minValueMeta {
@@ -5578,6 +5970,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueBooleanElement {
@@ -5590,6 +5984,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueIntegerElement {
@@ -5602,6 +5998,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueDecimalElement {
@@ -5614,6 +6012,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueBase64BinaryElement {
@@ -5626,6 +6026,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueInstantElement {
@@ -5638,6 +6040,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueStringElement {
@@ -5650,6 +6054,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueUriElement {
@@ -5662,6 +6068,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueDateElement {
@@ -5674,6 +6082,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueDateTimeElement {
@@ -5686,6 +6096,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueTimeElement {
@@ -5698,6 +6110,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueCodeElement {
@@ -5710,6 +6124,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueOidElement {
@@ -5722,6 +6138,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueIdElement {
@@ -5734,6 +6152,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueUnsignedIntElement {
@@ -5746,6 +6166,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValuePositiveIntElement {
@@ -5758,6 +6180,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxValueMarkdownElement {
@@ -5770,6 +6194,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get maxValueAnnotation {
@@ -5782,6 +6208,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get maxValueAttachment {
@@ -5794,6 +6222,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get maxValueIdentifier {
@@ -5806,6 +6236,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get maxValueCodeableConcept {
@@ -5819,6 +6251,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get maxValueCoding {
@@ -5831,6 +6265,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get maxValueQuantity {
@@ -5843,6 +6279,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get maxValueRange {
@@ -5855,6 +6293,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get maxValuePeriod {
@@ -5867,6 +6307,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get maxValueRatio {
@@ -5879,6 +6321,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get maxValueSampledData {
@@ -5891,6 +6335,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get maxValueSignature {
@@ -5903,6 +6349,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get maxValueHumanName {
@@ -5915,6 +6363,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get maxValueAddress {
@@ -5927,6 +6377,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get maxValueContactPoint {
@@ -5939,6 +6391,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get maxValueTiming {
@@ -5951,6 +6405,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get maxValueReference {
@@ -5963,6 +6419,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get maxValueMeta {
@@ -5975,6 +6433,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxLengthElement {
@@ -5987,6 +6447,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get conditionElement {
@@ -5999,6 +6461,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get mustSupportElement {
@@ -6011,6 +6475,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get isModifierElement {
@@ -6023,6 +6489,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get isSummaryElement {
@@ -6035,6 +6503,8 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     });
   }
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementDefinitionBindingCopyWith<$Res>? get binding {
@@ -6849,6 +7319,8 @@ class __$$ElementDefinitionImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10038,7 +10510,7 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
             const DeepCollectionEquality().equals(other.mapping, mapping));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -10378,7 +10850,9 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
         const DeepCollectionEquality().hash(mapping)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionImplCopyWith<_$ElementDefinitionImpl> get copyWith =>
@@ -11546,8 +12020,11 @@ abstract class _ElementDefinition extends ElementDefinition {
   ElementDefinitionBinding? get binding;
   @override
   List<ElementDefinitionMapping>? get mapping;
+
+  /// Create a copy of ElementDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionImplCopyWith<_$ElementDefinitionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11569,8 +12046,12 @@ mixin _$Narrative {
   Element? get statusElement => throw _privateConstructorUsedError;
   String get div => throw _privateConstructorUsedError;
 
+  /// Serializes this Narrative to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Narrative
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $NarrativeCopyWith<Narrative> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11602,6 +12083,8 @@ class _$NarrativeCopyWithImpl<$Res, $Val extends Narrative>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Narrative
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11640,6 +12123,8 @@ class _$NarrativeCopyWithImpl<$Res, $Val extends Narrative>
     ) as $Val);
   }
 
+  /// Create a copy of Narrative
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -11682,6 +12167,8 @@ class __$$NarrativeImplCopyWithImpl<$Res>
       _$NarrativeImpl _value, $Res Function(_$NarrativeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Narrative
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11774,7 +12261,7 @@ class _$NarrativeImpl extends _Narrative {
             (identical(other.div, div) || other.div == div));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -11785,7 +12272,9 @@ class _$NarrativeImpl extends _Narrative {
       statusElement,
       div);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Narrative
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$NarrativeImplCopyWith<_$NarrativeImpl> get copyWith =>
@@ -11829,8 +12318,11 @@ abstract class _Narrative extends Narrative {
   Element? get statusElement;
   @override
   String get div;
+
+  /// Create a copy of Narrative
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$NarrativeImplCopyWith<_$NarrativeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11857,8 +12349,12 @@ mixin _$ElementDefinitionSlicing {
   @JsonKey(name: '_rules')
   Element? get rulesElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinitionSlicing to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionSlicingCopyWith<ElementDefinitionSlicing> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -11896,6 +12392,8 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11949,6 +12447,8 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -11961,6 +12461,8 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get orderedElement {
@@ -11973,6 +12475,8 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get rulesElement {
@@ -12024,6 +12528,8 @@ class __$$ElementDefinitionSlicingImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionSlicingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12147,7 +12653,7 @@ class _$ElementDefinitionSlicingImpl extends _ElementDefinitionSlicing {
                 other.rulesElement == rulesElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12161,7 +12667,9 @@ class _$ElementDefinitionSlicingImpl extends _ElementDefinitionSlicing {
       rules,
       rulesElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionSlicingImplCopyWith<_$ElementDefinitionSlicingImpl>
@@ -12217,8 +12725,11 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   @override
   @JsonKey(name: '_rules')
   Element? get rulesElement;
+
+  /// Create a copy of ElementDefinitionSlicing
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionSlicingImplCopyWith<_$ElementDefinitionSlicingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -12243,8 +12754,12 @@ mixin _$ElementDefinitionBase {
   @JsonKey(name: '_max')
   Element? get maxElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinitionBase to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionBaseCopyWith<ElementDefinitionBase> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12281,6 +12796,8 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12329,6 +12846,8 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
@@ -12341,6 +12860,8 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minElement {
@@ -12353,6 +12874,8 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxElement {
@@ -12402,6 +12925,8 @@ class __$$ElementDefinitionBaseImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionBaseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12513,7 +13038,7 @@ class _$ElementDefinitionBaseImpl extends _ElementDefinitionBase {
                 other.maxElement == maxElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12526,7 +13051,9 @@ class _$ElementDefinitionBaseImpl extends _ElementDefinitionBase {
       max,
       maxElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionBaseImplCopyWith<_$ElementDefinitionBaseImpl>
@@ -12577,8 +13104,11 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   @override
   @JsonKey(name: '_max')
   Element? get maxElement;
+
+  /// Create a copy of ElementDefinitionBase
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionBaseImplCopyWith<_$ElementDefinitionBaseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -12603,8 +13133,12 @@ mixin _$ElementDefinitionType {
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinitionType to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionTypeCopyWith<ElementDefinitionType> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12640,6 +13174,8 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12688,6 +13224,8 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TypeCodeExtensionCopyWith<$Res>? get codeExtension {
@@ -12700,6 +13238,8 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get aggregationElement {
@@ -12747,6 +13287,8 @@ class __$$ElementDefinitionTypeImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12859,7 +13401,7 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
                 .equals(other.fhirElement, fhirElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -12872,7 +13414,9 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
       aggregationElement,
       const DeepCollectionEquality().hash(fhirElement));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionTypeImplCopyWith<_$ElementDefinitionTypeImpl>
@@ -12923,8 +13467,11 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   @override
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirElement;
+
+  /// Create a copy of ElementDefinitionType
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionTypeImplCopyWith<_$ElementDefinitionTypeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -12938,8 +13485,12 @@ mixin _$TypeCodeExtension {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
+  /// Serializes this TypeCodeExtension to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TypeCodeExtension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TypeCodeExtensionCopyWith<TypeCodeExtension> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -12963,6 +13514,8 @@ class _$TypeCodeExtensionCopyWithImpl<$Res, $Val extends TypeCodeExtension>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TypeCodeExtension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12996,6 +13549,8 @@ class __$$TypeCodeExtensionImplCopyWithImpl<$Res>
       $Res Function(_$TypeCodeExtensionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TypeCodeExtension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13037,12 +13592,14 @@ class _$TypeCodeExtensionImpl extends _TypeCodeExtension {
                 .equals(other.extension_, extension_));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(extension_));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TypeCodeExtension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TypeCodeExtensionImplCopyWith<_$TypeCodeExtensionImpl> get copyWith =>
@@ -13069,8 +13626,11 @@ abstract class _TypeCodeExtension extends TypeCodeExtension {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
+
+  /// Create a copy of TypeCodeExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TypeCodeExtensionImplCopyWith<_$TypeCodeExtensionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -13102,8 +13662,12 @@ mixin _$ElementDefinitionConstraint {
   @JsonKey(name: '_xpath')
   Element? get xpathElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinitionConstraint to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionConstraintCopyWith<ElementDefinitionConstraint>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13149,6 +13713,8 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13217,6 +13783,8 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get keyElement {
@@ -13229,6 +13797,8 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requirementsElement {
@@ -13241,6 +13811,8 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get severityElement {
@@ -13253,6 +13825,8 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get humanElement {
@@ -13265,6 +13839,8 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get xpathElement {
@@ -13324,6 +13900,8 @@ class __$$ElementDefinitionConstraintImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionConstraintImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13480,7 +14058,7 @@ class _$ElementDefinitionConstraintImpl extends _ElementDefinitionConstraint {
                 other.xpathElement == xpathElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13497,7 +14075,9 @@ class _$ElementDefinitionConstraintImpl extends _ElementDefinitionConstraint {
       xpath,
       xpathElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionConstraintImplCopyWith<_$ElementDefinitionConstraintImpl>
@@ -13565,8 +14145,11 @@ abstract class _ElementDefinitionConstraint
   @override
   @JsonKey(name: '_xpath')
   Element? get xpathElement;
+
+  /// Create a copy of ElementDefinitionConstraint
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionConstraintImplCopyWith<_$ElementDefinitionConstraintImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13594,8 +14177,12 @@ mixin _$ElementDefinitionBinding {
   FhirUri? get valueSetUri => throw _privateConstructorUsedError;
   Reference? get valueSetReference => throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinitionBinding to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionBindingCopyWith<ElementDefinitionBinding> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -13635,6 +14222,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13683,6 +14272,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get strengthElement {
@@ -13695,6 +14286,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -13707,6 +14300,8 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueSetReference {
@@ -13760,6 +14355,8 @@ class __$$ElementDefinitionBindingImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionBindingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13879,7 +14476,7 @@ class _$ElementDefinitionBindingImpl extends _ElementDefinitionBinding {
                 other.valueSetReference == valueSetReference));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -13892,7 +14489,9 @@ class _$ElementDefinitionBindingImpl extends _ElementDefinitionBinding {
       valueSetUri,
       valueSetReference);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionBindingImplCopyWith<_$ElementDefinitionBindingImpl>
@@ -13947,8 +14546,11 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   FhirUri? get valueSetUri;
   @override
   Reference? get valueSetReference;
+
+  /// Create a copy of ElementDefinitionBinding
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionBindingImplCopyWith<_$ElementDefinitionBindingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13975,8 +14577,12 @@ mixin _$ElementDefinitionMapping {
   @JsonKey(name: '_map')
   Element? get mapElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ElementDefinitionMapping to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementDefinitionMappingCopyWith<ElementDefinitionMapping> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14014,6 +14620,8 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14067,6 +14675,8 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get identityElement {
@@ -14079,6 +14689,8 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -14091,6 +14703,8 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get mapElement {
@@ -14142,6 +14756,8 @@ class __$$ElementDefinitionMappingImplCopyWithImpl<$Res>
       $Res Function(_$ElementDefinitionMappingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14266,7 +14882,7 @@ class _$ElementDefinitionMappingImpl extends _ElementDefinitionMapping {
                 other.mapElement == mapElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -14280,7 +14896,9 @@ class _$ElementDefinitionMappingImpl extends _ElementDefinitionMapping {
       map,
       mapElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementDefinitionMappingImplCopyWith<_$ElementDefinitionMappingImpl>
@@ -14335,8 +14953,11 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @override
   @JsonKey(name: '_map')
   Element? get mapElement;
+
+  /// Create a copy of ElementDefinitionMapping
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementDefinitionMappingImplCopyWith<_$ElementDefinitionMappingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

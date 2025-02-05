@@ -123,8 +123,12 @@ mixin _$FhirExtension {
   Dosage? get valueDosage => throw _privateConstructorUsedError;
   Meta? get valueMeta => throw _privateConstructorUsedError;
 
+  /// Serializes this FhirExtension to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FhirExtensionCopyWith<FhirExtension> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -276,6 +280,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -659,6 +665,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     ) as $Val);
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
@@ -671,6 +679,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueBase64BinaryElement {
@@ -683,6 +693,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueBooleanElement {
@@ -695,6 +707,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueCanonicalElement {
@@ -707,6 +721,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueCodeElement {
@@ -719,6 +735,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueDateElement {
@@ -731,6 +749,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueDateTimeElement {
@@ -743,6 +763,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueDecimalElement {
@@ -755,6 +777,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueIdElement {
@@ -767,6 +791,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueInstantElement {
@@ -779,6 +805,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueIntegerElement {
@@ -791,6 +819,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueInteger64Element {
@@ -803,6 +833,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueMarkdownElement {
@@ -815,6 +847,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueOidElement {
@@ -827,6 +861,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valuePositiveIntElement {
@@ -839,6 +875,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueStringElement {
@@ -851,6 +889,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueTimeElement {
@@ -863,6 +903,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueUnsignedIntElement {
@@ -875,6 +917,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueUriElement {
@@ -887,6 +931,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueUrlElement {
@@ -899,6 +945,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueUuidElement {
@@ -911,6 +959,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get valueAddress {
@@ -923,6 +973,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AgeCopyWith<$Res>? get valueAge {
@@ -935,6 +987,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AnnotationCopyWith<$Res>? get valueAnnotation {
@@ -947,6 +1001,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get valueAttachment {
@@ -959,6 +1015,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
@@ -972,6 +1030,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get valueCoding {
@@ -984,6 +1044,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactPointCopyWith<$Res>? get valueContactPoint {
@@ -996,6 +1058,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CountCopyWith<$Res>? get valueCount {
@@ -1008,6 +1072,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DistanceCopyWith<$Res>? get valueDistance {
@@ -1020,6 +1086,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FhirDurationCopyWith<$Res>? get valueDuration {
@@ -1032,6 +1100,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $HumanNameCopyWith<$Res>? get valueHumanName {
@@ -1044,6 +1114,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get valueIdentifier {
@@ -1056,6 +1128,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MoneyCopyWith<$Res>? get valueMoney {
@@ -1068,6 +1142,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get valuePeriod {
@@ -1080,6 +1156,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get valueQuantity {
@@ -1092,6 +1170,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get valueRange {
@@ -1104,6 +1184,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get valueRatio {
@@ -1116,6 +1198,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueReference {
@@ -1128,6 +1212,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SampledDataCopyWith<$Res>? get valueSampledData {
@@ -1140,6 +1226,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SignatureCopyWith<$Res>? get valueSignature {
@@ -1152,6 +1240,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get valueTiming {
@@ -1164,6 +1254,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactDetailCopyWith<$Res>? get valueContactDetail {
@@ -1176,6 +1268,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContributorCopyWith<$Res>? get valueContributor {
@@ -1188,6 +1282,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DataRequirementCopyWith<$Res>? get valueDataRequirement {
@@ -1201,6 +1297,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ExpressionCopyWith<$Res>? get valueExpression {
@@ -1213,6 +1311,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition {
@@ -1226,6 +1326,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact {
@@ -1239,6 +1341,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition {
@@ -1252,6 +1356,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UsageContextCopyWith<$Res>? get valueUsageContext {
@@ -1264,6 +1370,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DosageCopyWith<$Res>? get valueDosage {
@@ -1276,6 +1384,8 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     });
   }
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get valueMeta {
@@ -1488,6 +1598,8 @@ class __$$FhirExtensionImplCopyWithImpl<$Res>
       _$FhirExtensionImpl _value, $Res Function(_$FhirExtensionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2248,7 +2360,7 @@ class _$FhirExtensionImpl extends _FhirExtension {
             (identical(other.valueMeta, valueMeta) || other.valueMeta == valueMeta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2329,7 +2441,9 @@ class _$FhirExtensionImpl extends _FhirExtension {
         valueMeta
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FhirExtensionImplCopyWith<_$FhirExtensionImpl> get copyWith =>
@@ -2600,8 +2714,11 @@ abstract class _FhirExtension extends FhirExtension {
   Dosage? get valueDosage;
   @override
   Meta? get valueMeta;
+
+  /// Create a copy of FhirExtension
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FhirExtensionImplCopyWith<_$FhirExtensionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

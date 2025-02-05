@@ -59,8 +59,12 @@ mixin _$Location {
   Reference? get managingOrganization => throw _privateConstructorUsedError;
   Reference? get partOf => throw _privateConstructorUsedError;
 
+  /// Serializes this Location to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocationCopyWith<Location> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -126,6 +130,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -269,6 +275,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     ) as $Val);
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -281,6 +289,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -293,6 +303,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -305,6 +317,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -317,6 +331,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -329,6 +345,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -341,6 +359,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -353,6 +373,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
@@ -365,6 +387,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
@@ -377,6 +401,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AddressCopyWith<$Res>? get address {
@@ -389,6 +415,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get physicalType {
@@ -401,6 +429,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocationPositionCopyWith<$Res>? get position {
@@ -413,6 +443,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get managingOrganization {
@@ -425,6 +457,8 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     });
   }
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get partOf {
@@ -514,6 +548,8 @@ class __$$LocationImplCopyWithImpl<$Res>
       _$LocationImpl _value, $Res Function(_$LocationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -815,7 +851,7 @@ class _$LocationImpl extends _Location {
             (identical(other.partOf, partOf) || other.partOf == partOf));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -848,7 +884,9 @@ class _$LocationImpl extends _Location {
         partOf
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationImplCopyWith<_$LocationImpl> get copyWith =>
@@ -962,8 +1000,11 @@ abstract class _Location extends Location {
   Reference? get managingOrganization;
   @override
   Reference? get partOf;
+
+  /// Create a copy of Location
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationImplCopyWith<_$LocationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -989,8 +1030,12 @@ mixin _$LocationPosition {
   @JsonKey(name: '_altitude')
   Element? get altitudeElement => throw _privateConstructorUsedError;
 
+  /// Serializes this LocationPosition to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocationPositionCopyWith<LocationPosition> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1027,6 +1072,8 @@ class _$LocationPositionCopyWithImpl<$Res, $Val extends LocationPosition>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1080,6 +1127,8 @@ class _$LocationPositionCopyWithImpl<$Res, $Val extends LocationPosition>
     ) as $Val);
   }
 
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get longitudeElement {
@@ -1092,6 +1141,8 @@ class _$LocationPositionCopyWithImpl<$Res, $Val extends LocationPosition>
     });
   }
 
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get latitudeElement {
@@ -1104,6 +1155,8 @@ class _$LocationPositionCopyWithImpl<$Res, $Val extends LocationPosition>
     });
   }
 
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get altitudeElement {
@@ -1152,6 +1205,8 @@ class __$$LocationPositionImplCopyWithImpl<$Res>
       $Res Function(_$LocationPositionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1276,7 +1331,7 @@ class _$LocationPositionImpl extends _LocationPosition {
                 other.altitudeElement == altitudeElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1290,7 +1345,9 @@ class _$LocationPositionImpl extends _LocationPosition {
       altitude,
       altitudeElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocationPositionImplCopyWith<_$LocationPositionImpl> get copyWith =>
@@ -1344,8 +1401,11 @@ abstract class _LocationPosition extends LocationPosition {
   @override
   @JsonKey(name: '_altitude')
   Element? get altitudeElement;
+
+  /// Create a copy of LocationPosition
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocationPositionImplCopyWith<_$LocationPositionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1382,8 +1442,12 @@ mixin _$Substance {
   List<SubstanceIngredient>? get ingredient =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this Substance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SubstanceCopyWith<Substance> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1432,6 +1496,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1530,6 +1596,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
     ) as $Val);
   }
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -1542,6 +1610,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
     });
   }
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -1554,6 +1624,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
     });
   }
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -1566,6 +1638,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
     });
   }
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -1578,6 +1652,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
     });
   }
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res> get code {
@@ -1586,6 +1662,8 @@ class _$SubstanceCopyWithImpl<$Res, $Val extends Substance>
     });
   }
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -1650,6 +1728,8 @@ class __$$SubstanceImplCopyWithImpl<$Res>
       _$SubstanceImpl _value, $Res Function(_$SubstanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1860,7 +1940,7 @@ class _$SubstanceImpl extends _Substance {
                 .equals(other.ingredient, ingredient));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1883,7 +1963,9 @@ class _$SubstanceImpl extends _Substance {
       const DeepCollectionEquality().hash(instance),
       const DeepCollectionEquality().hash(ingredient));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubstanceImplCopyWith<_$SubstanceImpl> get copyWith =>
@@ -1964,8 +2046,11 @@ abstract class _Substance extends Substance {
   List<SubstanceInstance>? get instance;
   @override
   List<SubstanceIngredient>? get ingredient;
+
+  /// Create a copy of Substance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubstanceImplCopyWith<_$SubstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1987,8 +2072,12 @@ mixin _$SubstanceInstance {
   Element? get expiryElement => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
 
+  /// Serializes this SubstanceInstance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SubstanceInstanceCopyWith<SubstanceInstance> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2023,6 +2112,8 @@ class _$SubstanceInstanceCopyWithImpl<$Res, $Val extends SubstanceInstance>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2066,6 +2157,8 @@ class _$SubstanceInstanceCopyWithImpl<$Res, $Val extends SubstanceInstance>
     ) as $Val);
   }
 
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -2078,6 +2171,8 @@ class _$SubstanceInstanceCopyWithImpl<$Res, $Val extends SubstanceInstance>
     });
   }
 
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get expiryElement {
@@ -2090,6 +2185,8 @@ class _$SubstanceInstanceCopyWithImpl<$Res, $Val extends SubstanceInstance>
     });
   }
 
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get quantity {
@@ -2136,6 +2233,8 @@ class __$$SubstanceInstanceImplCopyWithImpl<$Res>
       $Res Function(_$SubstanceInstanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2237,7 +2336,7 @@ class _$SubstanceInstanceImpl extends _SubstanceInstance {
                 other.quantity == quantity));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2249,7 +2348,9 @@ class _$SubstanceInstanceImpl extends _SubstanceInstance {
       expiryElement,
       quantity);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubstanceInstanceImplCopyWith<_$SubstanceInstanceImpl> get copyWith =>
@@ -2294,8 +2395,11 @@ abstract class _SubstanceInstance extends SubstanceInstance {
   Element? get expiryElement;
   @override
   Quantity? get quantity;
+
+  /// Create a copy of SubstanceInstance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubstanceInstanceImplCopyWith<_$SubstanceInstanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2314,8 +2418,12 @@ mixin _$SubstanceIngredient {
   Ratio? get quantity => throw _privateConstructorUsedError;
   Reference get substance => throw _privateConstructorUsedError;
 
+  /// Serializes this SubstanceIngredient to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SubstanceIngredientCopyWith<SubstanceIngredient> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2347,6 +2455,8 @@ class _$SubstanceIngredientCopyWithImpl<$Res, $Val extends SubstanceIngredient>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2380,6 +2490,8 @@ class _$SubstanceIngredientCopyWithImpl<$Res, $Val extends SubstanceIngredient>
     ) as $Val);
   }
 
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RatioCopyWith<$Res>? get quantity {
@@ -2392,6 +2504,8 @@ class _$SubstanceIngredientCopyWithImpl<$Res, $Val extends SubstanceIngredient>
     });
   }
 
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get substance {
@@ -2430,6 +2544,8 @@ class __$$SubstanceIngredientImplCopyWithImpl<$Res>
       $Res Function(_$SubstanceIngredientImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2511,7 +2627,7 @@ class _$SubstanceIngredientImpl extends _SubstanceIngredient {
                 other.substance == substance));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2521,7 +2637,9 @@ class _$SubstanceIngredientImpl extends _SubstanceIngredient {
       quantity,
       substance);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SubstanceIngredientImplCopyWith<_$SubstanceIngredientImpl> get copyWith =>
@@ -2559,8 +2677,11 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
   Ratio? get quantity;
   @override
   Reference get substance;
+
+  /// Create a copy of SubstanceIngredient
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SubstanceIngredientImplCopyWith<_$SubstanceIngredientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2605,8 +2726,12 @@ mixin _$Person {
   Element? get activeElement => throw _privateConstructorUsedError;
   List<PersonLink>? get link => throw _privateConstructorUsedError;
 
+  /// Serializes this Person to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonCopyWith<Person> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2663,6 +2788,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2791,6 +2918,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     ) as $Val);
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -2803,6 +2932,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -2815,6 +2946,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -2827,6 +2960,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -2839,6 +2974,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get genderElement {
@@ -2851,6 +2988,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get birthDateElement {
@@ -2863,6 +3002,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get photo {
@@ -2875,6 +3016,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get managingOrganization {
@@ -2887,6 +3030,8 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     });
   }
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get activeElement {
@@ -2962,6 +3107,8 @@ class __$$PersonImplCopyWithImpl<$Res>
       _$PersonImpl _value, $Res Function(_$PersonImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3231,7 +3378,7 @@ class _$PersonImpl extends _Person {
             const DeepCollectionEquality().equals(other.link, link));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -3261,7 +3408,9 @@ class _$PersonImpl extends _Person {
         const DeepCollectionEquality().hash(link)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonImplCopyWith<_$PersonImpl> get copyWith =>
@@ -3363,8 +3512,11 @@ abstract class _Person extends Person {
   Element? get activeElement;
   @override
   List<PersonLink>? get link;
+
+  /// Create a copy of Person
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonImplCopyWith<_$PersonImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3386,8 +3538,12 @@ mixin _$PersonLink {
   @JsonKey(name: '_assurance')
   Element? get assuranceElement => throw _privateConstructorUsedError;
 
+  /// Serializes this PersonLink to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PersonLinkCopyWith<PersonLink> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3421,6 +3577,8 @@ class _$PersonLinkCopyWithImpl<$Res, $Val extends PersonLink>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3459,6 +3617,8 @@ class _$PersonLinkCopyWithImpl<$Res, $Val extends PersonLink>
     ) as $Val);
   }
 
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get target {
@@ -3467,6 +3627,8 @@ class _$PersonLinkCopyWithImpl<$Res, $Val extends PersonLink>
     });
   }
 
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get assuranceElement {
@@ -3511,6 +3673,8 @@ class __$$PersonLinkImplCopyWithImpl<$Res>
       _$PersonLinkImpl _value, $Res Function(_$PersonLinkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3603,7 +3767,7 @@ class _$PersonLinkImpl extends _PersonLink {
                 other.assuranceElement == assuranceElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3614,7 +3778,9 @@ class _$PersonLinkImpl extends _PersonLink {
       assurance,
       assuranceElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PersonLinkImplCopyWith<_$PersonLinkImpl> get copyWith =>
@@ -3658,8 +3824,11 @@ abstract class _PersonLink extends PersonLink {
   @override
   @JsonKey(name: '_assurance')
   Element? get assuranceElement;
+
+  /// Create a copy of PersonLink
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PersonLinkImplCopyWith<_$PersonLinkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3709,8 +3878,12 @@ mixin _$Contract {
   List<ContractLegal>? get legal => throw _privateConstructorUsedError;
   List<ContractRule>? get rule => throw _privateConstructorUsedError;
 
+  /// Serializes this Contract to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractCopyWith<Contract> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3776,6 +3949,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3939,6 +4114,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     ) as $Val);
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -3951,6 +4128,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -3963,6 +4142,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -3975,6 +4156,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -3987,6 +4170,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -3999,6 +4184,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get issuedElement {
@@ -4011,6 +4198,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get applies {
@@ -4023,6 +4212,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
@@ -4035,6 +4226,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get bindingAttachment {
@@ -4047,6 +4240,8 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
     });
   }
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get bindingReference {
@@ -4132,6 +4327,8 @@ class __$$ContractImplCopyWithImpl<$Res>
       _$ContractImpl _value, $Res Function(_$ContractImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4461,7 +4658,7 @@ class _$ContractImpl extends _Contract {
             const DeepCollectionEquality().equals(other.rule, rule));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4498,7 +4695,9 @@ class _$ContractImpl extends _Contract {
         const DeepCollectionEquality().hash(rule)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractImplCopyWith<_$ContractImpl> get copyWith =>
@@ -4618,8 +4817,11 @@ abstract class _Contract extends Contract {
   List<ContractLegal>? get legal;
   @override
   List<ContractRule>? get rule;
+
+  /// Create a copy of Contract
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractImplCopyWith<_$ContractImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4638,8 +4840,12 @@ mixin _$ContractActor {
   Reference get entity => throw _privateConstructorUsedError;
   List<CodeableConcept>? get role => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractActor to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractActor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractActorCopyWith<ContractActor> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4670,6 +4876,8 @@ class _$ContractActorCopyWithImpl<$Res, $Val extends ContractActor>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractActor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4703,6 +4911,8 @@ class _$ContractActorCopyWithImpl<$Res, $Val extends ContractActor>
     ) as $Val);
   }
 
+  /// Create a copy of ContractActor
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get entity {
@@ -4739,6 +4949,8 @@ class __$$ContractActorImplCopyWithImpl<$Res>
       _$ContractActorImpl _value, $Res Function(_$ContractActorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractActor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4818,7 +5030,7 @@ class _$ContractActorImpl extends _ContractActor {
             const DeepCollectionEquality().equals(other.role, role));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4828,7 +5040,9 @@ class _$ContractActorImpl extends _ContractActor {
       entity,
       const DeepCollectionEquality().hash(role));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractActor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractActorImplCopyWith<_$ContractActorImpl> get copyWith =>
@@ -4865,8 +5079,11 @@ abstract class _ContractActor extends ContractActor {
   Reference get entity;
   @override
   List<CodeableConcept>? get role;
+
+  /// Create a copy of ContractActor
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractActorImplCopyWith<_$ContractActorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4901,8 +5118,12 @@ mixin _$ContractValuedItem {
   List<Element>? get securityLabelNumberElement =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ContractValuedItem to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractValuedItemCopyWith<ContractValuedItem> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4952,6 +5173,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5040,6 +5263,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     ) as $Val);
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get entityCodeableConcept {
@@ -5053,6 +5278,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get entityReference {
@@ -5065,6 +5292,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -5077,6 +5306,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get effectiveTimeElement {
@@ -5089,6 +5320,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get quantity {
@@ -5101,6 +5334,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get unitPrice {
@@ -5113,6 +5348,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get factorElement {
@@ -5125,6 +5362,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pointsElement {
@@ -5137,6 +5376,8 @@ class _$ContractValuedItemCopyWithImpl<$Res, $Val extends ContractValuedItem>
     });
   }
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get net {
@@ -5204,6 +5445,8 @@ class __$$ContractValuedItemImplCopyWithImpl<$Res>
       $Res Function(_$ContractValuedItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5395,7 +5638,7 @@ class _$ContractValuedItemImpl extends _ContractValuedItem {
                 other.securityLabelNumberElement, securityLabelNumberElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5416,7 +5659,9 @@ class _$ContractValuedItemImpl extends _ContractValuedItem {
       net,
       const DeepCollectionEquality().hash(securityLabelNumberElement));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractValuedItemImplCopyWith<_$ContractValuedItemImpl> get copyWith =>
@@ -5491,8 +5736,11 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   Quantity? get net;
   @override
   List<Element>? get securityLabelNumberElement;
+
+  /// Create a copy of ContractValuedItem
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractValuedItemImplCopyWith<_$ContractValuedItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5512,8 +5760,12 @@ mixin _$ContractSigner {
   Reference get party => throw _privateConstructorUsedError;
   String get signature => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractSigner to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractSignerCopyWith<ContractSigner> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5546,6 +5798,8 @@ class _$ContractSignerCopyWithImpl<$Res, $Val extends ContractSigner>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5584,6 +5838,8 @@ class _$ContractSignerCopyWithImpl<$Res, $Val extends ContractSigner>
     ) as $Val);
   }
 
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get type {
@@ -5592,6 +5848,8 @@ class _$ContractSignerCopyWithImpl<$Res, $Val extends ContractSigner>
     });
   }
 
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get party {
@@ -5631,6 +5889,8 @@ class __$$ContractSignerImplCopyWithImpl<$Res>
       _$ContractSignerImpl _value, $Res Function(_$ContractSignerImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5720,7 +5980,7 @@ class _$ContractSignerImpl extends _ContractSigner {
                 other.signature == signature));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5731,7 +5991,9 @@ class _$ContractSignerImpl extends _ContractSigner {
       party,
       signature);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractSignerImplCopyWith<_$ContractSignerImpl> get copyWith =>
@@ -5772,8 +6034,11 @@ abstract class _ContractSigner extends ContractSigner {
   Reference get party;
   @override
   String get signature;
+
+  /// Create a copy of ContractSigner
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractSignerImplCopyWith<_$ContractSignerImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5807,8 +6072,12 @@ mixin _$ContractTerm {
       throw _privateConstructorUsedError;
   List<ContractTerm>? get group => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractTerm to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractTermCopyWith<ContractTerm> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5857,6 +6126,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5950,6 +6221,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     ) as $Val);
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -5962,6 +6235,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     });
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get issuedElement {
@@ -5974,6 +6249,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     });
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get applies {
@@ -5986,6 +6263,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     });
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get type {
@@ -5998,6 +6277,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     });
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get subType {
@@ -6010,6 +6291,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     });
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get subject {
@@ -6022,6 +6305,8 @@ class _$ContractTermCopyWithImpl<$Res, $Val extends ContractTerm>
     });
   }
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get textElement {
@@ -6086,6 +6371,8 @@ class __$$ContractTermImplCopyWithImpl<$Res>
       _$ContractTermImpl _value, $Res Function(_$ContractTermImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6280,7 +6567,7 @@ class _$ContractTermImpl extends _ContractTerm {
             const DeepCollectionEquality().equals(other.group, group));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6302,7 +6589,9 @@ class _$ContractTermImpl extends _ContractTerm {
       const DeepCollectionEquality().hash(valuedItem),
       const DeepCollectionEquality().hash(group));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractTermImplCopyWith<_$ContractTermImpl> get copyWith =>
@@ -6377,8 +6666,11 @@ abstract class _ContractTerm extends ContractTerm {
   List<ContractValuedItem>? get valuedItem;
   @override
   List<ContractTerm>? get group;
+
+  /// Create a copy of ContractTerm
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractTermImplCopyWith<_$ContractTermImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6397,8 +6689,12 @@ mixin _$ContractTermActor {
   Reference get entity => throw _privateConstructorUsedError;
   List<CodeableConcept>? get role => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractTermActor to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractTermActor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractTermActorCopyWith<ContractTermActor> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6429,6 +6725,8 @@ class _$ContractTermActorCopyWithImpl<$Res, $Val extends ContractTermActor>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractTermActor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6462,6 +6760,8 @@ class _$ContractTermActorCopyWithImpl<$Res, $Val extends ContractTermActor>
     ) as $Val);
   }
 
+  /// Create a copy of ContractTermActor
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get entity {
@@ -6498,6 +6798,8 @@ class __$$ContractTermActorImplCopyWithImpl<$Res>
       $Res Function(_$ContractTermActorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractTermActor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6577,7 +6879,7 @@ class _$ContractTermActorImpl extends _ContractTermActor {
             const DeepCollectionEquality().equals(other.role, role));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6587,7 +6889,9 @@ class _$ContractTermActorImpl extends _ContractTermActor {
       entity,
       const DeepCollectionEquality().hash(role));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractTermActor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractTermActorImplCopyWith<_$ContractTermActorImpl> get copyWith =>
@@ -6625,8 +6929,11 @@ abstract class _ContractTermActor extends ContractTermActor {
   Reference get entity;
   @override
   List<CodeableConcept>? get role;
+
+  /// Create a copy of ContractTermActor
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractTermActorImplCopyWith<_$ContractTermActorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6645,8 +6952,12 @@ mixin _$ContractFriendly {
   Attachment? get contentAttachment => throw _privateConstructorUsedError;
   Reference? get contactReference => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractFriendly to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractFriendlyCopyWith<ContractFriendly> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6678,6 +6989,8 @@ class _$ContractFriendlyCopyWithImpl<$Res, $Val extends ContractFriendly>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6711,6 +7024,8 @@ class _$ContractFriendlyCopyWithImpl<$Res, $Val extends ContractFriendly>
     ) as $Val);
   }
 
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get contentAttachment {
@@ -6723,6 +7038,8 @@ class _$ContractFriendlyCopyWithImpl<$Res, $Val extends ContractFriendly>
     });
   }
 
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get contactReference {
@@ -6765,6 +7082,8 @@ class __$$ContractFriendlyImplCopyWithImpl<$Res>
       $Res Function(_$ContractFriendlyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6846,7 +7165,7 @@ class _$ContractFriendlyImpl extends _ContractFriendly {
                 other.contactReference == contactReference));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6856,7 +7175,9 @@ class _$ContractFriendlyImpl extends _ContractFriendly {
       contentAttachment,
       contactReference);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractFriendlyImplCopyWith<_$ContractFriendlyImpl> get copyWith =>
@@ -6894,8 +7215,11 @@ abstract class _ContractFriendly extends ContractFriendly {
   Attachment? get contentAttachment;
   @override
   Reference? get contactReference;
+
+  /// Create a copy of ContractFriendly
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractFriendlyImplCopyWith<_$ContractFriendlyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6914,8 +7238,12 @@ mixin _$ContractLegal {
   Attachment? get contentAttachment => throw _privateConstructorUsedError;
   Reference? get content => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractLegal to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractLegalCopyWith<ContractLegal> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -6947,6 +7275,8 @@ class _$ContractLegalCopyWithImpl<$Res, $Val extends ContractLegal>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6980,6 +7310,8 @@ class _$ContractLegalCopyWithImpl<$Res, $Val extends ContractLegal>
     ) as $Val);
   }
 
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get contentAttachment {
@@ -6992,6 +7324,8 @@ class _$ContractLegalCopyWithImpl<$Res, $Val extends ContractLegal>
     });
   }
 
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get content {
@@ -7034,6 +7368,8 @@ class __$$ContractLegalImplCopyWithImpl<$Res>
       _$ContractLegalImpl _value, $Res Function(_$ContractLegalImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7114,7 +7450,7 @@ class _$ContractLegalImpl extends _ContractLegal {
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7124,7 +7460,9 @@ class _$ContractLegalImpl extends _ContractLegal {
       contentAttachment,
       content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractLegalImplCopyWith<_$ContractLegalImpl> get copyWith =>
@@ -7161,8 +7499,11 @@ abstract class _ContractLegal extends ContractLegal {
   Attachment? get contentAttachment;
   @override
   Reference? get content;
+
+  /// Create a copy of ContractLegal
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractLegalImplCopyWith<_$ContractLegalImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7181,8 +7522,12 @@ mixin _$ContractRule {
   Attachment? get contentAttachment => throw _privateConstructorUsedError;
   Reference? get contentReference => throw _privateConstructorUsedError;
 
+  /// Serializes this ContractRule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContractRuleCopyWith<ContractRule> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7214,6 +7559,8 @@ class _$ContractRuleCopyWithImpl<$Res, $Val extends ContractRule>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7247,6 +7594,8 @@ class _$ContractRuleCopyWithImpl<$Res, $Val extends ContractRule>
     ) as $Val);
   }
 
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get contentAttachment {
@@ -7259,6 +7608,8 @@ class _$ContractRuleCopyWithImpl<$Res, $Val extends ContractRule>
     });
   }
 
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get contentReference {
@@ -7301,6 +7652,8 @@ class __$$ContractRuleImplCopyWithImpl<$Res>
       _$ContractRuleImpl _value, $Res Function(_$ContractRuleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7382,7 +7735,7 @@ class _$ContractRuleImpl extends _ContractRule {
                 other.contentReference == contentReference));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -7392,7 +7745,9 @@ class _$ContractRuleImpl extends _ContractRule {
       contentAttachment,
       contentReference);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContractRuleImplCopyWith<_$ContractRuleImpl> get copyWith =>
@@ -7429,8 +7784,11 @@ abstract class _ContractRule extends ContractRule {
   Attachment? get contentAttachment;
   @override
   Reference? get contentReference;
+
+  /// Create a copy of ContractRule
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContractRuleImplCopyWith<_$ContractRuleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

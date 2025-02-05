@@ -24,8 +24,12 @@ mixin _$Element {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
+  /// Serializes this Element to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Element
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ElementCopyWith<Element> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -49,6 +53,8 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Element
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +94,8 @@ class __$$ElementImplCopyWithImpl<$Res>
       _$ElementImpl _value, $Res Function(_$ElementImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Element
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,12 +145,14 @@ class _$ElementImpl extends _Element {
                 .equals(other.extension_, extension_));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, const DeepCollectionEquality().hash(extension_));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Element
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>
@@ -170,8 +180,11 @@ abstract class _Element extends Element {
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
+
+  /// Create a copy of Element
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

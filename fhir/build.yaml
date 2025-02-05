@@ -17,5 +17,7 @@ targets:
             ignore_unannotated: false
             include_if_null: false
         freezed:
+          generate_for:
+            - lib/**/*.dart
           options:
             make_collections_unmodifiable: false

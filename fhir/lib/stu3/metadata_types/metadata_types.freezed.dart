@@ -25,8 +25,12 @@ mixin _$ContactDetail {
   Element? get nameElement => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
+  /// Serializes this ContactDetail to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ContactDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContactDetailCopyWith<ContactDetail> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -55,6 +59,8 @@ class _$ContactDetailCopyWithImpl<$Res, $Val extends ContactDetail>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ContactDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -78,6 +84,8 @@ class _$ContactDetailCopyWithImpl<$Res, $Val extends ContactDetail>
     ) as $Val);
   }
 
+  /// Create a copy of ContactDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -116,6 +124,8 @@ class __$$ContactDetailImplCopyWithImpl<$Res>
       _$ContactDetailImpl _value, $Res Function(_$ContactDetailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ContactDetail
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -174,12 +184,14 @@ class _$ContactDetailImpl extends _ContactDetail {
             const DeepCollectionEquality().equals(other.telecom, telecom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, nameElement,
       const DeepCollectionEquality().hash(telecom));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ContactDetail
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContactDetailImplCopyWith<_$ContactDetailImpl> get copyWith =>
@@ -210,8 +222,11 @@ abstract class _ContactDetail extends ContactDetail {
   Element? get nameElement;
   @override
   List<ContactPoint>? get telecom;
+
+  /// Create a copy of ContactDetail
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContactDetailImplCopyWith<_$ContactDetailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -230,8 +245,12 @@ mixin _$Contributor {
   Element? get nameElement => throw _privateConstructorUsedError;
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
+  /// Serializes this Contributor to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ContributorCopyWith<Contributor> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -263,6 +282,8 @@ class _$ContributorCopyWithImpl<$Res, $Val extends Contributor>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -296,6 +317,8 @@ class _$ContributorCopyWithImpl<$Res, $Val extends Contributor>
     ) as $Val);
   }
 
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -308,6 +331,8 @@ class _$ContributorCopyWithImpl<$Res, $Val extends Contributor>
     });
   }
 
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -350,6 +375,8 @@ class __$$ContributorImplCopyWithImpl<$Res>
       _$ContributorImpl _value, $Res Function(_$ContributorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -430,12 +457,14 @@ class _$ContributorImpl extends _Contributor {
             const DeepCollectionEquality().equals(other.contact, contact));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, type, typeElement, name,
       nameElement, const DeepCollectionEquality().hash(contact));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ContributorImplCopyWith<_$ContributorImpl> get copyWith =>
@@ -473,8 +502,11 @@ abstract class _Contributor extends Contributor {
   Element? get nameElement;
   @override
   List<ContactDetail>? get contact;
+
+  /// Create a copy of Contributor
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ContributorImplCopyWith<_$ContributorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -500,8 +532,12 @@ mixin _$RelatedArtifact {
   Attachment? get document => throw _privateConstructorUsedError;
   Reference? get resource => throw _privateConstructorUsedError;
 
+  /// Serializes this RelatedArtifact to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RelatedArtifactCopyWith<RelatedArtifact> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -542,6 +578,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -600,6 +638,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     ) as $Val);
   }
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -612,6 +652,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     });
   }
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get displayElement {
@@ -624,6 +666,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     });
   }
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get citationElement {
@@ -636,6 +680,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     });
   }
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
@@ -648,6 +694,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     });
   }
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttachmentCopyWith<$Res>? get document {
@@ -660,6 +708,8 @@ class _$RelatedArtifactCopyWithImpl<$Res, $Val extends RelatedArtifact>
     });
   }
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get resource {
@@ -715,6 +765,8 @@ class __$$RelatedArtifactImplCopyWithImpl<$Res>
       _$RelatedArtifactImpl _value, $Res Function(_$RelatedArtifactImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -847,7 +899,7 @@ class _$RelatedArtifactImpl extends _RelatedArtifact {
                 other.resource == resource));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -862,7 +914,9 @@ class _$RelatedArtifactImpl extends _RelatedArtifact {
       document,
       resource);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RelatedArtifactImplCopyWith<_$RelatedArtifactImpl> get copyWith =>
@@ -918,8 +972,11 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   Attachment? get document;
   @override
   Reference? get resource;
+
+  /// Create a copy of RelatedArtifact
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RelatedArtifactImplCopyWith<_$RelatedArtifactImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -936,8 +993,12 @@ mixin _$UsageContext {
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
   Range? get valueRange => throw _privateConstructorUsedError;
 
+  /// Serializes this UsageContext to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UsageContextCopyWith<UsageContext> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -970,6 +1031,8 @@ class _$UsageContextCopyWithImpl<$Res, $Val extends UsageContext>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -998,6 +1061,8 @@ class _$UsageContextCopyWithImpl<$Res, $Val extends UsageContext>
     ) as $Val);
   }
 
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get code {
@@ -1006,6 +1071,8 @@ class _$UsageContextCopyWithImpl<$Res, $Val extends UsageContext>
     });
   }
 
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
@@ -1019,6 +1086,8 @@ class _$UsageContextCopyWithImpl<$Res, $Val extends UsageContext>
     });
   }
 
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $QuantityCopyWith<$Res>? get valueQuantity {
@@ -1031,6 +1100,8 @@ class _$UsageContextCopyWithImpl<$Res, $Val extends UsageContext>
     });
   }
 
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RangeCopyWith<$Res>? get valueRange {
@@ -1076,6 +1147,8 @@ class __$$UsageContextImplCopyWithImpl<$Res>
       _$UsageContextImpl _value, $Res Function(_$UsageContextImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1146,12 +1219,14 @@ class _$UsageContextImpl extends _UsageContext {
                 other.valueRange == valueRange));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, code, valueCodeableConcept, valueQuantity, valueRange);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UsageContextImplCopyWith<_$UsageContextImpl> get copyWith =>
@@ -1184,8 +1259,11 @@ abstract class _UsageContext extends UsageContext {
   Quantity? get valueQuantity;
   @override
   Range? get valueRange;
+
+  /// Create a copy of UsageContext
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UsageContextImplCopyWith<_$UsageContextImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1210,8 +1288,12 @@ mixin _$DataRequirement {
   List<DataRequirementDateFilter>? get dateFilter =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DataRequirement to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DataRequirement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DataRequirementCopyWith<DataRequirement> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1245,6 +1327,8 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DataRequirement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1293,6 +1377,8 @@ class _$DataRequirementCopyWithImpl<$Res, $Val extends DataRequirement>
     ) as $Val);
   }
 
+  /// Create a copy of DataRequirement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -1336,6 +1422,8 @@ class __$$DataRequirementImplCopyWithImpl<$Res>
       _$DataRequirementImpl _value, $Res Function(_$DataRequirementImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DataRequirement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1448,7 +1536,7 @@ class _$DataRequirementImpl extends _DataRequirement {
                 .equals(other.dateFilter, dateFilter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1461,7 +1549,9 @@ class _$DataRequirementImpl extends _DataRequirement {
       const DeepCollectionEquality().hash(codeFilter),
       const DeepCollectionEquality().hash(dateFilter));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DataRequirement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DataRequirementImplCopyWith<_$DataRequirementImpl> get copyWith =>
@@ -1511,8 +1601,11 @@ abstract class _DataRequirement extends DataRequirement {
   List<DataRequirementCodeFilter>? get codeFilter;
   @override
   List<DataRequirementDateFilter>? get dateFilter;
+
+  /// Create a copy of DataRequirement
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DataRequirementImplCopyWith<_$DataRequirementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1538,8 +1631,12 @@ mixin _$DataRequirementCodeFilter {
   List<CodeableConcept>? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this DataRequirementCodeFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DataRequirementCodeFilterCopyWith<DataRequirementCodeFilter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1577,6 +1674,8 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1630,6 +1729,8 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
@@ -1642,6 +1743,8 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueSetStringElement {
@@ -1654,6 +1757,8 @@ class _$DataRequirementCodeFilterCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueSetReference {
@@ -1705,6 +1810,8 @@ class __$$DataRequirementCodeFilterImplCopyWithImpl<$Res>
       $Res Function(_$DataRequirementCodeFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1827,7 +1934,7 @@ class _$DataRequirementCodeFilterImpl extends _DataRequirementCodeFilter {
                 .equals(other.valueCodeableConcept, valueCodeableConcept));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1841,7 +1948,9 @@ class _$DataRequirementCodeFilterImpl extends _DataRequirementCodeFilter {
       const DeepCollectionEquality().hash(valueCoding),
       const DeepCollectionEquality().hash(valueCodeableConcept));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DataRequirementCodeFilterImplCopyWith<_$DataRequirementCodeFilterImpl>
@@ -1894,8 +2003,11 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
   List<Coding>? get valueCoding;
   @override
   List<CodeableConcept>? get valueCodeableConcept;
+
+  /// Create a copy of DataRequirementCodeFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DataRequirementCodeFilterImplCopyWith<_$DataRequirementCodeFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1916,8 +2028,12 @@ mixin _$DataRequirementDateFilter {
   Period? get valuePeriod => throw _privateConstructorUsedError;
   FhirDuration? get valueDuration => throw _privateConstructorUsedError;
 
+  /// Serializes this DataRequirementDateFilter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DataRequirementDateFilterCopyWith<DataRequirementDateFilter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1953,6 +2069,8 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1991,6 +2109,8 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
@@ -2003,6 +2123,8 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueDateTimeElement {
@@ -2015,6 +2137,8 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get valuePeriod {
@@ -2027,6 +2151,8 @@ class _$DataRequirementDateFilterCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $FhirDurationCopyWith<$Res>? get valueDuration {
@@ -2077,6 +2203,8 @@ class __$$DataRequirementDateFilterImplCopyWithImpl<$Res>
       $Res Function(_$DataRequirementDateFilterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2169,12 +2297,14 @@ class _$DataRequirementDateFilterImpl extends _DataRequirementDateFilter {
                 other.valueDuration == valueDuration));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, path, pathElement, valueDateTime,
       valueDateTimeElement, valuePeriod, valueDuration);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DataRequirementDateFilterImplCopyWith<_$DataRequirementDateFilterImpl>
@@ -2216,8 +2346,11 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
   Period? get valuePeriod;
   @override
   FhirDuration? get valueDuration;
+
+  /// Create a copy of DataRequirementDateFilter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DataRequirementDateFilterImplCopyWith<_$DataRequirementDateFilterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2248,8 +2381,12 @@ mixin _$ParameterDefinition {
   Element? get typeElement => throw _privateConstructorUsedError;
   Reference? get profile => throw _privateConstructorUsedError;
 
+  /// Serializes this ParameterDefinition to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ParameterDefinitionCopyWith<ParameterDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2294,6 +2431,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2367,6 +2506,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     ) as $Val);
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -2379,6 +2520,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     });
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get useElement {
@@ -2391,6 +2534,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     });
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get minElement {
@@ -2403,6 +2548,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     });
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get maxElement {
@@ -2415,6 +2562,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     });
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get documentationElement {
@@ -2427,6 +2576,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     });
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -2439,6 +2590,8 @@ class _$ParameterDefinitionCopyWithImpl<$Res, $Val extends ParameterDefinition>
     });
   }
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get profile {
@@ -2499,6 +2652,8 @@ class __$$ParameterDefinitionImplCopyWithImpl<$Res>
       $Res Function(_$ParameterDefinitionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2660,7 +2815,7 @@ class _$ParameterDefinitionImpl extends _ParameterDefinition {
             (identical(other.profile, profile) || other.profile == profile));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2678,7 +2833,9 @@ class _$ParameterDefinitionImpl extends _ParameterDefinition {
       typeElement,
       profile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ParameterDefinitionImplCopyWith<_$ParameterDefinitionImpl> get copyWith =>
@@ -2745,8 +2902,11 @@ abstract class _ParameterDefinition extends ParameterDefinition {
   Element? get typeElement;
   @override
   Reference? get profile;
+
+  /// Create a copy of ParameterDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ParameterDefinitionImplCopyWith<_$ParameterDefinitionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2773,8 +2933,12 @@ mixin _$TriggerDefinition {
   Element? get eventTimingDateTimeElement => throw _privateConstructorUsedError;
   DataRequirement? get eventData => throw _privateConstructorUsedError;
 
+  /// Serializes this TriggerDefinition to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $TriggerDefinitionCopyWith<TriggerDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2818,6 +2982,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2881,6 +3047,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     ) as $Val);
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -2893,6 +3061,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     });
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get eventNameElement {
@@ -2905,6 +3075,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     });
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TimingCopyWith<$Res>? get eventTimingTiming {
@@ -2917,6 +3089,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     });
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get eventTimingReference {
@@ -2929,6 +3103,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     });
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get eventTimingDateElement {
@@ -2941,6 +3117,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     });
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get eventTimingDateTimeElement {
@@ -2953,6 +3131,8 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
     });
   }
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DataRequirementCopyWith<$Res>? get eventData {
@@ -3012,6 +3192,8 @@ class __$$TriggerDefinitionImplCopyWithImpl<$Res>
       $Res Function(_$TriggerDefinitionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3158,7 +3340,7 @@ class _$TriggerDefinitionImpl extends _TriggerDefinition {
                 other.eventData == eventData));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3174,7 +3356,9 @@ class _$TriggerDefinitionImpl extends _TriggerDefinition {
       eventTimingDateTimeElement,
       eventData);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TriggerDefinitionImplCopyWith<_$TriggerDefinitionImpl> get copyWith =>
@@ -3234,8 +3418,11 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   Element? get eventTimingDateTimeElement;
   @override
   DataRequirement? get eventData;
+
+  /// Create a copy of TriggerDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TriggerDefinitionImplCopyWith<_$TriggerDefinitionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

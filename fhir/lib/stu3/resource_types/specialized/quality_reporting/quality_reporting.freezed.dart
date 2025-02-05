@@ -126,8 +126,12 @@ mixin _$Measure {
   List<MeasureSupplementalData>? get supplementalData =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this Measure to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureCopyWith<Measure> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -253,6 +257,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -618,6 +624,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     ) as $Val);
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -630,6 +638,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -642,6 +652,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -654,6 +666,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -666,6 +680,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
@@ -678,6 +694,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get versionElement {
@@ -690,6 +708,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -702,6 +722,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get titleElement {
@@ -714,6 +736,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -726,6 +750,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get experimentalElement {
@@ -738,6 +764,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
@@ -750,6 +778,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get publisherElement {
@@ -762,6 +792,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -774,6 +806,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get purposeElement {
@@ -786,6 +820,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get usageElement {
@@ -798,6 +834,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get approvalDateElement {
@@ -810,6 +848,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get lastReviewDateElement {
@@ -822,6 +862,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res>? get effectivePeriod {
@@ -834,6 +876,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get copyrightElement {
@@ -846,6 +890,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get disclaimerElement {
@@ -858,6 +904,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get scoring {
@@ -870,6 +918,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get compositeScoring {
@@ -882,6 +932,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get riskAdjustmentElement {
@@ -894,6 +946,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get rateAggregationElement {
@@ -906,6 +960,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get rationaleElement {
@@ -918,6 +974,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get clinicalRecommendationStatementElement {
@@ -932,6 +990,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get improvementNotationElement {
@@ -944,6 +1004,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get guidanceElement {
@@ -956,6 +1018,8 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
     });
   }
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get setElement {
@@ -1120,6 +1184,8 @@ class __$$MeasureImplCopyWithImpl<$Res>
       _$MeasureImpl _value, $Res Function(_$MeasureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1866,7 +1932,7 @@ class _$MeasureImpl extends _Measure {
             const DeepCollectionEquality().equals(other.supplementalData, supplementalData));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1943,7 +2009,9 @@ class _$MeasureImpl extends _Measure {
         const DeepCollectionEquality().hash(supplementalData)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureImplCopyWith<_$MeasureImpl> get copyWith =>
@@ -2208,8 +2276,11 @@ abstract class _Measure extends Measure {
   List<MeasureGroup>? get group;
   @override
   List<MeasureSupplementalData>? get supplementalData;
+
+  /// Create a copy of Measure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureImplCopyWith<_$MeasureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2230,8 +2301,12 @@ mixin _$MeasureGroup {
   List<MeasurePopulation>? get population => throw _privateConstructorUsedError;
   List<MeasureStratifier>? get stratifier => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureGroup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureGroupCopyWith<MeasureGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2266,6 +2341,8 @@ class _$MeasureGroupCopyWithImpl<$Res, $Val extends MeasureGroup>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2309,6 +2386,8 @@ class _$MeasureGroupCopyWithImpl<$Res, $Val extends MeasureGroup>
     ) as $Val);
   }
 
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res> get identifier {
@@ -2317,6 +2396,8 @@ class _$MeasureGroupCopyWithImpl<$Res, $Val extends MeasureGroup>
     });
   }
 
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -2329,6 +2410,8 @@ class _$MeasureGroupCopyWithImpl<$Res, $Val extends MeasureGroup>
     });
   }
 
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -2375,6 +2458,8 @@ class __$$MeasureGroupImplCopyWithImpl<$Res>
       _$MeasureGroupImpl _value, $Res Function(_$MeasureGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2477,7 +2562,7 @@ class _$MeasureGroupImpl extends _MeasureGroup {
                 .equals(other.stratifier, stratifier));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2489,7 +2574,9 @@ class _$MeasureGroupImpl extends _MeasureGroup {
       const DeepCollectionEquality().hash(population),
       const DeepCollectionEquality().hash(stratifier));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureGroupImplCopyWith<_$MeasureGroupImpl> get copyWith =>
@@ -2533,8 +2620,11 @@ abstract class _MeasureGroup extends MeasureGroup {
   List<MeasurePopulation>? get population;
   @override
   List<MeasureStratifier>? get stratifier;
+
+  /// Create a copy of MeasureGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureGroupImplCopyWith<_$MeasureGroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2557,8 +2647,12 @@ mixin _$MeasurePopulation {
   @JsonKey(name: '_criteria')
   Element? get criteriaElement => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasurePopulation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasurePopulationCopyWith<MeasurePopulation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2596,6 +2690,8 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2644,6 +2740,8 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
     ) as $Val);
   }
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -2656,6 +2754,8 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
     });
   }
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get code {
@@ -2668,6 +2768,8 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
     });
   }
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
@@ -2680,6 +2782,8 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
     });
   }
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get descriptionElement {
@@ -2692,6 +2796,8 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
     });
   }
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get criteriaElement {
@@ -2743,6 +2849,8 @@ class __$$MeasurePopulationImplCopyWithImpl<$Res>
       $Res Function(_$MeasurePopulationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2855,12 +2963,14 @@ class _$MeasurePopulationImpl extends _MeasurePopulation {
                 other.criteriaElement == criteriaElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, identifier, code, name,
       nameElement, description, descriptionElement, criteria, criteriaElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasurePopulationImplCopyWith<_$MeasurePopulationImpl> get copyWith =>
@@ -2910,8 +3020,11 @@ abstract class _MeasurePopulation extends MeasurePopulation {
   @override
   @JsonKey(name: '_criteria')
   Element? get criteriaElement;
+
+  /// Create a copy of MeasurePopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasurePopulationImplCopyWith<_$MeasurePopulationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2930,8 +3043,12 @@ mixin _$MeasureStratifier {
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureStratifier to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureStratifierCopyWith<MeasureStratifier> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2964,6 +3081,8 @@ class _$MeasureStratifierCopyWithImpl<$Res, $Val extends MeasureStratifier>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2997,6 +3116,8 @@ class _$MeasureStratifierCopyWithImpl<$Res, $Val extends MeasureStratifier>
     ) as $Val);
   }
 
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -3009,6 +3130,8 @@ class _$MeasureStratifierCopyWithImpl<$Res, $Val extends MeasureStratifier>
     });
   }
 
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get criteriaElement {
@@ -3021,6 +3144,8 @@ class _$MeasureStratifierCopyWithImpl<$Res, $Val extends MeasureStratifier>
     });
   }
 
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
@@ -3065,6 +3190,8 @@ class __$$MeasureStratifierImplCopyWithImpl<$Res>
       $Res Function(_$MeasureStratifierImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3147,12 +3274,14 @@ class _$MeasureStratifierImpl extends _MeasureStratifier {
                 other.pathElement == pathElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, identifier, criteria, criteriaElement, path, pathElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureStratifierImplCopyWith<_$MeasureStratifierImpl> get copyWith =>
@@ -3192,8 +3321,11 @@ abstract class _MeasureStratifier extends MeasureStratifier {
   @override
   @JsonKey(name: '_path')
   Element? get pathElement;
+
+  /// Create a copy of MeasureStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureStratifierImplCopyWith<_$MeasureStratifierImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3214,8 +3346,12 @@ mixin _$MeasureSupplementalData {
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureSupplementalData to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureSupplementalDataCopyWith<MeasureSupplementalData> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3250,6 +3386,8 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3288,6 +3426,8 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -3300,6 +3440,8 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get criteriaElement {
@@ -3312,6 +3454,8 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get pathElement {
@@ -3360,6 +3504,8 @@ class __$$MeasureSupplementalDataImplCopyWithImpl<$Res>
       $Res Function(_$MeasureSupplementalDataImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3451,7 +3597,7 @@ class _$MeasureSupplementalDataImpl extends _MeasureSupplementalData {
                 other.pathElement == pathElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3462,7 +3608,9 @@ class _$MeasureSupplementalDataImpl extends _MeasureSupplementalData {
       path,
       pathElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureSupplementalDataImplCopyWith<_$MeasureSupplementalDataImpl>
@@ -3505,8 +3653,11 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   @override
   @JsonKey(name: '_path')
   Element? get pathElement;
+
+  /// Create a copy of MeasureSupplementalData
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureSupplementalDataImplCopyWith<_$MeasureSupplementalDataImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3550,8 +3701,12 @@ mixin _$MeasureReport {
   List<MeasureReportGroup>? get group => throw _privateConstructorUsedError;
   Reference? get evaluatedResources => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureReport to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureReportCopyWith<MeasureReport> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3614,6 +3769,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3742,6 +3899,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     ) as $Val);
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -3754,6 +3913,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -3766,6 +3927,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -3778,6 +3941,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -3790,6 +3955,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -3802,6 +3969,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get statusElement {
@@ -3814,6 +3983,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -3826,6 +3997,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get measure {
@@ -3834,6 +4007,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patient {
@@ -3846,6 +4021,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dateElement {
@@ -3858,6 +4035,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get reportingOrganization {
@@ -3870,6 +4049,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PeriodCopyWith<$Res> get period {
@@ -3878,6 +4059,8 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
     });
   }
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get evaluatedResources {
@@ -3962,6 +4145,8 @@ class __$$MeasureReportImplCopyWithImpl<$Res>
       _$MeasureReportImpl _value, $Res Function(_$MeasureReportImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4230,7 +4415,7 @@ class _$MeasureReportImpl extends _MeasureReport {
                 other.evaluatedResources == evaluatedResources));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4260,7 +4445,9 @@ class _$MeasureReportImpl extends _MeasureReport {
         evaluatedResources
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureReportImplCopyWith<_$MeasureReportImpl> get copyWith =>
@@ -4361,8 +4548,11 @@ abstract class _MeasureReport extends MeasureReport {
   List<MeasureReportGroup>? get group;
   @override
   Reference? get evaluatedResources;
+
+  /// Create a copy of MeasureReport
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureReportImplCopyWith<_$MeasureReportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4382,8 +4572,12 @@ mixin _$MeasureReportGroup {
   List<MeasureReportStratifier>? get stratifier =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureReportGroup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureReportGroupCopyWith<MeasureReportGroup> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4415,6 +4609,8 @@ class _$MeasureReportGroupCopyWithImpl<$Res, $Val extends MeasureReportGroup>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4448,6 +4644,8 @@ class _$MeasureReportGroupCopyWithImpl<$Res, $Val extends MeasureReportGroup>
     ) as $Val);
   }
 
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res> get identifier {
@@ -4456,6 +4654,8 @@ class _$MeasureReportGroupCopyWithImpl<$Res, $Val extends MeasureReportGroup>
     });
   }
 
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get measureScoreElement {
@@ -4498,6 +4698,8 @@ class __$$MeasureReportGroupImplCopyWithImpl<$Res>
       $Res Function(_$MeasureReportGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4580,7 +4782,7 @@ class _$MeasureReportGroupImpl extends _MeasureReportGroup {
                 .equals(other.stratifier, stratifier));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4590,7 +4792,9 @@ class _$MeasureReportGroupImpl extends _MeasureReportGroup {
       measureScoreElement,
       const DeepCollectionEquality().hash(stratifier));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureReportGroupImplCopyWith<_$MeasureReportGroupImpl> get copyWith =>
@@ -4629,8 +4833,11 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   Element? get measureScoreElement;
   @override
   List<MeasureReportStratifier>? get stratifier;
+
+  /// Create a copy of MeasureReportGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureReportGroupImplCopyWith<_$MeasureReportGroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4649,8 +4856,12 @@ mixin _$MeasureReportPopulation {
   Element? get countElement => throw _privateConstructorUsedError;
   Reference? get patients => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureReportPopulation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureReportPopulationCopyWith<MeasureReportPopulation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4685,6 +4896,8 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4718,6 +4931,8 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -4730,6 +4945,8 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get code {
@@ -4742,6 +4959,8 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get countElement {
@@ -4754,6 +4973,8 @@ class _$MeasureReportPopulationCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patients {
@@ -4803,6 +5024,8 @@ class __$$MeasureReportPopulationImplCopyWithImpl<$Res>
       $Res Function(_$MeasureReportPopulationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4883,12 +5106,14 @@ class _$MeasureReportPopulationImpl extends _MeasureReportPopulation {
                 other.patients == patients));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, identifier, code, count, countElement, patients);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureReportPopulationImplCopyWith<_$MeasureReportPopulationImpl>
@@ -4926,8 +5151,11 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
   Element? get countElement;
   @override
   Reference? get patients;
+
+  /// Create a copy of MeasureReportPopulation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureReportPopulationImplCopyWith<_$MeasureReportPopulationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4942,8 +5170,12 @@ mixin _$MeasureReportStratifier {
   Identifier? get identifier => throw _privateConstructorUsedError;
   List<MeasureReportStratum>? get stratum => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureReportStratifier to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureReportStratifier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureReportStratifierCopyWith<MeasureReportStratifier> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4970,6 +5202,8 @@ class _$MeasureReportStratifierCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureReportStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4988,6 +5222,8 @@ class _$MeasureReportStratifierCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MeasureReportStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -5026,6 +5262,8 @@ class __$$MeasureReportStratifierImplCopyWithImpl<$Res>
       $Res Function(_$MeasureReportStratifierImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureReportStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5073,12 +5311,14 @@ class _$MeasureReportStratifierImpl extends _MeasureReportStratifier {
             const DeepCollectionEquality().equals(other.stratum, stratum));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, identifier, const DeepCollectionEquality().hash(stratum));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureReportStratifier
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureReportStratifierImplCopyWith<_$MeasureReportStratifierImpl>
@@ -5107,8 +5347,11 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
   Identifier? get identifier;
   @override
   List<MeasureReportStratum>? get stratum;
+
+  /// Create a copy of MeasureReportStratifier
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureReportStratifierImplCopyWith<_$MeasureReportStratifierImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5128,8 +5371,12 @@ mixin _$MeasureReportStratum {
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureReportStratum to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureReportStratumCopyWith<MeasureReportStratum> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5162,6 +5409,8 @@ class _$MeasureReportStratumCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5195,6 +5444,8 @@ class _$MeasureReportStratumCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get valueElement {
@@ -5207,6 +5458,8 @@ class _$MeasureReportStratumCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get measureScoreElement {
@@ -5249,6 +5502,8 @@ class __$$MeasureReportStratumImplCopyWithImpl<$Res>
       $Res Function(_$MeasureReportStratumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5331,7 +5586,7 @@ class _$MeasureReportStratumImpl extends _MeasureReportStratum {
                 other.measureScoreElement == measureScoreElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5341,7 +5596,9 @@ class _$MeasureReportStratumImpl extends _MeasureReportStratum {
       measureScore,
       measureScoreElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureReportStratumImplCopyWith<_$MeasureReportStratumImpl>
@@ -5382,8 +5639,11 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   @override
   @JsonKey(name: '_measureScore')
   Element? get measureScoreElement;
+
+  /// Create a copy of MeasureReportStratum
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureReportStratumImplCopyWith<_$MeasureReportStratumImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5402,8 +5662,12 @@ mixin _$MeasureReportPopulation1 {
   Element? get countElement => throw _privateConstructorUsedError;
   Reference? get patients => throw _privateConstructorUsedError;
 
+  /// Serializes this MeasureReportPopulation1 to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MeasureReportPopulation1CopyWith<MeasureReportPopulation1> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5438,6 +5702,8 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5471,6 +5737,8 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $IdentifierCopyWith<$Res>? get identifier {
@@ -5483,6 +5751,8 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get code {
@@ -5495,6 +5765,8 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get countElement {
@@ -5507,6 +5779,8 @@ class _$MeasureReportPopulation1CopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get patients {
@@ -5556,6 +5830,8 @@ class __$$MeasureReportPopulation1ImplCopyWithImpl<$Res>
       $Res Function(_$MeasureReportPopulation1Impl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5636,12 +5912,14 @@ class _$MeasureReportPopulation1Impl extends _MeasureReportPopulation1 {
                 other.patients == patients));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, identifier, code, count, countElement, patients);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MeasureReportPopulation1ImplCopyWith<_$MeasureReportPopulation1Impl>
@@ -5679,8 +5957,11 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
   Element? get countElement;
   @override
   Reference? get patients;
+
+  /// Create a copy of MeasureReportPopulation1
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MeasureReportPopulation1ImplCopyWith<_$MeasureReportPopulation1Impl>
       get copyWith => throw _privateConstructorUsedError;
 }

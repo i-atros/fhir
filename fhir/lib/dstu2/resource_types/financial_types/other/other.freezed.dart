@@ -55,8 +55,12 @@ mixin _$ExplanationOfBenefit {
   Reference? get requestProvider => throw _privateConstructorUsedError;
   Reference? get requestOrganization => throw _privateConstructorUsedError;
 
+  /// Serializes this ExplanationOfBenefit to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ExplanationOfBenefitCopyWith<ExplanationOfBenefit> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -121,6 +125,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -249,6 +255,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -261,6 +269,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get implicitRulesElement {
@@ -273,6 +283,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get languageElement {
@@ -285,6 +297,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -297,6 +311,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get request {
@@ -309,6 +325,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get outcomeElement {
@@ -321,6 +339,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get dispositionElement {
@@ -333,6 +353,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get ruleset {
@@ -345,6 +367,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res>? get originalRuleset {
@@ -357,6 +381,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get createdElement {
@@ -369,6 +395,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get organization {
@@ -381,6 +409,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestProvider {
@@ -393,6 +423,8 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get requestOrganization {
@@ -478,6 +510,8 @@ class __$$ExplanationOfBenefitImplCopyWithImpl<$Res>
       $Res Function(_$ExplanationOfBenefitImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -751,7 +785,7 @@ class _$ExplanationOfBenefitImpl extends _ExplanationOfBenefit {
                 other.requestOrganization == requestOrganization));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -781,7 +815,9 @@ class _$ExplanationOfBenefitImpl extends _ExplanationOfBenefit {
         requestOrganization
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ExplanationOfBenefitImplCopyWith<_$ExplanationOfBenefitImpl>
@@ -886,8 +922,11 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   Reference? get requestProvider;
   @override
   Reference? get requestOrganization;
+
+  /// Create a copy of ExplanationOfBenefit
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ExplanationOfBenefitImplCopyWith<_$ExplanationOfBenefitImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

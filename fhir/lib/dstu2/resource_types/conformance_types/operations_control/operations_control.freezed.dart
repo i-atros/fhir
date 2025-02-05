@@ -66,8 +66,12 @@ mixin _$Conformance {
       throw _privateConstructorUsedError;
   List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
 
+  /// Serializes this Conformance to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceCopyWith<Conformance> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -135,6 +139,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -308,6 +314,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     ) as $Val);
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -320,6 +328,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     });
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -332,6 +342,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     });
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
@@ -344,6 +356,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     });
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ConformanceSoftwareCopyWith<$Res>? get software {
@@ -356,6 +370,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     });
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ConformanceImplementationCopyWith<$Res>? get implementation {
@@ -369,6 +385,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     });
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fhirVersionElement {
@@ -381,6 +399,8 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     });
   }
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get acceptUnknownElement {
@@ -464,6 +484,8 @@ class __$$ConformanceImplCopyWithImpl<$Res>
       _$ConformanceImpl _value, $Res Function(_$ConformanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -819,7 +841,7 @@ class _$ConformanceImpl extends _Conformance {
             const DeepCollectionEquality().equals(other.document, document));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -858,7 +880,9 @@ class _$ConformanceImpl extends _Conformance {
         const DeepCollectionEquality().hash(document)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceImplCopyWith<_$ConformanceImpl> get copyWith =>
@@ -990,8 +1014,11 @@ abstract class _Conformance extends Conformance {
   List<ConformanceMessaging>? get messaging;
   @override
   List<ConformanceDocument>? get document;
+
+  /// Create a copy of Conformance
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceImplCopyWith<_$ConformanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1048,8 +1075,12 @@ mixin _$CapabilityStatement {
       throw _privateConstructorUsedError;
   List<ConformanceDocument>? get document => throw _privateConstructorUsedError;
 
+  /// Serializes this CapabilityStatement to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CapabilityStatementCopyWith<CapabilityStatement> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1117,6 +1148,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1290,6 +1323,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     ) as $Val);
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -1302,6 +1337,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     });
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -1314,6 +1351,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     });
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get urlElement {
@@ -1326,6 +1365,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     });
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ConformanceSoftwareCopyWith<$Res>? get software {
@@ -1338,6 +1379,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     });
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ConformanceImplementationCopyWith<$Res>? get implementation {
@@ -1351,6 +1394,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     });
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get fhirVersionElement {
@@ -1363,6 +1408,8 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     });
   }
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get acceptUnknownElement {
@@ -1446,6 +1493,8 @@ class __$$CapabilityStatementImplCopyWithImpl<$Res>
       $Res Function(_$CapabilityStatementImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1801,7 +1850,7 @@ class _$CapabilityStatementImpl extends _CapabilityStatement {
             const DeepCollectionEquality().equals(other.document, document));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -1840,7 +1889,9 @@ class _$CapabilityStatementImpl extends _CapabilityStatement {
         const DeepCollectionEquality().hash(document)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CapabilityStatementImplCopyWith<_$CapabilityStatementImpl> get copyWith =>
@@ -1973,8 +2024,11 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   List<ConformanceMessaging>? get messaging;
   @override
   List<ConformanceDocument>? get document;
+
+  /// Create a copy of CapabilityStatement
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CapabilityStatementImplCopyWith<_$CapabilityStatementImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1993,8 +2047,12 @@ mixin _$ConformanceContact {
   String? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceContact to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceContactCopyWith<ConformanceContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2023,6 +2081,8 @@ class _$ConformanceContactCopyWithImpl<$Res, $Val extends ConformanceContact>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2081,6 +2141,8 @@ class __$$ConformanceContactImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceContactImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2160,7 +2222,7 @@ class _$ConformanceContactImpl extends _ConformanceContact {
             const DeepCollectionEquality().equals(other.telecom, telecom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2170,7 +2232,9 @@ class _$ConformanceContactImpl extends _ConformanceContact {
       name,
       const DeepCollectionEquality().hash(telecom));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceContactImplCopyWith<_$ConformanceContactImpl> get copyWith =>
@@ -2208,8 +2272,11 @@ abstract class _ConformanceContact extends ConformanceContact {
   String? get name;
   @override
   List<ContactPoint>? get telecom;
+
+  /// Create a copy of ConformanceContact
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceContactImplCopyWith<_$ConformanceContactImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2229,8 +2296,12 @@ mixin _$ConformanceSoftware {
   String? get version => throw _privateConstructorUsedError;
   FhirDateTime? get releaseDate => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceSoftware to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceSoftware
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceSoftwareCopyWith<ConformanceSoftware> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2260,6 +2331,8 @@ class _$ConformanceSoftwareCopyWithImpl<$Res, $Val extends ConformanceSoftware>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceSoftware
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2324,6 +2397,8 @@ class __$$ConformanceSoftwareImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceSoftwareImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceSoftware
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2413,7 +2488,7 @@ class _$ConformanceSoftwareImpl extends _ConformanceSoftware {
                 other.releaseDate == releaseDate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2424,7 +2499,9 @@ class _$ConformanceSoftwareImpl extends _ConformanceSoftware {
       version,
       releaseDate);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceSoftware
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceSoftwareImplCopyWith<_$ConformanceSoftwareImpl> get copyWith =>
@@ -2465,8 +2542,11 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
   String? get version;
   @override
   FhirDateTime? get releaseDate;
+
+  /// Create a copy of ConformanceSoftware
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceSoftwareImplCopyWith<_$ConformanceSoftwareImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2486,8 +2566,12 @@ mixin _$ConformanceImplementation {
   String get description => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceImplementation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceImplementation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceImplementationCopyWith<ConformanceImplementation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2517,6 +2601,8 @@ class _$ConformanceImplementationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceImplementation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2578,6 +2664,8 @@ class __$$ConformanceImplementationImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceImplementationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceImplementation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2658,7 +2746,7 @@ class _$ConformanceImplementationImpl extends _ConformanceImplementation {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2668,7 +2756,9 @@ class _$ConformanceImplementationImpl extends _ConformanceImplementation {
       description,
       url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceImplementation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceImplementationImplCopyWith<_$ConformanceImplementationImpl>
@@ -2706,8 +2796,11 @@ abstract class _ConformanceImplementation extends ConformanceImplementation {
   String get description;
   @override
   FhirUri? get url;
+
+  /// Create a copy of ConformanceImplementation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceImplementationImplCopyWith<_$ConformanceImplementationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2744,8 +2837,12 @@ mixin _$ConformanceRest {
       throw _privateConstructorUsedError;
   List<FhirUri>? get compartment => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceRest to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceRestCopyWith<ConformanceRest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2787,6 +2884,8 @@ class _$ConformanceRestCopyWithImpl<$Res, $Val extends ConformanceRest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2865,6 +2964,8 @@ class _$ConformanceRestCopyWithImpl<$Res, $Val extends ConformanceRest>
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
@@ -2877,6 +2978,8 @@ class _$ConformanceRestCopyWithImpl<$Res, $Val extends ConformanceRest>
     });
   }
 
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ConformanceRestSecurityCopyWith<$Res>? get security {
@@ -2929,6 +3032,8 @@ class __$$ConformanceRestImplCopyWithImpl<$Res>
       _$ConformanceRestImpl _value, $Res Function(_$ConformanceRestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3102,7 +3207,7 @@ class _$ConformanceRestImpl extends _ConformanceRest {
                 .equals(other.compartment, compartment));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3121,7 +3226,9 @@ class _$ConformanceRestImpl extends _ConformanceRest {
       const DeepCollectionEquality().hash(operation),
       const DeepCollectionEquality().hash(compartment));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceRestImplCopyWith<_$ConformanceRestImpl> get copyWith =>
@@ -3191,8 +3298,11 @@ abstract class _ConformanceRest extends ConformanceRest {
   List<ConformanceRestOperation>? get operation;
   @override
   List<FhirUri>? get compartment;
+
+  /// Create a copy of ConformanceRest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceRestImplCopyWith<_$ConformanceRestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3217,8 +3327,12 @@ mixin _$ConformanceMessaging {
   List<ConformanceMessagingEvent> get event =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceMessaging to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceMessaging
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceMessagingCopyWith<ConformanceMessaging> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3251,6 +3365,8 @@ class _$ConformanceMessagingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceMessaging
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3327,6 +3443,8 @@ class __$$ConformanceMessagingImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceMessagingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceMessaging
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3437,7 +3555,7 @@ class _$ConformanceMessagingImpl extends _ConformanceMessaging {
             const DeepCollectionEquality().equals(other.event, event));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3450,7 +3568,9 @@ class _$ConformanceMessagingImpl extends _ConformanceMessaging {
       documentation,
       const DeepCollectionEquality().hash(event));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceMessaging
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceMessagingImplCopyWith<_$ConformanceMessagingImpl>
@@ -3500,8 +3620,11 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
   String? get documentation;
   @override
   List<ConformanceMessagingEvent> get event;
+
+  /// Create a copy of ConformanceMessaging
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceMessagingImplCopyWith<_$ConformanceMessagingImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3524,8 +3647,12 @@ mixin _$ConformanceDocument {
   String? get documentation => throw _privateConstructorUsedError;
   Reference get profile => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceDocument to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceDocument
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceDocumentCopyWith<ConformanceDocument> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3558,6 +3685,8 @@ class _$ConformanceDocumentCopyWithImpl<$Res, $Val extends ConformanceDocument>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceDocument
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3601,6 +3730,8 @@ class _$ConformanceDocumentCopyWithImpl<$Res, $Val extends ConformanceDocument>
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceDocument
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get profile {
@@ -3639,6 +3770,8 @@ class __$$ConformanceDocumentImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceDocumentImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceDocument
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3740,7 +3873,7 @@ class _$ConformanceDocumentImpl extends _ConformanceDocument {
             (identical(other.profile, profile) || other.profile == profile));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -3752,7 +3885,9 @@ class _$ConformanceDocumentImpl extends _ConformanceDocument {
       documentation,
       profile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceDocument
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceDocumentImplCopyWith<_$ConformanceDocumentImpl> get copyWith =>
@@ -3799,8 +3934,11 @@ abstract class _ConformanceDocument extends ConformanceDocument {
   String? get documentation;
   @override
   Reference get profile;
+
+  /// Create a copy of ConformanceDocument
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceDocumentImplCopyWith<_$ConformanceDocumentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3825,8 +3963,12 @@ mixin _$ConformanceRestSecurity {
   List<ConformanceSecurityCertificate>? get certificate =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceRestSecurity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceRestSecurity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceRestSecurityCopyWith<ConformanceRestSecurity> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3861,6 +4003,8 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceRestSecurity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3909,6 +4053,8 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceRestSecurity
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get corsElement {
@@ -3955,6 +4101,8 @@ class __$$ConformanceRestSecurityImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceRestSecurityImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceRestSecurity
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4065,7 +4213,7 @@ class _$ConformanceRestSecurityImpl extends _ConformanceRestSecurity {
                 .equals(other.certificate, certificate));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -4078,7 +4226,9 @@ class _$ConformanceRestSecurityImpl extends _ConformanceRestSecurity {
       description,
       const DeepCollectionEquality().hash(certificate));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceRestSecurity
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceRestSecurityImplCopyWith<_$ConformanceRestSecurityImpl>
@@ -4127,8 +4277,11 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
   String? get description;
   @override
   List<ConformanceSecurityCertificate>? get certificate;
+
+  /// Create a copy of ConformanceRestSecurity
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceRestSecurityImplCopyWith<_$ConformanceRestSecurityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4174,8 +4327,12 @@ mixin _$ConformanceRestResource {
   List<ConformanceResourceSearchParam>? get searchParam =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceRestResource to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceRestResourceCopyWith<ConformanceRestResource> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4228,6 +4385,8 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4336,6 +4495,8 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get typeElement {
@@ -4348,6 +4509,8 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get profile {
@@ -4360,6 +4523,8 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get updateCreateElement {
@@ -4372,6 +4537,8 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get conditionalCreateElement {
@@ -4384,6 +4551,8 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get conditionalDeleteElement {
@@ -4452,6 +4621,8 @@ class __$$ConformanceRestResourceImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceRestResourceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4692,7 +4863,7 @@ class _$ConformanceRestResourceImpl extends _ConformanceRestResource {
                 .equals(other.searchParam, searchParam));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -4718,7 +4889,9 @@ class _$ConformanceRestResourceImpl extends _ConformanceRestResource {
         const DeepCollectionEquality().hash(searchParam)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceRestResourceImplCopyWith<_$ConformanceRestResourceImpl>
@@ -4815,8 +4988,11 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
   List<String>? get searchRevInclude;
   @override
   List<ConformanceResourceSearchParam>? get searchParam;
+
+  /// Create a copy of ConformanceRestResource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceRestResourceImplCopyWith<_$ConformanceRestResourceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4837,8 +5013,12 @@ mixin _$ConformanceResourceInteraction {
   ResourceInteractionCode get code => throw _privateConstructorUsedError;
   String? get documentation => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceResourceInteraction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceResourceInteraction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceResourceInteractionCopyWith<ConformanceResourceInteraction>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4871,6 +5051,8 @@ class _$ConformanceResourceInteractionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceResourceInteraction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4933,6 +5115,8 @@ class __$$ConformanceResourceInteractionImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceResourceInteractionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceResourceInteraction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5017,7 +5201,7 @@ class _$ConformanceResourceInteractionImpl
                 other.documentation == documentation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5027,7 +5211,9 @@ class _$ConformanceResourceInteractionImpl
       code,
       documentation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceResourceInteraction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceResourceInteractionImplCopyWith<
@@ -5069,8 +5255,11 @@ abstract class _ConformanceResourceInteraction
   ResourceInteractionCode get code;
   @override
   String? get documentation;
+
+  /// Create a copy of ConformanceResourceInteraction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceResourceInteractionImplCopyWith<
           _$ConformanceResourceInteractionImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5093,8 +5282,12 @@ mixin _$ConformanceRestOperation {
   String get name => throw _privateConstructorUsedError;
   Reference get definition => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceRestOperation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceRestOperation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceRestOperationCopyWith<ConformanceRestOperation> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5127,6 +5320,8 @@ class _$ConformanceRestOperationCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceRestOperation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5165,6 +5360,8 @@ class _$ConformanceRestOperationCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceRestOperation
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get definition {
@@ -5205,6 +5402,8 @@ class __$$ConformanceRestOperationImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceRestOperationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceRestOperation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5296,7 +5495,7 @@ class _$ConformanceRestOperationImpl extends _ConformanceRestOperation {
                 other.definition == definition));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5307,7 +5506,9 @@ class _$ConformanceRestOperationImpl extends _ConformanceRestOperation {
       name,
       definition);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceRestOperation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceRestOperationImplCopyWith<_$ConformanceRestOperationImpl>
@@ -5349,8 +5550,11 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
   String get name;
   @override
   Reference get definition;
+
+  /// Create a copy of ConformanceRestOperation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceRestOperationImplCopyWith<_$ConformanceRestOperationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5372,8 +5576,12 @@ mixin _$ConformanceMessagingEndpoint {
   @JsonKey(name: '_address')
   Element? get addressElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceMessagingEndpoint to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceMessagingEndpointCopyWith<ConformanceMessagingEndpoint>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5409,6 +5617,8 @@ class _$ConformanceMessagingEndpointCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5447,6 +5657,8 @@ class _$ConformanceMessagingEndpointCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get protocol {
@@ -5455,6 +5667,8 @@ class _$ConformanceMessagingEndpointCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get addressElement {
@@ -5501,6 +5715,8 @@ class __$$ConformanceMessagingEndpointImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceMessagingEndpointImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5593,7 +5809,7 @@ class _$ConformanceMessagingEndpointImpl extends _ConformanceMessagingEndpoint {
                 other.addressElement == addressElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -5604,7 +5820,9 @@ class _$ConformanceMessagingEndpointImpl extends _ConformanceMessagingEndpoint {
       address,
       addressElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceMessagingEndpointImplCopyWith<
@@ -5649,8 +5867,11 @@ abstract class _ConformanceMessagingEndpoint
   @override
   @JsonKey(name: '_address')
   Element? get addressElement;
+
+  /// Create a copy of ConformanceMessagingEndpoint
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceMessagingEndpointImplCopyWith<
           _$ConformanceMessagingEndpointImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5680,8 +5901,12 @@ mixin _$ConformanceMessagingEvent {
   Reference get response => throw _privateConstructorUsedError;
   String? get documentation => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceMessagingEvent to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceMessagingEventCopyWith<ConformanceMessagingEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5722,6 +5947,8 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5785,6 +6012,8 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CodingCopyWith<$Res> get code {
@@ -5793,6 +6022,8 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get modeElement {
@@ -5805,6 +6036,8 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get request {
@@ -5813,6 +6046,8 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res> get response {
@@ -5864,6 +6099,8 @@ class __$$ConformanceMessagingEventImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceMessagingEventImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6004,7 +6241,7 @@ class _$ConformanceMessagingEventImpl extends _ConformanceMessagingEvent {
                 other.documentation == documentation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6020,7 +6257,9 @@ class _$ConformanceMessagingEventImpl extends _ConformanceMessagingEvent {
       response,
       documentation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceMessagingEventImplCopyWith<_$ConformanceMessagingEventImpl>
@@ -6081,8 +6320,11 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
   Reference get response;
   @override
   String? get documentation;
+
+  /// Create a copy of ConformanceMessagingEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceMessagingEventImplCopyWith<_$ConformanceMessagingEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6104,8 +6346,12 @@ mixin _$ConformanceSecurityCertificate {
   @JsonKey(name: '_blob')
   Element? get blobElement => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceSecurityCertificate to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceSecurityCertificate
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceSecurityCertificateCopyWith<ConformanceSecurityCertificate>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6140,6 +6386,8 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceSecurityCertificate
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6178,6 +6426,8 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ConformanceSecurityCertificate
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get blobElement {
@@ -6222,6 +6472,8 @@ class __$$ConformanceSecurityCertificateImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceSecurityCertificateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceSecurityCertificate
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6314,7 +6566,7 @@ class _$ConformanceSecurityCertificateImpl
                 other.blobElement == blobElement));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6325,7 +6577,9 @@ class _$ConformanceSecurityCertificateImpl
       blob,
       blobElement);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceSecurityCertificate
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceSecurityCertificateImplCopyWith<
@@ -6370,8 +6624,11 @@ abstract class _ConformanceSecurityCertificate
   @override
   @JsonKey(name: '_blob')
   Element? get blobElement;
+
+  /// Create a copy of ConformanceSecurityCertificate
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceSecurityCertificateImplCopyWith<
           _$ConformanceSecurityCertificateImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6393,8 +6650,12 @@ mixin _$ConformanceRestInteraction {
   RestInteractionCode get code => throw _privateConstructorUsedError;
   String? get documentation => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceRestInteraction to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceRestInteraction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceRestInteractionCopyWith<ConformanceRestInteraction>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6426,6 +6687,8 @@ class _$ConformanceRestInteractionCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceRestInteraction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6488,6 +6751,8 @@ class __$$ConformanceRestInteractionImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceRestInteractionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceRestInteraction
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6571,7 +6836,7 @@ class _$ConformanceRestInteractionImpl extends _ConformanceRestInteraction {
                 other.documentation == documentation));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6581,7 +6846,9 @@ class _$ConformanceRestInteractionImpl extends _ConformanceRestInteraction {
       code,
       documentation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceRestInteraction
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceRestInteractionImplCopyWith<_$ConformanceRestInteractionImpl>
@@ -6621,8 +6888,11 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
   RestInteractionCode get code;
   @override
   String? get documentation;
+
+  /// Create a copy of ConformanceRestInteraction
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceRestInteractionImplCopyWith<_$ConformanceRestInteractionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6650,8 +6920,12 @@ mixin _$ConformanceResourceSearchParam {
   List<SearchParamModifier>? get modifier => throw _privateConstructorUsedError;
   List<String>? get chain => throw _privateConstructorUsedError;
 
+  /// Serializes this ConformanceResourceSearchParam to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ConformanceResourceSearchParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ConformanceResourceSearchParamCopyWith<ConformanceResourceSearchParam>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -6689,6 +6963,8 @@ class _$ConformanceResourceSearchParamCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ConformanceResourceSearchParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6786,6 +7062,8 @@ class __$$ConformanceResourceSearchParamImplCopyWithImpl<$Res>
       $Res Function(_$ConformanceResourceSearchParamImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ConformanceResourceSearchParam
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6926,7 +7204,7 @@ class _$ConformanceResourceSearchParamImpl
             const DeepCollectionEquality().equals(other.chain, chain));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -6942,7 +7220,9 @@ class _$ConformanceResourceSearchParamImpl
       const DeepCollectionEquality().hash(modifier),
       const DeepCollectionEquality().hash(chain));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ConformanceResourceSearchParam
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ConformanceResourceSearchParamImplCopyWith<
@@ -7003,8 +7283,11 @@ abstract class _ConformanceResourceSearchParam
   List<SearchParamModifier>? get modifier;
   @override
   List<String>? get chain;
+
+  /// Create a copy of ConformanceResourceSearchParam
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ConformanceResourceSearchParamImplCopyWith<
           _$ConformanceResourceSearchParamImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -7052,8 +7335,12 @@ mixin _$OperationDefinition {
   List<OperationDefinitionParameter>? get parameter =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this OperationDefinition to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OperationDefinitionCopyWith<OperationDefinition> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7113,6 +7400,8 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7261,6 +7550,8 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
     ) as $Val);
   }
 
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -7273,6 +7564,8 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
     });
   }
 
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -7285,6 +7578,8 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
     });
   }
 
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get base {
@@ -7356,6 +7651,8 @@ class __$$OperationDefinitionImplCopyWithImpl<$Res>
       $Res Function(_$OperationDefinitionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7658,7 +7955,7 @@ class _$OperationDefinitionImpl extends _OperationDefinition {
             const DeepCollectionEquality().equals(other.parameter, parameter));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -7692,7 +7989,9 @@ class _$OperationDefinitionImpl extends _OperationDefinition {
         const DeepCollectionEquality().hash(parameter)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OperationDefinitionImplCopyWith<_$OperationDefinitionImpl> get copyWith =>
@@ -7807,8 +8106,11 @@ abstract class _OperationDefinition extends OperationDefinition {
   Boolean get instance;
   @override
   List<OperationDefinitionParameter>? get parameter;
+
+  /// Create a copy of OperationDefinition
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OperationDefinitionImplCopyWith<_$OperationDefinitionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -7828,8 +8130,12 @@ mixin _$OperationDefinitionContact {
   String? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
+  /// Serializes this OperationDefinitionContact to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OperationDefinitionContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OperationDefinitionContactCopyWith<OperationDefinitionContact>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7860,6 +8166,8 @@ class _$OperationDefinitionContactCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OperationDefinitionContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7921,6 +8229,8 @@ class __$$OperationDefinitionContactImplCopyWithImpl<$Res>
       $Res Function(_$OperationDefinitionContactImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OperationDefinitionContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8001,7 +8311,7 @@ class _$OperationDefinitionContactImpl extends _OperationDefinitionContact {
             const DeepCollectionEquality().equals(other.telecom, telecom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8011,7 +8321,9 @@ class _$OperationDefinitionContactImpl extends _OperationDefinitionContact {
       name,
       const DeepCollectionEquality().hash(telecom));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OperationDefinitionContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OperationDefinitionContactImplCopyWith<_$OperationDefinitionContactImpl>
@@ -8049,8 +8361,11 @@ abstract class _OperationDefinitionContact extends OperationDefinitionContact {
   String? get name;
   @override
   List<ContactPoint>? get telecom;
+
+  /// Create a copy of OperationDefinitionContact
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OperationDefinitionContactImplCopyWith<_$OperationDefinitionContactImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -8083,8 +8398,12 @@ mixin _$OperationDefinitionParameter {
   List<OperationDefinitionParameter>? get part_ =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this OperationDefinitionParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OperationDefinitionParameterCopyWith<OperationDefinitionParameter>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -8127,6 +8446,8 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8200,6 +8521,8 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get profile {
@@ -8212,6 +8535,8 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $OperationDefinitionParameterBindingCopyWith<$Res>? get binding {
@@ -8266,6 +8591,8 @@ class __$$OperationDefinitionParameterImplCopyWithImpl<$Res>
       $Res Function(_$OperationDefinitionParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8423,7 +8750,7 @@ class _$OperationDefinitionParameterImpl extends _OperationDefinitionParameter {
             const DeepCollectionEquality().equals(other.part_, part_));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8441,7 +8768,9 @@ class _$OperationDefinitionParameterImpl extends _OperationDefinitionParameter {
       binding,
       const DeepCollectionEquality().hash(part_));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OperationDefinitionParameterImplCopyWith<
@@ -8511,8 +8840,11 @@ abstract class _OperationDefinitionParameter
   @override
   @JsonKey(name: 'part')
   List<OperationDefinitionParameter>? get part_;
+
+  /// Create a copy of OperationDefinitionParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OperationDefinitionParameterImplCopyWith<
           _$OperationDefinitionParameterImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -8539,8 +8871,12 @@ mixin _$OperationDefinitionParameterBinding {
   FhirUri? get valueSetUri => throw _privateConstructorUsedError;
   Reference? get valueSetReference => throw _privateConstructorUsedError;
 
+  /// Serializes this OperationDefinitionParameterBinding to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OperationDefinitionParameterBinding
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OperationDefinitionParameterBindingCopyWith<
           OperationDefinitionParameterBinding>
       get copyWith => throw _privateConstructorUsedError;
@@ -8580,6 +8916,8 @@ class _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OperationDefinitionParameterBinding
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8618,6 +8956,8 @@ class _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of OperationDefinitionParameterBinding
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReferenceCopyWith<$Res>? get valueSetReference {
@@ -8666,6 +9006,8 @@ class __$$OperationDefinitionParameterBindingImplCopyWithImpl<$Res>
       $Res Function(_$OperationDefinitionParameterBindingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OperationDefinitionParameterBinding
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8767,7 +9109,7 @@ class _$OperationDefinitionParameterBindingImpl
                 other.valueSetReference == valueSetReference));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -8778,7 +9120,9 @@ class _$OperationDefinitionParameterBindingImpl
       valueSetUri,
       valueSetReference);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OperationDefinitionParameterBinding
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$OperationDefinitionParameterBindingImplCopyWith<
@@ -8831,8 +9175,11 @@ abstract class _OperationDefinitionParameterBinding
   FhirUri? get valueSetUri;
   @override
   Reference? get valueSetReference;
+
+  /// Create a copy of OperationDefinitionParameterBinding
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$OperationDefinitionParameterBindingImplCopyWith<
           _$OperationDefinitionParameterBindingImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -8879,8 +9226,12 @@ mixin _$SearchParameter {
       throw _privateConstructorUsedError;
   List<Code>? get target => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchParameterCopyWith<SearchParameter> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -8937,6 +9288,8 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9070,6 +9423,8 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
     ) as $Val);
   }
 
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MetaCopyWith<$Res>? get meta {
@@ -9082,6 +9437,8 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
     });
   }
 
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
@@ -9094,6 +9451,8 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
     });
   }
 
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get requirementsElement {
@@ -9162,6 +9521,8 @@ class __$$SearchParameterImplCopyWithImpl<$Res>
       _$SearchParameterImpl _value, $Res Function(_$SearchParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9438,7 +9799,7 @@ class _$SearchParameterImpl extends _SearchParameter {
             const DeepCollectionEquality().equals(other.target, target));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -9469,7 +9830,9 @@ class _$SearchParameterImpl extends _SearchParameter {
         const DeepCollectionEquality().hash(target)
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchParameterImplCopyWith<_$SearchParameterImpl> get copyWith =>
@@ -9576,8 +9939,11 @@ abstract class _SearchParameter extends SearchParameter {
   SearchParameterXpathUsage? get xpathUsage;
   @override
   List<Code>? get target;
+
+  /// Create a copy of SearchParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchParameterImplCopyWith<_$SearchParameterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9597,8 +9963,12 @@ mixin _$SearchParameterContact {
   String? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchParameterContact to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchParameterContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchParameterContactCopyWith<SearchParameterContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -9628,6 +9998,8 @@ class _$SearchParameterContactCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchParameterContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9689,6 +10061,8 @@ class __$$SearchParameterContactImplCopyWithImpl<$Res>
       $Res Function(_$SearchParameterContactImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchParameterContact
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9768,7 +10142,7 @@ class _$SearchParameterContactImpl extends _SearchParameterContact {
             const DeepCollectionEquality().equals(other.telecom, telecom));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -9778,7 +10152,9 @@ class _$SearchParameterContactImpl extends _SearchParameterContact {
       name,
       const DeepCollectionEquality().hash(telecom));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchParameterContact
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchParameterContactImplCopyWith<_$SearchParameterContactImpl>
@@ -9816,8 +10192,11 @@ abstract class _SearchParameterContact extends SearchParameterContact {
   String? get name;
   @override
   List<ContactPoint>? get telecom;
+
+  /// Create a copy of SearchParameterContact
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchParameterContactImplCopyWith<_$SearchParameterContactImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
