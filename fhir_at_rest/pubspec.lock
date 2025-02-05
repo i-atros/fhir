@@ -170,8 +170,8 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: CP-909-extend-invoice-to-r5
-      resolved-ref: "860f15e959290fd694eb0519757198570a74362a"
+      ref: HEAD
+      resolved-ref: "737689fe80099e81eda17b6bdc9e7c0b0a33e755"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"

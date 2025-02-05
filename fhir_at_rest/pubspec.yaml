@@ -13,7 +13,6 @@ dependencies:
     git:
       url: https://github.com/i-atros/fhir.git
       path: fhir
-      ref: CP-909-extend-invoice-to-r5
   freezed_annotation: ^2.4.4
   http: ^1.1.0
   json_annotation: 4.9.0

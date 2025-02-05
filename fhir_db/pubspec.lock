@@ -123,7 +123,7 @@ packages:
     description:
       path: fhir
       ref: HEAD
-      resolved-ref: "7e8d47b93d5d82ff81fd593157aebf14b263955b"
+      resolved-ref: "737689fe80099e81eda17b6bdc9e7c0b0a33e755"
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"
