@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'fhir_request.dart';
 
@@ -12,7 +12,7 @@ part of 'fhir_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FhirRequest {
@@ -637,7 +637,9 @@ mixin _$FhirRequest {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FhirRequestCopyWith<FhirRequest> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -667,6 +669,8 @@ class _$FhirRequestCopyWithImpl<$Res, $Val extends FhirRequest>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -707,11 +711,11 @@ class _$FhirRequestCopyWithImpl<$Res, $Val extends FhirRequest>
 }
 
 /// @nodoc
-abstract class _$$_FhirReadRequestCopyWith<$Res>
+abstract class _$$FhirReadRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirReadRequestCopyWith(
-          _$_FhirReadRequest value, $Res Function(_$_FhirReadRequest) then) =
-      __$$_FhirReadRequestCopyWithImpl<$Res>;
+  factory _$$FhirReadRequestImplCopyWith(_$FhirReadRequestImpl value,
+          $Res Function(_$FhirReadRequestImpl) then) =
+      __$$FhirReadRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -727,13 +731,15 @@ abstract class _$$_FhirReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirReadRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirReadRequest>
-    implements _$$_FhirReadRequestCopyWith<$Res> {
-  __$$_FhirReadRequestCopyWithImpl(
-      _$_FhirReadRequest _value, $Res Function(_$_FhirReadRequest) _then)
+class __$$FhirReadRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirReadRequestImpl>
+    implements _$$FhirReadRequestImplCopyWith<$Res> {
+  __$$FhirReadRequestImplCopyWithImpl(
+      _$FhirReadRequestImpl _value, $Res Function(_$FhirReadRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -747,7 +753,7 @@ class __$$_FhirReadRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirReadRequest(
+    return _then(_$FhirReadRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -790,8 +796,8 @@ class __$$_FhirReadRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirReadRequest extends _FhirReadRequest {
-  _$_FhirReadRequest(
+class _$FhirReadRequestImpl extends _FhirReadRequest {
+  _$FhirReadRequestImpl(
       {required this.base,
       required this.type,
       required this.id,
@@ -824,6 +830,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -832,6 +839,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -845,10 +853,10 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirReadRequest &&
+            other is _$FhirReadRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
@@ -874,11 +882,14 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
-      __$$_FhirReadRequestCopyWithImpl<_$_FhirReadRequest>(this, _$identity);
+  _$$FhirReadRequestImplCopyWith<_$FhirReadRequestImpl> get copyWith =>
+      __$$FhirReadRequestImplCopyWithImpl<_$FhirReadRequestImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1532,7 +1543,7 @@ abstract class _FhirReadRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirReadRequest;
+      final Client? client}) = _$FhirReadRequestImpl;
   _FhirReadRequest._() : super._();
 
   Uri get base;
@@ -1550,18 +1561,21 @@ abstract class _FhirReadRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirReadRequestCopyWith<_$_FhirReadRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirReadRequestImplCopyWith<_$FhirReadRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirVReadRequestCopyWith<$Res>
+abstract class _$$FhirVReadRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirVReadRequestCopyWith(
-          _$_FhirVReadRequest value, $Res Function(_$_FhirVReadRequest) then) =
-      __$$_FhirVReadRequestCopyWithImpl<$Res>;
+  factory _$$FhirVReadRequestImplCopyWith(_$FhirVReadRequestImpl value,
+          $Res Function(_$FhirVReadRequestImpl) then) =
+      __$$FhirVReadRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1578,13 +1592,15 @@ abstract class _$$_FhirVReadRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirVReadRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirVReadRequest>
-    implements _$$_FhirVReadRequestCopyWith<$Res> {
-  __$$_FhirVReadRequestCopyWithImpl(
-      _$_FhirVReadRequest _value, $Res Function(_$_FhirVReadRequest) _then)
+class __$$FhirVReadRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirVReadRequestImpl>
+    implements _$$FhirVReadRequestImplCopyWith<$Res> {
+  __$$FhirVReadRequestImplCopyWithImpl(_$FhirVReadRequestImpl _value,
+      $Res Function(_$FhirVReadRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1599,7 +1615,7 @@ class __$$_FhirVReadRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirVReadRequest(
+    return _then(_$FhirVReadRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -1646,8 +1662,8 @@ class __$$_FhirVReadRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirVReadRequest extends _FhirVReadRequest {
-  _$_FhirVReadRequest(
+class _$FhirVReadRequestImpl extends _FhirVReadRequest {
+  _$FhirVReadRequestImpl(
       {required this.base,
       required this.type,
       required this.id,
@@ -1683,6 +1699,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -1691,6 +1708,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -1704,10 +1722,10 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirVReadRequest &&
+            other is _$FhirVReadRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
@@ -1735,11 +1753,14 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
-      __$$_FhirVReadRequestCopyWithImpl<_$_FhirVReadRequest>(this, _$identity);
+  _$$FhirVReadRequestImplCopyWith<_$FhirVReadRequestImpl> get copyWith =>
+      __$$FhirVReadRequestImplCopyWithImpl<_$FhirVReadRequestImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2394,7 +2415,7 @@ abstract class _FhirVReadRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirVReadRequest;
+      final Client? client}) = _$FhirVReadRequestImpl;
   _FhirVReadRequest._() : super._();
 
   Uri get base;
@@ -2413,18 +2434,21 @@ abstract class _FhirVReadRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirVReadRequestCopyWith<_$_FhirVReadRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirVReadRequestImplCopyWith<_$FhirVReadRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirUpdateRequestCopyWith<$Res>
+abstract class _$$FhirUpdateRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirUpdateRequestCopyWith(_$_FhirUpdateRequest value,
-          $Res Function(_$_FhirUpdateRequest) then) =
-      __$$_FhirUpdateRequestCopyWithImpl<$Res>;
+  factory _$$FhirUpdateRequestImplCopyWith(_$FhirUpdateRequestImpl value,
+          $Res Function(_$FhirUpdateRequestImpl) then) =
+      __$$FhirUpdateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2439,13 +2463,15 @@ abstract class _$$_FhirUpdateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirUpdateRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirUpdateRequest>
-    implements _$$_FhirUpdateRequestCopyWith<$Res> {
-  __$$_FhirUpdateRequestCopyWithImpl(
-      _$_FhirUpdateRequest _value, $Res Function(_$_FhirUpdateRequest) _then)
+class __$$FhirUpdateRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirUpdateRequestImpl>
+    implements _$$FhirUpdateRequestImplCopyWith<$Res> {
+  __$$FhirUpdateRequestImplCopyWithImpl(_$FhirUpdateRequestImpl _value,
+      $Res Function(_$FhirUpdateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2458,7 +2484,7 @@ class __$$_FhirUpdateRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirUpdateRequest(
+    return _then(_$FhirUpdateRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -2497,8 +2523,8 @@ class __$$_FhirUpdateRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirUpdateRequest extends _FhirUpdateRequest {
-  _$_FhirUpdateRequest(
+class _$FhirUpdateRequestImpl extends _FhirUpdateRequest {
+  _$FhirUpdateRequestImpl(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -2528,6 +2554,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -2536,6 +2563,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -2549,10 +2577,10 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirUpdateRequest &&
+            other is _$FhirUpdateRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
                 other.resource == resource) &&
@@ -2577,11 +2605,13 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
-      __$$_FhirUpdateRequestCopyWithImpl<_$_FhirUpdateRequest>(
+  _$$FhirUpdateRequestImplCopyWith<_$FhirUpdateRequestImpl> get copyWith =>
+      __$$FhirUpdateRequestImplCopyWithImpl<_$FhirUpdateRequestImpl>(
           this, _$identity);
 
   @override
@@ -3235,7 +3265,7 @@ abstract class _FhirUpdateRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirUpdateRequest;
+      final Client? client}) = _$FhirUpdateRequestImpl;
   _FhirUpdateRequest._() : super._();
 
   Uri get base;
@@ -3252,18 +3282,21 @@ abstract class _FhirUpdateRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirUpdateRequestCopyWith<_$_FhirUpdateRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirUpdateRequestImplCopyWith<_$FhirUpdateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirPatchRequestCopyWith<$Res>
+abstract class _$$FhirPatchRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirPatchRequestCopyWith(
-          _$_FhirPatchRequest value, $Res Function(_$_FhirPatchRequest) then) =
-      __$$_FhirPatchRequestCopyWithImpl<$Res>;
+  factory _$$FhirPatchRequestImplCopyWith(_$FhirPatchRequestImpl value,
+          $Res Function(_$FhirPatchRequestImpl) then) =
+      __$$FhirPatchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3280,13 +3313,15 @@ abstract class _$$_FhirPatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirPatchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirPatchRequest>
-    implements _$$_FhirPatchRequestCopyWith<$Res> {
-  __$$_FhirPatchRequestCopyWithImpl(
-      _$_FhirPatchRequest _value, $Res Function(_$_FhirPatchRequest) _then)
+class __$$FhirPatchRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirPatchRequestImpl>
+    implements _$$FhirPatchRequestImplCopyWith<$Res> {
+  __$$FhirPatchRequestImplCopyWithImpl(_$FhirPatchRequestImpl _value,
+      $Res Function(_$FhirPatchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3301,7 +3336,7 @@ class __$$_FhirPatchRequestCopyWithImpl<$Res>
     Object? patchOperations = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirPatchRequest(
+    return _then(_$FhirPatchRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -3348,8 +3383,8 @@ class __$$_FhirPatchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirPatchRequest extends _FhirPatchRequest {
-  _$_FhirPatchRequest(
+class _$FhirPatchRequestImpl extends _FhirPatchRequest {
+  _$FhirPatchRequestImpl(
       {required this.base,
       required this.type,
       required this.id,
@@ -3384,6 +3419,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -3392,6 +3428,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -3400,6 +3437,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   @JsonKey()
   List<String> get patchOperations {
+    if (_patchOperations is EqualUnmodifiableListView) return _patchOperations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_patchOperations);
   }
@@ -3413,10 +3451,10 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirPatchRequest &&
+            other is _$FhirPatchRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
@@ -3445,11 +3483,14 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       const DeepCollectionEquality().hash(_patchOperations),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
-      __$$_FhirPatchRequestCopyWithImpl<_$_FhirPatchRequest>(this, _$identity);
+  _$$FhirPatchRequestImplCopyWith<_$FhirPatchRequestImpl> get copyWith =>
+      __$$FhirPatchRequestImplCopyWithImpl<_$FhirPatchRequestImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -4104,7 +4145,7 @@ abstract class _FhirPatchRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final List<String> patchOperations,
-      final Client? client}) = _$_FhirPatchRequest;
+      final Client? client}) = _$FhirPatchRequestImpl;
   _FhirPatchRequest._() : super._();
 
   Uri get base;
@@ -4123,18 +4164,21 @@ abstract class _FhirPatchRequest extends FhirRequest {
   List<String> get patchOperations;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirPatchRequestCopyWith<_$_FhirPatchRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirPatchRequestImplCopyWith<_$FhirPatchRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirDeleteRequestCopyWith<$Res>
+abstract class _$$FhirDeleteRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirDeleteRequestCopyWith(_$_FhirDeleteRequest value,
-          $Res Function(_$_FhirDeleteRequest) then) =
-      __$$_FhirDeleteRequestCopyWithImpl<$Res>;
+  factory _$$FhirDeleteRequestImplCopyWith(_$FhirDeleteRequestImpl value,
+          $Res Function(_$FhirDeleteRequestImpl) then) =
+      __$$FhirDeleteRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4150,13 +4194,15 @@ abstract class _$$_FhirDeleteRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirDeleteRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirDeleteRequest>
-    implements _$$_FhirDeleteRequestCopyWith<$Res> {
-  __$$_FhirDeleteRequestCopyWithImpl(
-      _$_FhirDeleteRequest _value, $Res Function(_$_FhirDeleteRequest) _then)
+class __$$FhirDeleteRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirDeleteRequestImpl>
+    implements _$$FhirDeleteRequestImplCopyWith<$Res> {
+  __$$FhirDeleteRequestImplCopyWithImpl(_$FhirDeleteRequestImpl _value,
+      $Res Function(_$FhirDeleteRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4170,7 +4216,7 @@ class __$$_FhirDeleteRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirDeleteRequest(
+    return _then(_$FhirDeleteRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -4213,8 +4259,8 @@ class __$$_FhirDeleteRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirDeleteRequest extends _FhirDeleteRequest {
-  _$_FhirDeleteRequest(
+class _$FhirDeleteRequestImpl extends _FhirDeleteRequest {
+  _$FhirDeleteRequestImpl(
       {required this.base,
       required this.type,
       required this.id,
@@ -4247,6 +4293,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -4255,6 +4302,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -4268,10 +4316,10 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirDeleteRequest &&
+            other is _$FhirDeleteRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
@@ -4297,11 +4345,13 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
-      __$$_FhirDeleteRequestCopyWithImpl<_$_FhirDeleteRequest>(
+  _$$FhirDeleteRequestImplCopyWith<_$FhirDeleteRequestImpl> get copyWith =>
+      __$$FhirDeleteRequestImplCopyWithImpl<_$FhirDeleteRequestImpl>(
           this, _$identity);
 
   @override
@@ -4956,7 +5006,7 @@ abstract class _FhirDeleteRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirDeleteRequest;
+      final Client? client}) = _$FhirDeleteRequestImpl;
   _FhirDeleteRequest._() : super._();
 
   Uri get base;
@@ -4974,18 +5024,21 @@ abstract class _FhirDeleteRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirDeleteRequestCopyWith<_$_FhirDeleteRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirDeleteRequestImplCopyWith<_$FhirDeleteRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirCreateRequestCopyWith<$Res>
+abstract class _$$FhirCreateRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirCreateRequestCopyWith(_$_FhirCreateRequest value,
-          $Res Function(_$_FhirCreateRequest) then) =
-      __$$_FhirCreateRequestCopyWithImpl<$Res>;
+  factory _$$FhirCreateRequestImplCopyWith(_$FhirCreateRequestImpl value,
+          $Res Function(_$FhirCreateRequestImpl) then) =
+      __$$FhirCreateRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5000,13 +5053,15 @@ abstract class _$$_FhirCreateRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirCreateRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirCreateRequest>
-    implements _$$_FhirCreateRequestCopyWith<$Res> {
-  __$$_FhirCreateRequestCopyWithImpl(
-      _$_FhirCreateRequest _value, $Res Function(_$_FhirCreateRequest) _then)
+class __$$FhirCreateRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirCreateRequestImpl>
+    implements _$$FhirCreateRequestImplCopyWith<$Res> {
+  __$$FhirCreateRequestImplCopyWithImpl(_$FhirCreateRequestImpl _value,
+      $Res Function(_$FhirCreateRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5019,7 +5074,7 @@ class __$$_FhirCreateRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirCreateRequest(
+    return _then(_$FhirCreateRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -5058,8 +5113,8 @@ class __$$_FhirCreateRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirCreateRequest extends _FhirCreateRequest {
-  _$_FhirCreateRequest(
+class _$FhirCreateRequestImpl extends _FhirCreateRequest {
+  _$FhirCreateRequestImpl(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -5089,6 +5144,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -5097,6 +5153,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -5110,10 +5167,10 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirCreateRequest &&
+            other is _$FhirCreateRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
                 other.resource == resource) &&
@@ -5138,11 +5195,13 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
-      __$$_FhirCreateRequestCopyWithImpl<_$_FhirCreateRequest>(
+  _$$FhirCreateRequestImplCopyWith<_$FhirCreateRequestImpl> get copyWith =>
+      __$$FhirCreateRequestImplCopyWithImpl<_$FhirCreateRequestImpl>(
           this, _$identity);
 
   @override
@@ -5796,7 +5855,7 @@ abstract class _FhirCreateRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirCreateRequest;
+      final Client? client}) = _$FhirCreateRequestImpl;
   _FhirCreateRequest._() : super._();
 
   Uri get base;
@@ -5813,18 +5872,21 @@ abstract class _FhirCreateRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirCreateRequestCopyWith<_$_FhirCreateRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirCreateRequestImplCopyWith<_$FhirCreateRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirSearchRequestCopyWith<$Res>
+abstract class _$$FhirSearchRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirSearchRequestCopyWith(_$_FhirSearchRequest value,
-          $Res Function(_$_FhirSearchRequest) then) =
-      __$$_FhirSearchRequestCopyWithImpl<$Res>;
+  factory _$$FhirSearchRequestImplCopyWith(_$FhirSearchRequestImpl value,
+          $Res Function(_$FhirSearchRequestImpl) then) =
+      __$$FhirSearchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5841,13 +5903,15 @@ abstract class _$$_FhirSearchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirSearchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirSearchRequest>
-    implements _$$_FhirSearchRequestCopyWith<$Res> {
-  __$$_FhirSearchRequestCopyWithImpl(
-      _$_FhirSearchRequest _value, $Res Function(_$_FhirSearchRequest) _then)
+class __$$FhirSearchRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirSearchRequestImpl>
+    implements _$$FhirSearchRequestImplCopyWith<$Res> {
+  __$$FhirSearchRequestImplCopyWithImpl(_$FhirSearchRequestImpl _value,
+      $Res Function(_$FhirSearchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5862,7 +5926,7 @@ class __$$_FhirSearchRequestCopyWithImpl<$Res>
     Object? restfulRequest = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirSearchRequest(
+    return _then(_$FhirSearchRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -5909,8 +5973,8 @@ class __$$_FhirSearchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirSearchRequest extends _FhirSearchRequest {
-  _$_FhirSearchRequest(
+class _$FhirSearchRequestImpl extends _FhirSearchRequest {
+  _$FhirSearchRequestImpl(
       {required this.base,
       required this.type,
       this.pretty = false,
@@ -5942,6 +6006,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -5950,6 +6015,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -5969,10 +6035,10 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirSearchRequest &&
+            other is _$FhirSearchRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
@@ -6001,11 +6067,13 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       restfulRequest,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
-      __$$_FhirSearchRequestCopyWithImpl<_$_FhirSearchRequest>(
+  _$$FhirSearchRequestImplCopyWith<_$FhirSearchRequestImpl> get copyWith =>
+      __$$FhirSearchRequestImplCopyWithImpl<_$FhirSearchRequestImpl>(
           this, _$identity);
 
   @override
@@ -6661,7 +6729,7 @@ abstract class _FhirSearchRequest extends FhirRequest {
       final List<String> parameters,
       final bool usePost,
       final RestfulRequest restfulRequest,
-      final Client? client}) = _$_FhirSearchRequest;
+      final Client? client}) = _$FhirSearchRequestImpl;
   _FhirSearchRequest._() : super._();
 
   Uri get base;
@@ -6680,18 +6748,21 @@ abstract class _FhirSearchRequest extends FhirRequest {
   RestfulRequest get restfulRequest;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirSearchRequestCopyWith<_$_FhirSearchRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirSearchRequestImplCopyWith<_$FhirSearchRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirSearchAllRequestCopyWith<$Res>
+abstract class _$$FhirSearchAllRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirSearchAllRequestCopyWith(_$_FhirSearchAllRequest value,
-          $Res Function(_$_FhirSearchAllRequest) then) =
-      __$$_FhirSearchAllRequestCopyWithImpl<$Res>;
+  factory _$$FhirSearchAllRequestImplCopyWith(_$FhirSearchAllRequestImpl value,
+          $Res Function(_$FhirSearchAllRequestImpl) then) =
+      __$$FhirSearchAllRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6705,13 +6776,15 @@ abstract class _$$_FhirSearchAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirSearchAllRequest>
-    implements _$$_FhirSearchAllRequestCopyWith<$Res> {
-  __$$_FhirSearchAllRequestCopyWithImpl(_$_FhirSearchAllRequest _value,
-      $Res Function(_$_FhirSearchAllRequest) _then)
+class __$$FhirSearchAllRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirSearchAllRequestImpl>
+    implements _$$FhirSearchAllRequestImplCopyWith<$Res> {
+  __$$FhirSearchAllRequestImplCopyWithImpl(_$FhirSearchAllRequestImpl _value,
+      $Res Function(_$FhirSearchAllRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6723,7 +6796,7 @@ class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirSearchAllRequest(
+    return _then(_$FhirSearchAllRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -6758,8 +6831,8 @@ class __$$_FhirSearchAllRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
-  _$_FhirSearchAllRequest(
+class _$FhirSearchAllRequestImpl extends _FhirSearchAllRequest {
+  _$FhirSearchAllRequestImpl(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -6786,6 +6859,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -6794,6 +6868,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -6807,10 +6882,10 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirSearchAllRequest &&
+            other is _$FhirSearchAllRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
             (identical(other.summary, summary) || other.summary == summary) &&
@@ -6832,12 +6907,15 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
-      __$$_FhirSearchAllRequestCopyWithImpl<_$_FhirSearchAllRequest>(
-          this, _$identity);
+  _$$FhirSearchAllRequestImplCopyWith<_$FhirSearchAllRequestImpl>
+      get copyWith =>
+          __$$FhirSearchAllRequestImplCopyWithImpl<_$FhirSearchAllRequestImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -7489,7 +7567,7 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirSearchAllRequest;
+      final Client? client}) = _$FhirSearchAllRequestImpl;
   _FhirSearchAllRequest._() : super._();
 
   Uri get base;
@@ -7505,18 +7583,22 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirSearchAllRequestCopyWith<_$_FhirSearchAllRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirSearchAllRequestImplCopyWith<_$FhirSearchAllRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirCapabilitiesRequestCopyWith<$Res>
+abstract class _$$FhirCapabilitiesRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirCapabilitiesRequestCopyWith(_$_FhirCapabilitiesRequest value,
-          $Res Function(_$_FhirCapabilitiesRequest) then) =
-      __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>;
+  factory _$$FhirCapabilitiesRequestImplCopyWith(
+          _$FhirCapabilitiesRequestImpl value,
+          $Res Function(_$FhirCapabilitiesRequestImpl) then) =
+      __$$FhirCapabilitiesRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7531,13 +7613,16 @@ abstract class _$$_FhirCapabilitiesRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirCapabilitiesRequest>
-    implements _$$_FhirCapabilitiesRequestCopyWith<$Res> {
-  __$$_FhirCapabilitiesRequestCopyWithImpl(_$_FhirCapabilitiesRequest _value,
-      $Res Function(_$_FhirCapabilitiesRequest) _then)
+class __$$FhirCapabilitiesRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirCapabilitiesRequestImpl>
+    implements _$$FhirCapabilitiesRequestImplCopyWith<$Res> {
+  __$$FhirCapabilitiesRequestImplCopyWithImpl(
+      _$FhirCapabilitiesRequestImpl _value,
+      $Res Function(_$FhirCapabilitiesRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7550,7 +7635,7 @@ class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? mode = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirCapabilitiesRequest(
+    return _then(_$FhirCapabilitiesRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -7589,8 +7674,8 @@ class __$$_FhirCapabilitiesRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
-  _$_FhirCapabilitiesRequest(
+class _$FhirCapabilitiesRequestImpl extends _FhirCapabilitiesRequest {
+  _$FhirCapabilitiesRequestImpl(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -7618,6 +7703,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -7626,6 +7712,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -7642,10 +7729,10 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirCapabilitiesRequest &&
+            other is _$FhirCapabilitiesRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
             (identical(other.summary, summary) || other.summary == summary) &&
@@ -7669,13 +7756,14 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       mode,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
-      get copyWith =>
-          __$$_FhirCapabilitiesRequestCopyWithImpl<_$_FhirCapabilitiesRequest>(
-              this, _$identity);
+  _$$FhirCapabilitiesRequestImplCopyWith<_$FhirCapabilitiesRequestImpl>
+      get copyWith => __$$FhirCapabilitiesRequestImplCopyWithImpl<
+          _$FhirCapabilitiesRequestImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -8328,7 +8416,7 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       final Mode mode,
-      final Client? client}) = _$_FhirCapabilitiesRequest;
+      final Client? client}) = _$FhirCapabilitiesRequestImpl;
   _FhirCapabilitiesRequest._() : super._();
 
   Uri get base;
@@ -8345,18 +8433,22 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
   Mode get mode;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirCapabilitiesRequestCopyWith<_$_FhirCapabilitiesRequest>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirCapabilitiesRequestImplCopyWith<_$FhirCapabilitiesRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirTransactionRequestCopyWith<$Res>
+abstract class _$$FhirTransactionRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirTransactionRequestCopyWith(_$_FhirTransactionRequest value,
-          $Res Function(_$_FhirTransactionRequest) then) =
-      __$$_FhirTransactionRequestCopyWithImpl<$Res>;
+  factory _$$FhirTransactionRequestImplCopyWith(
+          _$FhirTransactionRequestImpl value,
+          $Res Function(_$FhirTransactionRequestImpl) then) =
+      __$$FhirTransactionRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8373,13 +8465,16 @@ abstract class _$$_FhirTransactionRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirTransactionRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirTransactionRequest>
-    implements _$$_FhirTransactionRequestCopyWith<$Res> {
-  __$$_FhirTransactionRequestCopyWithImpl(_$_FhirTransactionRequest _value,
-      $Res Function(_$_FhirTransactionRequest) _then)
+class __$$FhirTransactionRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirTransactionRequestImpl>
+    implements _$$FhirTransactionRequestImplCopyWith<$Res> {
+  __$$FhirTransactionRequestImplCopyWithImpl(
+      _$FhirTransactionRequestImpl _value,
+      $Res Function(_$FhirTransactionRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8392,7 +8487,7 @@ class __$$_FhirTransactionRequestCopyWithImpl<$Res>
     Object? bundle = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirTransactionRequest(
+    return _then(_$FhirTransactionRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -8428,6 +8523,8 @@ class __$$_FhirTransactionRequestCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
@@ -8439,8 +8536,8 @@ class __$$_FhirTransactionRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirTransactionRequest extends _FhirTransactionRequest {
-  _$_FhirTransactionRequest(
+class _$FhirTransactionRequestImpl extends _FhirTransactionRequest {
+  _$FhirTransactionRequestImpl(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -8468,6 +8565,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -8476,6 +8574,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -8491,10 +8590,10 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirTransactionRequest &&
+            other is _$FhirTransactionRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
             (identical(other.summary, summary) || other.summary == summary) &&
@@ -8518,12 +8617,14 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       bundle,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
-      __$$_FhirTransactionRequestCopyWithImpl<_$_FhirTransactionRequest>(
-          this, _$identity);
+  _$$FhirTransactionRequestImplCopyWith<_$FhirTransactionRequestImpl>
+      get copyWith => __$$FhirTransactionRequestImplCopyWithImpl<
+          _$FhirTransactionRequestImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -9176,7 +9277,7 @@ abstract class _FhirTransactionRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       required final Bundle bundle,
-      final Client? client}) = _$_FhirTransactionRequest;
+      final Client? client}) = _$FhirTransactionRequestImpl;
   _FhirTransactionRequest._() : super._();
 
   Uri get base;
@@ -9193,18 +9294,21 @@ abstract class _FhirTransactionRequest extends FhirRequest {
   Bundle get bundle;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirTransactionRequestCopyWith<_$_FhirTransactionRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirTransactionRequestImplCopyWith<_$FhirTransactionRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirBatchRequestCopyWith<$Res>
+abstract class _$$FhirBatchRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirBatchRequestCopyWith(
-          _$_FhirBatchRequest value, $Res Function(_$_FhirBatchRequest) then) =
-      __$$_FhirBatchRequestCopyWithImpl<$Res>;
+  factory _$$FhirBatchRequestImplCopyWith(_$FhirBatchRequestImpl value,
+          $Res Function(_$FhirBatchRequestImpl) then) =
+      __$$FhirBatchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9221,13 +9325,15 @@ abstract class _$$_FhirBatchRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirBatchRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirBatchRequest>
-    implements _$$_FhirBatchRequestCopyWith<$Res> {
-  __$$_FhirBatchRequestCopyWithImpl(
-      _$_FhirBatchRequest _value, $Res Function(_$_FhirBatchRequest) _then)
+class __$$FhirBatchRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirBatchRequestImpl>
+    implements _$$FhirBatchRequestImplCopyWith<$Res> {
+  __$$FhirBatchRequestImplCopyWithImpl(_$FhirBatchRequestImpl _value,
+      $Res Function(_$FhirBatchRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9240,7 +9346,7 @@ class __$$_FhirBatchRequestCopyWithImpl<$Res>
     Object? bundle = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirBatchRequest(
+    return _then(_$FhirBatchRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -9276,6 +9382,8 @@ class __$$_FhirBatchRequestCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
@@ -9287,8 +9395,8 @@ class __$$_FhirBatchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirBatchRequest extends _FhirBatchRequest {
-  _$_FhirBatchRequest(
+class _$FhirBatchRequestImpl extends _FhirBatchRequest {
+  _$FhirBatchRequestImpl(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -9316,6 +9424,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -9324,6 +9433,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -9339,10 +9449,10 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirBatchRequest &&
+            other is _$FhirBatchRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
             (identical(other.summary, summary) || other.summary == summary) &&
@@ -9366,11 +9476,14 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       bundle,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
-      __$$_FhirBatchRequestCopyWithImpl<_$_FhirBatchRequest>(this, _$identity);
+  _$$FhirBatchRequestImplCopyWith<_$FhirBatchRequestImpl> get copyWith =>
+      __$$FhirBatchRequestImplCopyWithImpl<_$FhirBatchRequestImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -10023,7 +10136,7 @@ abstract class _FhirBatchRequest extends FhirRequest {
       final List<String> elements,
       final List<String> parameters,
       required final Bundle bundle,
-      final Client? client}) = _$_FhirBatchRequest;
+      final Client? client}) = _$FhirBatchRequestImpl;
   _FhirBatchRequest._() : super._();
 
   Uri get base;
@@ -10040,18 +10153,21 @@ abstract class _FhirBatchRequest extends FhirRequest {
   Bundle get bundle;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirBatchRequestCopyWith<_$_FhirBatchRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirBatchRequestImplCopyWith<_$FhirBatchRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirHistoryRequestCopyWith<$Res>
+abstract class _$$FhirHistoryRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirHistoryRequestCopyWith(_$_FhirHistoryRequest value,
-          $Res Function(_$_FhirHistoryRequest) then) =
-      __$$_FhirHistoryRequestCopyWithImpl<$Res>;
+  factory _$$FhirHistoryRequestImplCopyWith(_$FhirHistoryRequestImpl value,
+          $Res Function(_$FhirHistoryRequestImpl) then) =
+      __$$FhirHistoryRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10071,13 +10187,15 @@ abstract class _$$_FhirHistoryRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirHistoryRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirHistoryRequest>
-    implements _$$_FhirHistoryRequestCopyWith<$Res> {
-  __$$_FhirHistoryRequestCopyWithImpl(
-      _$_FhirHistoryRequest _value, $Res Function(_$_FhirHistoryRequest) _then)
+class __$$FhirHistoryRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirHistoryRequestImpl>
+    implements _$$FhirHistoryRequestImplCopyWith<$Res> {
+  __$$FhirHistoryRequestImplCopyWithImpl(_$FhirHistoryRequestImpl _value,
+      $Res Function(_$FhirHistoryRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10095,7 +10213,7 @@ class __$$_FhirHistoryRequestCopyWithImpl<$Res>
     Object? reference = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirHistoryRequest(
+    return _then(_$FhirHistoryRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -10154,8 +10272,8 @@ class __$$_FhirHistoryRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirHistoryRequest extends _FhirHistoryRequest {
-  _$_FhirHistoryRequest(
+class _$FhirHistoryRequestImpl extends _FhirHistoryRequest {
+  _$FhirHistoryRequestImpl(
       {required this.base,
       required this.type,
       required this.id,
@@ -10192,6 +10310,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -10200,6 +10319,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -10221,10 +10341,10 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirHistoryRequest &&
+            other is _$FhirHistoryRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
@@ -10259,11 +10379,13 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       reference,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
-      __$$_FhirHistoryRequestCopyWithImpl<_$_FhirHistoryRequest>(
+  _$$FhirHistoryRequestImplCopyWith<_$FhirHistoryRequestImpl> get copyWith =>
+      __$$FhirHistoryRequestImplCopyWithImpl<_$FhirHistoryRequestImpl>(
           this, _$identity);
 
   @override
@@ -10922,7 +11044,7 @@ abstract class _FhirHistoryRequest extends FhirRequest {
       final Instant? since,
       final FhirDateTime? at,
       final String? reference,
-      final Client? client}) = _$_FhirHistoryRequest;
+      final Client? client}) = _$FhirHistoryRequestImpl;
   _FhirHistoryRequest._() : super._();
 
   Uri get base;
@@ -10944,18 +11066,22 @@ abstract class _FhirHistoryRequest extends FhirRequest {
   String? get reference;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirHistoryRequestCopyWith<_$_FhirHistoryRequest> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirHistoryRequestImplCopyWith<_$FhirHistoryRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirHistoryTypeRequestCopyWith<$Res>
+abstract class _$$FhirHistoryTypeRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirHistoryTypeRequestCopyWith(_$_FhirHistoryTypeRequest value,
-          $Res Function(_$_FhirHistoryTypeRequest) then) =
-      __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>;
+  factory _$$FhirHistoryTypeRequestImplCopyWith(
+          _$FhirHistoryTypeRequestImpl value,
+          $Res Function(_$FhirHistoryTypeRequestImpl) then) =
+      __$$FhirHistoryTypeRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10974,13 +11100,16 @@ abstract class _$$_FhirHistoryTypeRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirHistoryTypeRequest>
-    implements _$$_FhirHistoryTypeRequestCopyWith<$Res> {
-  __$$_FhirHistoryTypeRequestCopyWithImpl(_$_FhirHistoryTypeRequest _value,
-      $Res Function(_$_FhirHistoryTypeRequest) _then)
+class __$$FhirHistoryTypeRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirHistoryTypeRequestImpl>
+    implements _$$FhirHistoryTypeRequestImplCopyWith<$Res> {
+  __$$FhirHistoryTypeRequestImplCopyWithImpl(
+      _$FhirHistoryTypeRequestImpl _value,
+      $Res Function(_$FhirHistoryTypeRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10997,7 +11126,7 @@ class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? reference = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirHistoryTypeRequest(
+    return _then(_$FhirHistoryTypeRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -11052,8 +11181,8 @@ class __$$_FhirHistoryTypeRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
-  _$_FhirHistoryTypeRequest(
+class _$FhirHistoryTypeRequestImpl extends _FhirHistoryTypeRequest {
+  _$FhirHistoryTypeRequestImpl(
       {required this.base,
       required this.type,
       this.pretty = false,
@@ -11087,6 +11216,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -11095,6 +11225,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -11116,10 +11247,10 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirHistoryTypeRequest &&
+            other is _$FhirHistoryTypeRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
@@ -11152,12 +11283,14 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       reference,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
-      __$$_FhirHistoryTypeRequestCopyWithImpl<_$_FhirHistoryTypeRequest>(
-          this, _$identity);
+  _$$FhirHistoryTypeRequestImplCopyWith<_$FhirHistoryTypeRequestImpl>
+      get copyWith => __$$FhirHistoryTypeRequestImplCopyWithImpl<
+          _$FhirHistoryTypeRequestImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -11814,7 +11947,7 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
       final Instant? since,
       final FhirDateTime? at,
       final String? reference,
-      final Client? client}) = _$_FhirHistoryTypeRequest;
+      final Client? client}) = _$FhirHistoryTypeRequestImpl;
   _FhirHistoryTypeRequest._() : super._();
 
   Uri get base;
@@ -11835,18 +11968,22 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
   String? get reference;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirHistoryTypeRequestCopyWith<_$_FhirHistoryTypeRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirHistoryTypeRequestImplCopyWith<_$FhirHistoryTypeRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirHistoryAllRequestCopyWith<$Res>
+abstract class _$$FhirHistoryAllRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirHistoryAllRequestCopyWith(_$_FhirHistoryAllRequest value,
-          $Res Function(_$_FhirHistoryAllRequest) then) =
-      __$$_FhirHistoryAllRequestCopyWithImpl<$Res>;
+  factory _$$FhirHistoryAllRequestImplCopyWith(
+          _$FhirHistoryAllRequestImpl value,
+          $Res Function(_$FhirHistoryAllRequestImpl) then) =
+      __$$FhirHistoryAllRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11864,13 +12001,15 @@ abstract class _$$_FhirHistoryAllRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirHistoryAllRequest>
-    implements _$$_FhirHistoryAllRequestCopyWith<$Res> {
-  __$$_FhirHistoryAllRequestCopyWithImpl(_$_FhirHistoryAllRequest _value,
-      $Res Function(_$_FhirHistoryAllRequest) _then)
+class __$$FhirHistoryAllRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirHistoryAllRequestImpl>
+    implements _$$FhirHistoryAllRequestImplCopyWith<$Res> {
+  __$$FhirHistoryAllRequestImplCopyWithImpl(_$FhirHistoryAllRequestImpl _value,
+      $Res Function(_$FhirHistoryAllRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11886,7 +12025,7 @@ class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? reference = freezed,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirHistoryAllRequest(
+    return _then(_$FhirHistoryAllRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -11937,8 +12076,8 @@ class __$$_FhirHistoryAllRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
-  _$_FhirHistoryAllRequest(
+class _$FhirHistoryAllRequestImpl extends _FhirHistoryAllRequest {
+  _$FhirHistoryAllRequestImpl(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -11969,6 +12108,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -11977,6 +12117,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -11998,10 +12139,10 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirHistoryAllRequest &&
+            other is _$FhirHistoryAllRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
             (identical(other.summary, summary) || other.summary == summary) &&
@@ -12032,12 +12173,14 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       reference,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
-      __$$_FhirHistoryAllRequestCopyWithImpl<_$_FhirHistoryAllRequest>(
-          this, _$identity);
+  _$$FhirHistoryAllRequestImplCopyWith<_$FhirHistoryAllRequestImpl>
+      get copyWith => __$$FhirHistoryAllRequestImplCopyWithImpl<
+          _$FhirHistoryAllRequestImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -12693,7 +12836,7 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
       final Instant? since,
       final FhirDateTime? at,
       final String? reference,
-      final Client? client}) = _$_FhirHistoryAllRequest;
+      final Client? client}) = _$FhirHistoryAllRequestImpl;
   _FhirHistoryAllRequest._() : super._();
 
   Uri get base;
@@ -12713,18 +12856,21 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
   String? get reference;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirHistoryAllRequestCopyWith<_$_FhirHistoryAllRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirHistoryAllRequestImplCopyWith<_$FhirHistoryAllRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirOperationRequestCopyWith<$Res>
+abstract class _$$FhirOperationRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirOperationRequestCopyWith(_$_FhirOperationRequest value,
-          $Res Function(_$_FhirOperationRequest) then) =
-      __$$_FhirOperationRequestCopyWithImpl<$Res>;
+  factory _$$FhirOperationRequestImplCopyWith(_$FhirOperationRequestImpl value,
+          $Res Function(_$FhirOperationRequestImpl) then) =
+      __$$FhirOperationRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -12744,13 +12890,15 @@ abstract class _$$_FhirOperationRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirOperationRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirOperationRequest>
-    implements _$$_FhirOperationRequestCopyWith<$Res> {
-  __$$_FhirOperationRequestCopyWithImpl(_$_FhirOperationRequest _value,
-      $Res Function(_$_FhirOperationRequest) _then)
+class __$$FhirOperationRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirOperationRequestImpl>
+    implements _$$FhirOperationRequestImplCopyWith<$Res> {
+  __$$FhirOperationRequestImplCopyWithImpl(_$FhirOperationRequestImpl _value,
+      $Res Function(_$FhirOperationRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12768,7 +12916,7 @@ class __$$_FhirOperationRequestCopyWithImpl<$Res>
     Object? useFormData = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirOperationRequest(
+    return _then(_$FhirOperationRequestImpl(
       base: null == base
           ? _value.base
           : base // ignore: cast_nullable_to_non_nullable
@@ -12827,8 +12975,8 @@ class __$$_FhirOperationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirOperationRequest extends _FhirOperationRequest {
-  _$_FhirOperationRequest(
+class _$FhirOperationRequestImpl extends _FhirOperationRequest {
+  _$FhirOperationRequestImpl(
       {required this.base,
       this.type,
       this.id,
@@ -12866,6 +13014,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -12874,6 +13023,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -12882,6 +13032,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   @JsonKey()
   Map<String, dynamic> get fhirParameter {
+    if (_fhirParameter is EqualUnmodifiableMapView) return _fhirParameter;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(_fhirParameter);
   }
@@ -12903,10 +13054,10 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirOperationRequest &&
+            other is _$FhirOperationRequestImpl &&
             (identical(other.base, base) || other.base == base) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.id, id) || other.id == id) &&
@@ -12943,12 +13094,15 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       useFormData,
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
-      __$$_FhirOperationRequestCopyWithImpl<_$_FhirOperationRequest>(
-          this, _$identity);
+  _$$FhirOperationRequestImplCopyWith<_$FhirOperationRequestImpl>
+      get copyWith =>
+          __$$FhirOperationRequestImplCopyWithImpl<_$FhirOperationRequestImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -13642,7 +13796,7 @@ abstract class _FhirOperationRequest extends FhirRequest {
       required final String operation,
       final bool usePost,
       final bool useFormData,
-      final Client? client}) = _$_FhirOperationRequest;
+      final Client? client}) = _$FhirOperationRequestImpl;
   _FhirOperationRequest._() : super._();
 
   Uri get base;
@@ -13664,19 +13818,22 @@ abstract class _FhirOperationRequest extends FhirRequest {
   bool get useFormData;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirOperationRequestCopyWith<_$_FhirOperationRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirOperationRequestImplCopyWith<_$FhirOperationRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FhirReadBundlePageRequestCopyWith<$Res>
+abstract class _$$FhirReadBundlePageRequestImplCopyWith<$Res>
     implements $FhirRequestCopyWith<$Res> {
-  factory _$$_FhirReadBundlePageRequestCopyWith(
-          _$_FhirReadBundlePageRequest value,
-          $Res Function(_$_FhirReadBundlePageRequest) then) =
-      __$$_FhirReadBundlePageRequestCopyWithImpl<$Res>;
+  factory _$$FhirReadBundlePageRequestImplCopyWith(
+          _$FhirReadBundlePageRequestImpl value,
+          $Res Function(_$FhirReadBundlePageRequestImpl) then) =
+      __$$FhirReadBundlePageRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -13693,14 +13850,16 @@ abstract class _$$_FhirReadBundlePageRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirReadBundlePageRequestCopyWithImpl<$Res>
-    extends _$FhirRequestCopyWithImpl<$Res, _$_FhirReadBundlePageRequest>
-    implements _$$_FhirReadBundlePageRequestCopyWith<$Res> {
-  __$$_FhirReadBundlePageRequestCopyWithImpl(
-      _$_FhirReadBundlePageRequest _value,
-      $Res Function(_$_FhirReadBundlePageRequest) _then)
+class __$$FhirReadBundlePageRequestImplCopyWithImpl<$Res>
+    extends _$FhirRequestCopyWithImpl<$Res, _$FhirReadBundlePageRequestImpl>
+    implements _$$FhirReadBundlePageRequestImplCopyWith<$Res> {
+  __$$FhirReadBundlePageRequestImplCopyWithImpl(
+      _$FhirReadBundlePageRequestImpl _value,
+      $Res Function(_$FhirReadBundlePageRequestImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13713,7 +13872,7 @@ class __$$_FhirReadBundlePageRequestCopyWithImpl<$Res>
     Object? parameters = null,
     Object? client = freezed,
   }) {
-    return _then(_$_FhirReadBundlePageRequest(
+    return _then(_$FhirReadBundlePageRequestImpl(
       bundle: null == bundle
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
@@ -13749,6 +13908,8 @@ class __$$_FhirReadBundlePageRequestCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BundleCopyWith<$Res> get bundle {
@@ -13760,8 +13921,8 @@ class __$$_FhirReadBundlePageRequestCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
-  _$_FhirReadBundlePageRequest(
+class _$FhirReadBundlePageRequestImpl extends _FhirReadBundlePageRequest {
+  _$FhirReadBundlePageRequestImpl(
       {required this.bundle,
       required this.page,
       this.pretty = false,
@@ -13791,6 +13952,7 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
   @override
   @JsonKey()
   List<String> get elements {
+    if (_elements is EqualUnmodifiableListView) return _elements;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_elements);
   }
@@ -13799,6 +13961,7 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
   @override
   @JsonKey()
   List<String> get parameters {
+    if (_parameters is EqualUnmodifiableListView) return _parameters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_parameters);
   }
@@ -13812,10 +13975,10 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirReadBundlePageRequest &&
+            other is _$FhirReadBundlePageRequestImpl &&
             (identical(other.bundle, bundle) || other.bundle == bundle) &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.pretty, pretty) || other.pretty == pretty) &&
@@ -13839,12 +14002,14 @@ class _$_FhirReadBundlePageRequest extends _FhirReadBundlePageRequest {
       const DeepCollectionEquality().hash(_parameters),
       client);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirReadBundlePageRequestCopyWith<_$_FhirReadBundlePageRequest>
-      get copyWith => __$$_FhirReadBundlePageRequestCopyWithImpl<
-          _$_FhirReadBundlePageRequest>(this, _$identity);
+  _$$FhirReadBundlePageRequestImplCopyWith<_$FhirReadBundlePageRequestImpl>
+      get copyWith => __$$FhirReadBundlePageRequestImplCopyWithImpl<
+          _$FhirReadBundlePageRequestImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -14497,7 +14662,7 @@ abstract class _FhirReadBundlePageRequest extends FhirRequest {
       final String format,
       final List<String> elements,
       final List<String> parameters,
-      final Client? client}) = _$_FhirReadBundlePageRequest;
+      final Client? client}) = _$FhirReadBundlePageRequestImpl;
   _FhirReadBundlePageRequest._() : super._();
 
   Bundle get bundle;
@@ -14514,8 +14679,11 @@ abstract class _FhirReadBundlePageRequest extends FhirRequest {
   List<String> get parameters;
   @override
   Client? get client;
+
+  /// Create a copy of FhirRequest
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$$_FhirReadBundlePageRequestCopyWith<_$_FhirReadBundlePageRequest>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FhirReadBundlePageRequestImplCopyWith<_$FhirReadBundlePageRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
