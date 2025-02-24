@@ -1361,7 +1361,8 @@ _$MedicationAdministrationPerformerImpl
               ? null
               : CodeableConcept.fromJson(
                   json['function'] as Map<String, dynamic>),
-          actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
+          actor:
+              CodeableReference.fromJson(json['actor'] as Map<String, dynamic>),
         );
 
 Map<String, dynamic> _$$MedicationAdministrationPerformerImplToJson(

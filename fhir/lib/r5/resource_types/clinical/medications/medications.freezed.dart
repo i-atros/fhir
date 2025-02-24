@@ -8887,7 +8887,7 @@ mixin _$MedicationAdministrationPerformer {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept? get function => throw _privateConstructorUsedError;
-  Reference get actor => throw _privateConstructorUsedError;
+  CodeableReference get actor => throw _privateConstructorUsedError;
 
   /// Serializes this MedicationAdministrationPerformer to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8912,10 +8912,10 @@ abstract class $MedicationAdministrationPerformerCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? function,
-      Reference actor});
+      CodeableReference actor});
 
   $CodeableConceptCopyWith<$Res>? get function;
-  $ReferenceCopyWith<$Res> get actor;
+  $CodeableReferenceCopyWith<$Res> get actor;
 }
 
 /// @nodoc
@@ -8960,7 +8960,7 @@ class _$MedicationAdministrationPerformerCopyWithImpl<$Res,
       actor: null == actor
           ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
-              as Reference,
+              as CodeableReference,
     ) as $Val);
   }
 
@@ -8982,8 +8982,8 @@ class _$MedicationAdministrationPerformerCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res> get actor {
-    return $ReferenceCopyWith<$Res>(_value.actor, (value) {
+  $CodeableReferenceCopyWith<$Res> get actor {
+    return $CodeableReferenceCopyWith<$Res>(_value.actor, (value) {
       return _then(_value.copyWith(actor: value) as $Val);
     });
   }
@@ -9003,12 +9003,12 @@ abstract class _$$MedicationAdministrationPerformerImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? function,
-      Reference actor});
+      CodeableReference actor});
 
   @override
   $CodeableConceptCopyWith<$Res>? get function;
   @override
-  $ReferenceCopyWith<$Res> get actor;
+  $CodeableReferenceCopyWith<$Res> get actor;
 }
 
 /// @nodoc
@@ -9052,7 +9052,7 @@ class __$$MedicationAdministrationPerformerImplCopyWithImpl<$Res>
       actor: null == actor
           ? _value.actor
           : actor // ignore: cast_nullable_to_non_nullable
-              as Reference,
+              as CodeableReference,
     ));
   }
 }
@@ -9083,7 +9083,7 @@ class _$MedicationAdministrationPerformerImpl
   @override
   final CodeableConcept? function;
   @override
-  final Reference actor;
+  final CodeableReference actor;
 
   @override
   String toString() {
@@ -9140,7 +9140,7 @@ abstract class _MedicationAdministrationPerformer
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? function,
-          required final Reference actor}) =
+          required final CodeableReference actor}) =
       _$MedicationAdministrationPerformerImpl;
   _MedicationAdministrationPerformer._() : super._();
 
@@ -9158,7 +9158,7 @@ abstract class _MedicationAdministrationPerformer
   @override
   CodeableConcept? get function;
   @override
-  Reference get actor;
+  CodeableReference get actor;
 
   /// Create a copy of MedicationAdministrationPerformer
   /// with the given fields replaced by the non-null parameter values.

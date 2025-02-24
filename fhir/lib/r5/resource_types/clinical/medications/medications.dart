@@ -600,7 +600,7 @@ class MedicationAdministrationPerformer
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
-    required Reference actor,
+    required CodeableReference actor,
   }) = _MedicationAdministrationPerformer;
 
   /// Produces a Yaml formatted String version of the object
