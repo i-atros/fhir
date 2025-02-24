@@ -170,8 +170,8 @@ packages:
     dependency: "direct main"
     description:
       path: fhir
-      ref: HEAD
-      resolved-ref: "737689fe80099e81eda17b6bdc9e7c0b0a33e755"
+      ref: CP-916-adapt-medication-performer
+      resolved-ref: ef4c761b87fc2c30a051a8255b23d0c840e20033
       url: "https://github.com/i-atros/fhir.git"
     source: git
     version: "0.0.0"

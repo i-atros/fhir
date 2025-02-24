@@ -12,6 +12,7 @@ dependencies:
   fhir:
     git:
       url: https://github.com/i-atros/fhir.git
+      ref: CP-916-adapt-medication-performer
       path: fhir
   freezed_annotation: ^2.4.4
   http: ^1.1.0
